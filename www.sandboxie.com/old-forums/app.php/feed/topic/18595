@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/18595" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2014-04-02T12:06:35-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/18595</id>
+
+		<entry>
+		<author><name><![CDATA[Buster]]></name></author>
+		<updated>2014-04-02T12:06:35-04:00</updated>
+
+		<published>2014-04-02T12:06:35-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18595&amp;p=100181#p100181</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18595&amp;p=100181#p100181"/>
+		<title type="html"><![CDATA[Re: Server 2012 issues]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18595&amp;p=100181#p100181"><![CDATA[
+Middle of this week.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=904">Buster</a> — Wed Apr 02, 2014 12:06 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kronckew]]></name></author>
+		<updated>2014-04-02T11:34:48-04:00</updated>
+
+		<published>2014-04-02T11:34:48-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18595&amp;p=100177#p100177</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18595&amp;p=100177#p100177"/>
+		<title type="html"><![CDATA[Re: Server 2012 issues]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18595&amp;p=100177#p100177"><![CDATA[
+is there a revised estimate on new version availability?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=17172">kronckew</a> — Wed Apr 02, 2014 11:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2014-03-23T23:08:32-04:00</updated>
+
+		<published>2014-03-23T23:08:32-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18595&amp;p=100025#p100025</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18595&amp;p=100025#p100025"/>
+		<title type="html"><![CDATA[Re: Server 2012 issues]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18595&amp;p=100025#p100025"><![CDATA[
+Ver 4.9.2 is due out this week and has several new fixes for the dll initialization problems.  Please check back in a few days.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Sun Mar 23, 2014 11:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bboitano]]></name></author>
+		<updated>2014-03-23T21:46:48-04:00</updated>
+
+		<published>2014-03-23T21:46:48-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18595&amp;p=100022#p100022</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18595&amp;p=100022#p100022"/>
+		<title type="html"><![CDATA[Server 2012 issues]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18595&amp;p=100022#p100022"><![CDATA[
+Hi all,<br><br>Running Sandboxie on a x64 Server 2012 box. Previously we ran it on a Sever 2k3 box with no issues. We are using Sandboxie so that we can have multiple users accessing a file at the same time for a legacy x86 app that was never really designed to be network capable.<br><br>Tried 4.08 and had the same error so tried the latest 4.09 beta.<br><br>The error I get to start with is <br><br>SBIE2303 could not hook OpenInputDesktop (4)<br>SBIE2318 DLL Initialization failed for 'user32.dll'<br><br>Followed by a &lt;softwarename&gt; unable to start correctly 0xc0000142<br><br>I get this with several apps, not just the legacy software (OllyDBG for instance fails with the same error).<br><br>The terminal server role is installed on the server and the last activity seen in procmon is accessing TSAPPCMP.DLL for the legacy app (same with Notepad++ also as an example).<br><br>Is there any other information that I can provide to help troubleshoot this issue?<br><br>Many thanks<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=22053">bboitano</a> — Sun Mar 23, 2014 9:46 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=15310&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:18:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Installation of system drivers (non-Sandboxie drivers)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Installation of system drivers (non-Sandboxie drivers)</h2>
+		<p><a href="viewtopicc56bc56b.html?f=17&amp;t=15310">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=15310</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Installation of system drivers (non-Sandboxie drivers)</h3>
+				<div class="date">Posted: <strong>Wed Apr 24, 2013 11:25 am</strong></div>
+				<div class="author">by <strong>gwa000</strong></div>
+				<div class="content">question concerning installation of programs that install drivers in the System32 area.<br>
+<br>
+i wanted to install/test a program (without polluting my system) and during install it wanted to write some files into the System32 area and SB popped up a message (sorry, don't recall the number as it was a few weeks ago).  i ended up cancelling the installation as i was not sure where the drivers would be installed, in a sandboxed area of System32 or the host System32 area.<br>
+<br>
+anybody know if the drivers are put in the host area or a sandboxed area?<br>
+<br>
+i'm hoping that it is a sandboxed area even though it could defeat the isolation of sandboxing by corrupting things if the driver was faulty.  this would allow easy cleanup is i do not want to keep the program.<br>
+<br>
+thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 24, 2013 3:49 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Sandboxed programs are not permitted to install drivers, even in the sandbox area.<br>
+For a sandboxed program to use drivers they must already be present on your system, installed outside of the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 12, 2013 3:13 pm</strong></div>
+				<div class="author">by <strong>qwet</strong></div>
+				<div class="content">This is just an idea as a novice - some other less developed sandboxes (Like Comodo's - Comodo is a good Firewall but Virtual Kiosk part can not be compared to Sandboxie  - or other sandboxes) allow drivers to be installed virtually (sandboxed) then be cleaned. This seems important because lots of software installs drivers.çI am not sure why Sandboxie can not allow this. <br>
+<br>
+In addition to this - may be it will be a useless cosmetics - but why is not there a interface like the aforementioned Comodo "virtual kiosk" like a desktop, start menu icons etc? <br>
+<br>
+ps. Sandboxie is the most advanced sandbox software as it seems, and interface might be some useless. But installing drivers is a must as I said, there are lots of software doing this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 12, 2013 6:10 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">Sounds like what you want is some kind of virtual machine.  Sandboxie's purpose is to protect the system, and part of that is blocking installation of system components.<br>
+<br>
+Personally I hope Tzuk doesn't implement anything like this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 13, 2013 5:04 am</strong></div>
+				<div class="author">by <strong>qwet</strong></div>
+				<div class="content">Yes I see that - But can not Sandboxie install system components sandboxed (I mean the drivers). <br>
+<br>
+There are similar types of less developed but well known sandbox applications that can do it (like the "virual kiosk") - so Sandboxie can easily do this. <br>
+<br>
+Otherwise the driver installer software will use this to their advantage because people can not use them sandboxed and they will put some drivers to their installation that will make the software work so nobody can make them sandboxed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 13, 2013 6:51 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content"><blockquote><div><cite>qwet wrote:</cite>Yes I see that - But can not Sandboxie install system components sandboxed (I mean the drivers). <br>
+<br>
+There are similar types of less developed but well known sandbox applications that can do it (like the "virual kiosk") - so Sandboxie can easily do this. <br>
+<br>
+Otherwise the driver installer software will use this to their advantage because people can not use them sandboxed and they will put some drivers to their installation that will make the software work so nobody can make them sandboxed.</div></blockquote>
+
+No it can not.   I don't see any problem or how driver software can use this to their advantage.   You can install software that needs drivers and services, and then run them sandboxed.  You are still protected.   As I said if you really want to install something using drivers and have the install isolated, you need to look at VM machines.  That other "sandbox" software can do it doesn't matter to me.  Nothing is comparable to sandboxie for protection.  No it isn't the best for full virtualization, as it wasn't intended to be.<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 13, 2013 7:03 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Sandboxie is designed to virtualize/supervise Windows applications.  In the bridge between the application and the Windows kernel, where the application goes to ask Windows to do stuff, that is where Sandboxie sits and supervises.  Drivers don't work this way and don't fit in this model.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 13, 2013 7:37 am</strong></div>
+				<div class="author">by <strong>qwet</strong></div>
+				<div class="content">As Tzuk replied, it is not really possible.  Before his response I searched other messages on drivers and someone posted:<br>
+<br>
+<br>
+~quote<br>
+<br>
+<span style="font-size: 109%; line-height: normal"><br>
+<strong>In order to control software Sandboxie situates itself at the deepest level in the OS, known as Ring 0. Drivers are also low level system components. They have equal footing/ power on the system as Sandboxie does, and hence the inability of Sandboxie to really control drivers. That is why they are not allowed to install in the first place.<br>
+<br>
+The advantage of this is that root/bootkits are a problem of the past. They cannot even burrow deep in the system due to this blanket protection policy.</strong></span><br>
+<br>
+~unquote<br>
+<br>
+People might not prefer to repeat this over and over. But even as a novice I understand - It is better remain this way. Drivers not possible and not secure.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 13, 2013 7:52 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">The upside to all this is you can be pretty darn sure when you run something Sandboxed, you are safe.   I have found this well worth the small price of occasional in convenience.<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Installation of system drivers (non-Sandboxie drivers)</h3>
+				<div class="date">Posted: <strong>Mon May 05, 2014 6:02 pm</strong></div>
+				<div class="author">by <strong>i@mJONNY</strong></div>
+				<div class="content">What about if you're using Sandboxes (to virtualise application installations) and the application wants to install a driver for, say, a virtual device?<br>
+<br>
+For this there's the Sandboxie BlockDriver config option (obviously not recommended). The help files details that<br>
+
+<blockquote class="uncited"><div>
+Before a driver can be loaded, it must first be installed. Driver installation is not affected by the BlockDrivers setting. To allow driver installation, you should add the following OpenKeyPath setting:<br>
+<br>
+   OpenKeyPath=HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services<br>
+And you should additionally open the driver file, using OpenFilePath. This is needed because the driver path that will be set in the registry (in a key created below CurrentControlSet\Services) will typically not point inside the sandbox.<br>
+<br>
+   OpenFilePath=c:\program files\MyNewSoftware\SoftwareDriver.sys</div></blockquote>
+
+Does this mean I create a DWORD/String, <strong>OpenFilePath</strong>,  @ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services ?<br>
+<br>
+Adobe audition wants to install pxhlpa64.sys (corel Corporation "Px Engine driver").<br>
+<br>
+Ideally, I'd like to load this driver when needed, then unload. <br>
+<br>
+How do I manually install a driver? Either sandboxed (if possible!) or not...<br>
+<br>
+Many thanks</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=15310&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:18:21 GMT -->
+</html>

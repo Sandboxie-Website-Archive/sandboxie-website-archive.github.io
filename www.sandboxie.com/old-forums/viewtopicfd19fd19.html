@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13652&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:31:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Program restrictions</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Program restrictions</h2>
+		<p><a href="viewtopic0d730d73.html?f=17&amp;t=13652">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=13652</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Program restrictions</h3>
+				<div class="date">Posted: <strong>Fri Sep 14, 2012 2:14 am</strong></div>
+				<div class="author">by <strong>Idqwroi</strong></div>
+				<div class="content">It's possible to set restrictions on internet access by program, i.e. firefox.exe or install_flash_player.exe. But if any of the filenames change, then the restrictions change, even for the same binary file. Is the pattern matching really filename only? What's stopping malware from renaming itself and slipping through the filter? An easy way to get through the filter would be to look at the other processes' names and then systematically change one's name to each of them until one works.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 14, 2012 5:04 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Assuming the malware, or whatever, is actually in the sandbox and not the real system (through OpenFilePath), that stuff isn't allowed anyway when Start/Run or Internet Access restrictions are in effect, no matter the name. Same goes for OpenFilePath/OpenKeyPath.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 14, 2012 3:17 pm</strong></div>
+				<div class="author">by <strong>Idqwroi</strong></div>
+				<div class="content">I don't understand. How does Sandboxie know to let Firefox through, but not some malware that calls itself firefox.exe?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 14, 2012 3:49 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">If a malware program is located outside of the sandbox, and it calls itself firefox.exe, the Internet Access Restriction will allow it to access the Internet when it runs sandboxed. There's no way for Sandboxie to check it to see if it's the real Firefox.<br>
+<br>
+The purpose of Sandboxie is to keep malware from escaping from a sandbox, but if it's already on your computer, then there's nothing that Sandboxie can do to help that. You should still scan for malware periodically, whether it's a free on-demand scanner or a memory resident scanner.<br>
+<br>
+If Internet Access Restrictions are in effect, then no .exe file that is located inside of the sandbox will be allowed to access the Internet - even if the name it uses matches firefox.exe. The only .exe files that will be allowed Internet access are those that are located outside of the sandbox and are listed under Internet Access Restrictions.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 14, 2012 4:01 pm</strong></div>
+				<div class="author">by <strong>Idqwroi</strong></div>
+				<div class="content"><blockquote><div><cite>Guest10 wrote:</cite>If a malware program is located outside of the sandbox, and it calls itself firefox.exe, the Internet Access Restriction will allow it to access the Internet when it runs sandboxed. There's no way for Sandboxie to check it to see if it's the real Firefox.<br>
+<br>
+The purpose of Sandboxie is to keep malware from escaping from a sandbox, but if it's already on your computer, then there's nothing that Sandboxie can do to help that. You should still scan for malware periodically, whether it's a free on-demand scanner or a memory resident scanner.<br>
+<br>
+If Internet Access Restrictions are in effect, then no .exe file that is located inside of the sandbox will be allowed to access the Internet - even if the name it uses matches firefox.exe. The only .exe files that will be allowed Internet access are those that are located outside of the sandbox and are listed under Internet Access Restrictions.</div></blockquote>
+
+Ok, but what about files originally located inside the sandbox? Is the restriction still filename-based?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 14, 2012 4:28 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>Idqwroi wrote:</cite>Ok, but what about files originally located inside the sandbox? Is the restriction still filename-based?</div></blockquote>If you are referring to .exe files that are inside of the sandbox, then if Internet Access Restrictions are in place they won't be able to access the Internet at all - no matter what name they call themselves.<br>
+No .exe program located <span style="text-decoration: underline">inside</span> the sandbox will be able to access the Internet when Internet Access Restrictions are in effect.<br>
+Only .exe programs that are located <span style="text-decoration: underline">outside</span> of the sandbox will be allowed to access the Internet.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 14, 2012 4:46 pm</strong></div>
+				<div class="author">by <strong>Idqwroi</strong></div>
+				<div class="content"><blockquote><div><cite>Guest10 wrote:</cite>No .exe program located <span style="text-decoration: underline">inside</span> the sandbox will be able to access the Internet when Internet Access Restrictions are in effect.<br>
+Only .exe programs that are located <span style="text-decoration: underline">outside</span> of the sandbox will be allowed to access the Internet.</div></blockquote>
+
+That makes perfect sense.<br>
+<br>
+Sandboxie's current explanation in "Sandbox Settings -&gt; Restrictions -&gt; Internet Access" is undecipherable. In particular, "programs in this sandbox" can mean anything; it's impossible to tell if it means programs running in the sandbox or programs installed in the sandbox. It should clarify explicitly the difference between the access levels.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13652&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:31:40 GMT -->
+</html>

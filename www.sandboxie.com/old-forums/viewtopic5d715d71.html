@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=2202 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:15:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>OpenWinClass/OpenIpcPath configuration for Dummies? - Sandboxie Support</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - Sandboxie Support" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="app.php/feed/topics_active">			
+	<link rel="canonical" href="viewtopica1cfa1cf.html?t=2202">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="assets/css/font-awesome.mince91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/en/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/sbie_prosilver/theme/tweaks.css?assets_version=7" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="../index.html" title="Home"><span class="site_logo"></span></a>
+				<h1>Sandboxie Support</h1>
+				<p>Support Forum for Sandboxie</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									<div id="search-box" class="search-box search-header" role="search">
+				<form action="https://forums.sandboxie.com/phpBB3/search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+					<button class="button button-search" type="submit" title="Search">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+					</button>
+					<a href="search.html" class="button button-search-end" title="Advanced search">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+					</a>
+					
+				</fieldset>
+				</form>
+			</div>
+						
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a733a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+																			<li>
+								<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp26c326c3.html?mode=login" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp83198319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs">
+							<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="../index.html" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">Home</span></a></span>
+										<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="index-2.html" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Board index</span></a></span>
+
+											<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="44"><a href="viewforumab78ab78.html?f=44" itemprop="url"><span itemprop="title">More Forums</span></a></span>
+															<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="4"><a href="viewforum31e631e6.html?f=4" itemprop="url"><span itemprop="title">Feature Requests</span></a></span>
+												</li>
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="viewtopic5d715d71.html?f=4&amp;t=2202">OpenWinClass/OpenIpcPath configuration for Dummies?</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Ideas for enhancements to the software<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="https://www.sandboxie.com/old-forums/postingd27d.html?mode=reply&amp;f=4&amp;t=2202" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic4f5a-34f5a.html?f=4&amp;t=2202&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://forums.sandboxie.com/phpBB3/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="2202" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			15 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p13617" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13617">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb718b718.html?author_id=411&amp;sr=posts">245</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 27, 2006 2:07 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Funchal, Madeira</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13617">
+
+						<h3 class="first"><a href="#p13617">OpenWinClass/OpenIpcPath configuration for Dummies?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingd391.html?mode=quote&amp;f=4&amp;p=13617" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic25e125e1.html?p=13617#p13617" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a></strong> &raquo; </span>Sat Oct 06, 2007 6:44 am
+			</p>
+			
+			
+			
+			<div class="content"><img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"> Could we please have some practical examples as to what the Open Win Class command can (or cannot) do, to be given on the definition page of the same name?  Something that would apply to the following?<br>
+<br>
+I'm just beginning to use this command now to see if some old and minor (but irritating) problems can be corrected (e.g., loss of ability to see changes of International Keyboards (in System Tray icon) for anything running beneath soffice.exe process).<br>
+<br>
+I'm not sure from the currently-available description if I should be setting the parameter equal to a name that doesn't work, or a name that does work.  Seems it (Keyboard change indicator) works in any non-sandboxed window that has focus, so if the latter, does it make any difference which name of a working-window that  I choose?<br>
+<br>
+<strong><span style="color: blue">[edit] I now see that this thread has a lot in common with <a href="../phpbb/viewtopic9860.php?t=2196" class="postlink">a matter now under discussion in <em>Anything Else</em></a>, and if Tzuk (who is actively working to solve the other problem) agrees this to be the case, I will simply watch to see how the other thread is brought to a conclusion. [/edit]</span></strong><br>
+<br>
+<span style="font-size: 75%; line-height: normal"><em>for details, refer to: Sat Oct 06, 2007 1:31 pm, Post subject: New old problem?</em></span></div>
+
+			
+													<div class="notice">
+					Last edited by <a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a> on Tue Oct 09, 2007 8:48 am, edited 4 times in total.
+									</div>
+			
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13620" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13620">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb718b718.html?author_id=411&amp;sr=posts">245</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 27, 2006 2:07 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Funchal, Madeira</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13620">
+
+						<h3 ><a href="#p13620"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting74e2.html?mode=quote&amp;f=4&amp;p=13620" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic2c87-22c87.html?p=13620#p13620" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a></strong> &raquo; </span>Sat Oct 06, 2007 7:46 am
+			</p>
+			
+			
+			
+			<div class="content">I'm trying to 'hack' it without really knowing what I'm doing.  <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> <br>
+Now I'm using WinSpy while running StarOffice and the International Keyboard System Tray indicator is not working (i.e., not cycling as the shortcut key is toggled).<br>
+<br>
+I used WinSpy on StarOffice and got a class name of <br>
+Sandbox:DefaultBox:SALFRAME - but don't know -- <br>
+ <img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"> if all this supposed to go into OpenWinClass, or just the last part.  I suspect only the last part is actually coming from StarOffice.<br>
+<br>
+Or, should I be getting a class name from a window showing normal function?  But, which one, as the toggle key works normally in any other (unsandboxed) window. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"><br>
+A few examples would be most appreciated. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13625" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13625">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb718b718.html?author_id=411&amp;sr=posts">245</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 27, 2006 2:07 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Funchal, Madeira</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13625">
+
+						<h3 ><a href="#p13625">Change of forum to Problem Reports?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting44ef.html?mode=quote&amp;f=4&amp;p=13625" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8f02-28f02.html?p=13625#p13625" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a></strong> &raquo; </span>Sat Oct 06, 2007 9:45 am
+			</p>
+			
+			
+			
+			<div class="content"><strong><span style="color: blue"><em>This thread should be moved to Problem Reports.</em></span></strong><br>
+<br>
+It originally started as a request for a new feature, but then I studied the documentation and realized the feature is already there, but I didn't know how to use it.  At that point the original post was edited, but I am unable to move the thread.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13626" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13626">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistb46d.html?mode=viewprofile&amp;u=747" class="username">dlguild</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search13c313c3.html?author_id=747&amp;sr=posts">230</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Apr 21, 2007 8:30 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Pennsylvania</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13626">
+
+						<h3 ><a href="#p13626"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingfe65.html?mode=quote&amp;f=4&amp;p=13626" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic01c001c0.html?p=13626#p13626" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistb46d.html?mode=viewprofile&amp;u=747" class="username">dlguild</a></strong> &raquo; </span>Sat Oct 06, 2007 10:42 am
+			</p>
+			
+			
+			
+			<div class="content">RonC - you may want to try the "Task Monitor" tool found on this link instead:<br>
+<br>
+<a href="http://www.leinensoft.com/software/system.htm" class="postlink">http://www.leinensoft.com/software/system.htm</a><br>
+<br>
+Just download it, unzip it &amp; run (no installation needed). It will open a window with all running processes. Pick the one of interest, right click &amp; select "Properties". At the top (first line) will be the window class associated with the process.</div>
+
+			
+									
+									<div id="sig13626" class="signature">Dan</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13662" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13662">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13662">
+
+						<h3 ><a href="#p13662"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingd45c.html?mode=quote&amp;f=4&amp;p=13662" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic4784-24784.html?p=13662#p13662" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Sat Oct 06, 2007 7:55 pm
+			</p>
+			
+			
+			
+			<div class="content">The best way to find out what is needed for OpenWinClass is to enable Sandboxie Trace:<br>
+<br>
+GuiTrace=ad<br>
+<br>
+Then look in the debug console for the class names that appear in (GD) messages, and add them as OpenWinClass.<br>
+<br>
+WinSpy (or equivalent) is handy to make sense of the window class name and get an idea which process owns the window for the class, and then decide if that process may be relevant to the problem.</div>
+
+			
+									
+									<div id="sig13662" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13696" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13696">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb718b718.html?author_id=411&amp;sr=posts">245</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 27, 2006 2:07 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Funchal, Madeira</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13696">
+
+						<h3 ><a href="#p13696">OpenWinClass info</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting4ced-4.html?mode=quote&amp;f=4&amp;p=13696" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8f51-38f51.html?p=13696#p13696" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a></strong> &raquo; </span>Sun Oct 07, 2007 4:50 pm
+			</p>
+			
+			
+			
+			<div class="content">Thanks to all for more than enough information on how to identify the Window Class name.  I now have one internal and two external utilities that will give this.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+However, as Tzuk has shown with ANDRE's similar problem, three of the sandboxie.ini configuration lines for the solution need knowledge of proper parameters for the OpenIpcPath command, which at this point I know much less about than OpenWinClass. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad">  I am assuming my solution requires the same, or at least some knowledge of this command?  <br>
+<br>
+ <img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"> Perhaps the next version will (I hope -  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> ) do all/most of this for us, or at least give pointers in the right direction?<br>
+<br>
+If not, I'd like to continue this thread with more questions.  I hope my problem is similar enough, to the one already solved, that by following the same steps I may get the correct parameters for my own situation.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13699" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13699">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist0f1f.html?mode=viewprofile&amp;u=561" class="username">SnDPhoenix</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searche539e539.html?author_id=561&amp;sr=posts">2690</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Dec 26, 2006 5:44 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> West Florida</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13699">
+
+						<h3 ><a href="#p13699"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting0f2c.html?mode=quote&amp;f=4&amp;p=13699" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicf96cf96c.html?p=13699#p13699" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist0f1f.html?mode=viewprofile&amp;u=561" class="username">SnDPhoenix</a></strong> &raquo; </span>Sun Oct 07, 2007 5:13 pm
+			</p>
+			
+			
+			
+			<div class="content">Now hold on, I'm a little confused. How are you doing these keyboard shortcuts? Is it with a program you're using to setup custom hot-keys?</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13711" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13711">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13711">
+
+						<h3 ><a href="#p13711"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting9089.html?mode=quote&amp;f=4&amp;p=13711" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic90839083.html?p=13711#p13711" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Sun Oct 07, 2007 9:24 pm
+			</p>
+			
+			
+			
+			<div class="content">RonC, (1) are you talking about the standard Windows language bar?  And (2) is Star Office the only program having trouble switching languages?</div>
+
+			
+									
+									<div id="sig13711" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13738" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13738">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb718b718.html?author_id=411&amp;sr=posts">245</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 27, 2006 2:07 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Funchal, Madeira</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13738">
+
+						<h3 ><a href="#p13738"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting6a7a-2.html?mode=quote&amp;f=4&amp;p=13738" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic6be2-26be2.html?p=13738#p13738" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a></strong> &raquo; </span>Tue Oct 09, 2007 9:26 am
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>tzuk wrote:</cite>RonC, (1) are you talking about the standard Windows language bar?  And (2) is Star Office the only program having trouble switching languages?</div></blockquote>(1)Yes.  But to be sure I am describing it accurately:<br>
+From Windows Help, it is accessed as follows: Control Panel -&gt; Regional Options -&gt; Input Locales Tab.  Then, on that box, <em>Hot keys for input locales</em>.  <em>Enable indicator on taskbar [System Tray] </em>box is checked.  The keyboard shortcut is the default <em>Key sequence</em> as pre-defined for <em>Switch between input locales</em>.<br>
+<br>
+(2) Yes.  <br>
+Whenever (the sandboxed) StarOffice gets the 'focus,' the <em>Switch between input locales </em>Key sequence becomes disabled:  it fails to toggle the System Tray language indicator.  (The dialog box says the indicator is on the Taskbar, but this would seem to be a typo.)<br>
+<br>
+When the 'focus' is changed to any non-sandboxed program, the toggle 'key sequence' resumes normal function.  If StarOffice is run un-sandboxed, normal function resumes.  This is not practical for more than a brief test, of course, as the browser and E-mail are then exposed to the Internet without protection.<br>
+<br>
+ <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> What next?</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13743" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13743">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13743">
+
+						<h3 ><a href="#p13743"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting7a5e.html?mode=quote&amp;f=4&amp;p=13743" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic73097309.html?p=13743#p13743" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Tue Oct 09, 2007 11:55 am
+			</p>
+			
+			
+			
+			<div class="content">In (2) I meant to ask, what if you run Notepad sandboxed, or IE sandboxed, do they switch languages fine?</div>
+
+			
+									
+									<div id="sig13743" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13823" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13823">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb718b718.html?author_id=411&amp;sr=posts">245</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 27, 2006 2:07 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Funchal, Madeira</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13823">
+
+						<h3 ><a href="#p13823"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting7974.html?mode=quote&amp;f=4&amp;p=13823" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopiccaabcaab.html?p=13823#p13823" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a></strong> &raquo; </span>Fri Oct 12, 2007 5:45 am
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>tzuk wrote:</cite>... what if you run Notepad sandboxed [does it] switch languages fine?</div></blockquote>No, the problem with Windows' Notepad is identical, when that program is running sandboxed.  <br>
+<br>
+New information just noticed while testing:  When Notepad is running sandboxed, the pop-up menu on the keyboard selection System Tray icon becomes non-functional, in addition.<br>
+<br>
+By this, I mean a left-click on the System Tray icon displays a menu with all active international keyboard choices (I have three).  You should be able to switch keyboards here.  Whichever keyboard was selected before sandboxing began remains in effect, no matter which choice is selected.  This is, of course, when a sandboxed Notepad has the focus.<br>
+<br>
+If you can't duplicate this, should I send a copy of my sandboxie.ini?<br>
+<br>
+OS: Windows2000</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13850" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13850">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13850">
+
+						<h3 ><a href="#p13850"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingb0ef.html?mode=quote&amp;f=4&amp;p=13850" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic3a64-23a64.html?p=13850#p13850" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Sat Oct 13, 2007 2:02 pm
+			</p>
+			
+			
+			
+			<div class="content">I have multiple languages too, and no problems at all switching them.  Why don't you enable the trace (IpcTrace=ad and GuiTrace=ad) and post your log here.  (But do try to keep it short and manageable.)</div>
+
+			
+									
+									<div id="sig13850" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13852" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13852">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb718b718.html?author_id=411&amp;sr=posts">245</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 27, 2006 2:07 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Funchal, Madeira</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13852">
+
+						<h3 ><a href="#p13852"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingbd26-3.html?mode=quote&amp;f=4&amp;p=13852" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic6f71-26f71.html?p=13852#p13852" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a></strong> &raquo; </span>Sat Oct 13, 2007 2:24 pm
+			</p>
+			
+			
+			
+			<div class="content">Thanks, will do.  If it's OK, I will do this for Windows Notepad, rather than StarOffice, so it's easier to duplicate if you see something suspicious.  Presumably, when that is fixed, other things may work, as well.<br>
+<br>
+Since you presumably did something similar for a toggle-key problem in ZoomText (and came up with the solution), some details will be appreciated:  I think there are step-by-step logging directions, in one or more locations, somewhere on the forum?  If this was touched on more than once, do you recall the best and simplest reference for me to go by?  A link to that would be most appreciated.<br>
+<br>
+I tried the logging function once before with poor results (didn't know what I was doing or looking for).  <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"> At that time I was wondering, should I have been hitting the Hot Key in order to get a meaningful log?  Hit it just once?  Toggle repeatedly? And then ... exit and analyze?<br>
+<br>
+I'll be happy to follow a link to the best reference and follow that procedure, but please let me know if I should add to, or depart from, whatever was written in the past to best zero in on my type of problem.<br>
+<br>
+ <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> This thread was titled "OpenWinClass/OpenIpcPath configuration for Dummies" for good reason, and I'll include GuiTrace in that as well.  I'll need that reference in order to get started.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13854" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13854">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb718b718.html?author_id=411&amp;sr=posts">245</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 27, 2006 2:07 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Funchal, Madeira</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13854">
+
+						<h3 ><a href="#p13854">Clarification needed --</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting5c5a.html?mode=quote&amp;f=4&amp;p=13854" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic421e421e.html?p=13854#p13854" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist8919.html?mode=viewprofile&amp;u=411" class="username">RonC</a></strong> &raquo; </span>Sat Oct 13, 2007 2:54 pm
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I have multiple languages too, and no problems at all switching them.</div></blockquote>Actually, what is happening on my system goes a bit beyond that.  <br>
+<br>
+ <img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"> Just to make certain, do you also mean your System Tray icon keeps in correct sync as you switch languages, and the left-click System Tray language icon pop-up menu works correctly also?<br>
+<br>
+OS: Windows2000</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p13857" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile13857">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content13857">
+
+						<h3 ><a href="#p13857"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingaf0e.html?mode=quote&amp;f=4&amp;p=13857" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic1795-31795.html?p=13857#p13857" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Sat Oct 13, 2007 4:19 pm
+			</p>
+			
+			
+			
+			<div class="content">I'm not seeing anything different when I control the language icon from a sandboxed program, compared to an unsandboxed one:  No problems.<br>
+<br>
+What you should do is run DbgView, start Notepad sandboxed, then clear the DbgView display (Ctrl+X) and finally, switch to sandboxed Notepad and try to switch languages.  If you see anything new getting logged in DbgView, great, post it here.  If nothing is logged, we'll have to figure out some other way to tackle this.</div>
+
+			
+									
+									<div id="sig13857" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="https://www.sandboxie.com/old-forums/postingd27d.html?mode=reply&amp;f=4&amp;t=2202" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic4f5a-34f5a.html?f=4&amp;t=2202&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=2202">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			15 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum31e631e6.html?f=4" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Feature Requests”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum907f907f.html?f=42" class="jumpbox-cat-link"> <span> Sandboxie Forums</span></a></li>
+																<li><a href="viewforum12a312a3.html?f=2" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Announcements</span></a></li>
+																<li><a href="viewforumcf19cf19.html?f=6" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Positive Reviews</span></a></li>
+																<li><a href="viewforum107e107e.html?f=43" class="jumpbox-cat-link"> <span> Problems and Questions</span></a></li>
+																<li><a href="viewforum8a838a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Problem Reports</span></a></li>
+																<li><a href="viewforum48ab48ab.html?f=17" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Quick Questions</span></a></li>
+																<li><a href="viewforumbcb4bcb4.html?f=65" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.25</span></a></li>
+																<li><a href="viewforumab78ab78.html?f=44" class="jumpbox-cat-link"> <span> More Forums</span></a></li>
+																<li><a href="viewforum31e631e6.html?f=4" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Feature Requests</span></a></li>
+																<li><a href="viewforume774e774.html?f=5" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Anything Else</span></a></li>
+																<li><a href="viewforum89418941.html?f=22" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Contributed Utilities &amp; Templates</span></a></li>
+																<li><a href="viewforum97809780.html?f=14" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; International Translations</span></a></li>
+																<li><a href="viewforum2b892b89.html?f=38" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.01</span></a></li>
+																<li><a href="viewforumdfa4dfa4.html?f=39" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.03</span></a></li>
+																<li><a href="viewforuma3f5a3f5.html?f=40" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.05</span></a></li>
+																<li><a href="viewforum51ee51ee.html?f=41" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.07</span></a></li>
+																<li><a href="viewforum590b590b.html?f=46" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.09</span></a></li>
+																<li><a href="viewforumcdbacdba.html?f=48" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.13</span></a></li>
+																<li><a href="viewforum30ac30ac.html?f=49" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.15</span></a></li>
+																<li><a href="viewforum91409140.html?f=50" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.17</span></a></li>
+																<li><a href="viewforum208f208f.html?f=51" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.19</span></a></li>
+																<li><a href="viewforum26492649.html?f=53" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.01</span></a></li>
+																<li><a href="viewforum9e0d9e0d.html?f=54" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.05</span></a></li>
+																<li><a href="viewforumfac0fac0.html?f=55" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.07</span></a></li>
+																<li><a href="viewforuma05ca05c.html?f=56" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.09</span></a></li>
+																<li><a href="viewforum6ac36ac3.html?f=57" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.11</span></a></li>
+																<li><a href="viewforume57de57d.html?f=58" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.13</span></a></li>
+																<li><a href="viewforum07560756.html?f=59" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.15</span></a></li>
+																<li><a href="viewforumb8c1b8c1.html?f=60" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.17</span></a></li>
+																<li><a href="viewforumdbf5dbf5.html?f=61" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.19</span></a></li>
+																<li><a href="viewforum75c275c2.html?f=62" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.21</span></a></li>
+																<li><a href="viewforume5f3e5f3.html?f=64" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.23</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="stat-block online-list">
+		<h3>Who is online</h3>
+		<p>Users browsing this forum: No registered users and 1 guest</p>
+	</div>
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="../index.html" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Home</span></a></span>									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="America/New York">UTC-04:00</span></li>
+							<li class="rightside">
+				<a href="ucp033a033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete all board cookies</span>
+				</a>
+			</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+									</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="cron54955495.gif?cron_type=cron.task.text_reparser.poll_title" width="1" height="1" alt="cron" /></div>
+
+<script type="text/javascript" src="assets/javascript/jquery.mince91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="assets/javascript/corece91ce91.js?assets_version=7"></script>
+
+
+
+<script type="text/javascript" src="styles/sbie_prosilver/template/forum_fnce91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="styles/sbie_prosilver/template/ajaxce91ce91.js?assets_version=7"></script>
+
+
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=2202 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:15:23 GMT -->
+</html>

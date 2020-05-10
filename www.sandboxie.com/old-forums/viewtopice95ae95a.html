@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=310&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:16:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; request for a couple of new features</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>request for a couple of new features</h2>
+		<p><a href="viewtopica75fa75f.html?f=4&amp;t=310">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=310</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>request for a couple of new features</h3>
+				<div class="date">Posted: <strong>Sun May 28, 2006 5:31 pm</strong></div>
+				<div class="author">by <strong>just</strong></div>
+				<div class="content">Hi,<br>
+<br>
+1) when sandboxie is autoloaded it could execute (or ask for it) the applications in autorun key of registry and in autorun folder.<br>
+2) the previous problem showed another problem:<br>
+since programs aren't auto loaded I had to load an application manually but when I tryed to run explorer it wasn't loaded, likely because it was mistaken for the desktop manager (already loaded of course) so I had to use an alternative file manager.<br>
+could you add a workaround?<br>
+<br>
+Best regards.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Already Implemented 1, 2=??</h3>
+				<div class="date">Posted: <strong>Tue May 30, 2006 7:47 am</strong></div>
+				<div class="author">by <strong>score_under</strong></div>
+				<div class="content">1) go to each registry key you want to have sandboxed and eg.<br>
+Instead of<br>
+HKLM\Software\Microsoft\Windows\CurrentVersion\Run\TESTAPP=c:\test.exe<br>
+you could change it to:<br>
+HKLM\Software\Microsoft\Windows\CurrentVersion\Run\TESTAPP="%programfiles%\sandboxie\start.exe" "c:\test.exe"<br>
+(both in quotes)<br>
+Don't worry, on most windows systems the %programfiles% will replace itself.<br>
+<br>
+2) I don't know what you mean (I probably read it too quickly)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>...</h3>
+				<div class="date">Posted: <strong>Tue May 30, 2006 7:51 am</strong></div>
+				<div class="author">by <strong>score_under</strong></div>
+				<div class="content">Oh, yes. 2. If you type "explorer /s" instead of just "explorer" it might work.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 30, 2006 2:14 pm</strong></div>
+				<div class="author">by <strong>just</strong></div>
+				<div class="content">answer 2 worked, though I'd prefer explorer wouldn't open the size it pleases...<br>
+about the former question the reply doesn't fit.<br>
+I'd like that when sandboxie is started, it would process the sandboxed registry keys which would autorun programs at windows startup.<br>
+Let's say you install an application.<br>
+Sometime the installer sets some key under runonce to complete the installation, so if sandboxie handles that the install can be completed correctly after a reboot.<br>
+That isn't the only case.<br>
+If I for eg. install winamp inside sandbox it should puts on tray an agent optionally, but when you restart windows and sandboxie is started that agent isn't started anymore because... autostart isn't managed.<br>
+<br>
+Anyway thanks for your reply</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 30, 2006 5:36 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>1) when sandboxie is autoloaded it could execute (or ask for it) the applications in autorun key of registry and in autorun folder. 
+</div></blockquote>
+
+That's a good idea, so I'm putting this on my to-do list.<br>
+<br>
+For the time being, you'll have to make this work manually.  I think score_under gave a good explanation how to do it.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=310&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:16:07 GMT -->
+</html>

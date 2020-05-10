@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/13260" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-02-25T15:18:07-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/13260</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-02-25T15:18:07-04:00</updated>
+
+		<published>2013-02-25T15:18:07-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=87498#p87498</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=87498#p87498"/>
+		<title type="html"><![CDATA[[.02] Run Sandboxed + SRP doesn't work?]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=87498#p87498"><![CDATA[
+Haven't looked into SRP issues yet, but Run Outside Sandbox should be fixed in version 4.01.02.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Feb 25, 2013 2:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-01-12T15:35:06-04:00</updated>
+
+		<published>2013-01-12T15:35:06-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=86512#p86512</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=86512#p86512"/>
+		<title type="html"><![CDATA[[.02] Run Sandboxed + SRP doesn't work?]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=86512#p86512"><![CDATA[
+I can see that Run Outside Sandbox is missing.  I'll check it out.  Regarding SRP, I think I left out the code that was disabling it in version 4.  I might still need to put that back in, because I think there was a reason for that, but maybe I can limit that to just 64-bit systems if I do need to bring that SRP code back into Sandboxie.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sat Jan 12, 2013 2:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DR_LaRRY_PEpPeR]]></name></author>
+		<updated>2013-01-11T15:00:27-04:00</updated>
+
+		<published>2013-01-11T15:00:27-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=86473#p86473</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=86473#p86473"/>
+		<title type="html"><![CDATA[[.02] Run Sandboxed + SRP doesn't work?]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=86473#p86473"><![CDATA[
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>I thought the obvious solution was to remove the "Run Outside Sandbox" option.</div></blockquote><blockquote><div><cite>tzuk wrote:</cite>What are you talking about? Why would I want to remove the "Run Outside Sandbox" option?</div></blockquote>I had forgotten about this crash, but just checking 4.01, I don't see "Run Outside Sandbox" anywhere. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"> (Didn't check 3.76.) Not just run_dialog, but even from Run Sandboxed... I see Ctrl+Shift still works though.<br><br><br>Anyway, with 4.01, things seem to be looking better (or almost fixed) regarding my issue with this. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> (I still didn't check my theory on 64-bit Win7, although I've had a system here temporarily for 3 months! <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> As well as another copy/license to install in VirtualBox.)<br><br><br>In XP, I <a href="http://www.sandboxie.com/phpbb/viewtopic.php?p=86470#86470" class="postlink">posted the problem</a> with using Run Sandboxed on a program that SRP is set to run as a Basic/Standard User.<br><br>The GOOD news is that now using Run Sandboxed on a program that is blocked/Disallowed by SRP doesn't let it run! Sandboxie Start now says "Could not invoke program" and System Error Code is the usual, unsandboxed message: "Windows cannot open this program because it has been prevented by a software restriction policy..." <em>That</em> is what I've been expecting all along. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>Same thing that happens (message from WSH) if you'd use the launching script "wrapper" I referred to...<br><br>Otherwise, SRP stuff appears to still be working as it should for programs <em>already</em> running in the sandbox (blocking, DLL checking). Other than the registry access permissions thing I also reported -- I "hide" the SRP reg. keys that effectively disable SRP (allow everything) from programs that don't have admin rights. Since SRP is implemented at program-/user-level, this was working great. Just leaving Administrators reg. perms. is simpler than blocking in Sandboxie (plus I use this trick for some unsandboxed stuff).<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11108">DR_LaRRY_PEpPeR</a> — Fri Jan 11, 2013 2:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DR_LaRRY_PEpPeR]]></name></author>
+		<updated>2012-09-15T15:38:41-04:00</updated>
+
+		<published>2012-09-15T15:38:41-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83871#p83871</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83871#p83871"/>
+		<title type="html"><![CDATA[[.02] Run Sandboxed + SRP doesn't work?]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83871#p83871"><![CDATA[
+Well, that 64-bit stuff doesn't apply for XP of course... (I understand you make overall changes, however.) Unfortunately I don't have access to a 64-bit Win7 right now, but hopefully will soon, so I can't say much about that. But, if it's like XP, I assume SRP blocking, etc. still functions once something normal is already running in a sandbox... (Including after 64-bit Start.exe launches a 32-bit program?) That's what I mean, that other than stuff with Start.exe, the rest of the Sandboxie functionality doesn't appear to have disabled anything SRP-related on XP...<br><br>If everything's as it is on XP, and Start just ran a totally normal, user-like program in the sandbox first which then launched the requested program, everything should be OK, at least on XP. But maybe you already understood what I was saying. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>As far as my wrapper "program," there's literally nothing to it. All it has to do is launch the requested program instead of Start.exe handling it. Just 1 line of JavaScript:<br><br>WScript.CreateObject("WScript.Shell").Run("path\\to\\any\\file.exe")<br><br>Any compiled program doing the launching would behave the same way (which WSH is obviously).<br><br>If file.exe is supposed to be blocked by SRP, it is. Run Sandboxed directly on file.exe allows it of course like I've been saying. If file.exe is supposed to run as a Normal User (e.g. Windows dropping rights; from admin account), it is. Run Sandboxed runs it with full rights (forget Drop Rights, that's not an issue). Just having a "middle man" allows all to work normally, and doesn't seem like it would break anything.<br><br><br>Otherwise, I guess I'll have to wait until I get my hands on Win64 to check what you're talking about before "annoying" you with this more. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> Just by chance now, that should be very soon. I think SRP has less functionality in Vista and/or 7. I heard that there is no "rights-dropping, Normal User mode" anymore, etc. Not that it matters much for what I'm talking about. I'll just have to see how what's left works... <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11108">DR_LaRRY_PEpPeR</a> — Sat Sep 15, 2012 3:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2012-09-15T14:01:59-04:00</updated>
+
+		<published>2012-09-15T14:01:59-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83861#p83861</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83861#p83861"/>
+		<title type="html"><![CDATA[[.02] Run Sandboxed + SRP doesn't work?]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83861#p83861"><![CDATA[
+Not sure what your wrapper programs are doing, but as I explained in the other topic, my experience was that SRP didn't let the 64-bit Start.exe program launch 32-bit programs.  This obviously limited the usefulness of Sandboxie on 64-bit systems, and had to be addressed.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sat Sep 15, 2012 2:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DR_LaRRY_PEpPeR]]></name></author>
+		<updated>2012-09-14T10:20:33-04:00</updated>
+
+		<published>2012-09-14T10:20:33-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83819#p83819</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83819#p83819"/>
+		<title type="html"><![CDATA[[.02] Run Sandboxed + SRP doesn't work?]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83819#p83819"><![CDATA[
+Before yesterday again, I asked in the OP if it was by design, but you didn't say that then... And in that topic you're talking about issues between 32- and 64-bit stuff? I don't think I've seen anywhere you specifically <em>disabled</em> anything SRP-related to work around an incompatibility. It seems you actually fixed stuff to allow it to work better.<br><br>I've been saying how there <em>is no problem at all</em> with SRP functionality with processes already running in the sandbox (maybe handled by each one's own CreateProcess "environment"). <strong>Everything is fine</strong> (sandboxed Explorer can't launch disallowed programs; OE can't execute attachments; etc.) It is only when a Sandboxie process is [directly] involved. That doesn't make sense to me (in the sense that it "has to" be that way.)<br><br>I told you in the OP that I can use a wrapper script and everything is fine. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> If I changed the registry command for Run Sandboxed and/or the Send To shortcuts. It's that simple. So why can't Sandboxie do the same, but more "elegantly?" For example: literally, if everything was the same as now, but you used a program that just executed argv[1] to start the Run Sandboxed program instead, all would be fine! You could use Start.exe a second time, differently, where it doesn't do whatever it's doing to screw up SRP.<br><br>Heck, even if you do "Run any program," and Start.exe is sitting right there IN the sandbox already, it can't even do it right!? Do you understand? <strong>If</strong> it simply started the program like ANY other program would in the sandbox, there would be NO issue. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"><br><br>CreateProcess should take care of all the SRP stuff, but who knows what Start.exe is altering first... BTW, for a simple Deny rule, Sandboxie could probably use SaferIdentifyLevel or something to see whether to allow, like compliant programs should: <a href="http://technet.microsoft.com/en-us/library/cc786941%28v=ws.10%29.aspx" class="postlink">http://technet.microsoft.com/en-us/libr ... s.10).aspx</a><br><br>I'm just saying, if it behaved like any normal program already running in the sandbox when launching, everything would be good. I don't see any reason why it can't be changed operate like that.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11108">DR_LaRRY_PEpPeR</a> — Fri Sep 14, 2012 10:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2012-09-14T08:12:23-04:00</updated>
+
+		<published>2012-09-14T08:12:23-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83817#p83817</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83817#p83817"/>
+		<title type="html"><![CDATA[[.02] Run Sandboxed + SRP doesn't work?]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83817#p83817"><![CDATA[
+Oh, ok.  I misunderstood you earlier, but I do see the crash now.  I'll look into it, thanks.<br><br>As for SRP, the other topic explains the ways in which SRP is incompatible with Sandboxie, and that I had to work around that incompatibility, what else needs saying here?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Sep 14, 2012 8:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DR_LaRRY_PEpPeR]]></name></author>
+		<updated>2012-09-14T07:05:05-04:00</updated>
+
+		<published>2012-09-14T07:05:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83813#p83813</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83813#p83813"/>
+		<title type="html"><![CDATA[[.02] Run Sandboxed + SRP doesn't work?]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83813#p83813"><![CDATA[
+<blockquote><div><cite>tzuk wrote:</cite>What are you talking about?  Why would I want to remove the "Run Outside Sandbox" option?</div></blockquote>If you don't fix the crash, which I'm telling you about, it's unusable anyway (for me). Plus isn't run_dialog's functionality basically like start_menu? <em>Start.exe /box:__ask__ start_menu</em> has no choice for "Run Outside Sandbox." So why isn't it <em>there</em> too? I'd say because it makes no sense. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> That's the reason I mentioned it, figuring the options would logically match start_menu's...<br><br><blockquote class="uncited"><div>SRP problem:<br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=10748" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=10748</a></div></blockquote>I saw that topic when searching months ago. Don't see anything there about what I'm reporting.<br><br>I'm just trying to learn why Start.exe and SandboxieDcomLaunch.exe enable bypassing SRP.<br><br>I know SRP doesn't apply to SYSTEM processes, but I don't think Start.exe tells the SYSTEM SbieSvc to start a process on its behalf, does it? When I was thoroughly investigating, it appears that processes are spawned directly by Start.exe from what I could tell (parent PID).<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11108">DR_LaRRY_PEpPeR</a> — Fri Sep 14, 2012 7:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2012-09-14T06:13:50-04:00</updated>
+
+		<published>2012-09-14T06:13:50-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83806#p83806</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83806#p83806"/>
+		<title type="html"><![CDATA[[.02] Run Sandboxed + SRP doesn't work?]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83806#p83806"><![CDATA[
+What are you talking about?  Why would I want to remove the "Run Outside Sandbox" option?<br><br>SRP problem:<br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=10748" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=10748</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Sep 14, 2012 6:13 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DR_LaRRY_PEpPeR]]></name></author>
+		<updated>2012-09-13T11:24:21-04:00</updated>
+
+		<published>2012-09-13T11:24:21-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83768#p83768</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83768#p83768"/>
+		<title type="html"><![CDATA[[.02] Run Sandboxed + SRP doesn't work?]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=83768#p83768"><![CDATA[
+The crash? That was just an aside. I thought the obvious solution was to remove the "Run Outside Sandbox" option. It's not there for start_menu... After all, why run these things in the first place if not choosing a <em>sandbox</em>? 3.74 still crashes the same. Dr. Watson log file references ntdll!wcslen. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> Not sure why you can't reproduce it, but if you're not going to make the options match start_menu, I can debug it more if you want. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> Just let me know (debugger instructions, symbol stuff, etc.).<br><br><br>About the actual SRP question with Run Sandboxed: <strong>Is</strong> it by design that a path/program <em>explicitly</em> denied by SRP, for example, be ALLOWED to run using Start.exe? Why does that method totally ignore SRP rules, when other processes launched inside the sandbox have SRP applied as usual? (Generally.....) BTW, if SRP DLL checking is enabled, that <em>does</em> seem to apply for a "Run Sandboxed" process, so it's just the process itself created by Start.exe that's launched "Unrestricted" (forget about Drop Rights).<br><br>I said how SRP applies normally when something is launched from inside the sandbox... Generally true, except I found that when something is spawned by SandboxieDcomLaunch (IE by OE; PDF-XChange by IE/Firefox), SRP is ignored as well. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_mad.gif" width="15" height="15" alt=":x" title="Mad"> Of course no issues when that launching is done by Windows' svchost DCOM service.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11108">DR_LaRRY_PEpPeR</a> — Thu Sep 13, 2012 11:24 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2012-08-09T14:56:56-04:00</updated>
+
+		<published>2012-08-09T14:56:56-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=82796#p82796</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=82796#p82796"/>
+		<title type="html"><![CDATA[[.02] Run Sandboxed + SRP doesn't work?]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=82796#p82796"><![CDATA[
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>BTW, was just playing around checking something now, and noticed that this crashes: Start.exe /box:__ask__ run_dialog &gt; "Run Outside Sandbox"</div></blockquote>I was unable to reproduce the problem, I'm sorry.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Aug 09, 2012 2:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DR_LaRRY_PEpPeR]]></name></author>
+		<updated>2012-07-06T06:43:58-04:00</updated>
+
+		<published>2012-07-06T06:43:58-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=81902#p81902</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=81902#p81902"/>
+		<title type="html"><![CDATA[[.02] Run Sandboxed + SRP doesn't work?]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13260&amp;p=81902#p81902"><![CDATA[
+Start.exe (Run Sandboxed) seems to prevent any SRP rules from working. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> Is this by design? Can it be fixed, or an option to allow it to work with SRP?<br><br>Haven't registered Sandboxie yet, but I use SRP to run browsers, etc. "restricted" (Standard User) on my XP admin account. Of course I'm aware of Drop Rights, and may well use that anyway as well, depending on the sandbox, but I'd prefer to be able to let SRP remove admin privileges.<br><br>When something is launched already IN a sandbox (not from Start.exe), SRP seems to work normally. So now I'd need to use a wrapper script to get the results I want (which I'll probably use anyway the way I'm hoping to set up multiple IEs...). I guess I could modify the Run Sandboxed context command to use a wrapper, but that doesn't cover "Send To" or Start's [browser/mail/run/start].<br><br>I was concerned that Forced Programs would have the same issue after registering, but I was finally able to find out from a registered version that SRP does function fine in that case. I guess Windows handles that first-thing before Sandboxie grabs it? That's good! (Or the fact that Start.exe isn't involved at all.)<br><br><br>BTW, was just playing around checking something now, and noticed that this crashes: <em>Start.exe /box:__ask__ run_dialog</em> &gt; "Run Outside Sandbox"<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11108">DR_LaRRY_PEpPeR</a> — Fri Jul 06, 2012 6:43 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25577&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:29:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Setting up Sandboxes [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Setting up Sandboxes [SOLVED]</h2>
+		<p><a href="viewtopicdf0cdf0c.html?f=17&amp;t=25577">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25577</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Setting up Sandboxes [SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Mar 14, 2018 8:36 am</strong></div>
+				<div class="author">by <strong>AMD</strong></div>
+				<div class="content">Hi,<br>
+<br>
+I have read on this and other forums about setting up various individual sandboxes and  need a little help.<br>
+<br>
+I have Chrome as a forced program in its own sandbox for day to day browsing and allowed Roboform access within the configuration. I also have Firefox in its own Sandbox with no extensions etc  which will be used for banking etc.<br>
+<br>
+I have seen comments about forcing the downloads folder and windows explorer - when forcing these, do I create a separate sandbox for each as forced folders/processes or do I force downloads in the Chrome and Firefox sandboxes and just have windows explorer as a separate sandbox ?<br>
+<br>
+I am thinking that if i have downloads forced in the Chrome sandbox, how would I see the downloaded file if windows explorer is a totally separate sandbox ?<br>
+<br>
+At the moment, I have created a separate windows explorer sandbox as forced and created a desktop shortcut using the sandboxie shortcut creator<br>
+<br>
+Andy</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes</h3>
+				<div class="date">Posted: <strong>Wed Mar 14, 2018 11:25 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello AMD,<br>
+<br>
+Each Sandbox has its own container folder, thus, what you download inside Sandbox A, stays in Sandbox A. <br>
+If you download something via, say,  sandboxed Chrome, it will be stored in the same Sandbox Chrome was running in. To see those files, you will need to open the downloads folder in that same sandbox. <br>
+<br>
+If you do download files outside Sandboxie, or recover any sandboxed files to the Downloads folder,   Forcing it to open in Sandboxie will ensure you do not accidentally click on a dangerous file while outside the Sandbox. <br>
+<br>
+Have a look at these threads for ideas of how to set up your Sandboxes to make them more secure:<br>
+Example of online banking restricted Sandbox <a href="viewtopic2f112f11.html?p=120818#p120818" class="postlink">viewtopic.php?p=120818#p120818</a><br>
+Example of "bullet proof" setups: <a href="viewtopic752c752c.html?p=40298#p40298" class="postlink">viewtopic.php?p=40298#p40298</a><br>
+<br>
+Regarding using multiple Sandboxes, check out this Guru's answer to a previous post:<br>
+<a href="viewtopic645c645c.html?p=129256#p129256" class="postlink">viewtopic.php?p=129256#p129256</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes</h3>
+				<div class="date">Posted: <strong>Wed Mar 14, 2018 2:11 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlista810.html?mode=viewprofile&amp;u=11559">AMD</a> wrote: <a href="viewtopic781b781b.html?p=132780#p132780" data-post-id="132780" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Mar 14, 2018 8:36 am</div></cite>
+I have seen comments about forcing the downloads folder and windows explorer - when forcing these, do I create a separate sandbox for each as forced folders/processes or do I force downloads in the Chrome and Firefox sandboxes and just have windows explorer as a separate sandbox ?<br>
+<br>
+I am thinking that if i have downloads forced in the Chrome sandbox, how would I see the downloaded file if windows explorer is a totally separate sandbox ?<br>
+<br>
+At the moment, I have created a separate windows explorer sandbox as forced and created a desktop shortcut using the sandboxie shortcut creator<br>
+<br>
+Andy
+</div></blockquote>
+Hi Andy. For your Downloads sandbox, use a separate sandbox. Use the Forced folder feature. Programs and files that get executed from within will run sandboxed automatically.<br>
+<br>
+For sandboxing Windows explorer. You do not Force Windows explorer. If you do, you ll have problems. If you try to do it, Sandboxie warns you with a message telling you that there can be problems.<br>
+<br>
+What you want to do with Explorer is to create a Sandboxed shortcut via Configure&gt;Windows shell integration&gt;Add shortcut icons. Set it up for Windows explorer to run in its own dedicated sandbox, that way, for example, you can configure it so no program that runs can access the internet. You can also do this with your Downloads sandbox. With the shortcut, whenever you want to run Explorer sandboxed, you click the shortcut.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes</h3>
+				<div class="date">Posted: <strong>Wed Mar 14, 2018 4:28 pm</strong></div>
+				<div class="author">by <strong>AMD</strong></div>
+				<div class="content">Bo<br>
+<br>
+Thanks for your response.<br>
+<br>
+If I have a separate "downloads" sandbox, how does anything get downloaded into it - i think I am missing something here ?<br>
+<br>
+When you say run explorer from a shortcut that’s fine but do you mean from a dedicated sandbox called say “explorer” without any forced programs/folders ?<br>
+<br>
+Do i also have to force downloads in the Chrome sandbox settings too ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes</h3>
+				<div class="date">Posted: <strong>Wed Mar 14, 2018 5:18 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlista810.html?mode=viewprofile&amp;u=11559">AMD</a> wrote: <a href="viewtopiccbd1-2cbd1.html?p=132798#p132798" data-post-id="132798" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Mar 14, 2018 4:28 pm</div></cite>
+Bo<br>
+<br>
+Thanks for your response.<br>
+<br>
+When you say run explorer from a shortcut that’s fine but do you mean from a dedicated sandbox called say “explorer” ?
+</div></blockquote>
+You are welcome. You can call the sandbox whatever you want to call it. I named it WindowsExplorer, and placed a shortcut in the taskbar.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes</h3>
+				<div class="date">Posted: <strong>Wed Mar 14, 2018 5:40 pm</strong></div>
+				<div class="author">by <strong>AMD</strong></div>
+				<div class="content">Bo,<br>
+<br>
+Can you re-read my post as it crossed with your response while I was editing it.<br>
+<br>
+By the way, you helped me quite a bit when I first acquired Sandboxie a few years ago but obviously then I was just using it for Browser sandboxing but I am looking to use it for more security on my PC</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes</h3>
+				<div class="date">Posted: <strong>Wed Mar 14, 2018 6:47 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlista810.html?mode=viewprofile&amp;u=11559">AMD</a> wrote: <a href="viewtopiccbd1-2cbd1.html?p=132798#p132798" data-post-id="132798" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Mar 14, 2018 4:28 pm</div></cite>
+<br>
+If I have a separate "downloads" sandbox, how does anything get downloaded into it - i think I am missing something here ?<br>
+<br>
+........<br>
+<br>
+Do i also have to force downloads in the Chrome sandbox settings too ?
+</div></blockquote>
+I think whats above is what you added in your edit. To "Recover/Download" into your real downloads folder outside the sandbox, you must set up Recovery in Sandbox settings. This is what I do, I ll use Firefox in the example. First, you need to set Firefox to download to one specific folder. So, for Firefox, you do that in Firefox Options. <br>
+<br>
+Then you go to Sandbox settings of your Firefox sandbox (Recovery&gt;Quick recovery),  and add the folder where you set Firefox to download to and any other folder where you might also want to download. I add Desktop. What you add there are the only folders that would be visible to Sandboxie when you recover.<br>
+<br>
+I also untick, disable Immediate recovery. Immediate recovery gives you a prompt informing you when a download has finished. I dont like prompts so I disable it.<br>
+<br>
+The way I set Recovery up, I manually recover after downloads are finished by right clicking the SBIE icon, hovering the browser over the name of the sandbox, and clicking Quick recovery. I recover when I am ready to. Also, if you forgot about recoveries, when you close the browser, Sandboxie prompts you reminding you that there are downloads available. Then you can choose, recover or delete.<br>
+<br>
+Forcing your Downloads folder is totally separate than Chrome or Firefox. You Force your Downloads folder so when you navigate to that folder, files you downloaded and recovered run sandboxed automatically. This are files that you already pulled out of the browsers sandbox.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes</h3>
+				<div class="date">Posted: <strong>Wed Mar 14, 2018 7:14 pm</strong></div>
+				<div class="author">by <strong>AMD</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistef77.html?mode=viewprofile&amp;u=2542">bo.elam</a> wrote: <a href="viewtopic3f3d3f3d.html?p=132806#p132806" data-post-id="132806" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Mar 14, 2018 6:47 pm</div></cite>
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlista810.html?mode=viewprofile&amp;u=11559">AMD</a> wrote: <a href="viewtopiccbd1-2cbd1.html?p=132798#p132798" data-post-id="132798" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Mar 14, 2018 4:28 pm</div></cite>
+<br>
+If I have a separate "downloads" sandbox, how does anything get downloaded into it - i think I am missing something here ?<br>
+<br>
+........<br>
+<br>
+Do i also have to force downloads in the Chrome sandbox settings too ?
+</div></blockquote>
+I think whats above is what you added in your edit. To "Recover/Download" into your real downloads folder outside the sandbox, you must set up Recovery in Sandbox settings. This is what I do, I ll use Firefox in the example. First, you need to set Firefox to download to one specific folder. So, for Firefox, you do that in Firefox Options. <br>
+<br>
+ I am quite OK with recovering of sandboxed downloads to the real downloads (c\users\andy\downloads) but I am trying to configure downloading to the same location but sandboxed so I can scan it for viruses etc first before releasing it to the real downloads folder - to do this, do I force the folder <br>
+<br>
+Then you go to Sandbox settings of your Firefox sandbox (Recovery&gt;Quick recovery),  and add the folder where you set Firefox to download to and any other folder where you might also want to download. I add Desktop. What you add there are the only folders that would be visible to Sandboxie when you recover.<br>
+<br>
+I also untick, disable Immediate recovery. Immediate recovery gives you a prompt informing you when a download has finished. I dont like prompts so I disable it.<br>
+<br>
+The way I set Recovery up, I manually recover after downloads are finished by right clicking the SBIE icon, hovering the browser over the name of the sandbox, and clicking Quick recovery. I recover when I am ready to. Also, if you forgot about recoveries, when you close the browser, Sandboxie prompts you reminding you that there are downloads available. Then you can choose, recover or delete.<br>
+<br>
+<br>
+Forcing your Downloads folder is totally separate than Chrome or Firefox. You Force your Downloads folder so when you navigate to that folder, files you downloaded and recovered run sandboxed automatically. This are files that you already pulled out of the browsers sandbox.<br>
+Bo
+</div></blockquote>
+
+Bo, thanks.<br>
+<br>
+I am quite OK with recovering of sandboxed downloads to the real downloads (c\users\andy\downloads)  but what I am trying to configure is downloading to the same location but sandboxed so I can scan it for viruses etc first before releasing it to the real downloads folder - to do this, do I force the downloads folder in the Chrome sandbox and then create a desktop shortcut via windows shell integration, selecting the Chrome sandbox and then selecting the path to my normal downloads location ?<br>
+<br>
+I think what I am trying to achieve is in your last paragraph but I seem to be struggling with this !</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes</h3>
+				<div class="date">Posted: <strong>Wed Mar 14, 2018 7:57 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlista810.html?mode=viewprofile&amp;u=11559">AMD</a> wrote: <a href="viewtopice06ce06c.html?p=132808#p132808" data-post-id="132808" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Mar 14, 2018 7:14 pm</div></cite>I think what I am trying to achieve is in your last paragraph but I seem to be struggling with this !</div></blockquote>
+Sounds like what you want is to scan files before recovering them out of the sandbox.<br>
+<br>
+For that, you go to C:\Sandbox\, and navigate to the copy of your Downloads folder that you ll find in there. And scan the file. The file is there, thats where it goes before you recover it to your real Downloads folder.<br>
+<br>
+In my case, if I was running Firefox in my DefaultBox and wanted to scan files before recovering, I would navigate here:<br>
+<br>
+C:\Sandbox\Bo\DefaultBox\user\current\BoDownloads<br>
+<br>
+BoDownloads is the folder I set Firefox to recover to and also add in Quick recovery.<br>
+<br>
+I haven't used AV in 9 years but I know this: some antivirus cant scan within the sandbox folder. Some can, some cant. If they cant, you might get nothing from the AV, like 0 file scanned. So, you have to try and see hat happens. <br>
+<br>
+In my opinion, its kind of unnecessary to scan files in C:\Sandbox as they were already scanned by your real time AV when the file is downloaded or written to the hard drive. So, no need for double scanning. Also, if you want to scan it with an OD scanner and it doesn't work, I wouldn't worry, just scan it after you recover it to your Downloads folder. Remember, if you set your Downloads folder as Forced and you execute the file by mistake before scanning it,the file would run sandboxed. So, there's no harm if is malicious.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 7:49 am</strong></div>
+				<div class="author">by <strong>AMD</strong></div>
+				<div class="content">Bo,<br>
+<br>
+Many thanks for your patience and help.<br>
+<br>
+Much appreciated.<br>
+<br>
+Andy</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes [SOLVED]</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 12:35 pm</strong></div>
+				<div class="author">by <strong>AMD</strong></div>
+				<div class="content">Bo,<br>
+<br>
+Can you have a look at my .ini file and see if its looks configured correctly:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=WindowsRasMan
+Template=WindowsLive
+Template=Kaspersky
+Template=OfficeLicensing
+Template=OfficeClickToRun
+TemplateReject=RoboForm
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+
+[UserSettings_082601AD]
+
+SbieCtrl_UserName=andy
+SbieCtrl_ShowWelcome=n
+SbieCtrl_NextUpdateCheck=1521664350
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_AutoApplySettings=y
+SbieCtrl_WindowCoords=494,271,1237,632
+SbieCtrl_ActiveView=40021
+SbieCtrl_EnableLogonStart=y
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=y
+SbieCtrl_AddQuickLaunchIcon=y
+SbieCtrl_AddContextMenu=y
+SbieCtrl_AddSendToMenu=y
+SbieCtrl_BoxExpandedView=DefaultBox,Downloads,FileExplorer,FireFox
+
+[Chrome]
+
+Enabled=y
+ConfigLevel=7
+BlockNetworkFiles=y
+Template=RoboForm
+Template=Chrome_Preferences_DirectAccess
+Template=Chrome_Force
+Template=Chrome_Profile_DirectAccess
+Template=Chrome_History_DirectAccess
+Template=Chrome_Bookmarks_DirectAccess
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#0000FF,ttl
+BoxNameTitle=n
+AutoDelete=y
+NeverDelete=n
+LeaderProcess=chrome.exe
+NotifyInternetAccessDenied=y
+ProcessGroup=&lt;StartRunAccess&gt;,chrome.exe,cmd.exe,rf-chrome-nm-host.exe,NativeMessagingEXE.exe,plugins-setup.exe,dllhost.exe,FoxitPhantomPDF.exe,rundll32.exe,GoogleUpdateOnDemand.exe,GoogleUpdate.exe,explorer.exe,WerFault.exe
+ProcessGroup=&lt;InternetAccess&gt;,chrome.exe,FoxitPhantomPDF.exe
+NotifyStartRunAccessDenied=y
+ClosedFilePath=%Personal%\
+ClosedFilePath=G:\
+ClosedFilePath=E:\
+ClosedFilePath=!&lt;InternetAccess&gt;,InternetAccessDevices
+AutoRecover=y
+ClosedIpcPath=!&lt;StartRunAccess&gt;,*
+
+[TemplateSettings]
+
+Tmpl.RoboForm.andy=C:\Users\Andy\AppData\Local\RoboForm
+
+[FireFox]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FF00,ttl
+AutoDelete=y
+NeverDelete=n
+ForceProcess=firefox.exe
+LeaderProcess=firefox.exe
+NotifyInternetAccessDenied=y
+ProcessGroup=&lt;StartRunAccess&gt;,firefox.exe
+ProcessGroup=&lt;InternetAccess&gt;,firefox.exe
+ClosedFilePath=%Personal%\
+ClosedFilePath=G:\
+ClosedFilePath=E:\
+ClosedFilePath=!&lt;InternetAccess&gt;,InternetAccessDevices
+NotifyStartRunAccessDenied=y
+ClosedIpcPath=!&lt;StartRunAccess&gt;,*
+DropAdminRights=y
+BoxNameTitle=n
+
+[FileExplorer]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+CopyLimitKb=199682
+AutoDelete=y
+NeverDelete=n
+LeaderProcess=explorer.exe
+DropAdminRights=y
+NotifyStartRunAccessDenied=y
+ProcessGroup=&lt;StartRunAccess&gt;,explorer.exe,foxitphantompdf.exe,rundll32.exe,dllhost.exe,ZAM.exe
+ClosedIpcPath=!&lt;StartRunAccess&gt;,*
+
+[Downloads]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+ForceFolder=C:\Users\Andy\Downloads
+</code></pre></div>
+
+I have a shortcut on my desktop to run Downloads and the same for Windows explorer(file explorer as its now seems to be called)<br>
+<br>
+I just want to be sure I am going about this as recommended.<br>
+<br>
+NB There is a golbal setting for Roboform but I unchecked it from software compatibilty because I did not want it in Firefox as that will be my intended banking browser but Roboform is in my Chrome browser which I use daily for logging in.<br>
+<br>
+Andy</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes [SOLVED]</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 3:07 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlista810.html?mode=viewprofile&amp;u=11559">AMD</a> wrote: <a href="viewtopicd36fd36f.html?p=132848#p132848" data-post-id="132848" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Mar 16, 2018 12:35 pm</div></cite>
+Bo,<br>
+<br>
+Can you have a look at my .ini file and see if its looks configured correctly:<br>
+<br>
+
+</div></blockquote>
+The setting I would add to your Downloads and File Explorer sandboxes is: ClosedFilePath=InternetAccessDevices<br>
+<br>
+Sandbox Settings&gt;Restrictions&gt;Internet access, Click "Block all programs", specially for the Downloads sandbox.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes [SOLVED]</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 3:32 pm</strong></div>
+				<div class="author">by <strong>AMD</strong></div>
+				<div class="content">Bo<br>
+<br>
+Thanks again.<br>
+<br>
+I will add these.<br>
+<br>
+Just on something else I have noticed, Foxit is a forced program in its own dedicated sandbox and although I have it set to delete automatically when the sandbox is closed, it is not doing so.<br>
+<br>
+These are the processes that are still there after I close :<br>
+<br>
+<br>
+<br>
+I have dllhost as a lingering program to stop and Foxit set as a program stop but something seems to keep it from auto deleting ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes [SOLVED]</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 3:45 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">I use Foxit Portable. This are the programs I allow to run: foxitreader.exe,dllhost.exe,foxitreaderportable.exe. And have foxitreader.exe as Leader program. I probably added it as Leader program because there were lingering programs when I first installed Foxit in my W10 (the computer I am using right this moment). My Foxit sandbox deletes properly. I am using  Foxit version 8.3.2.25013.<br>
+<br>
+I know I am not using the latest version of Foxit. Tell me the number of the one you are using , if its newer, I ll install it later (Portable), and see what happens.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Setting up Sandboxes [SOLVED]</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 3:48 pm</strong></div>
+				<div class="author">by <strong>AMD</strong></div>
+				<div class="content">Bo<br>
+<br>
+The version I am on differs and is Version:  8.3.5.30351<br>
+<br>
+No sure if that's the reason why its doesn't auto delete ?</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25577&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:29:32 GMT -->
+</html>

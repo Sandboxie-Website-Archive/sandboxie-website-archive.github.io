@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25701&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:53:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Lastpass extension crashes in Chrome</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Lastpass extension crashes in Chrome</h2>
+		<p><a href="viewtopic6a366a36.html?f=11&amp;t=25701">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25701</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Lastpass extension crashes in Chrome</h3>
+				<div class="date">Posted: <strong>Tue Apr 24, 2018 6:32 pm</strong></div>
+				<div class="author">by <strong>kydar</strong></div>
+				<div class="content">I run Chrome inside Sandboxie (paid version) and everything usually runs fine.  Lately though the Lastpass extension crashes occasionally and cannot be reloaded.  It will be running fine, when all of a sudden it becomes disabled, and looking at it on the extension manager page shows that it "may have been corrupted."  At that point, if I uninstall it (i.e., the lastpass extension) and attempt to reinstall it, I get a "could not unzip extension" error in Chrome.  The only solution is to delete the entire sandbox and create a new one.  This has happened 3-4 times in the past couple months.<br>
+<br>
+None of this happens when I run Chrome outside the sandbox, so Sandboxie would seem to be the culprit somehow.  Would appreciate any help or feedback.<br>
+<br>
+Win 7 ultimate<br>
+Chrome 65.0.3325.181<br>
+Sandboxie 5.25.1 (same happened in 5.24, thought the beta might fix it)<br>
+Lastpass 4.9.1</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lastpass extension crashes in Chrome</h3>
+				<div class="date">Posted: <strong>Wed Apr 25, 2018 10:59 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello kydar,<br>
+
+<blockquote class="uncited"><div>The only solution is to delete the entire sandbox and create a new one</div></blockquote>
+Do you  mean that if you delete the contents of your Sandbox, the issue persists after relaunching Chrome? <br>
+
+<blockquote class="uncited"><div> At that point, if I uninstall it ...</div></blockquote>
+If the application is installed on the host, then you would need to re-install it outside Sandboxie, then delete the contents of your Sandbox and re-try.  <br>
+<br>
+When it crashes, what happens exactly? Are there any error messages? <br>
+Are you using any other extensions as well? <br>
+Can you repro the crash by performing any specific actions?<br>
+Is the LastPass template enabled ? (Right-Click on your Sandbox --&gt; Sandbox settings ---&gt; Applications ---&gt;Security/Privacy --&gt; LastPass<br>
+<br>
+What is your OS architecture? x64? x86?<br>
+<br>
+Also, please post your Sandboxie configuration file:<br>
+Configure--&gt;  Edit configuration<br>
+Copy-paste the output here<br>
+Highlight the output you just pasted and click on the "&lt;/&gt;" button for format it. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lastpass extension crashes in Chrome</h3>
+				<div class="date">Posted: <strong>Wed Apr 25, 2018 2:56 pm</strong></div>
+				<div class="author">by <strong>kydar</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic9b249b24.html?p=133262#p133262" data-post-id="133262" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Apr 25, 2018 10:59 am</div></cite>
+Do you  mean that if you delete the contents of your Sandbox, the issue persists after relaunching Chrome? 
+</div></blockquote>
+It will recur, yes, but not immediately.  As I mentioned, it has happened about 3-4 times in the past month.<br>
+
+<blockquote class="uncited"><div> If the application is installed on the host, then you would need to re-install it outside Sandboxie, then delete the contents of your Sandbox and re-try.</div></blockquote>
+I see.  I was reinstalling the browser extension in Chrome within the sandbox.  I guess you're saying that's a no-no.<br>
+
+<blockquote class="uncited"><div>When it crashes, what happens exactly? Are there any error messages? </div></blockquote>
+The extension icon disappears, and if I then look in Chrome's More tools/extensions area, I see the extension listed as "may be corrupted" or something of that nature.<br>
+
+<blockquote class="uncited"><div>Are you using any other extensions as well? </div></blockquote>
+Oh yes I use many extensions in Chrome.  Lastpass is the only one that has this problem though.<br>
+
+<blockquote class="uncited"><div>Can you repro the crash by performing any specific actions?</div></blockquote>
+Not that I've been able to determine as of yet.<br>
+
+<blockquote class="uncited"><div>Is the LastPass template enabled ? (Right-Click on your Sandbox --&gt; Sandbox settings ---&gt; Applications ---&gt;Security/Privacy --&gt; LastPass</div></blockquote>
+There are two hyphens between the brackets.  I'm not sure if that means it is enabled or not<br>
+
+<blockquote class="uncited"><div>What is your OS architecture? x64? x86?</div></blockquote>
+x64<br>
+<br>
+Also, please post your Sandboxie configuration file:<br>
+<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+KnownConflicts=avast
+Template=7zipShellEx
+Template=AdobeDistiller
+Template=DragonNaturallySpeaking
+Template=Folder_Size
+Template=LogitechSetPoint
+Template=Avast_Antivirus
+Template=AdobeAcrobatReader
+Template=Evernote
+Template=nVidia_Stereoscopic3D
+Template=OfficeLicensing
+Template=AdobeLicensing
+Template=LastPass
+FileRootPath=G:\Sandbox\%USER%\%SANDBOX%
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=G:\Downloads
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+CopyLimitKb=3343555
+AutoDelete=y
+NeverDelete=n
+
+[UserSettings_05000141]
+
+SbieCtrl_UserName=jim
+SbieCtrl_NextUpdateCheck=1524944207
+SbieCtrl_UpdateCheckNotify=y
+SbieCtrl_ShowWelcome=n
+SbieCtrl_WindowCoords=976,396,648,396
+SbieCtrl_ActiveView=40021
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_RecoverTarget=G:\Downloads
+SbieCtrl_SaveRecoverTargets=y
+SbieCtrl_BoxExpandedView=DefaultBox
+
+
+</code></pre></div>
+
+Thanks for your help.<br>
+Jim</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lastpass extension crashes in Chrome</h3>
+				<div class="date">Posted: <strong>Wed Apr 25, 2018 4:24 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello kydar,<br>
+<br>
+So far, I have not been able to reproduce the issue. I am going to leave Chrome + LastPass + Sbie running for a while and will update this thread if anything comes up. <br>
+<br>
+Please let me know the results after having re-installed the application outside Sandboxie and testing in a new Sandbox with default settings. <br>
+The two hyphens in the LastPass template indicate it is enabled globally (which is what we want, so all good there). <br>
+<br>
+What are the other extensions installed? Try removing them one at a time to see if the behavior changes.<br>
+<br>
+I also see you have an AV running, make sure Sandboxie is whitelisted and also test disabling/removing the AV to see if the behavior changes.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lastpass extension crashes in Chrome</h3>
+				<div class="date">Posted: <strong>Wed Apr 25, 2018 4:54 pm</strong></div>
+				<div class="author">by <strong>kydar</strong></div>
+				<div class="content">Thanks.  If it happens again, I'll try and gather more diagnostic info.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25701&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:53:40 GMT -->
+</html>

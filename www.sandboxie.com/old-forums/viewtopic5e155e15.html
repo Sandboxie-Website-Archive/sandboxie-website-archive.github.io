@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=21174&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:39:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Hard links don't work</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Hard links don't work</h2>
+		<p><a href="viewtopic81d9-281d9.html?f=11&amp;t=21174">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21174</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Hard links don't work</h3>
+				<div class="date">Posted: <strong>Thu May 21, 2015 10:38 pm</strong></div>
+				<div class="author">by <strong>benrg</strong></div>
+				<div class="content">The 4.16 change log says "A security problem reported by a user has been fixed: hard links could be created outside the sandbox. CreateHardLink API is now blocked."<br>
+<br>
+This is not a fix, it's a serious loss of functionality. Software does actually use this API. One example of probably many: pip (the Python package installer) no longer works in a sandbox because it uses CreateHardLink for file locking.<br>
+<br>
+The Git for Windows install now takes 250 MB inside a sandbox, instead of the advertised 100 MB, because the ~100 hardlinked copies of git.exe (git-add.exe, git-annotate.exe, etc.) become actual copies instead.<br>
+<br>
+Please fix this properly, by blocking hardlinks outside the sandbox but permitting hardlinks that stay inside it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Hard links don't work</h3>
+				<div class="date">Posted: <strong>Fri May 22, 2015 1:02 am</strong></div>
+				<div class="author">by <strong>benrg</strong></div>
+				<div class="content">Did hard links never work correctly? I downgraded to 4.14 and I can create links outside the sandbox (breaking the sandboxing) but still can't create them inside.<br>
+<br>
+In any case, please fix this. I think it's a simple fix: ensure that the source file is inside the sandbox (copying it if appropriate - the same logic as opening a file for writing), and map the target path into the sandbox. I think the bug in 4.14 and earlier was just that it didn't translate the target path.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Hard links don't work</h3>
+				<div class="date">Posted: <strong>Fri May 22, 2015 11:35 am</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">No, they never worked correctly.  Hardlinks were going right out of the sandbox.  And unfortunately, it is not a simple fix.  We will consider this for a future release.<br>
+<br>
+I am interested in knowing how many people are running into issues with hardlinks.  This is the 1st report we've had.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Hard links don't work</h3>
+				<div class="date">Posted: <strong>Fri May 22, 2015 8:55 pm</strong></div>
+				<div class="author">by <strong>btm</strong></div>
+				<div class="content">I've tried using hardlinks in the past, usually for putting specific game files onto a ramdisk temporarily but never got it to work with SBIE so I dealt with the extra lag instead. (This specific scenario was related to Diablo III back when I still played it on a hardcore server and loading lag could be a huge disaster!) I would like to see hardlinks being usable but protected, yet again just like the deletion thread, it's not on <em>my</em> priority list atm.<br>
+<br>
+I'd prefer to see some real bugs being resolved first but if numbers are any evidence, I'm currently the only one who wants <a href="viewtopicc2ccc2cc.php?f=11&amp;t=21069" class="postlink">forced programs on XP</a> checked and the runas <a href="viewtopic36fc36fc.php?f=11&amp;t=21000&amp;start=45#p108697" class="postlink">sandbox deletion bug</a> fixed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Hard links don't work</h3>
+				<div class="date">Posted: <strong>Sun May 24, 2015 7:49 pm</strong></div>
+				<div class="author">by <strong>benrg</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>And unfortunately, it is not a simple fix.</div></blockquote>
+Can you explain why? What goes wrong with the fix I suggested?<br>
+
+<blockquote><div><cite>btm wrote:</cite>I've tried using hardlinks in the past, usually for putting specific game files onto a ramdisk temporarily</div></blockquote>
+Are you sure you aren't thinking of directory junctions or symlinks? Hard links can't cross volume boundaries.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=21174&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:39:25 GMT -->
+</html>

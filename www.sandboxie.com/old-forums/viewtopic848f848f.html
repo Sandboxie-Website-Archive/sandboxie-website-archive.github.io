@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=39&t=15877&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:41:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [4.03.04] Runtime libraries error with an old working script</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[4.03.04] Runtime libraries error with an old working script</h2>
+		<p><a href="viewtopic89e289e2.html?f=39&amp;t=15877">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=39&amp;t=15877</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[4.03.04] Runtime libraries error with an old working script</h3>
+				<div class="date">Posted: <strong>Sat Jun 29, 2013 7:08 am</strong></div>
+				<div class="author">by <strong>Max100</strong></div>
+				<div class="content">Steps to reproduce it:<br>
+<br>
+1) Install Sandboxie 4.03.02<br>
+2) Install <a href="http://www.restateconnessi.it/?wpdmact=process&amp;did=MS5ob3RsaW5r" class="postlink">this</a> in a sandbox of your choice (press Avanti&gt;, then Install and Fine).<br>
+3) Install <a href="http://www.inps.it/docallegati/Mig/servizi/CarpePC_ter/CA-file/CA-60508.zip" class="postlink">this</a> in the same sandbox as before (press Avanti, again Avanti, then Install. Before to press Fine, please unselect the checkbox "Eseguire Carpe-PC" .)<br>
+<br>
+4) Create a file named "start.bat" with these lines:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>sc start "Micro Focus License Manager"
+start /wait c:\svabi\program\ca-start.exe
+</code></pre></div>
+
+<br>
+5) Copy start.bat in c:\svabi\program\ folder.<br>
+6) Add these lines to the end of your sandbox configuration:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>LingerProcess=mflmma.exe
+LingerProcess=mflmwin.exe
+</code></pre></div>
+
+<br>
+7) Open start.bat from the sandbox. You will see this error:<br>
+Runtime DLL’CBLRTSM’ version 4.0, entry point-mFgWinMain2 not recorder in registry, not found or incompatible with requirement of dynamically bound COBOL program. Dynamic bindind of RTS require: Runtime DLL’CBLRTSM’, at least Version 4.0<br>
+<br>
+<br>
+I have Windows 7 x64 Ultimate and this issue doesn't happen in 3.76.<br>
+<br>
+Thx.  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 05, 2013 6:55 am</strong></div>
+				<div class="author">by <strong>Max100</strong></div>
+				<div class="content">Reproducible with 4.03.04 (title updated).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jul 06, 2013 2:36 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Alright, I will take a look at this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jul 07, 2013 11:52 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">This is a problem with loading the environment variables, which were set into the sandbox by the installers you run in the sandbox.<br>
+The problem will be fixed in the next version that I will release.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 08, 2013 12:33 pm</strong></div>
+				<div class="author">by <strong>Max100</strong></div>
+				<div class="content">Fixed here with 4.04. Thank you.  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=39&t=15877&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:41:47 GMT -->
+</html>

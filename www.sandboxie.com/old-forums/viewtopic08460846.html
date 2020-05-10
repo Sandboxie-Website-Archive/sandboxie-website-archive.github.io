@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=11094&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:52:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Delete sandbox on shutdown</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Delete sandbox on shutdown</h2>
+		<p><a href="viewtopic98079807.html?f=4&amp;t=11094">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=11094</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Delete sandbox on shutdown</h3>
+				<div class="date">Posted: <strong>Sun Aug 14, 2011 4:33 am</strong></div>
+				<div class="author">by <strong>tverweij</strong></div>
+				<div class="content">I would like the option "Delete sandbox on shutdown", causing the sandbox to be deleted when the computer is shutdown.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 14, 2011 2:29 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The feature request has been discussed in this topic:<br>
+<br>
+<a href="../phpbb/viewtopiccc63.php?t=10639" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=10639</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 24, 2011 2:31 am</strong></div>
+				<div class="author">by <strong>tverweij</strong></div>
+				<div class="content">No it isn't.<br>
+<br>
+That thread is about the problem that the sandbox is not emptied on shutdown when the option "delete the sandbox when the last program ends" is activated.<br>
+<br>
+I do not want to empty the sandbox when no programs are running in it.<br>
+<br>
+I only want it to be emptied when I shutdown the system - not before.<br>
+<br>
+But I already found the solution:<br>
+<br>
+I made a cmd script "DeleteSandBox.cmd" with the command RMDIR /s /q "C:\Sandbox\Administrator\DefaultBox"<br>
+And this cmd file is executed at system startup in the Windows Task Scheduler.<br>
+<br>
+This way I have always a clean sandbox at the start of a new windows session.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 24, 2011 7:53 pm</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content">The problem with having such an option is that Windows will display the screen asking the user to terminate running programs (Sandboxie) before windows shuts down. Those who enable it will think that Sandboxie is making windows unresponsive when in fact its not the case ofcourse.<br>
+<br>
+Deleting a sandbox on startup seems to be a better solution for the potential issue mentioned above. If its easy to implement, I guess its a nice bonus, but not really needed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jun 23, 2012 10:54 am</strong></div>
+				<div class="author">by <strong>thewul</strong></div>
+				<div class="content"><blockquote><div><cite>tverweij wrote:</cite>No it isn't.<br>
+<br>
+That thread is about the problem that the sandbox is not emptied on shutdown when the option "delete the sandbox when the last program ends" is activated.<br>
+<br>
+I do not want to empty the sandbox when no programs are running in it.<br>
+<br>
+I only want it to be emptied when I shutdown the system - not before.<br>
+<br>
+But I already found the solution:<br>
+<br>
+I made a cmd script "DeleteSandBox.cmd" with the command RMDIR /s /q "C:\Sandbox\Administrator\DefaultBox"<br>
+And this cmd file is executed at system startup in the Windows Task Scheduler.<br>
+<br>
+This way I have always a clean sandbox at the start of a new windows session.</div></blockquote>
+
+Agree it would be nice if it was a built in option ... <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> <br>
+<br>
+Thanks for your tip/workaround.<br>
+<br>
+I'll give it a try!<br>
+=</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jun 23, 2012 11:28 am</strong></div>
+				<div class="author">by <strong>thewul</strong></div>
+				<div class="content">Bad luck, it did not work. Can't figure out how to do this.<br>
+As said, it should be an option within Sandboxie, instead of users trying to figure this out themselves.<br>
+I am not familiar with scripts.<br>
+<br>
+I created a text file<br>
+containing just 1 line<br>
+<br>
+RMDIR /s /q "G:\Sandbox\MyName\DefaultBox" <br>
+saved it as: DeleteSandBox.cmd<br>
+<br>
+Then went on with the steps outlined in <a href="http://windows.microsoft.com/en-us/windows7/Schedule-a-task" class="postlink">http://windows.microsoft.com/en-us/wind ... ule-a-task</a><br>
+and pointed to above file.<br>
+<br>
+Nothing happened.<br>
+=</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jun 25, 2012 3:05 pm</strong></div>
+				<div class="author">by <strong>NewUserX8G</strong></div>
+				<div class="content">If XP Pro, use Group Policy. <br>
+<br>
+Local Computer Policy\Computer Configuration\Windows Settings\Scripts <br>
+(Startup/Shutdown) <br>
+<br>
+Local Computer Policy\User Configuration\Windows Settings\Scripts <br>
+(Logon/Logoff)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 04, 2012 12:42 am</strong></div>
+				<div class="author">by <strong>thewul</strong></div>
+				<div class="content">Am running Windows 7 64bit <br>
+Am not sure where to look/how to solve this... <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 13, 2012 6:26 am</strong></div>
+				<div class="author">by <strong>thewul</strong></div>
+				<div class="content"><blockquote><div><cite>thewul wrote:</cite>Am running Windows 7 64bit <br>
+Am not sure where to look/how to solve this... <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"></div></blockquote>
+
+<br>
+Can someone help??<br>
+<br>
+TIA<br>
+=</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Does this work?</h3>
+				<div class="date">Posted: <strong>Fri Jul 13, 2012 8:07 pm</strong></div>
+				<div class="author">by <strong>Oh shucks, I'm old!</strong></div>
+				<div class="content">rd G:\Sandbox\MyName\DefaultBox /s /q<br>
+<br>
+<br>
+I'm on XP pro though.<br>
+<br>
+Worked for me saved as a .bat file with a shortcut created and placed in my startup folder.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>You might be interested in this thread.</h3>
+				<div class="date">Posted: <strong>Fri Jul 13, 2012 8:47 pm</strong></div>
+				<div class="author">by <strong>Oh shucks, I'm old!</strong></div>
+				<div class="content"><a href="../phpbb/viewtopic63b4.php?t=4745&amp;postdays=0&amp;postorder=asc&amp;highlight=delete+sandbox+startup&amp;start=0" class="postlink">http://www.sandboxie.com/phpbb/viewtopi ... up&amp;start=0</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 19, 2012 1:27 am</strong></div>
+				<div class="author">by <strong>BlackThought</strong></div>
+				<div class="content">If you have CCleaner you can include your sandboxie folder to be deleted upon login.<br>
+<br>
+<img src="../i.imgur.com/GQUch.png" class="postimage" alt="Image"><br>
+<br>
+I have it set to delete the all subfolders/files and the parent folder "TEST"<br>
+<br>
+Im on Win 7 64-bit if thats of any use <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+My logic, should be better to delete on boot vs delete before shutdown, i don't want windows to potentially hang and not shutdown because something cant be deleted</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Nov 06, 2012 1:18 pm</strong></div>
+				<div class="author">by <strong>Reporter</strong></div>
+				<div class="content"><blockquote><div><cite>BlackThought wrote:</cite>If you have CCleaner you can include your sandboxie folder to be deleted upon login.<br>
+<br>
+<img src="../i.imgur.com/GQUch.png" class="postimage" alt="Image"><br>
+<br>
+I have it set to delete the all subfolders/files and the parent folder "TEST"<br>
+<br>
+Im on Win 7 64-bit if thats of any use <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+My logic, should be better to delete on boot vs delete before shutdown, i don't want windows to potentially hang and not shutdown because something cant be deleted</div></blockquote>
+
+Good idea. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Related: Stop all programs and delete all on Sandbx exit</h3>
+				<div class="date">Posted: <strong>Mon Jan 21, 2013 2:30 pm</strong></div>
+				<div class="author">by <strong>XCLN</strong></div>
+				<div class="content">Hi<br>
+<br>
+Is there a simple way to implement this feature?  Basically to use Sandboxie as a safe browser with no memory after each Snadboxie exit, not each windows restart. <br>
+<br>
+I know it is sort of a shame not to use its full capabilities, but sometimes simple is safer ..  I'd set the default that way, and if I wanted to save some downloads etc. would start the non simple version.<br>
+<br>
+Right now it is a pain to do this manually, stop all running processes, delete all contents .. <br>
+<br>
+thanks if anyone has worked out the details and can provide a short how to (scripts, shortcuts, commands  options .. )</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Related: Stop all programs and delete all on Sandbx exit</h3>
+				<div class="date">Posted: <strong>Mon Jan 21, 2013 2:52 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>XCLN wrote:</cite>Is there a simple way to implement this feature?  Basically to use Sandboxie as a safe browser with no memory after each Snadboxie exit, not each windows restart.</div></blockquote>Auto-delete is already available for each sandbox,  in Sandbox Settings. If you don't use any browser settings that will result in items being saved out of the sandbox, then everything will be deleted in the sandbox when the programs end.<br>
+You might want to turn off Immediate Recovery so as not to be prompted when some file appears in one of the Quick Recovery folders, if you don't plan on saving anything out of the sandbox.<br>
+You could also delete all folders listed as Recovery Folders, if you don't want to be bothered with anything that might have been saved or downloaded into those folders.<br>
+<br>
+If you start a sandboxed session by using your browser, and other programs are started that use the same sandbox, it's possible that one of those other programs might continue to run - preventing auto delete from initiating.<br>
+You can add those .exe programs to a list of Lingering Programs or you can set your browser's .exe program as a Leader Program, and ending it will end all other programs that are using that same sandbox.<br>
+<br>
+All of the above are listed as settings under Sandbox Settings, for each sandbox.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=11094&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:52:52 GMT -->
+</html>

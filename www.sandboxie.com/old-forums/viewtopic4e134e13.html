@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=55&t=22151&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:05:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 5.07 Beta Available (latest version 5.08 RC)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>5.07 Beta Available (latest version 5.08 RC)</h2>
+		<p><a href="viewtopica3a2a3a2.html?f=55&amp;t=22151">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=55&amp;t=22151</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>19</strong></div>
+					<div class="post">
+				<h3>5.07 Beta Available (latest version 5.08 RC)</h3>
+				<div class="date">Posted: <strong>Tue Nov 24, 2015 12:24 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Combined 32/64 installer:<br>
+<a href="../SandboxieInstall.html" class="postlink">http://www.sandboxie.com/SandboxieInstall.exe</a><br>
+<br>
+Separate:<br>
+<a href="../SandboxieInstall32.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall32.exe</a><br>
+<a href="../SandboxieInstall64.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall64.exe</a><br>
+<br>
+No changes in 5.08 RC other than the version number.<br>
+<br>
+<strong>Fixes in 5.07.8</strong><br>
+1) Fixed rare Chrome 64 error SBIE2303 Could not hook VerifyCatalogFile (888)<br>
+<br>
+<strong>Fixes in 5.07.7</strong><br>
+1) Fixed Chrome 49 crash.<br>
+<br>
+<strong>Fixes in 5.07.6</strong><br>
+1) Windows 10 fast ring build 14251 "IsHungAppWindow" hook issue.<br>
+2) Fixed wrong Windows version # reported for Windows 8.1 (e.g. <a href="http://whatsmyuseragent.com/" class="postlink">http://whatsmyuseragent.com/</a>)<br>
+<br>
+<strong>Fixes in 5.07.5</strong><br>
+1) Added a few more apps to the known conflicts list in templates.ini<br>
+2) Fixed iTunes GUID in templates.ini conflicts list.<br>
+<br>
+<strong>Fixes in 5.07.4</strong><br>
+1) Fixing CAPI2 application event error written to system event log when SandboxieCrypto.exe starts (introduced in 5.07.3).<br>
+2) Added several apps to the known conflicts list.<br>
+<br>
+<strong>Fixes in 5.07.3</strong><br>
+1) A file named c:\program.exe no longer prevents SandboxieRpcSs.exe from starting.<br>
+2) In rare instances, SandboxieRpcSs.exe or SandboxieDcomLaunch.exe would not end when all other applications exited.<br>
+3) F12 Developer Tools now works in IE-11.<br>
+<br>
+<strong>Fixes in 5.07.2</strong><br>
+1) More improvements to application startup. <em>SBIE2204 Cannot start sandboxed service RpcSs (-1)</em> in Win 10 browser startup no longer occurs in our testing.<br>
+2) Office 2013 in Win 10 is working under Sandboxie again.<br>
+<br>
+<strong>Fixes in 5.07.1</strong><br>
+1) Improvements to application startup. Applications start faster and Windows 10 race conditions are greatly improved.<br>
+2) A problem with splwow64.exe in Win 8.1+ has been fixed. If a user printed from inside the sandbox in a 32 bit app, printing would no longer work outside the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.1)</h3>
+				<div class="date">Posted: <strong>Tue Nov 24, 2015 3:10 pm</strong></div>
+				<div class="author">by <strong>aufkrawall</strong></div>
+				<div class="content">Good news, madHcCtrl.exe doesn't crash anymore. Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.1)</h3>
+				<div class="date">Posted: <strong>Tue Nov 24, 2015 3:14 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Haven't noticed any definitive issues yet. I had a random *poof* (CTD without any errors) in a game that didn't have issues under 5.05.3/5.06 but the second round it lasted 45+ mins and hasn't happen again. So likely it's just a coincidence but I'll let you know if a trend starts to show.<br>
+<br>
+I'm not one of those unlucky souls who had to contend with the race condition issues but it's nice to see you're working hard to solve it, Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.1)</h3>
+				<div class="date">Posted: <strong>Tue Nov 24, 2015 3:59 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">5.07.1 is looking good in W7 32 bits. All seems well. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.1)</h3>
+				<div class="date">Posted: <strong>Tue Nov 24, 2015 5:38 pm</strong></div>
+				<div class="author">by <strong>DS78</strong></div>
+				<div class="content">Working great with Win 7 x64 and x64 Cyberfox<br>
+<br>
+p.s. will we get Cyberfox added to the settings/applications/web browsers/Firefox list - or something like that - in a future release?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.1)</h3>
+				<div class="date">Posted: <strong>Tue Nov 24, 2015 6:23 pm</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content">I get this now when I execute a forced sandboxed Chrome:<br>
+<br>
+2015-11-24 16:48:31 SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1<br>
+2015-11-24 16:48:31 SBIE2314 Canceling process chrome.exe [2760 / 9]<br>
+2015-11-24 16:48:31 SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1<br>
+2015-11-24 16:48:31 SBIE2314 Canceling process chrome.exe [2900 / 9]<br>
+<br>
+Windows 8.1 x64<br>
+Chrome 46.0.2490.86 m (64-bit)<br>
+Sandboxie 5.07.1<br>
+Latest non-beta Bouncer (<a href="http://excubits.com/content/en/products_bouncer.html" class="postlink">http://excubits.com/content/en/products_bouncer.html</a>); no other security apps<br>
+<br>
+Edit: seems to be intermittent</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.1)</h3>
+				<div class="date">Posted: <strong>Tue Nov 24, 2015 7:00 pm</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">Looking good in Win7 ulitmate x64 w/ SRWare Iron, and Cyberfox...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available</h3>
+				<div class="date">Posted: <strong>Wed Nov 25, 2015 2:44 am</strong></div>
+				<div class="author">by <strong>a3739349drdrbcom</strong></div>
+				<div class="content">Does anyone have a minor problem concern the Vivaldi Browser's Icon on Taskbar? <br>
+<br>
+The running Vivaldi's(both 32bit and 64bit) icon displays "blank" in a sandbox but not outside. <br>
+<br>
+I've tried to empty thumbnail cache both in and out without taking effect.<br>
+<br>
+It seems that previous 5.XX and 4. XX version SBIE also occurs.   Platform: Win8.1 x64</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available</h3>
+				<div class="date">Posted: <strong>Wed Nov 25, 2015 3:03 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>a3739349drdrbcom wrote:</cite>
+The running Vivaldi's(both 32bit and 64bit) icon displays "blank" in a sandbox but not outside. </div></blockquote>
+I don't believe Vivaldi is supported by Sandboxie or works under SBIE. I remember trying to test it installing it in a sandbox some months ago and the result was exactly what you said, a blank page gets displayed as the browser opens.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.1)</h3>
+				<div class="date">Posted: <strong>Wed Nov 25, 2015 3:06 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite>5.07.1 is looking good in W7 32 bits. All seems well. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> </div></blockquote>
+....same result in XP. 5.07.1 is Solid. <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.1)</h3>
+				<div class="date">Posted: <strong>Wed Nov 25, 2015 5:17 am</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content">SBIE2303 Could not hook SxsInstallW (4)<br>
+SBIE2318 DLL initialization failed for 'sxs.dll'<br>
+<br>
+SBIE2303 Could not hook RegisterGPNotification (4)<br>
+SBIE2318 DLL initialization failed for 'userenv.dll'<br>
+<br>
+Sandboxed IE11/beta 5.07.1 x64.<br>
+<br>
+Win10 1511 build 10586.3 x64/Norton Security with Backup v22.5.4.24</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.1)</h3>
+				<div class="date">Posted: <strong>Wed Nov 25, 2015 7:57 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>nick s wrote:</cite>I get this now when I execute a forced sandboxed Chrome:<br>
+<br>
+2015-11-24 16:48:31 SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1<br>
+2015-11-24 16:48:31 SBIE2314 Canceling process chrome.exe [2760 / 9]<br>
+2015-11-24 16:48:31 SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1<br>
+2015-11-24 16:48:31 SBIE2314 Canceling process chrome.exe [2900 / 9]<br>
+<br>
+Windows 8.1 x64<br>
+Chrome 46.0.2490.86 m (64-bit)<br>
+Sandboxie 5.07.1<br>
+Latest non-beta Bouncer (<a href="http://excubits.com/content/en/products_bouncer.html" class="postlink">http://excubits.com/content/en/products_bouncer.html</a>); no other security apps<br>
+<br>
+Edit: seems to be intermittent</div></blockquote>
+
+It may be related to Bouncer. A few months back, there was some weirdness when Bouncer was running. I'll poke around. Let me know if it persists, I see that it's intermittent at the moment. Which is good..and bad.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available</h3>
+				<div class="date">Posted: <strong>Wed Nov 25, 2015 7:58 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite><blockquote><div><cite>a3739349drdrbcom wrote:</cite>
+The running Vivaldi's(both 32bit and 64bit) icon displays "blank" in a sandbox but not outside. </div></blockquote>
+I don't believe Vivaldi is supported by Sandboxie or works under SBIE. I remember trying to test it installing it in a sandbox some months ago and the result was exactly what you said, a blank page gets displayed as the browser opens.<br>
+<br>
+Bo</div></blockquote>
+
+I did test Vivaldi a while back. It I'll give it a test again to see if anything changed. At that time, it worked well. Both directly installed in SBIE and on the host.<br>
+<a href="viewtopic7fa77fa7.html?f=11&amp;t=21974" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=21974</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.1)</h3>
+				<div class="date">Posted: <strong>Wed Nov 25, 2015 8:05 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Happy seeing that everyone is having a good experience so far (knocking on wood...fingers and toes crossed...)<br>
+<br>
+There was significant work dedicated to this Beta. Curt, Tom &amp; the Team had a lot of challenges to overcome. It appears, as usual...their work has paid off.<br>
+<br>
+Feedback from everyone is of the utmost importance. We can test (I can test), We run torture tests, but there is no way to replicate what our users may have, so we value the feedback, suggestions, tips and ideas.<br>
+<br>
+Keep it coming. <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available</h3>
+				<div class="date">Posted: <strong>Wed Nov 25, 2015 9:06 am</strong></div>
+				<div class="author">by <strong>a3739349drdrbcom</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite>
+I don't believe Vivaldi is supported by Sandboxie or works under SBIE. I remember trying to test it installing it in a sandbox some months ago and the result was exactly what you said, a blank page gets displayed as the browser opens.Bo</div></blockquote>
+<blockquote><div><cite>Craig@Invincea wrote:</cite>I did test Vivaldi a while back. It I'll give it a test again to see if anything changed. At that time, it worked well. Both directly installed in SBIE and on the host.<a href="viewtopic7fa77fa7.html?f=11&amp;t=21974" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=21974</a></div></blockquote>
+
+ <img class="smilies" src="images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes"> No, it is not concern page. The lastest Vivaldi (just the beta one) won't get it appeared. What I concern is that the <span style="text-decoration: underline">Vivaldi's Icon on Desktop Taskbar</span> (belong to Explorer.exe ) displays "Blank Icon" in a sandbox but not outside. I don't know whether it causes by Vivaldi itself or sbie……</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>19</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=55&t=22151&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:05:36 GMT -->
+</html>

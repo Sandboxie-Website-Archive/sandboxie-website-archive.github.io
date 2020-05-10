@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=13143&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:47:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; KeePass to work with Sandboxie</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>KeePass to work with Sandboxie</h2>
+		<p><a href="viewtopic9ee79ee7.html?f=5&amp;t=13143">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=13143</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>KeePass to work with Sandboxie</h3>
+				<div class="date">Posted: <strong>Sun Jun 17, 2012 7:39 am</strong></div>
+				<div class="author">by <strong>KF-827</strong></div>
+				<div class="content">Hi All,<br>
+<br>
+I haven't found anyting on this one (I hope I wasn't blind): I would like to use KeePass (2.x) outside a sandbox and use the drag and drop feature to get usernames and passwords into Firefox running within a sandbox. In my current configuration this doesn't work. Is that a configuration thing or is it possible to implement this feature into Sandboxie?<br>
+<br>
+Thanks a lot in advance for your comments and support.<br>
+<br>
+KF</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 24, 2012 3:22 pm</strong></div>
+				<div class="author">by <strong>Keepass</strong></div>
+				<div class="content">It does not for me either. <br>
+<br>
+Keepass Auto-Type still works though. <br>
+<br>
+In my opinion that is way more convenient anyway.<br>
+<br>
+Don't forget to turn on Two-Channel Auto-Type Obfuscation to help prevent keyloggers if you're gonna use that.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 24, 2012 4:37 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">You could probably drag and drop if you apply the Accessibility template to that sandbox.<br>
+<br>
+Read the note at the top of:<br>
+Sandbox Settings &gt; Applications &gt; Accessibility<br>
+<br>
+To me, this setting is a last chance way of making something work, but if it was me I would stick with auto-type.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: KeePass to work with Sandboxie</h3>
+				<div class="date">Posted: <strong>Thu Mar 02, 2017 1:14 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">Me Too.<br>
+Asking about KeePass drag n drop.   <br>
+KeePass Auto-Type Ctrl+V works okay in browser sandbox.  Drag n drop does not work in browser sandbox.   <br>
+
+<blockquote class="uncited"><div>KeePass to work with Sandboxie<br>
+Postby KF-827 » Sun Jun 17, 2012 6:39 am<br>
+Hi All,<br>
+I haven't found anything on this one (I hope I wasn't blind): I would like to use KeePass (2.x) outside a sandbox and use the drag and drop feature to get usernames and passwords into Firefox running within a sandbox. In my current configuration this doesn't work. Is that a configuration thing or is it possible to implement this feature into Sandboxie?<br>
+Thanks a lot in advance for your comments and support.</div></blockquote>
+
+RE: <a href="../index0a26.html?OpenWinClass" class="postlink">https://www.sandboxie.com/index.php?OpenWinClass</a><br>
+<br>
+I do not find OpenWinClass= with my [Firefox] Sandboxie.ini <br>
+OpenWinClass=ConsoleWindowClass<br>
+ OpenWinClass=$:program.exe<br>
+ OpenWinClass=#<br>
+ OpenWinClass=*<br>
+<br>
+I tried OpenWinClass=$:KeePass.exe &amp; OpenWinClass=$: Database.kdbx with no joy. <br>
+<br>
+Curious, how/why Auto-Type Ctrl+V works okay, whereas drag n drop does not work.  <br>
+<br>
+Comments?  <br>
+Thanks<br>
+<br>
+EDIT: <a href="https://www.wilderssecurity.com/threads/sandboxie-acquired-by-invincea.357312/page-139#post-2656825" class="postlink">https://www.wilderssecurity.com/threads ... st-2656825</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: KeePass to work with Sandboxie</h3>
+				<div class="date">Posted: <strong>Thu Mar 02, 2017 3:42 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">I am seeing the same behavior, but it does work fine when Sandboxed. <br>
+<br>
+Maybe this can help setting it up so you can use it Sandboxed:<br>
+<a href="viewtopic9e5d9e5d.php?f=17&amp;t=22136&amp;p=116001&amp;hilit=keepass#p116001" class="postlink">http://forums.sandboxie.com/phpBB3/view ... ss#p116001</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: KeePass to work with Sandboxie</h3>
+				<div class="date">Posted: <strong>Thu Mar 02, 2017 3:58 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>I am seeing the same behavior, but it does work fine when Sandboxed. <br>
+Regards,<br>
+Barb.-</div></blockquote>
+Yes, drag n drop works fine with KeePass running inside the same sandbox as Firefox.<br>
+<br>
+Feels a bit funny with KeePass and Database sandbox'd since I'm used to plugins and since Auto-Type Ctrl+V does not need KeePass running inside the same sandbox nor plugins.  <br>
+<br>
+THANKS <img class="smilies" src="images/smilies/icon_exclaim.gif" width="15" height="15" alt=":!:" title="Exclamation"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=13143&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:47:12 GMT -->
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=13897&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:39:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.08] Internet Explorer 10 History</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.08] Internet Explorer 10 History</h2>
+		<p><a href="viewtopic483f483f.html?f=38&amp;t=13897">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=13897</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>[.08] Internet Explorer 10 History</h3>
+				<div class="date">Posted: <strong>Mon Oct 22, 2012 8:35 am</strong></div>
+				<div class="author">by <strong>zalazar</strong></div>
+				<div class="content">I'm using Sandboxie 3.74 (64-bit) on Windows 8 Enterprise RTM x64 edition.<br>
+When browsing in the Sandbox with the default Internet Explorer 10, the Internet Explorer History is not saved.<br>
+When clicking on the Favorites button and then the tab "History", the Search History stays empty.<br>
+So it's not possible to view which Internet pages you have viewed.<br>
+<br>
+When I'm browsing outside the sandbox the History function is working fine.<br>
+<br>
+P.S.<br>
+Thanks for your effort to make Sandboxie available for Windows 8.<br>
+I think Sandboxie is a great program.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 23, 2012 6:19 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I think the only way this is going to be possible on Windows 8 is by giving the sandboxed browser direct access to the History and Temporary Internet Files data.  So you won't just see the old stuff in the sandboxed browser, you would also be changing that data, even if you're in the sandbox.  Would that be useful to you?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Internet Explorer 10 History</h3>
+				<div class="date">Posted: <strong>Tue Oct 23, 2012 4:54 pm</strong></div>
+				<div class="author">by <strong>zalazar</strong></div>
+				<div class="content">Thanks for your answer.<br>
+It's not my preferred way but if it's the only way then I understand that of course.<br>
+Might it be possible for you to explain the exact cause.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 23, 2012 5:52 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Yes, I can elaborate, but I have only looked into this briefly a couple of months ago, so please keep in mind that this is just first impressions of Windows 8.<br>
+<br>
+Earlier versions of Windows/IE store temporary internet files (cache) and history information as standalone files, so there is no issue with IE in the sandbox accessing this information alongside other programs (like IE outside the sandbox).<br>
+<br>
+In Windows 8 and IE 10 there is a caching service that manages all this information in an opaque database which is accessible only to that service.  So if you start an instance of IE in the sandbox, it has to talk to an instance of this caching service as well.<br>
+<br>
+One option is the default behavior where a copy of this caching service is started in the sandbox (inside a "dllhost" program), but it has an empty database because the database outside the sandbox is not accessible to make a copy of it.<br>
+<br>
+The other option is to apply some settings* that would let the sandboxed IE talk to the caching service outside the sandbox, but that means cache and history information is exchanged both ways between IE and the caching service.<br>
+<br>
+* I have to point out that I don't think I have those settings at this time, and that I plan to revisit this issue later on to see if there is anything I can do about it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 25, 2012 3:04 pm</strong></div>
+				<div class="author">by <strong>zalzar</strong></div>
+				<div class="content">Thank you very much for your detailed explanation.<br>
+I understand the problem behind it now and because of this service and database it does make a complete sandboxed IE browser much more difficult.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>not saving cookies...</h3>
+				<div class="date">Posted: <strong>Sun Jan 06, 2013 12:56 am</strong></div>
+				<div class="author">by <strong>tes</strong></div>
+				<div class="content">Hello,<br>
+<br>
+I am using a new install of Windows 8 pro (x86) with a licensed/registered copy of Sandboxie.<br>
+<br>
+I have changed the following Sandbox settings from default:<br>
+<br>
++ Automatically delete contents of Sandbox<br>
++ IE10 forced with:<br>
+  + Allow direct access to Internet Explorer favorites<br>
+  + Add Internet Explorer favorites to Quick Recovery folders<br>
+  + Allow direct access to Internet Explorer bookmark and history database<br>
+  + <strong>Allow direct access to Internet Explorer cookies</strong><br>
+<br>
+In IE10 (Desktop), cookies from webmail will not save (gmail, ymail, Hotmail), and therefore sign-in settings are <strong>not </strong>retained.<br>
+<br>
+Any ideas?<br>
+<br>
+Thank you in advance.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 18, 2013 5:24 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">That is a problem on Windows 8 at this time.  I explained the reason in another topic:<br>
+<br>
+<a href="http://sandboxie.com/phpbb/viewtopic.php?t=13897" class="postlink">http://sandboxie.com/phpbb/viewtopic.php?t=13897</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 24, 2013 7:36 pm</strong></div>
+				<div class="author">by <strong>tes</strong></div>
+				<div class="content">Ok, Thank you for the reply.<br>
+<br>
+Hopefully it can be fixed at some point.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Cookies IE10</h3>
+				<div class="date">Posted: <strong>Fri Mar 15, 2013 3:14 am</strong></div>
+				<div class="author">by <strong>chrisjsmith</strong></div>
+				<div class="content">Hello<br>
+Sandboxie  Version 3.76 64-bit      Win 7 Professional 64-bit sp1<br>
+<br>
+I've just upgraded to IE10 and installed the latest Sandboxie version. My problem is that when IE10 is started in Sandboxie it does not see or save the cookies and history outside in the operating system. I've checked the box marked "Allow direct access to Internet cookies" etc. in settings, but it makes no difference. Running IE10 outside Sandboxie saves and sees the cookies and history just fine. Maybe there is an option I’m missing in IE10 because IE9 works just fine with Sandboxie V3.76. Hoping you can help. Chris</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 15, 2013 6:25 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Perhaps IE 10 is bringing the cookie approach from Windows 8 to Windows 7.  Will take a look.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cookies IE10</h3>
+				<div class="date">Posted: <strong>Sun Mar 24, 2013 11:50 am</strong></div>
+				<div class="author">by <strong>Dan_Br0673</strong></div>
+				<div class="content"><blockquote><div><cite>chrisjsmith wrote:</cite>Hello<br>
+Sandboxie  Version 3.76 64-bit      Win 7 Professional 64-bit sp1<br>
+<br>
+I've just upgraded to IE10 and installed the latest Sandboxie version. My problem is that when IE10 is started in Sandboxie it does not see or save the cookies and history outside in the operating system. I've checked the box marked "Allow direct access to Internet cookies" etc. in settings, but it makes no difference. Running IE10 outside Sandboxie saves and sees the cookies and history just fine. Maybe there is an option I’m missing in IE10 because IE9 works just fine with Sandboxie V3.76. Hoping you can help. Chris</div></blockquote>
+
+Thanks, I am having the same issue with History, and some cookies, cookies seems random, but history is a complete blank, none is saved<br>
+Windows upgraded me to IE 10 without asking, even though I had specified do not install updates automatically</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 24, 2013 1:41 pm</strong></div>
+				<div class="author">by <strong>CoS</strong></div>
+				<div class="content">Have the same Problem here, but ist IE 10 unter Windows 7 (64-Bit)!<br>
+<br>
+At the first Time start IE 10 in Sandboxie i got some Errors because the needed Cache is to big. Then when i started IE 10, a dllhost.exe wants Internet Access, but IE 10 works without giving this Access! After a few Settings IE 10 works fine, but it doesnt save the History <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":-(" title="Sad"><br>
+<br>
+Will there be a new Version of Sandboxie that can fix These Problem, or ist it generally impossible to fix that anytime?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Apr 09, 2013 2:00 pm</strong></div>
+				<div class="author">by <strong>jeffr123</strong></div>
+				<div class="content">I'm also running the same version of Sandboxie and Windows. I had the same problems with the cookies being random (although mostly not there) and history being blank.<br>
+<br>
+I ran across three knowledgebase articles on Microsoft's website about upgrading to Windows 8 and specifically mentioning Sandboxie saying that Sandboxie needs to be uninstalled and re-installed after the upgrade.<br>
+<br>
+I uninstalled Sandboxie and re-installed it and the cookie problem is gone. However, the history is still blank.<br>
+<br>
+Just wanted to pass that along.<br>
+<br>
+-Jeff</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 21, 2013 11:06 pm</strong></div>
+				<div class="author">by <strong>jeffr123</strong></div>
+				<div class="content">Just to follow up...<br>
+<br>
+After about 4 or 5 days IE10 went back to not seeing the cookies and history not being displayed. So uninstalling and reinstalling Sandboxie wasn't a permanent fix.<br>
+<br>
+When I run IE10 outside the sandbox, the cookies are fine and all my history is there. It's almost as if Microsoft moved the location of the cookies and history and Sandboxie just needs to know where to look.<br>
+<br>
+Is there any status on this?<br>
+<br>
+-Jeff</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun May 12, 2013 2:27 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The problem with cookies should be mitigated to some extent in version 4.01.08 by allowing Sandboxie to save cookies outside the sandbox.<br>
+<br>
+More here:<br>
+<br>
+<a href="../phpbb/viewtopic2702.php?t=15331" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15331</a></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=13897&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:39:07 GMT -->
+</html>

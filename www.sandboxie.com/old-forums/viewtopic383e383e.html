@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=50&t=20793&start=135&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:59:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 4.17 Beta Available (Latest Version 4.17.8) - Page 10</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>4.17 Beta Available (Latest Version 4.17.8)</h2>
+		<p><a href="viewtopic5c2d5c2d.html?f=50&amp;t=20793">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=50&amp;t=20793</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>10</strong> of <strong>14</strong></div>
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.6)</h3>
+				<div class="date">Posted: <strong>Sun May 17, 2015 6:39 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Beta 4.17.6 is released. The only big change is that the spooler can now write temp files to its own work folder outside the sandbox.  So this should eliminate the SBIE1319 when printing normally.<br>
+There is no way we can test all the various printer drivers and configurations from here, so I need your help in testing this as I want to finish it up and get it released into 4.18 asap....</div></blockquote>
+Printing on our networked printer (Brother MFC) works flawless (no error messages). But printing to a PDF file with the well-known "PDFCreator" fails! Double-clicking on SBIE1319 doesn't help. The "PDFCreator" dialog never shows up, regardless how often I restart the print. I hope you can fix this. Thanks!<br>
+<br>
+PDFCreator: <a href="http://www.pdfforge.org/pdfcreator/download" class="postlink">http://www.pdfforge.org/pdfcreator/download</a>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.6)</h3>
+				<div class="date">Posted: <strong>Sun May 17, 2015 8:09 pm</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content">Windows 8.1 x64<br>
+Sandboxie 4.17.6<br>
+Chrome 42.0.2311.152 m (64-bit)<br>
+Bullzip 10.12.2363 Community Edition<br>
+<a href="http://www.bullzip.com/products/pdf/download.php" class="postlink">http://www.bullzip.com/products/pdf/download.php</a> (scroll down for installer)<br>
+<br>
+First session attempt (right-click on page and select Print) fails with (from Event Viewer):<br>
+
+<blockquote class="uncited"><div>[DebugLog] Unable to open log file for writing.<br>
+<br>
+Filename: C:\Users\Nick\AppData\Local\Temp\Bullzip\PDF Printer\TEMP_b8a2a4f3-ceff-4f6d-ae14-5f12271e5d4d\port.log<br>
+Error: 5<br>
+<br>
+Make sure users have write access to this folder.</div></blockquote>
+Second session attempt (right-click on page again and select Print) works and the PDF is saved to the desktop.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.6)</h3>
+				<div class="date">Posted: <strong>Mon May 18, 2015 1:11 am</strong></div>
+				<div class="author">by <strong>Hamy</strong></div>
+				<div class="content">@Curt<br>
+Is it possible to adjust the print spooler write access ourselves? like we could find out where the driver needs to write its temp files via Resource Access Monitor and then allow that specific path in a menu setting dedicated to this. that way the user can fix the problem themselves instead of relying on you to fix it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.6)</h3>
+				<div class="date">Posted: <strong>Mon May 18, 2015 1:11 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Hamy wrote:</cite>@Curt<br>
+Is it possible to adjust the print spooler write access ourselves? like we could find out where the driver needs to write its temp files via Resource Access Monitor and then allow that specific path in a menu setting dedicated to this. that way the user can fix the problem themselves instead of relying on you to fix it.</div></blockquote>
+What if I allow the spooler to write to any OpenFilePath?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.6)</h3>
+				<div class="date">Posted: <strong>Tue May 19, 2015 12:06 am</strong></div>
+				<div class="author">by <strong>Hamy</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite><blockquote><div><cite>Hamy wrote:</cite>@Curt<br>
+Is it possible to adjust the print spooler write access ourselves? like we could find out where the driver needs to write its temp files via Resource Access Monitor and then allow that specific path in a menu setting dedicated to this. that way the user can fix the problem themselves instead of relying on you to fix it.</div></blockquote>
+What if I allow the spooler to write to any OpenFilePath?</div></blockquote>
+That makes sense, though i think it would be better if instead of it being able to write on any OpenFilePath, we could also add spooler service as an app in the list and apply the OpenFilePath setting to it separately.  i would also suggest that you undo the ease of restriction that you made for spooler service to allow to write to its own temp folder or at least give us an option to disable it(like it could be added in global Software Compatibility list) so we could ensure nothing without our explicit permission could leak out of sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.6)</h3>
+				<div class="date">Posted: <strong>Tue May 19, 2015 1:17 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">I don't recommend using latest(s) beta(s?). Something is wrong here</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.6)</h3>
+				<div class="date">Posted: <strong>Tue May 19, 2015 1:55 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Dun wrote:</cite>I don't recommend using latest(s) beta(s?). Something is wrong here</div></blockquote>
+Can you be more specific?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.6)</h3>
+				<div class="date">Posted: <strong>Tue May 19, 2015 11:27 pm</strong></div>
+				<div class="author">by <strong>nanana1</strong></div>
+				<div class="content">Google Chrome has just released their build 43.0.2357.65 as their stable version.<br>
+<br>
+Sandboxie does not have much time left to finalize their version 4.18 before more users on version 4.16 will complain that their new Chrome browser does not work anymore  <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.7)</h3>
+				<div class="date">Posted: <strong>Wed May 20, 2015 5:55 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Beta 4.17.7 has been released.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.7)</h3>
+				<div class="date">Posted: <strong>Wed May 20, 2015 6:18 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Beta 4.17.7 has been released.</div></blockquote>
+Much thanks !</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.6)</h3>
+				<div class="date">Posted: <strong>Thu May 21, 2015 5:08 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Beta 4.17.7 has been released.</div></blockquote>
+Thanks, but printing with "PDFCreator" still fails: 
+<blockquote><div><cite>APMichael wrote:</cite>But printing to a PDF file with the well-known "PDFCreator" fails! <strong>Double-clicking on SBIE1319 doesn't help. </strong>The "PDFCreator" dialog never shows up, regardless how often I restart the print. I hope you can fix this. Thanks!</div></blockquote>
+<span style="text-decoration: underline">Edit:</span> This version causes a blue screen after wake-up from sleep mode! (SYSTEM_SERVICE_EXCEPTION, *** STOP: 0x0000003b (0x00000000c0000005, 0xfffff88001491eae, 0xfffff880097b5850, <br>
+0x0000000000000000) *** SbieDrv.sys - Address 0xfffff88001491eae base at 0xfffff88001488000 DateStamp 0x555ce9b9)<br>
+- Print a website in Firefox (38.0.1) using PDFCreator (2.1.1).<br>
+- Double-click on SBIE1319.<br>
+- Print the website again. &gt; Nothing happens because it doesn't work.<br>
+- Close Firefox.<br>
+- Put Windows (7 Pro, x64) to sleep mode (S3).<br>
+- Wake it up. &gt; The blue screen will appear.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.7)</h3>
+				<div class="date">Posted: <strong>Thu May 21, 2015 9:11 am</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">4.17.6  +  Chrome 43 + W8.1 x64<br>
+<br>
+What does the detail mean<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]<br>
+<br>
+Message occurs upon open Chrome and open Chrome New Tabs = same SBIE message same detail<br>
+<br>
+Why does Logout drop out to Login.  and I have to Logon again.<br>
+<br>
+If I Hide the Message.  How do I bring Message back to test and does Hide only Hide 2203 with  *GUIPROXY_00000001 - chrome.exe [FF000000]<br>
+<br>
+Or, does Hide.  Hide all 2203.  Hide all Messages....?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.7)</h3>
+				<div class="date">Posted: <strong>Thu May 21, 2015 9:12 am</strong></div>
+				<div class="author">by <strong>TriStarGod</strong></div>
+				<div class="content">Quick Heads up<br>
+Virustotal's Tencent claiming Sandboxie installer has a trojan<br>
+<a href="https://www.virustotal.com/en/file/03daa63ec7f8151e6d86338c8127cb9798f574ca253307092d6ab93511b5aac5/analysis/1432213454/" class="postlink">https://www.virustotal.com/en/file/03da ... 432213454/</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.6)</h3>
+				<div class="date">Posted: <strong>Thu May 21, 2015 11:21 am</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>APMichael wrote:</cite><blockquote><div><cite>Curt@invincea wrote:</cite>Beta 4.17.7 has been released.</div></blockquote>
+Thanks, but printing with "PDFCreator" still fails: 
+<blockquote><div><cite>APMichael wrote:</cite>But printing to a PDF file with the well-known "PDFCreator" fails! <strong>Double-clicking on SBIE1319 doesn't help. </strong>The "PDFCreator" dialog never shows up, regardless how often I restart the print. I hope you can fix this. Thanks!</div></blockquote>
+<span style="text-decoration: underline">Edit:</span> This version causes a blue screen after wake-up from sleep mode! (SYSTEM_SERVICE_EXCEPTION, *** STOP: 0x0000003b (0x00000000c0000005, 0xfffff88001491eae, 0xfffff880097b5850, <br>
+0x0000000000000000) *** SbieDrv.sys - Address 0xfffff88001491eae base at 0xfffff88001488000 DateStamp 0x555ce9b9)<br>
+- Print a website in Firefox (38.0.1) using PDFCreator (2.1.1).<br>
+- Double-click on SBIE1319.<br>
+- Print the website again. &gt; Nothing happens because it doesn't work.<br>
+- Close Firefox.<br>
+- Put Windows (7 Pro, x64) to sleep mode (S3).<br>
+- Wake it up. &gt; The blue screen will appear.</div></blockquote>
+Please put the DMP files somewhere so I can download it.<br>
+<br>
+Chrome won't even allow me to download PDF Creator from pdfforge -- is says it contains malware.  Why are you using this package?<br>
+<br>
+EDIT:  Firefox won't allow me to download from pdfforge either.  I suggest you try another pdf creator.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.6)</h3>
+				<div class="date">Posted: <strong>Thu May 21, 2015 12:04 pm</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Chrome won't even allow me to download PDF Creator from pdfforge -- is says it contains malware.  Why are you using this package?<br>
+EDIT:  Firefox won't allow me to download from pdfforge either.  I suggest you try another pdf creator.</div></blockquote>
+Thanks for your reply.<br>
+<br>
+Sorry, but Chrome tells nonsense (as quite often). And Firefox starts the download without any problem. Do you really not know "PDFCreator"?! It has millions of active users and it is one of the most used free PDF creators! Please try the download again. Thanks.<br>
+<br>
+Statement from pdfforge: "What gets detected is the offer screen with optional offers which is displayed during the setup, but this isn't malware (nor is it detected as malware), as nothing is hidden and all offers can be deselected by the user. The setup file was scanned before uploading it to our servers and is safe to use."<br>
+Direct download link: <a href="http://download.pdfforge.org/download/pdfcreator/PDFCreator-stable?download" class="postlink">http://download.pdfforge.org/download/p ... e?download</a><br>
+<br>
+<br>
+<span style="text-decoration: underline">Edit:</span> Removed attachment.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>10</strong> of <strong>14</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=50&t=20793&start=135&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:59:55 GMT -->
+</html>

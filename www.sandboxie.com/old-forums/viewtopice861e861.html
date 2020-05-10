@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13677&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:31:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SBIE1307 &amp; SBIE2221</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SBIE1307 &amp; SBIE2221</h2>
+		<p><a href="viewtopic65b065b0.html?f=17&amp;t=13677">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=13677</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>SBIE1307 &amp; SBIE2221</h3>
+				<div class="date">Posted: <strong>Mon Sep 17, 2012 11:04 am</strong></div>
+				<div class="author">by <strong>Bellzemos</strong></div>
+				<div class="content">I have a sandbox with restricted internet and some games in it. When I run a game I get this message first, then the game starts.<br>
+<br>
+<img src="../shrani.si/f/1g/93/2rIclv6m/sb.jpg" class="postimage" alt="Image"><br>
+<br>
+I read the SBIE1307 &amp; SBIE2221 explanations on the Sandboxie site but can't really figure it out.<br>
+<br>
+If I click on Close the message still appears next time. I want to clikc on Hide and get rid of it, but first I'd like to know what does that do. Will that hide this message only for that particular game or for all such occurances (I don't want that - I want to be notified when a program triest to connect to the internet)?<br>
+<br>
+And what exactly happens if I doublie-click on the second message line? Isn't that program restircted already by the sandbox?<br>
+<br>
+Thank you!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 17, 2012 2:09 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Clicking Hide will result in a setting:<br>
+SbieCtrl_HideMessage=2221,rundll32.exe [GameBox]<br>
+being added to your configuration file under [UserSettings_xxxxxxxx].<br>
+<br>
+Since the sandbox name is listed in the setting, that setting will only apply when 'rundll32.exe' initiates something that involves Internet access and the GameBox sandbox is being used.<br>
+If some other sandbox (where Internet Restrictions are in place) also asks for 'rundll32.exe' to access the Internet, you will still get the SBIE2221 message for that sandbox.<br>
+<br>
+I tested this by using 2 different sandboxes and clicking the SBIE2221 message in each of them, using 'plugin-container.exe' in my test:<br>
+SbieCtrl_HideMessage=2221,plugin-container.exe [Test<strong>3</strong>]<br>
+SbieCtrl_HideMessage=2221,plugin-container.exe [Test<strong>2</strong>]<br>
+If everything works OK without double-clicking the SBIE2221 line, then one option is to Hide the message for that one sandbox.<br>
+But you don't really know what you might be missing if you do that.<br>
+<br>
+Another option is to double-click the SBIE2221 line. That will allow 'rundll32.exe' to have "Internet Access".<br>
+In this case the 'HideMessage' setting will not be added to the configuration file.<br>
+Instead, 'rundll32.exe' will be added to the end of the line:<br>
+ProcessGroup=&lt;InternetAccess&gt;,...,rundll32.dll<br>
+in the settings only for the GameBox sandbox.<br>
+<br>
+You won't be allowing 'rundll32.exe' to have "Internet Access" in any other sandbox.<br>
+This is the option that I would choose.<br>
+----<br>
+The Microsoft application 'rundll32.exe' is used to run program code that is stored in a .DLL file as if it's an application, rather than 'rundll32.exe' directly accessing the Internet itself. It's actually the code in some .DLL file that wants Internet Access - but it appears to be 'rundll32.exe' that is asking for the access, because it's running the code that's stored in the .DLL file.<br>
+<br>
+I use Start/Run Restrictions and added 'rundll32.exe' to the list of programs that are allowed to start and run, for sandboxes where it was needed.<br>
+It's a Microsoft application that's a part of Windows, and I don't see any reason to worry about allowing it to run.<br>
+<br>
+There have been malware applications that disguised themselves using that same name, so it's always best to do a malware scan occasionally to make sure that the 'rundll32.exe' file in the Windows\System32 folder has not been replaced.<br>
+Even so, if it was replaced your problem would not be so much with the sandboxed programs as with non-sandboxed programs, since you would not get any messages from them when 'rundll32.exe' is used.<br>
+At least, when using a sandboxed program, you are protected - even if that file has been replaced with malware.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 17, 2012 5:28 pm</strong></div>
+				<div class="author">by <strong>Bellzemos</strong></div>
+				<div class="content">Thank you for the comprehensive explanation. Since the game works fine without internet access I'll just click on hide. I'm glad that this only applies for that particular sandbox and that it can be removed by deleting the string SbieCtrl_HideMessage=2221,rundll32.exe [GameBox] under [UserSettings_xxxxxxxx] in Sandboxie.ini. Again, thank you!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13677&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:31:38 GMT -->
+</html>

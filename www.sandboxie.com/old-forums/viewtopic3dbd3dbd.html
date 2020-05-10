@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=17036&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:53:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Internet Download Manager</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Internet Download Manager</h2>
+		<p><a href="viewtopic289e289e.html?f=5&amp;t=17036">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=17036</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Internet Download Manager</h3>
+				<div class="date">Posted: <strong>Wed Nov 13, 2013 4:41 am</strong></div>
+				<div class="author">by <strong>Paulo L.</strong></div>
+				<div class="content">Hello,<br>
+<br>
+I've been trying hard to allow internet download manager in sandboxie without sandboxing, but I find it very difficult and I completely failed my attempts.<br>
+<br>
+Ive searched for a solution in google but came across nothing that really works.<br>
+<br>
+Im running wondows 8.1 x64.<br>
+<br>
+I would find it very nice if someone would help me with this problem.<br>
+<br>
+Best Regards<br>
+Paulo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Nov 13, 2013 11:27 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">If "Internet Download Manager" shows with a [+] at:<br>
+Sandboxie Control (tray icon) window &gt; Configure &gt; Software Compatibility, then select it and click on the "Remove" button &gt; OK.<br>
+<br>
+That item will then show as [  ], and it will change the entry under Configure &gt; Edit Configuration &gt; [GlobalSettings]<br>
+from:<br>
+Template=Internet Download Manager<br>
+to:<br>
+Template<strong>Reject</strong>=Internet Download Manager<br>
+<br>
+I don't use IDM, so I can only go by the way my old version of Orbit downloader works with its template marked as "TemplateReject":<br>
+The IDM template will no longer be used. If IDM is started by a sandboxed program, then another instance of IDM should start (sandboxed) and save the download inside of the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Nov 13, 2013 1:03 pm</strong></div>
+				<div class="author">by <strong>Paulo L.</strong></div>
+				<div class="content">Yes that is very right, and I have already done it.<br>
+<br>
+I've even gone a bit further :<br>
+- I have tried to allow full access in the resource access options, I have granted full access to the internet download manager folder/Dir. Sandboxie still loads IDM sandboxed even with full access granted.<br>
+<br>
+It must be some file that lies somewhere else that I don't know of, or some registry entry...<br>
+<br>
+I would really like to manage to use Internet Download Manager without sandboxing inside the sandboxed firefox.<br>
+<br>
+Best Regards<br>
+Paulo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 14, 2013 4:51 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">There might be a problem with Internet Download Manager.<br>
+<br>
+Related topic:<br>
+<br>
+<a href="../phpbb/viewtopic0efd.php?t=16794" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=16794</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 14, 2013 6:15 pm</strong></div>
+				<div class="author">by <strong>Paulo L.</strong></div>
+				<div class="content">Hello,<br>
+<br>
+Internet Download manager is working fine here on my PC with sandboxie, I've granted it full access and unchecked compatibility on the options menu. It works fine this way but still gets sandboxed, even with full access granted. <br>
+<br>
+My objective was to try to make IDM work in sandboxie with no sandboxing whatsoever <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">, it would be very useful for the use I give to it, it would save me a lot of clicks and folder openings.<br>
+<br>
+For instance, with airoboform I manage to get it to work with no sandboxing and it is very useful because all the changes get written to the disk on the fly and everything is always actual. <br>
+<br>
+But this little glitch with IDM does not in any way take value to this excellent program that I consider sandboxie to be.<br>
+<br>
+Best regards!<br>
+Paulo.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Nov 17, 2013 1:21 pm</strong></div>
+				<div class="author">by <strong>sandbrain</strong></div>
+				<div class="content">First time user of sandboxie here, technically pretty clueless.<br>
+<br>
+I also use idm but am unclear how to set it up for sandboxie. I have idm set up to  save files on the desktop. So do I change this to say a folder elsewhere and then sandbox that folder....how?<br>
+<br>
+I don't understand much of the chat above, do I alter anything regarding idm in sandboxie to have the downloaded files in a sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Nov 18, 2013 2:32 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">You should get a suggestion from Sandboxie to activate compatibility settings for IDM.  After you OK that, your IDM outside the sandbox should be able to intercept downloads that are initiated by the browser in the sandbox.<br>
+<br>
+There might be a problem on Windows 8.1 with IDM integration across the sandbox for some of the browsers, but I'm not sure that applies in your case.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=17036&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:53:10 GMT -->
+</html>

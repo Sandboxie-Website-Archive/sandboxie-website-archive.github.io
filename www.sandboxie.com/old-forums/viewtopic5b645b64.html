@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6128&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; another registry viewer</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>another registry viewer</h2>
+		<p><a href="viewtopicb3b4b3b4.html?f=22&amp;t=6128">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=6128</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>another registry viewer</h3>
+				<div class="date">Posted: <strong>Thu Aug 20, 2009 7:05 pm</strong></div>
+				<div class="author">by <strong>Alucard</strong></div>
+				<div class="content">It shows registry / files changes in a notepad. It's easy to use and fast (unless you install NET Framework sandboxed  <img class="smilies" src="images/smilies/icon_twisted.gif" width="15" height="15" alt=":twisted:" title="Twisted Evil"> ). <br>
+Download: <a href="http://www.datafilehost.com/download-8c99fe2d.html" class="postlink">http://www.datafilehost.com/download-8c99fe2d.html</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 21, 2009 4:26 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Could you explain how to use it?<br>
+<br>
+Some instructions will not harm anyone.  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 21, 2009 6:38 am</strong></div>
+				<div class="author">by <strong>Alucard</strong></div>
+				<div class="content">Sure. Run a program you want to trace in an empty sandbox.<br>
+Exit that program, wait for sandboxed processess to end, and then run this viewer, select the sandbox and press ok. It will also work on active sandboxes, but in most cases you want to end it (the program can modify things on exit).<br>
+<br>
+Registry types i don't have to explain. For modified files:<br>
+If a real file have a sandboxed copy and "filecompare" is set then<br>
+content - crc32 doesn't match<br>
+moddate - crc32 match but modification date doesn't<br>
+attribs - changed attributes<br>
+other - none of the above are true, most of the time it's just a duplicated file<br>
+<br>
+Ini settings:<br>
+Sbiedir - automatically set<br>
+Filter - registry filter switch<br>
+Ignore* - copy from notepad the keys and values you do not want to be shown. <br>
+Format is key,key2,key3 for keys, for values it is: key;value1=data;value2=data,key2,key3<br>
+I added the ones that are always created when a sandboxed program starts. <br>
+You can verify this by starting "run any program" in an empty sandbox<br>
+and then running the viewer with filter=0. <br>
+Partial match is supported so HKEY_LOCAL_MACHINE\software will ignore changes in all the subkeys.<br>
+<br>
+By the way this program is tested on XP only so files part may give weird results<br>
+(like non translated path) on newer systems. This is due to changed (messed up is the right word) user folders locations.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 23, 2009 8:32 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Problem using viewer to shows registry changes,cause cpu too hight <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 23, 2009 9:36 pm</strong></div>
+				<div class="author">by <strong>Alucard</strong></div>
+				<div class="content">It hangs or works but hogs cpu? If second try threaded version:<br>
+<a href="http://www.datafilehost.com/download-3b7071bd.html" class="postlink">http://www.datafilehost.com/download-3b7071bd.html</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 24, 2009 3:59 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content"><img src="../www.ld-host.de/uploads/images/868471c8535b2fda0161bf5ee18897d2.png" class="postimage" alt="Image"><br>
+<br>
+Still the same <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 24, 2009 8:48 am</strong></div>
+				<div class="author">by <strong>Alucard</strong></div>
+				<div class="content">I think i found some weird bug(s) in registry procedure, i will later rewrite it. I deleted the download links.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 24, 2009 7:31 pm</strong></div>
+				<div class="author">by <strong>Alucard</strong></div>
+				<div class="content">*deleted link*<br>
+Added a lot of error checking and some fixes. Works?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 24, 2009 8:51 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Thanks Alucard for the reply!<br>
+I'll give it a try and let you know the results <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 24, 2009 8:58 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content"><img src="../www.ld-host.de/uploads/images/ccfea312e1e97cc7c0fdda64a9b73188.png" class="postimage" alt="Image"><br>
+<br>
+Still no luck<br>
+I'm using xp home ,does it makes difference between xp pro and xp home <img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 24, 2009 9:45 pm</strong></div>
+				<div class="author">by <strong>Alucard</strong></div>
+				<div class="content">This is bad news.  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused">  Looking at the numbers it seems random.<br>
+After you abort are there any errors in the log? XP Home has all the registry functions Pro has.<br>
+I will look tomorrow at the code and maybe figure something out. Did you try Sandboxdiff ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 24, 2009 11:16 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">After abort theres no errors in the log.<br>
+Sandboxdiff works fine for me.<br>
+This problem shows only when i run IE7,I've try runing some program usng this viewer to trace registry ,it works fine.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 24, 2009 11:49 pm</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">nice piece of work - but not really usable. why?<br>
+sandboxie needs to be running - i dont need keys and files when the box is ON.<br>
+anything important is AFTER sandboxie processes have ended.<br>
+Files i can see directly - and the registry changes in you war are not usable for further action.<br>
+<br>
+and last but not least - you should use the forum search - dumping the hive is not new.<br>
+read please: <a href="http://sandboxie.com/phpbb/viewtopic.php?t=1549" class="postlink">http://sandboxie.com/phpbb/viewtopic.php?t=1549</a><br>
+page 3
+<blockquote><div><cite>SnDPhoenix wrote:</cite>You could try using this program instead:<br>
+<a href="http://www.mitec.cz/wrr.html" class="postlink">http://www.mitec.cz/wrr.html</a><br>
+<br>
+And just use that program to save the registry keys out of the hive and into a .reg file. <img class="smilies" src="images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes"></div></blockquote>
+
+Another nice way is/was "dumphive" from "Markus Stephany"<br>
+unfortuantely i cannot find any official source - it disappeared somehow.<br>
+google told me that it was sorted als malware due its primal function and some similarity to<br>
+a malware same name <img class="smilies" src="images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes"> <br>
+<br>
+after dump any text processing is possible (like after WRR).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 25, 2009 12:00 am</strong></div>
+				<div class="author">by <strong>Alucard</strong></div>
+				<div class="content">Error code will show after the "seems like hang..." message.<br>
+It will point me to a bug location.<br>
+*deleted link*</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 25, 2009 12:25 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content"><img src="../www.ld-host.de/uploads/images/3e8c0aa399883ff9e3408bec92c3fccf.png" class="postimage" alt="Image"><br>
+<br>
+<br>
+Thanks Alucard ,here is the error code.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6128&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:29 GMT -->
+</html>

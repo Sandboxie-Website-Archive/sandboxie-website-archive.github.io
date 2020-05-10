@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25632&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:29:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Firefox Direct Bookmark Access [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Firefox Direct Bookmark Access [SOLVED]</h2>
+		<p><a href="viewtopic57455745.html?f=17&amp;t=25632">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25632</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Firefox Direct Bookmark Access [SOLVED]</h3>
+				<div class="date">Posted: <strong>Sat Mar 24, 2018 11:28 am</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">I have now allowed direct access, but changes I make to bookmarks when FF is sandboxed do not change the original file (places.sqlite?). <br>
+<br>
+I see the template includes:<br>
+OpenFilePath=firefox.exe,%Tmpl.Firefox%\bookmark*<br>
+OpenFilePath=firefox.exe,%Tmpl.Firefox%\places*<br>
+OpenFilePath=firefox.exe,%Tmpl.Firefox%\favicons.sqlite<br>
+<br>
+but where does %Tmpl.Firefox% resolve to, as my profile directory in not in the standard location but at D:\Documents\Firefox\default2? <br>
+<br>
+Regards<br>
+<br>
+<br>
+Henry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox Direct Bookmark Access</h3>
+				<div class="date">Posted: <strong>Sat Mar 24, 2018 12:24 pm</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">You can check the Templates.ini file for the variables:<br>
+
+<blockquote class="uncited"><div>[TemplateSettings]<br>
+...<br>
+Tmpl.Firefox=%AppData%\Mozilla\Firefox\Profiles\*</div></blockquote>
+
+If you have changed the default path of the Firefox profiles, you can override the variable. Just add to your Sandboxie.ini:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Ovr.Tmpl.Firefox=D:\Documents\Firefox\default2\</code></pre></div>
+
+More information: <a href="../ExpandableVariables.html" class="postlink">https://www.sandboxie.com/ExpandableVariables</a> (section "Overriding Variables").</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox Direct Bookmark Access</h3>
+				<div class="date">Posted: <strong>Sat Mar 24, 2018 2:59 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">The method that is built into Sandbox Settings to specify an alternate profile folder location is:<br>
+<br>
+Open Sandboxie Control's window; right-click the sandbox that you will use; click on Sandbox Settings.<br>
+Navigate to Applications &gt; Web Browser &gt; Firefox in the left-hand pane.<br>
+"Click on "Allow direct access to Firefox bookmark and history database", then click "Add", then click "Apply".<br>
+(You have probably already done that)<br>
+<br>
+In the left-hand pane, scroll down to and click on "Folders".<br>
+You should see "Select folder for" ... Firefox<br>
+For an alternate folder location, click on the "Add" button<br>
+Navigate to and select your "D:\Documents\Firefox\default2" folder.<br>
+When you see that listed under "Alternate location", OK your way out.<br>
+<br>
+This will add a new section to your sandboxie.ini file:<br>
+[TemplateSettings]<br>
+<br>
+Tmpl.Firefox.(your username here)=D:\Documents\Firefox\default2<br>
+<br>
+"(your username here)" in the above line will be replaced with whatever is listed as "SbieCtrl_UserName" underneath the [UserSettings_xxxxxxx] section in your sandboxie.ini file.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox Direct Bookmark Access [SOLVED]</h3>
+				<div class="date">Posted: <strong>Mon Mar 26, 2018 5:00 am</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">I chose to edit sandboxie.ini directly and use Ovr.Tmpl.Firefox=D:\Documents\Firefox\default2\ as I think the "Ovr" part will remind me in future why it is necessary.<br>
+<br>
+Thank you for the link to "Expandable Variables" which I did read, but somwhow I doubt I will remember when it happens again. Why does Sandboxie have to hard-wire installation location settings rather than getting them from Windows [rhetorical]? Pretty much guaranteed to cause problems IMO, but then I'm not a programmer.<br>
+<br>
+Working now as expected. Thank you both for your help.  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25632&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:29:21 GMT -->
+</html>

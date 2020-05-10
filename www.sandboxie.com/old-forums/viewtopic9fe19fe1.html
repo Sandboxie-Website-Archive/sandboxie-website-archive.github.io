@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25595&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:56:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SBIE2326 cannot prepare registry: [11 / C0000022] SBIE2321 Cannot manage device map: [C0000022 / 77] Not pdf/dopus issue</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SBIE2326 cannot prepare registry: [11 / C0000022] SBIE2321 Cannot manage device map: [C0000022 / 77] Not pdf/dopus issue</h2>
+		<p><a href="viewtopic8b238b23.html?f=11&amp;t=25595">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25595</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>SBIE2326 cannot prepare registry: [11 / C0000022] SBIE2321 Cannot manage device map: [C0000022 / 77] Not pdf/dopus issue</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 10:28 am</strong></div>
+				<div class="author">by <strong>Tanaka Lee</strong></div>
+				<div class="content">Using win 7 64bit(might still happen for 32bit too)<br>
+<br>
+Hi just wanted to inform you about serious in combination with sandboxie(was using this beta since chrome issue didnt load inside was fix here 5.23.5 or higher) and chrome(63, 64, 65 higher test <br>
+them all) browser(or any browser for that matter) and annoying issue about combination example malwarebytes 3.1.2 premium. Now installing all of those and everything is in default settings. Nothing is been installed inside sandboxie and you dont even need to use any AV just malwarebytes as defense+testings.<br>
+<br>
+To reproduce this problem now open example google chrome(default browser) inside sandboxie then browse just normal surf <br>
+anysite. Or you can just open the browser inside sandboxie and leave it there. Leave chrome inside sandboxie few min like <br>
+30min-1hour or more.<br>
+<br>
+If you do that you suddenly get this message pop up.Nothing particular and you can ignore or close it. But you still wonder <br>
+what happens inside why message appear. Very strange indeed!<br>
+SBIE2326 cannot prepare registry: [11 / C0000022]<br>
+SBIE2321 Cannot manage device map: [C0000022 / 77]<br>
+<br>
+And sometimes after closing message and closing browser to delete stuff inside sandbox you can get error that cannot be deleted <br>
+because it used by another program. What program? <br>
+There nothing else used besides chrome+sandboxie and there is no combination with open office as well unlike i seen issue <br>
+similair to this here in forum but NO actuall solution. So seems to be something between your chrome+sandboxie+ malwarebytes<br>
+(this default no issue other program but only when start to use chrome+sandboxie).<br>
+If worse case you need RESTART PC then you can delete stuff inside by right click at sandboxie ask to delete contens inside.<br>
+<br>
+This has been going on at current month/weeks now.<br>
+Hopefully this can improve your product preformence fix issues! GO AHEAD test it for yourself.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2326 cannot prepare registry: [11 / C0000022] SBIE2321 Cannot manage device map: [C0000022 / 77] Not pdf/dopus i</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 11:54 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">UPDATE ---&gt; Chrome + MWB+ Sbie have been running for hours, no sbie messages appeared.  <br>
+Please provide more information regarding how are you reproducing this issue, as well as the info requested below.<br>
+<br>
+-------------- X ----------------<br>
+<br>
+Hello Tanaka Lee,<br>
+
+<blockquote class="uncited"><div>And sometimes after closing message and closing browser to delete stuff inside sandbox you can get error that cannot be deleted <br>
+because it used by another program. What program? </div></blockquote>
+This is a known issue related to an AV that is blocking the process. Restarting your machine, or trying again after a while should allow you to clear the contents. There are several threads about this for different AV software / programs:<br>
+<a href="search966d966d.html?keywords=unable+delete+contents" class="postlink">search.php?keywords=unable+delete+contents</a><br>
+<br>
+The latest supported/tested version of MWB is MalwareBytes Anti-malware [v2.1.8.1057]<br>
+See: <a href="viewtopica726a726.html?f=11&amp;t=21539#p111707" class="postlink">viewtopic.php?f=11&amp;t=21539#p111707</a><br>
+<br>
+Does the issue happen in a new Sandbox with default settings? <br>
+Does Chrome work fine outside Sandboxie?  Are you receiving any alerts from MWB? <br>
+Are you using drop rights? <br>
+<br>
+Please post your Sandboxie configuration file:<br>
+Configure --&gt; Edit configuration<br>
+Copy/pate the output, highlight it and click on the "&lt;/&gt;" button to format it in the forums.<br>
+<br>
+I have a VM running with Win 7 x64 + sbie 5.23 + MWB Trial 3.4.4 Premium, I will let you know if I can repro the issue. I'll update this response later with the results.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2326 cannot prepare registry: [11 / C0000022] SBIE2321 Cannot manage device map: [C0000022 / 77] Not pdf/dopus i</h3>
+				<div class="date">Posted: <strong>Mon Mar 19, 2018 12:03 pm</strong></div>
+				<div class="author">by <strong>Tanaka Lee</strong></div>
+				<div class="content">First of all the thing is when we installed malwarebytes as premium(even though you can upgrade and use same key for it as buyer) it was 3.1.2 and doesnt update the software only definitions even other people still use same version as well run into same. So maybe you right about upgrading malwarebytes but if tested and same thing accur will posting replay hopefully there is no issue.<br>
+It might be contection to MWB as contact them just be sure w see.<br>
+<br>
+Also there is no other AV other than MWB as for testing purpose. Nor have w installed anything inside sandboxie before. Just installed browser chrome malwarebytes and then sandboxie all in default settings. Then running browser chrome inside sandboxie ofcourse when you start to surf the web and all after few hours those message pop ups. Even if its there MWB connection there. We like to know what triggers those pop anyways? In simple or laymen terms matter...<br>
+Most of time after closing browser we can delete items inside so there no issue. But sometimes it might say that program is still in use and even tho everything is closed. Then you need to restart pc to clear stuff inside.<br>
+<br>
+So here is my important question as w family member uses same pc and we trust sandboxie to protect us no matter what or site we visit once we close browser all stuff is deleted:<br>
+-But If those pop up keeps happening. Is it dangerous to just close and just ignore it? Or does it pose any risk and vulnerability to the sandboxie that something might change in the Sandboxie program you using daily protection. let us know thank you.<br>
+<br>
+Thanks for replay we see how it looks this week</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2326 cannot prepare registry: [11 / C0000022] SBIE2321 Cannot manage device map: [C0000022 / 77] Not pdf/dopus i</h3>
+				<div class="date">Posted: <strong>Mon Mar 19, 2018 1:51 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Tanaka Lee,<br>
+<br>
+I was not able to repro the issue. I left it running for hours and nothing happened.<br>
+<br>
+I cannot review your settings unless you provide the information I requested above. <br>
+<br>
+Other than that, if no functionality is affected, you can click on "Hide" so that the message does not appear anymore.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2326 cannot prepare registry: [11 / C0000022] SBIE2321 Cannot manage device map: [C0000022 / 77] Not pdf/dopus i</h3>
+				<div class="date">Posted: <strong>Wed Mar 21, 2018 8:38 pm</strong></div>
+				<div class="author">by <strong>Tanaka Lee</strong></div>
+				<div class="content">Here you go. <br>
+<br>
+[Chrome]<br>
+<br>
+Enabled=y<br>
+ConfigLevel=7<br>
+AutoRecover=y<br>
+BlockNetworkFiles=y<br>
+Template=qWave<br>
+Template=WindowsFontCache<br>
+Template=BlockPorts<br>
+Template=LingerPrograms<br>
+Template=Chrome_Phishing_DirectAccess<br>
+Template=Firefox_Phishing_DirectAccess<br>
+Template=AutoRecoverIgnore<br>
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%<br>
+RecoverFolder=%Personal%<br>
+RecoverFolder=%Favorites%<br>
+RecoverFolder=%Desktop%<br>
+BorderColor=#00FFFF,ttl<br>
+AutoDelete=y<br>
+NeverDelete=n<br>
+ForceFolder=C:\Program Files (x86)\Google\Chrome\Application<br>
+<br>
+Also are using win 7 64bit or win 7 pro 64bit? It seems happen more there on other pc pro we use all should up to date.<br>
+<br>
+When you right click on chrome at desktop icon then open it on sandbox(default sandbox) go to youtube check video at 1080 or 720 60fps. And pause the video...now leave it there for few hours and it usually pop up that message.<br>
+<br>
+Again we only using MWB and IT IS the 3.4.4 version latest as well. Seems like same thing happens.<br>
+<br>
+We asked if there be any security issue if chose to just hide the message if this happens or persist...with same pop up?<br>
+Anyway we trust you since and already even contacted our security team expert that works on our family firm.<br>
+This also just in case been posted on global AV through like kaspersky, norton, hitmanpro, MWB etc forums just to be sure that sandboxie if safe program to use as overall web defense.<br>
+<br>
+Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2326 cannot prepare registry: [11 / C0000022] SBIE2321 Cannot manage device map: [C0000022 / 77] Not pdf/dopus i</h3>
+				<div class="date">Posted: <strong>Thu Mar 22, 2018 4:13 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Tanaka, I dont know if it will make any difference for you but for Chrome, you should Force chrome.exe with Forced programs not the Chrome folder with Forced folders. But regardless, if you hide the message, and Chrome works fine, then its OK to hide the message.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2326 cannot prepare registry: [11 / C0000022] SBIE2321 Cannot manage device map: [C0000022 / 77] Not pdf/dopus i</h3>
+				<div class="date">Posted: <strong>Fri Mar 23, 2018 12:58 pm</strong></div>
+				<div class="author">by <strong>Tanaka Lee</strong></div>
+				<div class="content">I will try that forced exe for now. Also i need update this. Just to be sure that it doesnt have to do with for example malwarebytes. We did same procedure but this time we closed malwarebytes program. and opened chrome inside sandboxie went youtube just surf abit here and there...then stopped  and let chrome be inside sandboxie even whole 12-24hour different device pc sometimes take few min to pop up sometimes after 30min-1h+...it still happens pop same message even without MWBytes on same time. Anyway w see how it works after weekends. Thank you</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25595&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:56:36 GMT -->
+</html>

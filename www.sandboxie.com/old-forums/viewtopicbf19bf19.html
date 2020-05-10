@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25647&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:50:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Windows 10 1803 SBIE1241 - Change Container Folder [Fixed in beta 5.25.1]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Windows 10 1803 SBIE1241 - Change Container Folder [Fixed in beta 5.25.1]</h2>
+		<p><a href="viewtopica851a851.html?f=11&amp;t=25647">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25647</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Windows 10 1803 SBIE1241 - Change Container Folder [Fixed in beta 5.25.1]</h3>
+				<div class="date">Posted: <strong>Thu Mar 29, 2018 6:55 am</strong></div>
+				<div class="author">by <strong>RinCat</strong></div>
+				<div class="content">Windows Version: Windows 10 x64 1803 Build 17133.1<br>
+Sandboxie Version: 5.24 (64-bit)<br>
+<br>
+Error:<br>
+SBIE1241 Cannot mount registry hive:  [C000003A / 22]<br>
+SBIE2314 Canceling process Start.exe<br>
+<br>
+Cannot run anything.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241</h3>
+				<div class="date">Posted: <strong>Sun Apr 01, 2018 12:10 am</strong></div>
+				<div class="author">by <strong>msxcms</strong></div>
+				<div class="content">Same here<br>
+Version 17133.1</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241</h3>
+				<div class="date">Posted: <strong>Mon Apr 02, 2018 3:09 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Update:<br>
+<br>
+Unable to repro.<br>
+<br>
+Provide the required info: <a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+--------------- X --------------- <br>
+<br>
+All,<br>
+<br>
+The latest supported Windows 10 Fast Ring version can be found here:<br>
+<a href="../VersionChanges.html#v_5.24" class="postlink">https://www.sandboxie.com/VersionChanges#v_5.24</a><br>
+"Fixed crash in Windows 10 FR Build 17035 and added support for FR up to 17101."<br>
+<br>
+I'll let you know if I can repro once I finish updating to 17133.1.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241</h3>
+				<div class="date">Posted: <strong>Wed Apr 04, 2018 2:31 am</strong></div>
+				<div class="author">by <strong>superkryo</strong></div>
+				<div class="content">Having the same problem:<br>
+<br>
+Windows 10 x64 version 1803 build 17133.1 <br>
+<br>
+SBIE1241 Cannot mount registry hive:  [C000003A / 22]<br>
+SBIE2314 Canceling process Start.exe<br>
+<br>
+AV: windows defender<br>
+<br>
+Steps: "Run any program" or "Run from Start Menu" from default box or a new box <br>
+
+<blockquote class="uncited"><div>Unable to repro.</div></blockquote>
+
+That's interesting, assuming it's on a 64bit, Barb?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241</h3>
+				<div class="date">Posted: <strong>Wed Apr 04, 2018 11:23 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">superkryo ,<br>
+<br>
+I have tested both x86 and x64 using Sbie 5.24. I can launch web browsers, as well as random apps such as notepad. <br>
+<br>
+If you have any additional settings in place, or are using anything specific sbie settings , please let me know. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241</h3>
+				<div class="date">Posted: <strong>Wed Apr 04, 2018 11:54 am</strong></div>
+				<div class="author">by <strong>superkryo</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+No, there are no special settings. Even tried a new .ini with nothing else other than the default:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+ByteOrderMark=yes
+ForceDisableSeconds=10
+FileRootPath=E:\Sandbox\%SANDBOX%
+Template=WindowsRasMan
+Template=WindowsLive
+Template=OfficeLicensing
+Template=OfficeClickToRun
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+LingerProcess=devldr32.exe
+Enabled=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+
+[UserSettings_Portable]
+
+SbieCtrl_UserName=Portable
+SbieCtrl_EnableLogonStart=N
+SbieCtrl_EnableAutoStart=Y
+SbieCtrl_Hidden=Y
+SbieCtrl_NextUpdateCheck=1522942989
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_WindowCoords=200,150,1485,843
+SbieCtrl_ActiveView=40021
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+</code></pre></div>
+
+It's a portable installation using wraithdu's installer, shouldn't make any difference...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241</h3>
+				<div class="date">Posted: <strong>Wed Apr 04, 2018 12:58 pm</strong></div>
+				<div class="author">by <strong>test47</strong></div>
+				<div class="content">Windows 10 Pro 1803 Version 10.0.17133.1 (64 bit)<br>
+Sandboxie version number 5.24 (64 bit)<br>
+No antivirus; No anti-malware<br>
+<br>
+I have the same problem:<br>
+SBIE1241 Cannot mount registry hive: [C000003A / 22]<br>
+SBIE2314 Canceling process Start.exe<br>
+<br>
+How to reproduce:<br>
+1. fresh install with DefaultBox on C:\Sandbox\Administrator\DefaultBox<br>
+2. create two new sandbox with any name e.g.  "zzzz" and "yyyy"<br>
+3. edit the Sandboxie config and add "FileRootPath=D:\zzzz" for Box "zzzz" and "FileRootPath=D:\yyyy" for the "yyyy" Box<br>
+4. move the folder "zzzz" from C:\Sandbox\Administrator\ to D:\zzzz<br>
+move the folder "yyyy" from C:\Sandbox\Administrator\ to D:\yyyy<br>
+5. start any program from the zzzz Box or the yyyy Box<br>
+You will get SBIE1241<br>
+<br>
+How to fix SBIE1241<br>
+1. Open cmd and change directory to C:\Sandbox\Administrator\<br>
+2. create a symlink for zzzz: type "mklink /D zzzz D:\zzzz"<br>
+and delete "FileRootPath=D:\zzzz" for Box "zzzz"<br>
+do not delete "FileRootPath=D:\yyyy"<br>
+3. start any program on the zzzz Box - should work now<br>
+4. don't close the program started on zzzz Box<br>
+5. start any program on yyyy Box - should work also<br>
+if you close the program from the zzzz Box then you cannot start a program from the yyyy Box<br>
+Once the Box with the symlink is started and running you can run any program from any box<br>
+You need only one symlink for one Box and a running program in that Box for a drive letter. All other Boxes on that drive letter will start after that.<br>
+Other Boxes on other drives will not start.<br>
+<br>
+I do not have enough space on C: and moved all my Boxes on another drives.<br>
+<br>
+Hope this help you to fix the bug</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241</h3>
+				<div class="date">Posted: <strong>Wed Apr 04, 2018 2:02 pm</strong></div>
+				<div class="author">by <strong>superkryo</strong></div>
+				<div class="content">test47: many thanks, it is a workaround!<br>
+<br>
+Barb, can you try to reproduce by setting the container different from the default?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241 - Change Container Folder</h3>
+				<div class="date">Posted: <strong>Wed Apr 04, 2018 3:34 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">All,<br>
+<br>
+I can repro now that I have steps.  It only seems to affect the Fast Ring version of Windows (I couldn't repro on stable Win 10 x64) . <br>
+<br>
+The devs are aware and we'll update this thread if anything else comes up. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241 - Change Container Folder</h3>
+				<div class="date">Posted: <strong>Sun Apr 08, 2018 7:17 pm</strong></div>
+				<div class="author">by <strong>RinCat</strong></div>
+				<div class="content">Hi, this issue affect Windows 10 RS4 which will be release and push to users in a few days.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241 - Change Container Folder</h3>
+				<div class="date">Posted: <strong>Mon Apr 09, 2018 7:04 am</strong></div>
+				<div class="author">by <strong>Umbra</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic5af55af5.html?p=133098#p133098" data-post-id="133098" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Apr 04, 2018 3:34 pm</div></cite>
+All,<br>
+<br>
+I can repro now that I have steps.  It only seems to affect the Fast Ring version of Windows (I couldn't repro on stable Win 10 x64) . <br>
+
+</div></blockquote>
+
+Basically, on Win10x64 1803 SCU,  moving the Container from C to another partition generate the Registry Hive error. <br>
+This error doesn't occur in Win10x64 FCU.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241 - Change Container Folder</h3>
+				<div class="date">Posted: <strong>Tue Apr 17, 2018 4:18 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Fixed in beta 5.25. 1<br>
+<a href="viewtopiccd33cd33.html?f=65&amp;t=25684" class="postlink">viewtopic.php?f=65&amp;t=25684</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241 - Change Container Folder</h3>
+				<div class="date">Posted: <strong>Thu Apr 19, 2018 5:51 am</strong></div>
+				<div class="author">by <strong>Umbra</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopicb5c3b5c3.html?p=133188#p133188" data-post-id="133188" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Apr 17, 2018 4:18 pm</div></cite>
+Fixed in beta 5.25. 1<br>
+<a href="viewtopiccd33cd33.html?f=65&amp;t=25684" class="postlink">viewtopic.php?f=65&amp;t=25684</a>
+</div></blockquote>
+confirmed <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241 - Change Container Folder [Fixed in beta 5.25.1]</h3>
+				<div class="date">Posted: <strong>Mon May 07, 2018 2:15 am</strong></div>
+				<div class="author">by <strong>sebadamus</strong></div>
+				<div class="content">I noticed that after windows update to v1803 / 17134.1, my installed programs in E:\Sandbox\%SANDBOX% stopped working with a "registry hive could not found" message, so as I used to do... started first by uninstall sandboxie, reinstalled (same version), but same problem.<br>
+<br>
+So came here and found about beta version 5.25.2, but problem continues.<br>
+Programs only seems to work with sandboxie folder on C drive, if I change the folder as I used to do and try to run from there my programs (E:\Sandbox\%SANDBOX%), each program gives "Application cant not start ...(0xc0000142)"<br>
+<br>
+If I change back to default folder... programs starts, but my real data is on E:\Sandbox\%SANDBOX% so programs wont see it.  And cant move everything to C because its an 120gb SSD and will fill up.<br>
+<br>
+Also read about a Windows symlink trick, but prefer to wait for an update.<br>
+<br>
+If you want me to try something, just tell...<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 1803 SBIE1241 - Change Container Folder [Fixed in beta 5.25.1]</h3>
+				<div class="date">Posted: <strong>Mon May 07, 2018 10:44 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello sebadamus ,<br>
+<br>
+Did you delete the contents of your Sandboxes?<br>
+Otherwise, does the issue follow you to a new Sandbox with default settings? <br>
+<br>
+Please provide all the required information so that we can better assist you:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25647&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:50:03 GMT -->
+</html>

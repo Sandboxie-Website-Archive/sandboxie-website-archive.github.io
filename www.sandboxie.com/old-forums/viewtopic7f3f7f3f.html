@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=22749&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:23:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Cannot Print page When Dragon.exe is SB[SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Cannot Print page When Dragon.exe is SB[SOLVED]</h2>
+		<p><a href="viewtopic619a-3619a.html?f=11&amp;t=22749">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=22749</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Cannot Print page When Dragon.exe is SB[SOLVED]</h3>
+				<div class="date">Posted: <strong>Mon Apr 04, 2016 6:08 pm</strong></div>
+				<div class="author">by <strong>TerryWood</strong></div>
+				<div class="content">Hi All<br>
+<br>
+Can someone help me configure Sandboxie to allow Comodo Dragon.exe to print when sandboxed.<br>
+<br>
+I have Win 10, Sandboxie 5.10, ann Epson SX 400 Printer.<br>
+<br>
+When I try to print UNsandboxed no problem. When I try to print Sandboxed Dragon  sometimes crashes or a  message shows generating print preview, which never shows.<br>
+<br>
+I show below the current Sandboxie config. for Dragon.exe<br>
+<br>
+[Dragon]<br>
+<br>
+Enabled=y<br>
+ConfigLevel=7<br>
+AutoRecover=y<br>
+Template=AutoRecoverIgnore<br>
+Template=Firefox_Phishing_DirectAccess<br>
+Template=Chrome_Phishing_DirectAccess<br>
+Template=LingerPrograms<br>
+Template=BlockPorts<br>
+Template=WindowsFontCache<br>
+RecoverFolder=%Desktop%<br>
+RecoverFolder=%Favorites%<br>
+RecoverFolder=%Personal%<br>
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%<br>
+BorderColor=#00FFFF,ttl<br>
+BoxNameTitle=-<br>
+CopyLimitKb=900000<br>
+NotifyInternetAccessDenied=y<br>
+ProcessGroup=&lt;StartRunAccess&gt;,dllhost.exe,GoogleUpdateOnDemand.exe,software_reporter_tool.exe,dragon.exe,WerFault.exe,splwow64.exe,e_iamtege.exe,e_iarnege.exe<br>
+ProcessGroup=&lt;InternetAccess&gt;,dllhost.exe,dragon.exe,WerFault.exe<br>
+NotifyStartRunAccessDenied=y<br>
+AutoDelete=y<br>
+NeverDelete=n<br>
+DropAdminRights=y<br>
+ClosedFilePath=!&lt;InternetAccess&gt;,InternetAccessDevices<br>
+ClosedIpcPath=!&lt;StartRunAccess&gt;,*<br>
+<br>
+<br>
+Any help gratefully received<br>
+<br>
+Thanks<br>
+<br>
+terry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot Print page When Dragon.exe is Sandboxed</h3>
+				<div class="date">Posted: <strong>Mon Apr 04, 2016 10:56 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Do you get the SBIE message about allowing access to the printer?<br>
+<br>
+Also, you can give access to the temp directory where it writes the file by using Openfilepath= to \Users\&lt;username&gt;\AppData\Local\Temp)<br>
+<br>
+Thread here....and there are many more <a href="viewtopicf624f624.html?f=17&amp;t=21567" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 17&amp;t=21567</a><br>
+<br>
+More about OpenFilePath here. <a href="../index413b.html?OpenFilePath" class="postlink">http://www.sandboxie.com/index.php?OpenFilePath</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot Print page When Dragon.exe is Sandboxed</h3>
+				<div class="date">Posted: <strong>Tue Apr 05, 2016 4:13 am</strong></div>
+				<div class="author">by <strong>TerryWood</strong></div>
+				<div class="content">Hi Craig@invincea<br>
+<br>
+No I don't get the message about allowing access to the printer.<br>
+<br>
+ I have added "Openfilepath= to \Users\&lt;username&gt;\AppData\Local\Temp"<br>
+<br>
+to my config file but it makes no difference.<br>
+<br>
+Any other ideas.<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot Print page When Dragon.exe is Sandboxed</h3>
+				<div class="date">Posted: <strong>Tue Apr 05, 2016 8:15 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Openfilepath (unsandbox) dragon.<br>
+<br>
+If you're not getting the print spooler notification to allow it to print and that other option doesn't work, then you'll either have to unsandbox it totally or use resource access monitor in Sandboxie control to see what resource it's trying to find.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot Print page When Dragon.exe is Sandboxed</h3>
+				<div class="date">Posted: <strong>Tue Apr 05, 2016 5:55 pm</strong></div>
+				<div class="author">by <strong>TerryWood</strong></div>
+				<div class="content">Hi Craig<br>
+<br>
+Thanks for your help. I am uploading an attachment (ResourceAccessMonitorOutput.txt in a .zip archive)<br>
+<br>
+Which covers a short period in which I booted Dragon.exe sandboxed, then went to a page in which I know I cannot print from. I attempted to print several times got a notification on one ocasion about WerFault and several crashes.<br>
+<br>
+I do not have the skills to interpret it, but perhaps you could look at it for me?<br>
+<br>
+The config file for Dragon.exe is in the early part of this thread.<br>
+<br>
+Thanks<br>
+<br>
+Terry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot Print page When Dragon.exe is Sandboxed</h3>
+				<div class="date">Posted: <strong>Wed Apr 06, 2016 3:26 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">The log didn't help very much. Dragon appears to based on Chromium, so I'd first grab beta 5.11.3 that addressed a rare issue in Google Chrome and printer (32 bit.)<br>
+<br>
+I'd also add this line <br>
+<br>
+OpenFilePath=c:\windows\system32\spool\printers\*<br>
+<br>
+Dragon isn't a browser we normally test, so this is an unknown.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot Print page When Dragon.exe is Sandboxed</h3>
+				<div class="date">Posted: <strong>Wed Apr 06, 2016 3:30 pm</strong></div>
+				<div class="author">by <strong>TerryWood</strong></div>
+				<div class="content">Hi Craig<br>
+<br>
+Thank you that is very helpful<br>
+<br>
+Terry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot Print page When Dragon.exe is Sandboxed</h3>
+				<div class="date">Posted: <strong>Wed Apr 06, 2016 3:37 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">I just tested Comodo on SBIE Beta 5.11.3 of SBIE (Dragon v 45.12.393) without the need to open anything.  Printed just fine to a Xerox network printer.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot Print page When Dragon.exe is Sandboxed</h3>
+				<div class="date">Posted: <strong>Wed Apr 06, 2016 3:46 pm</strong></div>
+				<div class="author">by <strong>TerryWood</strong></div>
+				<div class="content">Hi Craig <br>
+<br>
+Just installed v5.113 and included the openpath setting you gave me and it started printing albeit it kept throwing up messages relating to two files that are from my Epson Printer. I kept on double clicking the error message lines until they stopped appearing.<br>
+<br>
+So thanks for all your help, hopefully I am in business again, and I've learnt something.<br>
+<br>
+Thanks<br>
+<br>
+Terry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot Print page When Dragon.exe is SB[SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Apr 06, 2016 4:52 pm</strong></div>
+				<div class="author">by <strong>TerryWood</strong></div>
+				<div class="content">Hi Craig <br>
+<br>
+I spoke a bit too soon. I started getting the sandboxie dialog box asking me to double click on a line, initially about 6 lines to double click so that it would print.No crashes though<br>
+<br>
+Tedious, for sure. Then the process would start all over again when the printer was shut down a re-started. So then I added them as open path to the config file as undernoted:<br>
+<br>
+openfilepath=c:\Users\Terry\AppData\Local\Temp\*<br>
+OpenFilePath=c:\windows\system32\spool\printers\*<br>
+openfilepath=c:\ProgramData\EPSON\PRINTER\EPAUDF01.AUD<br>
+openfilepath=c:\ProgramData\EPSON\EPSON Stylus SX400 Series\0409.E_FCF0EGE.WAT<br>
+openfilepath=c:\Windows\Temp\*<br>
+<br>
+It appears to work now, the question is have I so weakened Sandboxies defence that it is not worth it. Appreciate your comment. And thanks again.<br>
+<br>
+Terry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot Print page When Dragon.exe is Sandboxed</h3>
+				<div class="date">Posted: <strong>Wed Apr 06, 2016 5:12 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>TerryWood wrote:</cite>
+It appears to work now, the question is have I so weakened Sandboxies defence that it is not worth it. Appreciate your comment. And thanks again.</div></blockquote>
+Terry, a little while ago, at Wilders, I wrote in your thread there how you can make Comodo Dragon be the only exe that has access to the printer. That make things a little safer. You can make it that way for all the lines written above. Another thing you can do is create a separate sandbox where you allow access to the files and only use this sandbox for printing. You can make it your dedicated printing sandbox. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot Print page When Dragon.exe is SB[SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Apr 07, 2016 12:37 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>TerryWood wrote:</cite>Hi Craig <br>
+<br>
+I spoke a bit too soon. I started getting the sandboxie dialog box asking me to double click on a line, initially about 6 lines to double click so that it would print.No crashes though<br>
+<br>
+Tedious, for sure. Then the process would start all over again when the printer was shut down a re-started. So then I added them as open path to the config file as undernoted:<br>
+<br>
+openfilepath=c:\Users\Terry\AppData\Local\Temp\*<br>
+OpenFilePath=c:\windows\system32\spool\printers\*<br>
+openfilepath=c:\ProgramData\EPSON\PRINTER\EPAUDF01.AUD<br>
+openfilepath=c:\ProgramData\EPSON\EPSON Stylus SX400 Series\0409.E_FCF0EGE.WAT<br>
+openfilepath=c:\Windows\Temp\*<br>
+<br>
+It appears to work now, the question is have I so weakened Sandboxies defence that it is not worth it. Appreciate your comment. And thanks again.<br>
+<br>
+Terry</div></blockquote>
+
+Are you sure these 2 are completely necessary?<br>
+<br>
+openfilepath=c:\Users\Terry\AppData\Local\Temp\*<br>
+openfilepath=c:\Windows\Temp\*</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot Print page When Dragon.exe is SB[SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Apr 07, 2016 1:35 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Actually, none are necessary, as it works without any modifications of open file path..But if printing is still not working, one of the solutions should be tried if printing doesn't work.<br>
+<br>
+This first:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>openfilepath=c:\Users\Terry\AppData\Local\Temp\*</code></pre></div>
+Then the Win Temp
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>openfilepath=c:\Windows\Temp\*</code></pre></div>
+
+Others have had success with <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=xxBrowser.exe,%SystemDrive%\ProgramData\xxYourPrinter</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot Print page When Dragon.exe is SB[SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Apr 07, 2016 2:18 pm</strong></div>
+				<div class="author">by <strong>TerryWood</strong></div>
+				<div class="content">Hi Craig<br>
+<br>
+Thanks along with Curt for helping here. Let me just say that on my my machine it is not just Dragon that is problematic, but also Chromium, Chromodo and Chrome. The only exception that works literally out of the box is Opera. All Chrome derivatives.<br>
+<br>
+At the moment, I am happy because I can print with Dragon, along with yourselves, bo elam has been very helpful. The question is, am I allowing to much slack in the Sandboxie System with my configuration. I can only work with what does NOT happen and what Sandboxie tells me. I will try your latest suggestions because I really do want to learn. I will report back.  <br>
+<br>
+Thank you all again<br>
+<br>
+Terry</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=22749&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:23:52 GMT -->
+</html>

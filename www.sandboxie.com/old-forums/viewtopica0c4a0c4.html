@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=9175&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Offline Activation Helper script</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Offline Activation Helper script</h2>
+		<p><a href="viewtopic42e042e0.html?f=22&amp;t=9175">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=9175</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Offline Activation Helper script</h3>
+				<div class="date">Posted: <strong>Mon Oct 18, 2010 11:18 pm</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content"><blockquote><div><cite>ssj100 wrote:</cite>Ruhe (since I know you like using batch files to speed things up) or anyone, is there a way (or is it even possible) to make the offline activation method more automatic or faster? Thanks.</div></blockquote>
+With the release of Sandboxie 3.50, it's reactivation time again! This script is for <a href="../phpbb/viewtopicae15.php?p=56757#56757" class="postlink">ssj100</a> and any other users that, for whatever reason, find themselves in an Offline Activation situation.<br>
+<br>
+How might this script help?<br>
+- Helps you gather and submit data for all your offline PCs.<br>
+- No need to find your license key or remember commands for license.exe.<br>
+- Reduces the chance for error due to typos, sloppy handwriting, etc.<br>
+- Quicker and easier. Everything controlled from the script UI.<br>
+<br>
+How is the script used?<br>
+You'll probably want to run the script from a USB flash drive or something:
+<ul><li>Task 1) Run it on each offline PC to automatically save your version and syscode to a single .txt file on your flash drive.<br>
+Task 2) Run it on an internet-connected PC to automatically submit data to sandboxie.com, and save the resulting activation keys to the same .txt file.<br>
+Task 3) Run it again on each offline PC to activate.</li></ul>
+To make the source code easy for everyone to examine and modify, it's written almost entirely in JScript. It's pretty much ready to run, although you'll want to add your license key to the config section. Download here, as  <em>sbie-activation.wsf</em>: <a href="http://www.mediafire.com/?j3jua11a9hm71" class="postlink">http://www.mediafire.com/?j3jua11a9hm71</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 18, 2010 11:25 pm</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content">Here are some questions that came up when my guinea pig friends tested this.<br>
+<br>
+Q: Can I run the script sandboxed?<br>
+A: Submitting data to sandboxie.com, in Task 2, works great sandboxed. But you can't sandbox Task 1 or 3 on the offline computer because Sandboxie License Manager won't provide a valid syscode. This isn't a problem if you're just testing though - you can just ignore the error.<br>
+<br>
+Q: Will this gunk up my computer?<br>
+A: The script creates a single .txt output file in a location you specify. It requires no install and doesn't modify anything else.<br>
+<br>
+Q: How is data submitted to sandboxie.com?<br>
+A: Through an automated instance of Internet Explorer, which browses to the offline activation page and fills in the form automatically. (If you want to watch, change <em>objIE.Visible = false;</em> to true. All internet access is managed through the <em>getWwwActKey()</em> function.)<br>
+<br>
+Q: Why can't the script communicate with Internet Explorer in Task 2?<br>
+A: If the script is unsandboxed and IE is a forced process, they won't be able to talk. Easiest fix is to run the script sandboxed - see <a href="../phpbb/viewtopic0bda.php?t=9101" class="postlink">here</a>. Or, follow the instructions in the error message.<br>
+<br>
+Q: Why is my version or syscode garbled in Task 1?<br>
+A: The script copies data from Sandboxie by simulating keystrokes - it's best to avoid typing or mousing during this brief process. If running the script again doesn't work, you can try setting <em>CFG_sbAutograb</em> to false in the script config.<br>
+<br>
+Q: Why is the script so long?<br>
+A: Had a bit too much fun. Earlier versions provided similar functionality with much less code. A lot of lines are wasted on contingency handling, and figuring out things that could easily be hard-coded. This started as a 10-line batch file. <br>
+<br>
+Q: Why did you do x or y in the code?<br>
+A: Probably just to see if I could. Or because I didn't know any better.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 19, 2010 1:06 am</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content">Ahh, nice script! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+I personally don't have any issues with activation, but I'm sure this will be useful for those that do (such as ssj100 and that blaq guy)!<br>
+If I may make a suggestion though, wouldn't it be better to place this thread in "Contributed Utilities" instead? <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 19, 2010 1:09 am</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content">Thanks Mike.  I probably won't be using it, as I don't have any issues with activation either.  I was just thinking about "worst case scenarios".<br>
+<br>
+Looks like great work though.  Might test it out when I get time.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 19, 2010 8:39 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>Mike wrote:</cite>Q: Why is my version or syscode garbled in Task 1?<br>
+A: The script copies data from Sandboxie by simulating keystrokes - it's best to avoid typing or mousing during this brief process. If running the script again doesn't work, you can try setting CFG_sbAutograb to false in the script config.</div></blockquote>
+
+The License.exe program supports batch/scripting use with the "silent" modifier, are you aware of this?<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"C:\Program Files\Sandboxie\License.exe" silent print syscode | more</code></pre></div>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"C:\Program Files\Sandboxie\License.exe" silent print version | more</code></pre></div>
+
+But maybe you just had more fun doing screen scraping.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 19, 2010 10:53 am</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content"><blockquote><div><cite>SnDPhoenix wrote:</cite>If I may make a suggestion though, wouldn't it be better to place this thread in "Contributed Utilities" instead?</div></blockquote>
+SnD, thanks for trying it. I wouldn't mind moving this to Contributed Utilities, but for some reason I thought those had to meet a certain standard... maybe because tzuk curates this list, <a href="../index4d6e.html?ContributedUtilities" class="postlink">http://www.sandboxie.com/index.php?ContributedUtilities</a>?<br>
+
+<blockquote><div><cite>ssj100 wrote:</cite>Thanks Mike. I probably won't be using it, as I don't have any issues with activation either. I was just thinking about "worst case scenarios".</div></blockquote>
+Oh, I see, thanks for checking in though. Anyway, this was more for kicks than anything else.<br>
+
+<blockquote><div><cite>tzuk wrote:</cite>The License.exe program supports batch/scripting use with the "silent" modifier, are you aware of this?</div></blockquote>
+D'oh! That definitely falls into the "didn't know any better" category. I tried <em>license /?</em> and got nothing, checked the corporate install page, and I guess I missed <a href="../phpbb/viewtopicf511.php?t=8404" class="postlink">this thread</a>. Thanks for the tip, tzuk - maybe I'll update the code if anyone has problems.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 19, 2010 6:30 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I don't mind moving this to the Contributed Utilities forum.  As for updating the Contributed Utilities web page, I guess we'll see the reaction to this utility over some period of time, and then decide.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=9175&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:42 GMT -->
+</html>

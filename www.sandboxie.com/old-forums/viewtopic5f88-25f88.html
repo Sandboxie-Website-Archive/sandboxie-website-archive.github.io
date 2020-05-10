@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15539&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:37:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Drop Rights must be turned off in 4.01.09 (XP)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Drop Rights must be turned off in 4.01.09 (XP)</h2>
+		<p><a href="viewtopic1506-21506.html?f=38&amp;t=15539">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15539</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Drop Rights must be turned off in 4.01.09 (XP)</h3>
+				<div class="date">Posted: <strong>Sat May 25, 2013 3:01 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">I realize that Drop Rights is probably on it's way out, but in the meantime 4.01.09 won't work for me if the configuration file contains a "DropAdminRights=y" setting (at least on <span style="text-decoration: underline"><strong>XP</strong></span>).<br>
+<br>
+2013-05-25 14:39:46 SBIE2337 Failed to start program:  [33 / 5]<br>
+2013-05-25 14:39:46 SBIE2204 Cannot start sandboxed service RpcSs (5)<br>
+<br>
+Turn off Drop Rights (<span style="text-decoration: underline">UN</span>check it) at:<br>
+Sandbox Settings &gt; Restrictions &gt; Drop Rights</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 25, 2013 3:19 pm</strong></div>
+				<div class="author">by <strong>sam</strong></div>
+				<div class="content">Works checked or unchecked now on Windows7 x64.<br>
+Probably an XP issue.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 25, 2013 3:58 pm</strong></div>
+				<div class="author">by <strong>Sampei Nihira</strong></div>
+				<div class="content"><span style="color: darkblue">Setting "impossible" to use with XP,work for Tzuk.</span></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun May 26, 2013 3:32 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Sorry!  I don't know why I keep breaking the Drop Rights feature for the past couple of updates.  Version 4.01.10 should fix this problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun May 26, 2013 4:14 am</strong></div>
+				<div class="author">by <strong>Sampei Nihira</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Sorry!  I don't know why I keep breaking the Drop Rights feature for the past couple of updates.  Version 4.01.10 should fix this problem.</div></blockquote>
+
+<span style="color: darkblue">10 is OK.<br>
+TH.</span></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun May 26, 2013 8:47 am</strong></div>
+				<div class="author">by <strong>henri</strong></div>
+				<div class="content">Thanks, everything seems be ok, even with drop rights enable.<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 28, 2013 9:44 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">tzuk, as a result of checking stuff on the laptop (haven't in awhile, it still had .07), I'm now seeing <em>SBIE2204 Cannot start sandboxed service RpcSs</em> for the first time with .11 (with Drop Rights, otherwise default sandbox). Except the error code is <strong>1309</strong> (ERROR_NO_IMPERSONATION_TOKEN?).<br>
+<br>
+Can't reproduce on main system. Will try to check back with previous versions (.08-.10). Can't think of anything else there, except it hasn't had any Windows updates since Feb. install...<br>
+<br>
+<br>
+
+<blockquote><div><cite>Guest10 wrote:</cite>I realize that Drop Rights is probably on it's way out</div></blockquote>
+
+Why do you say that...? <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 28, 2013 10:42 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">OK, it looks like .09, .10, and .11 are the same on the laptop -- just that RpcSs message (1309), not what Guest10 posted. (I haven't used .09 or .10 on main system.)<br>
+<br>
+Yeah, the laptop had .07 on it before today, and that was fine. <strong>.08</strong> broke with the same RpcSs message, with an additional <em>SBIE2321 Cannot manage device map: [C0000022 / 88]</em> when using Run Sandboxed.<br>
+<br>
+All fine without Drop Rights.<br>
+<br>
+<br>
+And if there was a problem with Drop Rights on XP in .08 (or any version) I probably wouldn't notice on the main system, since all my "entry point" programs have rights dropped with SRP before forced sandboxing. I simply leave Drop Rights enabled "just in case" or for other occasional stuff...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 28, 2013 1:43 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">No need to disable Drop rights in any of the sandboxes where I have it enabled while using .11 in XP.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed May 29, 2013 10:20 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Just found it! Same thing was happening on fresh VirtualBox install, even after I applied latest updates (yet I can't reproduce on main system). It was pretty well untouched I figured, except checking over my stuff again quickly, I saw one of the things I DO change initially, just until after I'm done installing everything on a new install:<br>
+<br>
+HKLM\SYSTEM\CurrentControlSet\Control\Lsa\<strong>nodefaultadminowner</strong> = 0 (instead of default 1)<br>
+<br>
+So if owner of stuff (objects) tries to be Admin, Sandboxie fails since .08 with Drop Rights. You probably might want to fix this, since it IS a real, legitimate thing people can set (it's a Group Policy option, I believe).<br>
+<br>
+<br>
+Extra info (unrelated to Sandboxie): I was going to use that setting full-time back when I first discovered dropping rights (before Sandboxie <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">), but found that it caused some really, <em>really</em> random/weird things to happen for IE 6 with dropped rights. And on the laptop, it nearly killed me trying to figure out why the Dell wireless thing wouldn't work (running full Admin!), until I discovered it was failing because nodefaultadminowner=0, but ONLY because I hadn't yet set a password for the account!? Strange, strange stuff. I only use it now, temporarily, to make sure installed system stuff/programs is not owned by the user (to protect with dropped rights).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 02, 2013 2:32 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Alright, this should be taken care of in version 4.01.13.  There was something similar for XP in version 4.01.09 but that was causing problem, and I had to undo that change.  Hopefully I won't have to undo this change as well.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 04, 2013 7:14 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Yep, looked fine during my quick check on the laptop system that still has nodefaultadminowner=0 <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jun 10, 2013 3:51 pm</strong></div>
+				<div class="author">by <strong>dja2k</strong></div>
+				<div class="content">I went from .11 to .13 update.  Don't know if this is related to the dropped rights but in .13 with Firefox, I get the following....<br>
+<br>
+SBIE2214 Request to start service 'wuauserv' was denied due to dropped rights<br>
+SBIE2219 Request was issued by program SandboxieDcomLaunch.exe [Firefox]<br>
+SBIE2220 To permit use of Administrator privileges, please double-click on this message line<br>
+SBIE2214 Request to start service 'bits' was denied due to dropped rights<br>
+SBIE2219 Request was issued by program SandboxieDcomLaunch.exe [Firefox]<br>
+SBIE2220 To permit use of Administrator privileges, please double-click on this message line<br>
+SBIE2214 Request to start service 'wuauserv' was denied due to dropped rights<br>
+SBIE2219 Request was issued by program SandboxieDcomLaunch.exe [Firefox]<br>
+SBIE2220 To permit use of Administrator privileges, please double-click on this message line<br>
+<br>
+I don't get why wuauserv (a windows update service) is trying to run inside Firefox.<br>
+<br>
+dja2k</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 11, 2013 2:06 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">No, these errors were always there don't have to do with recent changes to Drop Rights.<br>
+You can't run services in the sandbox when Drop Rights is enabled.<br>
+<br>
+Maybe you're trying to run some Microsoft software which is trying to check<br>
+for updates through the Automatic Updates service (wuauserv) ?<br>
+Try to delete the contents of your sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 11, 2013 3:03 pm</strong></div>
+				<div class="author">by <strong>dja2k</strong></div>
+				<div class="content">I have always had the "delete function" enabled.  I had never seen those before and I haven't change my configuration since v3.76 or before.  Drop Rights has always been enabled in prior versions since it became available.  I did notice that "silverlight configuration" tried to run so I allowed as I am running with restrictions.  Still don't understand why a Windows Update service is trying to run inside my Firefox sandbox.<br>
+<br>
+dja2k</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15539&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:37:58 GMT -->
+</html>

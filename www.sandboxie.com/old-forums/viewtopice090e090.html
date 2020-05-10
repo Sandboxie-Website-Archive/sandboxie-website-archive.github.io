@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9007&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Set the time within the sandbox</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Set the time within the sandbox</h2>
+		<p><a href="viewtopicd028d028.html?f=4&amp;t=9007">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=9007</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Set the time within the sandbox</h3>
+				<div class="date">Posted: <strong>Thu Sep 23, 2010 3:48 am</strong></div>
+				<div class="author">by <strong>newbie</strong></div>
+				<div class="content">Hi,<br>
+<br>
+I was wondering if it would be possible to add a feature to the sandbox so that programs within the sandbox runs with its own time separate from the main time of the system?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Set the time within the sandbox</h3>
+				<div class="date">Posted: <strong>Thu Sep 23, 2010 8:48 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>newbie wrote:</cite>Hi,<br>
+<br>
+I was wondering if it would be possible to add a feature to the sandbox so that programs within the sandbox runs with its own time separate from the main time of the system?</div></blockquote>
+
+This was requested and the answer was "no".<br>
+<br>
+You can use the search function if you want to know why.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Sep 25, 2010 3:59 am</strong></div>
+				<div class="author">by <strong>MaSc</strong></div>
+				<div class="content">A small Programm called RunAsDate from NirSoft could help you.<br>
+Start it inside the Sandbox, set the Date/Time and your Programm's destination, perhaps some startparameters and run it.<br>
+Only .exe possible, sadly no .bat or .com yet.<br>
+<a href="http://www.nirsoft.net/utils/run_as_date.html" class="postlink">http://www.nirsoft.net/utils/run_as_date.html</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 26, 2010 3:15 pm</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content"><blockquote><div><cite>MaSc wrote:</cite>sadly no .bat</div></blockquote>
+Why not? Please try this and report back:<br>
+program name: cmd.exe<br>
+parameters: /c file.bat your_parameters</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 26, 2010 5:20 pm</strong></div>
+				<div class="author">by <strong>MaSc</strong></div>
+				<div class="content">Well, in the File-Open-Dialog I've just looked at the possible Extensions and saw nothing but .exe<br>
+This was the reason why I assumed that only .exe will work.<br>
+Using the Date and Time Command inside C:\WINDOWS\system32\cmd.exe works well.<br>
+But running with C:\WINDOWS\system32\command.com shows the original System Date/Time.<br>
+I've created two Batchfiles.<br>
+One with C:\WINDOWS\system32\cmd.exe and another with C:\WINDOWS\system32\command.com inside.<br>
+Both are showing successfull the forced Date/Time.<br>
+But running another instance of cmd.exe or command.com inside the first one shows the original System Date/Time.<br>
+Just like the test with the parameter /c C:\WINDOWS\system32\cmd.exe</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 26, 2010 7:47 pm</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">Why would you run cmd.exe inside itself? You asked to influence a BAT file.<br>
+<br>
+Here's an actual screenshot<br>
+ <a href="../img129.imagevenue.com/img31403140.php?image=45081_fakedate_122_629lo.jpg" class="postlink"><img src="../img129.imagevenue.com/loc629/th_45081_fakedate_122_629lo.jpg" class="postimage" alt="Image"></a><br>
+(can anybody explain the undocumented "move time forward" option?).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 26, 2010 10:46 pm</strong></div>
+				<div class="author">by <strong>dynarx</strong></div>
+				<div class="content"><blockquote><div><cite>lwc wrote:</cite>(can anybody explain the undocumented "move time forward" option?).</div></blockquote>
+
+I believe that means move the system time to the figures selected, then allow system time to count *from there*, as opposed to 'stopping the clock' and freezing those figures in place.<br>
+<br>
+Cheers,<br>
+D</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 29, 2010 10:44 am</strong></div>
+				<div class="author">by <strong>Newbie</strong></div>
+				<div class="content"><blockquote><div><cite>MaSc wrote:</cite>A small Programm called RunAsDate from NirSoft could help you.<br>
+Start it inside the Sandbox, set the Date/Time and your Programm's destination, perhaps some startparameters and run it.<br>
+Only .exe possible, sadly no .bat or .com yet.<br>
+<a href="http://www.nirsoft.net/utils/run_as_date.html" class="postlink">http://www.nirsoft.net/utils/run_as_date.html</a></div></blockquote>
+
+<br>
+Thx a lot. It worked great.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Nov 18, 2012 4:48 am</strong></div>
+				<div class="author">by <strong>Fireball3</strong></div>
+				<div class="content">Tanks a lot!<br>
+Had the need of the same feature in the sandbox.<br>
+Nirsoft tools works perfectly.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 14, 2013 10:39 pm</strong></div>
+				<div class="author">by <strong>huskykhtam@gmail.com</strong></div>
+				<div class="content">I'm currently running some program, zm.exe, which needs to access a certain driver file. So even if I run the main zm.exe program with "runasdate" (or similar software), the driver file zm.exe looks for still manages to read the system actual system time. <br>
+<br>
+Sadly, I really need to find a way to change the system time to 2010 within sandboxie =( I could do this outside Sandboxie but if I do so, I couldn't run MS word simultaneously as I run zm.exe.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9007&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:22 GMT -->
+</html>

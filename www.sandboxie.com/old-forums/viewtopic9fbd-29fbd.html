@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=817&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:15:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Allow for 'trusted' domains</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Allow for 'trusted' domains</h2>
+		<p><a href="viewtopic5fe35fe3.html?f=4&amp;t=817">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=817</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Allow for 'trusted' domains</h3>
+				<div class="date">Posted: <strong>Fri Dec 01, 2006 2:02 pm</strong></div>
+				<div class="author">by <strong>bizguy72</strong></div>
+				<div class="content">Hi,<br>
+<br>
+(Note: This feature request is a result of a problem report I raised located here: <a href="http://sandboxie.com/phpbb/viewtopic.php?t=816" class="postlink">http://sandboxie.com/phpbb/viewtopic.php?t=816</a>)<br>
+<br>
+What would be nice - ie. a feature request - would be the ability to use the concept of trusted domains.<br>
+<br>
+For example, using my scenario:<br>
+<br>
+1. I specify my browser sessions (IE, firefox etc) to be forced sandboxed programs.<br>
+<br>
+2. Additionally within the configuration, I would be able to specify domain 'my-intranet.com' to be a trusted domain.<br>
+<br>
+Then, when the browser tries to start up on this domain, Sandboxie would recognise this as being a trusted domain and override the forced settings config thereby starting the browser up as a non-sanboxied environment.<br>
+<br>
+This would be ideal for Intranet type environments. I do realise that if the Intranet then has an external link to the outside world, then you would be browsing in an unprotected environment....in this case, maybe Sandboxie could at least respond with some type of SBxxxx message to let you know this. <br>
+<br>
+Thanks,<br>
+bizguy</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow for 'trusted' domains</h3>
+				<div class="date">Posted: <strong>Fri Dec 01, 2006 2:37 pm</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content"><blockquote><div><cite>bizguy72 wrote:</cite>
+Then, when the browser tries to start up on this domain, Sandboxie would recognise this as being a trusted domain and override the forced settings config thereby starting the browser up as a non-sanboxied environment.
+</div></blockquote>
+
+I think bizguy has a great idea.  The only suggestion I would make, as a friendly amendment, is that the user be asked to confirm opening a "trusted" domain before it actually overrides forced sandbox settings.  That way, if malware is spoofing, the user will have the chance to stop the process before a "trusted" link (or spoofed "trusted" link) is opened outside the sandboxed environment.<br>
+<br>
+Tzuk, I hope you'll consider adding this to your to-do list (or at least your to-be-considered-further list).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Dec 02, 2006 6:41 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">This can be done in the form of the sandboxed process asking Sandboxie to open some link, and Sandboxie would agree only if the link appears in (the non-sandboxed) list of Internet Explorer's trusted domains.  Which would mean that malicious software wouldn't be able to abuse this feature.<br>
+<br>
+I think it's definately do-able, at some point down the road.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Dec 02, 2006 8:43 pm</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>This can be done in the form of the sandboxed process asking Sandboxie to open some link, and Sandboxie would agree only if the link appears in (the non-sandboxed) list of <strong><span style="color: red">Internet Explorer's</span></strong> trusted domains.</div></blockquote>
+
+Tzuk,<br>
+<br>
+That's great, but many Sandboxie users who are concerned about privacy and security are probably using Firefox or Opera for browsing.  I hope you were just speaking generically and were not saying you would only have Sandboxie check the Internet Explorer's trusted sites list.  If so, that wouldn't be of much value to me.  <br>
+<br>
+I was hoping we could just have a text file in the program directory listing trusted sites one per line.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Dec 02, 2006 10:55 pm</strong></div>
+				<div class="author">by <strong>bizguy72</strong></div>
+				<div class="content">Hi,<br>
+<br>
+I second the comments of SBIE..... I use Firefox not IE so in order for this to be useful for me the solution would have to be designed in such a way to be browser independent as suggested.<br>
+<br>
+Bizguy</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 03, 2006 11:35 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Actually I was talking about IE's trusted domains, specifically, because I know where Windows keeps them.<br>
+<br>
+Does Firefox have a concept of trusted domains?  Maybe it also keeps a list that could be consulted?<br>
+<br>
+But if not, trusted domains can be configured from Control Panel -&gt; Internet Options, without starting an instance of IE.<br>
+<br>
+If you're thinking about Firefox, and placing the list of trusted domains outside Firefox anyway (like in a text file), then why not maintain them as part of the Windows/IE concept of trusted domains, through that Control Panel applet?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 03, 2006 11:53 am</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>
+If you're thinking about Firefox, and placing the list of trusted domains outside Firefox anyway (like in a text file), then why not maintain them as part of the Windows/IE concept of trusted domains, through that Control Panel applet?</div></blockquote>
+
+Firefox does not have trusted domains as such, although it does allow "trusted" sites for the limited purposes of placing cookies and installing add-ons.<br>
+<br>
+I would never put <em>any</em> sites in the IE trusted domains list except for Windows Update.  Even with Sandboxie, I don't trust IE and don't want to open any more holes in it than are absolutely necessary.<br>
+<br>
+Would it be harder to read a simple text file with a list of trusted directories for any browser in the Sandboxie program directory instead of relying on the IE trusted sites registry entries?<br>
+<br>
+I appreciate your willingness to give us an opportunity to discuss possible new features and to comment on possible approaches in advance.<br>
+<br>
+Thanks again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 03, 2006 3:23 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">It's not that reading a text file is particularly difficult.  But, I would imagine most people would prefer to maintain this list within their browser *, and have Sandboxie see that list.<br>
+<br>
+(* This is assuming the Firefox facility for this is adequate, and its list can be consulted.)<br>
+<br>
+Which means the text file you want, would probably be unused most of the time, anyway.<br>
+<br>
+I can understand that you don't like IE, but I think your aversion is not justified, in this case.  It's really just a list of domains that <em>you</em> tell Windows to trust, and then IE honor that list.  But if you don't use IE then how can this hurt you?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 03, 2006 3:37 pm</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>This is assuming the Firefox facility for this is adequate, and its list can be consulted.</div></blockquote>
+
+Unfortunately, Firefox does not have such a facility.  It just has settings for allowed cookies and for domains allowed to install add-ons.  Perhaps you could use the add-ons domains permissions list, but I don't think that would be very clear to folks as it is for a limited purpose and does not use any language like "trusted" domain.<br>
+<br>
+Because I use FirefoxPortable as my main browser, I have left IE7 as my default browser -- even though I hardly ever use IE except for Windows updates.  So if I start adding trusted sites to IE7, I would be at risk when those sites are allowed to open outside the sandbox.<br>
+<br>
+That is to say, that sites I would trust with Firefox may be sites I would not trust with IE -- because my Firefox blocks scripts and such.<br>
+<br>
+How about a compromise?  Have Sandboxie first look for IE trusted sites and then add any that are in a text file in the program directory.  That's essentially the order in which Sanboxie reads the config file already, isn't it?<br>
+<br>
+Anyway, I think bizguy had a good idea, but I wouldn't use the extra feature if you were to use IE's trusted sites to implement it.  I'd just stick with the way I do things now.<br>
+<br>
+Thanks for considering the suggestion, even if you decide to do it some other way.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 03, 2006 5:10 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Then how about this compromise:  That you could tell Sandboxie that your "trusted-for-unsandboxed-browser" domains can be found in the list of "IE restricted domains" (in addition to "IE trusted domains").<br>
+<br>
+As far as I know, these restricted domains get even less privilege than in the normal Internet zone.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 03, 2006 5:45 pm</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Then how about this compromise:  That you could tell Sandboxie that your "trusted-for-unsandboxed-browser" domains can be found in the list of "IE restricted domains" (in addition to "IE trusted domains").<br>
+<br>
+As far as I know, these restricted domains get even less privilege than in the normal Internet zone.</div></blockquote>
+
+Tzuk,<br>
+<br>
+I'm not sure if you were serious about that, but those sites are dangerous or otherwise undesirable sites, and the list comes pre-populated with (censored) sites, spammers and such -- or perhaps those were added by my SpySweeper or Spybot subscriptions.  <br>
+<br>
+I just looked at what is in that restricted domains list on IE on my machine, and I certainly would not want any of those sites to be accessed at any level by any browser I might use.<br>
+<br>
+OK, we've kicked this horse to death.  I'm happy enough with the way things are.   <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 03, 2006 9:55 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Hi,<br>
+<br>
+I was thinking the easiest way would be to just make it another option within the existing configuration file 'sandbox.ini':<br>
+<br>
+eg.<br>
+<br>
+<strong>[GlobalSettings]<br>
+.<br>
+.<br>
+TrustedDomain=my-intranet.com<br>
+TrustedDomain=microsoft.com</strong><br>
+<br>
+...thereby removing the need for any additional file and removing the dpendency on any type of browser.<br>
+<br>
+Bizguy</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Dec 04, 2006 5:50 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Ah.  My list of restricted sites is empty so it never occured to me that it may actually be populated with evil sites.   <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed">    Alright  . . . I guess I'll start with just the text file (probably as part of Sandboxie.ini, as suggested here) and see where to take it from there.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=817&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:15:51 GMT -->
+</html>

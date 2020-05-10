@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=49&t=19837&start=165&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:57:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 4.15 Beta Available (Latest Version 4.15.12) - Page 12</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>4.15 Beta Available (Latest Version 4.15.12)</h2>
+		<p><a href="viewtopicd59fd59f.html?f=49&amp;t=19837">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=49&amp;t=19837</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>12</strong> of <strong>14</strong></div>
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Sat Jan 31, 2015 10:07 pm</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content">I've been running recent HitmanPro.Alert release candidates along with recent Sandboxie beta versions and Chrome x64 stable versions on Windows 8.1 x64. I randomly get errors executing Chrome sandboxed:<br>
+<br>
+SBIE2205 Service not implemented:  NtCreateProcessEx (4024)<br>
+SBIE2204 Cannot start sandboxed service RpcSs (-1)<br>
+<br>
+With 4.15.11, I now get something like this:<br>
+<br>
+SBIE2101 Object name not found: OpenProcess (C0000022) 001FFFFF, error <br>
+SBIE2314 Canceling process SandboxieRpcSs.exe<br>
+SBIE2314 Canceling process SandboxieRpcSs.exe<br>
+SBIE2204 Cannot start sandboxed service RpcSs (1)<br>
+<br>
+A few days ago (prior to 4.15.11), I attached WinDbg to the RpcSs process after getting the error:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Microsoft (R) Windows Debugger Version 6.3.9600.16384 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+*** wait with pending attach
+
+************* Symbol Path validation summary **************
+Response                         Time (ms)     Location
+Deferred                                       SRV*your local folder for symbols*http://msdl.microsoft.com/download/symbols
+Symbol search path is: SRV*your local folder for symbols*http://msdl.microsoft.com/download/symbols
+Executable search path is: 
+ModLoad: 00007ff7`982e0000 00007ff7`982eb000   C:\Program Files\Sandboxie\SandboxieRpcSs.exe
+ModLoad: 00007ffd`e2a40000 00007ffd`e2be6000   C:\Windows\SYSTEM32\ntdll.dll
+ModLoad: 00007ffd`e04e0000 00007ffd`e061a000   C:\Windows\system32\kernel32.dll
+ModLoad: 00007ffd`e01b0000 00007ffd`e02bf000   C:\Windows\system32\KERNELBASE.dll
+ModLoad: 00000000`71fb0000 00000000`7201d000   C:\Program Files\Sandboxie\SbieDll.dll
+ModLoad: 00007ffd`de900000 00007ffd`de9c6000   C:\Windows\system32\hmpalert.dll
+ModLoad: 00007ffd`e03a0000 00007ffd`e03f8000   C:\Windows\system32\WS2_32.dll
+ModLoad: 00007ffd`e2520000 00007ffd`e25c5000   C:\Windows\system32\ADVAPI32.dll
+ModLoad: 00007ffd`e1e70000 00007ffd`e1fe1000   C:\Windows\system32\USER32.dll
+ModLoad: 00007ffd`e0430000 00007ffd`e04d7000   C:\Windows\system32\msvcrt.dll
+ModLoad: 00007ffd`e0390000 00007ffd`e0399000   C:\Windows\system32\NSI.dll
+ModLoad: 00007ffd`e27c0000 00007ffd`e28f7000   C:\Windows\system32\RPCRT4.dll
+ModLoad: 00007ffd`e2750000 00007ffd`e27a7000   C:\Windows\SYSTEM32\sechost.dll
+ModLoad: 00007ffd`e1ff0000 00007ffd`e2134000   C:\Windows\system32\GDI32.dll
+ModLoad: 00007ffd`e2380000 00007ffd`e23b4000   C:\Windows\system32\IMM32.DLL
+ModLoad: 00000000`00b00000 00000000`00c39000   C:\Windows\system32\MSCTF.dll
+ModLoad: 00007ffd`dfcc0000 00007ffd`dfd57000   C:\Windows\SYSTEM32\sxs.dll
+ModLoad: 00007ffd`df440000 00007ffd`df485000   C:\Windows\SYSTEM32\powrprof.dll
+ModLoad: 00007ffd`deeb0000 00007ffd`deec6000   C:\Windows\SYSTEM32\rpcepmap.dll
+ModLoad: 00007ffd`dfd60000 00007ffd`dfd8b000   C:\Windows\SYSTEM32\sspicli.dll
+ModLoad: 00007ffd`dee90000 00007ffd`deea2000   C:\Windows\SYSTEM32\RpcRtRemote.dll
+ModLoad: 00007ffd`deed0000 00007ffd`def8c000   C:\Windows\SYSTEM32\rpcss.dll
+ModLoad: 00007ffd`e07c0000 00007ffd`e0996000   C:\Windows\SYSTEM32\combase.dll
+ModLoad: 00007ffd`e0a50000 00007ffd`e1e5f000   C:\Windows\system32\shell32.dll
+ModLoad: 00007ffd`e24c0000 00007ffd`e2511000   C:\Windows\system32\SHLWAPI.dll
+ModLoad: 00007ffd`de300000 00007ffd`de39f000   C:\Windows\SYSTEM32\SHCORE.dll
+ModLoad: 00007ffd`df720000 00007ffd`df73e000   C:\Windows\SYSTEM32\CRYPTSP.dll
+ModLoad: 00007ffd`df310000 00007ffd`df345000   C:\Windows\system32\rsaenh.dll
+ModLoad: 00007ffd`df960000 00007ffd`df986000   C:\Windows\SYSTEM32\bcrypt.dll
+ModLoad: 00007ffd`dfd90000 00007ffd`dfd9a000   C:\Windows\SYSTEM32\CRYPTBASE.dll
+ModLoad: 00007ffd`dfc60000 00007ffd`dfcc0000   C:\Windows\SYSTEM32\bcryptPrimitives.dll
+ModLoad: 00007ffd`deaa0000 00007ffd`debc1000   C:\Windows\system32\uxtheme.dll
+ModLoad: 00007ffd`ddf70000 00007ffd`ddf90000   C:\Windows\system32\dwmapi.dll
+ModLoad: 00007ffd`db8d0000 00007ffd`dba3f000   C:\Windows\SYSTEM32\PROPSYS.dll
+ModLoad: 00007ffd`e02c0000 00007ffd`e0381000   C:\Windows\system32\OLEAUT32.dll
+ModLoad: 00007ffd`e25d0000 00007ffd`e2748000   C:\Windows\system32\ole32.dll
+(5f4.974): Break instruction exception - code 80000003 (first chance)
+ntdll!DbgBreakPoint:
+00007ffd`e2ad31a0 cc              int     3
+0:007&gt; ~* k 99
+
+   0  Id: 5f4.bf4 Suspend: 1 Teb: 00007ff7`977ee000 Unfrozen
+Child-SP          RetAddr           Call Site
+00000000`006ffb08 00007ffd`e01b124a ntdll!NtDeviceIoControlFile+0xa
+*** ERROR: Module load completed but symbols could not be loaded for C:\Program Files\Sandboxie\SandboxieRpcSs.exe
+00000000`006ffb10 00007ff7`982e1559 KERNELBASE!SleepEx+0xa2
+00000000`006ffbb0 00007ff7`982e33f6 SandboxieRpcSs+0x1559
+00000000`006ffd90 00007ff7`982e4001 SandboxieRpcSs+0x33f6
+00000000`006ffe00 00007ffd`e04e16ad SandboxieRpcSs+0x4001
+00000000`006ffed0 00007ffd`e2a94409 kernel32!BaseThreadInitThunk+0xd
+00000000`006fff00 00000000`00000000 ntdll!RtlUserThreadStart+0x1d
+
+   1  Id: 5f4.810 Suspend: 1 Teb: 00007ff7`977ec000 Unfrozen
+Child-SP          RetAddr           Call Site
+00000000`0252ef98 00007ffd`e01b13ad ntdll!NtDeviceIoControlFile+0xa
+00000000`0252efa0 00007ffd`e04e132f KERNELBASE!WaitForMultipleObjectsEx+0xe1
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for C:\Program Files\Sandboxie\SbieDll.dll - 
+00000000`0252f280 00000000`71fdb120 kernel32!WaitForMultipleObjects+0xf
+00000000`0252f2c0 00000000`71fdc72e SbieDll!SbieDll_IsOpenCOM+0x1330
+00000000`0252f650 00007ffd`e27eb12f SbieDll!SbieDll_StartCOM+0x11fe
+00000000`0252f740 00007ffd`e27eb2de RPCRT4!LRPC_CASSOCIATION::AlpcConnect+0x17f
+00000000`0252f900 00007ffd`e27cff00 RPCRT4!LRPC_CASSOCIATION::Connect+0x177
+00000000`0252f9a0 00007ffd`e27d57aa RPCRT4!LRPC_BASE_BINDING_HANDLE::DriveStateForward+0x3b3
+00000000`0252fa10 00007ffd`e27d5472 RPCRT4!LRPC_FAST_BINDING_HANDLE::Bind+0x3af
+00000000`0252fb20 00007ffd`deed848a RPCRT4!RpcBindingBind+0x4a
+00000000`0252fb50 00007ffd`def15e52 rpcss!CFastBH::CreateFromBindingString+0xfa
+00000000`0252fc20 00007ffd`def15dec rpcss!CFastBH::GetOrCreate+0x32
+00000000`0252fc50 00007ffd`def13166 rpcss!CreateActivationClientBinding+0xcc
+00000000`0252fcf0 00007ffd`def14907 rpcss!ScmServiceMain+0x8a
+00000000`0252fd40 00007ff7`982e1dd3 rpcss!ServiceMain+0x11f
+00000000`0252fda0 00007ffd`e04e16ad SandboxieRpcSs+0x1dd3
+00000000`0252fdd0 00007ffd`e2a94409 kernel32!BaseThreadInitThunk+0xd
+00000000`0252fe00 00000000`00000000 ntdll!RtlUserThreadStart+0x1d
+
+   2  Id: 5f4.dec Suspend: 1 Teb: 00007ff7`977ea000 Unfrozen
+Child-SP          RetAddr           Call Site
+00000000`0262f778 00007ffd`e01b124a ntdll!NtDeviceIoControlFile+0xa
+00000000`0262f780 00007ff7`982e1d0a KERNELBASE!SleepEx+0xa2
+00000000`0262f820 00007ffd`e04e16ad SandboxieRpcSs+0x1d0a
+00000000`0262fa60 00007ffd`e2a94409 kernel32!BaseThreadInitThunk+0xd
+00000000`0262fa90 00000000`00000000 ntdll!RtlUserThreadStart+0x1d
+
+   3  Id: 5f4.e4c Suspend: 1 Teb: 00007ff7`977e8000 Unfrozen
+Child-SP          RetAddr           Call Site
+00000000`0272f718 00007ffd`e1e72055 USER32!NtUserGetMessage+0xa
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for C:\Windows\system32\hmpalert.dll - 
+00000000`0272f720 00007ffd`de918953 USER32!GetMessageW+0x25
+00000000`0272f750 00007ff7`982e1133 hmpalert+0x18953
+00000000`0272f780 00007ffd`e04e16ad SandboxieRpcSs+0x1133
+00000000`0272f870 00007ffd`e2a94409 kernel32!BaseThreadInitThunk+0xd
+00000000`0272f8a0 00000000`00000000 ntdll!RtlUserThreadStart+0x1d
+
+   4  Id: 5f4.e6c Suspend: 1 Teb: 00007ff7`977e6000 Unfrozen
+Child-SP          RetAddr           Call Site
+00000000`0282f888 00007ffd`e2a74ecb ntdll!NtDeviceIoControlFile+0xa
+00000000`0282f890 00007ffd`e04e16ad ntdll!TppWorkerThread+0x6eb
+00000000`0282fc80 00007ffd`e2a94409 kernel32!BaseThreadInitThunk+0xd
+00000000`0282fcb0 00000000`00000000 ntdll!RtlUserThreadStart+0x1d
+
+   5  Id: 5f4.83c Suspend: 1 Teb: 00007ff7`977e4000 Unfrozen
+Child-SP          RetAddr           Call Site
+00000000`0303f7c8 00007ffd`e2a74ecb ntdll!NtDeviceIoControlFile+0xa
+00000000`0303f7d0 00007ffd`e04e16ad ntdll!TppWorkerThread+0x6eb
+00000000`0303fbc0 00007ffd`e2a94409 kernel32!BaseThreadInitThunk+0xd
+00000000`0303fbf0 00000000`00000000 ntdll!RtlUserThreadStart+0x1d
+
+   6  Id: 5f4.c60 Suspend: 1 Teb: 00007ff7`9764e000 Unfrozen
+Child-SP          RetAddr           Call Site
+00000000`0313f4e8 00007ffd`e2a74ecb ntdll!NtDeviceIoControlFile+0xa
+00000000`0313f4f0 00007ffd`e04e16ad ntdll!TppWorkerThread+0x6eb
+00000000`0313f8e0 00007ffd`e2a94409 kernel32!BaseThreadInitThunk+0xd
+00000000`0313f910 00000000`00000000 ntdll!RtlUserThreadStart+0x1d
+
+#  7  Id: 5f4.974 Suspend: 1 Teb: 00007ff7`9764c000 Unfrozen
+Child-SP          RetAddr           Call Site
+00000000`0323f958 00007ffd`e2b01ac4 ntdll!DbgBreakPoint
+00000000`0323f960 00007ffd`e04e16ad ntdll!DbgUiRemoteBreakin+0x34
+00000000`0323f990 00007ffd`e2a94409 kernel32!BaseThreadInitThunk+0xd
+00000000`0323f9c0 00000000`00000000 ntdll!RtlUserThreadStart+0x1d</code></pre></div>
+I have also seen instances where the Chrome window appears but is unresponsive (I have WinDbg output for this as well) and I have seen one instance of Thunderbird failing to execute sandboxed. Would be nice to have HitmanPro.Alert function with sandboxed apps without error. If it's not possible, I'll dump HitmanPro.Alert and reinstall EMET.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Sun Feb 01, 2015 2:03 am</strong></div>
+				<div class="author">by <strong>stonerd</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite>stonerd, have you installed 4.15.11? If not, I think you should.<br>
+<br>
+Bo</div></blockquote>
+
+Yes, sorry for not specifying.<br>
+I used to see the "NTCreateProcess" error, and since 4.15.11, it has changed to the "SBIE2101 Object name not found: OpenProcess (C0000022) 001FFFFF, error " code.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Sun Feb 01, 2015 1:32 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">v4.15.9 + W8.x 64-bit + Chrome 40.x 32-bit<br>
+<br>
+SBIE2SBIE2335 Initialization failed for process coNatHst.exe [33 / 0]<br>
+SBIE2205 Service not implemented:  NtCreateProcessEx (5344)<br>
+327 Error in COM server:  [22 / 5]<br>
+<br>
+SBIE2313 Could not execute Start.exe (5)<br>
+<br>
+SBIE2327 Error in COM server:  [22 / 5]<br>
+SBIE2327 Error in COM server:  [22 / 5]<br>
+SBIE2327 Error in COM server:  [22 / 5]<br>
+SBIE2327 Error in COM server:  [22 / 5]<br>
+<br>
+SBIE2314 Canceling process coNatHst.exe<br>
+SBIE1211 Could not initiate sandboxing for process 4044<br>
+SBIE1211 Could not initiate sandboxing for process 1056<br>
+<br>
+SBIE2335 Initialization failed for process coNatHst.exe [33 / 5]<br>
+<br>
+SBIE2205 Service not implemented:  NtCreateProcessEx (6548)<br>
+SBIE2335 Initialization failed for process coNatHst.exe [33 / 0]<br>
+SBIE2205 Service not implemented:  NtCreateProcessEx (6248)<br>
+<br>
+Has something to do with Norton Toolbar ( <img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"> ) as Toolbar will not show ...  I know forget Toolbars.   FF 35.x Toolbar shows. May not be fully awake but, it shows up.   <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Sun Feb 01, 2015 1:59 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">Hi bjm, are you aware of version 4.15.11? Maybe those will get fixed or make you able to trace / diagnose issues like those.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Sun Feb 01, 2015 2:42 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content"><blockquote><div><cite>Mr.X wrote:</cite>Hi bjm, are you aware of version 4.15.11? Maybe those will get fixed or make you able to trace / diagnose issues like those.</div></blockquote>
+Yeah, just pulled and will try asap<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Sun Feb 01, 2015 4:03 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">v4.15.11 = no change = no clue<br>
+<br>
+SBoxie just objects to Chrome.  Each SBoxie exe seems to prompt a dialog box.  <br>
+<br>
+C:\Program Files\Sandboxie\Start.exe<br>
+C:\Program Files\Sandboxie\SbieSvc.exe<br>
+C:\Program Files\Sandboxie\32\SbieSvc.exe<br>
+C:\Program Files\Sandboxie\SandboxieDcomLaunch.exe<br>
+C:\Program Files\Sandboxie\SandboxieRpcSs.exe<br>
+<br>
+v4.15.11 + W8.x 64-bit + Chrome 40.x 32-bit</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Sat Feb 07, 2015 10:47 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">** v4.15.11 breaks Norton Toolbar Safe Web protection.   Malicious sites are not blocked &amp; Password Manager functions at 50%.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Mon Feb 09, 2015 12:40 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>bjm wrote:</cite>** v4.15.11 breaks Norton Toolbar Safe Web protection.   Malicious sites are not blocked &amp; Password Manager functions at 50%.</div></blockquote>
+Hi bjm, I think this is pretty much expected. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Mon Feb 09, 2015 9:55 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite><blockquote><div><cite>bjm wrote:</cite>** v4.15.11 breaks Norton Toolbar Safe Web protection.   Malicious sites are not blocked &amp; Password Manager functions at 50%.</div></blockquote>
+Hi bjm, I think this is pretty much expected. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+Bo</div></blockquote>
+Yeah, I've been running Shadow Defender more.  I do keep hoping my toys will play with SBoxie.   Hope springs eternal.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Tue Feb 10, 2015 2:27 pm</strong></div>
+				<div class="author">by <strong>kampfhase</strong></div>
+				<div class="content">Hello,<br>
+<br>
+after Windows-Patchday Update, Google Chrome (64bit) can not be started, in the sandbox.<br>
+<br>
+Error message:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2205 Dienst nicht implementiert: LoadedModules [C00000FD]</code></pre></div>
+
+my System<br>
+<br>
+Win 8.1 64 bit<br>
+Google Chrome 40.0.2214.111 64 bit<br>
+Sandboxie 4.15.11 beta<br>
+<br>
+<br>
+regards from<br>
+<br>
+Kampfhasen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Tue Feb 10, 2015 6:51 pm</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Hello,<br>
+<br>
+after Windows-Patchday Update, Google Chrome (64bit) can not be started, in the sandbox...</div></blockquote>
+I also get this...<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Problem signature:
+  Problem Event Name:	APPCRASH
+  Application Name:	chrome.exe
+  Application Version:	40.0.2214.111
+  Application Timestamp:	54d1cfb7
+  Fault Module Name:	ntdll.dll
+  Fault Module Version:	6.3.9600.17630
+  Fault Module Timestamp:	54b0e17a
+  Exception Code:	c0000005
+  Exception Offset:	00000000000367b2
+  OS Version:	6.3.9600.2.0.0.256.48
+  Locale ID:	1033
+  Additional Information 1:	98cf
+  Additional Information 2:	98cf7de29efd6cdc223ddf7fcef95dfe
+  Additional Information 3:	3147
+  Additional Information 4:	3147fa2614dc46995a5457d5050931e3</code></pre></div>
+When I execute IE sandboxed, HitmanPro.Alert 3.0.28 build 148 RC intercepts and blocks it with this info...<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Mitigation   ROP
+
+Platform     6.3.9600/x64 06_3c
+PID          2100
+Application  C:\Program Files (x86)\Internet Explorer\iexplore.exe
+Description  Internet Explorer 11
+
+Branch Trace                      Opcode  To                              
+-------------------------------- -------- --------------------------------
+strspn +0x1e7d                        RET 0x008B1E46 iexplore.exe         
+0x77C8AABD ntdll.dll                                                      
+
+GetStartupInfoW +0x86                 RET 0x008B1F5E iexplore.exe         
+0x778CF8BC KernelBase.dll                                                 
+
+0x008B1EE5 iexplore.exe               RET 0x008B1F4C iexplore.exe         
+
+0x008B24FC iexplore.exe               RET 0x008B24B5 iexplore.exe         
+
+0x73561076 SbieDll.dll              * RET 0x008B24B0 iexplore.exe         
+            e80a000000               CALL         0x8b24bf
+            e986faffff               JMP          0x8b1f40
+                                 ( 7DAA1D1C7FEE675)
+
+
+SbieDll_RegisterDllCallback +0x9fb      RET 0x73561065 SbieDll.dll          
+0x7358DD9B SbieDll.dll                                                    
+
+SbieDll_Hook +0x23e                   RET SbieDll_RegisterDllCallback +0x9fa
+0x735689DE SbieDll.dll                    0x7358DD9A SbieDll.dll          
+
+SbieDll_StartCOM +0x4b                RET SbieDll_Hook +0x23e             
+0x73583E9B SbieDll.dll                    0x735689DE SbieDll.dll          
+
+SbieDll_IsOpenCOM +0x127e             RET SbieDll_StartCOM +0x48          
+0x73583D2E SbieDll.dll                    0x73583E98 SbieDll.dll          
+
+InterlockedExchangeAdd +0x1706        RET SbieDll_IsOpenCOM +0x1276       
+0x77910F0E KernelBase.dll                 0x73583D26 SbieDll.dll          
+
+SbieDll_GetHandlePath +0x1f46         RET InterlockedExchangeAdd +0x16fb  
+0x73576686 SbieDll.dll                    0x77910F03 KernelBase.dll       
+
+SbieDll_Hook +0x5047                  RET SbieDll_GetHandlePath +0x1f36   
+0x7356D7E7 SbieDll.dll                    0x73576676 SbieDll.dll          
+
+Stack Trace
+#  Address  Module                   Location
+-- -------- ------------------------ ----------------------------------------
+
+1  008B23E1 iexplore.exe            
+            85c0                     TEST         EAX, EAX
+            741c                     JZ           0x8b2401
+            50                       PUSH         EAX
+            e820000000               CALL         0x8b240b
+            85c0                     TEST         EAX, EAX
+            7412                     JZ           0x8b2401
+            0fb7485c                 MOVZX        ECX, WORD [EAX+0x5c]
+            6a02                     PUSH         0x2
+            58                       POP          EAX
+            663bc8                   CMP          CX, AX
+            0f8554080000             JNZ          0x8b2c53
+            5d                       POP          EBP
+            c3                       RET         
+
+2  008B2366 iexplore.exe            
+3  008B1FB9 iexplore.exe            
+4  7742919F kernel32.dll             BaseThreadInitThunk +0xe
+5  77CBB5AF ntdll.dll                RtlInitializeExceptionChain +0x8f
+6  77CBB57A ntdll.dll                RtlInitializeExceptionChain +0x5a
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Tue Feb 10, 2015 8:42 pm</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content">Uninstalling <a href="https://technet.microsoft.com/library/security/ms15-015" class="postlink">Vulnerability in Microsoft Windows Could Allow Elevation of Privilege (KB3031432)</a> removes the errors for me.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Wed Feb 11, 2015 4:12 am</strong></div>
+				<div class="author">by <strong>kampfhase</strong></div>
+				<div class="content">Hello nick s,<br>
+<br>
+thanks for the information.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+Windows Patchday Desaster Number 4....... .<br>
+<br>
+<br>
+regards from<br>
+<br>
+Kampfhasen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Wed Feb 11, 2015 12:41 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Yes indeed KB3031432 has broken Chrome-64 in Sbie.  Looks like my afternoon has been planned.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.11)</h3>
+				<div class="date">Posted: <strong>Wed Feb 11, 2015 12:48 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Yes indeed KB3031432 has broken Chrome-64 in Sbie.  Looks like my afternoon has been planned.</div></blockquote>
+ <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing">  Seems with M$ we all lose. We're going backwards :facepalm:</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>12</strong> of <strong>14</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=49&t=19837&start=165&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:57:18 GMT -->
+</html>

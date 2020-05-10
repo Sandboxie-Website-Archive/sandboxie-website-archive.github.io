@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24685&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:03:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Environment variables [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Environment variables [SOLVED]</h2>
+		<p><a href="viewtopic5f855f85.html?f=17&amp;t=24685">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24685</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Environment variables [SOLVED]</h3>
+				<div class="date">Posted: <strong>Mon Jul 24, 2017 8:36 am</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content">I want to specify some paths and was wondering why <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>%Desktop%</code></pre></div> works but <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>%Downloads%</code></pre></div> shows this error:<br>
+<br>
+<img src="../s4.postimg.org/kswbqfxpp/2017-07-24_14_32_38-_Messages_from_Sandboxie.png" class="postimage" alt="Image"><br>
+<br>
+Where can I find a full list of the environment variables?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Environment variables</h3>
+				<div class="date">Posted: <strong>Mon Jul 24, 2017 10:20 am</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content"><a href="https://ss64.com/nt/syntax-variables.html" class="postlink">https://ss64.com/nt/syntax-variables.html</a> is a good one IMO</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Environment variables</h3>
+				<div class="date">Posted: <strong>Mon Jul 24, 2017 12:39 pm</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">Sandboxie uses its own Expandable Variables:<br>
+<a href="../indexfdae.html?ExpandableVariables" class="postlink">https://www.sandboxie.com/index.php?ExpandableVariables</a><br>
+<a href="../index59ea.html?ShellFolders" class="postlink">https://www.sandboxie.com/index.php?ShellFolders</a><br>
+(But you can use the Windows Environment Variables also.)<br>
+<br>
+<strong>%Downloads%</strong> was never defined but <strong>%{374DE290-123F-4565-9164-39C4925E467B}%</strong> should work.<br>
+(Check the registry keys mentioned in the second link for an overview.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Environment variables</h3>
+				<div class="date">Posted: <strong>Mon Jul 24, 2017 2:46 pm</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist0a71.html?mode=viewprofile&amp;u=24269">APMichael</a> wrote: <a href="viewtopic92ce92ce.html?p=129342#p129342" data-post-id="129342" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jul 24, 2017 12:39 pm</div></cite>
+Sandboxie uses its own Expandable Variables:<br>
+<a href="../indexfdae.html?ExpandableVariables" class="postlink">https://www.sandboxie.com/index.php?ExpandableVariables</a><br>
+<a href="../index59ea.html?ShellFolders" class="postlink">https://www.sandboxie.com/index.php?ShellFolders</a><br>
+(But you can use the Windows Environment Variables also.)<br>
+<br>
+<strong>%Downloads%</strong> was never defined but <strong>%{374DE290-123F-4565-9164-39C4925E467B}%</strong> should work.<br>
+(Check the registry keys mentioned in the second link for an overview.)
+</div></blockquote>
+
+Yes, I can see them but is it possible to specify more user friendly names?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Environment variables</h3>
+				<div class="date">Posted: <strong>Mon Jul 24, 2017 3:47 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">If you want to specify an OpenFilePath you should open Sandboxie Control's window.<br>
+Right-click the sandbox name and then<br>
+Sandbox Settings &gt; Resource Access &gt; File Access &gt; Direct Access<br>
+If it will apply only to one program (safest choice), click "Add Program" and select that program.<br>
+Otherwise, select "Add" and browse to the folder (such as your Downloads folder)<br>
+OK your way out.<br>
+<br>
+The setting for the Downloads folder will still show as<br>
+%{374DE290-123F-4565-9164-39C4925E467B}%<br>
+if you look at the Configure &gt; Edit Configuration window, but otherwise the GUI will show it as "C:\Users\(username)\Downloads" in the Sandbox Settings windows.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Environment variables</h3>
+				<div class="date">Posted: <strong>Tue Jul 25, 2017 3:41 am</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content">Thanks for the information!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Environment variables</h3>
+				<div class="date">Posted: <strong>Tue Jul 25, 2017 5:45 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist0d19.html?mode=viewprofile&amp;u=33295">Creave</a> wrote: <a href="viewtopice187e187.html?p=129352#p129352" data-post-id="129352" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jul 24, 2017 2:46 pm</div></cite>
+Yes, I can see them but is it possible to specify more user friendly names?
+</div></blockquote>
+
+Yes, this should be possible. You can add to Sandboxie.ini, for example:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+Ovr.Downloads=%{374DE290-123F-4565-9164-39C4925E467B}%
+</code></pre></div>
+(Check the section "Overriding Variables" from the first link.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Environment variables</h3>
+				<div class="date">Posted: <strong>Tue Jul 25, 2017 8:27 am</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content">Are variables like %{374DE290-123F-4565-9164-39C4925E467B}% on different systems still valid?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Environment variables</h3>
+				<div class="date">Posted: <strong>Tue Jul 25, 2017 8:33 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">Yes, because Microsoft have defined those IDs and names.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Environment variables</h3>
+				<div class="date">Posted: <strong>Tue Jul 25, 2017 8:48 am</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content">Thank you! I appreciate the help!  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Environment variables</h3>
+				<div class="date">Posted: <strong>Tue Jul 25, 2017 9:29 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">I'm glad I was able to help. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24685&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:03:56 GMT -->
+</html>

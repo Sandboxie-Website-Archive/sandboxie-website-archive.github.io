@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15141&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.06] Sandboxie 4.01.04, Chrome 26.0.1410.43, and EditPlus</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.06] Sandboxie 4.01.04, Chrome 26.0.1410.43, and EditPlus</h2>
+		<p><a href="viewtopic475d475d.html?f=38&amp;t=15141">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15141</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.06] Sandboxie 4.01.04, Chrome 26.0.1410.43, and EditPlus</h3>
+				<div class="date">Posted: <strong>Wed Apr 03, 2013 2:04 am</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content">An interesting conflict with an unsandboxed application...<br>
+<br>
+Windows 7 64-bit and 32-bit<br>
+Sandboxie 4.01.04<br>
+Chrome 26.0.1410.43 stable forced<br>
+EditPlus Text Editor 3.51 unsandboxed (<a href="http://www.editplus.com/" class="postlink">http://www.editplus.com/</a>):<br>
+<br>
+Steps to reproduce:<br>
+<br>
+1. Install EditPlus and set it as the default handler of .txt files (which requires running EditPlus with admin rights).<br>
+2. Start Chrome sandboxed.<br>
+3. Navigate to any text file and double-click to open.<br>
+<br>
+I am seeing a 30-second hang on 7 64-bit (20 seconds on 7 32-bit) before EditPlus opens the .txt file on the screen. If I start Chrome unsandboxed, no hang.<br>
+<br>
+During the hang, the EditPlus process is not listed in Process Explorer until the .txt file is on the screen. If I close the sandboxed Chrome during the hang, EditPlus opens the file immediately.<br>
+<br>
+Other text editors (Notepad++, UltraEdit) are unaffected. No hang with Sandboxie 3.76. No hang with previous Chrome stable versions and Sandboxie 4.01.04. Other than Sandboxie, EMET (3.0) is the only other security app I use.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 03, 2013 7:03 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I imagine that has something to do with DDE.  I'll check it out.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 17, 2013 3:28 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">How do I get Chrome try to open the .TXT file in an external viewer?<br>
+<br>
+Also, I did not see how to ask EditPlus to handle .TXT files from within EditPlus, so I used the Default Programs feature in Windows, but I guess either approach should have the same result.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 17, 2013 4:17 pm</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>How do I get Chrome try to open the .TXT file in an external viewer?</div></blockquote>
+I should have been more clear with Step 3. Navigate to and open a .TXT file using an unsandboxed windows explorer. That's what is weird about the problem. It's an operation that's external to the sandboxed Chrome.<br>
+
+<blockquote><div><cite>tzuk wrote:</cite>Also, I did not see how to ask EditPlus to handle .TXT files from within EditPlus, so I used the Default Programs feature in Windows, but I guess either approach should have the same result.</div></blockquote>
+You need to tick off "Associate in Explorer" and then click Apply which requires admin rights...<br>
+<br>
+<img src="../img62.imageshack.us/img62/2450/editplussettings01.png" class="postimage" alt="Image"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 19, 2013 4:49 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks.  This was indeed related to DDE, as EditPlus registers itself as a DDE server for .TXT files.  Should be fixed in the next beta.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 22, 2013 6:42 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Please check version 4.01.06.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Apr 23, 2013 2:43 am</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Please check version 4.01.06.</div></blockquote>
+Fixed. Thank you!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15141&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:41 GMT -->
+</html>

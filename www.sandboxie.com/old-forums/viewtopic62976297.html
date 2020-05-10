@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16100&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Win class performance, cause (NEW), and a test for all - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Win class performance, cause (NEW), and a test for all</h2>
+		<p><a href="viewtopicba5aba5a.html?f=40&amp;t=16100">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=16100</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>6</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 02, 2013 11:22 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Pete, anyone, it's really simple. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> The "browser window" test, of course, but forget that now that the "GUI Bench" <em>program</em> is available -- nothing but the core affected functions, no varying browser config, etc. Just open the .zip in your sandbox and run it!<br>
+<br>
+Leaving the default number of runs, the CreateWindow part runs "instantly" UNsandboxed. It should take at least 1 second, probably even on the fastest systems (??), in a sandbox with default settings. If one happens to have some window class settings that degrade performance (for whatever reason?!), and/or MORE windows and stuff open, it will get worse, etc... That's for just 1,000 CreateWindow calls, so it adds 1ms PER call (usually measured in <em>millionths</em>!). Of course it takes <a href="../voidmain.realplain.com/sbie_winbench/GUIBench.png" class="postlink">10 seconds</a>, give or take, on my system with defaults, so that adds 0.01s PER call! (1 million in 1.3s */UNsandboxed)<br>
+<br>
+I'd be willing to bet anyone's Sandboxie license that they'll see the same results. <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"> It's definitely a Sandboxie issue. I'd be curious to see anyone's results prove me wrong. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+To get a taste of how close you could be to crippling performance (more windows, "bad" OpenWinClass), just add to your settings:<br>
+<br>
+ProcessGroup=&lt;Anything&gt;,*.exe<br>
+OpenWinClass=&lt;Anything&gt;,*<br>
+<br>
+Not to discount tzuk or anyone else (not "noticing," etc.), but now we all have an example program to highlight the problem. I've already said before that depending on how much other "junk" someone is running on their system slowing things down already, of course the overall relative difference can be less. I run NOTHING to slow stuff down. Heck, it's like even Sandboxie 3.76 chokes browser opening, etc. (but it's "just tolerable" and understandable). I'm used to almost INSTANT everything without sandboxing, so I'm just hoping to help get as close back to that experience as possible. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+<br>
+<br>
+<br>
+tzuk, I think this also nailed why toggling Work Offline in IE 6 freezes the browser for a bit (that I've been mentioning for a while). Toggling Work Offline does <strong>30</strong> CreateWindow calls (almost as many as opening a new IE window: 30-something). Since Sandboxie is adding ~0.01 per, that's 0.3s which is <em>just about</em> what I'm feeling. Obviously, it gets worse with more windows open. Using * (prefix) will freeze IE for a FEW SECONDS. Again, just verifying the pattern...<br>
+<br>
+Firefox? Not as many CreateWindow calls, which explains why I never felt too much with it. Is it using resource-based dialogs or something?? Not sure how they make their window stuff with fewer CreateWindows (but I don't know that much about this stuff!), but as I said, I couldn't cause a slowdown with my resource-based <em>dialog</em> anyway.<br>
+<br>
+The CreateWindow slowdown would also explain the delay I've always felt (default settings) with Common Open/Save dialogs, OE's Create Mail, etc.<br>
+<br>
+API Monitor is REALLY slow like I said (didn't investigate at all) -- maybe it's more like those other super-slow programs others have reported?<br>
+<br>
+Finally, another slow one is PowerArchiver (2011)... Launching? 100-something CreateWindow calls. Options &gt; Configuration window? 200+ calls! Slow!<br>
+<br>
+<br>
+Everything fits the explanation. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Why is CreateWindow so slow? (I can think of a few things that happen, but don't know what's taking so much extra time.) What is <strong>Sandboxie</strong> doing with all the CPU? Why do unrelated Open classes affect it?<br>
+<br>
+<br>
+BTW, I noticed in 3.76 that CreateWindow also gets slower as more windows are opened (it just starts out better). I probably did notice that a bit last fall. And instead of SbieSvc, running GUI Bench causes some CPU usage in sandboxed IE process!? <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> Again, doesn't seem right (but nothing else affects it). Even 3.76's best CreateWindow case (125x slower) seems like too much!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 02, 2013 10:14 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">Your missing my point.  I haven't seen anything worth bothering to test.  Maybe if I put my system under a horrendous load I might notice something, but since I don't it just isn't worth my time.  Period.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Aug 03, 2013 12:12 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">What load...?! If by "horrendous load," you mean otherwise-idle CPU and a dozen windows open (not all sandboxed)? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+The minimum anyone should see is what I see on 2 freshly-booted, nothing else installed, nothing else running systems.<br>
+<br>
+Any regular system will have window creation with at least 1,000x more overhead. Period. And it doesn't take anything spectacular/"horrendous" for that to increase to 10,000x (as my main system shows). <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+<br>
+Please, somebody report/show fast window creation results... Can't happen!<br>
+<br>
+The point is, now tzuk has the real cause (finally, AFAICT), and a simple function/"program" to look at.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Aug 03, 2013 3:51 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>What load...?! <br>
+<br>
+<br>
+<br>
+Please, somebody report/show fast window creation results... Can't happen!<br>
+<br>
+The point is, now tzuk has the real cause (finally, AFAICT), and a simple function/"program" to look at.</div></blockquote>
+
+Yes, but you are missing one vital point.  My pc configurations have stayed constant with the exception of updating 3 security programs including SBIE.  Going back to as far as 3.6 thru 4.05.02, I have not seen any change in system performance.  I do shut my system down every night.<br>
+<br>
+So for myself, and I suspect a lot others here, there are probably a lot of others here who frankly could care less about this.  What I care about is that when I get a conflict with a piece of software I, and others use, that Tzuk finds a fix.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 04, 2013 3:38 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">DR_LaRRY_PEpPeR you keep insisting that I have to fix this problem, and I keep explaining why I don't think it is good use of my time.<br>
+<br>
+Here it is once again:  While benchmark numbers might show that version 4 is a bit slower, I am not seeing a practical difference in performance.  Finally the version 4 code is reaching a point where it is working relatively well, I am not going to risk that by introducing changes that are designed to shave off a few milliseconds.<br>
+<br>
+If you want me to fix the problem, please identify the component on your system that is making performance unbearable for you.  If there is no such component and you are pointing out a difference of a few milliseconds, then as I explained in the paragraph above, I am not going to fix it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 04, 2013 6:00 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Can you please stop referring to "a few milliseconds" so often? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I would not ever notice that (not to mention it's well within a margin of fluctuation, etc.), much less ask you to spend time "improving" something that hasn't really been degraded. 3.76 doubled IE startup (<strong>200ms</strong>) -- again, understandable and acceptable. I get how things work. But this is a real problem. As I said, with default settings and my usual windows open, <strong>Sandboxie</strong> is adding 0.01s PER CreateWindow call -- how could that possibly be a "few milliseconds??"<br>
+<br>
+(Also, I wouldn't say "insisting," I've just always been trying to report stuff to the best of my ability (very well, I think), to help, or help you (asking?), make Sandboxie as BEST as can be, in every way, now and forever. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">)<br>
+<br>
+Have you ran the GUI Bench program now to see how it runs? Can you share your results, and observe how HORRENDOUSLY (good word Pete <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">) different OpenWinClass values affect it, strangely?<br>
+<br>
+<strong>Simple request:</strong> Please optimize GUI Bench. It's running really, really, really slow! Or will you find something wrong with my code? <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"> Granted, I hardly know what I'm doing, but not really anything to mess up there!<br>
+<br>
+Like I said, I wasn't mentioning this stuff for a bit, because there was nothing new to say, and living with it... Then the point of this topic was for the "concrete specifics," that I thought I found in the first post, right? And it turns out, I was actually right about those "problem classes." For whatever reason, they ARE slowing down unrelated CreateWindow calls big time. Like it or not, there's GOT to be something weird/wrong going on there, no? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Again, I understand if you have other "real" things to work on sooner, etc., but just to take a look to have some idea of what's happening and optimize it in the next months or so would be GREAT. It's just disappointing while it's operating this way, when it SEEMS if a few parts would be optimized it could be running AMAZING. <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> BTW, I still can't figure out exactly WHY PerformanceTest's 2D Window Interface benchmark runs BETTER in Sandboxie 4 than UNsandboxed/3.76 -- really puzzling!<br>
+<br>
+But yeah, I'm optimistic... I don't think there's a lot to risk or drastically change operation if there's just an inefficient way of doing SOMETHING right now (not a big deal to optimize, better algorithm, etc.). Just a faster way to run the same logic/functionality...?<br>
+<br>
+I guess there's no code/code overview/pseudo-code to share, or anything where I could help with any optimization? I just can't see, what in the world is going on with CreateWindow, that doesn't seem to happen with resource-based dialogs, that's making it 1,000-100,000x or more slower? I mean, just nothing. What lookups, lowercasing, matching, searching, etc. operations could take so long? I SURE you can find some explanation now that we know which function to check. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> If you've never checked anything, maybe just a simple thing you overlooked...? *shrug* It would be interesting to hear what the deal is with CreateWindow.<br>
+<br>
+<br>
+I've truly done everything now (as a n00b wannabe Win coder <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz">) to get you precise details of the issue(s). I wish you could've checked function calls with IE, for example, months ago and spotted the slowdown sooner... I think (and hope for you/us) that it would take care of the other performance problems, more severe than mine, that others reported. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+You keep insisting that there's a "component" on my systemS, and I keep explaining that there's not. If you insist, fine, but can you please help me identify this magical mystery thing when nothing has been installed or changed on 2 systems? I don't like that explanation/excuse, and don't like when anyone/companies/support tries to blame my stuff. With everything, it seems like all I'm ever doing is finding bugs in stuff (one reason I avoid software as much as possible), and/or fixing other people's code/stuff... <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+<br>
+Please see what happens with GUI Bench on your system(s), and hopefully you see what I or anyone will see with the SbieSvc process(es).<br>
+<br>
+I am seeing <strong>cores * 2</strong> threads running in the main SbieSvc with equal CPU usage and context switches... That seems odd, what's going on there? Are those your threads or an indirect Windows thing? (Starting in kernel32.dll, but I don't understand much thread stuff...) But why multiple running threads? I don't see how anything could be parallelized from the CreateWindow call?<br>
+<br>
+<br>
+I was hoping for some good news after isolating the cause, so I'm optimistic that we can get CreateWindow flying. <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"> <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 04, 2013 6:49 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I say insist because it seems you seem to be spending an awful lot of time on something that I consider a non-problem.<br>
+<br>
+Maybe you have some stuff running in the sandbox that is trying to install hooks on CreateWindow and other windowing operations, via the SetWindowsHookEx API.  In version 3.76 the hook acts in the normal way and runs in the context of the process where the interesting event occurs.  In version 4 the hook runs in the context of the process that installed the hook.  Such a context switch is relatively expensive and perhaps that plays a part in the slowdown you perceive.<br>
+<br>
+(Note that if the hook is installed by a process outside the sandbox then the above does not apply.)<br>
+<br>
+I am suggesting this because I remain of the opinion that if you see a noticeable performance impact then it must be caused by something in your system, and I would be happy to take a look at it once we identify what it is.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 04, 2013 7:30 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Don't worry, I'm not spending "too much" time on this (of course I'd like to have not spent any, but...). I had never made a functional GUI program, so I learned a bit (basics!) creating the GUI Bench. That's fine, good actually, since I needed to learn some things for another functional project I'm going to do! <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"> (I had been putting it off. <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed">) So no biggie. But yeah, I get it. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+You know I posted a new <a href="../voidmain.realplain.com/sbie_winbench/GUIBench.png" class="postlink">GUI Bench</a> <a href="http://voidmain.realplain.com/sbie_winbench/GUIBench.zip" class="postlink">PROGRAM</a>, right? I'm not talking about the browser window test thing. Will you run it? If you can see the differences I posted, then we don't have to talk about my specific systems. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+No, nothing hooking inside the sandbox -- just standard browsers/OE running. GUI Bench only thing running sandboxed for the results I posted.<br>
+<br>
+On the main system, I have AutoSizer and 4t Tray Minimizer (bleh) outside the sandbox. Of course I expect them to have some impact on stuff. Stopping them makes a SMALL difference both inside and outside a sandbox -- ~same relative difference, therefore same relative sandbox impact all things being equal. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+No hooking stuff installed on the other systems. I think if I open 10-12 IE windows on clean XP laptop, CreateWindow will slow down almost like main system.<br>
+<br>
+<br>
+Besides: 1) Hooks wouldn't explain why e.g. OpenWinClass=Tooltips_class32 makes CreateWindow like 3x slower. 2) Aren't dialog boxes also affected by hooks? (I have no idea.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 04, 2013 8:11 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">@Tzuk<br>
+<br>
+I agree with you a thousand percent.<br>
+<br>
+@Dr_LaRRY PepPer<br>
+<br>
+So you posted a nbew GUI Bench Program.   But what you don't want to seem to understand is by no participation here, most people find that Sandboxie is having no adverse impact on them.  Ergo re your program, they really just don't care.<br>
+<br>
+Lets end this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 04, 2013 9:06 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">No, why end this now? I just pinpointed the cause! I reported it months ago, nothing was really ever looked into, so I figured it out myself, finally, with just a little effort. If you're not a developer ("agreeing," when you don't even understand what we're talking about?), have some super fast new computer (2 are 5 years old, doubt I'd see much difference on a new one; maybe Sandboxie, not in general), or are running so much other "crap" software (remember, I'm NOT, but am accused of it!) that you don't notice any difference, fine, but I'm not sure why you're objecting.<br>
+<br>
+Again, if you agree with tzuk, post your <strong>fast</strong> GUI Bench result. Nobody has shown that either... I'm just waiting to hear tzuk's results. (His couple browser results already show the same pattern.)<br>
+<br>
+Why not? I know you said it's not worth your time, yet you're posting here? Take 30 seconds and run the program! If it's fast, you and tzuk are right. If it's not, I'm right. Are you then going to try to tell me that my programs are somehow calling CreateWindow "too much?" As if they're not normal, regular programs? No, it's very simple, CreateWindow is slowed down by X amount, and that amount adds up when programs are operating normally.<br>
+<br>
+When X is 0.01s and a program calls CreateWindow 200 times, it's delayed by 2 seconds! What's so hard to understand about that?<br>
+<br>
+Pete, are you telling me OpenWinClass of * (prefix) is something that we aren't supposed to use? I don't [use it], but you're saying it's an illegitimate setting? Have you tried these settings and felt "horrendous load?"<br>
+<br>
+ProcessGroup=&lt;Anything&gt;,*.exe<br>
+OpenWinClass=&lt;Anything&gt;,*<br>
+<br>
+PowerArchiver (2011; 2012 prob same) takes <strong>25 seconds</strong> to launch! <strong>50 seconds</strong> to bring up Configuration window! 100-ish vs 200+ CreateWindow calls: Duh! Notice the correlation? DO NOT tell me I'm wrong. Do you get it? Do you know what over <strong>120,000x</strong> slower means...? <img class="smilies" src="images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes"><br>
+<br>
+<br>
+Sandboxie's settings/processing is WRONG, period! Nothing else can explain why adding OpenWinClass=Tooltips_class32 makes it slower for NO reason, except something very inefficient/wrong.<br>
+<br>
+I've only ever posted correct information as a "blind outsider." Frankly, it seems like tzuk doesn't even know what's affecting what, since everything as it's been explaining to me before is WRONG, period.<br>
+<br>
+<br>
+We all just want Sandboxie to be as best as can be, right? Who knows, maybe in the future, you would somehow be affected by this (have you seen other posts? some were deleted!).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 04, 2013 9:25 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I just tried PowerArchiver, it comes up in about three seconds, in or out of sandbox.  Configuration window seems to open slower than outside the sandbox -- I'll give you that -- about 2-3 seconds in the sandbox, about 1 out of the sandbox.<br>
+<br>
+Now, I can certainly understand making a big deal that things are running at 25 and 50 seconds, but that's just not the experience for me.  You keep asking me to spend time to fix things that are running at most one second slower for me, and you think that is going to fix your 50 second problem?  Not likely.  It has to be something else that is unique to your system (all three of them even).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 04, 2013 10:00 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">25-50 seconds is with * (prefix), I hope you realize that. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Example of the worst case. And you can't explain why that's SO slow? (10x or more than defaults.)<br>
+<br>
+Your delay in the sandbox (Configuration) should be all caused by CreateWindow. You can see that, as I did, with e.g. API Monitor, which itself is HORRIBLY slow sandboxed with default settings even, as I said.<br>
+<br>
+Why are you running PowerArchiver (it was an extreme example for Pete) instead of GUI Bench, which will show you the difference with CreateWindow?!<br>
+<br>
+It seems like you just keep avoiding this! Why? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I've been waiting to see what you report with THAT since I posted it. Otherwise with other program stuff I explain, it's just excuses. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+I thought you'd be satisfied that I'm showing you exactly what to look at? After all the months just wondering, I finally found it, and...<br>
+<br>
+<br>
+1) Is it not simple enough to run GUI Bench and note the time (to yourself or here)?<br>
+<br>
+2) Add completely unrelated OpenWinClass settings ("problem classes," $:explorer.exe, whatever), up to * (prefix), and note how much slower it gets.<br>
+<br>
+<br>
+Again, regarding 2, you're going to come back here and try to tell me it's something on my systems? <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"> That is simply not possible. It's ONLY Sandboxie stuff that changes. And I'm telling you that magnified slowness is just a result of whatever else is going on with default settings...<br>
+<br>
+*sigh* <strong>Will you PLEASE run the GUI Bench?</strong> *I* saw the results with a quick CLI test, and made the GUI so it'd be dead simple for anyone else to check (plus I needed a window handle for the first window <em>access</em> test).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 04, 2013 11:39 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I am running PowerArchiver because it is a real world use case.  With OpenWinClass=*tooltip* I am still seeing the same times, that is around 3 seconds for start up and for configuration window.<br>
+<br>
+* * *<br>
+<br>
+As for your secondary benchmark I am not sure you fully understand the concept of the GUI proxy process.  The idea is that programs in the sandbox can only directly access handles for window objects in the same sandbox.  For anything else it has to go through the GUI proxy process.  That is usually not a big deal because most programs do not spend all their time looking at windows handles that don't belong to them.<br>
+<br>
+So then you craft a benchmark that looks at handles not in the sandbox (invalid handle in your case), and then you say - look, it's slow!  Of course it's slow.  But in practical terms it doesn't matter; and there is no guarantee that it can be improved much; and there is little incentive for me to try to make it better when it hardly matters in the big picture.<br>
+<br>
+* * *<br>
+<br>
+As for CreateWindow, I am testing a change that your GUIBench says makes a difference from 40 seconds (for the 10^4 calls case) to 10 seconds.  Hopefully that will do.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 04, 2013 12:05 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>As for your secondary benchmark I am not sure you fully understand the concept of the GUI proxy process.  The idea is that programs in the sandbox can only directly access handles for window objects in the same sandbox.</div></blockquote>
+
+Yes, I do understand. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> (Nothing else to say about this right now...)<br>
+
+<blockquote class="uncited"><div>For anything else it has to go through the GUI proxy process.  That is usually not a big deal because most programs do not spend all their time looking at windows handles that don't belong to them.<br>
+<br>
+So then you craft a benchmark that looks at handles not in the sandbox (invalid handle in your case), and then you say - look, it's slow!  Of course it's slow.  But in practical terms it doesn't matter; and there is no guarantee that it can be improved much; and there is little incentive for me to try to make it better when it hardly matters in the big picture.</div></blockquote>
+
+Craft? Come on. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I realize exactly what's going on (I just thought it seemed a little too slow, anyway).<br>
+<br>
+As I completely explained <a href="../phpbb/viewtopiccdc9.php?p=92419#92419" class="postlink">in my first post</a> (seems you never saw), that "invalid" benchmark I "crafted" was the VERY first thing I came up with when I started trying SOME sort of function (with an Explorer handle)... And you make it sound like I picked it to make Sandboxie look bad... <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+I said, before I was going to post, I realized that test did NOT make the difference I thought, and had to find the real cause -- CreateWindow later. I simply left that first "access" test there because it already was.<br>
+<br>
+It's just amazing how I explain every detail, it's not even seen (seemingly), and then get complaints about leaving an additional test in! Did I ever mention the "access" benchmark in these later posts? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+
+<blockquote class="uncited"><div>As for CreateWindow, I am testing a change that your GUIBench says makes a difference from 40 seconds (for the 10^4 calls case) to 10 seconds.  Hopefully that will do.</div></blockquote>
+
+Well... that was quick! <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"> Can't believe you could make a change that fast. <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"> (Assuming you just recently ran.) Curious about that, of course...<br>
+<br>
+It would be nice to get it down to around <strong>100x</strong> slower (should be OK speed, and leaves a lot of extra time to do what it needs?). 4x improvement doesn't make that, but I'm optimistic like I said. <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 04, 2013 2:30 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Alright, I withdraw my objections to your invalid handle test, and I apologize.<br>
+<br>
+About CreateWindow, very little code there was candidate for being a time sink in the first place.<br>
+One thing was going through the SbieSvc GUI process, for window handles in the sandbox, so I changed that now.<br>
+Hopefully that change goes well without any surprise problems.<br>
+<br>
+Here, you can try the revised DLL for version 4.05.03.  32-bit only.<br>
+<a href="../SbieDll.dll" class="postlink">http://www.sandboxie.com/SbieDll.dll</a></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>6</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16100&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:00 GMT -->
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=39&t=15766&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:42:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.01] Chrome Will Not Close With SB 4.02 and EMET 4 Win8 x64</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.01] Chrome Will Not Close With SB 4.02 and EMET 4 Win8 x64</h2>
+		<p><a href="viewtopicd3d1d3d1.html?f=39&amp;t=15766">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=39&amp;t=15766</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.01] Chrome Will Not Close With SB 4.02 and EMET 4 Win8 x64</h3>
+				<div class="date">Posted: <strong>Wed Jun 19, 2013 10:19 am</strong></div>
+				<div class="author">by <strong>hgf321798</strong></div>
+				<div class="content">When closing Chrome while running in a sandbox under EMET 4 it appears to exit, but  1 or 2 chrome.exe processes remain running. So clicking the X and then opening Chrome again results in many duplicate chrome.exe processes running in the sandbox. I can close them in task manager or in the Sandboxie Control window.<br>
+<br>
+The problem does not occur under EMET 4 when chrome is run outside a sandbox. Removing chrome.exe from the EMET 4 list works, but even just adding chrome to the list and disabling all mitigations results in the problem.<br>
+<br>
+Tried in multiple sandboxes with different settings (forced programs/folders, drop rights, etc.) with the same results. Tried deleting Chrome AppData, and running without extensions.<br>
+<br>
+I've had a few other programs occasionally stay open after closing (firefox,7zip, few other random programs), but nothing else that I can reliably reproduce like Chrome.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome Will Not Close With SB 4.02 and EMET 4 Win8 x64</h3>
+				<div class="date">Posted: <strong>Wed Jun 19, 2013 1:13 pm</strong></div>
+				<div class="author">by <strong>SLE</strong></div>
+				<div class="content">Can confirm the same behaviour (even after diabling all mitigations) for all other programs (firefox, sandboxie, mediemonkey) running sandboxed and under EMET v4 protection. <br>
+Seems to happen only on Win8x64 (couldn' reproduce it with Win7x86) and happens only with EMETv4 final (with EMETv4 Preview it was not there).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Is EMET 4 Compatable with Sandboxie 3.76 ?</h3>
+				<div class="date">Posted: <strong>Wed Jun 19, 2013 8:52 pm</strong></div>
+				<div class="author">by <strong>glennh</strong></div>
+				<div class="content">Anyone tried Microsofts EMET 4 just recently released with Sandboxie 3.76 and can confirm it works okay?<br>
+<br>
+I am running windows 7 64 bit version and would be interested to know before I upgrade EMET</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jun 20, 2013 8:58 pm</strong></div>
+				<div class="author">by <strong>Trespasser</strong></div>
+				<div class="content">Same problem except I'm using Firefox. I closeout Firefox but the sandbox contents is not deleted. Sandboxie is still active and in Task Manager Firefox is still listed. I can kill Firefox in Task Manager and Sandboxie deletes the sandbox contents. I can also choose Teminate All Programs in Sandboxie's right-click listings and the sandbox contents are deleted plus Firefox is closed in Task Manager.<br>
+<br>
+In EMET 4.0 beta everything is fine. I'm using EMET 4.0 beta right now because with EMET 4.0 final Firefox and Sandboxie 4.02 are unusable.<br>
+<br>
+Hey, tzuk.<br>
+<br>
+Later...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Is EMET 4 Compatable with Sandboxie 3.76 ?</h3>
+				<div class="date">Posted: <strong>Thu Jun 20, 2013 10:11 pm</strong></div>
+				<div class="author">by <strong>glennh</strong></div>
+				<div class="content"><blockquote><div><cite>glennh wrote:</cite>Anyone tried Microsofts EMET 4 just recently released with Sandboxie 3.76 and can confirm it works okay?<br>
+<br>
+I am running windows 7 64 bit version and would be interested to know before I upgrade EMET</div></blockquote>
+
+Bo one here has upgraded to EMET 4 ???</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jun 21, 2013 8:41 am</strong></div>
+				<div class="author">by <strong>SLE</strong></div>
+				<div class="content">Short update. I played a while and find out the following:<br>
+(1) In EMET change system wide DEP settings - for exmple to Application opt in.<br>
+(2) Reboot.<br>
+(3) Choose DEP settings that you want again. <br>
+<br>
+Since I've done that I wasn't able to reproduce the issue. Can anyome recheck?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jun 21, 2013 9:42 am</strong></div>
+				<div class="author">by <strong>hgf321798</strong></div>
+				<div class="content">Setting the system-wide DEP to opt-in does seem to fix it, but using opt-out and disabling DEP just on chrome or setting the system back to always on makes the problem come back.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jun 21, 2013 4:44 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Glen, I don't use EMET but I remember reading a few days ago (don't remember where), someone saying that the last EMET beta gets along better with SBIE than the stable that was recently released.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jun 21, 2013 9:27 pm</strong></div>
+				<div class="author">by <strong>glennh</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite>Glen, I don't use EMET but I remember reading a few days ago (don't remember where), someone saying that the last EMET beta gets along better with SBIE than the stable that was recently released.<br>
+<br>
+Bo</div></blockquote>
+
+Hi Bo<br>
+Thanks for responding.  I think I have seen that post.  But I believe he was using the latest beta version of sandboxie rather than version 3.76.  <br>
+Glenn</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jun 22, 2013 12:50 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I'll look into this incompatibility with EMET 4.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 25, 2013 5:58 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Please check version 4.03.01.<br>
+<br>
+It should fix the issue where EMET 4 was causing Internet Explorer to hang during start up.<br>
+<br>
+I am sorry but I did not remember to check what effect this has on Firefox closing, but hopefully this is fixed as well.<br>
+If not, please let me know.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 25, 2013 8:58 am</strong></div>
+				<div class="author">by <strong>Trespasser</strong></div>
+				<div class="content">tzuk,<br>
+4.03.01 fixed my problem with EMET 4.0 final and Firefox 21. The sandbox contents are now deleted when I close. I can now run DEP with setting Always On instead of Opt-in.<br>
+<br>
+Great work (as usual). Thank you very much. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">.<br>
+<br>
+Best regards,<br>
+<br>
+Bob</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 25, 2013 1:14 pm</strong></div>
+				<div class="author">by <strong>SLE</strong></div>
+				<div class="content">Can confirm version 4.03.01 fixes the problems with EMET4 for me.<br>
+great work - as usual.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=39&t=15766&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:42:43 GMT -->
+</html>

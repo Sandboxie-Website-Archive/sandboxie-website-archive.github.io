@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25604&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:56:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; In the latest version (5.24), Sandboxie always need admin permissions to save something in the Downloads folder[SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>In the latest version (5.24), Sandboxie always need admin permissions to save something in the Downloads folder[SOLVED]</h2>
+		<p><a href="viewtopic674f674f.html?f=11&amp;t=25604">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25604</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>In the latest version (5.24), Sandboxie always need admin permissions to save something in the Downloads folder[SOLVED]</h3>
+				<div class="date">Posted: <strong>Sun Mar 18, 2018 12:41 pm</strong></div>
+				<div class="author">by <strong>Aya_Tachibana</strong></div>
+				<div class="content">Hello everyone.<br>
+<br>
+I have been using Sandboxie for wuite some time without any problem, but since the last update, something has been quite annoying for me.<br>
+<br>
+I do use my computer with a normal account (not administrator), and I use Sandboxie with my browsers (Firefox, Chrome and Opera), and everytime I download something, I always need to do a quick recovery manually from the downsloads folder to actually save the file on my computer (security purposes). <br>
+<br>
+But after the last update, it always asks for administrator permissions to do the quick recovery in my downloads folder (so it actually uses the UAC to do that), even if I'm not using the admin account. This is not a game breaker, but it's really annoying.<br>
+<br>
+Is there anyway to fix this?<br>
+<br>
+Thank your for the help<br>
+<br>
+Some information:<br>
+- CPU: Intel Core i5 4200U<br>
+- GPU: Nvidia GeForce 740M - 2GB<br>
+- RAM: 8GB<br>
+- Windows 10 1709 (16299.309) 64 bits<br>
+- Sandboxie have a lifetime license</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: In the latest version (5.24), Sandboxie always need admin permissions to save something in the Downloads folder</h3>
+				<div class="date">Posted: <strong>Mon Mar 19, 2018 1:08 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Aya_Tachibana,<br>
+<br>
+This is the required info that we need in order to test/trobuleshoot the issue: <br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Does the problem occur in a new sandbox with default settings? <br>
+Sandbox --&gt; Create new Sandbox<br>
+Do not copy settings from existing Sandboxes<br>
+<br>
+Also, please post the output of your configuration file.<br>
+Configure --&gt;Edit configuration<br>
+Copy/paste the output<br>
+Highlight the output and click on the "&lt;/&gt;" button to format it in the forums.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: In the latest version (5.24), Sandboxie always need admin permissions to save something in the Downloads folder</h3>
+				<div class="date">Posted: <strong>Mon Mar 19, 2018 8:10 pm</strong></div>
+				<div class="author">by <strong>Aya_Tachibana</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopicf351f351.html?p=132923#p132923" data-post-id="132923" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Mar 19, 2018 1:08 pm</div></cite>
+Hello Aya_Tachibana,<br>
+<br>
+This is the required info that we need in order to test/trobuleshoot the issue: <br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Does the problem occur in a new sandbox with default settings? <br>
+Sandbox --&gt; Create new Sandbox<br>
+Do not copy settings from existing Sandboxes<br>
+<br>
+Also, please post the output of your configuration file.<br>
+Configure --&gt;Edit configuration<br>
+Copy/paste the output<br>
+Highlight the output and click on the "&lt;/&gt;" button to format it in the forums.<br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+To answer your questions:<br>
+<br>
+1 - Windows 10 1709 (16299.309) 64 bits<br>
+2 - Sandboxie 5.24 - 64-bits<br>
+3 - Using Firefox (59.0.1), Chrome (65.0.3325.162) and Opera (51.0.2830.55), the problem occurs in all three browsers<br>
+4 - I'm currently running Avast Premier as my AV. I also have other on-demand scanners (ESET Online Scanner, Malwarebytes, ADW Cleaner, EEK).<br>
+5 - To reproduce this issue, just use the browser inside the Sandbox, and after downloading something, trying to recovery it will always tell that you need admin permissions.<br>
+6 - It shows no errors here<br>
+7 - Creating a new sandbox doesn't fix the issue.<br>
+<br>
+<br>
+Here is both configuration of both sandboxes:<br>
+<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=OfficeClickToRun
+Template=WindowsRasMan
+Template=7zipShellEx
+Template=Avast_Antivirus
+Template=WindowsLive
+Template=OfficeLicensing
+
+[UserSettings_086401B3]
+
+SbieCtrl_UserName=hiro
+SbieCtrl_NextUpdateCheck=1522102210
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_WindowCoords=102,221,1066,417
+SbieCtrl_ActiveView=40021
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_SettingChangeNotify=n
+SbieCtrl_EnableLogonStart=n
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=n
+SbieCtrl_AddQuickLaunchIcon=n
+SbieCtrl_AddContextMenu=y
+SbieCtrl_AddSendToMenu=y
+SbieCtrl_BoxExpandedView=NormalBox,TorrentBox
+
+[TorrentBox]
+
+ConfigLevel=7
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+BorderColor=#FF8000
+Enabled=y
+AutoDelete=y
+NeverDelete=n
+CopyLimitKb=491520
+CopyLimitSilent=y
+BoxNameTitle=n
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+ForceProcess=opera_autoupdate.exe
+ForceProcess=opera.exe
+ForceProcess=qbittorrent.exe
+ForceProcess=qbitto~1.exe
+ForceFolder=C:\Users\Hiro\Secure Testing
+ForceFolder=C:\Users\Hiro\AppData\Local\Programs\Opera
+BlockNetworkFiles=y
+NotifyStartRunAccessDenied=y
+
+[NormalBox]
+
+ConfigLevel=7
+Template=Chrome_Profile_DirectAccess
+Template=Chrome_Sync_DirectAccess
+Template=Chrome_Preferences_DirectAccess
+Template=Chrome_Passwords_DirectAccess
+Template=Chrome_Cookies_DirectAccess
+Template=Chrome_History_DirectAccess
+Template=Chrome_Bookmarks_DirectAccess
+Template=Chrome_Force
+Template=Firefox_Profile_DirectAccess
+Template=Firefox_Session_DirectAccess
+Template=Firefox_Passwords_DirectAccess
+Template=Firefox_Cookies_DirectAccess
+Template=Firefox_Bookmarks_DirectAccess
+Template=Firefox_Force
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+BorderColor=#FFFF00,off
+Enabled=y
+NeverDelete=n
+CopyLimitKb=49152
+CopyLimitSilent=y
+BoxNameTitle=-
+RecoverFolder=%My Video%
+RecoverFolder=%My Music%
+RecoverFolder=%My Pictures%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: In the latest version (5.24), Sandboxie always need admin permissions to save something in the Downloads folder</h3>
+				<div class="date">Posted: <strong>Tue Mar 20, 2018 11:14 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Aya_Tachibana,<br>
+<br>
+I created a user account on Win 10  x64+ Sbie 5.24 and I had no issues recovering files downloaded from web browsers.<br>
+<br>
+Have you checked the NTFS permissions of the locations you are trying to recover to? <br>
+Are you able to recover things to other folders? (Try the Desktop, for example). <br>
+Are you able to download things to them without using Sandboxie?  <br>
+<br>
+If you open Windows Explorer (Right click on your Sandbox --&gt; Run Sandboxed --&gt; Run Windows Explorer), can you navigate to the location ? <br>
+Is it a network location? <br>
+Is UAC disabled? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: In the latest version (5.24), Sandboxie always need admin permissions to save something in the Downloads folder</h3>
+				<div class="date">Posted: <strong>Tue Mar 20, 2018 9:56 pm</strong></div>
+				<div class="author">by <strong>Aya_Tachibana</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic14e414e4.html?p=132941#p132941" data-post-id="132941" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Mar 20, 2018 11:14 am</div></cite>
+Hello Aya_Tachibana,<br>
+<br>
+I created a user account on Win 10  x64+ Sbie 5.24 and I had no issues recovering files downloaded from web browsers.<br>
+<br>
+Have you checked the NTFS permissions of the locations you are trying to recover to? <br>
+Are you able to recover things to other folders? (Try the Desktop, for example). <br>
+Are you able to download things to them without using Sandboxie?  <br>
+<br>
+If you open Windows Explorer (Right click on your Sandbox --&gt; Run Sandboxed --&gt; Run Windows Explorer), can you navigate to the location ? <br>
+Is it a network location? <br>
+Is UAC disabled? <br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+I just tested Firefox without the sadbox active, and it works normally.<br>
+But after that, now I can save to the downloads folder without the admin permission. In other words, it's now back to normal.<br>
+<br>
+I don't know why, but well, I will accept it.<br>
+<br>
+If it starts asking for admin permissions, I will post here again.<br>
+<br>
+Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: In the latest version (5.24), Sandboxie always need admin permissions to save something in the Downloads folder[SOLV</h3>
+				<div class="date">Posted: <strong>Tue Mar 27, 2018 12:27 am</strong></div>
+				<div class="author">by <strong>Aya_Tachibana</strong></div>
+				<div class="content">Hello, and sorry, but the problem is back<br>
+<br>
+I will first answwer the questions you asked:<br>
+<br>
+1 - Yes, I checked the permissions, and I should be able to revoer it<br>
+2 - I tried to recover to other folders (in tthis case, My Documents), but it still asks for the admin permissions<br>
+3 - Yes, I can normally download without using Sandboxie<br>
+4 - Yes, I can navigate to that location noormally when I use explorer.exe sandboxed<br>
+5 - No, it's not a network location<br>
+6 - UAC is enabled<br>
+<br>
+I even tried to reinstall Sandboxie (and even deleting the configuration files), but it still asks for the permission.<br>
+<br>
+Any other ideas?<br>
+<br>
+Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: In the latest version (5.24), Sandboxie always need admin permissions to save something in the Downloads folder[SOLV</h3>
+				<div class="date">Posted: <strong>Mon Apr 02, 2018 4:18 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Aya_Tachibana,<br>
+<br>
+Did you try a new Sandbox with default settings?<br>
+Are you able to navigate to the location via Sandboxed Explorer? <br>
+
+<blockquote class="uncited"><div>I'm currently running Avast Premier as my AV. I also have other on-demand scanners (ESET Online Scanner, Malwarebytes, ADW Cleaner, EEK). </div></blockquote>  ---&gt; Try disabling these one at a time and see if it makes a difference, test using a new Sandbox with default settings and delete the contents after each test. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25604&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:56:22 GMT -->
+</html>

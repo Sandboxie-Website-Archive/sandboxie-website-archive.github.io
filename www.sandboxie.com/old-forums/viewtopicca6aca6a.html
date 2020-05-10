@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15095&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.06]  Conflict with Online Armor in new beta - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.06]  Conflict with Online Armor in new beta</h2>
+		<p><a href="viewtopic3d683d68.html?f=38&amp;t=15095">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15095</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 9:58 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">It's probably not the Hasher program per se Blues.  More likely some conflict/incompatibility with forced program in general.  In any case I tried it just now but I still get normal and expected behavior.<br>
+<br>
+Do you guys use any other security software in the mix?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 10:21 am</strong></div>
+				<div class="author">by <strong>Blues</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>It's probably not the Hasher program per se Blues.  More likely some conflict/incompatibility with forced program in general.  In any case I tried it just now but I still get normal and expected behavior.<br>
+<br>
+Do you guys use any other security software in the mix?</div></blockquote>
+
+I'm pretty sure that Pete uses AppGuard and NVT ExeRadar Pro if I recall correctly.  <br>
+<br>
+I just run (in real-time) Sandboxie with OA and Emsisoft Anti-Malware.  (I scan manually with MBAM Pro.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 10:36 am</strong></div>
+				<div class="author">by <strong>Blues</strong></div>
+				<div class="content">Tzuk,<br>
+<br>
+A little bit later when I have a moment and have backed up my system with a new image, I'll install the latest SBIE beta and try again.<br>
+<br>
+That would be the one remaining question mark since I already know that the forced folder issue is not happening with 3.76 and either the OA beta or stable release.<br>
+<br>
+I'll report results as soon as possible.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 12:06 pm</strong></div>
+				<div class="author">by <strong>Blues</strong></div>
+				<div class="content">Tzuk, I can confirm that the issue still exists.<br>
+<br>
+I downloaded and installed the new beta you released today. (Installed on top of 3.76)<br>
+<br>
+Ran "Hasher" from my forced downloads folder and system became unresponsive.   I could see after some time that SBIE was trying to load the app in the designated sandbox but it was not completed successfully and I could neither terminate the sandbox nor reboot without a hard reset.<br>
+<br>
+Reinstalled 3.76 and ran "Hasher" from the forced downloads folder and it ran as normal.  <br>
+<br>
+So, at least now we know that it's neither the OA beta nor stable release of OA which is at the heart of the matter as both run the forced folder and executable fine under 3.76.<br>
+<br>
+Wish I had better news to report.  I'll be sticking with 3.76 until a resolution to the issue can be found.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 1:38 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">Tzuk<br>
+<br>
+I did some further testing.  As Blues said I normally run OA in a muted mode(I have Program Files and Windows excluded) and NVT's ExeRadarPro (ERP  and Appguard.<br>
+<br>
+To narrow things down here is the test mode.   I ran all tests from the desktop by right clicking leaktest.exe(GRC) and telling it to run sandboxed.  SBIE 4.01.04  OA 1798  Appguard 3.4.2<br>
+<br>
+1.  If I exclude the Desktop in OA everything is fine.  If I drop the exclusion leaktest gives an application error.   To run this test Appguard is in install mode<br>
+<br>
+2. I uninstalled NVT's ERP and re tested.   Same result.<br>
+<br>
+3.  I installed Appguard and re tested.   Again same result  (At this point it was just OA and SBIE 4.01.04<br>
+<br>
+4.  I removed the IPC statement for ERP to work with SBIE and re tested.  Again same result<br>
+<br>
+5.  Re installed SBIE 3.76 and this time everything worked fine.<br>
+<br>
+I may test again with 4.01.05<br>
+<br>
+Pete<br>
+<br>
+PS  You should now have OA 1798</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 1:39 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content"><blockquote><div><cite>Blues wrote:</cite>Pete, if you have the time and the Sbie beta installed, could you maybe try running that program "Hasher" from a forced folder?<br>
+<br>
+(It's a safe program, I've scanned it with EAM as well as via VirusTotal plus it would be in a forced folder.  It's under a megabyte download and it's just an executable.)</div></blockquote>
+
+Hi Blues<br>
+<br>
+I probably won't have time for this.  Also I don't like to test with something I am not using, which is both Hasher and forced folder.  Makes it hard for me to judge.<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 1:55 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">Hi Tzuk<br>
+<br>
+Just retested with 4.01.05    No change in the results.<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 3:40 pm</strong></div>
+				<div class="author">by <strong>Blues</strong></div>
+				<div class="content"><blockquote><div><cite>Peter2150 wrote:</cite><blockquote><div><cite>Blues wrote:</cite>Pete, if you have the time and the Sbie beta installed, could you maybe try running that program "Hasher" from a forced folder?<br>
+<br>
+(It's a safe program, I've scanned it with EAM as well as via VirusTotal plus it would be in a forced folder.  It's under a megabyte download and it's just an executable.)</div></blockquote>
+
+Hi Blues<br>
+<br>
+I probably won't have time for this.  Also I don't like to test with something I am not using, which is both Hasher and forced folder.  Makes it hard for me to judge.<br>
+<br>
+Pete</div></blockquote>
+
+No problem, Pete.  I was able to do it and posted results above.   (I'm back to 3.76 for now as stated.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Apr 11, 2013 9:04 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks to Pete I can reproduce the problem.  I get a system lockup apparently when Online Armor wants to block some operation.  So it's not the Hasher program specifically, except that it in a general sense it is considered untrusted by Online Armor and some of its operations get blocked.  I am looking into some workaroud/solution.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Apr 11, 2013 9:56 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Thanks to Pete I can reproduce the problem.  I get a system lockup apparently when Online Armor wants to block some operation.  So it's not the Hasher program specifically, except that it in a general sense it is considered untrusted by Online Armor and some of its operations get blocked.  I am looking into some workaroud/solution.</div></blockquote>
+
+That's great Tzuk.  I have no doubt you will figure it out.<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Apr 11, 2013 10:01 am</strong></div>
+				<div class="author">by <strong>Blues</strong></div>
+				<div class="content">Thanks Tzuk and Pete.    I'll look forward to hearing what you come up with.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 22, 2013 6:41 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Please check version 4.01.06.<br>
+<br>
+Please note:  From my checks and my point of view, it seems the Online Armor Program Guard component gets locked up,<br>
+when it is running in the context of a program that is supervised by Sandboxie v4 and trying to block access to some resource.<br>
+<br>
+My workaround is for programs in the sandbox to bypass some of the hooks placed by Program Guard.  This may not work in all system configurations as other hooks inserted by other security software may confuse this workaround.<br>
+<br>
+Also, the workaround is currently limited to the few Program Guard hooks that I found to be relevant.  You may still get lock up,<br>
+in that case please tell me which program is triggering the lock up.  It is easy to find out which program triggered the lock up,<br>
+by restarting the computer after the lock up, and inspecting the History view in Online Armor and locate a history entry for a<br>
+resource that was blocked.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 22, 2013 7:53 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">Will test later and post results.<br>
+<br>
+Thanks Tzuk<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 22, 2013 8:48 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">Okay.  Tested and for me it works beautifully.   But be warned I am excluding both Windows and Program Files, so I may be seeing limited exposure.<br>
+<br>
+Anyway for me it's perfect.<br>
+<br>
+Thank you Tzuk<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 22, 2013 9:22 am</strong></div>
+				<div class="author">by <strong>Blues</strong></div>
+				<div class="content">I'll download and give it a try later this morning or afternoon and report back.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15095&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:45 GMT -->
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15095&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.06]  Conflict with Online Armor in new beta</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.06]  Conflict with Online Armor in new beta</h2>
+		<p><a href="viewtopic3d683d68.html?f=38&amp;t=15095">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15095</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>[.06]  Conflict with Online Armor in new beta</h3>
+				<div class="date">Posted: <strong>Wed Mar 27, 2013 8:44 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">Hi Tzuk<br>
+<br>
+We seem to have a new conflict with Online Armor.<br>
+<br>
+OS   XP Pro SP3  32 bit<br>
+SBIE 4.01.04 32bit<br>
+OA Build 1798 32bit (This is the latest Build.<br>
+<br>
+Note:  I am running OA in a very loose mode.  I have both c:\program files and c:\windows excluded which should make things much easier<br>
+<br>
+I noticed this when I right clicked an exe and had it run Sandboxed, in my Default box(Everything can run, no internet access.  The program didn't run and the program I was testing should have alerted and nothing happened.  I tried right clicking the SBIE Icon and selecting terminate.  Again nothing.  Opening SBIE should everything running.  Eventually everything was terminated except Start.exe.   I finally would get an error that Start wasn't authorized to run. At this point my system was hung and it took a hard reset to fix it. At first I suspected the program I was testing so I uninstalled it, and noticed the same result.   Since everything was excluded in OA, I took out the exclusions, made sure all the SBIE programs were allowed and trusted.  Same result.  Put exclusions back.  I then tried giving SBIE full access to the OA folder.  Still same result.  Took that out.   Finally I disabled OA's program guard, and that fixed it.  That would at first maybe point at OA.   <br>
+<br>
+At this point I put PRogram Guard back in, confirmed the failure, and then re installed 3.76.   No problems at all.  So this would seem to be a .04 problem.  I made sure OA was in the compatibility section and indeed it was.<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 27, 2013 10:04 am</strong></div>
+				<div class="author">by <strong>Blues</strong></div>
+				<div class="content">Pete,<br>
+<br>
+Glad you brought this up as I had something similar the other day but didn't have the time nor wherewithal to try to track down the possible culprits.<br>
+<br>
+I run OA Premium 1736 on XP Pro SP3, 32 bit<br>
+<br>
+I have a program called "hasher.exe" which is used for getting MD5 and other file info.   I always kept it within my "downloads" folder which forces anything starting and running within it to run sandboxed in a catchall box if it doesn't already have a dedicated SBIE folder.<br>
+<br>
+I noticed the other day after having updated to the most recent SBIE beta that if I tried to run hasher.exe I would end up with a locked machine requiring a hard reset.<br>
+<br>
+I did some very cursory exploring within OA and SBIE but as I was time limited I eventually just moved the program out of the forced folder and on to my desktop as a workaround after a couple of reboots.<br>
+<br>
+Following your lead, I've reinstalled SBIE 3.76 for the time being.   <br>
+(I had only upgraded to the beta due to the recent hoopla over the potential baddie that created such a stir.  But I think I'll stay with 3.76 until Tzuk has the opportunity to address this issue.)<br>
+<br>
+Thanks again, Pete, for reporting it and to Tzuk in advance.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 27, 2013 1:07 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content"><blockquote><div><cite>Blues wrote:</cite>Pete,<br>
+<br>
+Glad you brought this up as I had something similar the other day but didn't have the time nor wherewithal to try to track down the possible culprits.<br>
+<br>
+I run OA Premium 1736 on XP Pro SP3, 32 bit<br>
+<br>
+I have a program called "hasher.exe" which is used for getting MD5 and other file info.   I always kept it within my "downloads" folder which forces anything starting and running within it to run sandboxed in a catchall box if it doesn't already have a dedicated SBIE folder.<br>
+<br>
+I noticed the other day after having updated to the most recent SBIE beta that if I tried to run hasher.exe I would end up with a locked machine requiring a hard reset.<br>
+<br>
+I did some very cursory exploring within OA and SBIE but as I was time limited I eventually just moved the program out of the forced folder and on to my desktop as a workaround after a couple of reboots.<br>
+<br>
+Following your lead, I've reinstalled SBIE 3.76 for the time being.   <br>
+(I had only upgraded to the beta due to the recent hoopla over the potential baddie that created such a stir.  But I think I'll stay with 3.76 until Tzuk has the opportunity to address this issue.)<br>
+<br>
+Thanks again, Pete, for reporting it and to Tzuk in advance.</div></blockquote>
+
+Actually I am still using 4.01.04     But I found a work around if you want to use it.   Go back to .04 and go back to your forced folder just the way you had it set up.   Only then in Online Armor, exclude that folder.   Then it should work okay.<br>
+<br>
+Pete<br>
+<br>
+PS I don't mind doing this as I am also running Appguard and NVT's ERP.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 27, 2013 3:58 pm</strong></div>
+				<div class="author">by <strong>Blues</strong></div>
+				<div class="content"><blockquote><div><cite>Peter2150 wrote:</cite>Actually I am still using 4.01.04     But I found a work around if you want to use it.   Go back to .04 and go back to your forced folder just the way you had it set up.   Only then in Online Armor, exclude that folder.   Then it should work okay.<br>
+<br>
+Pete<br>
+<br>
+PS I don't mind doing this as I am also running Appguard and NVT's ERP.</div></blockquote>
+
+<br>
+Now you tell me...some pal.   <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> <br>
+<br>
+Maybe I'll give that a try...but since I don't run a separate anti-executable I'm not sure if that's the best solution.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 27, 2013 5:26 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content"><blockquote><div><cite>Blues wrote:</cite><blockquote><div><cite>Peter2150 wrote:</cite>Actually I am still using 4.01.04     But I found a work around if you want to use it.   Go back to .04 and go back to your forced folder just the way you had it set up.   Only then in Online Armor, exclude that folder.   Then it should work okay.<br>
+<br>
+Pete<br>
+<br>
+PS I don't mind doing this as I am also running Appguard and NVT's ERP.</div></blockquote>
+
+<br>
+Now you tell me...some pal.   <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> <br>
+<br>
+Maybe I'll give that a try...but since I don't run a separate anti-executable I'm not sure if that's the best solution.</div></blockquote>
+
+I tell you now, because I just figured it out. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 27, 2013 5:40 pm</strong></div>
+				<div class="author">by <strong>Blues</strong></div>
+				<div class="content"><blockquote><div><cite>Peter2150 wrote:</cite>I tell you now, because I just figured it out. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div></blockquote>
+
+And don't think I don't appreciate it.  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> <br>
+<br>
+Seriously though, I'm not sure yet whether I'll implement it as I don't really like to hobble either of these two mainstays.   <br>
+<br>
+Fortunately, I have time to ruminate over the decision.  <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 03, 2013 8:14 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">Tzuk<br>
+<br>
+You've never commented on this.  Any reason?<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 05, 2013 9:07 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Sorry about that.  No reason except so many problem reports ..  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">  I will look into it, absolutely.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 05, 2013 9:53 am</strong></div>
+				<div class="author">by <strong>Blues</strong></div>
+				<div class="content">Thanks, Tzuk.   <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 05, 2013 10:31 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Sorry about that.  No reason except so many problem reports ..  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">  I will look into it, absolutely.</div></blockquote>
+
+Double thanks here.  I fully understand that you are probably deluged.  Just wanted to be sure it's somewhere on the lists.<br>
+<br>
+All the best,<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 5:13 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I installed Online Armor Free on XP SP 3, but version number is 6.0.0.1736 and won't update any further.  I wasn't able to reproduce the errors you mention.  I ran programs using Run Sandboxed and also using Forced Programs feature but everything seems to work.  I used version 4.01.04 and also the (still unreleased) version 4.01.05.  Any ideas what I might be missing to trigger the problem?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 9:19 am</strong></div>
+				<div class="author">by <strong>Blues</strong></div>
+				<div class="content">Tzuk, as I recall, I was using a program called "Hasher", the executable of which I kept in my downloads folder which forces any program within it to run sandboxed if started.<br>
+<br>
+When I ran it, I would get a longish delay and then would pretty much freeze up (where I couldn't terminate the program or do any other actions) requiring a hard reset.<br>
+<br>
+I had used it successfully for quite a long time with 3.76 (in this manner) and I had only gone to the beta version of Sandboxie due to the question raised about the potential Sandboxie vulnerability.  <br>
+(I have since reinstalled 3.76 and upgraded to the OA beta which Pete had recommended due to its being very stable at this juncture.)<br>
+<br>
+Sorry I can't provide more data than that and unfortunately due to other obligations I don't have the time or opportunity to try each possible configuration with the two stable and beta releases of both OA and Sandboxie. <br>
+<br>
+Here is the link to the program "Hasher" if you wish to try running it within a forced folder with both permutations of OA and Sandboxie:<br>
+<br>
+<a href="http://www.igorware.com/hasher" class="postlink">http://www.igorware.com/hasher</a><br>
+<br>
+<br>
+Edit to add:<br>
+<br>
+I can report that (for me), "Hasher" does work when run from a forced folder using XP SP3, Sandboxie 3.76  and both the OA (Premium) beta as well as most recent stable release.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 9:42 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I installed Online Armor Free on XP SP 3, but version number is 6.0.0.1736 and won't update any further.  I wasn't able to reproduce the errors you mention.  I ran programs using Run Sandboxed and also using Forced Programs feature but everything seems to work.  I used version 4.01.04 and also the (still unreleased) version 4.01.05.  Any ideas what I might be missing to trigger the problem?</div></blockquote>
+
+See  PM</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 9:45 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content"><blockquote><div><cite>Peter2150 wrote:</cite><blockquote><div><cite>tzuk wrote:</cite>I installed Online Armor Free on XP SP 3, but version number is 6.0.0.1736 and won't update any further.  I wasn't able to reproduce the errors you mention.  I ran programs using Run Sandboxed and also using Forced Programs feature but everything seems to work.  I used version 4.01.04 and also the (still unreleased) version 4.01.05.  Any ideas what I might be missing to trigger the problem?</div></blockquote>
+
+See  PM</div></blockquote>
+
+Hi Tzuk<br>
+<br>
+I can send you the latest beta which has been out a while.  I am going to see if I can get a license so it won't install as a trial which it should, you can run it.<br>
+<br>
+Stand by<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 9:50 am</strong></div>
+				<div class="author">by <strong>Blues</strong></div>
+				<div class="content">Pete, if you have the time and the Sbie beta installed, could you maybe try running that program "Hasher" from a forced folder?<br>
+<br>
+(It's a safe program, I've scanned it with EAM as well as via VirusTotal plus it would be in a forced folder.  It's under a megabyte download and it's just an executable.)</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15095&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:43 GMT -->
+</html>

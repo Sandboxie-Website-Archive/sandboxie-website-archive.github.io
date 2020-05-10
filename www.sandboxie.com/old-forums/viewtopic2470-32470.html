@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 10:15:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Block Process Access - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Block Process Access</h2>
+		<p><a href="viewtopic7fcb7fcb.html?f=22&amp;t=4885">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=4885</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>15</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 04, 2009 11:49 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">I've updated the DLL to use a more reliable internal Sandboxie function to determine if the target process is sandboxed or not.  Thanks tzuk!<br>
+<br>
+Download from first post or the new 'Contributed Utilities' page (once tzuk updates it, check the MD5s).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Feb 05, 2009 10:02 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Updated again.  On tzuk's advice, I changed the hook to NtReadVirtualMemory, which is the ntdll.dll function called by ReadProcessMemory.  This is a better hook and should cover Windows 7 as well.<br>
+<br>
+Download from first post.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Feb 05, 2009 11:42 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I updated the mirror file I'm hosting here, and MD5.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 11, 2009 9:02 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">I have an update to the DLL that also hooks CreateToolhelp32Snapshot(), however I'd like some opinions before I finalize it.<br>
+<br>
+For those not familiar with it, this function takes system snapshots of several kinds, and the information in the snapshot is determined by a set of flags:<br>
+<br>
+- system-wide process and thread enumeration<br>
+- process specific module and heap enumeration<br>
+<br>
+My current hook strips any system-wide snapshot flags, preventing process and thread enumeration.  Then it looks at what is left in the flags parameter.  If there are any process specific flags, it determines if the process is running sandboxed or not, and then allows or blocks the call.<br>
+<br>
+What do you think about the blanket system-wide enumeration blocks?  Is that going too far, or is it a good security measure?  I want it to be secure, but not break functionality.  Some possible changes:<br>
+<br>
+- allow process enumeration, but not thread enumeration<br>
+- vice-versa<br>
+- allow both<br>
+<br>
+Thoughts?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 11, 2009 4:56 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">It's hard to say in advance if this would break programs.  I guess you should run with this DLL for a while and see if it has a negative effect on programs.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Updated Test Version</h3>
+				<div class="date">Posted: <strong>Fri Feb 13, 2009 4:24 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">If I could get some people to test this new version it would be very helpful!  Instead of listing what's changed, I'm going to list what it does, since a lot has changed.  The basic idea is the same, it blocks access from sandboxed processes to unsandboxed processes.<br>
+<br>
+Functions hooked:<br>
+- NtOpenProcess<br>
+- NtQuerySystemInformation<br>
+- NtReadVirtualMemory<br>
+- CreateToolhelp32Snapshot<br>
+<br>
+Behavior:<br>
+- blocks system-wide enumeration of running processes and threads (includes Toolhelp32 and PSAPI functions)<br>
+- blocks access to unsandboxed processes - cannot open processes, or read their memory<br>
+<br>
+I want to be sure that I'm not going too far and breaking applications.  I'm currently running the DLL, and so far I haven't had any problems, but a wider testbed would be nice.  As before, a plethora of debug information can be seen by running Dbgview from Sysinternals.  Once tested, I will release two versions with and without debug output to reduce size and increase performance (I'm sure only a very tiny bit).<br>
+<br>
+The included 'injtest.exe' program has also changed.  Now you have to provide a PID to it on the commandline.  The easiest way is to open a sandboxed command prompt, navigate to 'injtest.exe', and type 'injtest.exe 1234' where 1234 is the PID of some sandboxed or unsandboxed process.<br>
+<br>
+**snip**<br>
+<br>
+See first post for the new release version.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Feb 14, 2009 10:16 pm</strong></div>
+				<div class="author">by <strong>hch</strong></div>
+				<div class="content">Hi, and thanks for this neat addon.<br>
+<br>
+A question - seems like when I'm running andboxie with your injected dll, the process blocking features work, but I can't run a sandboxed instance of Windows Explorer anymore. I get the errors "SBIE2313 Could Not Execute SandboxieRpcSs.exe" and "SBIE2204 Cannot Start Sandboxed Service RpcSs", and windows explorer does not start. Without injecting the dll they work fine.<br>
+<br>
+I'm wondering, is it supposed to be this way (a limitation) or is that just a bug (oversight). And what (if anything) can I do about it.<br>
+<br>
+Once again, thanks for all your efforts, I'm sure they're appreciated by many people.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Feb 14, 2009 11:07 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Explorer runs just fine on my Vista laptop.  And I haven't had any errors from sandboxie processes either, regardless of what apps I'm running.<br>
+<br>
+Which version of the DLL are you using, the one from the first post, or the test version?  What OS are you using, any other security software?  Could you run the debug version along with Dbgview and post the output?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 15, 2009 1:46 am</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content">No problems here launching a sandboxed explorer on Vista SP1 using the 021309 test version. On a clean XP SP3, however, launching a sandboxed explorer fails for me with two messages:<br>
+<br>
+"SBIE2313 Could not execute SandboxieDcomLaunch.exe (31)"<br>
+<br>
+"SBIE2204 Cannot start sandboxed service DcomLaunch (0)"<br>
+<br>
+The sandboxed explorer process is nevertheless enumerated in Sandboxie Control and Process Explorer. Tested using Sandboxie 3.35.10.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 15, 2009 6:07 am</strong></div>
+				<div class="author">by <strong>hch</strong></div>
+				<div class="content">Hi,<br>
+<br>
+I'm running <strong>Sandboxie 3.34</strong> on <strong>Windows XP (Media Center Edition, Service Pack 2)</strong>.<br>
+<br>
+I tested with <strong>(both) the new dll and old dll</strong> versions. <strong>Both encounter the same issue.</strong><br>
+<br>
+I'm positive the injection works because I can run single, isolated applications successfully. The process memory restriction works perfectly. (I did a test, ran taskmanager sandboxed, then ran one sandboxed "calculator" app and one unsandboxed one. Only the sandboxed one was detected , which is correct). Therefore, the only problem is starting the Windows Explorer.<br>
+<br>
+As nick s mentioned, the sandboxed explorer process does appear in the sandboxed process list, but the window does not show or function (probably due to the fact that SandboxieRpcSs.exe and SandboxieDcomLaunch.exe fail to load).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 15, 2009 6:16 am</strong></div>
+				<div class="author">by <strong>hch</strong></div>
+				<div class="content">Sorry for the double post.<br>
+<br>
+I downloaded dbgview, and perhaps this additional information may be helpful.<br>
+<br>
+This is the output when <strong>attempting to run windows explorer sandboxed with the latest test version of the dll </strong>(and the above mentioned system specs)<br>
+<br>
+[11284] Injected into process<br>
+[11284] Pointers:<br>
+[11284] SbieDll_Hook: 7D22BA00<br>
+[11284] SbieApi_QueryProcess: 7D2454A0<br>
+[11284] pNtReadVirtualMemory: 00DF0BD0<br>
+[11284] NtReadVirtualMemory intercepted<br>
+[11284] Target PID: 11284<br>
+[11284] BoxName: CrapBox<br>
+[11284] ImageName: explorer.exe<br>
+[11284] SidString: S-1-5-21-3509508797-2857804451-176231780-1005<br>
+[11284] SessionId: 0<br>
+[11284] Target is sandboxed, allowing NtReadVirtualMemory<br>
+[11284] NtReadVirtualMemory intercepted<br>
+[11284] Target PID: 13784<br>
+[11284] BoxName: <br>
+[11284] ImageName: <br>
+[11284] SidString: <br>
+[11284] SessionId: 0<br>
+[11284] Target not sandboxed, blocking NtReadVirtualMemory<br>
+<br>
+========================================<br>
+<br>
+To compare, the following is the output when attempting to run the windows Calculator app (which works).<br>
+<br>
+[12360] Injected into process<br>
+[12360] Pointers:<br>
+[12360] SbieDll_Hook: 7D22BA00<br>
+[12360] SbieApi_QueryProcess: 7D2454A0<br>
+[12360] pNtReadVirtualMemory: 00DF0B70</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 15, 2009 11:34 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">@hch<br>
+<br>
+Ok, couple things here:<br>
+<br>
+1) From your debug output, you're running the released version of the DLL from the first post, not the test version.  The test version would show additional hooks on NtOpenProcess, NtQuerySystemInformation, and CreateToolhelp32Snapshot.<br>
+2)  This means that explorer in XP can't even handle the one hook on NtReadVirtualMemory, lame.<br>
+<br>
+Try a new build of the test version from this post<br>
+<br>
+<a href="../phpbb/viewtopic1264.php?p=33013#33013" class="postlink">http://www.sandboxie.com/phpbb/viewtopi ... 3013#33013</a><br>
+<br>
+In this version, I've placed an exclusion for explorer.exe on OS's below Vista / Server 2008, so the DLL won't be injected.  Try it out and see if explorer works.  Test on some other software also, just to see if XP is less tolerant of these kinds of restrictions versus Vista.  Make sure to test software that also causes SandboxieRpcSs and SandboxieDcomLaunch to run.  It could be a conflict with the Sandboxie processes on XP, and not explicitly with explorer.exe.  If this is the case, I can make exclusions for the Sandboxie processes.  Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 12:40 am</strong></div>
+				<div class="author">by <strong>hch</strong></div>
+				<div class="content">@wriathdu<br>
+<br>
+okay, i've tested out the version you've pointed me to. This time, the SandboxieRpcSs.exe process runs (last time it didnt, now it does), but I still get the error saying "Could not execute SandboxieDcomLaunch.exe" and "Cannot start sandboxed service DcomLaunch". <br>
+<br>
+Overall it is still not functioning, though now I can see two processes in the sandboxie window (explorer.exe and SandboxieRpcSs.exe) compared to only explorer.exe last time.<br>
+<br>
+<strong>This is the new debug output that I get when trying to open a sandboxed explorer with the new dll you directed me to.</strong><br>
+<br>
+[8988] ----------<br>
+[8988] Injected into process: [8988] C:\Program Files\Sandboxie\SandboxieRpcSs.exe<br>
+[8988] Pointers:<br>
+[8988] SbieDll_Hook: 7D22BA00<br>
+[8988] SbieApi_QueryProcess: 7D2454A0<br>
+[8988] pNtOpenProcess: 00290AD0                <br>
+[8988] pNtReadVirtualMemory: 00290AF0<br>
+[8988] pNtQuerySystemInformation: 00290B10<br>
+[8988] pCreateToolhelp32Snapshot: 00290B30                <br>
+[8988] ----------<br>
+[8988] NtQuerySystemInformation intercepted<br>
+[8988] Allowing NtQuerySystemInformation<br>
+[8988] NtQuerySystemInformation intercepted<br>
+[8988] Allowing NtQuerySystemInformation<br>
+[8988] NtQuerySystemInformation intercepted<br>
+[8988] Allowing NtQuerySystemInformation<br>
+[8988] NtQuerySystemInformation intercepted<br>
+[8988] Allowing NtQuerySystemInformation<br>
+[8988] NtQuerySystemInformation intercepted<br>
+[8988] Allowing NtQuerySystemInformation<br>
+[8988] NtQuerySystemInformation intercepted<br>
+[8988] Allowing NtQuerySystemInformation<br>
+[8988] NtQuerySystemInformation intercepted<br>
+[8988] Allowing NtQuerySystemInformation<br>
+[8988] NtQuerySystemInformation intercepted<br>
+[8988] Allowing NtQuerySystemInformation<br>
+[8988] NtQuerySystemInformation intercepted<br>
+[8988] Allowing NtQuerySystemInformation<br>
+[8988] NtQuerySystemInformation intercepted<br>
+[8988] Allowing NtQuerySystemInformation<br>
+[8988] NtQuerySystemInformation intercepted<br>
+[8988] Allowing NtQuerySystemInformation<br>
+[8988] NtReadVirtualMemory intercepted<br>
+[8988] IsPIDSandboxed<br>
+[8988] Target PID: 9108<br>
+[8988] BoxName: <br>
+[8988] ImageName: <br>
+[8988] SidString: <br>
+[8988] SessionId: 0<br>
+[8988] Blocking NtReadVirtualMemory<br>
+[2564] <br>
+[2564]  TT: Radio state info: on<br>
+[1880] RCE3: DllMain(1): DLL_THREAD_ATTACH -------- (758) C:\Program Files\Dell\MediaDirect\PCMService.exe<br>
+[1880] <br>
+[2564] <br>
+[2564]  TT: Radio state info: on<br>
+[1880] [PCMService] OnTimer_CheckUpdate()<br>
+[1880] <br>
+[1880] RCE3: DllMain(1): DLL_THREAD_ATTACH -------- (758) C:\Program Files\Dell\MediaDirect\PCMService.exe<br>
+<br>
+<br>
+I'm not sure what other software would cause those two processes to run, tell me so I can try it out.<br>
+<br>
+And yes, I suppose a version with exceptions for the conflicting processes could be useful.<br>
+<br>
+By the way, thanks for your help! Hope this can work out...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 2:41 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Ok, try the test version again, v1.0.0.2.  This time I've excluded all Sandboxie processes, but not explorer.  Hopefully the problem here is with the SB procs, at least it is judging by the errors you've mentioned.  Thanks again for testing.<br>
+<br>
+Out of curiosity, before you try the new version, see these lines?
+<blockquote class="uncited"><div>[8988] IsPIDSandboxed<br>
+[8988] Target PID: 9108<br>
+[8988] BoxName:<br>
+[8988] ImageName:<br>
+[8988] SidString:<br>
+[8988] SessionId: 0<br>
+[8988] Blocking NtReadVirtualMemory</div></blockquote>
+What process is PID 9108?  You'll have to run the test again and look in TaskManager, as your PIDs will change and this number will probably be different.  This is referring to SandboxieRpcSs.exe trying to read the memory of some unsandboxed process and being blocked.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 5:01 am</strong></div>
+				<div class="author">by <strong>ThantiK</strong></div>
+				<div class="content">Looks like it works for me, at least I can get through the "run any program" dialogs now.   I ran WoW with it and got an error message but after clicking "OK" it started up fine anyhow.<br>
+<br>
+"The procedure entry point RegGetValueW could not be located in ADVAPI32.dll"</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>15</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 10:15:45 GMT -->
+</html>

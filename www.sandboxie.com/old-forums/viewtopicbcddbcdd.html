@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6764&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:01:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Anti Delete</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Anti Delete</h2>
+		<p><a href="viewtopicb2f4b2f4.html?f=22&amp;t=6764">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=6764</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Anti Delete</h3>
+				<div class="date">Posted: <strong>Mon Nov 30, 2009 2:46 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Anti Delete is a DLL that prevents sandboxed programs from deleting any files in the sandbox, by silently "discarding" any delete operation. <br>
+<br>
+Useful to malware researchers.<br>
+<br>
+Usage: To use it, download the ZIP and extract the DLL into some folder. Then insert this line in your Sandboxie.ini file for the sandbox in which you want to use the DLL.<br>
+<br>
+InjectDll=C:\some\path\to\antidel.dll<br>
+<br>
+The DLL will be injected into any process running in the sandbox. That's it!<br>
+<br>
+Download from here:<br>
+<br>
+<a href="http://bsa.isoftware.nl/old/antidel.rar" class="postlink">http://bsa.isoftware.nl/old/antidel.rar</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 01, 2009 1:59 am</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content">Cool idea Buster. Can it be extended to deal with sdelete's deletion method?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 01, 2009 2:32 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>nick s wrote:</cite>Cool idea Buster. Can it be extended to deal with sdelete's deletion method?</div></blockquote>
+
+Anti Delete is not new. I contributed it over 1 year ago.<br>
+<br>
+I don´t know what´s sdelete´s deletion method. Do you know?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 01, 2009 2:45 am</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>I don´t know what´s sdelete´s deletion method. Do you know?</div></blockquote>
+I'm no expert on deletion coding or methods. I mentioned it because I was able to use a sandboxed sdelete to delete a sandboxed txt file created by a sandboxed text editor. Deleting via a sandboxed Windows Explorer was blocked by AntiDel.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 01, 2009 2:54 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Anti Delete only prevents deletions invoked by DeleteFileA API.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 01, 2009 3:03 am</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>Anti Delete only prevents deletions invoked by DeleteFileA API.</div></blockquote>
+No problem. I only brought it up because I remember the days when sdelete was being bundled with rootkit packages. Maybe it still is.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 13, 2009 3:23 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I have modified AntiDel to fix the problem nick s found.<br>
+<br>
+You can get the new version from <a href="http://bsa.qnea.de/antidel.rar" class="postlink">here</a>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 13, 2009 3:41 pm</strong></div>
+				<div class="author">by <strong>Mark_</strong></div>
+				<div class="content">DeleteFileA directly calls DeleteFileW (after converting from Ansi to Unicode) so you don't have to hook both <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 13, 2009 3:46 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Mark_ wrote:</cite>DeleteFileA directly calls DeleteFileW (after converting from Ansi to Unicode) so you don't have to hook both <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div></blockquote>
+
+I made a test and hooking only DeleteFileW sdelete was able to delete a file. Hooking both this would not happen. Don´t know why or if I did something wrong.  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 13, 2009 7:53 pm</strong></div>
+				<div class="author">by <strong>Mark_</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite><blockquote><div><cite>Mark_ wrote:</cite>DeleteFileA directly calls DeleteFileW (after converting from Ansi to Unicode) so you don't have to hook both <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div></blockquote>
+
+I made a test and hooking only DeleteFileW sdelete was able to delete a file. Hooking both this would not happen. Don´t know why or if I did something wrong.  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div></blockquote>
+
+if we are talking about the same sdelete: <a href="http://technet.microsoft.com/en-us/sysinternals/bb897443.aspx" class="postlink">http://technet.microsoft.com/en-us/sysi ... 97443.aspx</a><br>
+then you are doing something wrong, i stepped trough it in a debugger and set a breakpoint on W that did fire..<br>
+(however the file is overwritten and renamed by the tool before calling deletefile)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Dec 14, 2009 12:22 am</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>I have modified AntiDel to fix the problem nick s found.<br>
+<br>
+You can get the new version from <a href="http://bsa.qnea.de/antidel.rar" class="postlink">here</a>.</div></blockquote>
+Thanks for the improvement...<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>C:\sysinternals&gt;sdelete c:\files\antidel\test.txt
+
+SDelete - Secure Delete v1.51
+Copyright (C) 1999-2005 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+SDelete is set for 1 pass.
+c:\files\antidel\test.txt...
+Error deleting c:\files\antidel\test.txt: The operation completed successfully.</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 27, 2010 3:43 pm</strong></div>
+				<div class="author">by <strong>falconeddie</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>I have modified AntiDel to fix the problem nick s found.<br>
+<br>
+You can get the new version from <a href="http://bsa.qnea.de/antidel.rar" class="postlink">here</a>.</div></blockquote>
+
+The download link is not working, does anyone have the updated version? Buster would you mind uploading it again? Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 27, 2010 11:16 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Sure, no problem. You can download it from here:<br>
+<br>
+<a href="http://bsa.isoftware.nl/antidel.rar" class="postlink">http://bsa.isoftware.nl/antidel.rar</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jun 28, 2010 5:12 am</strong></div>
+				<div class="author">by <strong>falconeddie</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>Sure, no problem. You can download it from here:<br>
+<br>
+<a href="http://bsa.isoftware.nl/antidel.rar" class="postlink">http://bsa.isoftware.nl/antidel.rar</a></div></blockquote>
+
+Thanks man! Great work!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 06, 2010 7:08 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>Spam!!!!</div></blockquote>The spammers are getting more sophisticated, though:<br>
+mentioning sdelete and sandboxed, in the post.<br>
+<br>
+Wasn't there an "erica" who has posted using the Guest account?<br>
+Maybe the spammer registered using her name.<br>
+<br>
+The words in the spammers post, are from the "nick s" post, above.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6764&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:01:53 GMT -->
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=24673&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:55:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; IE context menu: Open Link Sandboxed</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>IE context menu: Open Link Sandboxed</h2>
+		<p><a href="viewtopicfdbefdbe.html?f=22&amp;t=24673">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=24673</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>IE context menu: Open Link Sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Jul 21, 2017 5:25 pm</strong></div>
+				<div class="author">by <strong>TimRude</strong></div>
+				<div class="content">Sometimes I'm viewing a trusted website open in IE (not sandboxed) and I see a link on a page to another site that I'd like to check out, but I want to check out the link in a sandbox. Presently I have to copy the link to the clipboard, open up IE in a sandbox, and then paste the link into the address bar. Would be much easier if there was a right-click context menu entry in IE to 'Open Link Sandboxed' that would automatically open a new instance of IE in the sandbox and go to the link.<br>
+<br>
+Has anybody already created a nifty registry tweak (presumably to HKCU\Software\Microsoft\Internet Explorer\MenuExt) to do this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: IE context menu: Open Link Sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Jul 21, 2017 5:30 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello TimRude,<br>
+<br>
+If you have the paid version of Sandboxie, you can use Forced Program:<br>
+<a href="../indexca35.html?ProgramStartSettings#program" class="postlink">https://www.sandboxie.com/index.php?Pro ... gs#program</a><br>
+<br>
+Is there any reason why you don't want to run IE Sandboxed all the time instead? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: IE context menu: Open Link Sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Jul 21, 2017 5:35 pm</strong></div>
+				<div class="author">by <strong>TimRude</strong></div>
+				<div class="content">For most sites I do run sandboxed, but there are some that I don't. I always empty the sandbox upon closing it, and there are some sites that I want to keep temp data (cookies, etc.) persistent for while others get purged.<br>
+<br>
+So I don't want to always have my browser open in a sandbox. I'd just like to be able to open a specific link directly in a sandboxed browser.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: IE context menu: Open Link Sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Jul 21, 2017 10:05 pm</strong></div>
+				<div class="author">by <strong>TimRude</strong></div>
+				<div class="content">Well, after some tinkering I think the following gets it done nicely:<br>
+
+<ol style="list-style-type: decimal"><li>Extract (from the attached zip file) the file named <strong><span style="color: #BF0000">SBIELauncher.hta</span></strong> to your "C:\Program Files\Sandboxie" folder. The content of this file is:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+
+&lt;script type="text/javascript" language="JavaScript"&gt;
+&lt;!--
+	// Set the window to zero size, since we do not intend
+	// to use this window.
+	window.resizeTo(0, 0);
+	window.dialogWidth = 0;
+	window.dialogHeight = 0;
+--&gt;    
+&lt;/script&gt;
+
+&lt;head xmlns:HTA="urn:microsoft:hta"&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /&gt;
+	&lt;HTA:APPLICATION 
+		ID="oHTA"
+		APPLICATIONNAME=""
+		BORDER="dialog"
+		BORDERSTYLE="normal"
+		CAPTION="no"
+		MAXIMIZEBUTTON="no"
+		MINIMIZEBUTTON="yes"
+		SCROLL="no"
+		SHOWINTASKBAR="yes"
+		SINGLEINSTANCE="no"
+		SYSMENU="no"
+		CONTEXTMENU="no"
+		VERSION="1.0"
+		WINDOWSTATE="minimize"/&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;/body&gt;
+
+&lt;script type="text/javascript" language="JavaScript"&gt;
+&lt;!--
+	try
+	{
+		// Get the context menu link...
+		var shell = new ActiveXObject("WScript.Shell");
+		var URL = external.menuArguments.event.srcElement;
+	    
+		// Launch Sandboxie default browser, passing the URL as the parameter
+		var cmdLine = "\"C:\\Program Files\\Sandboxie\\Start.exe\" default_browser " + URL;
+		shell.run(cmdLine);
+		
+		// Close the window
+		window.close();
+	}
+	catch(e)
+	{
+	}
+--&gt;    
+&lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></li>
+<li>Extract (from the attached zip file) the file named <strong><span style="color: #BF0000">OpenInSandbox.reg</span></strong> to your desktop. Then right-click it and select Merge to update the registry. You can delete this file once the registry has been updated. The content of this file is:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\MenuExt\Open in Sandbox]
+@="C:\\Program Files\\Sandboxie\\SBIELauncher.hta"
+"Contexts"=dword:00000020
+</code></pre></div></li>
+<li> Once that's done and you restart Internet Explorer, you should now see a new context menu entry named <strong><span style="color: #BF0000">Open in Sandbox</span></strong> when you right-click on a link on a web-page. Selecting it should open the link in a sandbox, even if you were viewing the web-page in a non-sandboxed instance of Internet Explorer.</li>
+<li>Note that if your system is configured differently so that <strong>C:\Program Files\Sandboxie</strong> is not where your Sandboxie installation is located, some editing of the two files will be necessary before using them.</li>
+</ol></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: IE context menu: Open Link Sandboxed</h3>
+				<div class="date">Posted: <strong>Mon Jul 24, 2017 11:12 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello TimRude,<br>
+<br>
+I have moved your thread to the Contributed Utilities &amp; Templates section.<br>
+<br>
+Thank you,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=24673&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:55:26 GMT -->
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/16388" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-09-02T09:51:54-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/16388</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-09-02T09:51:54-04:00</updated>
+
+		<published>2013-09-02T09:51:54-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16388&amp;p=93612#p93612</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16388&amp;p=93612#p93612"/>
+		<title type="html"><![CDATA[[.08] Add a phishing template for Google Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16388&amp;p=93612#p93612"><![CDATA[
+Added in version 4.05.08 in<br><br>Sandbox Settings &gt; Applications &gt; Web Browser &gt; Google Chrome<br>Allow direct access to Google Chrome phishing database<br><br>(Applies to chrome.exe, dragon.exe, iron.exe, opera.exe, maxthon.exe.)<br><br>The setting will only apply automatically to new sandboxes!<br>For existing sandboxes, it has to be enabled manually.<br><br>Thanks again!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Sep 02, 2013 9:51 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-08-28T14:02:44-04:00</updated>
+
+		<published>2013-08-28T14:02:44-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16388&amp;p=93488#p93488</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16388&amp;p=93488#p93488"/>
+		<title type="html"><![CDATA[[.08] Add a phishing template for Google Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16388&amp;p=93488#p93488"><![CDATA[
+I will add this to the default settings for a new sandbox, just like Template_Firefox_Phishing_DirectAccess.<br><br>Will probably change chrome.exe to apply to a few more Chrome-based browsers that I know about.<br><br>Thanks Guest10!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Aug 28, 2013 2:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-08-28T13:56:00-04:00</updated>
+
+		<published>2013-08-28T13:56:00-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16388&amp;p=93486#p93486</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16388&amp;p=93486#p93486"/>
+		<title type="html"><![CDATA[[.08] Add a phishing template for Google Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16388&amp;p=93486#p93486"><![CDATA[
+Chrome should have a template for the "Safe Browsing" anti-phishing files.<br>------------<br>Note to tzuk...<br>The variable '%Tmpl.Chrome%' can't be used, since it points to the folder underneath "User Data":<br>Tmpl.Chrome=%Local AppData%\Google\Chrome\User Data\Default<br>------------<br><br>I would recommend that all Chrome users allow access to the Chrome "Safe Browsing" (anti-)phishing files.<br>And, just as the phishing template for Firefox has some security type files added to it, I have added a setting to this template to allow Chrome to update it's "Certificate Revocation Lists" file, when sandboxed.<br><br><br>[Template_Local_Google_Chrome_Phishing_DirectAccess]<br>Tmpl.Class=Local<br>Tmpl.Title=Allow direct access to Google Chrome phishing files<br>OpenFilePath=chrome.exe,%Local AppData%\Google\Chrome\User Data\Safe Browsing*<br>OpenFilePath=chrome.exe,%Local AppData%\Google\Chrome\User Data\Certificate Revocation Lists<br><br>(Dragon and Iron users can check to see if they have those files, and revise the template to use 'dragon.exe' or 'iron.exe' in place of 'chrome.exe')<br>------<br>The above template will allow sandboxed Chrome to keep these files updated, outside of the sandbox:<br>Safe Browsing Download Whitelist<br>Safe Browsing Extension Blacklist<br>Safe Browsing Bloom<br>Safe Browsing Bloom Prefix Set<br>Safe Browsing Cookies<br>Safe Browsing Cookies-journal<br>Safe Browsing Csd Whitelist<br>Safe Browsing Download<br>Certificate Revocation Lists<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Wed Aug 28, 2013 1:56 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=3606&start=75&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:58:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SandboxDiff - Registry/Files changes - Page 6</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SandboxDiff - Registry/Files changes</h2>
+		<p><a href="viewtopicdbb3dbb3.html?f=22&amp;t=3606">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=3606</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>6</strong> of <strong>8</strong></div>
+					<div class="post">
+				<h3>SandboxDiff - Registry/Files changes</h3>
+				<div class="date">Posted: <strong>Sat Oct 03, 2009 3:45 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Oopsie.<br>
+<br>
+There was a spam/silly post as the first/only post of the last page of the old "SandboxDiff - Registry/Files changes" topic, and I accidentally deleted the entire topic instead of just the one post.<br>
+<br>
+<em>Edit:   The original topic is now restored.</em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>SandboxDiff 1.7 - Updated</h3>
+				<div class="date">Posted: <strong>Thu Oct 29, 2009 3:48 pm</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content">SandboxDiff 1.7 updated. <br>
+<br>
+Changes:<br>
+<br>
+- Listed modified files - used CRC32'checksum algorithm, simple file verification (SFV). Thanks to <em>Todd</em> Sandboxie'user for the suggestion.<br>
+- SandboxDiff.exe doesn't need to stay in sandbox folder anymore.<br>
+<br>
+<br>
+The changes made by the application sandboxed are in the files:<br>
+<br>
+- <span style="text-decoration: underline">Registry changes</span>: <br>
+<br>
+<strong>Comp-Reg.txt</strong> - lists registry changes (<span style="text-decoration: underline">values</span> only) in <strong>text</strong> format.<br>
+<strong>Comp-Reg.REG.txt</strong> - lists registry changes (<span style="text-decoration: underline">keys</span> and <span style="text-decoration: underline">values</span>) in <strong>.reg </strong>format (Windows Registry Editor Version 5.00).<br>
+<strong>Comp-Reg.html</strong> - lists <span style="text-decoration: underline">all</span> registry entries (<span style="text-decoration: underline">values</span>) sandboxed in <strong>text/html</strong> format (and the registry values changes).<br>
+<br>
+- <span style="text-decoration: underline">Files changes</span>:<br>
+<br>
+<strong>Comp-Files.txt</strong> - lists added/removed <span style="text-decoration: underline">files</span> and <span style="text-decoration: underline">folders</span>.<br>
+<strong>Comp-FilesCRC.txt</strong> - lists added/removed <span style="text-decoration: underline">files</span> - and <span style="text-decoration: underline">modified files</span> (used CRC32'checksum algorithm, simple file verification (SFV)).<br>
+<strong>Comp-Files.html</strong> - lists <span style="text-decoration: underline">all</span> files and folders in sandbox folder - and added/removed <span style="text-decoration: underline">files</span> and <span style="text-decoration: underline">folders</span>.<br>
+<br>
+<br>
+<br>
+<br>
+Download in: <a href="../index4d6e.html?ContributedUtilities#SandboxDiff" class="postlink">Contributed Utilities</a> page.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 13, 2009 9:28 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Majomo: SandboxDiff and Buster SandBox Analyzer work in a similar way in some aspects: looking for file and registry differences.<br>
+<br>
+Since I released Buster Sandbox Analyzer I knew the registry part was not fully accurate. I thought it was pretty accurate most of the time but after spending some time debugging code and making intensive tests I understood I was wrong.<br>
+<br>
+I know many people use SandboxDiff and I don´t pretend to create a polemic reaction, I just pretend to inform: SandboxDiff has the same problems Buster Sandbox Analyzer had and this makes it doesn´t show accurate results. An example will better illustrate the problem.<br>
+<br>
+I have mIRC installed and registry settings are under HKEY_CURRENT_USER\Software\mIRC<br>
+<br>
+After removing a value key from there in Comp-Reg.html does not appear any reference to it.<br>
+<br>
+If you need help to reproduce the test let me know.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 13, 2009 7:35 pm</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>After removing a value key from there in Comp-Reg.html does not appear any reference to it.</div></blockquote>
+You are right. When a value key is emptied does not appear any reference to it in "Comp-Reg.html" and "Comp-Reg.txt".<br>
+<br>
+SandboxDiff uses 'regdump.exe' by Ladislav Nevery (that did an excellent tool); it has some bugs - e.g. crashes when loading some hive files also.<br>
+<br>
+SandboxDiff allows users to have an accurate result; any 'regdump.exe' bug is surpassed: "Comp-Reg.REG.txt" records all registry changes in .reg format (Windows Registry Editor Version 5.00).<br>
+<br>
+<strong>DOWNLOAD LINK IN <a href="http://sandboxie.com/phpbb/viewtopic.php?p=23711#23711" class="postlink">FIRST POST</a></strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Not for x64</h3>
+				<div class="date">Posted: <strong>Wed Mar 10, 2010 6:08 am</strong></div>
+				<div class="author">by <strong>noise</strong></div>
+				<div class="content">It appears the program will not run under an x64 operating system <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+---------------------------<br>
+Unsupported 16-Bit Application<br>
+---------------------------<br>
+The program or feature "\??\C:\Users\noise\AppData\Local\REPLACE.EXE" cannot start or run due to incompatibity with 64-bit versions of Windows. Please contact the software vendor to ask if a 64-bit Windows compatible version is available.<br>
+<br>
+<br>
+---------------------------<br>
+OK   <br>
+---------------------------</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 10, 2010 9:50 am</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content">@ <em>noise</em>,<br>
+<br>
+Thanks for your information.  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> <br>
+<br>
+Once I can't test it in a x64 OS, can you download and try the newer version?<br>
+<br>
+Thanks.<br>
+<br>
+<strong>Download Link In:   <a href="http://sandboxie.com/phpbb/viewtopic.php?p=23711#23711" class="postlink">FIRST POST</a></strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 11, 2010 2:52 am</strong></div>
+				<div class="author">by <strong>noise</strong></div>
+				<div class="content">I can confirm that the new version is working correctly with Windows 7 x64 Professional.<br>
+<br>
+Thanks <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 11, 2010 5:21 am</strong></div>
+				<div class="author">by <strong>noise</strong></div>
+				<div class="content">Hi again.<br>
+<br>
+I always seem to get the following error message:<br>
+<br>
+---------------------------<br>
+RegDiff<br>
+---------------------------<br>
+File open error:[hive_1.reg.txt]<br>
+---------------------------<br>
+OK   <br>
+---------------------------<br>
+<br>
+I run SandboxDiff from outside the Sandbox folder.<br>
+Before I run SandboxDiff I make sure there is a RegHive file in C:\Sandbox\noise\DefaultBox.<br>
+I ran the UserPath.bat which successfully copied.<br>
+<br>
+When I close the error box I have the following files:<br>
+<br>
+Comp-Files.html<br>
+Comp-Files.txt<br>
+Comp-FilesCRC.txt<br>
+Comp-Reg.html<br>
+Comp-Reg.txt<br>
+<br>
+Thanks<br>
+noise</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 11, 2010 9:00 am</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content">@ <em>noise</em>, thanks for your feedback.  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> <br>
+<br>
+It seems you are running in a limited user account. Please check if you are in a Administrator account when running SandboxDiff (or you can run it with "Run as Administrator" successfully perhaps).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 11, 2010 9:31 am</strong></div>
+				<div class="author">by <strong>noise</strong></div>
+				<div class="content">I did not even think of running SandboxDiff as an admin. doh! I even read on here that you suggested another user run it with admin rights, it should have clicked!<br>
+<br>
+I can confirm that it works correctly when you run it as an admin.<br>
+<br>
+Here is a snippet of the .REG file:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Windows Registry Editor Version 5.00
+
+[HKEY_USERS\hive\machine\System\CurrentControlSet\Control]
+
+[HKEY_USERS\hive\machine\System\CurrentControlSet\Control\NetworkProvider]
+
+[HKEY_USERS\hive\machine\System\CurrentControlSet\Control\NetworkProvider\HwOrder]
+
+[HKEY_USERS\hive\machine\software\Wow6432Node]
+
+[HKEY_USERS\hive\machine\software\Wow6432Node\Microsoft]
+
+[HKEY_USERS\hive\machine\software\Wow6432Node\Microsoft\Windows]
+
+[HKEY_USERS\hive\machine\software\Wow6432Node\Microsoft\Windows\CurrentVersion]
+
+[HKEY_USERS\hive\machine\software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall]
+</code></pre></div>
+
+Thanks<br>
+noise</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>SandboxDiff v. 2.0 - Updated</h3>
+				<div class="date">Posted: <strong>Thu May 13, 2010 10:17 am</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content">SandboxDiff updated to version 2.0..<br>
+<br>
+Fixed an issue when running the analysis process. Some minor changes.<br>
+<br>
+Download in <a href="http://sandboxie.com/phpbb/viewtopic.php?p=23711#23711" class="postlink">first post</a>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 25, 2010 2:45 pm</strong></div>
+				<div class="author">by <strong>Lardu</strong></div>
+				<div class="content">Hi.<br>
+Just to let you know if the username of Windows user has NORDIC letters in it, (äöå)<br>
+(the path in sandbox dir then too..)<br>
+Your app won't start and gives the error box about it being not able to load the reghive file..</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jun 02, 2010 4:18 pm</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content">Hi <em>Lardu</em>,<br>
+<br>
+Thanks for reporting, that will let us to handle this path'character issue.<br>
+<br>
+It will be fixed in the next 'SandboxDiff' update version.<br>
+<br>
+Thanks again!<br>
+<br>
+EDIT: Done.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Malware?</h3>
+				<div class="date">Posted: <strong>Sun Aug 15, 2010 10:34 am</strong></div>
+				<div class="author">by <strong>Petal</strong></div>
+				<div class="content"><a href="http://www.virustotal.com/file-scan/report.html?id=cb8b193ae31680f186dfa7833a94310a0b32445f782482af3f299ef19a0523b0-1281881946" class="postlink">http://www.virustotal.com/file-scan/rep ... 1281881946</a><br>
+<br>
+Jiangmin  	13.0.900  	2010.08.15  	<span style="color: red">Trojan/Vilsel.lhi</span><br>
+Kaspersky 	7.0.0.125 	2010.08.15 	-<br>
+McAfee 	5.400.0.1158 	2010.08.15 	<span style="color: red">Suspect-D!13C28009A57C</span><br>
+<br>
+A trojan "<em>is a harmful piece of software that <strong>looks legitimate</strong>. Users are typically <strong>tricked</strong> into loading and executing it on their systems</em>".<br>
+<br>
+Is this really safe? <img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question">  <img class="smilies" src="images/smilies/icon_idea.gif" width="15" height="15" alt=":idea:" title="Idea"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Malware?</h3>
+				<div class="date">Posted: <strong>Sun Aug 15, 2010 10:53 am</strong></div>
+				<div class="author">by <strong>Mark_</strong></div>
+				<div class="content"><blockquote><div><cite>Petal wrote:</cite><a href="http://www.virustotal.com/file-scan/report.html?id=cb8b193ae31680f186dfa7833a94310a0b32445f782482af3f299ef19a0523b0-1281881946" class="postlink">http://www.virustotal.com/file-scan/rep ... 1281881946</a><br>
+<br>
+Jiangmin  	13.0.900  	2010.08.15  	<span style="color: red">Trojan/Vilsel.lhi</span><br>
+Kaspersky 	7.0.0.125 	2010.08.15 	-<br>
+McAfee 	5.400.0.1158 	2010.08.15 	<span style="color: red">Suspect-D!13C28009A57C</span><br>
+<br>
+A trojan "<em>is a harmful piece of software that <strong>looks legitimate</strong>. Users are typically <strong>tricked</strong> into loading and executing it on their systems</em>".<br>
+<br>
+Is this really safe? <img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question">  <img class="smilies" src="images/smilies/icon_idea.gif" width="15" height="15" alt=":idea:" title="Idea"></div></blockquote>
+never scan an archive,<br>
+scan binary files each on his own.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>6</strong> of <strong>8</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=3606&start=75&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:58:07 GMT -->
+</html>

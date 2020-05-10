@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=437&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:16:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Registry log module</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Registry log module</h2>
+		<p><a href="viewtopica3cea3ce.html?f=4&amp;t=437">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=437</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Registry log module</h3>
+				<div class="date">Posted: <strong>Sat Aug 05, 2006 9:56 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_368</strong></div>
+				<div class="content">as far as I know,sandboxie only log registry action maked by the sandboxied program at the file : \Sandbox\DefaultBox\Data\Registry.dat<br>
+<br>
+This file is not readable for us and I can't find any operation at the manu to explorer what is contained in this file.<br>
+<br>
+what about to make it easy for human to read it?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Aug 05, 2006 11:22 pm</strong></div>
+				<div class="author">by <strong>mizzmona</strong></div>
+				<div class="content">Sandboxie's <em>RegDump</em> can output the sandbox's registry to a text file.<br>
+<br>
+See these topic threads for more info:<br>
+<br>
+<a href="http://sandboxie.com/phpbb/viewtopic.php?t=185" class="postlink">http://sandboxie.com/phpbb/viewtopic.php?t=185</a><br>
+<br>
+<a href="http://sandboxie.com/phpbb/viewtopic.php?t=383" class="postlink">http://sandboxie.com/phpbb/viewtopic.php?t=383</a><br>
+<br>
+-M</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 06, 2006 11:04 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Thanks a lot.<br>
+<br>
+but there goes another problem, it seems that sandboxie only lists all the registry in my computer, not what is changed by the sandboxed program?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 07, 2006 10:14 am</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content"><blockquote><div><cite>Anonymous wrote:</cite>Thanks a lot.<br>
+<br>
+but there goes another problem, it seems that sandboxie only lists all the registry in my computer, not what is changed by the sandboxed program?</div></blockquote>
+
+If you are asking what registry keys are used by Sandboxie, you can find them by reading the thread at <a href="http://sandboxie.com/phpbb/viewtopic.php?t=198&amp;start=45" class="postlink">http://sandboxie.com/phpbb/viewtopic.php?t=198&amp;start=45</a>.  Of course, Windows registry will also make a record that Sandboxie is installed on the machine and will include references to its files and installation information.<br>
+<br>
+If you use Pablo's AutoIt script to use Sandboxie portably referenced in the thread I just provided, it will remove Sandboxie's own registry keys when you shut down Sandboxie -- but it will not remove Window's own registry entries about files on your computer (including Sandboxie) and recently accessed files, etc.  While Pablo's script is very helpful, it can only be used with computers on which you have administrative rights, and it does not necessarily remove any trace of Sandboxie from a machine on which you run it in portable mode.<br>
+<br>
+If it is very important to know all the persistent registry changes that occur when you install and use Sandboxie, there are a number of freeware registry monitoring programs available like Regmon at <a href="http://www.sysinternals.com/SystemInformationUtilities.html" class="postlink">http://www.sysinternals.com/SystemInfor ... ities.html</a>.  As I expect you know, you can also do a registry search with Regedt32 (native to Windows) for keywords like "sandboxie" and "tzuk" to find obvious references to Sandboxie.<br>
+<br>
+Good luck.<br>
+<br>
+SBIE (Happy) User</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 07, 2006 2:23 pm</strong></div>
+				<div class="author">by <strong>mizzmona</strong></div>
+				<div class="content"><blockquote><div><cite>Crazy4Stef wrote:</cite>but there goes another problem, it seems that sandboxie only lists all the registry in my computer, not what is changed by the sandboxed program?</div></blockquote>
+
+Sandboxie's registry does <em>not</em> list the entire registry, only those keys necessary to sandboxed programs.  It would be pointless and time-consuming for Sandboxie to have to read and store <em>all</em> the registry (for every sandbox!) before it could even be used to run the first sandboxed program.<br>
+<br>
+It's understandable if you want to know specifically what keys were added, deleted, or modified by a sandboxed program, though...particularly for freshly installed sandboxed programs.<br>
+<br>
+I haven't tested any of this, but...<br>
+<br>
+Normally, what you want is handled with an installation monitor...so one option might be to install a snapshot-type installation monitor, and then run it <em>sandboxed</em>.  (For just registry changes, you might first set the sandboxed monitor to <em>only</em> snapshot the registry, and run only on demand.  And, it might be wise to adjust Sandboxie Control's <strong>File Copy Options</strong> to allow writing more KBytes, as the output could be fairly large.***)<br>
+<br>
+Another option would be to get a simpler program whose function is to output the registry to a text file -- or just use RegEdit itself to do that.  (Run sandboxed, of course.)  Use a file comparison program to then compare "before and after" text files for differences.   With this option, taking the "snapshots" may be faster, but doing the comparisons may be more tedious.<br>
+<br>
+Note that taking <em>sandboxed</em> snapshots of the full registry should force Sandboxie to log the entire registry as well (altho, I'm not <em>100%</em> positive on that)...and, bearing in mind that taking snapshots of the registry outside of a sandbox usually takes awhile anyway, doing it from within a sandbox (where Sandboxie is effectively duplicating the process too) will likely take at least twice as long.<br>
+<br>
+-M<br>
+<br>
+<em>***Edit:  Better yet, just give whatever program is used <strong>OpenFilePath</strong> permission to its data folders, so the snapshot files are written outside of the sandbox.</em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 07, 2006 3:17 pm</strong></div>
+				<div class="author">by <strong>mizzmona</strong></div>
+				<div class="content">Of course, what you really wanted is a tool that could be set to log only the registry modifications in a separate file.  (Yet, how would one log the deletions, unless the file were of the line-by-line logged output type?  Ugh.)<br>
+<br>
+If Tzuk's inclined, he'll think of something. <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+<br>
+-M<br>
+<br>
+<em>Away on Tzuk's Trek -- I've no clue where he's going, but it's a fine journey so far!</em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 17, 2006 2:18 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_425</strong></div>
+				<div class="content">I'm wondering. I want to install Sims 2 within Sandboxie, which I have done successfully once before. however, I wish to "capture" all of the registry entries made by Sims 2 to a text file/reg file so that if I ever want to put Sims 2 on another drive without reinstalling it, I can zip the installed files, decompress them on another drive/partition and import the registry entries.<br>
+How can I do this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 26, 2006 9:40 am</strong></div>
+				<div class="author">by <strong>Unknown_User_490</strong></div>
+				<div class="content">Because Regmon (<a href="http://www.sysinternals.com/" class="postlink">www.sysinternals.com</a>) doesn't work sandboxed, Regshot is my weapon of choice.<br>
+<a href="http://www.softpedia.com/get/Tweak/Registry-Tweak/Reg-Shot.shtml" class="postlink">http://www.softpedia.com/get/Tweak/Regi ... Shot.shtml</a><br>
+<br>
+Registry compare utility that allows you to quickly take a snapshot of your registry and then compare it with a second one.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=437&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:16:01 GMT -->
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=18914&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:51:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Restore file automatically</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Restore file automatically</h2>
+		<p><a href="viewtopic65336533.html?f=5&amp;t=18914">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=18914</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Restore file automatically</h3>
+				<div class="date">Posted: <strong>Fri May 09, 2014 2:36 pm</strong></div>
+				<div class="author">by <strong>thomaska</strong></div>
+				<div class="content">Hello, <br>
+<br>
+Is it possible to automatically restore a file named "results.csv" everytime without question for restore?<br>
+<br>
+I want to keep the results in the csv file. how can i configure sandboxie to restore automatically restore this file?<br>
+<br>
+best regards, thomas</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Restore file automatically</h3>
+				<div class="date">Posted: <strong>Sat May 10, 2014 9:37 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">You can create a setting that will always allow the program that creates "results.csv" to read from and write to the copy of the file that's outside of the sandbox, and therefore bypass any sandboxing for that file.<br>
+<br>
+Assuming that the program that uses that file is installed outside of the sandbox:<br>
+Sandbox Settings &gt; Resource Access &gt; File Access &gt; Direct Access<br>
+<br>
+"Add Program" button: (enter the <strong>.exe</strong> name of the program that writes the "results.csv" file)<br>
+<br>
+Then <strong>either</strong> use:<br>
+<strong>"Add" button</strong>: Navigate to and select the "results.csv" file that's outside of the sandbox.<br>
+OK your way out.<br>
+<strong>or</strong>,<br>
+<strong>"Edit/Add"</strong> button: <strong>*\results.csv</strong><br>
+OK your way out.<br>
+<br>
+Using the "Add" button only allows the .exe program to write to the "results.csv" file at the location that you selected when you navigated to that file.<br>
+Using the "Edit/Add" button setting would allow the .exe program to write "results.csv" to any location that you choose.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Restore file automatically (solved)</h3>
+				<div class="date">Posted: <strong>Mon May 12, 2014 6:38 am</strong></div>
+				<div class="author">by <strong>thomaska</strong></div>
+				<div class="content">Thank you very much. This works great for me.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=18914&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:51:55 GMT -->
+</html>

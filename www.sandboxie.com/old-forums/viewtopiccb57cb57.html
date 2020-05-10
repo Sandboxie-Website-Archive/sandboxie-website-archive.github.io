@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16122&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:46:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.02] SB 4.04 and 4.05.1 unset PATH enviroment variable</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.02] SB 4.04 and 4.05.1 unset PATH enviroment variable</h2>
+		<p><a href="viewtopice126-3e126.html?f=40&amp;t=16122">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=16122</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.02] SB 4.04 and 4.05.1 unset PATH enviroment variable</h3>
+				<div class="date">Posted: <strong>Wed Jul 24, 2013 6:56 am</strong></div>
+				<div class="author">by <strong>piterkater</strong></div>
+				<div class="content">On Windows 7 x64 with SB 4.04 and 4.05.1, PATH enviroment var is not defined. <br>
+<br>
+On WinXP SP3 32bit with SB 4.04   OK!<br>
+<br>
+On Windows 7 x64 with  3.76 and 4.02 OK!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 24, 2013 10:30 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I am not seeing this problem, or otherwise I don't understand what you're asking me to look at.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 24, 2013 11:42 am</strong></div>
+				<div class="author">by <strong>piterkater</strong></div>
+				<div class="content">See the picture<br>
+ <a href="../www.dropbox.com/s/8asyqcrtsb5rt3j/unset_Path.png" class="postlink">https://www.dropbox.com/s/8asyqcrtsb5rt ... t_Path.png</a><br>
+<br>
+PATH is not defined on Sandbox. Tested on all four sandboxies.<br>
+without PATH many app not found like java.exe<br>
+<br>
+I back to 4.02 and working without problem.<br>
+<br>
+tell me is you need any info or test in my system.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 24, 2013 1:05 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">On XP, the PATH is quite different: unsandboxed vs. sandboxed<br>
+<br>
+Unsandboxed cmd.exe:<br>
+<br>
+Path=C:\WINNT\system32;C:\WINNT;C:\WINNT\System32\Wbem;C:\Program Files\GNU\GnuPG;C:\Program Files\Support Tools\;C:\Program Files\Microsoft USB Flash Drive Manager\;C:\Program Files\Common Files\Roxio Shared\DLLShared\;C:\Program Files\Common Files\Roxio Shared\11.0\DLLShared\;C:\Program Files\Common Files\Acronis\SnapAPI\;C:\Program Files\Acronis\TrueImageHome\;C:\WINNT\system32\WindowsPowerShell\v1.0;C:\Program Files\GNU\GnuPG\pub;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\Microsoft USB Flash Drive Manager\<br>
+<br>
+All but the last item in the PATH are "System Variables".<br>
+The last item is a "User Variable".<br>
+<br>
+------<br>
+Sandboxed cmd.exe:<br>
+<br>
+Path=C:\Program Files\Microsoft USB Flash Drive Manager.<br>
+<br>
+Only "User Variables" show in my PATH, when sandboxed.<br>
+<br>
+SB 4.05.01<br>
+[Edited]The "last items"  I listed was only 1 item. Doh!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 24, 2013 1:50 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Interesting... I was going to say I'm not seeing any difference on XP or 64-bit 7. Sandboxie 4.04.<br>
+<br>
+Then after Paul's reply about "User variables," I realized I don't have a PATH environment variable defined for the user. So I created one (System Control Panel &gt; Advanced, etc.) with the value "Test."<br>
+<br>
+Checking the Command Prompt UNsandboxed, "Test" has been appended to PATH. Sandboxed it's only "Test." I only checked on XP...<br>
+<br>
+But piterkater's isn't defined at all.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 24, 2013 3:12 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks for the hint Guest10.  I change something about environment variables in version 4.04.  I guess there is a problem with "user" variables completely overriding "system" variables.  I'll check it out.<br>
+<br>
+<a href="../phpbb/viewtopic819a.php?t=15877" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15877</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 25, 2013 9:17 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Version 4.05.02 should merge the system and user parts of the PATH like Windows does.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16122&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:46:27 GMT -->
+</html>

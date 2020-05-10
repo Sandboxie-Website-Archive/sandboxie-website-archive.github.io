@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25427&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:01:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Office Update trying to start inside Default Sandbox</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Office Update trying to start inside Default Sandbox</h2>
+		<p><a href="viewtopic786d786d.html?f=11&amp;t=25427">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25427</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Office Update trying to start inside Default Sandbox</h3>
+				<div class="date">Posted: <strong>Fri Feb 09, 2018 9:49 am</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">I started outlook today (NOT IN SANDBOX) as I do each morning and I saw there was an office update available. I selected and a moment later I got a warning about trying to start a program in another sandbox when one is running.<br>
+<br>
+I have a sandbox called test and I am running a program. SO I thought strange wonder what triggered an attempt on a second sandbox. I closed the error and carried on. I kept getting the pop up so I selected my default and Terminate all programs. It indicated I did not have any running.<br>
+<br>
+Every time I tried to start the office update (running outside sandbox I never run office in sandboxes) the message popped up. So I closed al office apps, I closed all my sandbox, killed the service and process. Restarted sandboxie (nothing running in any sandbox). Started outlook, and then tried to start my test again. I could not as it indicated something was now running in one of the other. Sure enough my Default Sandbox was trying to run the office update...how has this happened? How do I stop it? I don't want office updating in the sandbox I want it running outside.<br>
+<br>
+<br>
+<br>
+--------MERGED POST ------------------<br>
+SBIE1303 Only one sandbox can be active at a time<br>
+SBIE1211 Could not initiate sandboxing for process 14184<br>
+<br>
+<br>
+Happening again I killed Sandbox..ran full windows update (I usually have updates paused). Restarted Started my test sandbox program and 10 mins later this, something keeps trying to start in a sandbox and I guess the Default.<br>
+<br>
+I had also changed the default sandbox settings to Restrictiosn Start/Run Only notepad.exe can run hoping that it would prevent anything else even trying.<br>
+<br>
+The Default has zero programs installed so only has some reghive in the folder.<br>
+<br>
+Is there a way to find what program keeps trying <em>(I am assuming it is from my office app as the windows update did not appear to find office updates yet office is</em>) and also how can I stop it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office Update trying to start inside Default Sandbox</h3>
+				<div class="date">Posted: <strong>Fri Feb 09, 2018 10:57 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello ,<br>
+<br>
+Please provide all the required info so that we can assist you: (be sure to include the exact office version that you are running, and whether it is click-to-run (365) or a different version):<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Also, please post the output of your Sandboxie configuration<br>
+Configure---&gt; Edit configuration<br>
+Copy-paste the contents<br>
+Highlight the contents and click on the "&lt;/&gt;" button to format it in the forums.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office Update trying to start inside Default Sandbox</h3>
+				<div class="date">Posted: <strong>Fri Feb 09, 2018 1:30 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">Office 2016 Installed locally but was from my Office 365 subscription.<br>
+OS = Windows 10 (all programs installed not apps)<br>
+Sandboxie 5.22 64bit<br>
+<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=WindowsRasMan
+Template=DigitalPersona
+Template=WindowsLive
+Template=AdobeAcrobatReader
+Template=WacomTablet
+Template=OfficeLicensing
+Template=AdobeDistiller
+Template=OfficeClickToRun
+FileRootPath=D:\Sandbox\%USER%\%SANDBOX%
+TemplateReject=ScreenReader
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y,caduser
+NotifyStartRunAccessDenied=y
+ProcessGroup=&lt;StartRunAccess&gt;,notepad.exe
+ClosedIpcPath=!&lt;StartRunAccess&gt;,*
+
+[UserSettings_40C004F0]
+
+SbieCtrl_UserName=caduser
+SbieCtrl_NextUpdateCheck=1518791387
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_WindowCoords=303,226,1237,703
+SbieCtrl_ActiveView=40021
+SbieCtrl_EnableLogonStart=y
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=y
+SbieCtrl_AddQuickLaunchIcon=y
+SbieCtrl_AddContextMenu=y
+SbieCtrl_AddSendToMenu=y
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_BoxExpandedView=Test_apps,test_ts
+
+[Test_apps]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+
+[test_ts]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl</code></pre></div>
+
+I run various test apps several home grown (test installers). I happen to be running only an install of teamspeak to ensure that particular version was running OK I have actually been running it for 6 weeks no changes only had the issue when office notified me of updates. I can't be 100% sure it is those updates but they would only restart once my other sandbox was stopped so for some reason it would appear that the office update tried to initiate in  a sandbox.<br>
+<br>
+Sandboixe was installled several days after I installed MS Office 2016.<br>
+Other possible unique things was I had this issue because I run Inventor (not sanboxed) which I resolved by unchecking JAWS:<br>
+<br>
+<a href="viewtopic1a0c1a0c.html?f=11&amp;t=23510&amp;p=131828#p131828" class="postlink">viewtopic.php?f=11&amp;t=23510&amp;p=131828#p131828</a><br>
+<br>
+<br>
+<br>
+--------MERGED POST -----------------<br>
+I have selected for now Disable forced Programs and so far not had the pop up..will monitor. I guess worst case I disable sandbox service...try to force the Office update and then restart.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office Update trying to start inside Default Sandbox</h3>
+				<div class="date">Posted: <strong>Fri Feb 09, 2018 1:49 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello caduser,<br>
+
+<blockquote class="uncited"><div>I have selected for now Disable forced Programs and so far not had the pop up</div></blockquote>
+Did you make those changes before posting your Sandboxie configuration? (I was looking for something similar, to see what was being forced, but didn't find anything ).<br>
+<br>
+What else was forced?  (if anything).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office Update trying to start inside Default Sandbox</h3>
+				<div class="date">Posted: <strong>Fri Feb 09, 2018 7:12 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">I did it before posting but it seems temporary. Also looks like office just stopped checking. I don't have any forced programs I was just grasping at straws.<br>
+<br>
+the problem is still there though I just used the Office &gt; Account &gt; Check for updates and straight away I get the sandbox warning. And it is constant every 30 seconds another popup<br>
+<br>
+Even if I terminated my other sandbox so it could run in default I do not want office installing updates in the sandbox, why is it spawning a sandbox process.<br>
+<br>
+To be honest I had no clue what Click-to-Run was I used to use Office from a DVD and only recently moved to 365, I do see that as a running service so I killed it and that stopped the messages again for now.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office Update trying to start inside Default Sandbox</h3>
+				<div class="date">Posted: <strong>Mon Feb 12, 2018 11:04 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello caduser,<br>
+<br>
+Updates should not run in the Sandbox (in fact, they will most likely fail if forced to run there).  I cannot repro this behavior on Win 10 FCU x64 + Sbie 5.23.5 + Office 2016 C2R. <br>
+<br>
+Do you have the current Sandboxie configuration (the one that is triggering the updates to run Sandboxed)? If yes, please post it. <br>
+What is the exact version of Office that you are running? <br>
+<br>
+Please try the latest beta as it contains some updates regarding office (slightly different version, but I wonder if it affects 2016):<br>
+<a href="viewtopicb0cbb0cb.html?f=64&amp;t=25114" class="postlink">viewtopic.php?f=64&amp;t=25114</a><br>
+<br>
+If all fails, please go ahead and run a procmon so that we can review the logs:<br>
+Download procmon.exe from  <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procmon" class="postlink">https://docs.microsoft.com/en-us/sysint ... ds/procmon</a><br>
+Start procmon and reproduce the issue, then save the log and provide us the link (you will have to upload it to a file hosting website as they tend to be big files).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office Update trying to start inside Default Sandbox</h3>
+				<div class="date">Posted: <strong>Tue Feb 13, 2018 4:33 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">Do you mean the current sandbox config that is running or the config of the one it seems to want to run in?<br>
+<br>
+Seems to be outlook 1x a day at moment (when it first happened it was popping up a lot). Outlook2016 MSO 16.09001.2080 32bit<br>
+<br>
+As soon as I select File  &gt; Office Account &gt; Update Options &gt; Update Now<br>
+<br>
+Then I cannot get any work done because it is constant popup messages could not initiate sandboxing for process (some number) and it keeps running and running for a bout 5 or 6 tries and eventually stops or until I kill outlook and start over. I have this on my laptop and never had an issue there same version same OS same Office. Any way to capture the process name it is trying to start the ID of course doe snot exist as it cannot start it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office Update trying to start inside Default Sandbox</h3>
+				<div class="date">Posted: <strong>Tue Feb 13, 2018 4:40 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello caduser ,<br>
+<br>
+The config that is causing the problem. It should be the one in which Office is trying to run the updates.<br>
+<br>
+Also, please try the other things I suggested whenever you get a chance. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office Update trying to start inside Default Sandbox</h3>
+				<div class="date">Posted: <strong>Tue Feb 13, 2018 5:38 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">How do I get the config of just that sandbox?<br>
+<br>
+MERGED POST<br>
+<strong>Fixed it</strong> well work around maybe...I just unchecked the setting in Software Compatibility &gt; Microsoft Office Click-to-Run it is checked by default but not needed by me. I did this and then selected update this time the updater actually started (Red Office update checking &gt; Updates found and applying)</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25427&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:01:03 GMT -->
+</html>

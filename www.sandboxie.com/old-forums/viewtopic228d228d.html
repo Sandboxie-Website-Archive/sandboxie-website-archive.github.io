@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=21539&start=120&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:55:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Antivirus/Anti-malware|SBIE v5+[working/not][Updated 7/14/17] - Page 9</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Antivirus/Anti-malware|SBIE v5+[working/not][Updated 7/14/17]</h2>
+		<p><a href="viewtopica726a726.html?f=11&amp;t=21539">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21539</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>9</strong> of <strong>15</strong></div>
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 4/1</h3>
+				<div class="date">Posted: <strong>Wed Apr 13, 2016 11:00 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Yes, that's why<blockquote class="uncited"><div> "Kaspersky Internet 2015/16 (Windows 10, and 8/8.1 as well) (Must be removed for SBIE to function correctly) [On Win 7/8.1 that have SBIE excluded in KIS 2015, users have had some success ] "</div></blockquote> in mentioned in the thread. YMMV.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 4/1</h3>
+				<div class="date">Posted: <strong>Mon Apr 25, 2016 7:34 pm</strong></div>
+				<div class="author">by <strong>stonerd</strong></div>
+				<div class="content">just figured i'd drop an update on norton 360 (22.6.0.142) compatibility.<br>
+<br>
+although i don't seem to have to make exceptions for individual sandboxie files anymore, norton has begun deleting the files during install.<br>
+only solution is to restart when prompted, turn norton on silent mode upon boot, uninstall sandboxie, and reinstall. <br>
+i've done a few restarts since, and they seem to play nice again.<br>
+<br>
+i changed both sonar detection and low risks to "ask me" to see if norton acts like it did previously (ie. let me install sandboxie, and then ask whether exceptions should be made or not when the processes go to run).<br>
+will update again if i see any changes with the next SB beta release.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 4/1</h3>
+				<div class="date">Posted: <strong>Mon Apr 25, 2016 8:55 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">I appreciate the feedback! Good to hear back from users and updates related to all security products and how they interact with SBIE.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 4/1</h3>
+				<div class="date">Posted: <strong>Fri Apr 29, 2016 8:39 pm</strong></div>
+				<div class="author">by <strong>stonerd</strong></div>
+				<div class="content">with low risk files set to "ask me" in norton 360, sandboxie 5.11.6 installs with no issues whatsoever.<br>
+not only did the install go fine, for whatever reason, norton no longer asks me to make exceptions either.<br>
+<br>
+this user is back to 100% compatibility between the 2.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 4/1</h3>
+				<div class="date">Posted: <strong>Sat Apr 30, 2016 5:08 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Thank for the tip!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 4/1</h3>
+				<div class="date">Posted: <strong>Mon May 02, 2016 5:02 am</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content">Comodo Internet Security(CIS) Compatibility Setting.<br>
+Enable CIS compatibily settings in sandboxie.<br>
+Add this under global settings:<br>
+<br>
+ClosedFilePath=*\guard64.dll<br>
+<br>
+For CIS Enabled HIPS:<br>
+Add HIPS Rules for SbieSvc.exe set to Installer or Updater<br>
+<br>
+For CIS Enabled Autosandbox:<br>
+You need to add ignore sandbox rules for any unrecognized applications by CIS<br>
+By default any unrecognized applications will be auto sandbox by CIS<br>
+To avoid inconvenience disable autosandbox.<br>
+<br>
+@Craig can you test these? I just tested these in windows 10 x64.<br>
+<br>
+If everything goes well, you may update the template.<br>
+[Template_ComodoInternetSecurity]<br>
+Tmpl.Title=Comodo Internet Security / Antivirus / Firewall<br>
+Tmpl.Class=Security<br>
+Tmp.Url=<a href="http://www.comodo.com/home/internet-security/free-internet-security.php" class="postlink">http://www.comodo.com/home/internet-sec ... curity.php</a><br>
+Tmpl.Scan=s<br>
+Tmpl.ScanService=cmdGuard<br>
+ClosedFilePath=*\Guard32.dll<br>
+ClosedFilePath=*\guard64.dll</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 4/1</h3>
+				<div class="date">Posted: <strong>Mon May 02, 2016 9:54 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">I'll move this to contributed utilities, I don't know if we will add it directly to SBIE templates, but that's up to Curt. It's added to that thread to have a quick reference as we look @ it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 4/1</h3>
+				<div class="date">Posted: <strong>Mon May 02, 2016 12:32 pm</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite>I'll move this to contributed utilities, I don't know if we will add it directly to SBIE templates, but that's up to Curt. It's added to that thread to have a quick reference as we look @ it.</div></blockquote>
+That's ok, I don't really use AV, just installed the Firewall Component and the additional settings are required.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 4/1</h3>
+				<div class="date">Posted: <strong>Mon May 02, 2016 12:34 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>rpljhun wrote:</cite><blockquote><div><cite>Craig@Invincea wrote:</cite>I'll move this to contributed utilities, I don't know if we will add it directly to SBIE templates, but that's up to Curt. It's added to that thread to have a quick reference as we look @ it.</div></blockquote>
+That's ok, I don't really use AV, just installed the Firewall Component and the additional settings are required.</div></blockquote>
+
+Appreciate the code for sure. I'll give it a test also, and we'll go from there!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 5/0</h3>
+				<div class="date">Posted: <strong>Wed May 04, 2016 9:04 am</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">Norton Security 22.6 (browser extension disabled) + 5.11.6 okay.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 5/0</h3>
+				<div class="date">Posted: <strong>Wed May 04, 2016 9:16 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>bjm wrote:</cite>Norton Security 22.6 (browser extension disabled) + 5.11.6 okay.</div></blockquote>
+
+Until they update it, Sometimes even with that disabled, we've seen some oddball behavior with Norton Antivirus / Security Suite / 365.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 5/0</h3>
+				<div class="date">Posted: <strong>Sat May 07, 2016 11:55 pm</strong></div>
+				<div class="author">by <strong>loyal</strong></div>
+				<div class="content">AFTER one year still no support for kaspersky 16 .</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 5/0</h3>
+				<div class="date">Posted: <strong>Sun May 08, 2016 9:06 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>loyal wrote:</cite>AFTER one year still no support for kaspersky 16 .</div></blockquote>
+
+No, and there won't be until they remove their code that interferes<br>
+With Sandboxie. We will not lower our security for a antivirus program that has code from a failed sandbox attempt. We have to be aggressive into Windows and they are too. Why? Unknown, but they are the problem.<br>
+<br>
+Remember, Sandboxie is your primary protection, then one of the many AV products we've tested. Sandboxie Holdings / Invincea recommends Windows Defender if you're curious what's in your sandbox. Or, just make sure you delete those contents regularly.<br>
+<br>
+We've reached out to them in the past on what they need to do, but we're not compromising our product or our resources for an antivirus program.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 5/0</h3>
+				<div class="date">Posted: <strong>Thu May 12, 2016 10:07 am</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">Any test/opinion regarding Sophos Home Free <a href="https://www.sophos.com/en-us/lp/sophos-home.aspx" class="postlink">https://www.sophos.com/en-us/lp/sophos-home.aspx</a><br>
+Norton Security 22.6 (extension disabled + Sandboxie folder Exclude from Norton Auto-Protect) + 5.11.7 okay.  YMMV  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus/Anti-malware|SBIE v5+[working/not][Updated 5/0</h3>
+				<div class="date">Posted: <strong>Thu May 12, 2016 10:47 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Thanks! as for YMMV...so true. At home, I use Norton (free from Comcast/Xfinity) which is Norton 365....zero issues w/ SBIE with everything enabled. If I use plain ol 365, poof. Nothing works. Odd.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>9</strong> of <strong>15</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=21539&start=120&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:55:37 GMT -->
+</html>

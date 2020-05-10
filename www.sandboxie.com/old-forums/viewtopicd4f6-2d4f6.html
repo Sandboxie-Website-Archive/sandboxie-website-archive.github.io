@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=19486&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:48:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Google Chrome Updating</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Google Chrome Updating</h2>
+		<p><a href="viewtopic6a196a19.html?f=4&amp;t=19486">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=19486</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Sun Aug 24, 2014 6:53 am</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content">Google Chrome cannot update within Sandboxie, it fails every time and I have to update with an unsandboxed browser.<br>
+<br>
+Is there an answer to this ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Sun Aug 24, 2014 10:38 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">That behaviour is intentional.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Mon Aug 25, 2014 5:24 am</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content"><blockquote><div><cite>Guest10 wrote:</cite>That behaviour is intentional.</div></blockquote>
+
+Please explain. Intentional by what, why, and who.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Mon Aug 25, 2014 7:28 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">There is no setting in Sandboxie that will allow Chrome to write outside of the sandbox to its program files folder, for security reasons.<br>
+<br>
+Typically, the Chrome program files are located in the user's:<br>
+"%Local AppData%\Google\Chrome\<strong>Application</strong>"<br>
+folder, but in some cases the Chrome program files have been found to be located underneath the user's %ProgramFiles% folder.<br>
+<br>
+Even if you select "Allow Direct Access to entire Google Chrome profile folder", you are only allowing writes out of the sandbox to:<br>
+"%Local AppData%\Google\Chrome\<strong>User Data\Default</strong>"<br>
+But, as you can see, that's not where Chrome needs to update its program files.<br>
+Also, there's no allowance for Chrome to update any Registry keys when it runs sandboxed, so anything that Chrome might try to write to the Registry during an update would stay in the sandboxed Reghive.<br>
+<br>
+Allowing Chrome to update itself while sandboxed would only result in the updated program files being written to a copy of its program files folder that's inside of the sandbox, and those program files would not be updated outside of the sandbox.<br>
+<br>
+It's possible that sandboxed Chrome would run the updated program version, if it was allowed to update while sandboxed - until the sandbox contents are deleted. At that point Chrome would be the old version, whether it's run normally or sandboxed.<br>
+<br>
+Sandboxie is supposed to check on the location of the chrome.exe program that's running, if an update request comes while Chrome is running sandboxed. If the chrome.exe file is located inside of the sandbox, then it should allow the Chrome update to proceed since the Chrome program files are inside of the sandbox - and it's not necessary to update those files outside of the sandbox.<br>
+I've never tested that since I have Chrome installed normally. The same rule applies to Firefox updates.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Mon Aug 25, 2014 10:13 am</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content">@ Guest 10<br>
+<br>
+<strong>That</strong> is an immaculate and thoroughly technical description of programmed events. I thank you gratefully for taking the time to compile and post it. Such a detailed description must be of value to other readers and it has certainly more than satisfied my own lack of knowledge.<br>
+<br>
+Thank you - yabbadoo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Mon Aug 25, 2014 10:20 am</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content"><a href="viewtopic4b4a4b4a.php?p=102379#p102379" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 79#p102379</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Mon Aug 25, 2014 1:05 pm</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content"><blockquote><div><cite>Dun wrote:</cite><a href="viewtopic4b4a4b4a.php?p=102379#p102379" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 79#p102379</a></div></blockquote>
+Google Chrome has no sandbox. The term is used liberally to cover a programmable restriction which forces risk elements to inhabit a programmed "loop" where they are said to be confined. It is not remotely comparable with Sandboxie where the entire browser in engulfed in a virtual environment.<br>
+<br>
+If the Chrome "sandbox" innovation does improve the browser security, fine, but I pay no credible attention to it. Every little helps.<br>
+<br>
+Whatever the merits of Chrome`s "sandbox", there is no conflict with Sandboxie since the operational concept is "a box within a box".<br>
+<br>
+A kind of poor man`s alternative which is based significantly on Windows security system !<br>
+<br>
+To rely on MS Windows security is a joke. It is about as safe as driving on the wrong side of the road or going the wrong way down a one-way street.<br>
+<br>
+In  my case, using the brilliant and perfectly operating Windows XP, <strong>I have no Windows security</strong> after 1 April 2014. So how can this fictitious Chrome "sandbox" help me and millions of other XP users ? Sandboxie takes over from MS Windows with exceptional and indomitable efficiency. I have no use  for Windows security and their incessant bombardment of patches.<br>
+<br>
+Incidently, Chrome is my primary and well loved default browser and has been for about 6 years.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Tue Aug 26, 2014 10:15 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">You mean April 8 (or May 1 if counting the out-of-band IE update), officially. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+XP updates are still available for 5 more years (I don't see there being any issues, although they could make them harder to install at some point; trivial change to enable for now). This really is the miracle of our time. <img class="smilies" src="images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green"><br>
+<br>
+Windows updates, like updating any software (or even more so), are very important by fixing holes in the first line(s) of defense. If certain Windows flaws are exploited, Chrome's "sandbox" (restrictions, I agree with you) can no longer operate as it should, and critical bypasses can happen.<br>
+<br>
+At some point, it's the same with Sandboxie. Sandboxie's operation <strong>relies on Windows' security</strong>! If that critical foundation is compromised in any way, so is the potential for Sandboxie to be. <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Tue Aug 26, 2014 10:23 am</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">I wasn't talking about Chrome's sandbox. I meant Sandboxied chrome = Chrome running inside Sandboxie</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Tue Aug 26, 2014 10:39 am</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content">Dr. Larry Peprer in his interesting post, stated this :-<br>
+<br>
+"At some point, it's the same with Sandboxie. Sandboxie's operation relies on Windows' security! If that critical foundation is compromised in any way, so is the potential for Sandboxie to be."<br>
+<br>
+I find this an astonishing revelation to hear that Sandboxie <strong>is dependant</strong> on Windows security. A formidable anchor chain dependent on a weak link.<br>
+<br>
+Please, would one of our Sandboxie experts clarify this enlightening and surprising statement in detail ? It is one of the most radical statements I have ever come across concerning Sandboxie. A real confidence shaker.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Tue Aug 26, 2014 10:47 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>yabbadoo wrote:</cite>Dr. Larry Peprer in his interesting post, stated this :-<br>
+<br>
+"At some point, it's the same with Sandboxie. Sandboxie's operation relies on Windows' security! If that critical foundation is compromised in any way, so is the potential for Sandboxie to be."<br>
+<br>
+I find this an astonishing revelation to hear that Sandboxie <strong>is dependant</strong> on Windows security. A formidable anchor chain dependent on a weak link.<br>
+<br>
+Please, would one of our Sandboxie experts clarify this enlightening and surprising statement in detail ? It is one of the most radical statements I have ever come across concerning Sandboxie. A real confidence shaker.</div></blockquote>
+
+Sandboxie does not protect from Windows security holes. Example: Blaster worm would have infected your computer even if you were using Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Tue Aug 26, 2014 11:17 am</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>Sandboxie does not protect from Windows security holes. Example: Blaster worm would have infected your computer even if you were using Sandboxie.</div></blockquote>
+
+Amazing ! The plot is thickening statement by statement.<br>
+<br>
+My solid belief until <strong>now</strong> was that Sandboxie provided in effect a virtual hard drive, a virtual environment in which all the bugs can have a party, without any risk of infection whatsoever to the users PC. <strong>THAT</strong> is the unique and incredible property which I firmly believed that Sandboxie offered to all its loyal and faithful users.<br>
+<br>
+But now, it seems to be all going pear shaped. What are we to believe ? Is our wonderful and revered Sandboxie just another ordinary AV program complete with ordinary holes and reliant on MS Windows security for buoyancy ?<br>
+<br>
+I feel that the damaging statements being made here about Sandboxie`s credibility are the most important statements made on this entire Forum and need some urgent factual and descriptive clarification.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Tue Aug 26, 2014 11:25 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Well that was a remote thing, Buster, affecting a component (service I guess?) that wouldn't be running in Sandboxie anyway, so not a very good example. A minor point, but it'd be like using one of the Windows Firewall exploits as an example.<br>
+<br>
+<br>
+yabbadoo, Sandboxie, especially with version 4, uses the Windows' security mechanisms to not allow sandboxed programs to do <em>anything</em> (basically). That was one of its primary changes -- using official Windows stuff that would work more "officially" with future Windows versions (and updates), instead of the kernel "hacks" and patching type stuff in 3.x, etc. (Although it also cannot protect, in theory, if certain Windows holes were exploited, depending on circumstances.)<br>
+<br>
+Since the programs themselves have no [access] abilities, Sandboxie of course does stuff for them. If all of a sudden an exploit (or chain of them), allow them to gain rights, they could do something without Sandboxie "OK-ing" it. Again, depending on circumstances (not sure how much Sandboxie interferes with exploit expectations if not <em>targeting</em> Sandboxie).<br>
+<br>
+<br>
+<br>
+Oh no, yabba, AV (ordinary or not) is garbage and would never be given consideration  <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> (can easily be bypassed/stopped compared to Sandboxie). Only Sandboxie all the way!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Tue Aug 26, 2014 11:26 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Sandboxie protects system isolating applications. Windows does not run under Sandboxie´s supervision, so if there is a security hole in the OS, Sandboxie will not prevent it.<br>
+<br>
+That´s pure logic and there is nothing new or surprising on it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Updating</h3>
+				<div class="date">Posted: <strong>Tue Aug 26, 2014 11:57 am</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content">@ Dr. Larry Peprer<br>
+<br>
+I simply love your dialogue, it all makes a very logical and technical picture - thank you for the information and interest you provide.<br>
+<br>
+Buster wrote in his latter post :-<br>
+"Sandboxie protects system isolating applications. Windows does not run under Sandboxie´s supervision, so if there is a security hole in the OS, Sandboxie will not prevent it.<br>
+<br>
+That´s pure logic and there is nothing new or surprising on it."<br>
+<br>
+Firstly I personally see <strong>no</strong> logic in this comment and <strong>it is new</strong> and surprising news to me.<br>
+<br>
+Secondly, it is devastating to know that  if the OS is shot full of holes, Sandboxie`s virtual environment becomes useless. Rather naively, I thought that the playground for all those naughty bugs was confined to the world of the <strong>browser</strong>, a completely separate program and nothing to do with the OS, which is in most cases Windows. Sandboxie  simply  wrapped up the browser in a virtual protective umbrella.<br>
+<br>
+Surely it is not being suggested that Sandboxie or any other reputable AV program depends on the fallibility and doubtful qualities of the OS. If the jail guard depends on the prisoner to hand him the key, what kind of <strong>logic</strong> is that ?<br>
+<br>
+Program compatibility is obviously essential, but security is a completely separate issue. I cannot accept that an independent security system is remotely associated with the security  provision of an OS. There is simply no reason at all why the two separate functions should have any connection whatsoever other than operational compatibility.<br>
+<br>
+Windows so called security is no more than a very patched up football.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=19486&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:48:33 GMT -->
+</html>

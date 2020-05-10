@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=12931&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:42:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Install Software via Sandbox and leave installed if OK?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Install Software via Sandbox and leave installed if OK?</h2>
+		<p><a href="viewtopiccafbcafb.html?f=5&amp;t=12931">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=12931</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Install Software via Sandbox and leave installed if OK?</h3>
+				<div class="date">Posted: <strong>Sat May 12, 2012 10:02 am</strong></div>
+				<div class="author">by <strong>JohnBox</strong></div>
+				<div class="content">OK, I am slowly getting the hang of Sandboxie.<br>
+<br>
+When I install software, let's say to C:\Program Files\Name of Software\ and I am done with the install, how do I check if the software runs they way I like it and if it does leave it installed in the real C:\Program Files\Name of Software\ including all registry and settings etc?<br>
+<br>
+Is that done with Quick Recovery? If so do I need to set the whole of C:\ as a folder in the Sandbox settings - &gt; Quick Recovery?<br>
+<br>
+How do I go about it please?<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 12, 2012 10:35 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">I'm not sure if you realize the difference between installing a program normally, and then running it under Sandboxie's control, or installing a program in a sandbox - which will have the effect of always running under Sandboxie's control.<br>
+So, just to make sure that it's clear:<br>
+<br>
+In the first case, if the program is installed normally, then all of it's files and Registry entries are installed outside of the sandbox. In this case, you would probably run the program under Sandboxie's control by using the right-click "Run sandboxed" option. Or, the program could be forced to run under Sandboxie's control every time it starts, if you have a registered version of Sandboxie.<br>
+<br>
+In the second case, a program is installed inside of a sandbox by creating a sandbox for the program (if it doesn't already exist), and then right-click the installer for that program &gt; Run Sandboxed &gt; (pick a sandbox for the install).<br>
+<br>
+In the installer program you might choose a path for the install like:<br>
+C:\Program Files\Program Name\<br>
+and when the program runs, it will think that the actual path to it's folder is the above.<br>
+But the actual path to 'program.exe'<br>
+would be:<br>
+C:\Sandbox\(user)\(sandbox)\drive\C\Program Files\Program Name\program.exe<br>
+<br>
+In this case all of the program's files and Registry entries exist only inside of the sandbox, and the program will automatically run sandboxed because of that.<br>
+If you want to, you can get rid of the entire program's install by deleting the sandbox contents.<br>
+Or, keep it in the sandbox for each use.<br>
+After trying the program while it's installed inside a sandbox, you might decide to delete the sandbox contents and install it normally.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 12, 2012 10:54 am</strong></div>
+				<div class="author">by <strong>JohnBox</strong></div>
+				<div class="content">Thanks for the detailed information, yes I do get the difference between sandbox and normal install. Thank you.<br>
+<br>
+What you mention last is what I wanted to know about.<br>
+<br>
+When I am happy with the install in the sandbox I was looking for an option to simply allow it to be written to the drive, without installing it normally again, perhaps simply recover to the same folders/registry from the Quick Recovery, is that possible?<br>
+<br>
+I have C:\ in the Quick Recovery folders set for the sandbox, so that should work, no? After checking the software out, simply recover from sandbox and let it be written to the drive, no?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 12, 2012 2:28 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>JohnBox wrote:</cite>Thanks for the detailed information, yes I do get the difference between sandbox and normal install.</div></blockquote>Good. I just wanted to make sure.<blockquote><div><cite>JohnBox wrote:</cite>When I am happy with the install in the sandbox I was looking for an option to simply allow it to be written to the drive, without installing it normally again, perhaps simply recover to the same folders/registry from the Quick Recovery, is that possible?</div></blockquote>No, I'm afraid that's not a good option.<br>
+If you set C: drive as a Quick Recovery folder, then all of the folders and files that are stored in the sandbox during the install will be available from the QR window, but none of the Registry entries will be recovered.<br>
+Depending on the program that you install, there could be a large number of folders/files that you would have to scroll through and decide which ones to allow to be moved outside of the sandbox, overwriting those that may already be there.<br>
+Of course, you could just allow all of the folders/files to be moved out, if that's your choice, but as I said that will not move Registry entries.<br>
+The only approved method is to install the program normally, outside of the sandbox, once you are satisfied with it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon May 14, 2012 6:10 pm</strong></div>
+				<div class="author">by <strong>JohnBox</strong></div>
+				<div class="content">Great to know, thank you!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Install Software via Sandbox and leave installed if OK?</h3>
+				<div class="date">Posted: <strong>Mon Apr 06, 2015 7:04 pm</strong></div>
+				<div class="author">by <strong>newbie2015</strong></div>
+				<div class="content">Okay I think I'm following what's being said here but I'm having trouble and hoping someone will see this.<br>
+<br>
+When I try to install BlueStacks in Sandboxie it starts installing normally, "select language &gt; allow UAC" but then it just disappears after I give it permission to install. Never makes it to the next step where I assume it would be it asking which folder I want to store files in.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=12931&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:42:36 GMT -->
+</html>

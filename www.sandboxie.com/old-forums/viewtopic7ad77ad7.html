@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25265&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:13:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; NoScript and uBlock [Firefox config]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>NoScript and uBlock [Firefox config]</h2>
+		<p><a href="viewtopic46ea46ea.html?f=11&amp;t=25265">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25265</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>NoScript and uBlock [Firefox config]</h3>
+				<div class="date">Posted: <strong>Fri Dec 29, 2017 4:49 pm</strong></div>
+				<div class="author">by <strong>Jimbo</strong></div>
+				<div class="content">So before Firefox 57 I had an working local config for NoScript and uBlock.<br>
+I have for quite a while now been trying to fix it for Firefox 57 but to no avail.<br>
+<br>
+I prefer not to have Firefox installed inside Sandboxie but just run trough Sandboxie.<br>
+And have as little files "white-listed" as possible.<br>
+<br>
+Before Firefox 57<br>
+"White-listing"<br>
+Profiles\*\prefs.js for NoScript<br>
+Profiles\*\extension-data\ublock0.sqlite for uBblock<br>
+<br>
+Worked just fine. Now it doesn't.<br>
+<br>
+I changed uBlock to this:<br>
+<br>
+Profiles\*\browser-extension-data\<a href="mailto:uBlock0@raymondhill.net">uBlock0@raymondhill.net</a>\storage.js<br>
+<br>
+And it looked like it worked since the settings looks like they're changed after closing.<br>
+But the settings doesn't actually do anything. So I'm guessing theres's another file.<br>
+<br>
+With NoScript I have no idea. Can't find a file that changes when using NoScript. That has anything to do with NoScript.<br>
+I tried to google but could only find the old profiles prior to 57. Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: NoScript and uBlock [Firefox config]</h3>
+				<div class="date">Posted: <strong>Wed Jan 03, 2018 12:20 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello  Jimbo,<br>
+<br>
+Please see:<br>
+<a href="viewtopic76bf76bf.html?f=17&amp;t=25237" class="postlink">viewtopic.php?f=17&amp;t=25237</a><br>
+<a href="viewtopic12411241.html?p=130235#p130235" class="postlink">viewtopic.php?p=130235#p130235</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: NoScript and uBlock [Firefox config]</h3>
+				<div class="date">Posted: <strong>Wed Jan 03, 2018 3:24 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistd46c.html?mode=viewprofile&amp;u=32934">Jimbo</a> wrote: <a href="viewtopic3eff-23eff.html?p=131615#p131615" data-post-id="131615" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Dec 29, 2017 4:49 pm</div></cite>
+With NoScript I have no idea. Can't find a file that changes when using NoScript. That has anything to do with NoScript.<br>
+I tried to google but could only find the old profiles prior to 57. Thank you.</div></blockquote>
+Read the thread posted by Barb, but I ll make it easier for you. For NoScript, allow Firefox Direct file access to "storage-sync.sqlite", that file is where NoScript saves data in Firefox 57. Thats all you need to do. This file gets created when you install NoScript. Not many, but there are a few other extensions that also save data in storage-sync.sqlite.<br>
+<br>
+About Ublock. I am not using adblockers as NoScript pretty much gets rid of most of them but I believe in Firefox 57, UBO is saving data in \browser-extension-data\<a href="mailto:uBlock0@raymondhill.net">uBlock0@raymondhill.net</a>\storage.js<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25265&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:13:46 GMT -->
+</html>

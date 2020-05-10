@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25593&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:57:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Firefox 58 very slow with Sandboxie [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Firefox 58 very slow with Sandboxie [SOLVED]</h2>
+		<p><a href="viewtopic578a578a.html?f=11&amp;t=25593">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25593</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Firefox 58 very slow with Sandboxie [SOLVED]</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 3:39 am</strong></div>
+				<div class="author">by <strong>Jeffrey</strong></div>
+				<div class="content">The lag time in youtube alone has me going back to an earlier version. It takes 5 to 10 seconds for each video to load. Non-sandboxed it's pretty much instant. Not to mention, the lack of sound issue still persists. (And I'm not interested in work-arounds)  <br>
+<br>
+I can duplicate this on both my Windows 8.1 PC's.<br>
+<br>
+Anyway, for now I'll run version 55 or older and Chrome.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 58 very slow with Sandboxie</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 9:52 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Jeffrey,<br>
+<br>
+Please follow these steps:<br>
+<a href="viewtopice9bae9ba.html?p=130456#p130456" class="postlink">viewtopic.php?p=130456#p130456</a><br>
+<br>
+If the problem persists, please follow these guidelines so that we can help you:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 58 very slow with Sandboxie</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 3:06 pm</strong></div>
+				<div class="author">by <strong>Jeffrey</strong></div>
+				<div class="content">Windows version number: WIndows 8.1 Pro 64Bit (Both PC's)<br>
+Sandboxie version number: 5.24 (Both PC's)<br>
+NAME &amp; Version/build numbers of any applications involved: Firefox 58 (Both PC's)<br>
+Antivirus/anti-malware software: Avira Free (Both PC's)<br>
+<br>
+I'm surprised no one else has come across this problem. (IE: Slow)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 58 very slow with Sandboxie</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 3:25 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Hi Jeffrey, at this time I am watching a lot of videos in YouTube, this past few days I have been watching the entire OJ Simpson case, from day 1. No issue whatsoever. I cant resist from posting this, this is where I left the case last night, watch F Lee Bailey kick this cops butt about foot prints at the crime scene. Pure entertainment.<br>
+<a href="https://www.youtube.com/watch?v=r19kjTg7Zc0&amp;index=85&amp;list=PLMI3RjXTXUqrhWN3Vp05AcfyeSgMVMq9d" class="postlink">https://www.youtube.com/watch?v=r19kjTg ... yeSgMVMq9d</a><br>
+<br>
+Anyway, I go to YouTube all the time, no issue in W10 or W7. Right now I am in Firefox 59 and Sandboxie 5.24. I use Firefox 32 bits version, perhaps you should try it, Sandboxie works better with it. My W10 is 64 bits, when I got it this past July, without any hesitation, I installed the 32 bits version of Firefox for the purpose of better compatibility.<br>
+<br>
+I also disable Hardware acceleration and Webgl in Firefox Options and about:config. I do this things despite not having issues even without disabling them. And very important, I disable Multiprocess, I have been doing that since it came out. I never have issues with Firefox in the sandbox.<br>
+<br>
+I see you are using Avira, perhaps the Web guard also. Try disabling the guard to see if it makes a difference. Or, test disabling the entire AV. Antiviruses can cause delays. An update of the AV can break or fix compatibility at any time.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 58 very slow with Sandboxie</h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2018 7:19 pm</strong></div>
+				<div class="author">by <strong>Jeffrey</strong></div>
+				<div class="content">I tried everything you mentioned, even going to 32bit and nothing worked. Then I realized something. (Wish I thought of this sooner). I bet the problem I'm having is directly related to the no sound issue. So I applied this fix here...<br>
+<br>
+Open Firefox outside Sandboxie<br>
+type about:config and accept the risk<br>
+search sandbox<br>
+Switch security.sandbox.content.level to 2 (mine was 3, if needed switch it to 1 or 0 ).<br>
+Close Firefox<br>
+<br>
+...and it worked. So I have sound (which was something I was going to tackle later) and no more lag. I suspect everyone who had the no sound issue had the lag as well but they didn't stick around long enough to notice it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 58 very slow with Sandboxie</h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2018 10:54 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Good, Jeffrey. I didn't mention Sandbox content level as I thought disabling Multiprocess would include that <br>
+<br>
+Workarounds like disabling Multiprocess and changing Sandbox content level fix many problems in Firefox related and unrelated to Sandboxie.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25593&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:57:47 GMT -->
+</html>

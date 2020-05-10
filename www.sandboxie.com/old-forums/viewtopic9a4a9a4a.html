@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16100&start=45&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Win class performance, cause (NEW), and a test for all - Page 4</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Win class performance, cause (NEW), and a test for all</h2>
+		<p><a href="viewtopicba5aba5a.html?f=40&amp;t=16100">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=16100</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>4</strong> of <strong>6</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 11, 2013 8:30 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">pastuch, just trying to do what I can! My middle names aren't "Ace Ventura" for nothing. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> I just found something else about the time you posted...<br>
+<br>
+tzuk, please don't give up on this <em>issue</em> yet. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I hope you can see what I'm pointing out, or give some explanation.<br>
+<br>
+And what do you mean, focused on the wrong stuff? YOU mentioned Job Object stuff as possibly being the cause of slowdown, so I'm pointing out that has nothing to do with it (not that I ever thought it did...). <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I'm still just focused on CreateWindow because that IS a specific area where speed is being lost. Seriously, if that gets running as fast as I believe it CAN be, the window creation should be about as fast as can be, and I'd be extremely happy! (I'm talking about IE windows and PA Configuration for example, to see major gains.)<br>
+<br>
+I haven't spotted any other things where huge time is being lost, so I don't get your statement. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> Do you know about something else?? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+Anyway, I just fired up API Monitor again last night just to see if I could notice... <em>anything</em> amiss, etc., and again was surprised by a key detail I found within a matter of minutes (why didn't I check before?!). And that is.....<br>
+<br>
+NtDeviceIoControlFile(4, ...);<br>
+_wcsicmp(<em>box_name</em>, <em>box_name</em>);<br>
+<br>
+Exactly the same calls/results over and over again 50-150 times for <strong>ONE</strong> CreateWindow call!! (Doesn't happen with dialogs.) Why 50-150? Well, there are 50 other "top-level" (???) window objects with just API Monitor in the sandbox; 150 of them after adding 10 IE windows.<br>
+<br>
+<strong>What in the world is that?!</strong> <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> Besides doing the same calls over and over and over, it makes absolutely no sense that identical strings would be "compared."<br>
+<br>
+Probably more to it than that, but WHY is <em>X</em> (anything) happening for EACH sandbox window with CreateWindow? <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"> I just can't see any reason... I figured something like that was happening, but wasn't sure until now.<br>
+<br>
+Again I ask, why doesn't CreateWindow just run "naturally" in the Job (no slowdown)?? It's all in the process/Job anyway, so let it run.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 11, 2013 11:29 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">It's not a question of giving up, because I am happy with the performance of Sandboxie, and am not looking to keep tweaking stuff.<br>
+Too often these tweaks end up causing unexpected side effects and that is not good.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 11, 2013 12:14 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">The other day you SAID you were glad I kept at it <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"> <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">, and now what I've been mentioning is a bigger thing than before (a HUGE difference, vs your negligible change once a few windows are open...). I understand what you are saying about tweaks (hang on), but I'm afraid you're discounting what I'm saying... <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+Why in the world is Sandboxie doing that crazy amount of unnecessary work?? By "tweaking" that, you'd just be "not doing" that extra stuff that seems to serve NO purpose, so therefore, it's less tweaked and more native!<br>
+<br>
+(I also noticed that additionally with CreateWindow, messages are sent to all the other windows, which explains their CPU usage. Also happens when dialogs are <em>displayed</em>, not simply <em>created</em>. That's all completely useless and a waste? See below.)<br>
+<br>
+<br>
+In case you don't get what I'm saying (it seems), the fix to make it all as perfect as can be (yes!) is very, very simple, and nothing more than what you <strong>already</strong> have/had! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<strong>The solution is:</strong> Just make window creation stuff behave as in 4.02 with OpenWinClass=*<br>
+<br>
+Everything was still in a Job and sandboxed stuff worked fine, no? So what's wrong with that?<br>
+<br>
+That way, Sandboxie does none of that useless junk. <strong>NONE</strong>. Window creation is as fast as UNsandboxed! Can't do better than that, right?<br>
+<br>
+The only difference is that you need to prefix: class names if necessary of course, but that's a non-issue. Skip everything else as Open=* in 4.02.<br>
+<br>
+<br>
+Seems REALLY clear to me. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Comments/disputes about this? Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 11, 2013 12:53 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Well, the other day I was being nice.  In the grand scheme of things, spending all that time -- and I'm including all these endless discussions that led up to it -- just to make PowerArchiver open its configuration window one second faster, that is just not worth it at the end of the day.<br>
+<br>
+And you are once again saying that you understand there is a risk in keep making changes while at the same time you keep urging me to make more meaningless changes that will have meaningless effect on overall performance.  Please, just stop.  Programs do not spend their life calling CreateWindow all the time, and it is not interesting to make it a wee bit faster.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 11, 2013 1:50 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Well thanks for being nice. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> And thanks for listening to my "annoyances," and your time, etc.!<br>
+<br>
+This is disappointing (a shame) and makes me wish I would have told you this new-found stuff FIRST... I just kept saying "CreateWindow," and you eventually found the GuiProxy-when-it-shouldn't thing, when I didn't realize all this other extra stuff was happening too. <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"> (That's hundreds or thousands of other extra function calls and <em>messages to other windows</em> PER CreateWindow, for NO reason that you've stated. I don't see how you can be happy with that... Seems sloppy to me doing unnecessary/inefficient stuff.)<br>
+<br>
+Surely you must wonder a bit to check what I talked about? *shrug* You were so quick to explain/blame about Job/Windows stuff, but don't say anything about the big slowdown <strong>Sandboxie</strong> makes (like before).<br>
+<br>
+FYI: I've never ran PowerArchiver sandboxed (other than if it happens to open a browser download, etc.), sorry. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> That was just an example since it has so many CreateWindow calls...<br>
+<br>
+<br>
+Yeah, risk and urging changes... If you consider my "solution" (please, just skip all those useless operations! <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked">), I'd think the GuiProxy change you made was more of a risk. And THAT was almost meaningless I'm telling you with my usual stuff running. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+See what I'm saying? Yep, I see what you're sayin' too. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> That's what EVERY change is. That's what the betas are for... So wait till the NEXT beta cycle?<br>
+<br>
+<br>
+2 quick examples of how your change is MORE "meaningless" with my usual few windows open than what I'm asking (urging, really! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">) you to change...<br>
+<br>
+Using PowerArchiver Configuration example again: I said your change reduced it from just over <strong>3</strong>, to just over <strong>2</strong>. Eliminate the wasteful operations I'm talking about, the time will be &lt;<strong>1s</strong>. (It's already there when running in its own box, which would improve a BIT more, and NOT degrade with other windows.) See? You saved 1 second, what I'm asking is to save MORE than a second on TOP of your change.<br>
+<br>
+The IE window open time: Your change saved 1/8 sec (exactly as I estimated) with my "usual windows" open. What I'm asking you to change should save at LEAST another 1/4, and it won't degrade. Again, that's not meaningless compared to your change.<br>
+<br>
+<br>
+Please, before continuing to think it's meaningless, just try GUI Bench or PowerArchiver with OpenWinClass=*. Of course that removes the Job now, but you can see that 4.02 with Job performs just as well. Everything works, like I said, right? Just skip everything except class-prefixing.<br>
+<br>
+That absolutely destroys your change. There couldn't be a LESS meaningless difference. It makes all the difference in the world!<br>
+<br>
+I PROMISE there's no other single thing that makes such a drastic difference. Why, oh why didn't I catch this earlier... <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 11, 2013 2:00 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Oh, forgot to say, it seems pretty insulting (e.g. not nice <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">) to call my suggestion "meaningless." Did you forget about my GUI Bench Create results???<br>
+<br>
+Only 1 IE window (nothing else)<br>
+19.6s BEFORE your change<br>
+7~10s AFTER your change<br>
+<strong>2.2s</strong> if you do what I'm asking<br>
+<br>
+10 IE windows<br>
+42.6s BEFORE your change<br>
+44~49s AFTER your change (again, worse!)<br>
+<strong>2.8s</strong> if you do what I'm asking<br>
+<br>
+<br>
+Or do you consider just a single browser window open too extreme? <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"><br>
+<br>
+Just unbelievable that you would say that! <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 11, 2013 2:54 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">You just said a couple of posts ago that Sandboxie was doing a lot of useless junk,<br>
+so maybe you shouldn't take offense to the word meaningless.<br>
+<br>
+So far I'm not sure that I understand from you if you actally see any practical performance<br>
+issues with version 4, or if you just keep pushing for more tweaks because your benchmarks<br>
+tell you that things are not as fast as version 3.76.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 11, 2013 3:04 pm</strong></div>
+				<div class="author">by <strong>pastuch</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>(...) <br>
+Other than DR_LaRRY_PEpPeR, who is going into way too much detail, my impression is the three or so other people who reported performance issues just make a "me too" style of post, and don't give any details at all, and never follow up on anything.<br>
+(...) </div></blockquote>
+
+tzuk,<br>
+ok if you want I can give you full RDP access to my virtual machine on fast 120/10 Mbit link for some test or I can send you this virtual appliance.<br>
+I have the same performance problems as in this video <a href="http://www.youtube.com/watch?v=Sr0uhUZ_gis" class="postlink">http://www.youtube.com/watch?v=Sr0uhUZ_gis</a><br>
+and it does not matter whether I run it on real machine or in virtual machine.<br>
+<br>
+---<br>
+Win7x64, i7-960, 24GBRAM, HD6970, registered Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 11, 2013 3:14 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">OK.  I hope it goes without saying that this is not normal behavior.  I won't take you up on the RDP suggestion but maybe we can figure it out some other way.  Do you have software that you install both in your real computer and in the virtual machine?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 11, 2013 4:42 pm</strong></div>
+				<div class="author">by <strong>pastuch</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Do you have software that you install both in your real computer and in the virtual machine?</div></blockquote>
+
+Yes, it's Opera 12.16 x64 and ... I just found a detail why on some machines the Opera works fast and on other very slow - checked option: Opera Menu-&gt;Appearance-&gt;Toolbars-&gt;Bookmarks Bar. When "Bookmarks Bar" is turned on and user e.g. opens a session with more tabs then the slowdown is horrible.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 11, 2013 8:48 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>You just said a couple of posts ago that Sandboxie was doing a lot of useless junk,<br>
+so maybe you shouldn't take offense to the word meaningless.</div></blockquote>
+
+Oh, I wouldn't actually take offense to anything you say, I hope you know. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> "Useless junk" is just like a description that came out, and I apologize if it seemed like I was "bashing" you or anything (sometimes I don't realize). I'm extremely critical of my own stuff, haha, and didn't think about my phrasing...<br>
+<br>
+
+<blockquote class="uncited"><div>So far I'm not sure that I understand from you if you actally see any practical performance<br>
+issues with version 4, or if you just keep pushing for more tweaks because your benchmarks<br>
+tell you that things are not as fast as version 3.76.</div></blockquote>
+
+About the former, yes! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Unless you just discount what I see and feel as not being practical... That's with CreateWindow, which is not (nor has it ever been) anything compared to what pastuch (or others) have referred to. BTW, I just discovered something accidentally a couple days ago that I think may be related to that (never used Opera, just guessing).<br>
+<br>
+<br>
+Anyway, your changes, practically, in my "usual active" sandbox barely made a difference. I still see/feel what I've been referring to forever: IE window opening delay, toggling Work Offline "freeze," and opening Open/Save (Common Controls) dialogs (not TRUE "dialogs," has CreateWindow calls), several other things "feel off." And of course there's the launch time, related to window creation that I still feel the most.<br>
+<br>
+You know, I was just thinking after my last post: If you could make the improvement by skipping that "useless" (???) stuff with CreateWindow, it would be SO awesome then, practically, that it would be the FIRST time I would NOT think about wishing I could use 3.76. THAT is saying something, no? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Regarding "pushing" because of benchmarks, no! I'm always about real usage (my own stuff, or past PHP engine development), and simply use benchmarks to check things. If you look back at everything I've reported/"complained" about, every single time I've simply <em>described</em> what I'm seeing. I think that's right...? Only when you doubt/discount what I'm saying do I THEN have to get some benchmark to prove it. I'm thinking back to the first GUI slowness thing that you fixed pretty quick, although you again didn't understand what I was talking about initially.<br>
+<br>
+So no, I don't particularly enjoy having to find some numbers to PROVE my points... You're acting like I'm making benchmarks specifically to find problems! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+CAN you explain what Sandboxie is trying/needing to do with CreateWindow when it goes through a list of other sandboxed windows, and for each one, sends a message and calls those same functions? I figured it might be some old leftover code/logic/stuff, hence the "useless." <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 12, 2013 3:20 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>pastuch wrote:</cite><blockquote><div><cite>tzuk wrote:</cite>Do you have software that you install both in your real computer and in the virtual machine?</div></blockquote>
+
+Yes, it's Opera 12.16 x64 and ... I just found a detail why on some machines the Opera works fast and on other very slow - checked option: Opera Menu-&gt;Appearance-&gt;Toolbars-&gt;Bookmarks Bar. When "Bookmarks Bar" is turned on and user e.g. opens a session with more tabs then the slowdown is horrible.</div></blockquote>
+
+What do you mean a session with "more tabs"?  I experimented a bit with Opera 12.16 and the Bookmarks Bar and opening 20-30 tabs and everything kept running smoothly for me.  Do you have any Software Compatibilty settings?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 12, 2013 3:28 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>cally, in my "usual active" sandbox barely made a difference. I still see/feel what I've been referring to forever: IE window opening delay, toggling Work Offline "freeze," and opening Open/Save (Common Controls) dialogs (not TRUE "dialogs," has CreateWindow calls), several other things "feel off." And of course there's the launch time, related to window creation that I still feel the most.</div></blockquote>
+
+Well, I don't see any freeze when I click Work Offline or click again to go back online.  Or Open/Save dialogs.<br>
+How about if you turn off all Software Compatibilty settings, and use a sandbox with default settings, does that make a difference?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 12, 2013 6:12 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">I don't doubt that you don't. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> What are you thinking now...? Isn't this the same stuff we've done before I found the problem function?<br>
+<br>
+<em>Of course</em> I don't notice any freeze if I just have an IE window or 2 open in a sandbox! In my "usual active" box as I call it, I usually have 2-3 IE windows with OE, Pale Moon all the time, and Firefox on and off. Then I see a delay -- easy to feel when I toggle it fairly often and can't click, scroll the page, anything for a bit. It was probably over a half-second before your change, maybe half now (never ever saw anything like that before v4). I can feel that it improved by ~0.12s just like IE window opening (4ms faster * 30-ish CreateWindow calls). I said earlier, estimating the CreateWindow delay is adding around 1/3 sec, which can be fully removed if you can do what I asked about.<br>
+<br>
+<br>
+If I use OpenWinClass=* and open 25 more IE windows (I don't use that many, an example), there finally is a delay about like what I feel usually. Try that with my nearly "default" settings? 16+ second freeze! OE is pretty unresponsive during that time (not sure if it's being flooded with messages or not). Again, I believe there's no reason for this and would go away if you DON'T do all that extra stuff with CreateWindow!<br>
+<br>
+Also, for usability: Launching IE in my normal box took 1s before your change; ~0.88 now (same 1/8 improvement); if you remove that "useless stuff" <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> and it's as fast as Open=*, it would be ~0.5. THAT is wonderful, and very, very acceptably usable! Nearly as fast as 3.76 (and wouldn't degrade as much), which I'd have a hard time feeling (read: it's fine). Although that's still way off UNsandboxed (more than double), it at least seems "responsive."<br>
+<br>
+As I've said, I'm used to everything INSTANT. I hope that being a "power user" doesn't discount my issues -- being a "power user" is WHY I chose to use Sandboxie over other HORRIBLE slowdown "security" stuff. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+<br>
+To answer your question (as I've already said before), I don't really have too many settings from default. Software Compatibility for AutoSizer and EMET only. My own settings for 4t Tray. <strong>Note:</strong> for ALL reports, I stop AutoSizer and 4t Tray, so they're a non-factor. Naturally they do add a small overhead (4t more), both sandboxed and NOT (so there's really no relative difference, but...).<br>
+<br>
+Remember, no other OpenWinClass settings make stuff slower than defaults now (a SUPERB part of your change <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">). I'm always referring to defaults...<br>
+<br>
+I have also been running all tests in a fresh box with unchanged defaults. On laptop, Sandboxie.ini hasn't been touched, other than commented-out OpenWinClass lines from that previous testing. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> No Software Compatibility because there's literally no software installed.<br>
+<br>
+Nope, the only thing that makes a difference is how many "top-level" window objects or whatever are in the sandbox and Sandboxie cycles through for each CreateWindow call. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> Again, I've NEVER noticed a problem with true dialogs (Internet/Firefox Options, IE 6 Find, etc.) and they don't seem to have this progressive slowdown.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 12, 2013 6:58 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I am having a hard time distilling your long posts to something that I can use.  What are you doing to get a 16 second delay?<br>
+<br>
+On a more general note, I am not going to get rid of that "useless junk" because it is not useless at all.<br>
+<br>
+There are possibly aspects that can be improved, in CreateWindow and elsewhere, but I am not looking to make sweeping changes or optimize based on guesses.<br>
+<br>
+I would like to experience a performance issue myself first hand, then make the smallest fix that I can, that will make a real difference.<br>
+<br>
+So.  In case these problem have to do with OpenWinClass settings, I am asking you to remove Software Compatibility and other settings that may introduce OpenWinClass settings into the mix.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>4</strong> of <strong>6</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16100&start=45&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:03 GMT -->
+</html>

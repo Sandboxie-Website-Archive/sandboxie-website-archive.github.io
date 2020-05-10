@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25621&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:56:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; crash SbieCtrl.exe</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>crash SbieCtrl.exe</h2>
+		<p><a href="viewtopicf5dbf5db.html?f=11&amp;t=25621">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25621</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>crash SbieCtrl.exe</h3>
+				<div class="date">Posted: <strong>Wed Mar 21, 2018 1:13 pm</strong></div>
+				<div class="author">by <strong>goran2222</strong></div>
+				<div class="content">Faulting application name: SbieCtrl.exe, version: 5.24.0.0, time stamp: 0x5aa185d7<br>
+Faulting module name: ntdll.dll, version: 10.0.16299.248, time stamp: 0xeffc9126<br>
+Exception code: 0xc0000374<br>
+Fault offset: 0x00000000000f87bb<br>
+Faulting process id: 0x1b20<br>
+Faulting application start time: 0x01d3c1264bbed900<br>
+Faulting application path: C:\Program Files\Sandboxie\SbieCtrl.exe<br>
+Faulting module path: C:\Windows\SYSTEM32\ntdll.dll<br>
+Report Id: b6646b53-a482-4a6b-9b3e-240eda5ec6b6<br>
+Faulting package full name: <br>
+Faulting package-relative application ID: <br>
+<br>
+Windows 10x64 1709<br>
+Windows Defender<br>
+When i game Final Fantasy XV</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: crash SbieCtrl.exe</h3>
+				<div class="date">Posted: <strong>Wed Mar 21, 2018 1:37 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello goran2222,<br>
+<br>
+I am currently downloading the FFXV demo from Steam, in the meantime, can you please provide the missing info so that I can test this correctly?<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+(Especially the repro steps part) <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: crash SbieCtrl.exe</h3>
+				<div class="date">Posted: <strong>Wed Mar 21, 2018 2:17 pm</strong></div>
+				<div class="author">by <strong>goran2222</strong></div>
+				<div class="content">Sandboxie x64 5.24<br>
+<br>
+I go to in Options and chnge different settings audio, graphics. When go to back from Option to Main Menu crash.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: crash SbieCtrl.exe</h3>
+				<div class="date">Posted: <strong>Wed Mar 21, 2018 3:25 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello goran2222 ,<br>
+<br>
+I cannot repro the issue. I changed several settings  (audio, subtitles, brightness) and started a new game. The first time I launched the game, it crashed, but there was no event in the Event viewer and Sbie did not crash at all. I tried about 5 more times and had no problems. <br>
+I tested on 2 different new sandboxes, default settings, launching the game via Steam, as an admin.  <br>
+<br>
+Try a new Sandbox with default settings to see if the issue follows you there.<br>
+Also, ensure you have launched the game outside Sandboxie first (as it needs to install some redist stuff).  Then close it and relaunch in Sbie. <br>
+<br>
+If the issue persists, provide more information as previously requested and I will give it another go.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: crash SbieCtrl.exe</h3>
+				<div class="date">Posted: <strong>Wed Mar 21, 2018 3:40 pm</strong></div>
+				<div class="author">by <strong>goran2222</strong></div>
+				<div class="content">All software is installed in own sandbox. After this crash i play game outside game work same as in sandbox, game is no crash in both example, only sbie. Redist stuff i have installed outside sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: crash SbieCtrl.exe</h3>
+				<div class="date">Posted: <strong>Fri Mar 30, 2018 5:43 am</strong></div>
+				<div class="author">by <strong>Sandboxie User</strong></div>
+				<div class="content">Just wanna chime in with my one off(may be more but just wanna report maybe you might find the culprit and fix from further crashes) similar issue of Sandboxie crashing just a couple of hours ago:<br>
+<br>
+Faulting application name: SbieCtrl.exe, version: 5.24.0.0, time stamp: 0x5aa185d7<br>
+Faulting module name: ntdll.dll, version: 6.1.7601.24024, time stamp: 0x5a58e571<br>
+Exception code: 0xc0000374<br>
+Fault offset: 0x00000000000bf6b2<br>
+Faulting process id: 0x1d2c<br>
+Faulting application start time: 0x01d3c7bf64ebc0c0<br>
+Faulting application path: C:\Program Files\Sandboxie\SbieCtrl.exe<br>
+Faulting module path: C:\Windows\SYSTEM32\ntdll.dll<br>
+Report Id: f7086498-33f7-11e8-b865-fcaa1471b051<br>
+<br>
+The only difference is I am running Opera web browser instead of a game.<br>
+<br>
+Is there a dump file or files that Sandboxie dump from memory when the program crashes so I can upload these files for you to analyze to see what's going on?</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25621&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:56:24 GMT -->
+</html>

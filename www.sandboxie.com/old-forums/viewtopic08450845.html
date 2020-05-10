@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16388&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:44:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.08] Add a phishing template for Google Chrome</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.08] Add a phishing template for Google Chrome</h2>
+		<p><a href="viewtopicc9b6c9b6.html?f=40&amp;t=16388">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=16388</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.08] Add a phishing template for Google Chrome</h3>
+				<div class="date">Posted: <strong>Wed Aug 28, 2013 1:56 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Chrome should have a template for the "Safe Browsing" anti-phishing files.<br>
+------------<br>
+Note to tzuk...<br>
+The variable '%Tmpl.Chrome%' can't be used, since it points to the folder underneath "User Data":<br>
+Tmpl.Chrome=%Local AppData%\Google\Chrome\User Data\Default<br>
+------------<br>
+<br>
+I would recommend that all Chrome users allow access to the Chrome "Safe Browsing" (anti-)phishing files.<br>
+And, just as the phishing template for Firefox has some security type files added to it, I have added a setting to this template to allow Chrome to update it's "Certificate Revocation Lists" file, when sandboxed.<br>
+<br>
+<br>
+[Template_Local_Google_Chrome_Phishing_DirectAccess]<br>
+Tmpl.Class=Local<br>
+Tmpl.Title=Allow direct access to Google Chrome phishing files<br>
+OpenFilePath=chrome.exe,%Local AppData%\Google\Chrome\User Data\Safe Browsing*<br>
+OpenFilePath=chrome.exe,%Local AppData%\Google\Chrome\User Data\Certificate Revocation Lists<br>
+<br>
+(Dragon and Iron users can check to see if they have those files, and revise the template to use 'dragon.exe' or 'iron.exe' in place of 'chrome.exe')<br>
+------<br>
+The above template will allow sandboxed Chrome to keep these files updated, outside of the sandbox:<br>
+Safe Browsing Download Whitelist<br>
+Safe Browsing Extension Blacklist<br>
+Safe Browsing Bloom<br>
+Safe Browsing Bloom Prefix Set<br>
+Safe Browsing Cookies<br>
+Safe Browsing Cookies-journal<br>
+Safe Browsing Csd Whitelist<br>
+Safe Browsing Download<br>
+Certificate Revocation Lists</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 28, 2013 2:02 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I will add this to the default settings for a new sandbox, just like Template_Firefox_Phishing_DirectAccess.<br>
+<br>
+Will probably change chrome.exe to apply to a few more Chrome-based browsers that I know about.<br>
+<br>
+Thanks Guest10!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 02, 2013 9:51 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Added in version 4.05.08 in<br>
+<br>
+Sandbox Settings &gt; Applications &gt; Web Browser &gt; Google Chrome<br>
+Allow direct access to Google Chrome phishing database<br>
+<br>
+(Applies to chrome.exe, dragon.exe, iron.exe, opera.exe, maxthon.exe.)<br>
+<br>
+The setting will only apply automatically to new sandboxes!<br>
+For existing sandboxes, it has to be enabled manually.<br>
+<br>
+Thanks again!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16388&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:44:56 GMT -->
+</html>

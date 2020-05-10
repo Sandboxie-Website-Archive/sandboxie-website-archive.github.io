@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13667&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:19:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie safe place to unzip infected files?[SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie safe place to unzip infected files?[SOLVED]</h2>
+		<p><a href="viewtopic6c356c35.html?f=17&amp;t=13667">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=13667</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie safe place to unzip infected files?[SOLVED]</h3>
+				<div class="date">Posted: <strong>Sat Sep 15, 2012 7:35 pm</strong></div>
+				<div class="author">by <strong>Suzanne2</strong></div>
+				<div class="content">I am a website designer.<br>
+<br>
+I have sometimes had sites hacked.<br>
+<br>
+I would like to be able to unload the zip backup files of a site locally and scan them with antivirus and do  checks for virus files, modified htaccess files etc.<br>
+<br>
+I am wary of downloading potentially hacked site files as I do not want to infect my machine and then infect my other sites, and the machines of site visitors....<br>
+<br>
+Would sandboxie be a suitable, safe environment to do my scans and checks?<br>
+Is there a size limit to sandboxie space?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie safe place to unzip infected files?</h3>
+				<div class="date">Posted: <strong>Sun Sep 16, 2012 7:50 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>Suzanne2 wrote:</cite>Would sandboxie be a suitable, safe environment to do my scans and checks?</div></blockquote>I think it's an excellent environment for unzipping and examining files.<br>
+<br>
+Create a sandbox for that use:<br>
+Open Sandboxie Control's window (the tray icon) and use "Sandbox" &gt; Create New Sandbox<br>
+<br>
+You will likely want to turn off Immediate Recovery, and "Remove" the default Recovery Folders for that sandbox.<br>
+Use the "Sandbox" menu, or right-click the sandbox name in the window:<br>
+Sandbox Settings &gt; Recovery &gt; Quick Recovery (and) Immediate Recovery<br>
+<br>
+Check the settings at:<br>
+Configure &gt; Software Compatibility<br>
+to see what programs have been automatically detected on your computer, and what pre-defined templates have been applied for use in all sandboxes.<br>
+The settings in these templates (in the templates.ini file) will be applied to this sandbox in addition to the settings that show in Sandbox Settings. Sometimes a template, such as one for a download manager program, will allow a specific program using that sandbox to save items out of the sandbox. You can select an item there and use "Remove" so the template will not be applied to all sandboxes.<br>
+<br>
+I prefer to start 7-Zip or Winzip first, by right-clicking its shortcut and using Run Sandboxed to select a sandbox to use.<br>
+Navigate to the archive file and extract the files. They will be extracted in the sandbox you selected for the file manager to use, whether the archive file is located in the same or a different sandbox, or is outside of any sandbox.<br>
+So you could have the archive file in a sandbox where your sandboxed browser downloaded it (such as DefaultBox), and run the file manager using the sandbox that you created to unarchive the files for examination.
+<blockquote><div><cite>Suzanne2 wrote:</cite>Is there a size limit to sandboxie space?</div></blockquote>No, there's no limit on the size of a sandbox.<br>
+When you're done, just use Delete Contents for the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie safe place to unzip infected files?</h3>
+				<div class="date">Posted: <strong>Wed Apr 19, 2017 12:47 pm</strong></div>
+				<div class="author">by <strong>ddfeder</strong></div>
+				<div class="content">Thank you for the great idea.  However, my Anti Virus (AVG) won't allow any infected files to run.  If I understand the above then as long as I'm operating within a sandbox I can run a suspect file as long as I except that area from my virus protection software?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie safe place to unzip infected files?</h3>
+				<div class="date">Posted: <strong>Wed Apr 19, 2017 1:20 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi ddfeder, <br>
+<br>
+You could do that. However, as safe as Sandboxie is, please do read this entry before you proceed (just to be aware):<br>
+<a href="../index290e.html?FrequentlyAskedQuestions#HowSafe" class="postlink">https://www.sandboxie.com/index.php?Fre ... ns#HowSafe</a><br>
+Also make sure to follow the instructions provided above regarding blocking host access to Sandboxed applications (in case you are using templates, etc..). <br>
+<br>
+Other than that, if you proceed with caution, Sandboxie is a fantastic environment to examine files and see what they do. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie safe place to unzip infected files?</h3>
+				<div class="date">Posted: <strong>Wed Apr 19, 2017 3:13 pm</strong></div>
+				<div class="author">by <strong>ddfeder</strong></div>
+				<div class="content">Thanks for the prompt reply.  When I saw the date of the post I thought the thread might be dead so I posted the question elsewhere.  But I am most appreciative of your response,<br>
+<br>
+Dov</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie safe place to unzip infected files?[SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Apr 19, 2017 5:22 pm</strong></div>
+				<div class="author">by <strong>ddfeder</strong></div>
+				<div class="content">If I can impose again - and this is about AVG so I don't even know if it is the right place to be asking but ....<br>
+<br>
+1. I've created a new sandbox call "arena"<br>
+2. Modified settings as per above suggestions<br>
+3. Downloaded and saved zipped file to "arena"<br>
+4. AVG notified me of maleware and deleted threat<br>
+5. Opened AVG Menu/Settings/Components/Resident Shield --&gt; Turned off for 10 minutes<br>
+6. Opened AVG Menu/Settings/Components/Software Analyzer --&gt; Turned to Always Ask<br>
+7. Opened AVG Menu/Settings/General/Exceptions --&gt; added: D:\Sandboxed Downloads\*<br>
+8. Re-downloaded and saved zipped file to "arena"<br>
+9. Extracted file to "Temp" folder in "arena"<br>
+10.AVG interrupts extraction and deletes file.<br>
+<br>
+So - should I switch to McAffee?<br>
+<br>
+Thanks in advance for any direction/suggestions you can give me -<br>
+<br>
+Dov</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie safe place to unzip infected files?[SOLVED]</h3>
+				<div class="date">Posted: <strong>Fri Apr 21, 2017 11:16 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello ddfeder ,<br>
+<br>
+<a href="http://ccm.net/faq/26301-avg-disable-the-automatic-file-deletion-feature" class="postlink">http://ccm.net/faq/26301-avg-disable-th ... on-feature</a><br>
+You may want to run some google searches to see if there's anything else you need to do.<br>
+<br>
+As for switching to another one, that's entirely up to you. We have a thread with a lot of information regarding Antivirus software and their compatibility with Sandboxie, which might help you make a decision. <br>
+Please have a look at this:<br>
+<a href="viewtopica726a726.html?f=11&amp;t=21539" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=21539</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13667&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:19:56 GMT -->
+</html>

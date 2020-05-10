@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14090" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-03-18T12:33:09-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14090</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-03-18T12:33:09-04:00</updated>
+
+		<published>2013-03-18T12:33:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14090&amp;p=88121#p88121</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14090&amp;p=88121#p88121"/>
+		<title type="html"><![CDATA[[.04] Sandboxie ignores __COMPAT_LAYER setting]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14090&amp;p=88121#p88121"><![CDATA[
+In version 4.01.04, Sandboxie implements the behavior in this topic:<br><br>If registry key ..\AppCompatFlags\Layers or the environment variable __COMPAT_LAYER specify the RunAsInvoker compat switch,<br>Sandboxie will not do UAC elevation.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Mar 18, 2013 12:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2012-11-18T08:43:38-04:00</updated>
+
+		<published>2012-11-18T08:43:38-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14090&amp;p=85379#p85379</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14090&amp;p=85379#p85379"/>
+		<title type="html"><![CDATA[[.04] Sandboxie ignores __COMPAT_LAYER setting]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14090&amp;p=85379#p85379"><![CDATA[
+Thanks, I was not aware of this feature.  Sandboxie checks the manifest for highestAvailable but doesn't check the __COMPAT_LAYER environment variable.  I will check and fix as necessary.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun Nov 18, 2012 7:43 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Am Yisrael Chai]]></name></author>
+		<updated>2012-11-17T13:43:05-04:00</updated>
+
+		<published>2012-11-17T13:43:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14090&amp;p=85368#p85368</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14090&amp;p=85368#p85368"/>
+		<title type="html"><![CDATA[[.04] Sandboxie ignores __COMPAT_LAYER setting]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14090&amp;p=85368#p85368"><![CDATA[
+This is a behavior of Sandboxie that is inconsistent with Windows:<br><br>In Windows, setting the environment variable __COMPAT_LAYER=RunAsInvoker will override an application manifest of highestAvailable, and the application will NOT be elevated.<br><br>But Sandboxie ignores the __COMPAT_LAYER and will elevate the application based solely on the manifest.<br><br>Similarly, Sandboxie also ignores HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers, which also overrides the application manifest in Windows.<br><br>This makes it difficult for me to test applications in Sandboxie, because I need to be able to specify the elevation behavior without modifying the checksums of my applications.<br><br>I wonder if there is a setting to make the current version of Sandboxie behave consistently with Windows, or if this ability will be found in a future version of Sandboxie.<br><br>I hope I have explained this clearly. Please let me know if anything needs clarification.<br><br>HOW TO REPRODUCE<br>Try these steps in both Windows and Sandboxie to observe the difference:<br><br>1. Find an application (preferably non-installer) that is manifested as highestAvailable.<br>2. Run it normally to verify that the UAC prompt shows up.<br>3. Then, set the environment variable __COMPAT_LAYER=RunAsInvoker<br>4. Run the application again to see the inconsistent behavior in Windows and Sandboxie.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=12623">Am Yisrael Chai</a> — Sat Nov 17, 2012 12:43 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

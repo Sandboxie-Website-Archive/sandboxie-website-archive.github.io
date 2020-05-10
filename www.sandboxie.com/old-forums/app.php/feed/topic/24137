@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/24137" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2017-04-06T08:48:29-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/24137</id>
+
+		<entry>
+		<author><name><![CDATA[henryg]]></name></author>
+		<updated>2017-04-06T08:48:29-04:00</updated>
+
+		<published>2017-04-06T08:48:29-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127271#p127271</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127271#p127271"/>
+		<title type="html"><![CDATA[Re: Excel2016(365version) SERIOUS PROBLEM![RESOLVED Beta 5.1]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127271#p127271"><![CDATA[
+Many thanks Syrinx for your take on the issue.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=534">henryg</a> — Thu Apr 06, 2017 8:48 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Syrinx]]></name></author>
+		<updated>2017-04-01T17:05:40-04:00</updated>
+
+		<published>2017-04-01T17:05:40-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127200#p127200</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127200#p127200"/>
+		<title type="html"><![CDATA[Re: Excel 2016 (365 version) SERIOUS PROBLEM!!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127200#p127200"><![CDATA[
+<blockquote><div><cite>henryg wrote:</cite>It does appear to do so. How did SB affect a non-sandboxed program? Potential to do so for other programs?</div></blockquote>The "Click 2 Run Service" which is part of the Office version you had <strong>is modified by SBIE</strong> in order to allow them to <em>work 'together'</em>. I don't know the details but it is one of the few things altered outside of a sandbox. From what I recall it seemed to be something of a milestone getting the C2R versions working alongside SBIE. It was an 'in high demand' option [so while I hate MS Office myself] thus I can understand why they wanted to get it working well together. However before they added some automation to the changes, when the C2R option was first added (for paid users) the service would have to be manually restarted by the user [or a reboot would be needed] for the changes to take effect or some jazz.<br><br>In short, unlike most things, SBIE actually makes changes to an un-sandboxed process ~ in this case ~ The C2R Service included with some versions of office. I can't actually think of another off the top of my head so it may very well be (currently) the only process it will touch outside of a sandbox.<br><br>Either way, it isn't blindly injecting everything outside of a sandbox so the potential to cause issues with other software like you saw here should remain low to non-existent.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=29518">Syrinx</a> — Sat Apr 01, 2017 5:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[henryg]]></name></author>
+		<updated>2017-04-01T14:49:50-04:00</updated>
+
+		<published>2017-04-01T14:49:50-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127197#p127197</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127197#p127197"/>
+		<title type="html"><![CDATA[Re: Excel2016(365version) SERIOUS PROBLEM![SOLVED Beta 5.17.]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127197#p127197"><![CDATA[
+<blockquote><div><cite>Barb@Invincea wrote:</cite>henryg,This was a specific issue, not generalized and it has been fixed now. </div></blockquote>Sorry, but not really good enough.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=534">henryg</a> — Sat Apr 01, 2017 2:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Barb@Invincea]]></name></author>
+		<updated>2017-03-31T11:10:35-04:00</updated>
+
+		<published>2017-03-31T11:10:35-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127189#p127189</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127189#p127189"/>
+		<title type="html"><![CDATA[Re: Excel2016(365version) SERIOUS PROBLEM![SOLVED Beta 5.17.]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127189#p127189"><![CDATA[
+henryg,<br><br>This was a specific issue, not generalized and it has been fixed now. <br><br>Marking the issue resolved. <br><br>Regards,<br>Barb.-<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> — Fri Mar 31, 2017 11:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[henryg]]></name></author>
+		<updated>2017-03-31T07:59:18-04:00</updated>
+
+		<published>2017-03-31T07:59:18-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127187#p127187</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127187#p127187"/>
+		<title type="html"><![CDATA[Re: Excel 2016 (365 version) SERIOUS PROBLEM!!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127187#p127187"><![CDATA[
+It does appear to do so. How did SB affect a non-sandboxed program? Potential to do so for other programs?<br><br>Do you want to edit the title to say "SOLVED". I couldn't do so. And move it for that  matter; I never intended for it to be separate from other beta issues.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=534">henryg</a> — Fri Mar 31, 2017 7:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2017-03-28T14:44:18-04:00</updated>
+
+		<published>2017-03-28T14:44:18-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127134#p127134</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127134#p127134"/>
+		<title type="html"><![CDATA[Re: Excel 2016 (365 version) SERIOUS PROBLEM!!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=127134#p127134"><![CDATA[
+This is fixed in 5.17.6.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Tue Mar 28, 2017 2:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[henryg]]></name></author>
+		<updated>2017-03-13T18:47:08-04:00</updated>
+
+		<published>2017-03-13T18:47:08-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126941#p126941</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126941#p126941"/>
+		<title type="html"><![CDATA[Re: Excel 2016 (365 version) SERIOUS PROBLEM!!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126941#p126941"><![CDATA[
+Thank you<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=534">henryg</a> — Mon Mar 13, 2017 6:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Barb@Invincea]]></name></author>
+		<updated>2017-03-13T17:00:09-04:00</updated>
+
+		<published>2017-03-13T17:00:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126940#p126940</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126940#p126940"/>
+		<title type="html"><![CDATA[Re: Excel 2016 (365 version) SERIOUS PROBLEM!!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126940#p126940"><![CDATA[
+Hello henryg,<br><br>Thanks for the steps! I am getting the same crash in Excel 2016 (the application freezes and I have to kill it). I did not see anything from Sandboxie...However, I think there's something going on, since reverting to 5.17.2 or older allows for this feature to work. <br>I am not sure why this happening, but I have made the devs aware. <br><br>We'll update this thread when more info becomes available. <br><br>Regards,<br>Barb.-<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> — Mon Mar 13, 2017 5:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[henryg]]></name></author>
+		<updated>2017-03-13T13:41:38-04:00</updated>
+
+		<published>2017-03-13T13:41:38-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126939#p126939</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126939#p126939"/>
+		<title type="html"><![CDATA[Re: Excel 2016 (365 version) SERIOUS PROBLEM!!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126939#p126939"><![CDATA[
+<blockquote class="uncited"><div>Hello henryg , Can you please provide more information regarding how are you reproducing the issue? </div></blockquote>Open spreadsheet, highlight data range, go to Data Tab and click on "From Table" under "Get &amp; Transform". Watch the query editor window open...and crash! <blockquote class="uncited"><div>If the problem is happening outside Sandboxie, then it is not Sandboxie related </div></blockquote>The Sandboxie driver/Click to run stuff is loaded whatever, or isn't it? If regressing to 5.17.1 OR uninstalling Sandboxie (as the ONLY change) cures the problem, than IT IS Sandboxie related however much your logic says otherwise!<blockquote class="uncited"><div>What are your OS, Antivirus and Sandboxie versions?  </div></blockquote>Window 10 x64 (v 1607 buld 14373.726) Sandboxie either 5.16 or 5.17.1 (no crash); 5.17.5 crashes Excel data query every time. Excel v16.0.7870.7034 32 bit ATM.<br><br>And I uninstalled and reinstalled Office 365 multiple times, including using the Microsoft "nuclear" remove tool, and also tried the 64bit version. And the behaviour is the same on my laptop - similar setup but different hardware/drivers and less software installed.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=534">henryg</a> — Mon Mar 13, 2017 1:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Barb@Invincea]]></name></author>
+		<updated>2017-03-13T12:45:48-04:00</updated>
+
+		<published>2017-03-13T12:45:48-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126938#p126938</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126938#p126938"/>
+		<title type="html"><![CDATA[Re: Excel 2016 (365 version) SERIOUS PROBLEM!!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126938#p126938"><![CDATA[
+Hello henryg ,<br><br>Can you please provide more information regarding how are you reproducing the issue? <br>If the problem is happening outside Sandboxie, then it is not Sandboxie related.<br><br>What are your OS, Antivirus and Sandboxie versions? <br><br>Regards,<br>Barb.-<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> — Mon Mar 13, 2017 12:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[henryg]]></name></author>
+		<updated>2017-03-13T12:39:17-04:00</updated>
+
+		<published>2017-03-13T12:39:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126937#p126937</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126937#p126937"/>
+		<title type="html"><![CDATA[Excel2016(365version) SERIOUS PROBLEM![RESOLVED Beta 5.17.6]]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126937#p126937"><![CDATA[
+Sandboxie 5.17 is causing Excel 2016 to crash every time when using the data query editor (formerly Power Query) when I try to create a table query. I have lost so much time over this as it never occurred to me that Sandboxie c/would affect a program that was not being sandboxed! Ironically perhaps, often if I have a problem with a program crashing I try to see if it does the same when sandboxed. <br><br>I can tell you that with 5.17.1 it is ok, but I cannot spend any more time on this, eg going through the beta iterations. But this problem must not be allowed to escape into the next release issue; or my goose is cooked!!  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"><br><br>Thank you Aomei for your imaging program!!!!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=534">henryg</a> — Mon Mar 13, 2017 12:39 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

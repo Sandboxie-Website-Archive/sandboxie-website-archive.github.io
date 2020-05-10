@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14579" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-01-27T16:30:00-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14579</id>
+
+		<entry>
+		<author><name><![CDATA[AndromedaXS]]></name></author>
+		<updated>2013-01-27T16:30:00-04:00</updated>
+
+		<published>2013-01-27T16:30:00-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86903#p86903</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86903#p86903"/>
+		<title type="html"><![CDATA[[.01] No access to internet after F-Secure upgrade]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86903#p86903"><![CDATA[
+I removed the added IPC lines and disabled the "[ ] F-Secure Internet Protection".<br>For improved compatiblity and everything is working again.<br><br>Thanks Tzuk for your response.<br>Steven<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=13365">AndromedaXS</a> — Sun Jan 27, 2013 3:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-01-26T17:55:50-04:00</updated>
+
+		<published>2013-01-26T17:55:50-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86876#p86876</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86876#p86876"/>
+		<title type="html"><![CDATA[[.01] No access to internet after F-Secure upgrade]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86876#p86876"><![CDATA[
+I tried F-Secure and Firefox 18 but I don't see any connectivity problems.  However F-Secure reports these version numbers for me:<br><br>version 1.71 build 340<br>CCF CUIF 10.01 build 35273<br>CCF DAAS2 1.10 build 299<br>CCF Automatic Update Agent 1.05 build 1048<br>CCF Upstream 2.00 build 113<br>CCF Diagnostics 8.00 build 18132<br>CCF Scanning 1.14 build 155.6945<br>CCF Network 1.02 build 126<br>CCF Reputation 1.0 build 25.1877<br><br>As you can see some of these numers are higher than what you posted.  Maybe another update was released and it fixes the problem?<br><br>* * *<br><br>EDIT.  I was checking the above with Sandboxie version 4.01.  I checked again with Sandboxie 3.76 and Firefox doesn't even start.<br><br>But, I opened Sandboxie Control &gt; Configure menu &gt; Software Compatibility and disabled compatibility with F-Secure, then Firefox is working normally again.<br><br>So as a first step I suggest that you also try to disable compatibility with F-Secure in the Software Compatibility window in Sandboxie.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sat Jan 26, 2013 4:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-01-25T15:43:16-04:00</updated>
+
+		<published>2013-01-25T15:43:16-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86847#p86847</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86847#p86847"/>
+		<title type="html"><![CDATA[[.01] No access to internet after F-Secure upgrade]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86847#p86847"><![CDATA[
+I don't know if this resource means anything:<br>Pipe \device\namedpipe\FS_CCF_NI_DAEMON0 <br>but it does look like it's related to F-Secure.<br><br>You could try adding it:<br>Sandbox Settings &gt; Resource Access &gt; IPC Access &gt; Direct Access<br>"Add": <strong>\device\namedpipe\FS_CCF_NI_DAEMON*</strong><br>OK<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Fri Jan 25, 2013 2:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AndromedaXS]]></name></author>
+		<updated>2013-01-25T09:12:02-04:00</updated>
+
+		<published>2013-01-25T09:12:02-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86838#p86838</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86838#p86838"/>
+		<title type="html"><![CDATA[[.01] No access to internet after F-Secure upgrade]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86838#p86838"><![CDATA[
+&gt;AndromedaXS wrote:<br>&gt;Direct IPC Access (OpenlpcPath)<br>&gt;*\BaseNamedObjects*\pripservertaken*<br>&gt;If this is the way it actually appears in your settings, it was spelled wrong.<br>It was a typo. I noticed it when I posted after reading my message.<br>I tried to change it but had to wait 10 minutes before I could alter my message. <br>After 10 minutes I forgot. Reading your reply now.<br><br>Correct line is<br>*\BaseNamedObjects*\pipeservertaken*<br><br>Steven<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=13365">AndromedaXS</a> — Fri Jan 25, 2013 8:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-01-25T07:32:16-04:00</updated>
+
+		<published>2013-01-25T07:32:16-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86834#p86834</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86834#p86834"/>
+		<title type="html"><![CDATA[[.01] No access to internet after F-Secure upgrade]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86834#p86834"><![CDATA[
+<blockquote><div><cite>AndromedaXS wrote:</cite>Direct IPC Access (OpenlpcPath)<br>*\BaseNamedObjects*\<strong>prip</strong>servertaken*</div></blockquote>If this is the way it actually appears in your settings, it was spelled wrong.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Fri Jan 25, 2013 6:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-01-25T07:22:29-04:00</updated>
+
+		<published>2013-01-25T07:22:29-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86832#p86832</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86832#p86832"/>
+		<title type="html"><![CDATA[[.01] No access to internet after F-Secure upgrade]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86832#p86832"><![CDATA[
+Alright, sorry to hear that setting didn't help.  I don't think I will be able to get to this today but I will make an effort to try to install F-Secure tomorrow and see if I can come up with an updated set of compatibility settings.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Jan 25, 2013 6:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AndromedaXS]]></name></author>
+		<updated>2013-01-25T06:55:58-04:00</updated>
+
+		<published>2013-01-25T06:55:58-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86828#p86828</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86828#p86828"/>
+		<title type="html"><![CDATA[[.01] No access to internet after F-Secure upgrade]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86828#p86828"><![CDATA[
+&gt;Stopped how?<br>&gt;Some part or all of Sandboxie won't run ?<br><br>The Sandboxie is operational.<br>The issue is that after the upgrade from F-Secure is installed.<br>Firefox which is started through Sandboxie will not connect to the internet.<br><br>I have monitored the connection with TCPview when Sandboxie is started.<br>I see that<br>- Firefox is put in LISTING mode.<br>Normal behavior would be to SYNC_SENT, ESTABLISHED when connected.<br>Firefox is started. But doesnot appear on the taskbar as an icon. So it is<br>there you just do not see it. It would appear that the firewall is blocking<br>the response from the remote server. But after disabling the firewall the<br>result remains the same. F-Secure DeepGuard is disabled.<br><br>I added "*\BaseNamedObjects*\pipeservertaken*" shutdown and restarted.<br>But no effect. Below I added a new resouce log after adding<br>- Open Sandboxie Control<br>- click right on "Sandbox DefaultBox"<br>- item: Sandbox Settings<br>- menu: Resource Access<br>- submenu: IPC Access<br>- submenu: Direct Access<br><br>Steven<br><br>Direct IPC Access (OpenlpcPath)<br>*\BaseNamedObjects*\pripservertaken*<br>[\RPC Control\__hex12__*.*.*.*.*.*.*.*]<br>[\RPC Control\F-Secure ORSP V1]<br>[*\BaseNamedObjects*\FSMB *]<br>[*\BaseNamedObjects*\dxk390x-*]<br>[*\BaseNamedObjects*\pipserverhere*]<br>[*\BaseNamedObjects*\pipserversync*]<br>[*\BaseNamedObjects*\PGPhkSharedMemory]<br>[*\BaseNamedObjects*\PGPocTrayInstSem]<br>[*\BaseNamedObjects*\PGPocTrayListenSem]<br>[*\BaseNamedObjects*\PGPtray_Hidden_Window]<br>[*\BaseNamedObjects*\PGPlsp Debug Print Mutex]<br><br><br><em>snipped. --tzuk</em><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=13365">AndromedaXS</a> — Fri Jan 25, 2013 5:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-01-25T06:23:24-04:00</updated>
+
+		<published>2013-01-25T06:23:24-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86822#p86822</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86822#p86822"/>
+		<title type="html"><![CDATA[[.01] No access to internet after F-Secure upgrade]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86822#p86822"><![CDATA[
+Looks like F-Secure maybe added one more resource.  AndromedaXS please try:<br><br>Open Sandboxie Control, go to Sandbox Settings, expand Resource Access, IPC Access, Direct Access, click Add, paste:<br><br><strong>*\BaseNamedObjects*\pipeservertaken*</strong><br><br>Then click OK all the way back and restart your Firefox under Sandboxie.  If it still doesn't work, I would like to see a new resource log, with this setting still in effect.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Jan 25, 2013 5:23 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-01-24T19:29:28-04:00</updated>
+
+		<published>2013-01-24T19:29:28-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86810#p86810</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86810#p86810"/>
+		<title type="html"><![CDATA[Re: Sandiebox has no access to internet after F-Secure upgra]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86810#p86810"><![CDATA[
+<blockquote><div><cite>AndromedaXS wrote:</cite>... my Sandboxie which has been working for years now has stopped.</div></blockquote>Stopped how?<br>Some part or all of Sandboxie won't run ?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Thu Jan 24, 2013 6:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AndromedaXS]]></name></author>
+		<updated>2013-01-24T12:02:50-04:00</updated>
+
+		<published>2013-01-24T12:02:50-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86804#p86804</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86804#p86804"/>
+		<title type="html"><![CDATA[[.01] No access to internet after F-Secure upgrade]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14579&amp;p=86804#p86804"><![CDATA[
+After an upgrade from F-Secure my Sandboxie which has been working for years now has stopped.<br><br>I have deleted the content. Disabled firewalls. <br>Created a new Sandiebox. But no luck.<br><br>Using Sandboxie version 3.76 (32-bit) registrated (latest version)<br>WinXP ver 5.1.2600 Professional version 2002 SP 3<br><br>F-Secure Security Panel 1.62 build 373<br>-CCF Agent 1.62 build 284<br>-CCF CUIF 10.01 build 33962<br>-CCF DAAS2 1.10 build 299<br>-CCF Automatic Update Agent 1.05 build 1041<br>-CCF Upstream 2.00 build 107<br>-CCF Diagnostics 8.00 build 17952<br>-CCF Scanning 1.14 build 155.6945<br>-CCF Network 1.02 build 115<br>-CCF Reputation 1.0 build 25.1756<br><br>Below a copy from the accessmonitor.<br>Any ideas how to get Sandiebox working again?<br><br>Steven<br><br><em>snipped. --tzuk</em><br>--------------------------------------------------------------------<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=13365">AndromedaXS</a> — Thu Jan 24, 2013 11:02 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=53&t=21354&start=765&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:03:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 5.01 Beta Available (latest version 5.04 RC) - Page 52</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>5.01 Beta Available (latest version 5.04 RC)</h2>
+		<p><a href="viewtopicb6bdb6bd.html?f=53&amp;t=21354">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=53&amp;t=21354</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>52</strong> of <strong>54</strong></div>
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.03.3)</h3>
+				<div class="date">Posted: <strong>Fri Sep 25, 2015 12:10 pm</strong></div>
+				<div class="author">by <strong>nEuDy</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite><blockquote><div><cite>nEuDy wrote:</cite>Hi Sandboxie-Team,<br>
+it´s the first time, i´ve installed sandboxie on a Windows 10 System. So i´ve tried to install the latest Beta 5.03.3. After installing and rebooting the System, i get anytime on Starting a program Sandboxed the following error:<br>
+SBIE2224 Sandboxed program has crashed: SandboxieDcomLaunch.exe<br>
+It doesn´t matter how i start programs (wether to right click in sandbox control on the sandbox -&gt; Run Sandboxed -&gt; Run Web Browser or Run Any Program...<br>
+Also i tried to right click on a program on my system (explorer), and choose "Run Sandboxed". Everytime the same error occurs.<br>
+But at the Sandboxie Control is shows me the following programs still as active, after closing the error message:<br>
+Start.exe<br>
+SandboxieRpcSs.exe<br>
+SandboxieDcomLaunch.exe<br>
+WerFault.exe<br>
+<br>
+When i´m now trying to start a new sandboxed program (actual no one of the other programs were terminated), i´ve got the window like "Run Any Program" or "Run from Start Menu".. But the programs are not shown, only a new "start.exe" occurs within the sanboxie control..<br>
+<br>
+what can i do?<br>
+Thank you very much <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile"></div></blockquote>
+
+One, I would delete the contents of your sandbox, This will also force close any running programs. Are you running any Antivirus software?</div></blockquote>
+
+Hi Craig,<br>
+deleting the contents did not help. btw, i also created a new clean sandbox.<br>
+But i´m running an Antivirus software (Bitdefender 2015)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Fri Sep 25, 2015 2:00 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Dun wrote:</cite><blockquote><div><cite>Curt@invincea wrote:</cite><strong>Fixes in 5.03.1</strong><br>
+2) The print spooler (spoolsv.exe) is now permitted to write files to the system temp folder (windows\temp) and the user temp folder (\Users\&lt;username&gt;\AppData\Local\Temp)</div></blockquote>
+How to close this security hole you just have opened?  <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"></div></blockquote>
+We opened these because we were getting a lot of support issues with PDF writers (mostly) that were trying to write to these folders.  The reasoning was, that if someone uses spoolsv to write malware to one of these folders, they still have to figure out a way to execute it.  If there are a lot of users that have an issue here, I can reconsider this change.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Fri Sep 25, 2015 3:57 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite><blockquote><div><cite>Dun wrote:</cite><blockquote><div><cite>Curt@invincea wrote:</cite><strong>Fixes in 5.03.1</strong><br>
+2) The print spooler (spoolsv.exe) is now permitted to write files to the system temp folder (windows\temp) and the user temp folder (\Users\&lt;username&gt;\AppData\Local\Temp)</div></blockquote>
+How to close this security hole you just have opened?  <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"></div></blockquote>
+We opened these because we were getting a lot of support issues with PDF writers (mostly) that were trying to write to these folders.  The reasoning was, that if someone uses spoolsv to write malware to one of these folders, they still have to figure out a way to execute it.  If there are a lot of users that have an issue here, I can reconsider this change.</div></blockquote>
+Well, I think I more less understand such issues, even such changes as defaults. But if you implement such workarounds, please give us a way to disable such 'features' completely in Sandboxie settings. I'm stuck with 5.01.13 ATM. Thanks for reply</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Fri Sep 25, 2015 5:16 pm</strong></div>
+				<div class="author">by <strong>roady</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Curt@invincea wrote:<br>
+Fixes in 5.03.1<br>
+2) The print spooler (spoolsv.exe) is now permitted to write files to the system temp folder (windows\temp) and the user temp folder (\Users\&lt;username&gt;\AppData\Local\Temp)</div></blockquote>
+
+Updates like this 1 weaken the protection of SandBoxie......IMHO,if some1 wants to print an internet file,be it a webpage or a whatever file,they should download it to their computer and recover from SandBoxie to print it,NOT directly from SandBoxie's sandbox.... <img class="smilies" src="images/smilies/icon_evil.gif" width="15" height="15" alt=":evil:" title="Evil or Very Mad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Fri Sep 25, 2015 5:19 pm</strong></div>
+				<div class="author">by <strong>btm</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite><strong>Fixes in 5.03.1</strong><br>
+We opened these because we were getting a lot of support issues with PDF writers (mostly) that were trying to write to these folders.  The reasoning was, that if someone uses spoolsv to write malware to one of these folders, they still have to figure out a way to execute it.  If there are a lot of users that have an issue here, I can reconsider this change.</div></blockquote>
+
+<blockquote><div><cite>btm wrote:</cite><blockquote><div><cite>Curt@invincea wrote:</cite>Combined 32/64 installer:<br>
+2) I removed the spooler print to file property sheet in the sandbox settings.  This is too risky to allow setting it permanently in the GUI where it can easily be forgotten.  You can still add AllowSpoolerPrintToFile=y manually in sandbox.ini.
+</div></blockquote>
+
+Yikes I don't understand why you'd want to shoot yourself in the foot there! You had a decent start but if it's that bad of an option, why not shower the (mostly empty) page with warnings (or an extra 'are you sure prompt') instead? I hate to play the devils advocate here as I'm actually not against manually altering the ini but in order to 'appeal to the masses' a click-able option like you had would be ideal with a few extra warnings in the mix. [pardon the drunk speak] In my opinion it's easier to forget the manual changes as they aren't shown in the interface.</div></blockquote>
+
+So a gui option was too risky but forcing open paths on everyone isn't....wow<br>
+Why not just bring back this GUI option and add those paths as a toggle selection there set to false by default? Everyone wins, no potential holes permanently opened just for the convenience of others....but it can still be opened if it is needed by the specific user.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Fri Sep 25, 2015 5:19 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">@Curt<br>
+As you well said, please reconsider that change for the above reasons. I'm with Dun, roady and some others in other forums as well. Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Fri Sep 25, 2015 7:52 pm</strong></div>
+				<div class="author">by <strong>Ruan</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Fixes in 5.03.1<br>
+2) The print spooler (spoolsv.exe) is now permitted to write files to the system temp folder (windows\temp) and the user temp folder (\Users\&lt;username&gt;\AppData\Local\Temp)</div></blockquote>
+Please add me also to the list of users unhappy with this change. Security before compatibility always.<br>
+<br>
+ty.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Sat Sep 26, 2015 5:12 am</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">Maybe something like this: If SBIE detects custom (not MS) printer, the software compatibility tab will show up with [x] Printer/Print Spooler full access and it will allow things to avoid issues with printer. Easy to turn off.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Sat Sep 26, 2015 6:57 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>We opened these because we were getting a lot of support issues with PDF writers (mostly) that were trying to write to these folders.  The reasoning was, that if someone uses spoolsv to write malware to one of these folders, they still have to figure out a way to execute it.  If there are a lot of users that have an issue here, I can reconsider this change.</div></blockquote>
+That's why I asked for a more comfortable solution: <a href="viewtopic5a3e5a3e.html?f=4&amp;t=21390" class="postlink">http://forums.sandboxie.com/phpBB3/view ... =4&amp;t=21390</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Sat Sep 26, 2015 7:44 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>kawaiiwolf wrote:</cite>Looks like chrome is doing the same thing too. I'm running chrome out of a portable install ( <a href="http://portableapps.com/apps/internet/google_chrome_portable" class="postlink">http://portableapps.com/apps/internet/g ... e_portable</a> ) since I had some initial difficulties installing it into a sandbox.<br>
+<br>
+Note, on a lighter/white background the inactive window has a black border too.</div></blockquote>
+
+We are aware of it. But it's on the low list of priorities, and we're not even sure if this is directly a SBIE issue.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Sat Sep 26, 2015 8:34 am</strong></div>
+				<div class="author">by <strong>soccerfan</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite><blockquote><div><cite>Dun wrote:</cite><blockquote><div><cite>Curt@invincea wrote:</cite><strong>Fixes in 5.03.1</strong><br>
+2) The print spooler (spoolsv.exe) is now permitted to write files to the system temp folder (windows\temp) and the user temp folder (\Users\&lt;username&gt;\AppData\Local\Temp)</div></blockquote>
+How to close this security hole you just have opened?  <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"></div></blockquote>
+We opened these because we were getting a lot of support issues with PDF writers (mostly) that were trying to write to these folders.  The reasoning was, that if someone uses spoolsv to write malware to one of these folders, they still have to figure out a way to execute it.  If there are a lot of users that have an issue here, I can reconsider this change.</div></blockquote>
+@Curt:<br>
+You may keep this feature out of the box for those who value comfort over security,<br>
+but for those of us who truly value security, please give us a way to disable this feature <br>
+(even if it requires digging in and editing the sandboxie.ini file or something similar). <br>
+That way, we would have a way to 'opt out' of this rather 'dangerous' (imho) precedent. <br>
+Many thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Sat Sep 26, 2015 12:17 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">I agree about this printing issue, I don't like the security hole.  If I really need to print something, all I have to do is remove it from the sandbox.  No biggie</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Sat Sep 26, 2015 2:28 pm</strong></div>
+				<div class="author">by <strong>w0lfrun</strong></div>
+				<div class="content">I also agree with the above posters regarding the Printing issue security hole. Security trumps convenience for me anyway, as well as for the majority I would think.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Sat Sep 26, 2015 3:12 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Peter2150 wrote:</cite>If I really need to print something, all I have to do is remove it from the sandbox.  No biggie</div></blockquote>
+Hi Pete, if the file is malware and it has to be run out of the sandbox in order to print it, I ll get infected.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Sun Sep 27, 2015 4:10 am</strong></div>
+				<div class="author">by <strong>xy667</strong></div>
+				<div class="content">I'm running Sandboxie 5.04 on Windows 10 and after updating Sandboxie to the latest version I am getting the following:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - robotaskbaricon.exe [00000102]</code></pre></div>
+
+Is there anything I can do to troubleshoot this? Roboform still seems to be working.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>52</strong> of <strong>54</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=53&t=21354&start=765&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:03:54 GMT -->
+</html>

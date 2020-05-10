@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=21228&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:47:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Parent and child processes</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Parent and child processes</h2>
+		<p><a href="viewtopicacdeacde.html?f=4&amp;t=21228">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=21228</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Parent and child processes</h3>
+				<div class="date">Posted: <strong>Tue Jun 02, 2015 5:36 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">Hi,<br>
+<br>
+It's very simple feature request. An example: let's set firefox as the only one program it can start in 'Firefox' sandbox. The idea is to let firefox start other processes when it needs it like: rundll32.exe, spellchecker.exe etc. Tickbox next to 'Run access'.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Parent and child processes</h3>
+				<div class="date">Posted: <strong>Tue Jun 02, 2015 6:47 pm</strong></div>
+				<div class="author">by <strong>btm</strong></div>
+				<div class="content">SBIE already does this, anything started by a program which is running in a sandbox is also sandboxed. If however you mean you have trouble with specific programs being unnable to run you may want to re-check the 'Restrictions' &gt; 'Start/Run Access' page and see if you have it set to allow only specific programs and add those you want allowed there. Automating this process or some form of whitelisting would defeat the point of this option.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Parent and child processes</h3>
+				<div class="date">Posted: <strong>Wed Jun 03, 2015 12:06 am</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content"><blockquote><div><cite>btm wrote:</cite>SBIE already does this, anything started by a program which is running in a sandbox is also sandboxed.</div></blockquote>
+I know, but this is not I'm talking about.<br>
+Does you always know what child process will be created by parent one? No. That's why I want tickbox to allow all child processes to run, while the only parent process will be on 'Start/Run Access' list. In this case sandboxie would deny to run any process not started by parent one</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Parent and child processes</h3>
+				<div class="date">Posted: <strong>Wed Jun 03, 2015 8:47 am</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content"><blockquote><div><cite>Dun wrote:</cite>
+I know, but this is not I'm talking about.<br>
+Does you always know what child process will be created by parent one? No. That's why I want tickbox to allow all child processes to run, while the only parent process will be on 'Start/Run Access' list. In this case sandboxie would deny to run any process not started by parent one</div></blockquote>
+But what happens if a program, a browser for example, which is compromised spawns a child process? Well I am going to ask a more basic question: Can a compromised / exploited or whatever browser spawn a malicious child process? Even with a different unknown name?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Parent and child processes</h3>
+				<div class="date">Posted: <strong>Wed Jun 03, 2015 4:14 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">Where do you want to get this malicious child process from?<br>
+Choosing 1 app + its child process is still tighten than default 'Start/Run access = All' setting.<br>
+<br>
+Let me put this in other words. How the hell I know which processes are needed to be added to 'Start/Run access' when I want to run <strong>any</strong> app and make it work as stable as outside of sandobox?<br>
+<br>
+Firefox is relatively easy to know what process it needs to run, however just 'firefox.exe' is not enough to make it stable.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Parent and child processes</h3>
+				<div class="date">Posted: <strong>Wed Jun 03, 2015 4:34 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">You are right. Then I agree with you and second your request, good idea indeed.  <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=21228&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:47:17 GMT -->
+</html>

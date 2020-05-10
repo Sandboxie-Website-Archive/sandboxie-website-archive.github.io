@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=21955&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:33:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie user interface issues ...</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie user interface issues ...</h2>
+		<p><a href="viewtopic44974497.html?f=5&amp;t=21955">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=21955</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie user interface issues ...</h3>
+				<div class="date">Posted: <strong>Sun Oct 18, 2015 3:50 pm</strong></div>
+				<div class="author">by <strong>ChrisA</strong></div>
+				<div class="content">When I open the Sandbox Settings window (right-click on the Sandboxie icon in the main window), I cannot resize it at all.<br>
+<br>
+And when I left-click on the Applications area in this same window, to reveal the various choices of Web Browswer, Email Reader, PDF / Printing, etc., in the left side margin, I can't enlarge the menu area to be able to see the full name of any item. For example, under Web Browser, I see "Internet Ex" (the rest of 'Explorer' is cut off); "Google Ch" (the rest of 'Chrome' is cut off).  Looking further down ... Security / Privac ... Destop Utiliti ... Download M ... etc. <br>
+<br>
+Otherwise, the menu vertical scroll bar works.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie user interface issues ...</h3>
+				<div class="date">Posted: <strong>Wed Oct 21, 2015 11:45 am</strong></div>
+				<div class="author">by <strong>btm</strong></div>
+				<div class="content">@ChrisA<br>
+While I would also like to be able to re-size the settings ui this isn't currently possible. As for the names being cutoff the only way I could think of to test this was to enlarge my themes font. When I did so I had both a horizontal and vertical scroll bar allowing me to see the names within the sandbox settings. When using the vertical scrollbar I found that it is not ideal but it gets the job done. It was almost impossible see the full text for Internet Explorer and Google Chrome all at once as you pointed out. :-/ Allowing a user to re-size or implementing a smarter (expanding/shrinking) left column vs font size would be very helpful in maintaining ease of use.<br>
+<br>
+@lindseynicole<br>
+Wrong Sandbox program info!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie user interface issues ...</h3>
+				<div class="date">Posted: <strong>Wed Oct 21, 2015 5:14 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Is the font used in the left pane dependent on your Desktop screen resolution?<br>
+If so, have you tried right-clicking the Desktop and choose whatever seems appropriate: Properties, Settings, Screen Resolution, etc. to choose a higher screen resolution setting.<br>
+<br>
+The main Sandboxie Control window is resizable, but no - the left/right panes in Sandbox Settings are not.<br>
+Control manages the overall size of it's window with the:<br>
+SbieCtrl_WindowCoords=x,x,x,x<br>
+setting in Sandboxie Control's Configure &gt; Edit Configuration &gt; "[UserSettings_XXXXXXXX]" section.<br>
+<br>
+Or, you can see that setting in C:\Windows\sandboxie.ini<br>
+<br>
+My setting with a 1920 X 1080 screen resolution puts the window at the lower right corner of my monitor:<br>
+SbieCtrl_WindowCoords=1456,523,458,509<br>
+<br>
+The numbers to the right of the = sign are (left to right):<br>
+left border location<br>
+top border location<br>
+width<br>
+height<br>
+------<br>
+These settings are normally managed by Sandboxie Control. So if you manually change any of them, you need to do it when Control has already been Exited - such as File &gt; Exit.<br>
+Then if you change the setting in sandboxe.ini while Control isn't running, the new setting will take effect when you start Sandboxie Control again.<br>
+If Control is still running and you manually change the numbers, it won't take effect.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=21955&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:33:08 GMT -->
+</html>

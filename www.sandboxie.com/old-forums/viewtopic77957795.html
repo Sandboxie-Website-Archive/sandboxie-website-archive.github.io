@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=924&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; The new &quot;real&quot; registry</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>The new &quot;real&quot; registry</h2>
+		<p><a href="viewtopic71f571f5.html?f=11&amp;t=924">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=924</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>The new &quot;real&quot; registry</h3>
+				<div class="date">Posted: <strong>Sat Jan 06, 2007 9:48 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">It's great I can see sandboxed changes in regedit, but how do I compare  the registry before/after running a program sandboxed (without running each time, say, sandboxed InCtrl as a middleman to the needed sandboxed program)?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jan 06, 2007 12:45 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Before you install, run sandboxed:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>reg export HKLM Before_HKLM.reg
+reg export HKCU Before_HKCU.reg
+</code></pre></div>
+
+After you install, run sandboxed:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>reg export HKLM After_HKLM.reg
+reg export HKCU After_HKCU.reg
+</code></pre></div>
+
+Then compare the files.<br>
+<br>
+I think this method should also work with version 2.64, since <em>the reg utility</em> is running sandboxed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jan 06, 2007 5:51 pm</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">Since this program knows the changes (they're written in "reghive"), I wish it would just create a REG file with them.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 07, 2007 6:22 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Since this program knows the changes </div></blockquote>
+
+It knows the changes just as well as you know the changes.  In other words, if you start RegEdit, and look in the sandbox hive -- we'll, you're <em>seeing</em> the changes.<br>
+<br>
+If you were to export the entire contents of this hive, then these are the so-called <em>changes</em> that Sandboxie would export.  (In fact it's just the entire hive.)<br>
+<br>
+Now, you asked for a way to compare <em>before</em> and <em>after</em> hives, and I explained how.<br>
+<br>
+Now it's just a matter of getting a good file comparison utility that will make the comparison make sense.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 08, 2007 8:29 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">Well, I don't think the file "RegHive" contains the entire registry. The proof is that the only keys I manage to find inside it are those added in sandboxed mode.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 08, 2007 9:49 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">Here is a quite good registry comparator programm: <a href="http://www.elcomsoft.com/art.html" class="postlink">http://www.elcomsoft.com/art.html</a> free 30 day trail available <br>
+Just run it once inside the SB and once outside and compare the made registry snapshots (the path to stor ethem should be marked in SB ad OpenFilePath)<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=924&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:43 GMT -->
+</html>

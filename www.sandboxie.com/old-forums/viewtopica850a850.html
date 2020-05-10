@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=21100&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:47:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Add a way to disable email protection</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Add a way to disable email protection</h2>
+		<p><a href="viewtopic314c314c.html?f=4&amp;t=21100">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=21100</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Add a way to disable email protection</h3>
+				<div class="date">Posted: <strong>Mon May 04, 2015 11:27 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">I've been using Thunderbird for a while now in a sandbox without any problems. Today I noticed a bug in thunderbird and I wanted to see if I could reproduce it in a clean sandbox. When I tried to open thunderbird in a different sandbox I got this message:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2212 Email reader 'thunderbird.exe' is not configured to run sandboxed</code></pre></div>
+I searched and that's happened to a lot of people. It took a while to figure out that the reason is <a href="../indexaf1d.html?EmailProtection" class="postlink">e-mail protection</a> built in to sandboxie. I think you should add that FAQ URL to the error message.<br>
+<br>
+So why did Thunderbird work for me all this time without a problem? Maybe because in my Thunderbird sandbox it's configured as <strong>ForceProcess=thunderbird.exe</strong> and that bypasses the check?<br>
+<br>
+I want don't want anything in the e-mail client to be trusted. That's the way it is now in my forced thunderbird sandbox. Why can't I do that for other sandboxes without a forceprocess? Can you add an option <strong>DisableEmailProtection=y</strong> and then I can use that in some sandbox configurations because I don't care if e-mail gets deleted, in fact that's what I want: everything contained to the sandbox for testing purposes. To workaround temporarily I've copied thunderbird.exe to thunderbird2.exe and I can run that without any interference. Each time I update thunderbird though I'll have to recopy the exe.<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Add a way to disable email protection</h3>
+				<div class="date">Posted: <strong>Tue May 05, 2015 1:13 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>cornflake wrote:</cite>I've been using Thunderbird for a while now in a sandbox without any problems. Today I noticed a bug in thunderbird and I wanted to see if I could reproduce it in a clean sandbox. When I tried to open thunderbird in a different sandbox I got this message:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2212 Email reader 'thunderbird.exe' is not configured to run sandboxed</code></pre></div>
+</div></blockquote>
+If you don't configure the email client to run sandboxed in a particular sandbox, the client wont run in that sandbox and you ll ll get the message.<br>
+<br>
+Thunderbird has worked for you in your Thunderbird sandbox because you configured to do so, you just forgotten that you did that. Making TB a Forced program doesn't configure TB to run sandboxed.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Add a way to disable email protection</h3>
+				<div class="date">Posted: <strong>Tue May 05, 2015 1:22 am</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite>Thunderbird has worked for you in your Thunderbird sandbox because you configured to do so, you just forgotten that you did that. Making TB a Forced program doesn't configure TB to run sandboxed.</div></blockquote>
+
+Thanks but I think you're wrong. I just tested it (Sandboxie 4.17.3, Windows 7 x64) and ForceProcess=thunderbird.exe in any sandbox bypasses the e-mail protection.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Add a way to disable email protection</h3>
+				<div class="date">Posted: <strong>Tue May 05, 2015 1:44 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">I don't have TB but I just tested with another email client and you are right about forcing the program allows the client to run. But you still need to configure the program in Applications&gt;Email reader or your mails wont be saved when you receive or sent. Thats the reason for SBIE warning you that the email client is not configured.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Add a way to disable email protection</h3>
+				<div class="date">Posted: <strong>Tue May 05, 2015 2:39 am</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite>I don't have TB but I just tested with another email client and you are right about forcing the program allows the client to run. But you still need to configure the program in Applications&gt;Email reader or your mails wont be saved when you receive or sent. Thats the reason for SBIE warning you that the email client is not configured.</div></blockquote>
+
+? I don't know. They are saved in the sandbox and everything works fine. As long as I don't delete the sandbox, that is!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Add a way to disable email protection</h3>
+				<div class="date">Posted: <strong>Tue May 05, 2015 11:25 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>cornflake wrote:</cite>
+? I don't know. They are saved in the sandbox and everything works fine. As long as I don't delete the sandbox, that is!</div></blockquote>
+Cornflake, I think you should configure Thunderbird, that way you can delete the sandbox and still save out of the sandbox the mails that you send and receive (unless you prefer not to save the mails to the hard-drive, as you are doing now). I also think you are right about there should be a message that tells users that the email client is not configured even though it runs when the program is forced.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=21100&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:47:19 GMT -->
+</html>

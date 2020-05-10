@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25370&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:05:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Run email reader doesn't launch Thunderbird [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Run email reader doesn't launch Thunderbird [SOLVED]</h2>
+		<p><a href="viewtopic6c3d-26c3d.html?f=11&amp;t=25370">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25370</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Run email reader doesn't launch Thunderbird [SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Jan 25, 2018 9:13 pm</strong></div>
+				<div class="author">by <strong>phrab</strong></div>
+				<div class="content">I have 2 computers: WinXP SP-3 &amp; Win 10...both with the latest Thunderbird.  I just installed Thunderbird on my Win 10 computer.  I went to  Sandboxie&gt;Show window&gt;sandbox&gt;Default box&gt;Sandbox settings&gt;Forced Folders &amp; added "C:\Program Files (x86)\Mozilla Thunderbird" to the list.  Also, under the settings&gt;Applications, I checked Thunderbird (which is my default email reader).  I restarted Win 10.<br>
+<br>
+1) At first, when I downloaded emails from both my gmail &amp; roadrunner accounts, the gmail emails disappeared after closing Thunderbird &amp; deleting contents of Sandboxie.  I think I solved that when I added the Forced Folder above, but I'm not sure.  If anyone knows what I did wrong, please tell me.<br>
+<br>
+2) When I right click on Sandboxie &amp; choose Default box&gt;run email reader, it launches Google Chrome, just like it does if I choose "run web browser" &amp; I don't know why.  I want it to launch Thunderbird...the way it does on my WinXP machine.  Can someone tell me how to do this?<br>
+<br>
+Thank you in advance,<br>
+Phil</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Run email reader doesn't launch Thunderbird</h3>
+				<div class="date">Posted: <strong>Fri Jan 26, 2018 12:03 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello phrab,<br>
+<br>
+Please follow these steps in order to properly setup/test your email client:<br>
+Setup: <a href="../ApplicationsSettings.html#email" class="postlink">https://www.sandboxie.com/ApplicationsSettings#email</a><br>
+Test: <a href="../TestEmailConfiguration.html" class="postlink">https://www.sandboxie.com/TestEmailConfiguration</a><br>
+<br>
+Regarding launching Chrome instead of Thunderbird, please check what's the default email application listed for Windows 10 (Click Start --&gt; Type "default app settings" , ensure Thunderbird is listed under Email). <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Run email reader doesn't launch Thunderbird</h3>
+				<div class="date">Posted: <strong>Fri Jan 26, 2018 12:31 pm</strong></div>
+				<div class="author">by <strong>phrab</strong></div>
+				<div class="content">Well, that was easy!  Thank you so much!!  I feel like such an idiot.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Run email reader doesn't launch Thunderbird</h3>
+				<div class="date">Posted: <strong>Fri Jan 26, 2018 1:04 pm</strong></div>
+				<div class="author">by <strong>phrab</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopicea0aea0a.html?p=132050#p132050" data-post-id="132050" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Jan 26, 2018 12:03 pm</div></cite>
+Hello phrab,<br>
+<br>
+Please follow these steps in order to properly setup/test your email client:<br>
+<br>
+Test: <a href="../TestEmailConfiguration.html" class="postlink">https://www.sandboxie.com/TestEmailConfiguration</a><br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+Spoke a little too soon.  I followed the above steps to test my email program (which is now the default &amp; which Sandboxie will launch thank you).  The steps said to create message &amp; not send it, &amp; then delete the sandbox &amp; see if the drafts were still there.<br>
+<br>
+However, Thunderbird doesn't keep a draft until you click "Save".  If I did click "save", then deleting the sandbox didn't delete the saved draft.  If I didn't click "Save", then there were no drafts when I deleted the sandbox.  Just wanted to make sure that I had tested it correctly.  Perhaps the instructions at the link above should add:<br>
+<br>
+Run your email program sandboxed under Sandboxie. (You can use the Run Email Reader command from the Tray Icon Menu of Sandboxie Control.)<br>
+Compose a test draft message to yourself. Don't send it.<br>
+[Save the draft].  This is the instruction that I would add.<br>
+Quit your email program. If your email program suggests to send the test message, disregard the suggestion.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25370&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:05:53 GMT -->
+</html>

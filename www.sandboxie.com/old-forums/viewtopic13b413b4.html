@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=13893&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:41:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.02] Access Denied on file renaming/moving on network drive</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.02] Access Denied on file renaming/moving on network drive</h2>
+		<p><a href="viewtopicd240d240.html?f=38&amp;t=13893">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=13893</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.02] Access Denied on file renaming/moving on network drive</h3>
+				<div class="date">Posted: <strong>Sun Oct 21, 2012 6:28 pm</strong></div>
+				<div class="author">by <strong>Leroy</strong></div>
+				<div class="content">I have a shared folder with appropriate access permissions for example "10.0.0.0.1\tmp" on Computer C1. I connect it with computer C2 (running sandboxie 3.74) als drive z: and set drive z: to "Full Access". I can write, change and delete files but I can not rename or move files within that folder (z:\ and below) or to other folders of the same type. It always gives "Access Denied". The same rename/move operations do work outside the sandbox, like in a non-sandboxed explorer or Total Commander. This problem apparently also only occurs with windows 7 64bit, I had no problem with Windows XP.  It also works if the folder is not set to full or direct access, so that move/renaming is only performed in the sandbox folder. But that's of no help for me. <br>
+<br>
+I tried Sandboxie 64 from 3.52. to 3.74 and also started the sandboxed applications in administrator mode.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 22, 2012 5:12 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Are you sure you see an "Access Denied" error message?  I get a "Folder In Use" error message.   And I can't rename the new folder I created.  Thanks for the problem report, I'll make a note to look into it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 22, 2012 6:39 pm</strong></div>
+				<div class="author">by <strong>Leroy</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Are you sure you see an "Access Denied" error message?</div></blockquote>
+Well, I can't tell the exact error message because my Windows is German. Furthermore Explorer says "Folder access denied" while Total Commanders asks me to remove the "write protection". So it may very well be that the file is somehow marked as beeing in use.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 26, 2012 7:48 am</strong></div>
+				<div class="author">by <strong>Leroy</strong></div>
+				<div class="content">It would be really nice to fix this with the next update as I just noticed it also effects simple downloads to network folders. I always run Firefox in a Sandbox and downloads usually go to a folder on a network drive. But Firefox downloads files with ".part" extension and renames them finally when the download is complete be removing this additional extension - which doesn't work because of this bug.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 26, 2012 10:02 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I will look into it.  For now, you might be able to work around this problem by downloading files to your desktop and then use the Immediate Recovery window to move them out to the network once the download is complete.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Nov 30, 2012 11:55 pm</strong></div>
+				<div class="author">by <strong>dragonetti</strong></div>
+				<div class="content">I <strong>think</strong> I may have the similair problem (but I am really not sure).<br>
+
+<ul>
+<li> Windows 7 64 bit english</li>
+<li> UAC turned off</li>
+<li> Network share = T:\ and trying to sync 2 folders on T:\  =&gt; folder [A] and <strong><br>
+</strong></li><li><strong> Access to the network share is done with windows 7 credentials<br>
+</strong></li><li><strong> The program that is running in sandboxie is "GoodSync"<br>
+</strong></li><li><strong> Sandbox Settings &gt;&gt; Resource Access &gt;&gt; File Access &gt;&gt; Full Access &gt;&gt; "All Programs" , Access to "C" , "D" , "T"<br>
+C and D are my local drives and T is the Network share<br>
+</strong></li><li><strong> Sandbox Settings &gt;&gt; Restrictions &gt;&gt; Drop Rights &gt;&gt; "Drop rights from Administrators and...." =&gt; UN-CHECKED<br>
+This was automatically detected by sandboxie after GoodSync was installed, I got an pop-up requesting to press a button that un-checked the above mentioned option ("Drop rights from Administrators and....")<br>
+</strong></li><li><strong> All other options within the 'Sandbox Settings' are left default</strong></li></ul><strong><br>
+<br>
+GoodSync works perfectly with the network shares and locally when installed outside sandboxie<br>
+<br>
+I encountered this problem when I was starting with Sandboxie and was asking questions in this topic:<br>
+<a href="../phpbb/viewtopic682b.php?p=85577#85577" class="postlink">http://www.sandboxie.com/phpbb/viewtopi ... 5577#85577</a><br>
+<br>
+A search lead me to this topic.<br>
+<br>
+My apologies for cross posting, I normally don't do that.</strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 25, 2013 2:31 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Regarding the probem where setting a network share/drive as an open path (or direct access or full access),<br>
+then not being able to issue rename or move commands against that path:<br>
+<br>
+Version 4.01.02 should fix this problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 28, 2013 3:56 pm</strong></div>
+				<div class="author">by <strong>bfu</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Regarding the probem where setting a network share/drive as an open path (or direct access or full access),<br>
+then not being able to issue rename or move commands against that path:<br>
+<br>
+Version 4.01.02 should fix this problem.</div></blockquote>
+
+Seems it surfaced again in 4.01.04 (x32).  I'm getting the exact same behavior as described earlier in the thread.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=13893&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:41:02 GMT -->
+</html>

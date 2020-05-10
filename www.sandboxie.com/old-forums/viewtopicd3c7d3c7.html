@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10174&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Force instant termination of a process</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Force instant termination of a process</h2>
+		<p><a href="viewtopic6bf06bf0.html?f=4&amp;t=10174">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=10174</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Force instant termination of a process</h3>
+				<div class="date">Posted: <strong>Fri Mar 25, 2011 9:58 pm</strong></div>
+				<div class="author">by <strong>is_m00nbl00d</strong></div>
+				<div class="content">I'm not really sure that's the best subject, but it's the one I came up with. ;D<br>
+<br>
+First thing first. <br>
+<br>
+My operating system has two web browsers - IE and Chromium. IE is defined as the default web browser. I do not use IE for anything, at all. It's been forced to run in its sandbox, with Internet access blocked and Drop Rights enabled.<br>
+<br>
+There's something I dislike in this approach, though - when I install/upgrade an application that iniciates Internet Explorer, forcing me to close the sandbox.<br>
+<br>
+I think it would be great if I could define the sandbox to automatically terminate any process, as soon as they run in the sandbox. Plus, all this could be done minimized, that is, IE is started in the sandbox, but with its window minimized to the tray bar, during the all process, which shouldn't take more than a second to end. Would the latter be possible?<br>
+<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 25, 2011 10:39 pm</strong></div>
+				<div class="author">by <strong>lylejk</strong></div>
+				<div class="content">You could just rightclick on the Sandbox and then Terminate Programs.   I've had some issues individually terminating just IE for instance; I just terminate the whole SBIE session.   <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 25, 2011 11:21 pm</strong></div>
+				<div class="author">by <strong>_is_m00nbl00d</strong></div>
+				<div class="content"><blockquote><div><cite>lylejk wrote:</cite>You could just rightclick on the Sandbox and then Terminate Programs.   I've had some issues individually terminating just IE for instance; I just terminate the whole SBIE session.   <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div></blockquote>
+
+But, that's what I want to avoid. Otherwise, I'd have to right-click the tray bar or open Sandboxie Control, and then right-click the respective sandbox and then kill it.<br>
+<br>
+But, thanks anyway for the feedback! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+I'm perfectly aware that this is not a top priority, in case tzuk considers it to be a nice feature. But, should he consider it to be OK, then it would be great to have such feature in versions to come. I know there are other priorities.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 26, 2011 2:24 am</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content"><blockquote><div><cite>is_m00nbl00d wrote:</cite>It's been forced to run in its sandbox, with Internet access blocked and Drop Rights enabled. ... I think it would be great if I could define the sandbox to automatically terminate any process, as soon as they run in the sandbox.</div></blockquote>
+Here's how I keep unwanted programs from running:
+<ul><li>1. Force them all to run in a dedicated "NoRun" sandbox<br>
+2. Set start/run access to only allow <em>nonexistent.exe</em></li></ul>Tada, nothing can run.<br>
+<br>
+This approach has become a lot more pleasant since tzuk got rid of those <a href="../phpbb/viewtopic8bb1.php?t=9068" class="postlink">csrss.exe pop-ups</a>. Of course, if you're looking for a more permanent or robust method, <a href="http://technet.microsoft.com/en-us/library/ee449491(WS.10).aspx" class="postlink">SRP or AppLocker</a> policies would probably be a better bet.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 26, 2011 10:19 am</strong></div>
+				<div class="author">by <strong>is_m00nbl00d</strong></div>
+				<div class="content"><blockquote><div><cite>Mike wrote:</cite><blockquote><div><cite>is_m00nbl00d wrote:</cite>It's been forced to run in its sandbox, with Internet access blocked and Drop Rights enabled. ... I think it would be great if I could define the sandbox to automatically terminate any process, as soon as they run in the sandbox.</div></blockquote>
+Here's how I keep unwanted programs from running:
+<ul><li>1. Force them all to run in a dedicated "NoRun" sandbox<br>
+2. Set start/run access to only allow <em>nonexistent.exe</em></li></ul>Tada, nothing can run.<br>
+<br>
+This approach has become a lot more pleasant since tzuk got rid of those <a href="../phpbb/viewtopic8bb1.php?t=9068" class="postlink">csrss.exe pop-ups</a>. Of course, if you're looking for a more permanent or robust method, <a href="http://technet.microsoft.com/en-us/library/ee449491(WS.10).aspx" class="postlink">SRP or AppLocker</a> policies would probably be a better bet.</div></blockquote>
+
+Hello Mike,<br>
+<br>
+I appreciate your feedback, and will most definetely try what you suggest, regarding the sandbox. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Regarding AppLocker, I do have it in place. But, the reason why I don't forbid its execution, is due to the fact that, at some point, I may need to make use of IE, and elevate secpol.msc to remove prohibition, not to mention entering credentials for UAC. Having such an option within Sandboxie would make things a lot faster and easier, IMO.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 26, 2011 11:10 am</strong></div>
+				<div class="author">by <strong>_is_m00nbl00d</strong></div>
+				<div class="content">@ Mike<br>
+<br>
+I tried your suggestion, and it actually works simply great. I never thought about that option! One needs to hide the error message that appears, though. I just hope that, whenever I need to use IE, I remember about it. lol</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 26, 2011 11:16 am</strong></div>
+				<div class="author">by <strong>_is_m00nbl00d</strong></div>
+				<div class="content"><blockquote><div><cite>_is_m00nbl00d wrote:</cite>@ Mike<br>
+<br>
+I tried your suggestion, and it actually works simply great. I never thought about that option! One needs to hide the error message that appears, though. I just hope that, whenever I need to use IE, I remember about it. lol</div></blockquote>
+
+-edit-<br>
+<br>
+This does make me want to suggest something else, regarding this trick.<br>
+<br>
+I have relatives using Sandboxie as well. Some of them do not make use of IE, except to access their bank account (under a different user account). The above trick would apply to all user accounts, that is, IE would be forced to run in its sandbox, but forbidden from running there. <br>
+<br>
+It would be great if we could choose which user accounts to apply sandbox settings.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 26, 2011 5:59 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">At some point I am planning to add a Sandbox Settings page that lets you select which user accounts can use a particular sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 26, 2011 8:05 pm</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content">@_is_m00nbl00d: Glad it helped! For non-critical rules, I mostly prefer Sandboxie to AppLocker for the same reason, because it's easier and faster.<br>
+<br>
+@tzuk: Although not a big deal, that would be a nice touch.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 27, 2011 6:33 am</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>At some point I am planning to add a Sandbox Settings page that lets you select which user accounts can use a particular sandbox.</div></blockquote>
+Sounds great! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10174&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:15 GMT -->
+</html>

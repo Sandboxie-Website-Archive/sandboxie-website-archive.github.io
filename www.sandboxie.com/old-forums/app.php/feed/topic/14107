@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14107" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-03-18T12:30:14-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14107</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-03-18T12:30:14-04:00</updated>
+
+		<published>2013-03-18T12:30:14-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=88120#p88120</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=88120#p88120"/>
+		<title type="html"><![CDATA[[.04] New phishing folder for Firefox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=88120#p88120"><![CDATA[
+Updated in version 4.01.04.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Mar 18, 2013 12:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-03-10T12:10:00-04:00</updated>
+
+		<published>2013-03-10T12:10:00-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=87856#p87856</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=87856#p87856"/>
+		<title type="html"><![CDATA[[.04] New phishing folder for Firefox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=87856#p87856"><![CDATA[
+Sorry Guest10 <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> <br>I just typed the new line into Templates.ini so it definitely be part of the next beta version.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun Mar 10, 2013 12:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-03-08T19:38:16-04:00</updated>
+
+		<published>2013-03-08T19:38:16-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=87811#p87811</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=87811#p87811"/>
+		<title type="html"><![CDATA[[.04] New phishing folder for Firefox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=87811#p87811"><![CDATA[
+The Firefox Phishing template in templates.ini (v4.01.03) still needs to be updated.<br>The latest Firefox versions do not use urlclassifier3.sqlite, but it should stay in the template for use with earlier Firefox versions.<br>The "\safebrowsing" sub-folder should be added, as shown.<br><br><br>[Template_Firefox_Phishing_DirectAccess]<br>Tmpl.Title=#4337,Firefox/Waterfox/Pale Moon<br>Tmpl.Class=WebBrowser<br>ProcessGroup=&lt;FirefoxPrograms&gt;,firefox.exe,waterfox.exe,palemoon.exe<br>OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\urlclassifier.pset<br>OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\urlclassifier*.sqlite*<br>OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\cert8.db<br>OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\blocklist.xml<br><strong>OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\safebrowsing\*</strong><br><br>----<br>Anyone who has a Firefox profile folder that isn't in the default location underneath %USERPROFILE% should use their own Local Template, since the above will not allow those items to be updated outside of the sandbox.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Fri Mar 08, 2013 6:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2012-12-21T22:01:35-04:00</updated>
+
+		<published>2012-12-21T22:01:35-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=86001#p86001</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=86001#p86001"/>
+		<title type="html"><![CDATA[[.04] New phishing folder for Firefox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=86001#p86001"><![CDATA[
+<blockquote><div><cite>Guest10 wrote:</cite>Look at the file sizes for the sandboxed files, though. They sure looks strange. Did Firefox try to delete the files outside of the sandbox and wind up creating 0 byte files inside of the sandbox ??<br>If I had used it longer would the file sizes increase ??<br></div></blockquote>Guess10, over here, the file sizes sandboxed and unsandboxed look pretty much the same. Its just that when sandboxed, they don't change at all if I am using a sandbox where I am not giving Direct access to the safebrowsing folder. Here, I don't see any 0 KB file as in the picture.<br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Fri Dec 21, 2012 9:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2012-12-21T18:31:44-04:00</updated>
+
+		<published>2012-12-21T18:31:44-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85997#p85997</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85997#p85997"/>
+		<title type="html"><![CDATA[[.04] New phishing folder for Firefox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85997#p85997"><![CDATA[
+<blockquote><div><cite>bo.elam wrote:</cite><blockquote><div><cite>Guest10 wrote:</cite>Each time you start Firefox with an empty sandbox, the Safebrowsing files outside of the sandbox will be used at first; then those files will be updated inside of the sandbox; and then the updated files will be deleted when the sandbox contents are deleted.</div></blockquote>I am not seeing this in my W7 or XP when Safebrowsing is not allowed Direct access.</div></blockquote>Since the times/dates of the safebrowsing files were updated after Firefox ran sandboxed, I guess I assumed that they would be updated in the sandbox if not allowed out.<br>I didn't see any new files saved in the sandbox for a while, but after creating a sandbox where they were not allowed out, and using that sandbox for a while, I got a "safebrowsing" folder created in the sandbox.<br>Look at the file sizes for the sandboxed files, though. They sure looks strange. Did Firefox try to delete the files outside of the sandbox and wind up creating 0 byte files inside of the sandbox ??<br>If I had used it longer would the file sizes increase ??<br><br>UNsandboxed folder (note the times and file sizes):<br><a href="http://postimage.org/" class="postlink"><img src="http://s19.postimage.org/qjvg3lm43/image.jpg" class="postimage" alt="Image"></a><br><br><br>Sandboxed folder:<br><a href="http://postimage.org/" class="postlink"><img src="http://s19.postimage.org/8sjtp56pf/image.jpg" class="postimage" alt="Image"></a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Fri Dec 21, 2012 5:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2012-12-21T17:14:47-04:00</updated>
+
+		<published>2012-12-21T17:14:47-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85994#p85994</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85994#p85994"/>
+		<title type="html"><![CDATA[[.04] New phishing folder for Firefox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85994#p85994"><![CDATA[
+<blockquote><div><cite>Guest10 wrote:</cite>Each time you start Firefox with an empty sandbox, the Safebrowsing files outside of the sandbox will be used at first; then those files will be updated inside of the sandbox; and then the updated files will be deleted when the sandbox contents are deleted.</div></blockquote>I am not seeing this in my W7 or XP when Safebrowsing is not allowed Direct access. In other words, if the Safebrowsing folder is not allowed Direct access, it doesnt update sandboxed at all. <br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Fri Dec 21, 2012 4:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Bellzemos]]></name></author>
+		<updated>2012-12-21T15:49:39-04:00</updated>
+
+		<published>2012-12-21T15:49:39-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85992#p85992</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85992#p85992"/>
+		<title type="html"><![CDATA[[.04] New phishing folder for Firefox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85992#p85992"><![CDATA[
+Thank you for your extensive answer. I will update FF to v17 and just leave all the default SBIE settings. Thank you again.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3600">Bellzemos</a> — Fri Dec 21, 2012 2:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2012-12-20T09:30:00-04:00</updated>
+
+		<published>2012-12-20T09:30:00-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85972#p85972</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85972#p85972"/>
+		<title type="html"><![CDATA[[.04] New phishing folder for Firefox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85972#p85972"><![CDATA[
+<blockquote><div><cite>Bellzemos wrote:</cite>What happens if I just update Firefox to v17 and don't change any settings...</div></blockquote>Then the Google Safebrowsing files in the unsandboxed (%Local AppData%) profile folder will only be updated when you run Firefox unsandboxed.<br><br>Each time you start Firefox with an empty sandbox, the Safebrowsing files outside of the sandbox will be used at first; then those files will be updated inside of the sandbox; and then the updated files will be deleted when the sandbox contents are deleted.<br><br>In practical terms, the safebrowsing files are small in size and the extra updating that occurs each time you start with an empty sandbox doesn't really amount to much.<br>That was not the case with the previous phishing database file Urlclassifier3.sqlite. That file could get quite large, and without the phishing template, it would trigger a warning from Sandboxie because it was being copied into the sandbox. The phishing template allowed it to be updated while sandboxed, and kept it from being copied into the sandbox.<br><br>After a false start with an earlier version of Firefox, version 17 is the first version to use Google's newest Safebrowsing application programming interface:<br><a href="https://developers.google.com/safe-browsing/" class="postlink">https://developers.google.com/safe-browsing/</a><br>----<br>Chrome also downloads Google Safebrowsing files, in its "User Data" folder:<br><br>XP: C:\Documents and Settings\(user)\Local Settings\Application Data\Google\Chrome\User Data\<br>Vista/Win 7: C:\Users\(user)\AppData\Local\Google\Chrome\User Data\<br>File names (list may not be complete):<br>Safe Browsing Cookies<br>Safe Browsing Download<br>Safe Browsing Download Whitelist<br>Safe Browsing Csd Whitelist<br>Safe Browsing Bloom Prefix Set<br>Safe Browsing Bloom<br><br>As with Firefox, these are very small files and downloading them each time you start with an empty sandbox doesn't amount to much.<br>There's no Sandboxie phishing template for Chrome, and none of the existing templates will allow these files to be saved outside of the sandbox, so they're downloaded each time you start Chrome with an empty  sandbox - and updated, in the sandbox, while sandboxed Chrome runs.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Thu Dec 20, 2012 8:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Bellzemos]]></name></author>
+		<updated>2012-12-19T21:56:23-04:00</updated>
+
+		<published>2012-12-19T21:56:23-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85953#p85953</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85953#p85953"/>
+		<title type="html"><![CDATA[[.04] New phishing folder for Firefox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85953#p85953"><![CDATA[
+What happens if I just update Firefox to v17 and don't change any settings (as in the 1st post) in Sandboxie? Thank you.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3600">Bellzemos</a> — Wed Dec 19, 2012 8:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Blues]]></name></author>
+		<updated>2012-11-22T10:06:07-04:00</updated>
+
+		<published>2012-11-22T10:06:07-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85438#p85438</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85438#p85438"/>
+		<title type="html"><![CDATA[[.04] New phishing folder for Firefox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85438#p85438"><![CDATA[
+Thanks, Paul for the info, and Tzuk for adding it to future versions.   <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2603">Blues</a> — Thu Nov 22, 2012 9:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2012-11-21T13:11:54-04:00</updated>
+
+		<published>2012-11-21T13:11:54-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85426#p85426</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85426#p85426"/>
+		<title type="html"><![CDATA[[.04] New phishing folder for Firefox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85426#p85426"><![CDATA[
+Guest10, thank you.<br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Wed Nov 21, 2012 12:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2012-11-21T05:13:55-04:00</updated>
+
+		<published>2012-11-21T05:13:55-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85422#p85422</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85422#p85422"/>
+		<title type="html"><![CDATA[[.04] New phishing folder for Firefox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85422#p85422"><![CDATA[
+Thanks Guest10.  I will add this to the default phishing settings for Firefox in Sandboxie.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Nov 21, 2012 4:13 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2012-11-20T15:25:41-04:00</updated>
+
+		<published>2012-11-20T15:25:41-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85416#p85416</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85416#p85416"/>
+		<title type="html"><![CDATA[[.04] New phishing folder for Firefox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14107&amp;p=85416#p85416"><![CDATA[
+With the official release of Firefox 17, a new sub-folder is created for anti-phishing use.<br><br>XP location:<br>C:\Documents and Settings\(user)\Local Settings\Application Data\Mozilla\Firefox\Profiles\xxxxxxxx.default\<strong>safebrowsing</strong><br><br>Vista/Win 7 location (Win 8 not known) should be:<br>C:\Users\(user)\AppData\Local\Mozilla\Firefox\Profiles\xxxxxxxx.default\<strong>safebrowsing</strong><br><br>The "safebrowsing" folder contains multiple files with extensions like:<br>.pset, .sbstore, .hashkey, .cache<br><br>The current Sandboxie anti-phishing template for Firefox does not allow the contents of the "safebrowsing" folder to be saved out of the sandbox, so until that template can be updated, I recommend that users of Fx17 give 'firefox.exe' a direct access setting for the entire "safebrowsing" folder after they update the program.<br><br>Notes:<br>- The "safebrowsing" folder does not exist until Firefox is updated to version 17.<br>- I don't know if future Waterfox or Palemoon versions will also use a "safebrowsing" folder, so the following Direct Access setting specifies 'firefox.exe'. (In the case of Waterfox or Palemoon, you would substitute that program's .exe name in place of 'firefox.exe')<br><br>Sandbox Settings &gt; Resource Access &gt; File Access &gt; Direct Access<br>"Add Program" button: <strong>firefox.exe</strong><br>"Add" button: Navigate to the "safebrowsing" folder, located as above, and select the folder.<br>OK<br>------<br>A new Firefox anti-phishing template (for Fx17 and earlier), for inclusion in future updates to 'templates.ini':<br>(For most people: those whose Firefox profile folders are all located in the default location underneath %USERPROFILE%)<br><br>[Template_Firefox_Phishing_DirectAccess]<br><br>Tmpl.Title=#4337,Firefox/Waterfox/Pale Moon<br>Tmpl.Class=WebBrowser<br>ProcessGroup=&lt;FirefoxPrograms&gt;,firefox.exe,waterfox.exe,palemoon.exe<br>OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\urlclassifier.pset<br>OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\urlclassifier*.sqlite*<br>OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\cert8.db<br>OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\blocklist.xml<br><strong>OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\safebrowsing\*</strong><br><br>------<br>An (alternate) Local Template for those who (like me) may have Firefox profile(s) located at non-default locations:<br>(Specifies firefox.exe only; not written for use with Waterfox or Palemoon)<br><br>[Template_Local_Firefox_Phishing_DirectAccess]<br>Tmpl.Title=My Firefox Phishing Direct Access<br>OpenFilePath=firefox.exe,*\blocklist.xml<br>OpenFilePath=firefox.exe,*\cert8.db<br>OpenFilePath=firefox.exe,*\urlclassifier*.sqlite*<br>OpenFilePath=firefox.exe,*\urlclassifier.pset<br>OpenFilePath=firefox.exe,*\safebrowsing\*<br>Tmpl.Class=Local<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Tue Nov 20, 2012 2:25 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

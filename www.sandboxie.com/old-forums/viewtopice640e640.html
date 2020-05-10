@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=22829&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:58:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Office 2013 non C2R &amp; Excel work around. - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Office 2013 non C2R &amp; Excel work around.</h2>
+		<p><a href="viewtopic0a440a44.html?f=22&amp;t=22829">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=22829</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Re: Office 2013 non C2R &amp; Excel work around.</h3>
+				<div class="date">Posted: <strong>Mon Aug 08, 2016 3:03 am</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Here's another minor update to the last bat. This version hasn't been extensively tested but there wasn't really anything major so here it is anyhow:<br>
+
+<blockquote class="uncited"><div>1) Corrected parenthesis sets which weren't closed properly. [hopefully got em all...no, not the pokemon!]<br>
+<br>
+2) Added a few extra escape [^] characters around misc 'text' [ECHO/Title] related stuff. These shouldn't have bothered anything but I changed it just to be 'correct' anyway and to help me identify things in a search.<br>
+<br>
+3) Altered a few lines around :END regarding the %DONE%==0 checks. [Same result, slightly different display order]<br>
+<br>
+4) Altered a few lines regarding CAPITALization that I missed before to make it easier for me to identify commands verses paths, exes and other stuff. Once again nothing that should change anything.<br>
+<br>
+5) Added more Access Denied checks.<br>
+<br>
+6) Renamed a couple areas.<br>
+<br>
+7) Created a few new variables for 'Round checks' to make it easier for me to update a single number and then have others updated.<br>
+<br>
+8) Added another background Round to check for a scenario this bat cannot currently fix in the exported '.reg's and it now shows alert text if it is found.<br>
+    It will continue to fix all others regardless.<br>
+<br>
+9) Other drunken changes I don't recall...(Trust inspiring, eh?)</div></blockquote>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>@ECHO OFF
+TITLE EULA: Don^'t blame me!
+
+SET DONE=0
+IF EXIST "%~DP0Office\EULA.txt" GOTO INIT
+IF EXIST "%~DP0\EULA.txt" GOTO INIT
+:PROMPT
+ECHO This bat will modify your registry! [Office Related]
+ECHO.
+ECHO This bat was made by a user in an effort to aid other users.
+ECHO.
+ECHO The author does NOT make any warranty of any kind,
+ECHO either express or implied. In no event shall the author of this
+ECHO bat be liable for any consequential, direct, incidental
+ECHO or indirect damages ^(including, without limitation,
+ECHO damages for loss of business profits, business interruption,
+ECHO loss of business information, destruction of the universe
+ECHO or any other loss^) arising from the use of this bat.
+ECHO.
+ECHO Do you agree to these terms?
+ECHO ^(Y for Yes, N for No^)
+ECHO.
+SET /P CHOICE=    ^   Make your Choice: 
+SET CHOICE=%CHOICE:~0,1%
+IF /I "%CHOICE%"=="Y" GOTO INIT
+IF /I "%CHOICE%"=="N" EXIT
+CLS
+ECHO Oops, please try again!
+ECHO.
+GOTO PROMPT
+
+:INIT
+CLS
+ECHO Checking Access Level...
+reg QUERY "HKEY_USERS\S-1-5-18" 1&gt;NUL 2&gt;NUL
+IF %ERRORLEVEL%==5 GOTO SECURITY
+IF EXIST %WINDIR%\AdminTest RMDIR %WINDIR%\AdminTest  /Q /S 1&gt;NUL 2&gt;NUL
+IF NOT EXIST %WINDIR%\AdminTest MD %WINDIR%\AdminTest 1&gt;NUL 2&gt;NUL
+IF %ERRORLEVEL%==0 (
+	IF EXIST %WINDIR%\AdminTest RMDIR %WINDIR%\AdminTest  /Q /S 1&gt;NUL 2&gt;NUL
+	ECHO Seems to be running as Admin, continuing...
+	GOTO SELECTION
+)
+ECHO.
+ECHO Sorry, it won't work if you don't ^(Right click the bat and^)
+ECHO Run as administrator
+GOTO END
+
+:SELECTION
+SET /A "ROUNDNORM=6"
+SET /A "ROUNDLAST=%ROUNDNORM%+1"
+SET /A "ROUNDREST=%ROUNDNORM%+2"
+SET /A "ROUNDERR=%ROUNDNORM%+3"
+TITLE What are you doing?
+ECHO.
+ECHO **This bat will modify Office related registry entries!**
+ECHO.
+ECHO Choose 1 to Backup and Replace /dde
+ECHO Choose 2 to Restore /dde using Backups
+ECHO Choose 3 to Cancel and Exit.
+ECHO.
+ECHO **This bat will modify Office related registry entries!**
+ECHO.
+SET /P SELECTION=    ^   Which option number would you like to try?: 
+SET SELECTION=%SELECTION:~0,1%
+IF /I "%SELECTION%"=="1" GOTO ROUND_1
+IF /I "%SELECTION%"=="2" GOTO ROUND_%ROUNDREST%
+IF /I "%SELECTION%"=="3" EXIT
+CLS
+ECHO Oops, please try again!
+ECHO.
+GOTO SELECTION
+
+:CYCLE
+IF %NUMBER%==1 SET CURRENTTARGET=Excel.Backup
+IF %NUMBER%==2 SET CURRENTTARGET=Excel.Chart
+IF %NUMBER%==3 SET CURRENTTARGET=Excel.CSV
+IF %NUMBER%==4 SET CURRENTTARGET=Excel.Macrosheet
+IF %NUMBER%==5 SET CURRENTTARGET=Excel.OpenDocumentSpreadsheet.12
+IF %NUMBER%==6 SET CURRENTTARGET=Excel.Sheet.12
+IF %NUMBER%==7 SET CURRENTTARGET=Excel.Sheet.8
+IF %NUMBER%==8 SET CURRENTTARGET=Excel.SheetBinaryMacroEnabled.12
+IF %NUMBER%==9 SET CURRENTTARGET=Excel.SheetMacroEnabled.12
+IF %NUMBER%==10 SET CURRENTTARGET=Excel.Template
+IF %NUMBER%==11 SET CURRENTTARGET=Excel.Template.8
+IF %NUMBER%==12 SET CURRENTTARGET=Excel.TemplateMacroEnabled
+IF %NUMBER%==13 SET CURRENTTARGET=Word.Backup.8
+IF %NUMBER%==14 SET CURRENTTARGET=Word.Document.12
+IF %NUMBER%==15 SET CURRENTTARGET=Word.Document.8
+IF %NUMBER%==16 SET CURRENTTARGET=Word.DocumentMacroEnabled.12
+IF %NUMBER%==17 SET CURRENTTARGET=Word.DocumentMacroEnabled.8
+IF %NUMBER%==18 SET CURRENTTARGET=Word.RTF.8
+IF %NUMBER%==19 SET CURRENTTARGET=Word.Template.12
+IF %NUMBER%==20 SET CURRENTTARGET=Word.Template.8
+IF %NUMBER%==21 SET CURRENTTARGET=Word.TemplateMacroEnabled.12
+IF %NUMBER%==22 SET CURRENTTARGET=Word.TemplateMacroEnabled.8
+IF %NUMBER% GEQ 23 GOTO CHECKROUND
+SET /A NUMBER=NUMBER+1
+IF DEFINED AUTORESTORE GOTO RESTORE
+GOTO FILES
+
+:FILES
+SET /A ROUNDPREV=%ROUNDNUM%-1
+reg QUERY "HKEY_CLASSES_ROOT\%CURRENTTARGET%\shell\Print\ddeexec" 1&gt;NUL 2&gt;NUL
+IF %ERRORLEVEL%==5 GOTO SECURITY
+IF %ERRORLEVEL%==1 GOTO CYCLE
+IF NOT EXIST "%~DP0Office\%CURRENTTARGET%.reg" regedit /A "%~DP0Office\%CURRENTTARGET%.reg" "HKEY_CLASSES_ROOT\%CURRENTTARGET%\shell"
+IF %ERRORLEVEL%==5 GOTO SECURITY
+IF NOT EXIST "%~DP0Office\%CURRENTTARGET%.reg" GOTO CYCLE
+IF %ROUNDNUM%==1 (
+	IF EXIST "%~DP0Office\%CURRENTTARGET%.reg" (
+		SET "SOURCE=%~DP0Office\%CURRENTTARGET%.reg"
+		SET "TARGET=%~DP0Office\Temp\%CURRENTTARGET%.Fixing.%ROUNDNUM%.reg"
+		GOTO REPLACE
+	)
+)
+IF NOT EXIST "%~DP0Office\Temp\%CURRENTTARGET%.Fixing.%ROUNDPREV%.reg" GOTO CYCLE
+SET "SOURCE=%~DP0Office\Temp\%CURRENTTARGET%.Fixing.%ROUNDPREV%.reg"
+IF %ROUNDNUM% LEQ %ROUNDNORM% (
+	SET "TARGET=%~DP0Office\Temp\%CURRENTTARGET%.Fixing.%ROUNDNUM%.reg"
+	IF %DONOTFIX% EQU 1 GOTO CHECKREG
+	GOTO REPLACE
+)
+IF %ROUNDNUM% EQU %ROUNDLAST% (
+	SET "TARGET=%~DP0Office\Fix\%CURRENTTARGET%.Fixed.reg"
+	GOTO REPLACE
+)
+GOTO CYCLE
+
+:CHECKROUND
+SET /A ROUNDNUM=ROUNDNUM+1
+IF %ROUNDNUM% LEQ %ROUNDLAST% (
+	SET /A NUMBER=1
+	GOTO Round_%ROUNDNUM%
+)
+IF %ROUNDNUM% GEQ %ROUNDREST% (
+	IF %ROUNDNUM% LEQ %ROUNDERR% GOTO END
+)
+GOTO ERROR
+
+:REPLACE
+SETLOCAL ENABLEDELAYEDEXPANSION
+(
+	FOR /F "tokens=1* delims=:" %%A IN ('findstr /N "^" "%SOURCE%"') DO (
+		SET "LINE=%%B"
+		IF DEFINED LINE SET "LINE=!LINE:%ORIGINAL%=%FIX%!"
+		ECHO(!LINE!
+		)
+	) &gt; "%TARGET%"
+)
+ENDLOCAL
+IF EXIST "%~DP0Office\Fix\%CURRENTTARGET%.Fixed.reg" (
+	regedit /S "%~DP0Office\Fix\%CURRENTTARGET%.Fixed.reg"
+	reg DELETE HKEY_CLASSES_ROOT\%CURRENTTARGET%\shell\Edit\ddeexec /f 1&gt;NUL 2&gt;NUL
+	reg DELETE HKEY_CLASSES_ROOT\%CURRENTTARGET%\shell\New\ddeexec /f 1&gt;NUL 2&gt;NUL
+	reg DELETE HKEY_CLASSES_ROOT\%CURRENTTARGET%\shell\OnenotePrintto\ddeexec /f 1&gt;NUL 2&gt;NUL
+	reg DELETE HKEY_CLASSES_ROOT\%CURRENTTARGET%\shell\Open\ddeexec /f 1&gt;NUL 2&gt;NUL
+	reg DELETE HKEY_CLASSES_ROOT\%CURRENTTARGET%\shell\OpenAsReadOnly\ddeexec /f 1&gt;NUL 2&gt;NUL
+	reg DELETE HKEY_CLASSES_ROOT\%CURRENTTARGET%\shell\Print\ddeexec /f 1&gt;NUL 2&gt;NUL
+	reg DELETE HKEY_CLASSES_ROOT\%CURRENTTARGET%\shell\Printto\ddeexec /f 1&gt;NUL 2&gt;NUL
+	reg DELETE HKEY_CLASSES_ROOT\%CURRENTTARGET%\shell\ViewProtected\ddeexec /f 1&gt;NUL 2&gt;NUL
+	SET /A DONE=DONE+1
+)
+GOTO CYCLE
+
+:CHECKREG
+findstr /C:"  64,64,65,00,00" "%SOURCE%" 1&gt;NUL 2&gt;NUL
+IF NOT ERRORLEVEL==1 (
+	ECHO.
+	ECHO *****************************************************************************
+	ECHO ***ALERT*ALERT*ALERT*ALERT*ALERT*ALERT*ALERT*ALERT*ALERT*ALERT*ALERT*ALERT***
+	ECHO.
+	ECHO   %CURRENTTARGET% contains an entry the bat does not alter!
+	ECHO   %CURRENTTARGET% may still result in the same command error as before.
+	ECHO *****************************************************************************
+)
+COPY /Y "%SOURCE%" "%TARGET%" 1&gt;NUL 2&gt;NUL
+GOTO CYCLE
+
+:ROUND_1
+TITLE Replace /dde
+CLS
+ECHO.
+ECHO Starting Pass 1 ^(This should be quick^)
+IF NOT EXIST "%~DP0Office" MD "%~DP0Office" 1&gt;NUL
+IF NOT EXIST "%~DP0Office\Fix" MD "%~DP0Office\Fix" 1&gt;NUL
+IF NOT EXIST "%~DP0Office\Temp" MD "%~DP0Office\Temp" 1&gt;NUL
+IF NOT EXIST "%~DP0Office\EULA.txt" (
+	IF NOT EXIST "%~DP0\EULA.txt" (
+		TYPE NUL &gt; "%~DP0Office\EULA.txt"
+	)
+)
+SET /A DONOTFIX=0
+SET /A ROUNDNUM=1
+SET /A NUMBER=1
+SET "ORIGINAL= /dde"
+SET "FIX= \"%%1\""
+GOTO CYCLE
+
+:ROUND_2
+SET /A DONOTFIX=1
+GOTO CYCLE
+
+:ROUND_3
+ECHO.
+ECHO Starting Pass 2 ^(This may take a bit^)
+COPY /Y "%~0" "%~DP0Office\BACKUP.bat" 1&gt;NUL 2&gt;NUL
+SET /A DONOTFIX=0
+SET "ORIGINAL=2f,64,64,65"
+SET "FIX=22,25,31,22"
+GOTO CYCLE
+
+:ROUND_4
+ECHO .
+SET "ORIGINAL=2f,64,64"
+SET "FIX=22,25,31"
+GOTO CYCLE
+
+:ROUND_5
+ECHO ..
+SET "ORIGINAL=  65,00,00"
+SET "FIX=  22,00,00"
+GOTO CYCLE
+
+:ROUND_6
+ECHO ...
+SET "ORIGINAL=2f,64"
+SET "FIX=22,25"
+GOTO CYCLE
+
+:ROUND_7
+ECHO ....
+SET "ORIGINAL=  64,65,00,00"
+SET "FIX=  31,22,00,00"
+GOTO CYCLE
+
+:ROUND_8
+CLS
+ECHO.
+ECHO Attempting to restore Original registry backups.
+SET AUTORESTORE=1
+SET /A ROUNDNUM=7
+SET /A NUMBER=1
+GOTO CYCLE
+
+:RESTORE
+IF EXIST "%~DP0Office\%CURRENTTARGET%.reg" (
+	regedit /S "%~DP0Office\%CURRENTTARGET%.reg"
+	SET /A DONE=DONE+1
+)
+IF EXIST "%~DP0%CURRENTTARGET%.reg" (
+	regedit /S "%~DP0%CURRENTTARGET%.reg"
+	SET /A DONE=DONE+1
+)
+GOTO CYCLE
+
+:SECURITY
+ECHO.
+ECHO Sorry, it looks like some security program is preventing
+ECHO access to needed programs or locations
+ECHO ^(eg %WINDIR%\System32\reg.exe or regedit.exe etc or HKCR^)
+ECHO.
+ECHO Please try disabling the product and run the bat again!
+IF NOT EXIST "%~DP0Office\%CURRENTTARGET%.reg" RMDIR "%~DP0Office" /Q /S
+GOTO END
+
+:ERROR
+ECHO :^( Oops Your PC ran into a problem that it couldn't
+ECHO handle, then it asked a question.
+ECHO.
+ECHO "Shall we play a game?"
+ECHO.
+ECHO I told it NO for you but then it got mad and broke this BAT.
+ECHO.
+ECHO Better go and complain now!
+ECHO http://forums.sandboxie.com/phpBB3/viewtopic.php?f=22^&amp;t=22829
+ECHO.
+GOTO END
+
+:END
+TITLE !!KEEP OFFICE FOLDER!!
+ECHO.
+ECHO -----------------------------------------------------------------------------
+RMDIR "%~DP0Office\Fix" /Q /S 1&gt;NUL 2&gt;NUL
+RMDIR "%~DP0Office\Temp" /Q /S 1&gt;NUL 2&gt;NUL
+ECHO %DONE% registry locations processed.
+IF %DONE%==0 (
+	ECHO.
+	ECHO Oops! It looks like nothing changed.
+	GOTO NOFOLDER
+)
+ECHO.
+ECHO !KEEP a copy of the new "Office" folder!
+ECHO It contains the files needed to restore the original entries.
+ECHO.
+ECHO This new "Office" folder will be in the same location as the bat.
+:NOFOLDER
+ECHO -----------------------------------------------------------------------------
+ECHO.
+ECHO Press any key to exit...
+PAUSE 1&gt;NUL
+EXIT
+</code></pre></div>
+
+Good Luck! :P</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=22829&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:58:46 GMT -->
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<link rel="canonical" href="SecureDeleteSandbox.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="robots" content="index,follow">
+	<meta name="language" content="en">
+	<meta name="google-translate-customization" content="e0b0918ac010f34-ee72acc87a31fea6-gc7951f1948fb9449-11">
+	<meta name="description" content="Sandboxie - Sandbox security software for Windows. Install and run programs in a virtual sandbox environment without writing to the hard drive.">
+	<link rel="stylesheet" type="text/css" href="includes/style.css">
+	<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="includes/js/mobile-menu.js">
+	</script>
+	<script type="text/javascript">
+var onload_reposition_ie = 0;
+	</script>
+
+<!--[if IE]>
+<script type="text/javascript">
+onload_reposition_ie = 1;
+</script>
+<![endif]-->
+
+	<script type="text/javascript">
+function onload_reposition()
+{
+}
+	</script>
+
+	<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15566261-2', 'auto');
+ga('send', 'pageview');
+	</script>
+
+<title>Sandboxie - Secure Delete Sandbox</title>
+<meta name="description" content="Secure Delete Sandbox - Sandboxie, sandbox security and secure web browsing software for Windows">
+</head>
+<body onload="onload_reposition()">
+<a name="top"></a> 
+<div id="masthead">
+	<table class="masthead" width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td width="312" style="vertical-align:top;"><a href="index.html" title="Sandboxie.com"><img src="images/MastheadLogo.jpg" alt="" height="92" width="312"></a></td>
+			<td><span id="motto"><i>Trust&nbsp;No&nbsp;Program</i></span></td>
+		</tr>
+	</table>
+	<div id="submasthead">
+		<div id="drop-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="HelpTopics.html">Help &amp; FAQ</a></li>
+				<li><a href="https://forums.sandboxie.com/">Forum</a></li>
+				<li><a href="DownloadSandboxie.html">Download</a></li>
+				<li><a href="RegisterSandboxie.html">Buy</a>
+				<ul>
+					<li><a href="HomeUse.html">Home Use</a></li>
+				</ul>
+				</li>
+				<li><a href="SiteSearch.html">Search</a></li>
+				<li><a href="HowItWorks.html">How It Works</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container-menus">
+	<div class="one-menus">
+		<div id="google_translate_element">
+		</div>
+
+		<script type="text/javascript">
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,bg,cs,da,de,el,en,es,et,fi,fr,hr,hu,id,it,iw,jv,ko,mk,nl,pl,pt,ru,sk,sq,sv,tr,uk,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, gaTrack: true, gaId: 'UA-53196810-1'}, 'google_translate_element');
+}
+		</script>
+
+	</div>
+	<div class="two-menus">
+		<div id="nav-trigger">
+			<span>Menu</span>
+		</div>
+		<div id="nav-mobile"> 
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="HelpTopics.html">Help &amp; FAQ</a></li>
+			<li><a href="https://forums.sandboxie.com/">Forum</a></li>
+			<li><a href="DownloadSandboxie.html">Download</a></li>
+			<li><a href="RegisterSandboxie.html">Buy</a></li>
+			<li><a href="SiteSearch.html">Search</a></li>
+			<li><a href="HowItWorks.html">How It Works</a></li>
+		</ul>
+		</div> 
+	</div>
+</div><div id="wrapper">
+	<h1 style="margin:0;padding-top:.5em">
+		Secure Delete Sandbox 
+	</h1>
+	<p>
+		Typical file deletion makes data inaccessible to the operating system and programs, but the data is not physically wiped from the hard drive storage medium, and may be recovered by by a data recovery technician. To make this recovery more difficult, third-party software exists that can perform a <em>secure deletion.</em> This is typically accomplished by overwriting the data multiple times before deleting it. 
+	</p>
+	<p>
+		For more information, see <a href="https://en.wikipedia.org/wiki/Data_remanence">Data remanence in Wikipedia</a>. 
+	</p>
+	<p>
+		By default, Sandboxie deletes the sandbox using a standard Windows command to delete folders -- <em>RMDIR</em>. This makes sure the contents of the sandbox (including malicious software) are properly removed from the operating system. But as mentioned above, it leaves the data vulnerable to inspection and recovery by forensics experts. 
+	</p>
+	<p>
+		People who are concerned about the privacy of their sensitive data can plug a third-party secure deletion utility into Sandboxie, to be used instead of the standard command. 
+	</p>
+	<p>
+		You can configure a custom delete command through Sandboxie Control or by manually editing the <a href="SandboxieIni.html">Sandboxie&nbsp;Ini</a> configuration file.
+	</p>
+	<p>
+		<strong>In Sandboxie Control</strong> 
+	</p>
+	<p>
+		Use <a href="DeleteSettings.html#command">Sandbox Settings &gt; Delete &gt; Command</a>. A couple of examples for the Delete Command:
+	</p>
+	<ul>
+		<li> Invoke <a href="https://eraser.heidi.ie/">Eraser by Heidi Computers</a> to delete the contents securely: 
+	</ul>
+<pre>
+    %SystemRoot%\System32\eraserl.exe -folder "%SANDBOX%" -subfolders -method DoD_E -resultsonerror -queue
+	</pre>
+	<ul>
+		<li> Invoke <a href="https://technet.microsoft.com/en-us/sysinternals/bb897443.aspx">SDelete by SysInternals/Microsoft</a> to delete the contents securely. 
+	</ul>
+<pre>
+    "C:\Program Files\Sysinternals\SDelete\sdelete.exe" -p 3 -s -q "%SANDBOX%"
+	</pre>
+	<p>
+		<strong>In the Sandboxie.ini Configuration File</strong> 
+	</p>
+	<p>
+		To configure a custom delete command for a particular sandbox, edit or insert the <a href="DeleteCommand.html">DeleteCommand</a> setting in the sandbox section of <a href="SandboxieIni.html">Sandboxie&nbsp;Ini</a>.
+	</p>
+	<p>
+		To configure a global custom delete command, edit or insert the <a href="DeleteCommand.html">DeleteCommand</a> setting in the [GlobalSettings] section of <a href="SandboxieIni.html">Sandboxie&nbsp;Ini</a>.
+	</p>
+	<table style="border: 1px solid #bba; background-color: #f7f8ff; padding: 0px; font-size: 95%; text-align: left; width: 90%;">
+		<tr>
+			<td> 
+			<p>
+				When specifying this setting, make sure to include <strong>"%SANDBOX%"</strong> (with quote marks) in the command. 
+			</p>
+			</td>
+		</tr>
+	</table>
+	<p>
+		Before launching the delete command, Sandboxie scans the sandbox to make sure all files can be properly deleted, as described in <a href="StartCommandLine.html#delete">Delete Contents of Sandbox</a>.
+	</p>
+	<hr>
+	<p>
+		Go to <a href="HelpTopics.html">Help&nbsp;Topics</a>.
+	</p>
+</div>
+
+<p align="center" style="font-size:8pt; line-height:1.4em;">
+	<b>Sandboxie</b> is Copyright &copy; 2004-2019 by Sandboxie Holdings, LLC.&nbsp; All rights reserved. <br>
+	<b><a href="index.html">Sandboxie.com</a> | <a href="ContactAuthor.html">Contact Author</a></b> <br>
+</p>
+
+<script type="text/javascript" src="../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&start=150&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:53:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Block Process Access - Page 11</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Block Process Access</h2>
+		<p><a href="viewtopic7fcb7fcb.html?f=22&amp;t=4885">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=4885</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>11</strong> of <strong>15</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Oct 27, 2010 3:39 am</strong></div>
+				<div class="author">by <strong>InjectDll</strong></div>
+				<div class="content">hi, wraithdu,  could you give me some help ? <br>
+<br>
+I am writing a injectdll, and have some problems.<br>
+<br>
+I found that my dll was loaded by  SandboxieDcomLaunch.exe,SandboxieRpcSs.exe and the sandboxed program, but your dll was only loaded by the sandboxed program, could you tell me how to do that ?<br>
+<br>
+And, if I hook the function which is exported by kernel.dll, the sandboxie and the sandboxed program work well , but if I hook the function which is exported by Ntdll.dll, the sandboxie always gives some errors.<br>
+<br>
+eg. I hook NtReadVirtualMemory,  sandboxie would give me "Error 193: %1 is not a valid Win32 application" and SBIE2313 SBIE2204<br>
+<br>
+I use VS2008<br>
+<br>
+<br>
+thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 18, 2011 4:35 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Edit:<br>
+<br>
+I was wrong, gotta rework something before this will work with 3.52.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 19, 2011 1:08 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Ok, updated for Sandboxie 3.51+, to sbiextra version 1.0.0.17. It should work for old versions of Sandboxie still, as I've added code to fall back to my old path discovery method.<br>
+<br>
+EDIT:<br>
+Ok, while the fallback is there, the new API names won't, so this will actually only work with SB 3.51 beta+.  Oh well, time to upgrade.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 21, 2011 4:35 am</strong></div>
+				<div class="author">by <strong>darkwolf_99</strong></div>
+				<div class="content"><a href="http://i.imagefra.me/7ffhyxxl" class="postlink"><img src="../img40.imagefra.me/i51l/darkwolf_99/w28i_40b_uc7on.jpg" class="postimage" alt="Image"></a><br>
+<br>
+Today I changed v1.0.0.16 to v1.0.0.17, but I got wrong message like above. I tried to re-install Microsoft Visual C++ 2008 SP1 Runtimes, but the wrong message is still there when I start programs in SBie. What should I do my friend? (win 7 32bit, SBie 3.52)<br>
+<br>
+<br>
+<br>
+Yeah, I have solved it by myself. It needs Microsoft Visual C++ 2010 Runtimes. I think you should revise the file, Readme.txt.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 21, 2011 8:35 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Aww nuts, silly VS 2010. I'll change the first post with a link for the new runtimes.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 21, 2011 1:10 pm</strong></div>
+				<div class="author">by <strong>Binky</strong></div>
+				<div class="content">In sbiextra_1.0.0.17.zip, the Readme.txt still refers to the Microsoft Visual C++ 2008 Runtimes.<br>
+<br>
+On my Win7 x64 PC, I already had both the x86 and x64 versions of the Microsoft Visual C++ 2010 Runtimes (after installing Visual Studio 2010 Express).  Since both x86 and x64 DLLs are injected, both runtime versions may be needed on an x64 PC.  It would be helpful if someone with an x64 PC tests this out for us.  Install only the x64 Microsoft Visual C++ 2010 Runtime, and test it with an x86 sandboxed target.  If a failure, install the x86 Microsoft Visual C++ 2010 Runtime.  Then report the results here.<br>
+<br>
+It would be helpful to clarify in the first post and Readme.txt whether the x86 version of the Microsoft Visual C++ 2010 Runtime is needed with Windows x64.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Process, files and archive naming</h3>
+				<div class="date">Posted: <strong>Tue Feb 08, 2011 1:38 pm</strong></div>
+				<div class="author">by <strong>A Suggestion</strong></div>
+				<div class="content">Hi thanks for this sms just what is needed. Although would feel it's name could be better that sbiextra which is meaning is generic extra for sandboxie. I'm sure this isn't generic but really is 'Sandboxie Block Process Access', then why not call it this, and all the files the same.<br>
+<br>
+If someone said to me have you got or you need sbiextra, and sandboxies does have lots of extras <a href="../index00cc.html?refs=ContributedUtilities" class="postlink">Contributed Utilities (sandboxie extras)</a> i would be at a loss. Since the page for Contributed Utilities says 'Block Process Access' not sbiextra.<br>
+<br>
+I haverenamed it for rar file, but the internal files i have left incase need to be named as you have done. Shame since later when i need to find the file on a pc i will not think of 'sbietra' name, only 'Block Process Access' which is its real name. Confusing i agree, 'Block Process Access' for application, files and achive is far better.<br>
+<br>
+1. Let us know here if ok to rename all the files to Block Process Access ?<br>
+<br>
+2. Internaly when run is it known and seen as Block Process Access or sbiextra ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 08, 2011 11:29 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">I don't really understand what you're getting at, but internally there is no reference to a specific file name... that would be poor programming IMO. If you feel the need to rename the DLLs on your system for whatever reason, go for it!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 30, 2011 4:15 pm</strong></div>
+				<div class="author">by <strong>MessageBoxA</strong></div>
+				<div class="content">Could you post the source code for this addon? I would like to make some modifications to the project.<br>
+<br>
+Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 01, 2011 1:12 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content"><blockquote><div><cite>MessageBoxA wrote:</cite>Could you post the source code for this addon? I would like to make some modifications to the project.<br>
+<br>
+Thanks.</div></blockquote>
+PM me please <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Microsoft Visual C++ 2008 vs. 2010 Runtimes</h3>
+				<div class="date">Posted: <strong>Wed May 18, 2011 9:29 pm</strong></div>
+				<div class="author">by <strong>Todd</strong></div>
+				<div class="content">wraithdu:<br>
+<br>
+Just wanted to point out that the "Contributed Utilities" page still indicates that the "Microsoft Visual C++ 2008 SP1 Runtimes" are required for this utility, whereas your updated post indicates that the 2010 runtimes are now required (for v1.0.0.17).<br>
+<br>
+Todd</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Block Process Access + SandboxiePortable?</h3>
+				<div class="date">Posted: <strong>Thu May 19, 2011 2:19 am</strong></div>
+				<div class="author">by <strong>Todd</strong></div>
+				<div class="content">Can Block Process Access be made to work with SandboxiePortable?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 15, 2011 3:09 pm</strong></div>
+				<div class="author">by <strong>AlexG</strong></div>
+				<div class="content">Would it be possible for Block Process Access to have a functinality like this, even if disabled by defaul ?<br>
+<br>
+<a href="../phpbb/viewtopica073.php?t=11092" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=11092</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 21, 2011 9:01 pm</strong></div>
+				<div class="author">by <strong>sjd</strong></div>
+				<div class="content">I'm trying to setup this dll but have run into a problem. I run IE as my main browser inside and outside of sandboxes. However, I use FF inside sandboxes (not installed on host side) and that's where the problem lies. When I run FF, the following error appears:<br>
+<br>
+firefox.exe - System Error<br>
+The Program can't start because MSVCP100.dll is missing from your computer.<br>
+Try reinstalling the program to fix this problem.<br>
+<br>
+I've tried disabling each item listed in the sbiextra.ini one at a time but the error still exists. When I remove the InjectDll and InjectDll64, Firefox works as it should. Since I rather not install FF outside a sandbox; I'm wondering, is there a way to somehow add the path to the MSVCP100.dll, in a global\main template to fix FF since I have several of them? Or perhaps there's a better way to fix this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 06, 2011 8:41 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Have you installed the VC++ 2010 runtimes as the first post mentions? If so, you'll have to start a bug report thread as to why Sandboxie is not seeing that installation for injected DLLs.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>11</strong> of <strong>15</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&start=150&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:53:35 GMT -->
+</html>

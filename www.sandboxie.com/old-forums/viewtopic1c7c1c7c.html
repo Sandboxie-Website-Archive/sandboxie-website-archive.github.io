@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25337&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Deleted Files Information</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Deleted Files Information</h2>
+		<p><a href="viewtopic02450245.html?f=17&amp;t=25337">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25337</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Deleted Files Information</h3>
+				<div class="date">Posted: <strong>Sat Jan 13, 2018 3:23 pm</strong></div>
+				<div class="author">by <strong>DonkeyBomb89</strong></div>
+				<div class="content">Hi, <br>
+I have a quick question: when exploring the Sandbox file system from Windows 10, how do I know if it has been deleted inside the Sandbox?<br>
+<br>
+This is what I observe:<br>
+- a file deleted from within the sandbox, e.g. using a program, is not visible from withing the Sandbox (e.g. using sandboxed explorer)<br>
+- a file deleted from within the sandbox is still visible outside it (e.g. using regular explorer), in the path under:<br>
+   C:\Sandbox\&lt;username&gt;\DefaultBox\...<br>
+  I want to stress the fact that I deleted (from Windows 10) the files in the original directory (the one from which Sandboxie originally<br>
+  copied the files), so I am not seeing these files when I open the above path on the FS.<br>
+<br>
+In a similar <a href="viewtopicdbcf-2dbcf.html?t=17023" class="postlink">question</a>, it was suggested that Sandboxie fills a file with zeros and marks it with a special timestamp to indicate that it has been deleted inside the Sandbox. However, I could not find any trace of that.<br>
+<br>
+This is what I observe:<br>
+- The file's binary content appears to be still identical to a clone of the original file<br>
+- The 'stat' command, executed under linux, does not show any special value within creation/access/change date fields<br>
+<br>
+Could anyone help?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Deleted Files Information</h3>
+				<div class="date">Posted: <strong>Mon Jan 15, 2018 3:31 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello DonkeyBomb89,<br>
+<br>
+Files deleted inside the Sandbox will not affect your host (meaning they will not be deleted from your host). To delete a file in the Sandbox please follow these steps:<br>
+<a href="../DeleteSettings.html" class="postlink">https://www.sandboxie.com/DeleteSettings</a><br>
+<br>
+You can right-click on your Sandbox and select: delete contents.<br>
+You can delete the files within a Sandboxed explorer.  <br>
+To manually delete files, navigate to your Sandbox location (typically C:\Sandbox...) and delete the files via Windows Explorer (non-sandboxed). <br>
+To confirm that the files are no longer there, use Windows Explorer and search for them inside the Sandbox folders. If not found, then they are gone.  <br>
+<br>
+Here's more info if you want to use Secure Delete:<br>
+<a href="../SecureDeleteSandbox.html" class="postlink">https://www.sandboxie.com/SecureDeleteSandbox</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Deleted Files Information</h3>
+				<div class="date">Posted: <strong>Wed Jan 17, 2018 2:45 am</strong></div>
+				<div class="author">by <strong>DonkeyBomb89</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopice538-2e538.html?p=131899#p131899" data-post-id="131899" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jan 15, 2018 3:31 pm</div></cite>
+Hello DonkeyBomb89,<br>
+<br>
+Files deleted inside the Sandbox will not affect your host (meaning they will not be deleted from your host). To delete a file in the Sandbox please follow these steps:<br>
+<a href="../DeleteSettings.html" class="postlink">https://www.sandboxie.com/DeleteSettings</a>
+</div></blockquote>
+
+Perhaps there is a miscommunication here. I don't want to delete files, I just want to be able to tell which files have been deleted inside the Sandbox.<br>
+<br>
+I have an application that creates and deletes a file within the Sandbox. <br>
+When this file is deleted, it is no longer visibile from within the Sandbox.<br>
+However, it is still visible from outside the Sandbox by looking at the Sandbox files.<br>
+<br>
+Thus, if I run a script on my system, and I explore all the files in the Sandbox, some of these are actually files that were already deleted within the Sandbox but are still visible outside of it. I want to be able to tell the script to ignore these files.<br>
+<br>
+Since the file still exists after being deleted within the Sandbox, but it is not shown within the Sandbox, it stands to reason to believe that Sandboxie knows in some way which files were deleted and which files were not. I want to know the same thing, that's all.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Deleted Files Information</h3>
+				<div class="date">Posted: <strong>Wed Jan 17, 2018 4:01 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello DonkeyBomb89 ,<br>
+<br>
+For deleted files, we set the creation date to the following:<br>
+#define DELETE_MARK_LOW   0xDEAD44A0<br>
+#define DELETE_MARK_HIGH  0x01B01234<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25337&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:43 GMT -->
+</html>

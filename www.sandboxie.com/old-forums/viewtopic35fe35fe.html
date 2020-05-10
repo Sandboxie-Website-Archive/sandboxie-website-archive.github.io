@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25324&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:08:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Touch keyboard does not launch in sandboxed browser</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Touch keyboard does not launch in sandboxed browser</h2>
+		<p><a href="viewtopicd4cdd4cd.html?f=11&amp;t=25324">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25324</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Touch keyboard does not launch in sandboxed browser</h3>
+				<div class="date">Posted: <strong>Tue Jan 09, 2018 12:08 am</strong></div>
+				<div class="author">by <strong>aigle</strong></div>
+				<div class="content">Two tablets with same issue. On touching address bar, search bar etc touch keyboard does't pop up. I have to launch it manually. It is very annoying issue.<br>
+<br>
+New surface pro 2017<br>
+Lenovo miix 2 8<br>
+Windows 10, chrome<br>
+<br>
+Very surprised tat no body has yet fixed such a small but cumbersome issue. <br>
+Any help? thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Touch keyboard does not launch in sandboxed browser</h3>
+				<div class="date">Posted: <strong>Tue Jan 09, 2018 2:48 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello aigle,<br>
+<br>
+I found an old thread that seems to be related:<br>
+<a href="viewtopicc5f8c5f8.html?f=11&amp;t=22169" class="postlink">viewtopic.php?f=11&amp;t=22169</a><br>
+<br>
+We do not test touch screens, but if you provide the results of your Resource Access monitor, I'll have a look :<br>
+Create a new Sandbox with default settings and follow these steps:<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Touch keyboard does not launch in sandboxed browser</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2018 4:48 am</strong></div>
+				<div class="author">by <strong>aigle</strong></div>
+				<div class="content">Hi, thanks for the quick reply.<br>
+I already tried that thread and it did not help.<br>
+Here is the output from Resource access monitor.<br>
+<br>
+<a href="https://ufile.io/7wt8b" class="postlink">https://ufile.io/7wt8b</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Touch keyboard does not launch in sandboxed browser</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2018 11:10 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello aigle,<br>
+<br>
+Does the issue follow you to a new Sandbox with default settings? <br>
+It looks like you are using Chrome portable. Does the issue affect other browsers like IE? <br>
+<br>
+I am not seeing much on your Res. Acc. Mon. output, but here's something that did stand out:<br>
+WinCls   X  IPTip_Main_Window<br>
+<br>
+Let's see what happens if you allow that Winclass:<br>
+Create a new Sandbox with default settings, right click on your Sandbox --&gt; Sandbox settings--&gt; Resource Access --&gt; Window Access <br>
+Hit Add <br>
+Paste IPTip_Main_Window<br>
+Apply and Ok your way out.<br>
+Configure --&gt; Reload configuration. <br>
+Try launching the browser in that new sandbox and invoke the on-screen keyboard.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Touch keyboard does not launch in sandboxed browser</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2018 9:13 pm</strong></div>
+				<div class="author">by <strong>aigle</strong></div>
+				<div class="content">Hi,thanks for help but unfortunately it doesn't work.<br>
+<br>
+I noticed everytime I touch in url or search bar, an instance of tabtip.exe process is launched inside SBIE. If i touch inside url bar ten times, ten instances of tabtip.exe are launched. However the child process tabtip32.exe is never launched, that may be the reason of touch keyboard not appearing.<br>
+<br>
+BTW internet explorer has no such issues even on default settings. <br>
+<br>
+It doesn't make any difference if i use portable chrome or the installed version.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Touch keyboard does not launch in sandboxed browser</h3>
+				<div class="date">Posted: <strong>Thu Jan 11, 2018 9:58 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello aigle,<br>
+
+<blockquote class="uncited"><div>I noticed everytime I touch in url or search bar, an instance of tabtip.exe process is launched inside SBIE</div></blockquote>
+I didn't see those entries in your Res. Acc. Mon results. Did you capture that? Can you copy the output here?<br>
+<br>
+What happens if you use the guidance from the previous post and open the paths (change it to whatever browser you are using) for both tabtip and tabtip32? <br>
+OpenFilePath=chrome.exe,C:\Program Files\Common Files\microsoft shared\ink\TabTip.exe<br>
+OpenFilePath=chrome.exe,C:\Program Files\Common Files\microsoft shared\ink\tabtip32.exe <br>
+<br>
+Can you post the Resource Access Monitor output using IE? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Touch keyboard does not launch in sandboxed browser</h3>
+				<div class="date">Posted: <strong>Thu Jan 11, 2018 6:18 pm</strong></div>
+				<div class="author">by <strong>aigle</strong></div>
+				<div class="content">Hi, tried everything but no joy. Sending logs. BTW I fixed the file path for tabtip32.exe. Also used default sandbox.<br>
+<br>
+<a href="https://ufile.io/160b5" class="postlink">https://ufile.io/160b5</a><br>
+<br>
+Touch keyboard doesn't pop up with firefox as well.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Touch keyboard does not launch in sandboxed browser</h3>
+				<div class="date">Posted: <strong>Fri Jan 12, 2018 11:43 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello aigle ,<br>
+<br>
+Thanks for the updates and logs. I have made the devs aware.  <br>
+As stated before we do not test touch screens, so I am not sure if a fix will be implemented for this.<br>
+<br>
+I'll update this thread if new information becomes available.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Touch keyboard does not launch in sandboxed browser</h3>
+				<div class="date">Posted: <strong>Fri Jan 12, 2018 3:50 pm</strong></div>
+				<div class="author">by <strong>aigle</strong></div>
+				<div class="content">ok, thanks. I am really surprised that SBIE is never tested on touch screen. Surface pro must not be an uncommon device even in business set ups.Touch screens are so ubiquitous.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25324&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:08:08 GMT -->
+</html>

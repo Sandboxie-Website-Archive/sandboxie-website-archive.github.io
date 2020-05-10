@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25629&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:55:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Unable to install programs in Sandbox</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Unable to install programs in Sandbox</h2>
+		<p><a href="viewtopic73657365.html?f=11&amp;t=25629">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25629</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Unable to install programs in Sandbox</h3>
+				<div class="date">Posted: <strong>Fri Mar 23, 2018 5:13 am</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content"><div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file9bca9bca.png?id=1356" class="postimage" alt="screenCapture_672859_778394625_0.png" onclick="viewableArea(this);" /></dt>
+						<dd>screenCapture_672859_778394625_0.png (11.25 KiB) Viewed 425 times</dd>
+		</dl>
+		
+		
+		
+			</div>
+
+<br>
+This happens on most but not all programs (exe, msi) I try to install directly into a sandbox. The odd program that uses old fashioned installers seem to work. It's been going on for some time and is a nuisance as I cannot test programs anymore before normal installation. <br>
+<br>
+I set up a new default sandbox and tried that as well as my various personalised one; and I also deleted my ini file and allowed SB to create its default one with no difference.<br>
+<br>
+SB 5.24x64, Win 10x64</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Unable to install programs in Sandbox</h3>
+				<div class="date">Posted: <strong>Sun Apr 01, 2018 7:03 am</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">Is anyone from Sandboxie looking into this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Unable to install programs in Sandbox</h3>
+				<div class="date">Posted: <strong>Tue Apr 03, 2018 11:54 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello henryg ,<br>
+<br>
+As we asked last time: <a href="viewtopic5c285c28.html?f=11&amp;t=25026&amp;p=130838#p130838" class="postlink">viewtopic.php?f=11&amp;t=25026&amp;p=130838#p130838</a><br>
+Please provide a list of some the affected programs so that I can test them.<br>
+Include a copy of your configuration file (Configure --&gt; Edit Configuration . Copy/paste the output, highlight it and click on the "&lt;/&gt;" button to format it). <br>
+<br>
+Also, be sure to provide all the info required here:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Unable to install programs in Sandbox</h3>
+				<div class="date">Posted: <strong>Thu Apr 05, 2018 9:49 am</strong></div>
+				<div class="author">by <strong>Sam777</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistac5c.html?mode=viewprofile&amp;u=534">henryg</a> wrote: <a href="viewtopica872a872.html?p=132976#p132976" data-post-id="132976" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Mar 23, 2018 5:13 am</div></cite>
+This happens on most but not all programs (exe, msi) I try to install directly into a sandbox. The odd program that uses old fashioned installers seem to work. It's been going on for some time and is a nuisance as I cannot test programs anymore before normal installation. </div></blockquote>
+
+I've come across this error on an occasion. The solution I use doesn't always work with every program but it's worth a try. The most common method to install software into a sandbox is to right-mouse click on the exe and select - <em>Run sandboxed</em>. The other method in a newly created sandbox, is to open SB control panel. Right-mouse click on the sandbox and select: <em>Run Sandboxed\Run Any Program</em>. In the popup window type in NOTEPAD and click OK. This actions creates the drive folders and registry within the sandbox.<br>
+<br>
+Now right-mouse click on the sandbox and select EXPLORE CONTENTS. Open the the DRIVE\C folders and create a new folder called TEMP or whatever you like. Copy the program you are trying to install into the newly created temp folder and try installing from there. This doesn't work with all programs. There are some software that cannot be sandboxed no matter what you do because the developers prevent it somehow.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Unable to install programs in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon Apr 09, 2018 7:55 am</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">Sorry for the delay in replying, but my PC has been playing up.<br>
+<br>
+Programs to test:<br>
+An easy program to get to try is Bowpad64 (<a href="http://www.majorgeeks.com/files/details/bowpad_64_bit.html" class="postlink">http://www.majorgeeks.com/files/details ... 4_bit.html</a>). Assuming it fails, msiexec.exe cannot be terminated in the sandbox or via Task Manager. Very odd. <br>
+<br>
+Skype Desktop v7.41 (full instal version not stub) does the same. I don't use the store version, or v8 which I disliked.<br>
+<br>
+There have been many more, but I didn't keep a note as they were transient, but hopefully this should enable you to recreate the problem, if indeed you suffer the same. <br>
+<br>
+I tried Sam777 suggestions (thank you for those) but it made no difference.<br>
+<br>
+Windows 10 1709 16299.334<br>
+SB 5.24<br>
+AVG Internet Security 18.3.3051 (build 18.3.3860.309)<br>
+<br>
+If you need anything more, let me know.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Unable to install programs in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon Apr 09, 2018 11:32 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello henryg,<br>
+<br>
+I logged in to a VM with Win 10 x64 + Sbie 5.24,  launched a Sandboxed browser in a new Sandbox with default settings, downloaded BowPad from your link, executed it and launched it without issues.<br>
+Upon closing the program, it took a few seconds to finish all processes, but they all terminated correctly .<br>
+<br>
+I was also able to install Skype version 7.41.10.101 (downloaded from their website, Classic version). It launched, logged in to an account and closed correctly. <br>
+<br>
+I did ask for a copy of your Sandbox config file in case there's something there that might be preventing you from running these apps.  I recommend that you uninstall your AV software to see if it is holding on to files (you may also need to empty your temporary folders files as AVs hide stuff in there sometimes. I remember this with AVG specifically). This is for testing purposes, you should re-install your AV protection after testing.<br>
+Always test in a new Sandbox with default settings and use fresh download copies of the programs you want to install, to avoid carrying over any corrupted files/issues from a previous box. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Unable to install programs in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon Apr 09, 2018 1:56 pm</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">Sorry, I thought you had my ini file already. If you don't see the same problem then it must be local, and I'll have to try uninstalling AVG etc etc, but of course I had tried with a vanilla ini file per my first post.<br>
+<br>
+Que sera.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25629&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:55:21 GMT -->
+</html>

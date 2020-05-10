@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=24929&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:58:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Double-clicking on spooler list adds printer to settings</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Double-clicking on spooler list adds printer to settings</h2>
+		<p><a href="viewtopicdb28db28.html?f=4&amp;t=24929">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=24929</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Double-clicking on spooler list adds printer to settings</h3>
+				<div class="date">Posted: <strong>Tue Sep 26, 2017 10:24 am</strong></div>
+				<div class="author">by <strong>LongTymeFan</strong></div>
+				<div class="content">I had a difficult time trying to get my Epson printer to work over the network.  I wound up with:<br>
+<br>
+OpenFilePath=E_TARNRUE.EXE,\\Device\HarddiskVolume3\ProgramData\EPSON\PRINTER\EPAUDF01.AUB<br>
+OpenFilePath=E_TARNRUE.EXE,\\Device\HarddiskVolume3\ProgramData\EPSON\PRINTER\EPAUDF01.AUD<br>
+OpenFilePath=E_TARNRUE.EXE,\\Device\HarddiskVolume3\ProgramData\EPSON\EPSON ET-2650 Series\ConvBinData\E_TCXRUE.CFX<br>
+OpenFilePath=E_TARNRUE.EXE,\\Device\HarddiskVolume3\ProgramData\EPSON\EPSON ET-2650 Series\ConvBinData\E_TCXRUE.USX<br>
+OpenFilePath=firefox.exe,\\Device\HarddiskVolume3\ProgramData\EPSON\PRINTER\EPAUDF01.AUB<br>
+OpenFilePath=firefox.exe,\\Device\HarddiskVolume3\ProgramData\EPSON\PRINTER\EPAUDF01.AUD<br>
+OpenFilePath=firefox.exe,\\Device\HarddiskVolume3\ProgramData\EPSON\EPSON ET-2650 Series\ConvBinData\E_TCXRUE.CFX<br>
+OpenFilePath=firefox.exe,\\Device\HarddiskVolume3\ProgramData\EPSON\EPSON ET-2650 Series\ConvBinData\E_TCXRUE.USX<br>
+<br>
+although it's possible some entries aren't needed.  The most frustrating part was even when I had it right according to one thread on the subject, it turned out another thread divulged that a double-slash was needed in order to print across a network.  Before fixing this, when this sucker printed, double-clicking worked about half the time.  When I actually tried to print, I would have to double-click maybe 20x.<br>
+<br>
+It shouldn't be this hard, especially for anyone who is not a techie, to run their proggie in a sandbox.  Instead of green-lighting only the current process, and getting TONS of error messages, each double-click should conveniently add, e.g., in my case, one of the above entries, to the configuration file.  Must each person who uses Sandboxie sift through the forums and dredge up this obscure bit of arcania?  Enabling the current process is a half measure, and the SAME errors keep popping up again and again, even when I haven't restarted the browser, and I go to print something else anew.  Like any decent firewall software, it should be up to the user to inspect the privilege being requested, and green-light it or not long-term when prompted.  This, I'm sure, will make what is undoubtedly a frustrating experience for many users, into one that gives the impression of a well thought out and designed piece of software.  Sorry to say it so flatly, but I found this pretty frustrating, as currently designed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Double-clicking on spooler list adds printer to settings</h3>
+				<div class="date">Posted: <strong>Tue Sep 26, 2017 2:05 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello LongTymeFan,<br>
+<br>
+Let's see if we can work on narrowing it down, and then maybe create a template for EPSON printers. I do not have one to test the behavior, so I will need your help to get this sorted out. <br>
+<br>
+I found some related topics, please see below:<br>
+<a href="viewtopic2def2def.html?p=112086#p112086" class="postlink">viewtopic.php?p=112086#p112086</a><br>
+<a href="viewtopice3d5e3d5.html?p=119945#p119945" class="postlink">viewtopic.php?p=119945#p119945</a><br>
+<br>
+Try this in a new Sandbox (so the one that is currently working does not get modified) and see if you can print from Firefox afterwards: <br>
+OpenFilePath=firefox.exe,%SystemDrive%\ProgramData\EPSON\EPSON ET-2650 Series\ConvBinData\*.CFX<br>
+OpenFilePath=firefox.exe,%SystemDrive%\ProgramData\EPSON\EPSON ET-2650 Series\ConvBinData\*.USX<br>
+OpenFilePath=firefox.exe,%SystemDrive%\ProgramData\EPSON\PRINTER\*.AUD<br>
+OpenFilePath=firefox.exe,%SystemDrive%\ProgramData\EPSON\PRINTER\*.AUB<br>
+<br>
+Just to be on the same page, Sandboxie is not a Firewall and it will not behave as such. It works by isolating applications in order to prevent them from modifying your host (so, it is actually working as expected when blocking those files. However, we can always punch some holes in it via a templates in order to allow compatibility and make things more convenient).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Double-clicking on spooler list adds printer to settings</h3>
+				<div class="date">Posted: <strong>Thu Sep 28, 2017 5:09 pm</strong></div>
+				<div class="author">by <strong>LongTymeFan</strong></div>
+				<div class="content">I just tried to kick off a print using the above rules, and got tons of:<br>
+<br>
+SBIE1319 Blocked spooler print to file, [7136] firefox.exe, \Device\HarddiskVolume3\ProgramData\EPSON\PRINTER\EPAUDF01.AUD<br>
+SBIE1320 To allow print spooler to write outside the sandbox for this process, please double-click on this message line<br>
+<br>
+:/<br>
+<br>
+Trying your settings.  I am fully aware SBIE is not a firewall.  Note that my msg was NOT a plea for help.  It was about improving atrocious GUI.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Double-clicking on spooler list adds printer to settings</h3>
+				<div class="date">Posted: <strong>Fri Sep 29, 2017 9:40 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello LongTymeFan,<br>
+<br>
+After you click on the message, are you able to print? <br>
+That is the expected behavior, you will get a message when you try to print, you;ll have to manually allow it and re-do the print - at which point it should start printing normally.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Double-clicking on spooler list adds printer to settings</h3>
+				<div class="date">Posted: <strong>Wed Oct 11, 2017 6:49 pm</strong></div>
+				<div class="author">by <strong>LongTymeFan</strong></div>
+				<div class="content">Currently, I've got:<br>
+<br>
+OpenFilePath=firefox.exe,%SystemDrive%\ProgramData\EPSON\EPSON ET-2650 Series\ConvBinData\*.CFX<br>
+OpenFilePath=firefox.exe,%SystemDrive%\ProgramData\EPSON\EPSON ET-2650 Series\ConvBinData\*.USX<br>
+OpenFilePath=firefox.exe,%SystemDrive%\ProgramData\EPSON\PRINTER\*.AUD<br>
+OpenFilePath=firefox.exe,%SystemDrive%\ProgramData\EPSON\PRINTER\*.AUB<br>
+OpenFilePath=E_TARNRUE.EXE,%SystemDrive%\ProgramData\EPSON\PRINTER\*.AUB<br>
+OpenFilePath=E_TARNRUE.EXE,\\Device\HarddiskVolume3\ProgramData\EPSON\PRINTER\EPAUDF01.AUD<br>
+<br>
+Now, I get <br>
+<br>
+SBIE1319 Blocked spooler print to file, [5916] E_TARNRUE.EXE, \Device\HarddiskVolume3\ProgramData\EPSON\PRINTER\EPAUDF01.AUD<br>
+SBIE1320 To allow print spooler to write outside the sandbox for this process, please double-click on this message line<br>
+<br>
+I have to double-click on the message 10 or 12 times; and then it prints.<br>
+<br>
+Fun stuff.  I maintain that I shouldn't have to double-click on it more than once ... EVER.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Double-clicking on spooler list adds printer to settings</h3>
+				<div class="date">Posted: <strong>Thu Oct 12, 2017 7:31 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">I would make it simple and would try following two lines:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=firefox.exe,%SystemDrive%\ProgramData\EPSON\*
+OpenFilePath=E_TARNRUE.EXE,%SystemDrive%\ProgramData\EPSON\*</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Double-clicking on spooler list adds printer to settings</h3>
+				<div class="date">Posted: <strong>Thu Oct 12, 2017 3:42 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello LongTymeFan ,<br>
+
+<blockquote class="uncited"><div>I have to double-click on the message 10 or 12 times; and then it prints.</div></blockquote>
+Are you trying to print multiple files? What are your exact repro steps? <br>
+What happens if you try to print from other programs (other browsers and applications)?<br>
+<br>
+If the message appears several times, just click on once of its instances, then close it and re-try printing. <br>
+<br>
+Also, please let us know if the workaround suggested by APMichael worked for you.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Double-clicking on spooler list adds printer to settings</h3>
+				<div class="date">Posted: <strong>Thu Oct 19, 2017 12:02 am</strong></div>
+				<div class="author">by <strong>LongTymeFan</strong></div>
+				<div class="content">No, I'm not trying to print multiple files.  One single print of one single page was requiring ~8-10 double-clicks.<br>
+<br>
+&gt; If the message appears several times, just click on once of its instances, then close it and re-try printing.<br>
+<br>
+Shouldn't that be as good as trying to print, doing it e.g. 10 times, and trying it again, and having to double-click about as many times?<br>
+<br>
+The workaround suggested by APMichael appears to be working for me; although as above, previous fixes seemed to work, and then started all this double-clicking requirement again.<br>
+<br>
+To reproduce, I used FF Portable 55.0.1 updated to 55.0.3; and ran under SBIE 5.20.  Printing a single page seemed to do all that.  Double-clicking had no long-term effect, and to print a single page, double-clicking 8-10 times was needed.  There seems little need to test printing of other apps, as it seems to be working now.<br>
+<br>
+So far, this seems to solve my problem.  Since the offending file is named in the error, but a rule for it has been created, and FF and SBIE control started and stopped, I'd take it it was not working as designed.  The printer is an Epson ET-2650 Series printing over a network which had the actual driver installed on another XP machine.  When I installed the printer for this computer, it seemed to find the Win7 driver.  Printer Properties identifies it as Epson printing system v. 2.5.  I've been putting my definitions in the Global section.  I don't foresee a time when I have an app that I want its printing abilities to be inactivated by a sandbox.  After all, will an attacker write an attack for each printer driver, or even dozens of the popular ones?  Seems like they'd try more universal routes.<br>
+<br>
+Thanks for all you help, for a great protection program, and esp. to APMichael for the rule that finally worked.  I'll let you know if it starts all that double-click stuff again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Double-clicking on spooler list adds printer to settings</h3>
+				<div class="date">Posted: <strong>Thu Oct 19, 2017 7:53 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">I'm glad I was able to help. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+It could happen again if you try to print from another sandboxed application.<br>
+<br>
+Then you can simply add an additional rule with the ".exe" shown in the SBIE1319 error message, e.g. for Internet Explorer:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=iexplore.exe,%SystemDrive%\ProgramData\EPSON\*</code></pre></div>
+
+Or you can replace the previous rules with this one, to allow printing for all sandboxed applications:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=%SystemDrive%\ProgramData\EPSON\*</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Double-clicking on spooler list adds printer to settings</h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2017 6:04 pm</strong></div>
+				<div class="author">by <strong>LongTymeFan</strong></div>
+				<div class="content">Latest error:<br>
+SBIE1319 Blocked spooler print to file, [5444] firefox.exe, \Device\HarddiskVolume3\Windows\Temp\SPL726F.tmp<br>
+<br>
+Still, it printed.  Trying newest rule.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Double-clicking on spooler list adds printer to settings</h3>
+				<div class="date">Posted: <strong>Sun Nov 05, 2017 6:21 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">For that case you have to add an additional rule:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=firefox.exe,%SystemDrive%\Windows\Temp\*.tmp</code></pre></div></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=24929&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:58:45 GMT -->
+</html>

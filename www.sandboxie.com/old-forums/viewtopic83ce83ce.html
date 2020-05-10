@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=21539&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:49:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Antivirus/Anti-malware|SBIE v5+[working/not][Updated 7/14/17] - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Antivirus/Anti-malware|SBIE v5+[working/not][Updated 7/14/17]</h2>
+		<p><a href="viewtopica726a726.html?f=11&amp;t=21539">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21539</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>15</strong></div>
+					<div class="post">
+				<h3>Re: Anti-Virus programs SBIE Beta v5 &amp; Win 10 (working/not)</h3>
+				<div class="date">Posted: <strong>Tue Sep 08, 2015 9:57 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Johnny_B wrote:</cite><blockquote><div><cite>Jon7 wrote:</cite>And 5.01.10 still doesn't work with comodo.</div></blockquote>
+
+I've found a temporary solution to the "Sandboxie doesn't work if Comodo Firewall/Antivirus is installed on Windows 10" problem.<br>
+<br>
+First make sure you have the latest version of Sandboxie installed. I've tested using Sandboxie V 5.01.13<br>
+<br>
+Open Comodo and click Open Advanced Settings.<br>
+<br>
+Go to Defence+ / HIPS / HIPS Settings. You will see a setting called "Detect shellcode injections". <strong>Make sure it's checked because the solution doesn't work if it's disabled.</strong> (You don't need to have HIPS enabled if you don't want to, just make sure "Detect shellcode injections" is checked).<br>
+<br>
+Now click on Exclusions. In the window that opens right click and choose Add -&gt; Files.<br>
+<br>
+Go to the Sandboxie folder located in Program Files or Program Files (x86) and select all the executables you find there<br>
+<br>
+"Start.exe""License.exe""SandboxieBITS.exe""SandboxieCrypto.exe""SandboxieDcomLaunch.exe""SandboxieRpcSs.exe""SandboxieWUAU.exe""SbieCtrl.exe""SbieIni.exe""SbieSvc.exe"<br>
+<br>
+Click OK to add them, then click OK in all Comodo windows that are opened.<br>
+<br>
+Now Sandboxie works  <img class="smilies" src="images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green">  <img class="smilies" src="images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green">  <img class="smilies" src="images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green"> <br>
+<br>
+One more thing. I've discovered all this by accident. After the latest update Chrome would crash on start (Google Chrome has stopped working) if Comodo was installed. The solution I've found was to add C:\Program Files (x86)\Google\Chrome\Application\chrome.exe to the same Exclusions list in Comodo. This had nothing to do with Sandboxie, but it gave me the idea to try and do the same thing with Sandboxie's executables.</div></blockquote>
+
+Confirmed. This does work.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Anti-Virus programs SBIE Beta v5 &amp; Win 10 (working/not)</h3>
+				<div class="date">Posted: <strong>Tue Sep 08, 2015 11:58 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Johnny_B wrote:</cite>
+One more thing. I've discovered all this by accident. After the latest update Chrome would crash on start (Google Chrome has stopped working) if Comodo was installed. ......This had nothing to do with Sandboxie....</div></blockquote>
+I read somewhere that right now there is a known issue between Comodo and Chrome. <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Anti-Virus programs SBIE Beta v5 &amp; Win 10 (working/not)</h3>
+				<div class="date">Posted: <strong>Tue Sep 08, 2015 2:39 pm</strong></div>
+				<div class="author">by <strong>Jon7</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite><blockquote><div><cite>Johnny_B wrote:</cite><blockquote><div><cite>Jon7 wrote:</cite>And 5.01.10 still doesn't work with comodo.</div></blockquote>
+
+<br>
+<br>
+Confirmed. This does work.</div></blockquote></div></blockquote>
+
+<br>
+Ok, i did it and it works fine. Thank you !!!!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Anti-Virus programs SBIE Beta v5 &amp; Win 10 (working/not)</h3>
+				<div class="date">Posted: <strong>Tue Sep 08, 2015 3:15 pm</strong></div>
+				<div class="author">by <strong>Broda</strong></div>
+				<div class="content"><blockquote><div><cite>Johnny_B wrote:</cite>
+I've found a temporary solution to the "Sandboxie doesn't work if Comodo Firewall/Antivirus is installed on Windows 10" problem.
+</div></blockquote>
+
+Thanks a lot for sharing that !  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+I was visiting this topic from time to time to see if there were any progress.<br>
+It was very frustrating not being allowed to use both programs.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Anti-Virus- SBIE Beta v5 &amp; Win 10 (working/not) (Updates</h3>
+				<div class="date">Posted: <strong>Tue Sep 08, 2015 3:22 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">I tried to utilize this work around with Kaspersky 2015/2016 in Win 10 and SBIE. no luck. KS is doing a lot under the hoot and actually doing things that SBIE would do. And they're not getting along well. So no fix at this time and no ETA.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Anti-Virus programs SBIE Beta v5 &amp; Win 10 (working/not)</h3>
+				<div class="date">Posted: <strong>Wed Sep 09, 2015 3:39 pm</strong></div>
+				<div class="author">by <strong>hga</strong></div>
+				<div class="content"><blockquote><div><cite>Johnny_B wrote:</cite><blockquote><div><cite>Jon7 wrote:</cite>And 5.01.10 still doesn't work with comodo.</div></blockquote>
+
+I've found a temporary solution to the "Sandboxie doesn't work if Comodo Firewall/Antivirus is installed on Windows 10" problem.<br>
+<br>
+First make sure you have the latest version of Sandboxie installed. I've tested using Sandboxie V 5.01.13<br>
+<br>
+Open Comodo and click Open Advanced Settings.<br>
+<br>
+Go to Defence+ / HIPS / HIPS Settings. You will see a setting called "Detect shellcode injections". <strong>Make sure it's checked because the solution doesn't work if it's disabled.</strong> (You don't need to have HIPS enabled if you don't want to, just make sure "Detect shellcode injections" is checked).<br>
+<br>
+Now click on Exclusions. In the window that opens right click and choose Add -&gt; Files.<br>
+<br>
+Go to the Sandboxie folder located in Program Files or Program Files (x86) and select all the executables you find there<br>
+<br>
+"Start.exe""License.exe""SandboxieBITS.exe""SandboxieCrypto.exe""SandboxieDcomLaunch.exe""SandboxieRpcSs.exe""SandboxieWUAU.exe""SbieCtrl.exe""SbieIni.exe""SbieSvc.exe"<br>
+<br>
+Click OK to add them, then click OK in all Comodo windows that are opened.<br>
+<br>
+Now Sandboxie works  <img class="smilies" src="images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green">  <img class="smilies" src="images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green">  <img class="smilies" src="images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green"> <br>
+<br>
+One more thing. I've discovered all this by accident. After the latest update Chrome would crash on start (Google Chrome has stopped working) if Comodo was installed. The solution I've found was to add C:\Program Files (x86)\Google\Chrome\Application\chrome.exe to the same Exclusions list in Comodo. This had nothing to do with Sandboxie, but it gave me the idea to try and do the same thing with Sandboxie's executables.</div></blockquote>
+Thanks for that suggestion.<br>
+I did it and some programs works fine,but explorer.exe get this message: <br>
+SBIE2205 Service not implemented: Win32Init.5 (00000000)<br>
+SBIE2205 Service not implemented: GdiInit.C0000017<br>
+<br>
+***** More Info: ******<br>
+OS: Windows 10 x64<br>
+Sandboxie v 5.01.13 Beta</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Anti-Virus programs SBIE Beta v5 &amp; Win 10 (working/not)</h3>
+				<div class="date">Posted: <strong>Wed Sep 09, 2015 3:56 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote class="uncited"><div>
+I did it and some programs works fine,but explorer.exe get this message: <br>
+SBIE2205 Service not implemented: Win32Init.5 (00000000)<br>
+SBIE2205 Service not implemented: GdiInit.C0000017<br>
+
+</div></blockquote>
+
+Thanks, yes we're looking at it. A windows update has broken something.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Anti-Virus programs SBIE Beta v5 &amp; Win 10 (working/not)</h3>
+				<div class="date">Posted: <strong>Wed Sep 16, 2015 5:47 pm</strong></div>
+				<div class="author">by <strong>hga</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite><blockquote class="uncited"><div>
+I did it and some programs works fine,but explorer.exe get this message: <br>
+SBIE2205 Service not implemented: Win32Init.5 (00000000)<br>
+SBIE2205 Service not implemented: GdiInit.C0000017<br>
+
+</div></blockquote>
+
+Thanks, yes we're looking at it. A windows update has broken something.</div></blockquote>
+Hey,I upgraded to 5.03.1<br>
+<br>
+I try to open "explorer.exe" and I get a message.<br>
+<br>
+The application was unable to start correctly (0xc00000e5). Click OK to close the application. <br>
+<br>
+***** More Info: ******<br>
+OS: Windows 10 x64<br>
+Sandboxie: v5.03.1<br>
+Antivirus: Avira v15<br>
+Firewall: comodo v8</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Anti-Virus- SBIE Beta v5 &amp; Win 10 (working/not) (Updates</h3>
+				<div class="date">Posted: <strong>Thu Sep 17, 2015 8:27 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">It's possible an update to those programs (or the MS Update on the 8th) changed the way they interact with SBIE. The explorer.exe error has been fixed, I would recommend disabling Comodo (also make sure you've followed the compatibility steps above) as well as Avira.<br>
+Usually, the #1 conflict is AV programs. They're updated a lot, and well....they don't play nice.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus- SBIE 5.04 &amp; Win 10 (working/not) (Updates)</h3>
+				<div class="date">Posted: <strong>Mon Sep 28, 2015 1:06 pm</strong></div>
+				<div class="author">by <strong>Grenpara</strong></div>
+				<div class="content">Hey, have same error and problem running KIS2016.<br>
+SBIE2205 Service not implemented:  Win32Init.6 (000000AA)<br>
+<br>
+<br>
+I know with KIS Pure 3 Works fine with Sandboxie but I had upgraded to KIS2016 just last week so never new of problem.<br>
+Guess I will again have to revert back to Pure 3 unless somehow a fix is found or created.<br>
+<br>
+Its to bad as kis 2016 works far better than pure 3.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus- SBIE 5.04 &amp; Win 10 (working/not) (Updates)</h3>
+				<div class="date">Posted: <strong>Mon Sep 28, 2015 2:06 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">There is no workaround for KS 2015/16. I has to be off the host machine for SBiE to work. KS engineers have been in touch with us, but there is no workaround or ETA.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus- SBIE 5.04 &amp; Win 10 (working/not) (Updates)</h3>
+				<div class="date">Posted: <strong>Tue Sep 29, 2015 5:27 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Symantec Endpoint Protection works very well with Sbie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus- SBIE 5.04 &amp; Win 10 (working/not) (Updates)</h3>
+				<div class="date">Posted: <strong>Thu Oct 01, 2015 9:18 pm</strong></div>
+				<div class="author">by <strong>Grenpara</strong></div>
+				<div class="content">Hey Guys,<br>
+<br>
+Well I have been talking to Kasperky and as other said they are aware of the issue and are working on finding a fix.<br>
+They had me run one of their tools to get all system info so they can try to fix the issue.<br>
+<br>
+They gave me the bug ID1183380 and they said they really are trying to fix this.<br>
+I even told them I will fall back to old version of Kasperky as it will work under Pure 3.<br>
+I told them if they can't find a fix then I will have no choice to switch to other companies virus protection.<br>
+Not that one person matters to them but I am sure I am not the only one complaining to them.<br>
+<br>
+Anyways I just thought I would post to let people know.<br>
+Thanks<br>
+Gren</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus- SBIE 5.04 &amp; Win 10 (working/not) (Updates)</h3>
+				<div class="date">Posted: <strong>Thu Oct 01, 2015 9:49 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Great. I'm sure Curt will see this as well.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Antivirus- SBIE 5.04 &amp; Win 10 (working/not) (Updates)</h3>
+				<div class="date">Posted: <strong>Sat Oct 03, 2015 6:19 am</strong></div>
+				<div class="author">by <strong>Badgerballs</strong></div>
+				<div class="content"><div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file5cad5cad.png?id=461" class="postimage" alt="sandboxieerror1.png" onclick="viewableArea(this);" /></dt>
+						<dd>sandboxieerror1.png (7.51 KiB) Viewed 3996 times</dd>
+		</dl>
+		
+		
+		
+			</div>I have just installed 5.04 and it still doesn't work for me. Uninstalled everything first....<br>
+It also cam up with an RCps (-1) error</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>15</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=21539&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:49:51 GMT -->
+</html>

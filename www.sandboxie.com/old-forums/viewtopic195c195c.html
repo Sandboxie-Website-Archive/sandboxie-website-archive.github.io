@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=19642&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:44:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie4 vs. Angler Exploit Kit...</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie4 vs. Angler Exploit Kit...</h2>
+		<p><a href="viewtopic59f459f4.html?f=5&amp;t=19642">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=19642</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Fri Sep 26, 2014 2:33 am</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content">I just saw this on Wilder security forums...<br>
+Supposedly, according to ZeroVulnlabs, recently Angler Exploit Kit started using memory-only payloads which makes the whole anti-exe/HIPS/AV approach that focuses on the malicious binary moot from the exploit detection perspective.<br>
+<br>
+<a href="http://www.wilderssecurity.com/threads/malwarebytes-anti-exploit.354641/page-42#post-2411698" class="postlink">http://www.wilderssecurity.com/threads/ ... st-2411698</a><br>
+<a href="http://malware.dontneedcoffee.com/2014/08/angler-ek-now-capable-of-fileless.html#!/2014/08/angler-ek-now-capable-of-fileless.html" class="postlink">http://malware.dontneedcoffee.com/2014/ ... eless.html</a><br>
+<br>
+Does SBIE4 have any kind of mechanisms to block/protect against such exploits, or do I need something to back it up for protection against all of these so-called memory-only payloads?<br>
+Big thanks in advance.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Mon Sep 29, 2014 3:17 am</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content">Also, does Sandboxie4 block/prevent these exploits as well:<br>
+<a href="http://malware.dontneedcoffee.com/2014/06/mbae.html#!/2014/06/mbae.html" class="postlink">http://malware.dontneedcoffee.com/2014/ ... /mbae.html</a><br>
+<br>
+Curt said that no security software can protect against kernel-level exploits.<br>
+But what about: privilege escalation exploits, OS exploits, buffer overflow exploits, memory exploits and all other forms of exploits?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Mon Sep 29, 2014 1:18 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Angler has not crossed our radar screen here.  Sandboxie protects against these things because all sandboxed processes run at untrusted integrity under anonymous user login credentials.  If they break out of Silverlight (or whatever), they will still be contained in Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Wed Oct 01, 2014 7:49 am</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Angler has not crossed our radar screen here.  Sandboxie protects against these things because all sandboxed processes run at untrusted integrity under anonymous user login credentials.  If they break out of Silverlight (or whatever), they will still be contained in Sandboxie.</div></blockquote>
+
+Ok, thanks, but what about that Duqu malware, if I remember correctly it was using True type font vulnerability of win32k.sys and t2embed.dll.<br>
+Now you said that Sandboxie4, even when tightly configured to prevent/block win32k.sys, it will not protect against this exploit/vulnerability, but if you block with Sandboxie4 configuration t2embed.dll vulnerability/exploit will Sandboxie4 at least partially protect against this t2embed.dll vulnerability and prevent execution of Duqu malware (when SBIE4 is tightly configured to prevent/block this and everything else)?<br>
+Sorry, for asking this, again, but I don't know enough about t2embed.dll and win32k.sys-yes, I know with my Windows 8.1 system everything is patched, and the story is over, but I only want to clear this out once and for all what was true about Duqu malware and what is true about SBIE4 protection mechanism against these exploits and Duqu malware and its newer variants.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Wed Oct 01, 2014 12:16 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">1) You can't block win32k.sys with Sandboxie.<br>
+2) MS did say that a workaround to prevent Duqu (and other True Type font vulnerabilities) was to remove access to t2embed.dll.  So, you could have done the same with Sandboxie (by blocking t2embed.dll) -- <span style="text-decoration: underline">if</span> you had known to do it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Wed Oct 01, 2014 12:24 pm</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>1) You can't block win32k.sys with Sandboxie.<br>
+2) MS did say that a workaround to prevent Duqu (and other True Type font vulnerabilities) was to remove access to t2embed.dll.  So, you could have done the same with Sandboxie (by blocking t2embed.dll) -- <span style="text-decoration: underline">if</span> you had known to do it.</div></blockquote>
+
+To be honest I'm still looking one exploit that has bypassed SBIE4, so far I didn't see it, at least, not when it comes to real test, not some proof-of-concept.<br>
+I'm sure you will confirm that, to this day, there have not been any kind of exploits that have actually bypassed SBIE4's protection mechanisms/prevention/blocking, as someone who actually knows how SBIE4 works.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Thu Oct 02, 2014 1:55 am</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>1) You can't block win32k.sys with Sandboxie.<br>
+2) MS did say that a workaround to prevent Duqu (and other True Type font vulnerabilities) was to remove access to t2embed.dll.  So, you could have done the same with Sandboxie (by blocking t2embed.dll) -- <span style="text-decoration: underline">if</span> you had known to do it.</div></blockquote>
+
+Hi, Curt, I truly apologize for being so painful about these questions, but here is one question that still tortures me this post is a copy from an poster called FleishmannTV on malwaretips.com:<br>
+<a href="http://malwaretips.com/threads/sandboxie-pro-vs-malwarebytes-anti-exploit-premium.29285/#post-219387" class="postlink">http://malwaretips.com/threads/sandboxi ... ost-219387</a><br>
+<br>
+Here it is what he said about Sandboxie and exploits:<br>
+"For example, I think Sandboxie wouldn't have protected you against something like the FBI exploit for the Tor browser, because in that case start/run- and internet access restrictions/closed IPC paths/stopping code injection into other processes wouldn't have helped, as it was all happening <strong>inside the browser process</strong>."<br>
+<br>
+Is this true, is it true that SBIE4 cannot protect against these forms of exploits?<br>
+<br>
+So, SBIE4 does not prevent/block exploits, but does contain them all forms of exploits?<br>
+Does it mean that by "contain" means it actually isolates all forms of exploits from the real Windows system?<br>
+<br>
+What about protection against installation of malicious add-ons?<br>
+Big thanks again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Thu Oct 02, 2014 8:47 am</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>1) You can't block win32k.sys with Sandboxie.<br>
+2) MS did say that a workaround to prevent Duqu (and other True Type font vulnerabilities) was to remove access to t2embed.dll.  So, you could have done the same with Sandboxie (by blocking t2embed.dll) -- <span style="text-decoration: underline">if</span> you had known to do it.</div></blockquote>
+
+Is the following true about Sandboxie4?<br>
+The poster names Windows_Security/Kees1958 has written the following:<br>
+"On my Win7 ultimate I use Chrome locked down through GPO. With these templates I only allow the plug-ins and add-ons I explicitely allow (like the admin allowed plug-ins/add-ons in IE). <strong>Point is on Win7 the broker runs in Medium Integrity Level, while under SBIE4 itself runs in System/HIGH. When malware breaks out ol LOW-IL, I rather have it nibbling at a Medium Level processes than HIGH/System processes. But then again this "IL-level access" and "adding attack surface" is all theoretical talk</strong>."<br>
+<br>
+So, are bold statements true or false? <br>
+Does Sandboxie4 itself truly run on system/high-integrity level, while Chrome runs on only medium integrity level, which means it's better and actually more secure to run Chrome outside Sandboxie4, than inside Sandboxie4, only because of these integrity levels, what do you think, Curt, what is true and what is false here?<br>
+Big, big thanks in advance, Curt.<br>
+After all, WS does admit these statements about integrity levels and "adding attack surface" is all theoretical talk, it's nothing proven in every day programming/practice.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Thu Oct 02, 2014 11:06 am</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">SbieCtrl.exe runs at medium integrity.<br>
+SbieSvc.exe runs at system integrity.<br>
+Everything inside the sandbox runs at untrusted integrity (which is lower than "low"),<br>
+<br>
+"SBIE4 itself runs in System/HIGH. " doesn't make any sense.  The service runs as System, but that is not Sbie "itself".   What matters are sandboxed apps, and they all run at untrusted integrity under Anonymous Logon with almost zero rights in the host system.  That's about as restricted as you can get and still execute.<br>
+<br>
+So what does this user do to safely run any webmail attachments or other downloaded executables?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Thu Oct 02, 2014 11:48 am</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Lumberjack wrote:</cite><blockquote><div><cite>Curt@invincea wrote:</cite>1) You can't block win32k.sys with Sandboxie.<br>
+2) MS did say that a workaround to prevent Duqu (and other True Type font vulnerabilities) was to remove access to t2embed.dll.  So, you could have done the same with Sandboxie (by blocking t2embed.dll) -- <span style="text-decoration: underline">if</span> you had known to do it.</div></blockquote>
+
+To be honest I'm still looking one exploit that has bypassed SBIE4, so far I didn't see it, at least, not when it comes to real test, not some proof-of-concept.<br>
+I'm sure you will confirm that, to this day, there have not been any kind of exploits that have actually bypassed SBIE4's protection mechanisms/prevention/blocking, as someone who actually knows how SBIE4 works.</div></blockquote>
+
+AFAIK, Sandboxie has not had a successful bypass in the real world.  There have been several bypasses discovered, discussed in this forum, and fixed.  But, these were never successfully exploited in the wild.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Thu Oct 02, 2014 12:02 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Lumberjack wrote:</cite>
+What about protection against installation of malicious add-ons?</div></blockquote>
+If you install a malicious addon while running sandboxed, the infection is gone when you delete the sandbox. If you install a malicious addon outside the sandbox, you are infected. I am extremely careful about the addons that I use. And install as few as possible.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Fri Oct 03, 2014 1:26 am</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite><blockquote><div><cite>Lumberjack wrote:</cite><blockquote><div><cite>Curt@invincea wrote:</cite>1) You can't block win32k.sys with Sandboxie.<br>
+2) MS did say that a workaround to prevent Duqu (and other True Type font vulnerabilities) was to remove access to t2embed.dll.  So, you could have done the same with Sandboxie (by blocking t2embed.dll) -- <span style="text-decoration: underline">if</span> you had known to do it.</div></blockquote>
+
+To be honest I'm still looking one exploit that has bypassed SBIE4, so far I didn't see it, at least, not when it comes to real test, not some proof-of-concept.<br>
+I'm sure you will confirm that, to this day, there have not been any kind of exploits that have actually bypassed SBIE4's protection mechanisms/prevention/blocking, as someone who actually knows how SBIE4 works.</div></blockquote>
+
+AFAIK, Sandboxie has not had a successful bypass in the real world.  There have been several bypasses discovered, discussed in this forum, and fixed.  But, these were never successfully exploited in the wild.</div></blockquote>
+
+Thanks for the info, but if I might ask what is the difference between blocking exploits and containing exploits: this guy on Wilders security forums claims this:<br>
+"The way that I see it is that SBIE is not designed to block exploits. So he probably means that if some sandboxed process is exploited by malware, it should be able to contain the malware. But it does not stop <strong>the exploit (memory corruption) itself</strong>."<br>
+<br>
+Now, basically there is a huge difference between containing something and blocking something like memory corruption, than the other guy answered him the following:<br>
+"Sure, it does not block them but if they are contained inside SBIE than all that memory corruption is under SBIE4's supervision, and there is not a single harm on the real Windows system, and I'm not talking about just malware, but also memory corruption, the real system memory is untouched, that's the point of containing something, that's a key difference."<br>
+<br>
+Now what is here true and what is here false?<br>
+That's all, big thanks in advance.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Fri Oct 03, 2014 12:52 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Sandboxie <strong>blocks</strong> exploits from affecting the host by <strong>containing</strong> them in the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Fri Oct 03, 2014 5:20 pm</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Sandboxie <strong>blocks</strong> exploits from affecting the host by <strong>containing</strong> them in the sandbox.</div></blockquote>
+
+OK, but does that mean that memory corruption caused by exploits is also 100% contained inside SBIE4, so that memory corruption never touches/can never touch the real Windows system?<br>
+Basically memory is corrupted only inside the SBIE4's sandbox, not outside the SBIE4's sandbox-that's a key difference.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie4 vs. Angler Exploit Kit...</h3>
+				<div class="date">Posted: <strong>Tue Oct 07, 2014 1:57 am</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Sandboxie <strong>blocks</strong> exploits from affecting the host by <strong>containing</strong> them in the sandbox.</div></blockquote>
+
+Quick question if Sandboxie 4.12/beta 4.13.5 Alpha can fully protect against the following on Sandboxie FAQ I read this:<br>
+Detecting Key Loggers<br>
+<br>
+Note two caveats:<br>
+<br>
+• The Internet access feature is neither a replacement for a proper firewall, nor was it designed<br>
+as a mechanism to counter or hinder key-loggers.<br>
+<br>
+• <strong>Some key-loggers could possibly circumvent the Internet access restriction by hijacking the Web<br>
+browser to be used as a vehicle through which to send out the recorded information.</strong> <br>
+<br>
+<a href="../index3da4.html?DetectingKeyLoggers" class="postlink">http://www.sandboxie.com/index.php?DetectingKeyLoggers</a><br>
+<br>
+Also, what about that test from snapfiles and spyshelter test tool:<br>
+<a href="http://www.snapfiles.com/get/antikeyloggertester.html" class="postlink">http://www.snapfiles.com/get/antikeyloggertester.html</a><br>
+<a href="http://www.snapfiles.com/get/stt.html" class="postlink">http://www.snapfiles.com/get/stt.html</a><br>
+<br>
+Here is what Mr. Brian wrote here about these keyloggers that can and will bypass (supposedly) Sandboxie4:<br>
+"Consider this scenario. Your system is clean. You're using a sandboxed browser. You browse a website and Angler exploits a vulnerability. The malware is now running inside the sandboxed browser process itself (start/run restrictions won't stop this, right?). Let's suppose the malware is a keylogger. Now you type some stuff into a word processing document that's not sandboxed. The keylogger running in the browser process could potentially log the keystrokes you typed into the word processing document and exfiltrate that data via the browser process (internet access restrictions won't stop this, right?). Now you close the sandboxed browser and empty the sandbox. The malware is now gone, but the data exfiltration can't be undone."<br>
+<br>
+Is all of this true?<br>
+Also, please take a look at this:<br>
+<a href="http://www.securityweek.com/malware-injected-directly-processes-angler-exploit-kit-attack" class="postlink">http://www.securityweek.com/malware-inj ... kit-attack</a><br>
+In this scenario, the keylogging malware is running <strong>within a browser process</strong>; Internet access restrictions and start/run restrictions wouldn't have stopped that. The browser process needs internet access, so internet access restrictions wouldn't be applied to the browser process, I assume.<br>
+Is this true?<br>
+<br>
+<strong>And also, against what form of keyloggers, even super-tightly configured SBIE4 cannot protect at all? Do I need an anti-keylogger, for extra security?</strong><br>
+<br>
+<strong>And what about shellcode attacks, and what about memory buffer overflow attacks, how and does Sandboxie 4.12/4.13.5 protect against these attacks and do I need an additional security option for protection against these attacks?</strong><br>
+<br>
+<strong>What about situations where a "good" process such as a web browser, PDF reader, etc. has been exploited, and the shellcode has loaded a keylogger into the/a "good" process. In these cases, a "good" process is doing the keylogging. Here are some general methods to accomplish this: Remote DLL Injection (paper - <a href="http://www.nologin.org/Downloads/Papers/remote-library-injection.pdf" class="postlink">http://www.nologin.org/Downloads/Papers ... ection.pdf</a>) and Reflective DLL Injection (paper - <a href="http://www.harmonysecurity.com/files/HS-P005_ReflectiveDllInjection.pdf" class="postlink">http://www.harmonysecurity.com/files/HS ... ection.pdf</a>).</strong> <br>
+<br>
+And here is the link to the keylogger test which supposedly proves that tightly configured Sandboxie 4.12 with Internet access restrictions and start/run restrictions will fail to protect against these forms of keyloggers:<br>
+<a href="http://www.wilderssecurity.com/threads/sandboxie-acquired-by-invincea.357312/page-34#post-2415096" class="postlink">http://www.wilderssecurity.com/threads/ ... st-2415096</a><br>
+What do you think, Curt?<br>
+Big thanks in advance.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=19642&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:44:07 GMT -->
+</html>

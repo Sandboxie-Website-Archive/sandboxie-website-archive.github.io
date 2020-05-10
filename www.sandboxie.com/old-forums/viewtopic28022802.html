@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=18356&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:49:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; NtQueryInformationProcess hook</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>NtQueryInformationProcess hook</h2>
+		<p><a href="viewtopic6d3f6d3f.html?f=4&amp;t=18356">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=18356</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>NtQueryInformationProcess hook</h3>
+				<div class="date">Posted: <strong>Thu Feb 20, 2014 5:35 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Sandboxie hooks NtQueryObject in order to return a faked path instead the real one to sandboxed applications.<br>
+<br>
+I would like to request you hook also NtQueryInformationProcess (ProcessImageFileName) in the same terms as NtQueryObject, so faked path is returned too for that function.<br>
+<br>
+<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms684280(v=vs.85).aspx" class="postlink">http://msdn.microsoft.com/en-us/library ... 85%29.aspx</a><br>
+
+<blockquote class="uncited"><div>
+ProcessImageFileName<br>
+27<br>
+<br>
+Retrieves a UNICODE_STRING value containing the name of the image file for the process.
+</div></blockquote></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: NtQueryInformationProcess hook</h3>
+				<div class="date">Posted: <strong>Fri Feb 21, 2014 1:38 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">tzuk has some comments in the code that look like he started working on this.  It sounds like a good idea, but there may be some issues that caused him to postpone it.  Please give us some time to investigate.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: NtQueryInformationProcess hook</h3>
+				<div class="date">Posted: <strong>Fri Feb 21, 2014 1:52 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Nice, thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: NtQueryInformationProcess hook</h3>
+				<div class="date">Posted: <strong>Fri Apr 04, 2014 12:17 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Will be possible to introduce the requested hook?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: NtQueryInformationProcess hook</h3>
+				<div class="date">Posted: <strong>Wed Jun 18, 2014 3:47 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Sandboxie 4.13.1 will include this feature?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: NtQueryInformationProcess hook</h3>
+				<div class="date">Posted: <strong>Wed Jun 18, 2014 6:16 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>Sandboxie 4.13.1 will include this feature?</div></blockquote>
+That will probably be in 4.13.2.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: NtQueryInformationProcess hook</h3>
+				<div class="date">Posted: <strong>Wed Aug 13, 2014 2:01 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite><blockquote><div><cite>Buster wrote:</cite>Sandboxie 4.13.1 will include this feature?</div></blockquote>
+That will probably be in 4.13.2.</div></blockquote>
+
+Has been included?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: NtQueryInformationProcess hook</h3>
+				<div class="date">Posted: <strong>Thu Aug 14, 2014 12:43 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">I am working on this right now.  It will be in 4.13.3.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: NtQueryInformationProcess hook</h3>
+				<div class="date">Posted: <strong>Thu Aug 14, 2014 12:52 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Nice, thanks!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=18356&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:49:02 GMT -->
+</html>

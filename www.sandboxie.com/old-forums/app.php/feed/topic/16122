@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/16122" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-07-25T09:17:26-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/16122</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-25T09:17:26-04:00</updated>
+
+		<published>2013-07-25T09:17:26-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92249#p92249</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92249#p92249"/>
+		<title type="html"><![CDATA[[.02] SB 4.04 and 4.05.1 unset PATH enviroment variable]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92249#p92249"><![CDATA[
+Version 4.05.02 should merge the system and user parts of the PATH like Windows does.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Jul 25, 2013 9:17 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-24T15:12:46-04:00</updated>
+
+		<published>2013-07-24T15:12:46-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92221#p92221</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92221#p92221"/>
+		<title type="html"><![CDATA[[.02] SB 4.04 and 4.05.1 unset PATH enviroment variable]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92221#p92221"><![CDATA[
+Thanks for the hint Guest10.  I change something about environment variables in version 4.04.  I guess there is a problem with "user" variables completely overriding "system" variables.  I'll check it out.<br><br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=15877" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15877</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Jul 24, 2013 3:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DR_LaRRY_PEpPeR]]></name></author>
+		<updated>2013-07-24T13:50:06-04:00</updated>
+
+		<published>2013-07-24T13:50:06-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92216#p92216</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92216#p92216"/>
+		<title type="html"><![CDATA[[.02] SB 4.04 and 4.05.1 unset PATH enviroment variable]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92216#p92216"><![CDATA[
+Interesting... I was going to say I'm not seeing any difference on XP or 64-bit 7. Sandboxie 4.04.<br><br>Then after Paul's reply about "User variables," I realized I don't have a PATH environment variable defined for the user. So I created one (System Control Panel &gt; Advanced, etc.) with the value "Test."<br><br>Checking the Command Prompt UNsandboxed, "Test" has been appended to PATH. Sandboxed it's only "Test." I only checked on XP...<br><br>But piterkater's isn't defined at all.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11108">DR_LaRRY_PEpPeR</a> — Wed Jul 24, 2013 1:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-07-24T19:53:12-04:00 </updated>
+
+		<published>2013-07-24T13:05:00-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92215#p92215</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92215#p92215"/>
+		<title type="html"><![CDATA[[.02] SB 4.04 and 4.05.1 unset PATH enviroment variable]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92215#p92215"><![CDATA[
+On XP, the PATH is quite different: unsandboxed vs. sandboxed<br><br>Unsandboxed cmd.exe:<br><br>Path=C:\WINNT\system32;C:\WINNT;C:\WINNT\System32\Wbem;C:\Program Files\GNU\GnuPG;C:\Program Files\Support Tools\;C:\Program Files\Microsoft USB Flash Drive Manager\;C:\Program Files\Common Files\Roxio Shared\DLLShared\;C:\Program Files\Common Files\Roxio Shared\11.0\DLLShared\;C:\Program Files\Common Files\Acronis\SnapAPI\;C:\Program Files\Acronis\TrueImageHome\;C:\WINNT\system32\WindowsPowerShell\v1.0;C:\Program Files\GNU\GnuPG\pub;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\Microsoft USB Flash Drive Manager\<br><br>All but the last item in the PATH are "System Variables".<br>The last item is a "User Variable".<br><br>------<br>Sandboxed cmd.exe:<br><br>Path=C:\Program Files\Microsoft USB Flash Drive Manager.<br><br>Only "User Variables" show in my PATH, when sandboxed.<br><br>SB 4.05.01<br>[Edited]The "last items"  I listed was only 1 item. Doh!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Wed Jul 24, 2013 1:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[piterkater]]></name></author>
+		<updated>2013-07-24T11:42:18-04:00</updated>
+
+		<published>2013-07-24T11:42:18-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92213#p92213</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92213#p92213"/>
+		<title type="html"><![CDATA[[.02] SB 4.04 and 4.05.1 unset PATH enviroment variable]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92213#p92213"><![CDATA[
+See the picture<br> <a href="https://www.dropbox.com/s/8asyqcrtsb5rt3j/unset_Path.png" class="postlink">https://www.dropbox.com/s/8asyqcrtsb5rt ... t_Path.png</a><br><br>PATH is not defined on Sandbox. Tested on all four sandboxies.<br>without PATH many app not found like java.exe<br><br>I back to 4.02 and working without problem.<br><br>tell me is you need any info or test in my system.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=15568">piterkater</a> — Wed Jul 24, 2013 11:42 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-24T10:30:27-04:00</updated>
+
+		<published>2013-07-24T10:30:27-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92211#p92211</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92211#p92211"/>
+		<title type="html"><![CDATA[[.02] SB 4.04 and 4.05.1 unset PATH enviroment variable]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92211#p92211"><![CDATA[
+I am not seeing this problem, or otherwise I don't understand what you're asking me to look at.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Jul 24, 2013 10:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[piterkater]]></name></author>
+		<updated>2013-07-24T06:56:06-04:00</updated>
+
+		<published>2013-07-24T06:56:06-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92205#p92205</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92205#p92205"/>
+		<title type="html"><![CDATA[[.02] SB 4.04 and 4.05.1 unset PATH enviroment variable]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16122&amp;p=92205#p92205"><![CDATA[
+On Windows 7 x64 with SB 4.04 and 4.05.1, PATH enviroment var is not defined. <br><br>On WinXP SP3 32bit with SB 4.04   OK!<br><br>On Windows 7 x64 with  3.76 and 4.02 OK!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=15568">piterkater</a> — Wed Jul 24, 2013 6:56 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

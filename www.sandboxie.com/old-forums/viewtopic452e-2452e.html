@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25250&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:14:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; BSOD due to SbieDrv.sys + Webroot + Win 10 [DUPLICATE- CLOSED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>BSOD due to SbieDrv.sys + Webroot + Win 10 [DUPLICATE- CLOSED]</h2>
+		<p><a href="viewtopic52e352e3.html?f=11&amp;t=25250">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25250</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>BSOD due to SbieDrv.sys + Webroot + Win 10 [DUPLICATE- CLOSED]</h3>
+				<div class="date">Posted: <strong>Mon Dec 25, 2017 12:37 am</strong></div>
+				<div class="author">by <strong>meg99az</strong></div>
+				<div class="content">In Sandboxie Support Forum, see post by Northman33 on Nov 07, 2017, in thread "Windows 10 - Fall Update - [Supported in Sandboxie 5.22]"<br>
+&gt;&gt;  "I had to delete Sandboxie. It told me it had an update for it and so I let it run and when it finished and my PC was rebooted and it caused my PC to no longer start. It kept giving me and driver error message about the driver Sbiedrv.sys with a Blue screen of death.  I had to go into safe mode and delete the program in order to get my computer to start again."<br>
+<br>
+(I see some other posts in the support forum about smilar BSOD events.)<br>
+(Those threads are all closed, so I am posting as a new thread.)<br>
+<br>
+My issue:  I had the same event, 2 days ago Dec 22, 2017.<br>
+<br>
+I have had my current laptop for over a year, never had a problem.<br>
+Two days ago, I booted up, the system seemed to load properly up to a working desktop, and then after about a minute of seeming normal use, I suddenly got a blue screen of death.<br>
+I was not using Sandboxie at the time.<br>
+I have never before had a bsod on this machine.<br>
+Subsequent attempts to reboot went straight to bsod, as soon as system POST finished and windows started to boot.<br>
+<br>
+The blue screen stated System Service Exception, and named SbieDrv.sys.<br>
+This was consistent on the two or three reboots I attempted.<br>
+After that, I tried to boot into safe mode, but that failed a time or two.<br>
+When I did finally get into safe mode, all seemd in good working order.<br>
+I disabled the Sbie service, then I renamed the file ~SbieDrv.sys.<br>
+<br>
+Subsequent reboot into normal Windows was then successful.<br>
+I then tried to run a chkdsk on my C: drive, but that failed, repeatedly, only getting through 11%.<br>
+I used a third party program (Lazesoft) bootable rescue environment.  It did not give details, but it found and fixed something, and then all was back to normal.<br>
+I do not know if the chkdsk problem was related somehow to the SbieDrv.sys problem, but for a system that has never crashed or had any such low level system irregularities, it seemed too coincidental.<br>
+<br>
+My system is configured as:<br>
+Intel Core i7-6700HQ<br>
+16 GB ram<br>
+Main drive is a 512Gb SSD<br>
+<br>
+Windows 10 64-bit, ver 1703, build 15063.608<br>
+Security software:  Webroot Secure Anywhere<br>
+Sandboxie version 5.12<br>
+<br>
+Sandboxie v5.12 is an older version, but it has run perfectly on my system for the past year.<br>
+The system was very recently updated to Windows 1703, but even so, everything ran well for a few weeks.<br>
+I cannot recall any other notable software changes, and hardware has not changed.<br>
+<br>
+I have uploaded the memory.dmp file to dropbox:<br>
+<a href="https://www.dropbox.com/s/azfmp40ku27ctlh/(meg99az_171222_bsod_SbieDrv.sys)_MEMORY.DMP.DMP?dl=0" class="postlink">https://www.dropbox.com/s/azfmp40ku27ct ... P.DMP?dl=0</a><br>
+<br>
+Any ideas?<br>
+Should I reinstall, or install latest version, or is there some other gremlin in my system?<br>
+<br>
+Thanks,<br>
+Marc</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BSOD due to SbieDrv.sys</h3>
+				<div class="date">Posted: <strong>Wed Dec 27, 2017 10:37 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello meg99az,<br>
+<br>
+This issue was addressed with Sandboxie 5.22, and it is related to Webroot interfering with the Sandboxie driver. <br>
+<a href="viewtopicefbeefbe.html?p=130748#p130748" class="postlink">viewtopic.php?p=130748#p130748</a><br>
+<br>
+To fix it, download the latest version of Sandboxie, or the latest beta:<br>
+<a href="../DownloadSandboxie.html" class="postlink">https://www.sandboxie.com/DownloadSandboxie</a><br>
+<a href="viewforume5f3e5f3.html?f=64" class="postlink">viewforum.php?f=64</a><br>
+<br>
+<a href="../VersionChanges.html#v_5.22" class="postlink">https://www.sandboxie.com/VersionChanges#v_5.22</a>
+<blockquote class="uncited"><div>Implemented a driver fix for a BSOD occurring when Webroot is installed and a new Sandbox is created while a ForceProcess is started.
+</div></blockquote>
+
+I am closing this thread as duplicate, however, if you still experience the issue after installing the latest version of Sandboxie, please send a me a PM and I'll re-open it. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25250&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:14:10 GMT -->
+</html>

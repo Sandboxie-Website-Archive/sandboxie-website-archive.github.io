@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=19885&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:00:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Attribute error SBIE messages to a specific sandbox</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Attribute error SBIE messages to a specific sandbox</h2>
+		<p><a href="viewtopicf674f674.html?f=4&amp;t=19885">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=19885</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Attribute error SBIE messages to a specific sandbox</h3>
+				<div class="date">Posted: <strong>Sat Nov 15, 2014 5:30 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">At any one time I have several sandboxes running and occasionally I'll see something like this:<br>
+SBIE2314 Canceling process updater.exe<br>
+I need to know the sandbox associated with that action, there is not enough verbosity there. Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Attribute error SBIE messages to a specific sandbox</h3>
+				<div class="date">Posted: <strong>Mon Jan 05, 2015 2:54 am</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">bump</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Attribute error SBIE messages to a specific sandbox</h3>
+				<div class="date">Posted: <strong>Mon Jan 05, 2015 2:37 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content">Not much help but whenever I see the "Canceling process" message it usually follows the cause.. Example:<br>
+<br>
+SBIE1308 Program cannot start due to restrictions - Programname.exe [SBIExplorer] &lt;--sandbox name<br>
+SBIE2222 To add the program... <br>
+SBIE2314 Cancelling process programname.exe...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Attribute error SBIE messages to a specific sandbox</h3>
+				<div class="date">Posted: <strong>Mon Jan 05, 2015 2:54 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content"><blockquote><div><cite>RooJ wrote:</cite>Not much help but whenever I see the "Canceling process" message it usually follows the cause.. Example:<br>
+<br>
+SBIE1308 Program cannot start due to restrictions - Programname.exe [SBIExplorer] &lt;--sandbox name<br>
+SBIE2222 To add the program... <br>
+SBIE2314 Cancelling process programname.exe...</div></blockquote>
+
+Thanks, I usually see that too but not always. If a process is canceled it should list what sandbox is the origin. I would change the messages to a format like this:<br>
+<br>
+timestamp [Sandbox] SBIE1308 Program cannot start due to restrictions - Programname.exe<br>
+timestamp [Sandbox] SBIE2222 To add the program... <br>
+timestamp [Sandbox] SBIE2314 Cancelling process programname.exe...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Attribute error SBIE messages to a specific sandbox</h3>
+				<div class="date">Posted: <strong>Mon Jan 05, 2015 2:58 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content"><blockquote><div><cite>cornflake wrote:</cite>
+Thanks, I usually see that too but not always. If a process is canceled it should list what sandbox is the origin. I would change the messages to a format like this:<br>
+<br>
+timestamp [Sandbox] SBIE1308 Program cannot start due to restrictions - Programname.exe<br>
+timestamp [Sandbox] SBIE2222 To add the program... <br>
+timestamp [Sandbox] SBIE2314 Cancelling process programname.exe...</div></blockquote>
+I support this suggestion...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Attribute error SBIE messages to a specific sandbox</h3>
+				<div class="date">Posted: <strong>Mon Jan 05, 2015 3:09 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content">Agreed, I'd like to see that format also.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>SBIEXXXX errors not identifying offending sandbox</h3>
+				<div class="date">Posted: <strong>Wed Jan 25, 2017 11:32 pm</strong></div>
+				<div class="author">by <strong>TerryH</strong></div>
+				<div class="content">Hi <br>
+As a paid user running multiple sandboxes, It's been observed that sandboxie error windows , for example SBIEXXXX etc..... doesn't display the sandbox in which an error was triggered.<br>
+<br>
+The error messages don't indicate which sandbox (or program) was the cause of, or triggered the error in the sandboxie service.<br>
+<br>
+It's a problem when trying to diagnose problems with sandboxie compatability and malware defences.<br>
+<br>
+Is there anyway to get sandboxie error messages to indicate which sandbox (or even better, which program) causes the error? <br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Attribute error SBIE messages to a specific sandbox</h3>
+				<div class="date">Posted: <strong>Thu Jan 26, 2017 10:36 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello TerryH,<br>
+<br>
+Here's how it currently works:<br>
+<a href="../index1f8b.html?MessagesFromSandboxie" class="postlink">https://www.sandboxie.com/index.php?Mes ... mSandboxie</a><br>
+<br>
+Most times, SBIE Messages are triggered after a specific action, that should help you figuring out what happened and how to reproduce it. <br>
+<br>
+(I merged your post with this topic as this is a feature request).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Attribute error SBIE messages to a specific sandbox</h3>
+				<div class="date">Posted: <strong>Thu Jan 26, 2017 3:54 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">This is not as easy as it sounds.<br>
+<br>
+1) Many error msgs are not associated with sandboxes.<br>
+2) Error msgs can originate in the Sbie driver, services, SbieDll, or SbieCtrl. When the error occurs, the sender of the error may not know which sandbox is involved.<br>
+<br>
+If you have specific error msgs in mind, I will look into them. But SBIE1308 already contains the sandbox name, as do several other error msgs.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=19885&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:00:39 GMT -->
+</html>

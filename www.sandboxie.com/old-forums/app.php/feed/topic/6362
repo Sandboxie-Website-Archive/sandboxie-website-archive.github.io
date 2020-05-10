@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/6362" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2009-10-01T15:43:17-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/6362</id>
+
+		<entry>
+		<author><name><![CDATA[Kind]]></name></author>
+		<updated>2009-10-01T15:43:17-04:00</updated>
+
+		<published>2009-10-01T15:43:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=6362&amp;p=41694#p41694</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=6362&amp;p=41694#p41694"/>
+		<title type="html"><![CDATA[How to change interface language on the fly]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=6362&amp;p=41694#p41694"><![CDATA[
+"The not-so-proper way" changed it.<br><br>Thanks a lot for the info.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1665">Kind</a> — Thu Oct 01, 2009 3:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2009-09-29T18:41:15-04:00</updated>
+
+		<published>2009-09-29T18:41:15-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=6362&amp;p=41619#p41619</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=6362&amp;p=41619#p41619"/>
+		<title type="html"><![CDATA[How to change interface language on the fly]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=6362&amp;p=41619#p41619"><![CDATA[
+The proper way is to reinstall/upgrade Sandboxie on top of the existing installation while selecting a new language.  This would recreate Start menu shortcuts in the new language.<br><br>* * *<br><br>The not-so-proper way is to change the value <strong>Language</strong> of the following registry key:<br><br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SbieSvc<br><br>Language numbers are listed here:<br><br><a href="http://www.sandboxie.com/index.php?CorporateInstallation" class="postlink">http://www.sandboxie.com/index.php?Corp ... stallation</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Tue Sep 29, 2009 6:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kind]]></name></author>
+		<updated>2009-09-29T14:41:38-04:00</updated>
+
+		<published>2009-09-29T14:41:38-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=6362&amp;p=41615#p41615</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=6362&amp;p=41615#p41615"/>
+		<title type="html"><![CDATA[How to change interface language on the fly]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=6362&amp;p=41615#p41615"><![CDATA[
+Hi,<br><br>How can I change the Sandboxie'language after installation?<br><br>Thanks in advance.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1665">Kind</a> — Tue Sep 29, 2009 2:41 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

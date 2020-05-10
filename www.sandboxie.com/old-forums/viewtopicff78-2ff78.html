@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25291&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Changing desktop background not functional after launching a sandbox</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Changing desktop background not functional after launching a sandbox</h2>
+		<p><a href="viewtopiceba0eba0.html?f=11&amp;t=25291">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25291</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Changing desktop background not functional after launching a sandbox</h3>
+				<div class="date">Posted: <strong>Thu Jan 04, 2018 3:08 pm</strong></div>
+				<div class="author">by <strong>miysis</strong></div>
+				<div class="content">Windows Version: 10 64-bit with Fall Creator's Update<br>
+Sandboxie Version(s): 5.23.2 and 5.22<br>
+Antivirus: No<br>
+<br>
+Hi,<br>
+<br>
+   I've been having an issue where after launching a sandbox, wallpapers no longer change. If it's a slideshow, the slideshow halts. If I attempt to simply change the wallpaper, it remains on the previous one until I either reboot or uninstall sandboxie. At which point, it changes immediately. Launching a sandbox causes the to appear again. I've tried both 5.22 and the current beta - both give this issue.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Changing desktop background not functional after launching a sandbox</h3>
+				<div class="date">Posted: <strong>Fri Jan 05, 2018 11:33 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello miysis,<br>
+
+<blockquote class="uncited"><div>I've been having an issue where after launching a sandbox</div></blockquote>
+What do you mean exactly? Are you launching any specific applications sandboxed? <br>
+<br>
+Are your video drivers up to date? <br>
+Can you please provide the exact repro steps?<br>
+Are you using any 3rd party software to change your wallpapers? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Changing desktop background not functional after launching a sandbox</h3>
+				<div class="date">Posted: <strong>Fri Jan 05, 2018 3:43 pm</strong></div>
+				<div class="author">by <strong>miysis</strong></div>
+				<div class="content">Drivers are up to date (nvidia 388.71). It doesn't matter what's launched - any sandbox, any application. Sandboxed explorer - background changing no longer works. Sandboxed GIMP - same. I was initially using DisplayFusion to change wallpapers, but after this problem initially popped up, I wiped and reinstalled Windows and have since been using the built in personalize settings app.<br>
+<br>
+<br>
+Repro:<br>
+<br>
+*Create sandbox (no settings changed)<br>
+*Open "Run Windows Explorer" from the sandbox's menu<br>
+*Leave sandboxed window open or close it (doesn't matter after it launches)<br>
+*Right-click desktop area (non-sandboxed) and choose "Personalize"<br>
+*Select "Background" from "Personalization" submenu.<br>
+*Select Picture background and a picture.<br>
+*The background won't change.<br>
+*At this point if you uninstall Sandboxie, the background will immediately change to the selected picture (using the installer to install the same version over the currently running version has the same effect).<br>
+*Restarting the computer also causes the previously selected background to display on logon.<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Changing desktop background not functional after launching a sandbox</h3>
+				<div class="date">Posted: <strong>Fri Jan 05, 2018 4:08 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello miysis,<br>
+<br>
+I was able to repro. I have made the devs aware.  It seems to happen only with Windows 10 x64 FCU (did not happen with Creators Update). <br>
+To change the background make sure there are no Sandboxie processes running via Task Manager (such as Sandboxie DCOM). You should be able to switch that way, without having to uninstall or restart.<br>
+<br>
+I'll update this thread once more info becomes available.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Changing desktop background not functional after launching a sandbox</h3>
+				<div class="date">Posted: <strong>Wed Jan 31, 2018 2:03 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Fixed in Beta 5.23.4.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Changing desktop background not functional after launching a sandbox</h3>
+				<div class="date">Posted: <strong>Sat Mar 03, 2018 8:16 pm</strong></div>
+				<div class="author">by <strong>miysis</strong></div>
+				<div class="content">Looks like the issue is back with the 2-2018 cumulative update (KB4074588)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Changing desktop background not functional after launching a sandbox</h3>
+				<div class="date">Posted: <strong>Mon Mar 05, 2018 11:13 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Update:<br>
+I can repro with the latest beta 5.23.6.<br>
+I've made the devs aware. <br>
+----------------X ----------------------<br>
+<br>
+Hello miysis ,<br>
+<br>
+Which Sandboxie version are you running? <br>
+<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25291&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:53 GMT -->
+</html>

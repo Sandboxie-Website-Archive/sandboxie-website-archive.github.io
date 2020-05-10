@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?p=92123 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:44:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Win class performance, cause (NEW), and a test for all - Sandboxie Support</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - Sandboxie Support" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="app.php/feed/topics_active">	<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Beta Version 4.05" href="app.php/feed/forum/40">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Win class performance, cause (NEW), and a test for all" href="app.php/feed/topic/16100">	
+	<link rel="canonical" href="viewtopicc5ebc5eb.html?t=16100">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="assets/css/font-awesome.mince91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/en/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/sbie_prosilver/theme/tweaks.css?assets_version=7" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="../index.html" title="Home"><span class="site_logo"></span></a>
+				<h1>Sandboxie Support</h1>
+				<p>Support Forum for Sandboxie</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									<div id="search-box" class="search-box search-header" role="search">
+				<form action="https://forums.sandboxie.com/phpBB3/search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+					<button class="button button-search" type="submit" title="Search">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+					</button>
+					<a href="search.html" class="button button-search-end" title="Advanced search">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+					</a>
+					
+				</fieldset>
+				</form>
+			</div>
+						
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a733a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+																			<li>
+								<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp26c326c3.html?mode=login" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp83198319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs">
+							<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="../index.html" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">Home</span></a></span>
+										<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="index-2.html" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Board index</span></a></span>
+
+											<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="44"><a href="viewforumab78ab78.html?f=44" itemprop="url"><span itemprop="title">More Forums</span></a></span>
+															<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="40"><a href="viewforuma3f5a3f5.html?f=40" itemprop="url"><span itemprop="title">Beta Version 4.05</span></a></span>
+												</li>
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="viewtopicba5aba5a.html?f=40&amp;t=16100">Win class performance, cause (NEW), and a test for all</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Listing issues addressed in beta version 4.05<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="https://www.sandboxie.com/old-forums/posting75d4.html?mode=reply&amp;f=40&amp;t=16100" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic27f127f1.html?f=40&amp;t=16100&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://forums.sandboxie.com/phpBB3/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="16100" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			79 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopicbefabefa.html?f=40&amp;t=16100&amp;start=15" role="button">2</a></li>
+				<li><a class="button" href="viewtopic5dbc5dbc.html?f=40&amp;t=16100&amp;start=30" role="button">3</a></li>
+				<li><a class="button" href="viewtopicf87ef87e.html?f=40&amp;t=16100&amp;start=45" role="button">4</a></li>
+				<li><a class="button" href="viewtopic040b040b.html?f=40&amp;t=16100&amp;start=60" role="button">5</a></li>
+				<li><a class="button" href="viewtopicf072f072.html?f=40&amp;t=16100&amp;start=75" role="button">6</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopicbefabefa.html?f=40&amp;t=16100&amp;start=15" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p92077" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92077">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistb68a.html?mode=viewprofile&amp;u=11108" class="username">DR_LaRRY_PEpPeR</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search46644664.html?author_id=11108&amp;sr=posts">291</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Jul 04, 2012 6:40 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> St. Louis area</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92077">
+
+						<h3 class="first"><a href="#p92077">Win class performance, cause (NEW), and a test for all</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting6e31-2.html?mode=quote&amp;f=40&amp;p=92077" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic2e022e02.html?p=92077#p92077" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistb68a.html?mode=viewprofile&amp;u=11108" class="username">DR_LaRRY_PEpPeR</a></strong> &raquo; </span>Sat Jul 20, 2013 3:00 pm
+			</p>
+			
+			
+			
+			<div class="content">Hello all!<br>
+<br>
+tzuk, before you explode <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> about another "speed complaint" topic, hang on, I think this deserves its own fresh topic! This is like a new slate. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> I love Sandboxie too much, and I think my curiousity about what I've been seeing finally paid off BIG a few days ago. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I did some debugging in a way that I <em>almost</em> did 2-3 months ago, but didn't feel like then.<br>
+<br>
+I now have some <em>concrete</em> <strong>specifics</strong> about what's going on... I think there are certain ODD window classes (but common and general) that are being "processed" or whatever, in a way that's degrading performance. A <em>single one</em> of them has an impact, and the few "problem classes," as a whole, are responsible for the vast, vast majority of the slowdown I see! I can't understand why this would be, but maybe (hopefully) you can make sense of it. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> The "good news" is: there's actually no difference using OpenWinClass with or without a program-specific prefix (other than special global * case, of course); it's not related to * wildcard settings or $:explorer.exe (those settings only include the "problem classes"); and there doesn't seem to be ANY performance problem with OpenWinClass matches going through the SbieSvc.exe GuiProxy process. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+First, the simple browser benchmark script I just thought of and created quickly a few weeks ago. For anyone that wants to check their "browser window creation performance" in Sandboxie (it's been mostly Internet Explorer-specific for me, although I see similar relative performance with Firefox on my main system). Very simply, you can try the benchmark with these different Sandboxie settings (close browser fully, Reload Configuration between):<br>
+<br>
+<em>Default settings</em><br>
+<em>With</em> OpenWinClass=*<br>
+<em>With</em> OpenWinClass=<strong>BROWSER.exe</strong>,*<br>
+<br>
+You could also use OpenWinClass=$:explorer.exe or with the list of "problem classes" below. For reference, the relative differences I see at minimum with IE are: OpenWinClass=<strong>BROWSER.exe</strong>,* twice as slow as default settings; and the "problem classes" twice as slow as OpenWinClass=*<br>
+<br>
+Here's the page: <a href="http://voidmain.realplain.com/sbie_winbench/" class="postlink">Sandboxie Browser Window Benchmark</a> You can run the "window opening" test right from the page (it runs fully in your browser, so no network delay), or download a couple files to your local system if you want to measure browser <em>process creation</em> and window opening time (but the online test is fine and will show same general results). Let us know your results with different settings. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+tzuk, or anyone else that doesn't see a difference: The minimum differences I see do apply to XP/IE 6 and Win 7 (64)/IE 8 (32) with as little "window-y stuff" running as possible. On my main XP/IE 6, I see HUGE differences with just a few of my usual windows open, e.g. window opening 0.2s with Open=*, 0.7s defaults, and <strong>4s</strong> with the "problem classes" below. So, on a real-world system with enough normal "stuff" running, it seems differences should be noticable. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+Now, those "problem classes" -- I think maybe these are always being "processed" wrong, slowly, etc. (which would explain some slowness even with defaults), and the differences are just "magnified" when they're part of OpenWinClass.<br>
+<br>
+On XP, it's these (ordered from worst to least impact), responsible for 90%+ of slowdown:<br>
+SysPager (MAJOR impact... not to be confused with SysFader)<br>
+BaseBar<br>
+TPUtilWindow<br>
+Tooltips_class32<br>
+ComboLBox<br>
+GamingCommandStateMachineWindow<br>
+WorkerW (small impact, but measurable)<br>
+<br>
+Explorer is FULL of BaseBar and SysPager, so that explains my results with $:explorer.exe! GamingCommandStateMachineWindow is only in my old MS keyboard/mouse software processes (IntelliType/IntelliPoint), so that's not a universal one. TPUtilWindow looks like a Delphi thing...?<br>
+<br>
+On 64-bit 7, it's these (less variation, worst to least), responsible for ~80% of slowdown:<br>
+Tooltips_class32<br>
+IME<br>
+MSCTFIME UI<br>
+WorkerW<br>
+<br>
+<br>
+That's not meant to be a complete, exhaustive list. There are still some with whatever characteristics these have that are having a smaller cumulative impact... But I can use OpenWinClass with A* ... Z* (all at once) <em>minus the letters of the problem classes</em> and there's only a small difference, e.g. matching most other classes doesn't cause much of a problem.<br>
+<br>
+Finally, reasons I don't think requests going through GuiProxy is an issue: The performance with global OpenWinClass=*, of course, even before the <a href="../phpbb/viewtopic8a29.php?t=15837" class="postlink">change in 4.03.01</a>. Assuming your description of "everything goes through GuiProxy" was correct, that proves GuiProxy was/is not an issue. No, Open=* was always a special case, even in 4.01.04 that I recently checked, so the difference/optimization must come before GuiProxy? Although it seems Open=* got "more optimized" in 4.01.05 after the other GUI optimizations.<br>
+<br>
+Also, I just remembered and verified the results with <a href="http://www.passmark.com/products/pt.htm" class="postlink">PerformanceTest</a>'s 2D Windows Interface benchmark! After the optimizations in 4.01.05, I said I noticed <em>better performance</em> sandboxed than not, which was surprising (I can only assume caused by "isolation"). The results are the same (10-20% better) when it's run with default settings OR OpenWinClass=pt.exe,* <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> If global Open=* is used, performance drops back to UNsandboxed levels (fine, expected). Anyway, I just saw this as proof that GuiProxy is not an issue, even if all the window benchmarking stuff is going through it. In fact, since 4.01.05, there is zero, I repeat, ZERO, CPU usage on the SbieSvc.exe processes when benchmarking. Of course, the benchmark doesn't use any of those "problem classes." <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+Thanks for reading! Hopefully the info/details I provided help my results be reproduced and/or investigated. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+
+			
+									
+									<div id="sig92077" class="signature">XP Home-as-Pro SP3 (Admin) w/ <strong>continued updates</strong> (Embedded/POSReady 2009)<br>
+&gt; Permissions + "2-level" SRP, latest Sandboxie (Pro/registered), EMET 4, no anti-<em>anything</em> (ever)<br>
+Did I make tzuk crazed... in his last days? <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92097" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92097">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92097">
+
+						<h3 ><a href="#p92097"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingb808.html?mode=quote&amp;f=40&amp;p=92097" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopice22be22b.html?p=92097#p92097" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Sun Jul 21, 2013 4:26 am
+			</p>
+			
+			
+			
+			<div class="content">Still on that issue I see.  Thanks for your work.  I'm not sure I understand in what way you're seeing that those window classes are a problem.  Can you give an example, say for SysPager, what do you see that happens with it?</div>
+
+			
+									
+									<div id="sig92097" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92123" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92123">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist08c3.html?mode=viewprofile&amp;u=5050" class="username">BUCKAROO</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8ed68ed6.html?author_id=5050&amp;sr=posts">206</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Oct 24, 2010 3:13 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92123">
+
+						<h3 ><a href="#p92123">BenchmarkIE</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingeaeb.html?mode=quote&amp;f=40&amp;p=92123" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic6f586f58.html?p=92123#p92123" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist08c3.html?mode=viewprofile&amp;u=5050" class="username">BUCKAROO</a></strong> &raquo; </span>Sun Jul 21, 2013 5:02 pm
+			</p>
+			
+			
+			
+			<div class="content">Without OpenWinClass=*, some yet to be determined operations issued at window creation times are either doubly slow or worse. Also please take a look at <a href="http://www.sketchup.com/download/all" class="postlink">SketchUp Make</a>'s sluggish minimize &amp; restore transition, seeming like it drops its draw surface (briefly white). The slowdown oddities make Sbie 4 seem kludgy, while somehow I know isn't, only seems. <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+
+<blockquote><div><cite>BenchmarkIE - Windows 8 (64-bit) wrote:</cite><span style="font-size: 59%; line-height: normal">"C:\Program Files\Sandboxie\SbieIni.exe" set BenchmarkIE Enabled y<br>
+(ExitCode 0)<br>
+"C:\Program Files\Sandboxie\SbieIni.exe" set BenchmarkIE OpenWinClass<br>
+(ExitCode 0)<br>
+[BenchmarkIE] OpenWinClass=<br>
+920 ms<br>
+780 ms<br>
+1575 ms<br>
+(ExitCode 0)<br>
+"C:\Program Files\Sandboxie\SbieIni.exe" set BenchmarkIE OpenWinClass *<br>
+(ExitCode 0)<br>
+[BenchmarkIE] OpenWinClass=*<br>
+530 ms<br>
+390 ms<br>
+484 ms<br>
+(ExitCode 0)<br>
+"C:\Program Files\Sandboxie\SbieIni.exe" set BenchmarkIE OpenWinClass<br>
+(ExitCode 0)<br>
+[BenchmarkIE] OpenWinClass=<br>
+921 ms<br>
+749 ms<br>
+764 ms<br>
+(ExitCode 0)<br>
+"C:\Program Files\Sandboxie\SbieIni.exe" set BenchmarkIE OpenWinClass *<br>
+(ExitCode 0)<br>
+[BenchmarkIE] OpenWinClass=*<br>
+531 ms<br>
+358 ms<br>
+593 ms<br>
+(ExitCode 0)<br>
+"C:\Program Files\Sandboxie\SbieIni.exe" set BenchmarkIE OpenWinClass<br>
+(ExitCode 0)<br>
+[BenchmarkIE] OpenWinClass=<br>
+889 ms<br>
+905 ms<br>
+983 ms<br>
+(ExitCode 0)<br>
+</span></div></blockquote>
+<blockquote><div><cite>Windows 8 (64-bit) wrote:</cite><span style="font-size: 75%; line-height: normal">"C:\Program Files\Sandboxie\SbieIni.exe" set BenchmarkIE Enabled y<br>
+(ExitCode 0)<br>
+[BenchmarkIE] BenchmarkIE<br>
+[BenchmarkIE] OpenWinClass=<br>
+905 ms<br>
+1061 ms<br>
+967 ms<br>
+[BenchmarkIE] finished. Waited 10.343 seconds.<br>
+[BenchmarkIE] BenchmarkIE<br>
+[BenchmarkIE] OpenWinClass=*<br>
+546 ms<br>
+452 ms<br>
+468 ms<br>
+[BenchmarkIE] finished. Waited 9.110 seconds.<br>
+[BenchmarkIE] BenchmarkToolTip<br>
+[BenchmarkIE] OpenWinClass=<br>
+6178 ms<br>
+6614 ms<br>
+6989 ms<br>
+[BenchmarkIE] finished. Waited 21.668 seconds.<br>
+[BenchmarkIE] BenchmarkToolTip<br>
+[BenchmarkIE] OpenWinClass=*<br>
+3089 ms<br>
+3026 ms<br>
+2995 ms<br>
+[BenchmarkIE] finished. Waited 10.249 seconds.<br>
+</span></div></blockquote>
+<blockquote><div><cite>Windows 7 (32-bit) - VirtualBox wrote:</cite><span style="font-size: 75%; line-height: normal">"C:\Program Files\Sandboxie\SbieIni.exe" set BenchmarkIE Enabled y<br>
+(ExitCode 0)<br>
+[BenchmarkIE] BenchmarkIE<br>
+[BenchmarkIE] OpenWinClass=<br>
+2323 ms<br>
+3055 ms<br>
+4847 ms<br>
+"C:\Program Files\Sandboxie\Start.exe" /box:BenchmarkIE /terminate<br>
+(ExitCode 0)<br>
+[BenchmarkIE] terminated. Waited 28.010 seconds.<br>
+[BenchmarkIE] BenchmarkIE<br>
+[BenchmarkIE] OpenWinClass=*<br>
+1151 ms<br>
+2063 ms<br>
+1392 ms<br>
+"C:\Program Files\Sandboxie\Start.exe" /box:BenchmarkIE /terminate<br>
+(ExitCode 0)<br>
+[BenchmarkIE] terminated. Waited 18.566 seconds.<br>
+[BenchmarkIE] BenchmarkToolTip<br>
+[BenchmarkIE] OpenWinClass=<br>
+19137 ms<br>
+19839 ms<br>
+19679 ms<br>
+[BenchmarkIE] finished. Waited 60.867 seconds.<br>
+[BenchmarkIE] BenchmarkToolTip<br>
+[BenchmarkIE] OpenWinClass=*<br>
+8632 ms<br>
+8081 ms<br>
+8492 ms<br>
+[BenchmarkIE] finished. Waited 27.379 seconds.<br>
+[BenchmarkIE] BenchmarkIE<br>
+[BenchmarkIE] OpenWinClass=<br>
+2163 ms<br>
+3175 ms<br>
+2914 ms<br>
+"C:\Program Files\Sandboxie\Start.exe" /box:BenchmarkIE /terminate<br>
+(ExitCode 0)<br>
+[BenchmarkIE] terminated. Waited 15.973 seconds.<br>
+[BenchmarkIE] BenchmarkIE<br>
+[BenchmarkIE] OpenWinClass=*<br>
+1182 ms<br>
+1563 ms<br>
+1192 ms<br>
+"C:\Program Files\Sandboxie\Start.exe" /box:BenchmarkIE /terminate<br>
+(ExitCode 0)<br>
+[BenchmarkIE] terminated. Waited 19.799 seconds.<br>
+</span></div></blockquote>
+
+<strong>BenchmarkIE</strong><br>
+<a href="http://l.autohotkey.net/" class="postlink">http://l.autohotkey.net/</a>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>/*
+*** UNSANDBOXED ***
+Save script as BenchmarkIE.ahk
+Unregistered Sandboxie users,
+save script as DefaultBox.ahk
+Drag &amp; Drop onto AutoHotkey.exe
+*** UNSANDBOXED ***
+*/
+
+#SingleInstance off
+
+Global WCHAR:=2
+Global TCHAR:=A_IsUnicode?WCHAR:1
+Global MAX_PATH:=(32767*TCHAR)+TCHAR
+
+;Global _ScriptName:=RegExReplace(A_ScriptName,"i)[^0-9A-Z_]","_")
+Global _ScriptName:=RegExReplace(A_ScriptName,"i)([0-9A-Z_]+).*","$1")
+
+Global _AhkPath
+if(A_IsCompiled)
+	_AhkPath="%A_ScriptFullPath%"
+else
+	_AhkPath="%A_AhkPath%" "%A_ScriptFullPath%"
+
+params=%0%
+Loop,%0%
+	param%A_Index%:=%A_Index%
+
+Process,Exist
+Global _ScriptPID:=ErrorLevel
+
+if(param1=="BOXED")
+{
+	Global BOXED:=true
+	
+	if(!DllCall("AttachConsole","UInt",param2))
+		MsgBox,AttachConsole()	error`n%A_LastError%
+	
+	;SetTitleMatchMode,RegEx
+	SetTitleMatchMode,3
+	SetTitleMatchMode,Fast
+	DetectHiddenWindows,Off
+	
+	if param3 contains BenchmarkIE
+	{
+		Target=%ProgramFiles%\Internet Explorer\iexplore.exe
+		;SetBatchLines,-1
+		Loop,3
+		{
+			StartTime:=A_TickCount
+			Run,%Target%,,Max
+			;Run,%Target%,,Min
+			;Run,%Target%,,Hide
+			WinWait,ahk_class IEFrame
+			ElapsedTime:=A_TickCount-StartTime
+			Console("ECHO	" ElapsedTime " ms")
+			WinClose
+			WinWaitClose
+		}
+	}
+	else if param3 contains BenchmarkToolTip
+	{
+		;SetBatchLines,-1
+		Loop,3
+		{
+			StartTime:=A_TickCount
+			Loop,1000
+			{
+				ToolTip,%A_Index%,%X%,%Y%
+			}
+			ElapsedTime:=A_TickCount-StartTime
+			Console("ECHO	" ElapsedTime " ms")
+		}
+	}
+	
+	ExitApp
+}
+
+if(false&amp;&amp;!A_IsAdmin)
+{
+	Run,*RunAs %_AhkPath%,%A_ScriptDir%,UseErrorLevel
+	ExitApp
+}
+
+DllCall("AllocConsole")
+Console()
+
+if(A_PtrSize==4&amp;&amp;A_Is64bitOS)
+	Global Sandboxie32:="\32"
+
+Global SbieDll,SbieExe,SbieIni
+
+SbiePathCandidates:=[]
+SbiePathCandidates.Insert(Object("RootKey","HKEY_LOCAL_MACHINE","SubKey","SYSTEM\CurrentControlSet\Services\SbieDrv","ValueName","ImagePath"))
+SbiePathCandidates.Insert(Object("RootKey","HKEY_LOCAL_MACHINE","SubKey","SYSTEM\CurrentControlSet\Services\SbieSvc","ValueName","ImagePath"))
+SbiePathCandidates.Insert(Object("RootKey","HKEY_LOCAL_MACHINE","SubKey","SYSTEM\CurrentControlSet\Services\EventLog\System\SbieDrv","ValueName","EventMessageFile"))
+SbiePathCandidates.Insert(Object("RootKey","HKEY_LOCAL_MACHINE","SubKey","SYSTEM\CurrentControlSet\Services\EventLog\System\SbieSvc","ValueName","EventMessageFile"))
+SbiePathCandidates.Insert(Object("RootKey","HKEY_LOCAL_MACHINE","SubKey","SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Sandboxie","ValueName","DisplayIcon"))
+SbiePathCandidates.Insert(Object("RootKey","HKEY_CURRENT_USER","SubKey","Software\Microsoft\Windows\CurrentVersion\Run","ValueName","SandboxieControl"))
+
+For IntKey,SbiePathCandidate in SbiePathCandidates
+{
+	RegRead,OutputVar,% SbiePathCandidate.RootKey,% SbiePathCandidate.SubKey,% SbiePathCandidate.ValueName
+	StringReplace,OutputVar,OutputVar,",,All
+	StringReplace,OutputVar,OutputVar,\??\
+	SplitPath,OutputVar,,OutDir
+	SbieDll:=OutDir Sandboxie32 "\SbieDll.dll"
+	SbieExe:=OutDir "\Start.exe"
+	SbieIni:=OutDir "\SbieIni.exe"
+	if(FileExist(SbieDll)&amp;&amp;FileExist(SbieExe)&amp;&amp;FileExist(SbieIni))
+	{
+		happy:=true
+		break
+	}
+}
+
+try
+{
+	if(!happy)
+		throw
+	
+	Global hSbieDll:=DllCall("LoadLibrary","Str",SbieDll,"UPtr")
+	Global SbieApi:={EnumBoxes:0,EnumProcessEx:0,QueryBoxPath:0}
+	For Proc,Address in SbieApi
+	{
+		SbieApi[Proc]:=DllCall("GetProcAddress","UPtr",hSbieDll,"AStr","SbieApi_" Proc,"UPtr")
+		if(!SbieApi[Proc])
+			throw
+	}
+	
+	Global boxed_pids
+	VarSetCapacity(boxed_pids,4*512)
+}
+catch
+{
+	if(!happy)
+		MsgBox,Not happy!
+	else
+		MsgBox,Unhandled exception.
+	
+	ExitApp
+}
+
+Global SandboxTerminated
+
+Target="%SbieIni%" set %_ScriptName% Enabled y
+RunWait(false,Target)
+
+Gui,1:+AlwaysOnTop +Caption +OwnDialogs -Resize 
+
+Global OpenWinClass
+Gui,1:Add,Text,W300 +BackgroundTrans,OpenWinClass=
+Gui,1:Add,Edit,W300 VOpenWinClass GOpenWinClass -Wrap
+Gui,1:Add,Button,W300 GAsterisk,*
+Gui,1:Add,Button,W300 GTerminate,Terminate [%_ScriptName%] Programs
+Gui,1:Add,Button,W300 GBenchmarkIE,Benchmark IExplore`n(timed from process create to moment window visible)
+Gui,1:Add,Button,W300 GBenchmarkToolTip,Benchmark ToolTips`n(keeping mouse still versus movement affects results)
+Gui,1:Show,AutoSize
+return
+
+GuiClose:
+Gosub,Terminate
+ExitApp
+
+OpenWinClass:
+Gui,1:Submit,NoHide
+return
+
+Asterisk:
+GuiControl,,OpenWinClass,% OpenWinClass?"":"*"
+return
+
+Terminate:
+Terminate(false)
+return
+
+BenchmarkIE:
+BenchmarkToolTip:
+Benchmark(A_ThisLabel)
+return
+
+Terminate(silent:=true)
+{
+	Target="%SbieExe%" /box:%_ScriptName% /terminate
+	return SandboxTerminated:=RunWait(silent,Target)==0
+}
+
+Benchmark(_ThisLabel)
+{
+	static recursive:=0
+	if(recursive&gt;0)
+		return
+	++recursive
+	
+	try
+	{
+		Gui,1:+OwnDialogs
+		
+		_OpenWinClass:=OpenWinClass
+		
+		Console("ECHO [" _ScriptName "] " _ThisLabel)
+		
+		if(!Terminate())
+			throw "Failed to Terminate Programs."
+		SandboxTerminated:=false
+		
+		Target="%SbieIni%" set %_ScriptName% OpenWinClass "%_OpenWinClass%"
+		if(RunWait(true,Target))
+			throw "Failed to set OpenWinClass=" _OpenWinClass
+		
+		Console("ECHO [" _ScriptName "] OpenWinClass=" _OpenWinClass)
+		
+		Target="%SbieExe%" /box:%_ScriptName% %_AhkPath% BOXED %_ScriptPID% %_ThisLabel%
+		;SetBatchLines,-1
+		StartTime:=A_TickCount
+		RunWait,%Target%
+		;ExitCode()
+		Loop
+		{
+			if(DllCall(SbieApi.EnumProcessEx,"WStr",_ScriptName,"UChar",FALSE,"UInt",-1,"UPtr",&amp;boxed_pids,"Int"))
+			{
+				MsgBox,SbieApi_EnumProcessEx()	error
+				break
+			}
+		}
+		Until !NumGet(boxed_pids,"UInt")
+		ElapsedTime:=A_TickCount-StartTime
+		
+		SetFormat,float,0.3
+		Console("ECHO [" _ScriptName "] " (SandboxTerminated?"terminated":"finished") ". " "Waited " ElapsedTime/1000 " seconds.")
+	}
+	catch str
+	{
+		if(!StrLen(str))
+			str:="Unhandled exception."
+		Console("ECHO " str)
+	}
+	
+	--recursive
+}
+
+ExitCode(silent)
+{
+	ExitCode:=ErrorLevel
+	if(!silent)
+		Console("ECHO (ExitCode " ExitCode ")")
+	return ExitCode
+}
+
+RunWait(silent,Target,WorkingDir:="",Max_Min_Hide_UseErrorLevel:="",ByRef OutputVarPID:="")
+{
+	if(!silent)
+		Console("ECHO " Target)
+	RunWait,%Target%,%WorkingDir%,%Max_Min_Hide_UseErrorLevel%,OutputVarPID
+	return ExitCode(silent)
+}
+
+Console(ByRef str:="")
+{
+	system("COLOR " (BOXED?"0E":"0F") "&amp;TITLE " _ScriptName)
+	if(str)
+		system(str)
+}
+
+system(ByRef str)
+{
+	return DllCall("msvcrt\system","AStr",str,"Cdecl " "Int")
+;	return DllCall("msvcr100\system","AStr",str,"Cdecl " "Int")
+}
+</code></pre></div></div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92133" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92133">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92133">
+
+						<h3 ><a href="#p92133"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingb996.html?mode=quote&amp;f=40&amp;p=92133" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic78a278a2.html?p=92133#p92133" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Mon Jul 22, 2013 7:48 am
+			</p>
+			
+			
+			
+			<div class="content">DR_LaRRY_PEpPeR here are my results:<br>
+<br>
+OPEN NEW NORMAL WINDOW<br>
+<br>
+Normal Firefox - Window took 0.022 seconds to open<br>
+Sandbox Firefox - Window took 0.024 seconds to open.<br>
+<br>
+OPEN NEW POP UP WINDOW<br>
+<br>
+Normal Firefox - Window took 0.078 seconds to open<br>
+Sandbox Firefox - Window took 0.088 seconds to open.<br>
+<br>
+What I've been trying to say throughout our discussion on the performance issue is that<br>
+I'm not going to be able to identify where a difference of 0.002s or even 0.01s is coming<br>
+from, it's just not enough of a difference.  If you can figure out which component on your<br>
+system is responsible for causing the slowdown, then I will look into it.  Otherwise there<br>
+isn't anything that I can do.</div>
+
+			
+									
+									<div id="sig92133" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92146" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92146">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistb68a.html?mode=viewprofile&amp;u=11108" class="username">DR_LaRRY_PEpPeR</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search46644664.html?author_id=11108&amp;sr=posts">291</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Jul 04, 2012 6:40 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> St. Louis area</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92146">
+
+						<h3 ><a href="#p92146"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting5007.html?mode=quote&amp;f=40&amp;p=92146" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicad6aad6a.html?p=92146#p92146" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistb68a.html?mode=viewprofile&amp;u=11108" class="username">DR_LaRRY_PEpPeR</a></strong> &raquo; </span>Mon Jul 22, 2013 1:00 pm
+			</p>
+			
+			
+			
+			<div class="content">Sorry I didn't reply sooner... Was hardly around yesterday, and I wanted to check something else first.<br>
+<br>
+Firefox? Yeah, the "Normal Window" won't show any difference as long as it's opened in a tab -- I just included Normal and Pop-up for situations where each behaves/performs differently. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> AND, I didn't mention it, but I'm actually NOT seeing any real difference either on the laptop system with Firefox opening actual windows -- although there is a difference in full <em>launch</em> times (numbers below).<br>
+<br>
+I'd say forget Firefox -- no issues there that don't also affect IE, and a lot worse. I just mentioned it since I wanted users to be able to check any browser. Although on my main system, as I said, I see a similar pattern with Firefox, but the absolute numbers are just much lower... But I'm looking at relative differences between settings.<br>
+<br>
+I know, tzuk, that's why I'm trying to give you the best info I can. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I was hoping with these specific window classes I identified, you could make something of them, and be able to see more of a difference than a couple hundredths. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+I just gathered numbers again (at end), which I hadn't done this time (just noted in my head key relative differences I posted). I had already done the * (global vs prefix), $:explorer.exe numbers thing, and you said you didn't see anything like the differences I reported (I was wondering how MANY systems you checked with?). So I'm glad I was able to find these specifics in case the previous stuff was too broad/vague, etc...<br>
+
+<blockquote><div><cite>tzuk wrote:</cite>Still on that issue I see.  Thanks for your work.  I'm not sure I understand in what way you're seeing that those window classes are a problem.  Can you give an example, say for SysPager, what do you see that happens with it?</div></blockquote>
+
+Yeah, but I hadn't checked or done anything in awhile, just wondering about it and living with it. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Just last week, I decided to try checking again with A* ... Z* window classes (close enough to * without using that "special" setting). Then I used a prefix with A* ... Z* and finally saw that that way, the prefix makes no difference. <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> Then I tried removing different chunks of letters looking for which ones caused most slowdown. Found S*, for example, which I then tracked down to SysPager. And so on... <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"><br>
+<br>
+Anyway, I'm saying that those classes are a "problem" because of their slowdown, that's the problem they cause. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> You can see what SysPager's impact is on the main system below. On the laptop, I see it's actually Tooltips_class32 that's the worst, like Windows 7.<br>
+<br>
+So, you don't recognize anything "special," certain characteristics or anything with those classes? I wondered if you might say that <em>X</em> classes are processed in <em>Y</em> way, for <em>Z</em> reason. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+It just seems to me that those classes are always being "processed" slowly or such, even just in the sandbox with defaults. Then it gets worse when Sandboxie "sees" those particular classes outside the sandbox as well (in Explorer, et al.)... Why is that?<br>
+<br>
+I ASSUME that these classes are actually X amount slower per "use," and not just "used" X amount more often.<br>
+<br>
+Question: Regarding PerformanceTest's 2D Windows Interface benchmark -- that IS affected by OpenWinClass settings the same as anything else, right? Seems like good news that it's not degraded at all by sandboxing, even with the usually-slowest * (prefix) setting. I think any program that uses "problem-free" classes would perform the same?<br>
+<br>
+<br>
+My numbers follow. Remember, there's basically nothing installed on the Windows 7 system (only a couple windows open) and absolutely nothing installed on laptop. So I'd think my <strong>minimum</strong> differences could be reproduced with IE. Also, things get WORSE the more windows and "stuff" that's open. Main system sandbox has been active for 11 days, and I just have my usual few windows open (same for all tests). If stuff was closed (and sandbox "fresh?") it'd be a bit better (I'd say ~2/3 of worst times).<br>
+<br>
+All window opening times, except Firefox on laptop.<br>
+<span style="font-size: 100%; line-height: normal"><strong>XP laptop</strong><br>
+IE 6<br>
+0.15 - UNsandboxed<br>
+0.23 - * (Global)<br>
+0.30 - Default settings<br>
+0.38 - Tooltips_class32<br>
+0.45 - Problem classes OR $:explorer.exe<br>
+0.64 - * (Prefix)<br>
+<br>
+Firefox (Full <em>launch time</em> in active sandbox)<br>
+0.61 - UNsandboxed<br>
+0.76 - * (Global)<br>
+0.81 - Default settings<br>
+0.88 - Problem classes OR $:explorer.exe<br>
+0.96 - * (Prefix)<br>
+<br>
+<br>
+<strong>64-bit 7, 32-bit IE 8</strong><br>
+0.38 - UNsandboxed<br>
+0.50 - * (Global)<br>
+0.78 - Default settings<br>
+1.07 - <strong>Tooltips_class32</strong><br>
+1.55 - $:explorer.exe<br>
+1.64 - Problem classes<br>
+2.20 - * (Prefix)<br>
+<br>
+<br>
+<strong>XP main</strong><br>
+IE 6<br>
+0.10 - UNsandboxed<br>
+0.20 - * (Global)<br>
+0.70 - Default settings<br>
+2.30 - <strong>SysPager</strong><br>
+3.25 - $:explorer.exe<br>
+4.10 - Problem classes<br>
+4.90 - * (Prefix)<br>
+<br>
+Firefox<br>
+0.09 - UNsandboxed<br>
+0.11 - * (Global)<br>
+0.13 - Default settings<br>
+0.18 - SysPager<br>
+0.25 - $:explorer.exe<br>
+0.29 - Problem classes<br>
+0.32 - * (Prefix)</span><br>
+<br>
+<br>
+BTW: So you know, when IE is the slowest there, the main SbieSvc process uses ~4s of CPU time and GuiProxy uses ~1s. That must be <em><strong>MILLIONS</strong> of instructions</em>. Doing what? I wish I knew!</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92166" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92166">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92166">
+
+						<h3 ><a href="#p92166"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingd28c.html?mode=quote&amp;f=40&amp;p=92166" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicb7d9b7d9.html?p=92166#p92166" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Tue Jul 23, 2013 3:30 am
+			</p>
+			
+			
+			
+			<div class="content">Results for IE:<br>
+<br>
+OPEN NEW NORMAL WINDOW <br>
+<br>
+Normal IE - Window took 0.04 seconds to open <br>
+Sandbox Firefox - Window took 0.11 seconds to open<br>
+<br>
+OPEN NEW POP UP WINDOW <br>
+<br>
+Normal IE - Window took 0.03 seconds to open <br>
+Sandbox IE - Window took  0.101 seconds to open. <br>
+<br>
+Now, can we finally put this topic to rest, until you are able to identify what software component<br>
+or Windows setting or whatever in your computer is causing Sandboxie to behave this way?</div>
+
+			
+									
+									<div id="sig92166" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92172" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92172">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistb68a.html?mode=viewprofile&amp;u=11108" class="username">DR_LaRRY_PEpPeR</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search46644664.html?author_id=11108&amp;sr=posts">291</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Jul 04, 2012 6:40 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> St. Louis area</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92172">
+
+						<h3 ><a href="#p92172"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingeee8-2.html?mode=quote&amp;f=40&amp;p=92172" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc4f5c4f5.html?p=92172#p92172" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistb68a.html?mode=viewprofile&amp;u=11108" class="username">DR_LaRRY_PEpPeR</a></strong> &raquo; </span>Tue Jul 23, 2013 6:20 am
+			</p>
+			
+			
+			
+			<div class="content">You seem to be ignoring, among other things, what I posted about classes? <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> (And again, no need to post "Normal" and "Pop-up" results -- if there's no difference, they're the same. <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">)<br>
+<br>
+What are your results with IE using OpenWinClass settings, at least, of * (global), defaults (I assume what you posted), the problem classes I mentioned, and * (prefix)? I hardly care about normal UNsandboxed results, FYI...<br>
+<br>
+You keep talking about a software component or Windows settings on my computer (you mean computers, plural, since every system follows the same pattern). I've told you I don't see any software on main system that has an effect, and in general I don't like most software (of anything, but especially "security"), so that should tell you something about what I'll install or not. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> And I PROMISE there's no other software component or changed Windows settings on the other 2 systems! Defaults, defaults, defaults...<br>
+<br>
+I said when IE is taking 4-5s to open a window in the slowest scenario, <strong>Sandboxie</strong>'s SbieSvc processes use ~5s of CPU time between them (4s + 1s for GuiProxy). THAT is Sandboxie doing <em>something</em>, no? Not another "software component?" Want to see the loaded DLLs again? <a href="../www.realplain.com/sbie/sbiesvc_dlls.png" class="postlink">SbieSvc</a>; and <a href="../www.realplain.com/sbie/guiproxy_dlls.png" class="postlink">GuiProxy</a> (4 months ago, 4.01.04, but it's the same now when I compared).<br>
+<br>
+Standard expected stuff, right...? (Any wrong versions?) So what is <strong>Sandboxie</strong> doing while I'm waiting for a window?<br>
+<br>
+<br>
+What I was thinking about earlier is, perhaps there's an inefficient way Sandboxie is checking/comparing class names...? It seems like that would make sense in most of the cases I'm seeing (not sure about all). Meaning that, maybe there's not a problem with a specific class in itself, but when there are SO many of them (like "exposing" TONS of BaseBar and SysPager in Explorer), some operation in Sandboxie is taking a proportional amount of time for however many instances exist of a given class? Like O(<em>n</em>) or O(<em>n</em> log <em>n</em>) when it should be just about <em>constant</em>...<br>
+<br>
+I don't really know much about messing with windowing-related function calls, but I might attempt to rig up some kind of program to check or do "something" (???) to a certain class or window handle and see if I can notice any other specific differences... <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"><br>
+<br>
+<br>
+Other info I feel is being ignored... Look what I just checked quick on laptop IE:<br>
+<br>
+Default settings<br>
+0.30 - 1 IE window (as I posted)<br>
+0.34 - 10 <em>extra</em> UNsandboxed IE windows<br>
+0.42 - 10 <em>extra</em> sandboxed IE windows<br>
+<br>
+* (prefix)<br>
+0.64 - 1 IE window (as I posted)<br>
+0.70 - 10 <em>extra</em> sandboxed IE windows<br>
+1.30 - 10 <em>extra</em> UNsandboxed IE windows<br>
+<br>
+<br>
+Yes, those numbers are right (reversed with extra windows). This seems to support my idea about inefficient class checking/comparing... *shrug* Just a very simple case, but like I said, things get worse and worse the more windows and "stuff" that's open (sheer number of "window objects?").<br>
+<br>
+Why, why, WHY? This also seems like it could be the case where other users are reporting/showing much worse general usage performance than I'm seeing.<br>
+<br>
+<br>
+Frustrating, when I've given way more details than an average user... <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> What else? Resource Access Monitor logs? Just more of the usual standard stuff!</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92176" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92176">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92176">
+
+						<h3 ><a href="#p92176"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting6f4a.html?mode=quote&amp;f=40&amp;p=92176" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8d268d26.html?p=92176#p92176" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Tue Jul 23, 2013 7:28 am
+			</p>
+			
+			
+			
+			<div class="content">Yes, I understand that SbieSvc processes are doing more stuff, and this clearly has something to do with the performance problems that you are seeing.  What I am saying is we don't know yet what is the unique something in your computers that is causing the SbieSvc processes to do more stuff.  This point has been at the heart of this topic for a few months now.<br>
+<br>
+Whatever performance problems you can imagine in Sandboxie code (like the inefficient way Sandboxie is checking/comparing class names), the question is still this:  Why do only you and a few others see these performance problems?  What is different in your computers that is causing GUI-related code in Sandboxie to do all this extra work?</div>
+
+			
+									
+									<div id="sig92176" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92184" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92184">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistb68a.html?mode=viewprofile&amp;u=11108" class="username">DR_LaRRY_PEpPeR</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search46644664.html?author_id=11108&amp;sr=posts">291</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Jul 04, 2012 6:40 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> St. Louis area</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92184">
+
+						<h3 ><a href="#p92184"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting581a-2.html?mode=quote&amp;f=40&amp;p=92184" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica282a282.html?p=92184#p92184" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistb68a.html?mode=viewprofile&amp;u=11108" class="username">DR_LaRRY_PEpPeR</a></strong> &raquo; </span>Tue Jul 23, 2013 12:28 pm
+			</p>
+			
+			
+			
+			<div class="content">Short reply this time... <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Can you post results for some non-default OpenWinClass settings like I asked...? I'm really curious to see your times. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> I mean, using the "problem" classes I mentioned <strong>and/or</strong> * (global) vs * (prefix).<br>
+<br>
+Maybe on Windows 7 with IE <em>whichever</em>? (I still have no idea if you've only checked on 1 config/system or what...)<br>
+<br>
+<br>
+<br>
+BTW, I may have some different new information coming -- e.g. very isolated detail. <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"> Still checking, and not sure what to make of it, or how it fits in with other results... <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92202" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92202">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92202">
+
+						<h3 ><a href="#p92202"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting9aad.html?mode=quote&amp;f=40&amp;p=92202" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic42ee42ee.html?p=92202#p92202" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Wed Jul 24, 2013 4:52 am
+			</p>
+			
+			
+			
+			<div class="content">on a second system I am seeing results of ~200 for IE outside the sandbox,<br>
+<br>
+~250-300 for IE in a sandbox with OpenWinClass=*,<br>
+<br>
+and ~600 for IE in a sandbox with default settings.</div>
+
+			
+									
+									<div id="sig92202" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92206" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92206">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist08c3.html?mode=viewprofile&amp;u=5050" class="username">BUCKAROO</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8ed68ed6.html?author_id=5050&amp;sr=posts">206</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Oct 24, 2010 3:13 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92206">
+
+						<h3 ><a href="#p92206"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting84b7.html?mode=quote&amp;f=40&amp;p=92206" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic1e86-21e86.html?p=92206#p92206" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist08c3.html?mode=viewprofile&amp;u=5050" class="username">BUCKAROO</a></strong> &raquo; </span>Wed Jul 24, 2013 7:41 am
+			</p>
+			
+			
+			
+			<div class="content">If it isn't already known, 3.76 doesn't see this overall impact by a factor upwards of ~2~ to window operations, what operations specifically is not known, yet, it all adds up.<br>
+<br>
+For what it's worth though, I had to call RegisterClassEx TEN THOUSAND times to notice this doubling (2 secs =* vs. 4 secs =) present in the one WinAPI function I tested.<br>
+<br>
+I presume you can't easily add an optional setting to switch code path between window object string(?) matching to ATOM|HANDLE lookup concept (to ID BOXED windows?) and drop "All interactions with window objects outside the sandbox", if that's even the bottleneck ? I have little to none good insight here as to the <span style="text-decoration: underline">internal</span> cause of the slowdown, neither am I in any position to make better suggestions to the design of your program. :-)<br>
+<br>
+I think this is just the reality of the new implementation, I don't mind. Sandboxie has always been and continues to be elegant in its design and usability despite the efficiency decrease in Sbie 4 to window heavy sandboxed applications and their GUI responsiveness at busiest trigger times.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92404" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92404">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistb68a.html?mode=viewprofile&amp;u=11108" class="username">DR_LaRRY_PEpPeR</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search46644664.html?author_id=11108&amp;sr=posts">291</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Jul 04, 2012 6:40 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> St. Louis area</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92404">
+
+						<h3 ><a href="#p92404"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting3b4a.html?mode=quote&amp;f=40&amp;p=92404" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd44ed44e.html?p=92404#p92404" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistb68a.html?mode=viewprofile&amp;u=11108" class="username">DR_LaRRY_PEpPeR</a></strong> &raquo; </span>Tue Jul 30, 2013 1:00 pm
+			</p>
+			
+			
+			
+			<div class="content">BUCKAROO, thanks for posting the BenchmarkIE stuff above -- I didn't try to fully understand the script, but the results show the same pattern. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> And about RegisterClassEx: I checked after your post and didn't see much difference there -- maybe the difference was double also, except 10,000 calls only took some fraction of a second. <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"> (In C, maybe you were using AutoHotkey...) I didn't check on 3.76, but of course there will be some small necessary slowdown with certain functions -- I was just trying to determine WHAT specifically was so much slower in v4. I doubt it's registering classes, since there aren't that many (??) and I don't think that happens much after startup, etc...<br>
+<br>
+<br>
+tzuk, after your second-to-last post, I fired up the compiler to start looking more closely for some cause -- within 5 mins I knew I found <em>something</em> (what I referred to in my last post) when I just picked IsWindowVisible and did 100 million calls in 3s unsandboxed, but sandboxed it wasn't done 45m later (it would've taken hours!). More on this later... (Although it's not as big a deal as I thought it was, or could be... after my weekend findings!)<br>
+<br>
+Also, those IE results are like the pattern I see (and * (prefix) should be slowest, of course), and different than <a href="../phpbb/viewtopicb7e2.php?p=90219#90219" class="postlink">previous posted results</a>. BTW, GuiProxy is still never, ever a factor with anything I've seen (seems like good news as I said), then or now (before or after 4.03.01).<br>
+<br>
+<br>
+Anyway, a bit later I'll post my findings and an example benchmark program for others to check with. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Some "shocking" performance results, findings, problem area(s), etc. <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> Very specific now where it seems the slowness is coming from (and yes, affected by weird stuff like those "problem" classes), hence the isolated test program.<br>
+<br>
+Check back in about 10 hours! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92408" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92408">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist08c3.html?mode=viewprofile&amp;u=5050" class="username">BUCKAROO</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8ed68ed6.html?author_id=5050&amp;sr=posts">206</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Oct 24, 2010 3:13 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92408">
+
+						<h3 ><a href="#p92408"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting1764.html?mode=quote&amp;f=40&amp;p=92408" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic1b741b74.html?p=92408#p92408" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist08c3.html?mode=viewprofile&amp;u=5050" class="username">BUCKAROO</a></strong> &raquo; </span>Tue Jul 30, 2013 2:45 pm
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>(In C, maybe you were using AutoHotkey...)</div></blockquote><span style="font-size: 75%; line-height: normal">AutoHotkey tidbit: One can get improved ahk script performance with use of SetBatchLines -1 to restrict AutoHotkey (on the C side) entering its Windows Message processing loop too often. Limiting it to a Sleep -1 command (not a guarantee AutoHotkey won't enter its loop and PeekMessage for certain other commands).</span>
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>I doubt it's registering classes, since there aren't that many (??) and I don't think that happens much after startup, etc...</div></blockquote><span style="font-size: 75%; line-height: normal">You're absolutely right, of course, it has been examined at the least. Applications register only one to half a dozen at startup. Testing significantly longer szClassNames while the time taken increased, unsurprisingly, but contrary to initial finding, served to narrow the divide.</span><br>
+<br>
+I didn't check 3.76 with (now eliminated) RegisterClassEx either or with the advent of <strong>astonishing results</strong> via <strong>IsWindowVisible</strong>. <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"><br>
+
+<blockquote><div><cite>IsWindowVisible 10,000 times wrote:</cite>"C:\Program Files\Sandboxie\SbieIni.exe" set BenchmarkIE Enabled y<br>
+(ExitCode 0)<br>
+[BenchmarkIE] BenchmarkIsWindowVisible<br>
+[BenchmarkIE] OpenWinClass=<br>
+2403 ms<br>
+2403 ms<br>
+2340 ms<br>
+[BenchmarkIE] finished. Waited 9.188 seconds.<br>
+[BenchmarkIE] BenchmarkIsWindowVisible<br>
+[BenchmarkIE] OpenWinClass=*<br>
+0 ms<br>
+16 ms<br>
+15 ms<br>
+[BenchmarkIE] finished. Waited 1.654 seconds.
+</div></blockquote>
+Choice function call, DR_LaRRY_PEpPeR ! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Relevant BenchmarkIE test: (Do-It-Yourself patch.)<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>	else if param3 contains BenchmarkIsWindowVisible
+	{
+		hWnd:=WinExist("ahk_class Shell_TrayWnd")
+		SetBatchLines,-1
+		Loop,3
+		{
+			StartTime:=A_TickCount
+			Loop,10000
+			{
+				DllCall("IsWindowVisible","UPtr",hWnd)
+			}
+			ElapsedTime:=A_TickCount-StartTime
+			Console("ECHO	" ElapsedTime " ms")
+		}
+	}
+</code></pre></div><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Gui,1:Add,Button,W300 GBenchmarkIsWindowVisible,Benchmark IsWindowVisible
+</code></pre></div><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>BenchmarkIsWindowVisible:
+Benchmark(A_ThisLabel)
+return
+</code></pre></div></div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92419" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92419">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistb68a.html?mode=viewprofile&amp;u=11108" class="username">DR_LaRRY_PEpPeR</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search46644664.html?author_id=11108&amp;sr=posts">291</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Jul 04, 2012 6:40 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> St. Louis area</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92419">
+
+						<h3 ><a href="#p92419"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting7aee.html?mode=quote&amp;f=40&amp;p=92419" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopiccdc9cdc9.html?p=92419#p92419" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistb68a.html?mode=viewprofile&amp;u=11108" class="username">DR_LaRRY_PEpPeR</a></strong> &raquo; </span>Tue Jul 30, 2013 11:00 pm
+			</p>
+			
+			
+			
+			<div class="content">Yeah, accessing a <em>non-sandboxed</em> handle (Shell_TrayWnd), or attempting to, whether it's valid or not, is MUCH slower than a sandboxed handle (which also has some slowdown), but I don't think that's as much of a factor as I initially thought...<br>
+<br>
+<br>
+Anyway, here are my findings, with the example benchmark program at the end. <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"><br>
+<br>
+First, the <strong>accessing</strong> of window handles/objects (my initial testing)... Other functions besides IsWindowVisible that operate on a handle seem to be the same. 3.76 has NO impact on those operations at all. On version 4, the overhead for accessing <em>sandboxed</em> handles is about 24x higher (40x I think on main XP system). For UNsandboxed handles (valid outside sandbox, inaccessible, or bogus (0) doesn't matter), it's 95-200x higher than that: e.g. over 2,000x more overhead than unsandboxed or 3.76! (It's nearly <strong>5,000x</strong> slower on main system.) This would apply to out-of-sandbox access attempts, of course, which I thought IE might be doing more of... Window class settings/names have no effect (besides global * ...NOW).<br>
+<br>
+I created a GUI benchmark (never made any GUI thing besides a blank test window <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed">), and before I was going to reply Friday, I was verifying numbers, etc. again... And I THOUGHT I had verified same behavior on 4.02 initially, but either I didn't or I was wrong. Unlike 4.04, 4.02 does NOT speed up to UNsandboxed performance with OpenWinClass=* <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"> So didn't want to post yet until I figured out more (although the window access performance is still <em>something</em> <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">), because we users KNOW in 4.02 and before that OpenWinClass=* speeds things up, but which OTHER "thing" is responsible?<br>
+<br>
+Obviously the <a href="../phpbb/viewtopic8a29.php?t=15837" class="postlink">OpenWinClass=* change in 4.03.01</a> is responsible for removing the access overhead, but it seems too much with any other setting (especially non-sandbox).<br>
+<br>
+FYI: When accessing UNsandboxed handles, that's when there's major CPU usage from the SbieSvc process(es). Same whether accessible (Open) or not. No SbieSvc CPU with sandboxed handles (IIRC 4.02 also), even though 24-40x overhead.<br>
+<br>
+<br>
+So to try to find what ELSE is affected (differently) by OpenWinClass, I decided to start/run stuff with <a href="http://www.rohitab.com/apimonitor" class="postlink">API Monitor</a> for the first time since last year. (WOW is it slow/laggy in Sandboxie 4!) Looking for functions whose call times are greatly affected by OpenWinClass... This took awhile, longer than it should have (remember, I hardly know what I'm doing). What should I have checked/noticed sooner?! <strong>CreateWindow</strong>(Ex)! <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> Looked like a BIG impact there, which I started checking on its own and added it to the GUIBench program.<br>
+<br>
+It doesn't seem to matter whether it's a custom class or a simple static control, results are the same. In the quick checking I did, my <em>resource-based</em> Dialog doesn't seem to be slowed down, it's just the actual CreateWindow type functions.<br>
+<br>
+Check out these <strong>window creation</strong> results!<br>
+<br>
+NO overhead/slowdown with OpenWinClass=* in 3.76, 4.02, or 4.04+ (bingo, found the speedup that applies to 4.02!)<br>
+<br>
+<strong>125x</strong> slower with 3.76 (only checked on clean XP laptop). Besides global *, window settings make no difference.<br>
+<br>
+At LEAST <strong>800x</strong> slower with v4 default settings (XP and 64-bit 7), so 6x slower than 3.76 at best. It's about <strong>8,000x</strong> slower now on my main XP, give or take. Is this where having more windows and "stuff" running makes it slower?<br>
+<br>
+Adding just OpenWinClass=Tooltips_class32 makes it a few times worse, e.g. at least <strong>2,500x</strong> slower overall (or <strong>20,000x</strong> on main system). I didn't check other classes besides a couple "problem" ones I posted, but see, this unrelated stuff is affecting creation of a static control window in the test?!<br>
+<br>
+Using * (prefix) makes it at least 10 times worse! Overall: Minimum <strong>10,000x</strong> (XP laptop),  <strong>16,000x</strong> (64-bit 7), or over <strong>120,000x</strong> slower (XP main)! Yes, can easily create <strong>10 million</strong> windows at "full speed" in less time than 100 windows take with OpenWinClass=GUIBench.exe,* on main system. <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"><br>
+<br>
+Needless to say, major Sandboxie CPU usage!<br>
+<br>
+<br>
+It would be cool if others can check their system(s). <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Program(s) download: <a href="http://voidmain.realplain.com/sbie_winbench/GUIBench.zip" class="postlink"><strong>GUIBench.zip</strong></a> I included the initial CLI HwndBench (for checking arbitrary handle access; run for Usage), but you probably just want GUIBench (<a href="../voidmain.realplain.com/sbie_winbench/GUIBench.png" class="postlink"><strong>Screenshot</strong></a>). <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+To see what's happening: <a href="http://voidmain.realplain.com/sbie_winbench/HwndBench.c" class="postlink">HwndBench source</a>, <a href="http://voidmain.realplain.com/sbie_winbench/GUIBench.c" class="postlink">GUIBench main source</a>, and <a href="http://voidmain.realplain.com/sbie_winbench/GUIBench-src.zip" class="postlink">full GUIBench package</a> (for building).</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p92454" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile92454">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberliste204-2.html?mode=viewprofile&amp;u=702" class="username">Peter2150</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search51e151e1.html?author_id=702&amp;sr=posts">879</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Mar 27, 2007 9:46 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Washington DC</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content92454">
+
+						<h3 ><a href="#p92454"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting639c.html?mode=quote&amp;f=40&amp;p=92454" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic679e679e.html?p=92454#p92454" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberliste204-2.html?mode=viewprofile&amp;u=702" class="username">Peter2150</a></strong> &raquo; </span>Wed Jul 31, 2013 11:23 am
+			</p>
+			
+			
+			
+			<div class="content">I have to agree with Tzuk.   I haven't seen any change in performance on any of my 4 machines.  GRanted they still are XP, and I mainly use Firefox.   I don't know what the bench test might show, but frankly, it isn't worth my time to bother with them.<br>
+<br>
+Pete</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="https://www.sandboxie.com/old-forums/posting75d4.html?mode=reply&amp;f=40&amp;t=16100" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic27f127f1.html?f=40&amp;t=16100&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=16100">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			79 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopicbefabefa.html?f=40&amp;t=16100&amp;start=15" role="button">2</a></li>
+				<li><a class="button" href="viewtopic5dbc5dbc.html?f=40&amp;t=16100&amp;start=30" role="button">3</a></li>
+				<li><a class="button" href="viewtopicf87ef87e.html?f=40&amp;t=16100&amp;start=45" role="button">4</a></li>
+				<li><a class="button" href="viewtopic040b040b.html?f=40&amp;t=16100&amp;start=60" role="button">5</a></li>
+				<li><a class="button" href="viewtopicf072f072.html?f=40&amp;t=16100&amp;start=75" role="button">6</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopicbefabefa.html?f=40&amp;t=16100&amp;start=15" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforuma3f5a3f5.html?f=40" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Beta Version 4.05”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum907f907f.html?f=42" class="jumpbox-cat-link"> <span> Sandboxie Forums</span></a></li>
+																<li><a href="viewforum12a312a3.html?f=2" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Announcements</span></a></li>
+																<li><a href="viewforumcf19cf19.html?f=6" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Positive Reviews</span></a></li>
+																<li><a href="viewforum107e107e.html?f=43" class="jumpbox-cat-link"> <span> Problems and Questions</span></a></li>
+																<li><a href="viewforum8a838a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Problem Reports</span></a></li>
+																<li><a href="viewforum48ab48ab.html?f=17" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Quick Questions</span></a></li>
+																<li><a href="viewforumbcb4bcb4.html?f=65" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.25</span></a></li>
+																<li><a href="viewforumab78ab78.html?f=44" class="jumpbox-cat-link"> <span> More Forums</span></a></li>
+																<li><a href="viewforum31e631e6.html?f=4" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Feature Requests</span></a></li>
+																<li><a href="viewforume774e774.html?f=5" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Anything Else</span></a></li>
+																<li><a href="viewforum89418941.html?f=22" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Contributed Utilities &amp; Templates</span></a></li>
+																<li><a href="viewforum97809780.html?f=14" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; International Translations</span></a></li>
+																<li><a href="viewforum2b892b89.html?f=38" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.01</span></a></li>
+																<li><a href="viewforumdfa4dfa4.html?f=39" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.03</span></a></li>
+																<li><a href="viewforuma3f5a3f5.html?f=40" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.05</span></a></li>
+																<li><a href="viewforum51ee51ee.html?f=41" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.07</span></a></li>
+																<li><a href="viewforum590b590b.html?f=46" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.09</span></a></li>
+																<li><a href="viewforumcdbacdba.html?f=48" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.13</span></a></li>
+																<li><a href="viewforum30ac30ac.html?f=49" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.15</span></a></li>
+																<li><a href="viewforum91409140.html?f=50" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.17</span></a></li>
+																<li><a href="viewforum208f208f.html?f=51" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.19</span></a></li>
+																<li><a href="viewforum26492649.html?f=53" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.01</span></a></li>
+																<li><a href="viewforum9e0d9e0d.html?f=54" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.05</span></a></li>
+																<li><a href="viewforumfac0fac0.html?f=55" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.07</span></a></li>
+																<li><a href="viewforuma05ca05c.html?f=56" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.09</span></a></li>
+																<li><a href="viewforum6ac36ac3.html?f=57" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.11</span></a></li>
+																<li><a href="viewforume57de57d.html?f=58" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.13</span></a></li>
+																<li><a href="viewforum07560756.html?f=59" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.15</span></a></li>
+																<li><a href="viewforumb8c1b8c1.html?f=60" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.17</span></a></li>
+																<li><a href="viewforumdbf5dbf5.html?f=61" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.19</span></a></li>
+																<li><a href="viewforum75c275c2.html?f=62" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.21</span></a></li>
+																<li><a href="viewforume5f3e5f3.html?f=64" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.23</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="stat-block online-list">
+		<h3>Who is online</h3>
+		<p>Users browsing this forum: No registered users and 0 guests</p>
+	</div>
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="../index.html" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Home</span></a></span>									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="America/New York">UTC-04:00</span></li>
+							<li class="rightside">
+				<a href="ucp033a033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete all board cookies</span>
+				</a>
+			</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+									</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="cron58975897.gif?cron_type=cron.task.text_reparser.poll_option" width="1" height="1" alt="cron" /></div>
+
+<script type="text/javascript" src="assets/javascript/jquery.mince91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="assets/javascript/corece91ce91.js?assets_version=7"></script>
+
+
+
+<script type="text/javascript" src="styles/sbie_prosilver/template/forum_fnce91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="styles/sbie_prosilver/template/ajaxce91ce91.js?assets_version=7"></script>
+
+
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?p=92123 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:44:58 GMT -->
+</html>

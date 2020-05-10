@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=6&t=29&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:50:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Really impressed</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Really impressed</h2>
+		<p><a href="viewtopicc947c947.html?f=6&amp;t=29">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=6&amp;t=29</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Really impressed</h3>
+				<div class="date">Posted: <strong>Thu Feb 03, 2005 10:50 pm</strong></div>
+				<div class="author">by <strong>Kaupp</strong></div>
+				<div class="content">Hi tzuk<br>
+I think you've done a really great job with Sandboxie,it's light on my resources it's not slowing down my browsing either ,I hope you get a little more recognition for your efforts than you have done so far because you thoroughly deserve it for this software.<br>
+I'm just wondering if you could explain a bit about what's happening in the registry under HKey Users /sandbox?<br>
+<br>
+Thanks again<br>
+<br>
+regards<br>
+Kaupp<br>
+<br>
+<img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 04, 2005 1:50 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Kaupp thanks for the kind words  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">   You can help with the recognition though, just tell everyone you know how great Sandboxie is.  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> <br>
+<br>
+About the registry:<br>
+<br>
+Sandboxie must always be able to give the sandboxed process a usable registry key.  Even if the was created by a sandboxed process, and it doesn't exist outside the sandbox, the process should still be given a key object to work with.  The HKCU\Sandbox subtree is used to give processes dummy key objects for keys that they think exist, but in fact do not.<br>
+<br>
+Currently what happens is that for EVERY key accessed by a sandboxed process, a corresponding dummy key is built under the HKCU\Sandbox key.  That probably isn't necessary, but that's how it works right now.  It doesn't seem to incur a horrible overhead, so I won't mess with it for the time being.   They say if it's not broken, don't fix it.  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 26, 2005 3:39 pm</strong></div>
+				<div class="author">by <strong>webulator70</strong></div>
+				<div class="content">do these reg keys get cleaned too when you do clean sandbox?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 28, 2005 12:28 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Yes, the keys are deleted along with everything else in the sandbox.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=6&t=29&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:50:04 GMT -->
+</html>

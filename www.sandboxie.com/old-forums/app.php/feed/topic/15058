@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15058" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-08-25T04:22:09-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15058</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-08-25T04:22:09-04:00</updated>
+
+		<published>2013-08-25T04:22:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=93353#p93353</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=93353#p93353"/>
+		<title type="html"><![CDATA[[.06] Application Errors With CDBurnerXP And DVDStyler]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=93353#p93353"><![CDATA[
+This was sent in a PM but I am taking the liberty to reproduce below.<br><blockquote><div><cite>Zer0Kool wrote:</cite>Hey tzuk,<br><br>Looks like Sandboxie 4.05.06 fixed this issue with CDBurnerXP.<br><br>Thanks.</div></blockquote>Great!  Probably related to this fix:<br><br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=16325" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=16325</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun Aug 25, 2013 4:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Zer0Kool]]></name></author>
+		<updated>2013-08-25T02:43:37-04:00</updated>
+
+		<published>2013-08-25T02:43:37-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=93351#p93351</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=93351#p93351"/>
+		<title type="html"><![CDATA[CDBurnerXP - SBIE2205:  SHGetPropertyStoreForWind]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=93351#p93351"><![CDATA[
+Sandboxie 4.05.06 (64 Bit)<br>CDBurnerXP 4.5.2.4214 (64 Bit)<br><br>If you get this message with CDBurnerXP and Sandboxie:<br><br>SBIE2205 Service not implemented:  SHGetPropertyStoreForWindow<br><br>Check that the following Sandboxie setting is enabled<br><br>Applications --&gt; Miscellaneous<br>Permit programs to update jump lists in the Windows 7 taskbar<br><br>This should fix this message.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=14577">Zer0Kool</a> — Sun Aug 25, 2013 2:43 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Zer0Kool]]></name></author>
+		<updated>2013-08-25T02:21:11-04:00</updated>
+
+		<published>2013-08-25T02:21:11-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=93350#p93350</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=93350#p93350"/>
+		<title type="html"><![CDATA[Application Error With CDBurnerXP]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=93350#p93350"><![CDATA[
+I upgraded to Sandboxie 4.05.06 (64 Bit) with CDBurnerXP 4.5.2.4214 installed.  Finally, this application error with CDBurnerXP no longer displays.  Looks like Sandboxie 4.05.06 fixed this issue.  Thanks.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=14577">Zer0Kool</a> — Sun Aug 25, 2013 2:21 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-08-05T06:01:38-04:00</updated>
+
+		<published>2013-08-05T06:01:38-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92633#p92633</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92633#p92633"/>
+		<title type="html"><![CDATA[[.06] Application Errors With CDBurnerXP And DVDStyler]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92633#p92633"><![CDATA[
+Alright.  I'm afraid I don't have any other ideas.  Probably some conflict with another software that you're running.<br><br>You can try to run a Resource Access Monitor to see if you identify DLLs that belong to other software.<br><br><a href="http://www.sandboxie.com/index.php?ResourceAccessMonitor" class="postlink">http://www.sandboxie.com/index.php?Reso ... essMonitor</a><br><br>You can also post the log here if you want and I'll take a look at it.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Aug 05, 2013 6:01 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Zer0Kool]]></name></author>
+		<updated>2013-08-04T22:05:49-04:00</updated>
+
+		<published>2013-08-04T22:05:49-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92620#p92620</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92620#p92620"/>
+		<title type="html"><![CDATA[Application Error With CDBurnerXP]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92620#p92620"><![CDATA[
+It's at the default location:<br><br>C:\Sandbox\%USER%\%SANDBOX%<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=14577">Zer0Kool</a> — Sun Aug 04, 2013 10:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-08-04T03:17:46-04:00</updated>
+
+		<published>2013-08-04T03:17:46-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92567#p92567</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92567#p92567"/>
+		<title type="html"><![CDATA[[.06] Application Errors With CDBurnerXP And DVDStyler]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92567#p92567"><![CDATA[
+Where is your sandbox folder?  If not the standard C:\Sandbox then try resetting it to the default.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun Aug 04, 2013 3:17 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Zer0Kool]]></name></author>
+		<updated>2013-08-02T22:56:35-04:00</updated>
+
+		<published>2013-08-02T22:56:35-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92545#p92545</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92545#p92545"/>
+		<title type="html"><![CDATA[Application Error With CDBurnerXP]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92545#p92545"><![CDATA[
+Hmmm,<br><br>Upgraded to Sandboxie 4.05.03 (64-Bit)<br><br>Still no go.<br><br>Rebooted (just in case), still no go<br><br>Deleted sandbox and reinstalled CDBurnerXP, still no go.<br><br>Rebooted again (just in case), still no go<br><br>Since you mentioned security software, I disabled AVG and Malwarebytes, still no go.<br><br>I've even tried unchecking the Drop Rights option, still no go.<br><br>Not sure what else to try.  I'm running the default Sandboxie settings.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=14577">Zer0Kool</a> — Fri Aug 02, 2013 10:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-08-01T06:59:21-04:00</updated>
+
+		<published>2013-08-01T06:59:21-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92486#p92486</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92486#p92486"/>
+		<title type="html"><![CDATA[[.06] Application Errors With CDBurnerXP And DVDStyler]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92486#p92486"><![CDATA[
+I wasn't able to see a problem with version 4.05.03 and CDBurnerXP.  It installed into a sandbox and was able to run from it.<br>Perhaps you have a conflict with some other security software that is blocking cdbxpp.exe.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Aug 01, 2013 6:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Zer0Kool]]></name></author>
+		<updated>2013-07-28T15:50:16-04:00</updated>
+
+		<published>2013-07-28T15:50:16-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92349#p92349</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92349#p92349"/>
+		<title type="html"><![CDATA[Application Error With CDBurnerXP]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92349#p92349"><![CDATA[
+You can download CDBurnerXP here:<br><br><a href="http://www.cdburnerxp.se/en/download" class="postlink">http://www.cdburnerxp.se/en/download</a><br><br>Click the More Download Options link to get the 64-Bit version.  Also, if you download the main one watch for the OpenCandy screens during the install if you do not want to install the OpenCandy things.  Or, just use the Without OpenCandy option.<br><br>Thanks.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=14577">Zer0Kool</a> — Sun Jul 28, 2013 3:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-28T03:23:53-04:00</updated>
+
+		<published>2013-07-28T03:23:53-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92334#p92334</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92334#p92334"/>
+		<title type="html"><![CDATA[[.06] Application Errors With CDBurnerXP And DVDStyler]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92334#p92334"><![CDATA[
+Post download links please.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun Jul 28, 2013 3:23 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Zer0Kool]]></name></author>
+		<updated>2013-07-27T22:10:55-04:00</updated>
+
+		<published>2013-07-27T22:10:55-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92324#p92324</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92324#p92324"/>
+		<title type="html"><![CDATA[Application Error With CDBurnerXP]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=92324#p92324"><![CDATA[
+Windows 7 Ultimate (64-Bit) <br>Sandboxie 4.05.02 (64-Bit) <br>CDBurnerXP 4.5.2.4214 (64-Bit)<br><br>I still instantly get the following error message when I start CDBurnerXP sandboxed:<br><br>cdbxpp.exe - Application Error <br>The application was unable to start correctly (0xc000007b). Click OK to close the application.<br><br>I saw the topic about AVAST and something similar to this, but I don't think this is the case as I do not have AVAST installed.  Plus, I run a bunch of programs sandboxed, and this is the only program that is giving me issues like this.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=14577">Zer0Kool</a> — Sat Jul 27, 2013 10:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Zer0Kool]]></name></author>
+		<updated>2013-03-24T00:49:58-04:00</updated>
+
+		<published>2013-03-24T00:49:58-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=88349#p88349</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=88349#p88349"/>
+		<title type="html"><![CDATA[[.06] Application Errors With CDBurnerXP And DVDStyler]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15058&amp;p=88349#p88349"><![CDATA[
+Windows 7 Ultimate (64-Bit)<br>Sandboxie 4.01.04 (64-Bit)<br><br>I instantly get the following error message when I start CDBurnerXP (4.5.1.3868 (64-Bit)) sandboxed:<br><br>cdbxpp.exe - Application Error<br>The application was unable to start correctly (0xc000007b).  Click OK to close the application.<br><br><br>I instantly get the following error message when I start DVDStyler (2.5 Beta 1 (32-Bit) (no 64-Bit available)) sandboxed:<br><br>DVDStyler.exe - Application Error<br>The application was unable to start correctly (0xc00000ba).  Click OK to close the application<br><br><br>When I downgrade Sandboxie to 3.76 (64-Bit), I do not get these error messages and both programs run fine.<br><br><br>[EDIT]<br><br>Windows 7 Ultimate (64-Bit)<br>Sandboxie 4.01.06 (64-Bit)<br>CDBurnerXP 4.5.1.4003 (64-Bit)<br>DVDStyler 2.5 Beta 3 (32-Bit)<br><br>CDBurnerXP is still giving the same error as above; no change.<br><br>However, DVDStyler seems to be working in Sandboxie.  The error above does not show now.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=14577">Zer0Kool</a> — Sun Mar 24, 2013 12:49 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

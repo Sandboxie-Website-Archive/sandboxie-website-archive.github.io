@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/16161" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-08-07T05:42:04-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/16161</id>
+
+		<entry>
+		<author><name><![CDATA[BUCKAROO]]></name></author>
+		<updated>2013-08-07T05:42:04-04:00</updated>
+
+		<published>2013-08-07T05:42:04-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16161&amp;p=92699#p92699</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16161&amp;p=92699#p92699"/>
+		<title type="html"><![CDATA[[.04] SUBST drive1: /D takes [drive2] away]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16161&amp;p=92699#p92699"><![CDATA[
+Passed: Sandboxie/4.05.04 (Windows 8; 64-bit) (Windows 7; 32-bit)<br><br>Before and after tests indicate as much, that it is fixed with 4.05.04.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=5050">BUCKAROO</a> — Wed Aug 07, 2013 5:42 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-08-07T04:04:12-04:00</updated>
+
+		<published>2013-08-07T04:04:12-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16161&amp;p=92692#p92692</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16161&amp;p=92692#p92692"/>
+		<title type="html"><![CDATA[[.04] SUBST drive1: /D takes [drive2] away]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16161&amp;p=92692#p92692"><![CDATA[
+Should be fixed in version 4.05.04.  Please try.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Aug 07, 2013 4:04 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-29T14:00:11-04:00</updated>
+
+		<published>2013-07-29T14:00:11-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16161&amp;p=92379#p92379</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16161&amp;p=92379#p92379"/>
+		<title type="html"><![CDATA[[.04] SUBST drive1: /D takes [drive2] away]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16161&amp;p=92379#p92379"><![CDATA[
+Interesting.  I'll check it out.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Jul 29, 2013 2:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BUCKAROO]]></name></author>
+		<updated>2013-07-29T05:01:19-04:00</updated>
+
+		<published>2013-07-29T05:01:19-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16161&amp;p=92362#p92362</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16161&amp;p=92362#p92362"/>
+		<title type="html"><![CDATA[[.04] SUBST drive1: /D takes [drive2] away]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16161&amp;p=92362#p92362"><![CDATA[
+Tested: Sandboxie/4.05.02 (Windows 8; 64-bit) (Windows 7; 32-bit)<br><br><span style="text-decoration: underline"><strong>Sandbox</strong></span><br>Run Windows Explorer<br><br><span style="text-decoration: underline"><strong>Outside</strong></span><br>Associate a path with a drive letter: (important to provide NO path but a trailing backslash for drive2)<br><br>SUBST A: C:\<br><br>(<span style="color: red">warning</span>: Save your work!)<br>Delete the substituted drive:<br><br>SUBST A: /D<br><br><span style="text-decoration: underline"><strong>Sandbox</strong></span><br>Try Run Windows Explorer<br>0xc0000034<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=5050">BUCKAROO</a> — Mon Jul 29, 2013 5:01 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

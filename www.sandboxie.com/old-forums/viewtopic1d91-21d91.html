@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=20146&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:43:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Steam | Second account</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Steam | Second account</h2>
+		<p><a href="viewtopic1fd71fd7.html?f=5&amp;t=20146">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=20146</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Steam | Second account</h3>
+				<div class="date">Posted: <strong>Fri Jan 02, 2015 6:25 am</strong></div>
+				<div class="author">by <strong>sandman17</strong></div>
+				<div class="content">Hi, I need some guidance please. I have installed my second Steam account in the default Sandboxie and I can run both instances simultaneously.. but the second instance (in Sandboxie) shows all the games from my main account. Why? I need the second account to only show games from the second account. What am I missing here?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Steam | Second account</h3>
+				<div class="date">Posted: <strong>Sun Jan 04, 2015 9:03 pm</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">You must make extensive use of Write-Only File Access (WriteFilePath) against all Steam related folders.<br>
+<br>
+Your Steam sandbox is "dirty" and aware now of your main account, so wipe (the sandbox) and start again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Steam | Second account</h3>
+				<div class="date">Posted: <strong>Wed Jan 07, 2015 1:54 am</strong></div>
+				<div class="author">by <strong>btm</strong></div>
+				<div class="content"><blockquote><div><cite>BUCKAROO wrote:</cite>You must make extensive use of Write-Only File Access (WriteFilePath) against all Steam related folders.<br>
+<br>
+Your Steam sandbox is "dirty" and aware now of your main account, so wipe (the sandbox) and start again.</div></blockquote>
+
+<br>
+IF the FIRST instance of steam has EVER able been able to write to any files/registry entries (this means that the SECOND can read them) this is likely your issue. As he stated Write Access for both boxes must be controlled. If the original steam account exists outside of the sandbox (or did so in the past) it is possible that the second can READ (not write) to existing (real) registry or file locations which could result in an issue such as that which you described. If you are fairly sure that steam and the games were installed into each sandbox program separately I'd urge you to take another look at the path restrictions (specifically OpenPath) to ensure they don't share anything in common.<br>
+<br>
+While I have never tried using 2 steam instances at the same time I do have an install of steam (and its games) contained within a specific sandbox that has survived system restorations along with a new OS install. (With the OS &amp; STEAM-GAMES residing on a different drive and a copy of the Sandboxie.ini saved for use upon restore with minor path changes if required.)</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=20146&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:43:17 GMT -->
+</html>

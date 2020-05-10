@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=1983&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:01:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie Shortcut Creator - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie Shortcut Creator</h2>
+		<p><a href="viewtopic02fb02fb.html?f=22&amp;t=1983">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=1983</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 29, 2007 11:20 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Ok, so I can't clear that text box when you click into it at the moment.  NSIS/nsDialogs doesn't support the EN_SETFOCUS notification message yet.  I have to make a feature request.<br>
+<br>
+In the meantime I've made a bunch of logic rewrites, added some other checks, and added an about <em>page</em>.  I thought about a popup window, but that would be less cool.  Doing it this way however opened up a HUGE can of worms when it came time to go <em>back</em> to the main page.  I had to figure out how to remember anything the user may have set up already, and restore it.  Few other things too with hitting Cancel in the file/folder dialogs, as that causes either a random number (file) or 'error' (folder) to be returned.  Also get error if you choose something like My Computer in the folder dialog.  We don't want to actually SEE that now do we?  Also set it to open the folder/file dialogs to the last selected file/folder.  It's been a bug hunting sort of night.<br>
+<br>
+It's all straightened out now, so I just need some About page content and I'll be ready to release a new version.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 30, 2007 1:26 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">New version with 'About...' page.  Many changes as listed above.  I dare you to try and break it now!! (Ok, I'm not responsible if you rename some random program Start.exe and try to use that LOL)  I will say though, I didn't expect it but I learned quite a lot about the windows GUI doing this one.<br>
+<br>
+The link in the 'About...' dialog is clickable, however I don't know how to make the cursor change to a hand on mouseover yet.  Working on that one...<br>
+<br>
+Thanks everyone for the comments and suggestions so far, so keep them coming!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Updated v2.1.1.3</h3>
+				<div class="date">Posted: <strong>Fri Aug 31, 2007 12:13 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Updated v2.1.1.3 above ^^^^^^^<br>
+<br>
+Fixed - 'About...' button that goes nowhere appearing on end page.<br>
+<br>
+I think I got everything.  This installer pages coding is way different than portable launchers.  Everytime I fix one GUI bug, I find another, or decide to add something, and make more bugs.  Sheesh, learning curve...<br>
+<br>
+Comment away!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Updated v2.1.1.3</h3>
+				<div class="date">Posted: <strong>Fri Aug 31, 2007 12:26 am</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content"><blockquote><div><cite>wraithdu wrote:</cite>
+Everytime I fix one GUI bug, I find another, or decide to add something, and make more bugs.  Sheesh, learning curve...
+</div></blockquote>
+Imagine how tzuk feels! <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> But anyways though, nice job on the (improved) shortcut maker.<img src="../www.invision.smileyville.net/smilies/good222.gif" class="postimage" alt="Image"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 31, 2007 9:58 am</strong></div>
+				<div class="author">by <strong>Paul_K</strong></div>
+				<div class="content">Congratulations on V 2.1.1.3.<br>
+I haven't been able to break it, even when manually editing sbie.ini, to simulate a change in location for Start.exe.<br>
+<br>
+Great job  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 31, 2007 11:26 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Sep 01, 2007 7:17 am</strong></div>
+				<div class="author">by <strong>street011</strong></div>
+				<div class="content">dude, stop making shortcut programms :p <br>
+i have a very nice project still waiting for you :p</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Updated v2.1.2.5</h3>
+				<div class="date">Posted: <strong>Mon Sep 17, 2007 12:05 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Added enumeration of sandboxes from Sandboxie.ini.  An initial file selection dialog will be presented, then the path to your INI will be saved in sbie.ini along with the path to Start.exe.<br>
+<br>
+The box parameter is now a fancy Combo Box!  It is a dropdown with your enumerated boxes, along with the new '__ask__' parameter and 'current' parameter.  The Combo Box also allows typing text input should you wish to use it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 17, 2007 4:39 pm</strong></div>
+				<div class="author">by <strong>dlguild</strong></div>
+				<div class="content">Much appreciated!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Updated v2.1.2.6</h3>
+				<div class="date">Posted: <strong>Mon Nov 19, 2007 1:21 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Quick update for the new versions of Sandboxie.  This is really kinda useless now with the new GUI and all, but on the off chance you have a program that's not in the start menu that you want a shortcut for...you can use it <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+- update with new version of NSIS which has better support for links (About box isn't as hacked together now)<br>
+- exclusion of UserSettings sections from being treated as sandboxes<br>
+<br>
+Download in first post.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Nov 02, 2008 6:28 pm</strong></div>
+				<div class="author">by <strong>stisev</strong></div>
+				<div class="content">First off, wonderful program. I was thinking "damn, it would be great if someone made...oh!" Thanks again for ALL of your hard work and time!<br>
+<br>
+A few suggestions.  I hope you'll consider them.<br>
+<br>
+1) Please try and add   the corresponding "Start in" entry into the shortcut.  It is very rare, but some programs like Declan Language Software WILL NOT run unless you specify the "Start In" location in the shortcut.<br>
+<br>
+For example:<br>
+<br>
+Target: D:\Applications\Sandboxie\Start.exe /box:mydefaultbox "D:\Applications\Declan's Chinese FlashCards\dcfc.exe"<br>
+Start in: "D:\Applications\Declan's Chinese FlashCards"<br>
+<br>
+It's easy enough to add this for the rare exceptions or even to all of them, but it's a suggestion that would improve this piece of software.<br>
+<br>
+<br>
+2) At the end of the shortcut creation, please allow the user to continue and make "another shortcut" or something like that alongside the close buttonThat way one doesn't have to re-open the application.<br>
+<br>
+<br>
+If I think of any other suggestions, I will post!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Update</h3>
+				<div class="date">Posted: <strong>Tue Nov 04, 2008 2:14 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Updated to v2.1.2.7<br>
+<br>
+- Added prompt to restart the wizard<br>
+- Added ability to specify a "Start in" directory</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Nov 04, 2008 8:11 pm</strong></div>
+				<div class="author">by <strong>stisev</strong></div>
+				<div class="content">Badass!<br>
+<br>
+I wish all software coders were as speedy as you and tzuk!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 06, 2008 8:20 am</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content">Hmm...<br>
+*Prepares for potential bashing*<br>
+<br>
+I agree that this is a nice piece of work... but this was made back when the old Sandboxie was out... when Sandboxie used the old GUI... which didn't have a shortcut creator...<br>
+<br>
+Now though, Sandboxie contains its own shortcut creator right in the GUI, under the shell integration section, so why not just use that, right?<br>
+Unless this shortcut creator contains some additional features I am unaware of (or it is simply good for the people stuck on old Sandboxie who dont wanna upgrade)?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 06, 2008 10:36 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">@SnD<br>
+I pretty much aggree with you.  But it was an easy update and an opportunity to get some things working better internally now that nsDialogs has matured more.  I didn't mind doing it <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=1983&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:01:34 GMT -->
+</html>

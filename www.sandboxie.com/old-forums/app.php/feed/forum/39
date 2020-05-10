@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/forum/39" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-08-04T03:10:33-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/forum/39</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-08-04T03:10:33-04:00</updated>
+
+		<published>2013-08-04T03:10:33-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15899&amp;p=92565#p92565</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15899&amp;p=92565#p92565"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • ]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15899&amp;p=92565#p92565"><![CDATA[
+As far as I know the DDE features now work reasonably well and I wasn't planning on making any more changes there.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun Aug 04, 2013 3:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[cj716]]></name></author>
+		<updated>2013-08-03T06:25:25-04:00</updated>
+
+		<published>2013-08-03T06:25:25-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15899&amp;p=92551#p92551</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15899&amp;p=92551#p92551"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • ]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15899&amp;p=92551#p92551"><![CDATA[
+I've assumed a problem I have with forcing Excel 2013 (both programme and folder force) on Win 8 is related to the DDE issue as 'send to' works fine. It may not be of course but I wanted to see if  the work being done on this might also fix my problem before reporting.  <br><br>Is this issue part of the plans for the current (.05) beta cycle?<br><br>Thanks<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3809">cj716</a> — Sat Aug 03, 2013 6:25 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-08-02T05:13:38-04:00</updated>
+
+		<published>2013-08-02T05:13:38-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15837&amp;p=92523#p92523</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15837&amp;p=92523#p92523"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • ]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15837&amp;p=92523#p92523"><![CDATA[
+Quoting BUCKAROO from another topic:<br><blockquote><div><cite>BUCKAROO wrote:</cite>Decreased security? Not that I've found. This setting is purported to allow "full communication with all windows outside the sandbox" but Sandboxie v4 processes can't so much as (directly) show/hide an existing window outside... I don't know if that's a bug.</div></blockquote>Not really a bug, more like an oversight.  The process in the sandbox is still running at untrusted integrity level even when OpenWinClass=* so the UAC/UIPI mechanism prevents it from accessing window objects that have a higher integrity level.  And most window objects outside the sandbox should have at least medium integrity level.<br><br>This means that on systems where UAC is enabled, OpenWinClass=* doesn't really mean the process in the sandbox has more access to window objects.  However it can "see" and "read" window objects outside the sandbox directly without going through SbieSvc.  Whereas without OpenWinClass=*, it cannot see or read window objects outside the sandbox directly, and has to go through the SbieSvc helper process.<br><br>If UAC is disabled, and on Windows XP, integrity levels don't come into play for window objects, and OpenWinClass=* does give the process in the sandbox full access to window objects outside the sandbox.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Aug 02, 2013 5:13 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-08-02T03:20:08-04:00</updated>
+
+		<published>2013-08-02T03:20:08-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15899&amp;p=92518#p92518</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15899&amp;p=92518#p92518"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • ]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15899&amp;p=92518#p92518"><![CDATA[
+No.  Please note that I am going to move your post into this topic:<br><br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=15899" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15899</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Aug 02, 2013 3:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-08-01T21:12:58-04:00</updated>
+
+		<published>2013-08-01T21:12:58-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15899&amp;p=92511#p92511</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15899&amp;p=92511#p92511"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • BookmarkBuddy]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15899&amp;p=92511#p92511"><![CDATA[
+4.05.03<br>Windows 7 64<br>Iron<br><br>BookmarkBuddy does not fetch bookmarks.<br>I was wondering if this is being work on yet?<p>Statistics: Posted by Guest — Thu Aug 01, 2013 9:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-07-18T16:29:55-04:00</updated>
+
+		<published>2013-07-18T16:29:55-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15956&amp;p=92021#p92021</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15956&amp;p=92021#p92021"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • ]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15956&amp;p=92021#p92021"><![CDATA[
+Copy/Paste problems were dealt with in later versions.<br>Try 4.05.01:<br><a href="http://sandboxie.com/phpbb/viewtopic.php?t=16079" class="postlink">http://sandboxie.com/phpbb/viewtopic.php?t=16079</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Thu Jul 18, 2013 4:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SE09]]></name></author>
+		<updated>2013-07-18T14:03:14-04:00</updated>
+
+		<published>2013-07-18T14:03:14-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15956&amp;p=92019#p92019</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15956&amp;p=92019#p92019"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • ]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15956&amp;p=92019#p92019"><![CDATA[
+Is there any devs on this site?<br><br>A reply would be nice  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=15065">SE09</a> — Thu Jul 18, 2013 2:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-17T03:26:49-04:00</updated>
+
+		<published>2013-07-17T03:26:49-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15782&amp;p=91974#p91974</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15782&amp;p=91974#p91974"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • ]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15782&amp;p=91974#p91974"><![CDATA[
+Glad to see there is an improvement with version 4.04.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Jul 17, 2013 3:26 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[rueva2007]]></name></author>
+		<updated>2013-07-16T17:25:44-04:00</updated>
+
+		<published>2013-07-16T17:25:44-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15782&amp;p=91965#p91965</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15782&amp;p=91965#p91965"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • ]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15782&amp;p=91965#p91965"><![CDATA[
+Hi,problem was solved , content and buttons are visible with version 4.04 <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br><br>But I have the new issue - can't fill the form now... <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> <br><br><a href="http://www.bild.me" class="postlink"><img src="http://s1.bild.me/bilder/260513/1259992pb-form-sandboxie.png" class="postimage" alt="Image"></a><br><br>I'll back to version 3.76 again... <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16363">rueva2007</a> — Tue Jul 16, 2013 5:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2013-07-16T12:58:50-04:00</updated>
+
+		<published>2013-07-16T12:58:50-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91959#p91959</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91959#p91959"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • Re: Strange problem with 4.02]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91959#p91959"><![CDATA[
+<blockquote><div><cite>djg05 wrote:</cite><br>Happy to report that the problem is not fixed in 404</div></blockquote>djg05, Tzuk is saying  that this problem will be fixed in the next beta version. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Tue Jul 16, 2013 12:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[djg05]]></name></author>
+		<updated>2013-07-16T05:41:02-04:00</updated>
+
+		<published>2013-07-16T05:41:02-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91944#p91944</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91944#p91944"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • Re: Strange problem with 4.02]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91944#p91944"><![CDATA[
+<blockquote><div><cite>djg05 wrote:</cite>I am using Windows 8/64 Pro.<br><br>I thought I had some sort of virus and have spent ages tracking it down. Eventually it turns out that it only occurs when I install ver 4.02. <br><br>This problem happens when I click on a link in my email client (The Bat) which is not run sandboxed. It happens whether or not the computer is plugged into the internet, and will also happen when I click on a link in Outpost f/w to connect to their site.<br><br>I deleted the content of the sandbox before trying.<br><br>The only other security at the time was Avast. The browser is Opera (default)<br><br>I am enclosing a screenshot of the problem. It seems to be trying to search some chinese location.<br><br>For the time being I am using ver 3.76 which is not affected<br><br>It appears I cannot upload an image.</div></blockquote>Happy to report that the problem is not fixed in 404<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1106">djg05</a> — Tue Jul 16, 2013 5:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-15T04:48:01-04:00</updated>
+
+		<published>2013-07-15T04:48:01-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91922#p91922</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91922#p91922"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • ]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91922#p91922"><![CDATA[
+Finally able to reproduce this.  The key thing was as <strong>nph</strong> mentioned above -- must have an instance of Opera already running in the sandbox to see the problem.  Should have noticed this point earlier, I apologize.  This will be fixed in the next beta version.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Jul 15, 2013 4:48 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Julian]]></name></author>
+		<updated>2013-07-12T12:06:50-04:00</updated>
+
+		<published>2013-07-12T12:06:50-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15804&amp;p=91838#p91838</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15804&amp;p=91838#p91838"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • ]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15804&amp;p=91838#p91838"><![CDATA[
+Yes, that helps.<br>Just feels a little insecure. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2862">Julian</a> — Fri Jul 12, 2013 12:06 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-07-12T08:11:12-04:00</updated>
+
+		<published>2013-07-12T08:11:12-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91825#p91825</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91825#p91825"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • ]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91825#p91825"><![CDATA[
+I would like to point out that I get the same error in Opera 12.16 as well in Windows 8 x64 and the latest maxthon Stable.<p>Statistics: Posted by Guest — Fri Jul 12, 2013 8:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-12T03:52:05-04:00</updated>
+
+		<published>2013-07-12T03:52:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91806#p91806</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91806#p91806"/>
+		<title type="html"><![CDATA[Beta Version 4.03 • ]]></title>
+
+					<category term="Beta Version 4.03" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=39" label="Beta Version 4.03"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91806#p91806"><![CDATA[
+I was not able to experience the problem first hand and I don't know what I changed in Sandboxie that made a difference in Opera.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Jul 12, 2013 3:52 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

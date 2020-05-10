@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24558&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:07:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandbox delete command - Snapshot tool</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandbox delete command - Snapshot tool</h2>
+		<p><a href="viewtopicc829c829.html?f=17&amp;t=24558">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24558</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandbox delete command - Snapshot tool</h3>
+				<div class="date">Posted: <strong>Fri Jun 16, 2017 9:30 pm</strong></div>
+				<div class="author">by <strong>bassmastergg</strong></div>
+				<div class="content">Hi there,<br>
+<br>
+I'm not sure if this is the correct forum for this question, so please let me know.<br>
+<br>
+I have been  creating a little program to use as a sandbox deletion tool which in essence allows a sandbox to be loaded from an initial snapshot. It works for the most part but I am having issues with saving deletions in the snapshot. The deleted item will re-appear after the snapshot is loaded. I am assuming because sandbox deletions are stored elsewhere. How can I determine which files were deleted from the sandbox?<br>
+<br>
+Again apologies if this is in the wrong place.<br>
+<br>
+Thanks for any help  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox delete command - Snapshot tool</h3>
+				<div class="date">Posted: <strong>Sat Jun 17, 2017 11:15 am</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">you assume wrong - deleted means deleted - and not deleted in the basket. you need a good recovery program.<br>
+<br>
+for more information fear the manual please, that explains it all, you dont need any other third-party program:<br>
+<a href="../indexfb58-2.html?StartCommandLine" class="postlink">https://www.sandboxie.com/index.php?StartCommandLine</a><br>
+<a href="../index13ec.html?DeleteSettings#invocation" class="postlink">https://www.sandboxie.com/index.php?Del ... invocation</a><br>
+
+<blockquote class="uncited"><div>allows a sandbox to be loaded from an initial snapshot.</div></blockquote>
+you need to create such template yourself and copy it with its new name to the place where you want to use it<br>
+(within the sandboxie root folder)<br>
+<br>
+HTH</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox delete command - Snapshot tool</h3>
+				<div class="date">Posted: <strong>Sat Jun 17, 2017 12:36 pm</strong></div>
+				<div class="author">by <strong>bassmastergg</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberliste700.html?mode=viewprofile&amp;u=1766">Brummelchen</a> wrote: <a href="viewtopic5f7c5f7c.html?p=128706#p128706" data-post-id="128706" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sat Jun 17, 2017 11:15 am</div></cite>
+<blockquote class="uncited"><div>allows a sandbox to be loaded from an initial snapshot.</div></blockquote>
+you need to create such template yourself and copy it with its new name to the place where you want to use it<br>
+(within the sandboxie root folder)
+</div></blockquote>
+
+Thats exactly what i am doing. I am using my own delete command to store a snapshot of the deleted sandbox. If there already is a snapshot I am copying the snapshot I saved into the sandboxie root folder. My current implementation does work except in the case where you try to load a snapshot with files that were deleted (i.e. when I have opened a sandboxed windows explorer, deleted a file and saved a snapshot). When you then browser to that location in a sandboxed windows explorer the deleted files are still there.<br>
+<br>
+What I have noticed is when a sandbox is deleted a bunch of "RegHive" files are packed together in the "__Delete_(sandbox name)_(some random number)_" processed sandbox folder. Which is why I am assuming some metadata about a sandbox must be restored elsewhere.<br>
+<br>
+Thanks again</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox delete command - Snapshot tool</h3>
+				<div class="date">Posted: <strong>Sat Jun 17, 2017 3:06 pm</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">ok, i see.<br>
+<br>
+still not right. when sandboxie is going to delete a box its process are going to terminated, and it is renamed with a random number to prevent access that time, there exist no status or anything else. if you delete a file in the box and it is still present in your snapshot then you have a mismatch between your snapshot tool and sandboxie deleting process or it is not in the box but outside - you can not delete files outside from inside.<br>
+<br>
+thats why i pointed to the command list - you need to determine all processes (or terminate them), take a snapshot and then delete. i dont save snapshots but i can determine number of processes and start deletion when zero active. between there is no action from sandboxie.<br>
+<br>
+hint: when you have a view to the mounted reghive (in registry editor) sandboxie will throw a message and sandbox is not deleted.<br>
+<br>
+and again: NO meta!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox delete command - Snapshot tool</h3>
+				<div class="date">Posted: <strong>Sat Jun 17, 2017 3:43 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistb0d5.html?mode=viewprofile&amp;u=33165">bassmastergg</a> wrote: <a href="viewtopic0fb10fb1.html?p=128693#p128693" data-post-id="128693" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Jun 16, 2017 9:30 pm</div></cite>
+I have been  creating a little program to use as a sandbox deletion tool which in essence allows a sandbox to be loaded from an initial snapshot. It works for the most part but I am having issues with saving deletions in the snapshot. The deleted item will re-appear after the snapshot is loaded. I am assuming because sandbox deletions are stored elsewhere.</div></blockquote>
+If an file inside of the sandbox is deleted by a sandboxed program, and there is no file with that same name in the corresponding location outside of the sandbox, then that file should truly be deleted from the sandbox.<br>
+I tested that and the file was truly deleted.<br>
+<br>
+If a file with the same name exists in the corresponding location outside of the sandbox, then the file is not truly deleted inside of the sandbox, but is given a file "Creation" date that pre-dates DOS: an illegal "Creation" date, which has the effect of hiding that file when a sandboxed program looks at the files in that folder:<br>
+May 23, 1986<br>
+<br>
+An UNsandboxed program will still see the file in the sandbox folder, with its new (and illegal) "Creation" date and it's old "Modified" date.<br>
+<br>
+If I remember correctly, Sandboxie is also supposed to make that deleted file a 0 byte file in the sandbox.<br>
+That does not appear to be happening in my test.<br>
+<br>
+<br>
+File outside of the sandbox:<br>
+C:\Users\(username)\Downloads\dbug.txt<br>
+<br>
+File inside of a sandbox, in a corresponding location:<br>
+C:\Sandbox\(username)\TestBox\user\current\Downloads\dbug.txt<br>
+<br>
+If a sandboxed program deletes dbug.txt (in the sandbox), it is marked with an illegal "Creation' date, to hide it from sandboxed programs.<br>
+However, as I said above, I seem to recall that the file inside of the sandbox should also be set to 0 bytes, but I don't see that happening in my test.<br>
+<br>
+I talked about this in my second post in this old thread (from 2012), when I was still using Windows XP:<br>
+<a href="viewtopic72797279.html?f=11&amp;t=13353" class="postlink">viewtopic.php?f=11&amp;t=13353</a><br>
+including the part where the deleted file in the sandbox should be set to a 0 byte file.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox delete command - Snapshot tool</h3>
+				<div class="date">Posted: <strong>Sat Jun 17, 2017 4:08 pm</strong></div>
+				<div class="author">by <strong>bassmastergg</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist00d2.html?mode=viewprofile&amp;u=1376">Guest10</a> wrote: <a href="viewtopic64ff-264ff.html?p=128714#p128714" data-post-id="128714" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sat Jun 17, 2017 3:43 pm</div></cite>
+If a file with the same name exists in the corresponding location outside of the sandbox, then the file is not truly deleted inside of the sandbox, but is given a file "Creation" date that pre-dates DOS: an illegal "Creation" date, which has the effect of hiding that file when a sandboxed program looks at the files in that folder:<br>
+May 23, 1986
+</div></blockquote>
+
+Ahh this is exactly what I am looking for, i see where my issue lies now, thanks very much <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox delete command - Snapshot tool</h3>
+				<div class="date">Posted: <strong>Sun Jun 18, 2017 4:28 am</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">thank you for clearfying. i did not know about but my assumption was not wrong when thinking about some file outside of the box. maybe a ican check that with the prefetch folder, that is one major routine in my programs, i ever wondered that those entries are still present, i never looked at the date.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox delete command - Snapshot tool</h3>
+				<div class="date">Posted: <strong>Sun Jun 18, 2017 6:43 am</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistb0d5.html?mode=viewprofile&amp;u=33165">bassmastergg</a> wrote: <a href="viewtopic2baa-22baa.html?p=128715#p128715" data-post-id="128715" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sat Jun 17, 2017 4:08 pm</div></cite>
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist00d2.html?mode=viewprofile&amp;u=1376">Guest10</a> wrote: <a href="viewtopic64ff-264ff.html?p=128714#p128714" data-post-id="128714" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sat Jun 17, 2017 3:43 pm</div></cite>
+If a file with the same name exists in the corresponding location outside of the sandbox, then the file is not truly deleted inside of the sandbox, but is given a file "Creation" date that pre-dates DOS: an illegal "Creation" date, which has the effect of hiding that file when a sandboxed program looks at the files in that folder:<br>
+May 23, 1986
+</div></blockquote>
+
+Ahh this is exactly what I am looking for, i see where my issue lies now, thanks very much <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">
+</div></blockquote>
+
+Just to add to this, the date doesn't actually predate DOS, initial release of DOS was 1981 apparently and the date sandboxie uses looks legal. <br>
+<br>
+The date sandboxie uses is actually 23/05/1986 04:47:02.25 pm (note the .25 at the end). If you manually set a date just to 23/05/1986 it won't be hidden by sandboxie. I believe the reasoning for using this date is the following:<br>
+<br>
+Date: 23/05/1986 04:47:02.25 pm<br>
+Filetime: 121617208222500000<br>
+Filetime in Hex: 01B01234DEAD44A0<br>
+<br>
+Notice 1234DEAD  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+<em>Edit: The date may be affected by UK daylight saving time so could be out an hour (03:47:02.25 pm) but filetime should be accurate.</em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox delete command - Snapshot tool</h3>
+				<div class="date">Posted: <strong>Sun Jun 18, 2017 9:40 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">My memory was wrong about the meaning of the Creation date.<br>
+I have found how the program's creator worded it:
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3">tzuk</a> wrote: <a href="viewtopica397a397.html?p=6017#p6017" data-post-id="6017" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Apr 05, 2007 7:38 pm</div></cite>
+The file creation date is changed to a special magic number for deleted files.  In a file properties dialogs, it shows <em>Friday, May 23, 1986, 15:47:02</em>.
+</div></blockquote>I also found another post from a forum member who stated that the deleted file should be set to 0 bytes.<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist210a.html?mode=viewprofile&amp;u=509">MitchE323</a> wrote: <a href="viewtopic53b1-253b1.html?p=32157#p32157" data-post-id="32157" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jan 26, 2009 5:53 pm</div></cite>
+<blockquote class="uncited"><div>Before we put this problem to bed, could someone please try to explain to me what happened to cause this.</div></blockquote> If you open Windows Explorer sandboxed and delete a file, of course the real file is not going to be deleted. Sandboxie creates a zero-byte file corresponding to the deleted file, in that sandbox. That sandboxed file will have a creation date of 1986.</div></blockquote>At some point Sandboxie stopped setting the deleted file to 0 bytes.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox delete command - Snapshot tool</h3>
+				<div class="date">Posted: <strong>Sun Jun 18, 2017 11:10 am</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content">I believe sandboxie only creates a 0 byte file if there's no matching file already in the sandbox. If the file exists both on the system and in the sandbox (in the same path) then only the creation date is changed and the file is otherwise unchanged. Not sure if it's always been this way.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox delete command - Snapshot tool</h3>
+				<div class="date">Posted: <strong>Sun Jun 18, 2017 1:59 pm</strong></div>
+				<div class="author">by <strong>bassmastergg</strong></div>
+				<div class="content">I put in the fix for my tool to ensure the creation date is maintained when copying files and folders from the snapshot into the Sandboxie root and  I can confirm that it works as expected <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">, thanks for all the help guys. <br>
+<br>
+The question now stands is do I improve the tool to truncate file size and empty folders that are "deleted" to save on snapshot space  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox delete command - Snapshot tool</h3>
+				<div class="date">Posted: <strong>Sun Jun 18, 2017 2:56 pm</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">i wont do that - neither those files affect sandboxie usage nor can you evaluate if those files are still needed, in special 0-byte files. empty folders same. if you zip your box it is waste of time to do a full analysis of files before.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24558&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:07:20 GMT -->
+</html>

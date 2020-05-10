@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25536&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Forced Browser Issue [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Forced Browser Issue [SOLVED]</h2>
+		<p><a href="viewtopicd1a8d1a8.html?f=11&amp;t=25536">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25536</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Forced Browser Issue [SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Mar 08, 2018 3:48 am</strong></div>
+				<div class="author">by <strong>AMD</strong></div>
+				<div class="content">Hi,<br>
+<br>
+I can start Google Chrome in a sandbox ok by right clicking the desktop icon and run as sandboxed, and clicking on the sandboxie browser shortcut on the desktop also works ok but if I set Google Chrome to run forced in SBIE settings, clicking on the desktop shotrcut for Chrome opens the browser but it doesn't work and I just have a white screen with some wording(which I cannot remember).<br>
+<br>
+Using latest beta version.<br>
+<br>
+Any help to resolve is appreciated.<br>
+<br>
+Thanks<br>
+<br>
+Andy</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Browser Issue</h3>
+				<div class="date">Posted: <strong>Thu Mar 08, 2018 1:00 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello AMD,<br>
+<br>
+Please be sure to provide the required information when posting a problem report. We need this in order to be able to test and repro the behavior / better assist you:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Also, please let us know if the issue follows you to a new Sandbox with default settings. Or if you have tried deleting the contents of your Sandbox.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Browser Issue</h3>
+				<div class="date">Posted: <strong>Thu Mar 08, 2018 1:32 pm</strong></div>
+				<div class="author">by <strong>AMD</strong></div>
+				<div class="content">Hi,<br>
+<br>
+Running KTS 2018 with Sandboxie 5.23.7  on Windows 10(64 bit)<br>
+<br>
+I have the sandbox set to auto delete on close.<br>
+<br>
+When i open Chrome sandboxed when it is forced, i cannot connect to any webpages but all is ok when Chrome is not forced.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Browser Issue</h3>
+				<div class="date">Posted: <strong>Thu Mar 08, 2018 1:54 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello AMD,<br>
+<br>
+Please see this response and let me know the outcome:<br>
+<a href="viewtopic53e5-253e5.html?p=132609#p132609" class="postlink">viewtopic.php?p=132609#p132609</a><br>
+<br>
+Don't skip the testing inside a new Sandbox part.<br>
+Also, let us know if the behavior gets corrected if you disable (or remove if needed) your antivirus software.<br>
+<br>
+If the issue persists without the AV, please provide a copy of your Sandboxie configuration file.<br>
+Configure --&gt; Edit configuration<br>
+Copy/paste the contents<br>
+Highlight the contents and click on the "&lt;/&gt;" button to format it in the forums.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Browser Issue</h3>
+				<div class="date">Posted: <strong>Fri Mar 09, 2018 1:39 pm</strong></div>
+				<div class="author">by <strong>AMD</strong></div>
+				<div class="content">Hi,<br>
+<br>
+Below is my config file as requested.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=RoboForm
+Template=WindowsRasMan
+Template=WindowsLive
+Template=Kaspersky
+Template=KeyScrambler
+Template=OfficeLicensing
+Template=OfficeClickToRun
+ActivationPrompt=n
+
+
+[Chrome]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=Chrome_Preferences_DirectAccess
+Template=Chrome_Passwords_DirectAccess
+Template=Chrome_Cookies_DirectAccess
+Template=Chrome_History_DirectAccess
+Template=Chrome_Bookmarks_DirectAccess
+Template=Chrome_Profile_DirectAccess
+Template=Chrome_Sync_DirectAccess
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#0000FF,ttl
+AutoDelete=y
+NeverDelete=n
+LeaderProcess=chrome.exe
+LingerProcess=rf-chrome-nm-host.exe
+LingerProcess=robotaskbaricon.exe
+NotifyInternetAccessDenied=y
+ProcessGroup=&lt;InternetAccess&gt;,chrome.exe
+ProcessGroup=&lt;StartRunAccess&gt;,rf-chrome-nm-host.exe,robotaskbaricon.exe,chrome.exe,cmd.exe,plugins-setup.exe,dllhost.exe,identities.exe
+NotifyStartRunAccessDenied=y
+ClosedIpcPath=!&lt;StartRunAccess&gt;,*
+BoxNameTitle=n
+ClosedFilePath=%Personal%\
+ClosedFilePath=G:\
+ClosedFilePath=E:\
+ClosedFilePath=!&lt;InternetAccess&gt;,InternetAccessDevices
+
+[TemplateSettings]
+
+Tmpl.RoboForm.andy=C:\Users\Andy\AppData\Local\RoboForm
+</code></pre></div>
+
+I have excluded the SBIE folder from KTS 2018 under Threats and Exclusions. <br>
+<br>
+I have created a "Chrome" sandbox and forced Chrome to run in the sandbox which it does upon clicking the default desktop shortcut however either KTS Web Anti Virus or Anti Banner, or both, are blocking web pages being displayed and I do not know what exclusion to add and where to add it to facilitate it running directly from the default Google Chrome desktop shortcut.<br>
+<br>
+Strangely, if I add a desktop shortcut via Sandboxie control to the "Chrome" sandbox, I dont get a problem at all and if I right click the Google Chrome desktop shortcut and run sandboxed in the "Chrome" sandbox I dont get a problem at all either<br>
+<br>
+Look forward to help with resolving this matter<br>
+<br>
+Andy</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Browser Issue</h3>
+				<div class="date">Posted: <strong>Sun Mar 11, 2018 8:58 am</strong></div>
+				<div class="author">by <strong>AMD</strong></div>
+				<div class="content">Hi,<br>
+<br>
+This is what I see when I try to run Chrome sandboxed as a forced program</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Browser Issue</h3>
+				<div class="date">Posted: <strong>Mon Mar 12, 2018 10:18 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello AMD,<br>
+<br>
+Other than what's already been shared, we can have a look at your Resource Access Monitor, to see if anything stands out (please do the tests inside a new sandbox with default settings, do not copy from your other Sandbox. The only modification to it should be forcing Chrome to launch there). <br>
+<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+Repro the issue, paste the output.<br>
+Highlight your pasted output and hit the "&lt;/&gt;" button to format it please.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Browser Issue[SOLVED]</h3>
+				<div class="date">Posted: <strong>Mon Mar 12, 2018 12:54 pm</strong></div>
+				<div class="author">by <strong>AMD</strong></div>
+				<div class="content">Barb,<br>
+<br>
+I have just managed to sort it out. I knew it had something to do with KTS and it seemed to be Safe Money so I disabled that in KTS and I can now run a Chrome forced sandbox <br>
+<br>
+Thanks for your help.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25536&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:20 GMT -->
+</html>

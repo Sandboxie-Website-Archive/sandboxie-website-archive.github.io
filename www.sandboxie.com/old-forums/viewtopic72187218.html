@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13609&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:31:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; AdminRights</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>AdminRights</h2>
+		<p><a href="viewtopice7f1e7f1.html?f=17&amp;t=13609">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=13609</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>AdminRights</h3>
+				<div class="date">Posted: <strong>Fri Sep 07, 2012 1:12 am</strong></div>
+				<div class="author">by <strong>TheGreenHorn</strong></div>
+				<div class="content">Hi,<br>
+<br>
+i'm using sandboxie and i have a sandbox with restricted admin rights<br>
+now when i'm trying to install any programm, it requires admin rights (SBIE2217, SBIE2219, SBIE2220)<br>
+<br>
+actually, i don't get what that means and what it does<br>
+<br>
+my user account on windows 8 x64 runs with UAC disabled<br>
+so the sandboxie should have admin rights itself<br>
+but what if i grant admin rights for a programm in a sandbox?<br>
+i don't understand what that menas<br>
+does it mean the programm will break out the box and will have any effect on my computer?<br>
+<br>
+please enlighten me<br>
+thanks in advance</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AdminRights</h3>
+				<div class="date">Posted: <strong>Fri Sep 07, 2012 2:11 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>TheGreenHorn wrote:</cite>Hi,<br>
+<br>
+i'm using sandboxie and i have a sandbox with restricted admin rights<br>
+now when i'm trying to install any programm, it requires admin rights (SBIE2217, SBIE2219, SBIE2220)<br>
+<br>
+actually, i don't get what that means and what it does<br>
+<br>
+<br>
+but what if i grant admin rights for a programm in a sandbox?<br>
+<br>
+does it mean the programm will break out the box and will have any effect on my computer?<br>
+<br>
+please enlighten me<br>
+thanks in advance</div></blockquote>
+To install a program in a sandbox you need to disable Drop Rights.<br>
+<br>
+Programs are not going to break out of the sandbox when you disable Drop Rights.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 07, 2012 7:25 am</strong></div>
+				<div class="author">by <strong>GreenHorn</strong></div>
+				<div class="content">so if programmes with admin rights can't break out<br>
+why can i set drop rights? what is this function for?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 07, 2012 2:15 pm</strong></div>
+				<div class="author">by <strong>oloid</strong></div>
+				<div class="content"><blockquote><div><cite>TheGreenHorn wrote:</cite>my user account on windows 8 x64 runs with UAC disabled<br>
+so the sandboxie should have admin rights itself<br>
+but what if i grant admin rights for a programm in a sandbox?<br>
+i don't understand what that menas</div></blockquote>
+You've disabled UAC yet you don't know what administrator privileges make possible? <a href="https://en.wikipedia.org/wiki/User_Account_Control#Tasks_that_trigger_a_UAC_prompt" class="postlink">Hmm...</a><br>
+<br>
+
+<blockquote><div><cite>GreenHorn wrote:</cite>why can i set drop rights? what is this function for?</div></blockquote>
+<blockquote><div><cite>tzuk wrote:</cite>
+<img src="../www.sandboxie.com/img/NewGui/DropRightsSettings.png" class="postimage" alt="Image"><br>
+<br>
+<strong>The setting in this page causes Sandboxie to strip administrative rights from programs running in this sandbox.</strong><br>
+<br>
+Specifically, the security credentials used to start the sandboxed program will not include membership in the Administrators and Power Users groups.<br>
+<br>
+<strong>Note that this has little effect if you are already running under a non-Administrator user account.</strong></div></blockquote>
+
+<br>
+On one level it's an extra bit of restriction on software running in a sandbox, not allowing installations or system file updates for example, even though such changes would take place in the sandbox you may not want software or users to have that ability. <br>
+<br>
+Notice the settings box says it's similar to the <strong>DropMyRights</strong> utility, you can read about that <a href="http://news.cnet.com/8301-13554_3-9756656-33.html" class="postlink">HERE</a>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 07, 2012 3:52 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">TheGreenHorn, I like this thread about Drop Rights, is a little old but is good read. I go along the thoughts exposed in posts #2, #3 and #4 in page 2. Put special attention to Tzuks post, also on page 2.<br>
+<br>
+<a href="../phpbb/viewtopica239.php?t=4282&amp;postdays=0&amp;postorder=asc&amp;highlight=drop+rights&amp;start=15" class="postlink">http://www.sandboxie.com/phpbb/viewtopi ... s&amp;start=15</a><br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 07, 2012 4:23 pm</strong></div>
+				<div class="author">by <strong>GreenHorn</strong></div>
+				<div class="content">well<br>
+so i just grant every programm admin rights in my sandbox<br>
+whatever a program writes on my hdd, it will be keeped in the sandbox<br>
+and i can delete the sandbox<br>
+so it's no problem for me</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13609&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:31:43 GMT -->
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16100&start=60&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Win class performance, cause (NEW), and a test for all - Page 5</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Win class performance, cause (NEW), and a test for all</h2>
+		<p><a href="viewtopicba5aba5a.html?f=40&amp;t=16100">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=16100</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>5</strong> of <strong>6</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 12, 2013 7:30 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Sorry about length as always... <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+You mean if you don't want to simply use GUI Bench? (After opening up some more windows...) I just tried on the laptop, opening <strong>20</strong> blank IE 6 windows (Ctrl + N) and got about 5 second delay there. (I added <strong>25</strong> more on main system to what was already open to get 16 seconds.) Stuff is slower on main system, with the other stuff running, window objects (outside of Sandboxie I mean). Laptop is as clean as can be.<br>
+<br>
+I gave that example from laptop that I said has no changed settings, no software (besides Firefox), and therefore no Software Compatibility detected/selected.<br>
+<br>
+I mentioned in my much earlier testing months ago that the 2 Software Compatibility items on main system had no effect. I tried everything back when I first found the difference between global and prefix * remember.<br>
+<br>
+Thanks for checking stuff however. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+What function does that "non-useless" stuff serve? Everything worked just fine in 4.02 when ZERO of it ran with OpenWinClass=* Still in restricted Job, everything worked, just need to do the class-prefixing part. BTW, there doesn't seem to be a "reverse" equivalent happening with e.g. DestroyWindow. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"><br>
+<br>
+Can you check/use 4.02? And simply add a couple necessary things back that OpenWinClass=* removes?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 12, 2013 8:13 am</strong></div>
+				<div class="author">by <strong>pastuch</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>What do you mean a session with "more tabs"?  I experimented a bit with Opera 12.16 and the Bookmarks Bar and opening 20-30 tabs and everything kept running smoothly for me.</div></blockquote>
+My average number of open tabs is about 100 with peak to 200.<br>
+Try this sample session, maybe the power of slowdown depends on specific sites also: <a href="https://hotfile.com/dl/239200260/b15b1bc/SampleSession.win.html" class="postlink">https://hotfile.com/dl/239200260/b15b1b ... n.win.html</a><br>
+It should be copied to %USERPROFILE%\AppData\Roaming\Opera\Opera x64\sessions<br>
+
+<blockquote><div><cite>tzuk wrote:</cite>Do you have any Software Compatibilty settings?</div></blockquote>
+Yes, more in real system but in virtual machine as below:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=OfficeLicensing
+FileRootPath=C:\Sandbox\%USER%\%SANDBOX%
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+Template=BlockPorts
+Template=LingerPrograms
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+
+[UserSettings_01234567]
+
+SbieCtrl_UserName=mk
+SbieCtrl_BoxExpandedView=DefaultBox
+SbieCtrl_NextUpdateCheck=1377122583
+SbieCtrl_UpdateCheckNotify=y
+SbieCtrl_ShowWelcome=n
+SbieCtrl_WindowCoords=83,338,648,801
+SbieCtrl_ActiveView=40021
+SbieCtrl_AutoApplySettings=n</code></pre></div>
+Adding OpenWinClass=* helps but using with browser is potentially insecure.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 12, 2013 8:52 am</strong></div>
+				<div class="author">by <strong>barny</strong></div>
+				<div class="content">@DR_LaRRY_PEpPeR - Re. your freeze when switching to offline mode, is the sandbox stored on a FAT formatted partition ?<br>
+<br>
+The reason I ask is that I had similar freezes with firefox (not offline mode though) and it was due to the sandbox being on a FAT32 partition. Switching the sandbox to a , NTFS partition solved my freezes. According to tzuk, the freeze/slowdown was caused because FAT partitions are much slower to enumerate the file system in some circumstances.<br>
+<br>
+Just throwing it out there in case it has any bearing on your issue(s).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 12, 2013 11:12 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><strong>DR_LaRRY_PEpPeR</strong>, I assume you mean to say that after opening 20 windows, you see a five second freeze when you click Work Offline.  Finally something to work with!  I saw a delay of 6-7 seconds after opening 46 IE windows.  I was able to get it down to 2-3 seconds.  Still longer than 0.5-1 second outside the sandbox, but probably the best I can do without reworking "that useless junk" in CreateWindow which assists in the emulation of Win32 hooks in the sandbox.<br>
+<br>
+* * *<br>
+<br>
+<strong>pastuch</strong>, I played a bit with Opera 12.16 x64 with probably around 150 tabs.  I was loading tabs in groups of about 25 new tabs every time.  I was seeing minor impact on scrolling speed while new tabs were loading, but it got fast again when the load finished.  Please note that I just installed Opera and started loading tabs.  Did not do any configuration, addons or anything else to Opera.  Do you also have such a "clean" installation?<br>
+<br>
+For what it's worth, the findings of DR_LaRRY_PEpPeR do not apply here because Opera hosts all content in one window and does not create new window objects.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 12, 2013 1:28 pm</strong></div>
+				<div class="author">by <strong>pastuch</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite><strong>pastuch</strong>, I played a bit with Opera 12.16 x64 with probably around 150 tabs.  I was loading tabs in groups of about 25 new tabs every time.  I was seeing minor impact on scrolling speed while new tabs were loading, but it got fast again when the load finished.  Please note that I just installed Opera and started loading tabs.  Did not do any configuration, addons or anything else to Opera.  Do you also have such a "clean" installation?</div></blockquote>
+In the virtual machine I installed only: the system, all updates, VMware Tools, Opera with default configuration. In the Opera are only two changes - "Show Bookmarks Bar" and the default pages zoom 200%. Then I open the 100-tabs session like that <a href="https://hotfile.com/dl/239200260/b15b1bc/SampleSession.win.html" class="postlink">https://hotfile.com/dl/239200260/b15b1b ... n.win.html</a> . When the Opera is sandboxed in SBIE4.04 the slowdown occurs. All ok when added OpenWinClass=* or with SBIE3.76 <br>
+My new observation that may be relevant: the degree of scroll-slowdown depends on how I start the scroll - if I use keyboard (arrow up/down, pgup/pgdn) or mouse scroll-whell then slowdown is high but when I use a middle mouse button+mouse move or scrollbar with mouse then the slowdown is not big.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 13, 2013 2:08 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content"><strong>barny</strong>: No, I don't have that, although I did just recently find the topic you're referring to from Google (and good to know <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">). Although I do have a FAT32 partition on 2 systems for storing my old version of Ghost's image files, but nothing else should be touching that (only a few files anyway).<br>
+<br>
+<strong>pastuch</strong>: Yeah, like tzuk said, none of this CreateWindow slowdown I've identified is going to affect things that aren't calling CreateWindow, which e.g. scrolling in Opera wouldn't do. Maybe it's like the extreme lag I see in API Monitor, which is caused by something else.<br>
+<br>
+<br>
+<strong>tzuk</strong>: Yeah, that's what I meant. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Interesting to see your changes... I had been saying toggling Work Offline makes 30 CreateWindow calls, but I now see it's actually 30 PER IE window. So of course <em>that</em> explains why Work Offline slows down much more than e.g. single window opening...<br>
+<br>
+<br>
+After my post I thought of another OpenWinClass setting I hardly ever think of -- forget about OpenWinClass=* in 4.02 that I've been referencing. Probably not a huge deal or much different (if what I'm asking about is wrong), but you know what performs the same as 4.02's Open=*? OpenWinClass=<strong>#</strong> <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+Using Open=# the Work Offline delay with 20 IE windows drops from 5 seconds to under 1 second. Also with 4.05.04: Default settings, IE window opening is 0.28s with 1 window (again, stuff is a lot faster on laptop) and 0.55 with 20 windows. With Open=#, it's 0.25 (exactly what I estimated) and 0.26-0.27 with 20 windows (so basically the same).<br>
+<br>
+So yeah, Open=# performs and scales wonderfully! It also skips all that "other stuff." <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> (Again, CreateWindow itself is basically like UNsandboxed.)<br>
+<br>
+The <a href="../index0a26.html?OpenWinClass" class="postlink">page about OpenWinClass=#</a> says it doesn't "alter" (prefix) class names and "may interfere with some drag-and-drop operations." You really can't make things operate/perform like Open=# and just add back class prefixing and drag-and-drop support??<br>
+<br>
+Of course prefixing is not an issue and should be a very, very fast operation.<br>
+<br>
+In other words, are you saying that all that extra stuff per sandboxed window is somehow related to <strong>drag-and-drop support</strong>?? What else doesn't happen/work with Open=#? Which emulation of Win32 hooks? <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"><br>
+<br>
+Obviously I understand if <em>something</em> happens with CreateWindow for the window object being created to support <em>whatever</em> (which shouldn't even be noticeable, so OK). But I don't get why messages to other window handles (but only "top-level" ones, not their children it seems) and repeated identical _wcsicmp/NtDeviceIoControlFile calls...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 13, 2013 3:20 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Please try version 4.05.05.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 13, 2013 10:20 am</strong></div>
+				<div class="author">by <strong>pastuch</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Please try version 4.05.05.</div></blockquote>
+My first impressions during 5 min. test: wow! The Opera works a lot faster now <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+tzuk, thank you very much for the fix.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 13, 2013 4:29 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Great!  I tweaked a couple of things and I wasn't sure what effect that would have so I'm glad to see you notice a real improvement.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 14, 2013 12:00 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Interesting to hear pastuch, but cool. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Sorry I didn't report my feedback sooner -- I was evaluating over 24 hours ago, and didn't have time to reply then...<br>
+<br>
+Well tzuk, THESE changes are pretty remarkable! Another: Wow! <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> Obviously a HUGE <strong>THANK YOU</strong> for sticking with it, finding stuff to tweak, and also your patience with me, haha. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+Amazed that you were able to pull this off in, what, a couple hours the other day after I gave the Work Offline example! It's really puzzling WHAT exactly you changed: I don't see much improvement with my synthetic GUI Bench Create time (but doesn't matter if it doesn't reflect what I'm seeing/feeling <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">), a minor-to-moderate IE window opening slowdown (OK/expected) with more windows open, but YET, not much slowdown with IE <em>launch</em> times even with MANY windows open. Just reporting how each thing changed differently (strange), not a problem.<br>
+<br>
+FYI: NOW, stuff starts out just about as fast as OpenWinClass=<strong>#</strong> (I can't really see a difference at all). Of course the small degradation (much less than before) doesn't keep things as fast as Open=# that I was asking about.<br>
+<br>
+On main XP system, all with my "usual active" stuff open: IE <em>launch</em> before ANY changes (4.05.03) was ~1s, first change dropped to 0.88 (these would both degrade remember), and now it's down to 0.7. Even adding 20+ IE windows to what's already open, it only increases to 0.76-0.8. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> The launch improvement FEELS better than the times, it seems.<br>
+<br>
+I have to add 20-24 IE windows before the "window opening" slows down to what it was in 4.05.04. Even with 30 more open (couldn't open any more!), it's only a hair slower than what it was without the 30 extra in 4.05.04.<br>
+<br>
+With 20 extra open (I'd never have anything like that), there's about a 5s Work Offline delay now (instead of 16, probably 2-3 if UNsandboxed), but otherwise new windows opening, etc. feels pretty good and about what I'd expect. <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"><br>
+<br>
+Same on laptop: Have to open 10 IE windows to see IE "window opening" time like 1 window with 4.05.04. 20 windows to see time like 4.05.03.<br>
+<br>
+32-bit IE 8 on 64-bit Win 7 looks like the same pattern. Hadn't checked it much lately, and the absolute times don't vary as much with nothing on the system or running, but the relative improvements look expected.<br>
+<br>
+<br>
+<br>
+A question about the 0.2s+ difference I see between OpenWinClass of * and # (and defaults now, initially) when launching IE or Firefox, or IE window opening. Obviously the Job adds some access overhead we talked about IN sandbox (250k+ accesses for 0.2s), and more for GuiProxy when needed. Like I said after 4.05.04, I [still] see a CPU spike in both SbieSvc processes. Normal?<br>
+<br>
+Did you check to make SURE there's not <em>other operations</em> still unnecessarily going through GuiProxy like e.g. CreateWindow calls before?? Just so we aren't accidentally losing some easy time there. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 14, 2013 2:53 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks for checking.  I'm glad you're happy with the results and I hope we can put this subject to rest.  For now if not for good.<br>
+<br>
+As for what I did, it's very simple, given specfic scenarios, I looked for calls to SbieSvc and where it made sense and the change was trivial,<br>
+I got rid of those calls.  As for CreateWindow, there was that lengthy part at the end that you identified.  For a hierarcy of CreateWindow calls (e.g. when the parent window is creating its child windows while responding to WM_CREATE), there is no need to do the lenghty part every time, it's enough to do that at the top level.  So your GUI Bench does not show a difference, while some practical scenarios do.<br>
+<br>
+I don't know about OpenWinClass=#.  It should just not put the Sandbox: prefix on window class names and that saves hooking a few APIs related to window class names.  I've not spent much time to make sure it works well in v4.<br>
+<br>
+Alright, let's conclude this one.  Thank you DR_LaRRY_PEpPeR and pastuch for keeping at this thing, sorry I was impatient at times, I hope all's well that ends well.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 20, 2013 12:06 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Another reply, but don't be alarmed! <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> Everything is still going fine. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Yeah OK, what you said makes sense and would explain why I wasn't seeing much change in GUI Bench. Thanks again for your patience with my "Yeah but, <em>this</em>," "Yeah but, <em>that</em>." <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"><br>
+<br>
+Just wanted to give another positive comparison/comment -- comparing with 3.76. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Other than the additional <em>launch</em> delay with the restricted Job (of course can't be improved without eliminating any <em>other</em> SbieSvc/GuiProxy calls (hope no unnecessary ones still!), or some general optimization of the system, etc.), and that other MFC-related (presumably) slowdown, what I have talked about HERE/previously NOW feels like it runs as nice as 3.76! <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"> e.g. The slight additional time on IE window opening and stuff isn't something I can notice during real, practical usage. That's in the "worst" case -- after your latest changes, performance degrades LESS than 3.76, so 4.05.05+ shines more as additional stuff is open. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+<br>
+I didn't see that part about OpenWinClass=# last week...? Anyway, forgot to say before, I think I found a small bug when testing it -- post here or new topic?<br>
+<br>
+What you said about working "well" -- performance wise, like I said, it's the best! And doesn't really degrade with many more windows. With default settings now, things <em>initially</em> perform as well as Open=#<br>
+<br>
+You say it "should just not put the Sandbox: prefix on window class names," but it ALSO does NOT do all that "other stuff" I was asking about. Sounds much different than your basic description of the difference? (I don't expect to see any speed hit from class name prefixing, so no issue there.)<br>
+<br>
+The only thing I can see OpenWinClass=# changes otherwise is drag-and-drop support doesn't work. That's why I asked: 1) Can't you "just add back" class prefixing and drag-and-drop support; or 2) All that "other stuff" is somehow related to <strong>drag-and-drop support</strong>? <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"><br>
+<br>
+As I said, with # CreateWindow itself is basically like UNsandboxed. FYI, PowerArchiver Configuration in my usual active sandbox took just over 3s before any changes; then just over 2; and now 1.5s. With OpenWinClass=# it's about a half-second, like UNsandboxed...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 21, 2013 4:04 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I'm glad you like version 4.05.06.  I see you're asking about OpenWinClass=#.  In my earlier post, I said, or maybe just implied, that OpenWinClass=# has not been fixed and tested for version 4.  I don't think you should use it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 21, 2013 10:00 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">I haven't tried to use it since testing (it's a setting I forget about), although I would if drag-and-drop worked (no, I don't expect it to <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">) since everything seems fine with nearly NO speed loss. (I don't care about class prefixing anyway.) It was just the small bug when using it where Recent Documents no longer works -- OpenWinClass=Progman or $:explorer.exe doesn't work then, though other OpenWinClass stuff is OK.<br>
+<br>
+Otherwise it works as in 3.76 AFAICT, and according to the <a href="../index0a26.html?OpenWinClass" class="postlink">OpenWinClass page</a>. The setting IS still used in the StrokeIt Template, and I just wanted to report it, even though it's not affecting me now. Unless of course it's going to be deprecated/removed... <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+No, after your comment, I was [again] just trying to understand what's happening with or without #? v4 behaves the same as 3.76, and you only mentioned the class prefixing difference (not a factor). So: IS all that "extra stuff" when windows are created JUST to support drag-and-drop?? That's all I was trying to figure out since it's the only difference I notice with any version. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 22, 2013 3:51 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I guess you can say it's a deprecated feature.  Again I recommend that you don't use it because sooner or later you will run into stuff that doesn't work, and that I am not going to fix.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>5</strong> of <strong>6</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16100&start=60&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:05 GMT -->
+</html>

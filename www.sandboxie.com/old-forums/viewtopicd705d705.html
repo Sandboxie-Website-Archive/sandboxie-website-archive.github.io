@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6312&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SandDiff - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SandDiff</h2>
+		<p><a href="viewtopic71117111.html?f=22&amp;t=6312">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=6312</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>4</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Oct 14, 2009 2:24 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">That may be the reason. I will do some research when I have time.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 23, 2009 11:13 am</strong></div>
+				<div class="author">by <strong>kxsq</strong></div>
+				<div class="content">sanddiff1.04 sounds good <br>
+thank u</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 23, 2009 11:14 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">I took a look through Everything's forums and found the reason NETSTAT.EXE is not found in system32.  It is because netstat (and many other system32 files) are actually hardlinks.  You can google the term.  I don't know how this affects opening or running an app via ShellExecute().</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 23, 2009 11:31 am</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">why is netstat neccessary for this program? explain!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 23, 2009 2:24 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Part of the program can monitor ports that an application has open/listening.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 23, 2009 3:53 pm</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">And what is the relationship to the reghive and files in sandbox?<br>
+<br>
+is sanddiff working when the box is active or not active?<br>
+<br>
+its a bit like watching an electron (heisenberg): you cannot determine position and impulse same time <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 23, 2009 5:34 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Brummelchen wrote:</cite>And what is the relationship to the reghive and files in sandbox?<br>
+<br>
+is sanddiff working when the box is active or not active?<br>
+<br>
+its a bit like watching an electron (heisenberg): you cannot determine position and impulse same time <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"></div></blockquote>
+
+Sanddiff works when Sandboxie is not active.<br>
+<br>
+SandDiff compares 2 moments of a given sandbox. Let´s call them "before and "after".<br>
+<br>
+In the "before" moment the sandbox folder can be empty or contain information.<br>
+<br>
+In the "after" moment the sandbox folder must contain information if not it´s pointless.<br>
+<br>
+Between the "before" and the "after" you must run sandboxed whatever you want. <br>
+<br>
+When you are done you terminate all processes and you are ready for comparision.<br>
+<br>
+Sanddiff compares the file, registry and port differences between the "before" and the "after" states of the sandbox.<br>
+<br>
+Relationship to the reghive and files in sandbox? None. It´s just another source of information to compare.<br>
+<br>
+I think it´s pretty simple to understand. Let me know if something is not clear.<br>
+<br>
+The next version of SandDiff will contain a new feature. It will check for malware activity and present results to the user based in the differences.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 24, 2009 1:22 pm</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">i understand your explanation - i can reproduce both ways.<br>
+what i NOT understand is the use of netstat in that combination.<br>
+if there is nothing active what to determine?<br>
+(except looking into registry i dont know a way to determine if <br>
+a sandbox is still active, never though about it till now)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 24, 2009 2:46 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Brummelchen wrote:</cite>i understand your explanation - i can reproduce both ways.<br>
+what i NOT understand is the use of netstat in that combination.<br>
+if there is nothing active what to determine?<br>
+(except looking into registry i dont know a way to determine if <br>
+a sandbox is still active, never though about it till now)</div></blockquote>
+
+Netstat is used to obtain the state of the ports.<br>
+<br>
+Netstat automatically retrieves port information when you press "before".<br>
+<br>
+Optionally you can press "Meanwhile" button and obtain port information before you press "after".<br>
+<br>
+You decide when you press "Meanwhile" or even if you want to press it.<br>
+<br>
+<strong>The user must press "after" when he has finished sandboxed processes</strong>. SandDiff doesn´t determine if a sandbox is still active.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 24, 2009 3:59 pm</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Netstat automatically retrieves port information</div></blockquote>
+and that is the point i dont understand.<br>
+if sanddiff does not care about activity what to determine at open ports and listening apps?<br>
+<br>
+#hmm - just startet sanddif 1.04 - netstat is needed for the "meanwhile" option and open apps?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 24, 2009 5:28 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Brummelchen wrote:</cite>and that is the point i dont understand.<br>
+if sanddiff does not care about activity what to determine at open ports and listening apps?<br>
+<br>
+#hmm - just startet sanddif 1.04 - netstat is needed for the "meanwhile" option and open apps?</div></blockquote>
+
+Who did say SandDiff doesn´t care about port activity?<br>
+<br>
+Yes, netstat is needed for the "meanwhile".</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 27, 2009 5:02 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I have fixed the problem with deleted keys/values.<br>
+<br>
+As soon as tzuk adds the feature I requested I will release a new version.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 27, 2009 4:09 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>wraithdu wrote:</cite>I took a look through Everything's forums and found the reason NETSTAT.EXE is not found in system32.  It is because netstat (and many other system32 files) are actually hardlinks.  You can google the term.  I don't know how this affects opening or running an app via ShellExecute().</div></blockquote>
+
+I have a computer with Windows XP and Windows 7 installed and when I´m running Windows XP I can see NETSTAT.EXE in \Windows\System32 and does not look like a hard link. The file is 32kb long.  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 27, 2009 10:27 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">The hardlink is only in Win7.  Maybe Vista, but I don't have it to test anymore.  And the hardlink will seem exactly the same as the real file - properties, size, appearance, etc. - except the Compatibility settings will be greyed out.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Feature Request: Save Differences in Reg Format</h3>
+				<div class="date">Posted: <strong>Thu Oct 29, 2009 7:14 am</strong></div>
+				<div class="author">by <strong>brahman</strong></div>
+				<div class="content">Hi,<br>
+<br>
+thanks for this great app.<br>
+<br>
+It would be very nice if it could save registry differences automatically in Windows Registry Editor Version 5 format.<br>
+<br>
+Thanks.<br>
+<br>
+B.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>4</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6312&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:59 GMT -->
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25111&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:18:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; sandboxie + firefox 57 = freeze Windows 10</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>sandboxie + firefox 57 = freeze Windows 10</h2>
+		<p><a href="viewtopic72387238.html?f=11&amp;t=25111">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25111</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>sandboxie + firefox 57 = freeze Windows 10</h3>
+				<div class="date">Posted: <strong>Thu Nov 16, 2017 9:52 am</strong></div>
+				<div class="author">by <strong>C3CvUJugtI3eMv</strong></div>
+				<div class="content">Way to recreate issue . <br>
+1) install firefox 57 to system and create sandbox for firefox with autodelete contents <br>
+2) open firefox , browse some pages to collect data inside sandbox . <br>
+3) close firefox <br>
+4) and almost immediately open it again . Look like issue happens if to reopen firefox in moment when it still not finished cleanup. <br>
+<br>
+after it  whole pc freeze at least in my case 10/10 times.<br>
+Pc start at first huge usage HDD <br>
+after a second mouse cursor move by fits and starts<br>
+after 3 - 4 seconds PC not respond at all . And do something with HDD.<br>
+<br>
+Update 1: It is much easy to recreate issue if to start big copy operation in background. I tested during copy from one network drive to antoher network drive.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: sandboxie + firefox 57 = freeze Windows 10</h3>
+				<div class="date">Posted: <strong>Thu Nov 16, 2017 1:17 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello C3CvUJugtI3eMv,<br>
+<br>
+I am unable to repro the issue as described. Can you provide exact repro steps so that I can test them ? <br>
+When you mention copy operations in the background, are those sandboxed? <br>
+Are there any Firefox extensions involved?<br>
+Does it happen with a new Firefox profile? <br>
+Is there any antivirus/security Software installed?<br>
+Does Firefox work fine outside the Sandbox?<br>
+<br>
+Please provide your Sandboxie configuration output so that I can have a look:<br>
+Configure--&gt; Edit configuration--&gt; Copy/paste the contents here<br>
+Highlight the contents and select the "&lt;/&gt;" button to format them.<br>
+<br>
+Using a new Firefox profile and a new Sandbox, please post the output of your Resource Access Monitor as well. <br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: sandboxie + firefox 57 = freeze Windows 10</h3>
+				<div class="date">Posted: <strong>Thu Nov 16, 2017 4:00 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlista752.html?mode=viewprofile&amp;u=29318">C3CvUJugtI3eMv</a> wrote: <a href="viewtopic960f-2960f.html?p=131143#p131143" data-post-id="131143" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Nov 16, 2017 9:52 am</div></cite>
+3) close firefox <br>
+4) and almost immediately open it again . Look like issue happens if to reopen firefox in moment when it still not finished cleanup. 
+</div></blockquote>
+Hi, I cant reproduce your issue but you really want to allow the sandbox to delete or at least programs to be terminated before opening a new instance of a sandboxed program/Firefox that you just closed.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: sandboxie + firefox 57 = freeze Windows 10</h3>
+				<div class="date">Posted: <strong>Mon Nov 20, 2017 9:03 am</strong></div>
+				<div class="author">by <strong>C3CvUJugtI3eMv</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic230f-2230f.html?p=131147#p131147" data-post-id="131147" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Nov 16, 2017 1:17 pm</div></cite>
+Hello C3CvUJugtI3eMv,<br>
+......<br>
+Using a new Firefox profile and a new Sandbox, please post the output of your Resource Access Monitor as well. <br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+1) Firefox without sandbox working fine<br>
+2) Issue happens only with 57 firefox . Previous version works fine<br>
+3) Copy operation not sandboxed . Just to create little bit disk subsystem load.<br>
+4) Standard windows Defender. No 3rd party antivirus or firewall. Only MS.<br>
+it not so easy to do because of freeze whole computer. But i did a photo of resource monitor. <br>
+This is last messages i see before complete freeze and reset button. In attachement .<br>
+(Forum not give me opportunity to upload it). Hm it tell that i uploaded too many files but i checked my profile and see "You have posted no files."<br>
+<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[Firefox]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=Firefox_Profile_DirectAccess
+Template=Firefox_Passwords_DirectAccess
+Template=Firefox_Bookmarks_DirectAccess
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+BorderColor=#00FFFF,ttl
+NeverDelete=n
+AutoDelete=y
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+BoxNameTitle=y
+OpenFilePath=%{374DE290-123F-4565-9164-39C4925E467B}%\
+OpenFilePath=%Personal%\
+OpenPipePath=C:\virtual\
+OpenPipePath=C:\etc\firmwares\
+LeaderProcess=&lt;FirefoxPrograms&gt;
+BlockNetworkFiles=y
+</code></pre></div>
+
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Pipe        \Device\Ndis
+Pipe        \Device\NDMP5
+Pipe     O  \Device\Afd
+Pipe     O  \Device\NetBT_Tcpip_{063A8928-2558-4C1E-96BB-44E3EF96243F}
+Pipe     O  \Device\NetBT_Tcpip_{0B4BC408-DDB4-48C5-A13F-6C5CC8A06C04}
+Pipe     O  \Device\NetBT_Tcpip_{FE171B0B-31ED-4E4D-8421-EC150FBE22CA}
+Pipe     O  \Device\Nsi
+WinCls      -------------------------------
+WinCls   O  OleMainThreadWndClass
+WinCls   O  Shell_TrayWnd
+WinCls   X  ApplicationManager_DesktopShellWindow
+WinCls   X  firefoxMessageWindow
+WinCls   X  IPTip_Main_Window
+WinCls   X  Progman
+</code></pre></div>
+
+And freeze</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: sandboxie + firefox 57 = freeze Windows 10</h3>
+				<div class="date">Posted: <strong>Mon Nov 20, 2017 11:21 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello  C3CvUJugtI3eMv,<br>
+<br>
+Unforutnately, there is not much information listed on your previous response.<br>
+<br>
+From your Sandboxie Configuration file, it seems that you only have 1 sandbox with specific settings added to it.  Please create a new one and see if the issue persists (do not add any settings, use the default ones).<br>
+<br>
+How about a new Firefox profile? <br>
+Are there any Firefox extensions involved?<br>
+Aside from updating Firefox to v57, have there been any other software updates on your computer?<br>
+<br>
+Regarding the attachment, please send it to <a href="mailto:support@sandboxie.com">support@sandboxie.com</a> and I will retrieve it from there, or post it in a file hosting site and put the link on your response.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25111&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:18:14 GMT -->
+</html>

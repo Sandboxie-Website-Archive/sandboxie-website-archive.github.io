@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25543&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Applications attempting to run in the sandbox they were downloaded in?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Applications attempting to run in the sandbox they were downloaded in?</h2>
+		<p><a href="viewtopic4d8f4d8f.html?f=11&amp;t=25543">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25543</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Applications attempting to run in the sandbox they were downloaded in?</h3>
+				<div class="date">Posted: <strong>Fri Mar 09, 2018 4:39 pm</strong></div>
+				<div class="author">by <strong>famadeus</strong></div>
+				<div class="content">Recently I have noticed a bizarre issue where applications that have been downloaded in a sandbox, moved out of that sandbox and then either run in an unsandboxed environment or in a different sandbox altogether will attempt to load in the sandbox they were originally downloaded in, as if they are somehow retaining properties inherited from the sandbox.<br>
+<br>
+This happened once using an emulator called 'Cemu' which also seemed to retain other properties in some manner, ie. once running in a new sandbox (not the one it was downloaded in) it was looking for directories where it was originally extracted, the Desktop for example, instead of the new directory where it was placed. I ignored this as a one off. However this has now happened again using 'madVR', a video renderer. When loading a video the video opened with MPC-HC video player but also loaded the madVR video renderer in a sandboxed environment (the sandbox it was originally downloaded in).<br>
+<br>
+I am struggling to reproduce the exact steps that lead to this issue so I'd like to ask if it's a known issue, unknown issue or just a user error? I hope by asking I can properly reproduce the issue, learn how to avoid it in the future if I'm doing something wrong and file it as a proper bug report if required.<br>
+<br>
+- The sandbox I downloaded the applications in has 'Drop Rights' activated.<br>
+- In both cases the applications were cut from the sandbox and pasted to Desktop and then moved to the required folders.<br>
+- I'm currently using 5.23.3 beta due to the WIndows 7 kernel changes.<br>
+- Windows 7 x64, happened with downloads via Firefox 56 + 58 (Quantum), 7zip being used to extract program archives.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Applications attempting to run in the sandbox they were downloaded in?</h3>
+				<div class="date">Posted: <strong>Fri Mar 09, 2018 5:02 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello famadeus, <br>
+<br>
+Are you running the files in the Sandbox prior to moving them? This sounds similar to this windows path bug:<br>
+<a href="viewtopic9b079b07.html?p=92809#p92809" class="postlink">viewtopic.php?p=92809#p92809</a><br>
+<a href="viewtopicbbe7bbe7.html?f=11&amp;t=21319#p110136" class="postlink">viewtopic.php?f=11&amp;t=21319#p110136</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Applications attempting to run in the sandbox they were downloaded in?</h3>
+				<div class="date">Posted: <strong>Fri Mar 09, 2018 5:14 pm</strong></div>
+				<div class="author">by <strong>famadeus</strong></div>
+				<div class="content">No I'm not running the applications in the original sandbox but I may have originally extracted them from their downloaded zip archive to a folder within the sandbox. <br>
+<br>
+I did attempt to reproduce the issue with madVR by uninstalling, downloading and extracting again in the 'download sandbox' before moving the folder out and reinstalling but I was not successful - it worked without attempting to load in the 'download sandbox'.<br>
+<br>
+This was just to answer your question, reading through the threads you have linked properly right now!<br>
+<br>
+edit - well after a quick read through it looks like I have probably experienced this bug so thank you for those links! At least now I can workaround the issue and I see it is already logged as a low priority bug.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25543&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:22 GMT -->
+</html>

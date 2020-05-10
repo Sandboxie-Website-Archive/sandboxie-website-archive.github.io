@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=23275&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:08:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Autodesk - updated Visual C++ now no programs run in SB</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Autodesk - updated Visual C++ now no programs run in SB</h2>
+		<p><a href="viewtopic6e6c6e6c.html?f=11&amp;t=23275">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=23275</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Autodesk - updated Visual C++ now no programs run in SB</h3>
+				<div class="date">Posted: <strong>Mon Aug 15, 2016 2:54 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">OS Windows 10 v1511<br>
+SB was 5.10 migrated to 5.12<br>
+<br>
+I had to upgraded inventor an Autodesk program today and sandbox stopped working properly. It will not open a windows explorer window, will not populate the sandbox start menu has an error populating. It cannot run a program using run any program and I cannot right click and run anything sandboxed. <br>
+<br>
+I can run programs by browsing into the sandboxed folder and executing the program there but that is all that will run.<br>
+<br>
+I updated to 5.12 (was running 5.10). This did not fix.<br>
+<br>
+I am familiar with Autodesk causing problems with bad Visual C++ installs so I selected each one and chose repair and rebooted but that did not work.<br>
+<br>
+I restored the system to this morning right as the install was starting prior to any of the c++ libraries being updated (it updates 2012, 2013 adds 2015). Sandbox returned to 5.10 and works just as it had last time I used it proving it was this install and no windows updates causing the issue. As the only items that should be "shared" with sandboxie are the libraries something is either conflicting with 2015 or one for the 2 updates 2012,2013.<br>
+<br>
+I would like to either undo my restore or reinstall as I will need this installation of Inventor but where should I start when it comes to fixing sandboxie?<br>
+<br>
+Am I better removing (leaving content of course) and doing a clean install after the update? Is there something somebody could point to?<br>
+<br>
+I tried debugging for dual dll etc. But could not see anything strange.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk - updated Visual C++ now no programs run in SB</h3>
+				<div class="date">Posted: <strong>Mon Aug 15, 2016 5:13 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Installed into the SB directly? Or run as sandboxed from your host? Either way, not something that should be sandboxed. Why would you want to run this sandboxed? Is there a Security risk? etc?<br>
+<br>
+What about other programs to "run as sandboxed"?<br>
+<br>
+Do you have any installed 3rd party security programs? Antivirus? If so, what?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk - updated Visual C++ now no programs run in SB</h3>
+				<div class="date">Posted: <strong>Mon Aug 15, 2016 6:50 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">No Inventor is installed as normal to my host my installation had nothing to do with sandboxie, but sandboxie stopped working. I had used it yesterday, woke my laptop up from sleep, installed the new CAD (not in sandbox) worked for an hour or so then wanted to launch my sandbox it refused, I updated, rebooted still refused, tried all different methods and realized that yet again a visual c++ issue (I have seen other c++ related issues with Autodesk products not related to sandbox programs).<br>
+<br>
+Tried various standard path fixes like copy different dll files to sandbox folder (stop ans start service) none worked.<br>
+<br>
+Restored using windows restore, reboot and sandboxie works just like it did yesterday.<br>
+<br>
+Only differences are the Autodesk products themselves which it will not be they go in their own folders (it installs about 5 to 10 different applications for 3D and 2D, application managers etc). Then the common items the visual c++ libraries are force updated no choice, it uninstalls 2012 and places an updated version, ame with 2013 and then installs 2015 as far as I can tell the existing 2010 and 2011 libraries are untouched.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk - updated Visual C++ now no programs run in SB</h3>
+				<div class="date">Posted: <strong>Tue Aug 16, 2016 12:28 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">I had to undo the restore so I could continue work on my system (non sandboxie related). I also now notice that I have no audio in sanbox run apps which I can only launch by browsing to the relevant c:\sandbox folder. I would guess another failed dll not allowing audio or maybe a failure of the method I had to use to run bit being a correct integration.<br>
+<br>
+Here are the versions of C++ if it helps<br>
+<br>
+MS Visual c++ 2012 x64 11.061030<br>
+MS Visual c++ 2012 x86 11.061030<br>
+MS Visual c++ 2013 x64 12.030501<br>
+MS Visual c++ 2013 x86 12.030501<br>
+MS Visual c++ 2015 x64 14.023506<br>
+MS Visual c++ 2015 x86 14.023506<br>
+<br>
+previous version was just <br>
+<br>
+MS Visual c++ 2012 x64 11.060610<br>
+MS Visual c++ 2012 x86 11.060610<br>
+<br>
+Looking on my Windows 7 machine I see it has both 2012 redistributables installed, I wonder if I can add the old one back and if that is the issue?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk - updated Visual C++ now no programs run in SB</h3>
+				<div class="date">Posted: <strong>Tue Aug 16, 2016 2:01 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Sbie uses MSVC++ 2010 libraries. If you believe those are messed up, just reinstall Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk - updated Visual C++ now no programs run in SB</h3>
+				<div class="date">Posted: <strong>Tue Aug 16, 2016 2:52 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">I tried I added the old 2012, and ran sandboxie I got only 1 step further I was presented a communication error<br>
+<br>
+After a reboot the older 2012 c++ installs no longer showed up in the list (they had right before reboot) maybe win10 cleans up unlike Win7. After reboot sandboxie had also returned to the broken behavior, Open Explorer does nothing eventually just returns sandbox has been running x amount of days message as the process terminates. Run Start Menu results again in the cannot initiate message for every shortcut found.<br>
+<br>
+C++2010 OK I they indicate they were not touched last mod 1/4/2016 but I can try a repair maybe the new ones caused some issue.<br>
+<br>
+current c++ 2010 version 10.040219<br>
+<br>
+Also will try a reinstall I did an update originally but not an install. I have never removed sandboxie can I uninstall without losing my sandbox content?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk - updated Visual C++ now no programs run in SB</h3>
+				<div class="date">Posted: <strong>Tue Aug 16, 2016 3:34 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">C++ 2010 has no repair option and I cannot reinstall as the official source version indicates the installed version is newer.<br>
+<br>
+Ran the sandboxie installer again (did not remove) it installed same issue. I changed view to program name and I can see the first few programs start, then wait then all close.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk - updated Visual C++ now no programs run in SB</h3>
+				<div class="date">Posted: <strong>Tue Aug 16, 2016 4:46 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">Well I have no clue I removed all my c++ after each one I restarted the sandboxie service and tested. I then uninstalled Inventor 2017 and all the extra ancillary programs it adds,material libraries, 360, license etc and after each I tested. Maybe a reboot would also be needed but I could not risk losing my restore point.<br>
+<br>
+I am returning to Monday morning time stamp, taken as Windows was removing 2012++ update 3  and  about to add 2012 update 4 as the first pre-req for the Inventor install. It returns me to a working system not sure what my next step will be <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+The installer must mess up some dynamic links or something in the reg that renders sandbox not functional, I was oping as I have read some of the behavior exhibited that I have read accompanied other issues reported here -  like the %1 not valid app and the failed to initiate issue that it might trigger something.<br>
+<br>
+I may have to install Inventor inside a sandbox to stop it breaking my sandboxie install.<br>
+<br>
+Later this week I will try add the c++ libraries back manually see if sandboxie remains working. A real head scratcher...had to be Win10 causing me the issue I have plenty of Win7 for parallel test including VM's but no spare win10.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk - updated Visual C++ now no programs run in SB</h3>
+				<div class="date">Posted: <strong>Tue Aug 16, 2016 6:18 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Sbie requires these DLL's: msvcr100.dll, mfc100u.dll, msvcp100.dll. You can manually delete these from \windows\system32 &amp; windows\syswow64. Then rerun the Sbie install and it will restore these files.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk - updated Visual C++ now no programs run in SB</h3>
+				<div class="date">Posted: <strong>Tue Aug 16, 2016 8:48 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">Thank you. My plan is wait a few days backup those dll's, make a new snap shot restore point, install each c++ 2012, 2013, 2015 before re-installing Inventor. See if one breaks it and then if it does do something with those dll's you listed, either from the backup or remove and let sb installer add them lie you suggest.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk - updated Visual C++ now no programs run in SB</h3>
+				<div class="date">Posted: <strong>Tue Jan 09, 2018 3:58 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">I never did solve this I had to only use sandboxie on machines that did not have to use Inventor 2017+ something added during the install stops sandbox starting.<br>
+<br>
+I now have a brand new desktop, Windows 10 and have Inventor 2018 installed along with any default C++ etc files it force loads. Today I installed a clean (never before installed) 5.22 sandboxie and the same thing. I also noticed there is no default sandbox on install.<br>
+<br>
+I am reinstalling (I was installed on the D drive to keep my C drive for only Windows main applications and to save space as it is a smaller SSD drive) while updating this post I found another person ran into issues here which seem to be solved:<br>
+<br>
+<a href="viewtopic3b633b63.html?f=11&amp;t=23510" class="postlink">viewtopic.php?f=11&amp;t=23510</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk - updated Visual C++ now no programs run in SB</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2018 10:28 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello caduser,<br>
+<br>
+Did the solution work for you?<br>
+If not, please provide the required information so that I can test it:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk - updated Visual C++ now no programs run in SB</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2018 1:50 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Starting in Beta 5.23.2, Sbie no longer uses the MSVC 2010 run-time DLLs. The MSVC 2015 libraries are statically linked in. So this problem should no longer exist.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=23275&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:08:40 GMT -->
+</html>

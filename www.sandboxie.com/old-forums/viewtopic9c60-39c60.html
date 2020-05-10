@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24618&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:04:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; How can I make screen shots in a sandbox and paste them outside of the sandbox [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>How can I make screen shots in a sandbox and paste them outside of the sandbox [SOLVED]</h2>
+		<p><a href="viewtopic3f043f04.html?f=17&amp;t=24618">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24618</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>How can I make screen shots in a sandbox and paste them outside of the sandbox [SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Jul 05, 2017 3:35 pm</strong></div>
+				<div class="author">by <strong>howiem</strong></div>
+				<div class="content">I was trying to make a tutorial and tried to use the Prtsc/Sysrq key  to make a screen capture, and then tried to paste it into Irfanview and MS Word, but could not paste it (The paste function was grayed out).  <br>
+I know I can do it by running Irfanview or MS Word sandboxed, but is there another (faster) way?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox/</h3>
+				<div class="date">Posted: <strong>Wed Jul 05, 2017 4:04 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello howiemn<br>
+<br>
+I tested the behavior on Windows 10 x64. I launched Firefox inside Sandboxie (tested both normal and full screen), then hit the"PrtSc" key, launched word outside Sandboxie and pasted the screenshot without issues.<br>
+<br>
+Can you provide more information regarding what are you trying to capture?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox/</h3>
+				<div class="date">Posted: <strong>Wed Jul 05, 2017 4:42 pm</strong></div>
+				<div class="author">by <strong>howiem</strong></div>
+				<div class="content">Windows 7 Ultimate 32bit<br>
+Sandboxie version 5.18<br>
+Firefox 53.0.3<br>
+MS Security Essentials<br>
+Antimalware Client Version: 4.10.209.0<br>
+Engine Version: 1.1.13804.0<br>
+Antivirus definition: 1.245.323.0<br>
+Antispyware definition: 1.245.323.0<br>
+Network Inspection System Engine Version: 2.1.12706.0<br>
+Network Inspection System Definition Version: 116.99.0.0<br>
+Malwarebytes anti-ransom (BETA) 0.9.17.0661<br>
+SUPERANTISPYWARE 6.0.1242 (FREE VERSION) DATABASE VERSION 13681 (ON DEMAND)<br>
+WinPatrol PLUS 35.5.2017.8<br>
+<br>
+Hi Barb,<br>
+I was trying to both capture whole screens and certain areas, the latter by using Windows 7 snipping tool. I was also trying to capture dropdown menus in the browser (Firefox 54.0.1)<br>
+If I press PrtSc in a sandboxed browser tab and then try to paste the image into an unsandboxed Irfanview or Word I cannot. I can copy/paste text into an unsandboxed Word and if I copy text and paste it into an unsandboxed Irfanview it appears as an image, but I cannot capture a whole sandboxed window and paste it into an unsandboxed program. I have tried two sandboxes.<br>
+<br>
+As best I can recall it used to work OK, but not now. I've looked in the Sandboxie settings to see if anything relevant is blocked, but do not see Irfanview, bur after I added Irfanview as a forced program, I can use Prtsc no problem. <br>
+If you know what' might be blocking the function, I would like to know, but since I  have a viable work-around, I am satisfied.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox/</h3>
+				<div class="date">Posted: <strong>Wed Jul 05, 2017 5:17 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello howiemn,<br>
+<br>
+I re-tested the behavior on Windows 7x86, I also tested IrfanView. I did not experience any issues pasting the screenshots to either program (Word or Irfanview).<br>
+<br>
+If you want to post your Resource Access Monitor output, I will take a look at it.<br>
+<a href="../index9970.html?ResourceAccessMonitor" class="postlink">https://www.sandboxie.com/index.php?Res ... essMonitor</a><br>
+<br>
+Also, see if a new Sandbox with default settings produces different results. <br>
+You can try disabling your antivirus protection for testing purposes as well. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox/</h3>
+				<div class="date">Posted: <strong>Wed Jul 05, 2017 6:38 pm</strong></div>
+				<div class="author">by <strong>howiem</strong></div>
+				<div class="content">I may have found the culprit - Roboform 8.3.7.7. When I log off Roboform I can use Prtsc and paste into either an unsandboxed or sandboxed Irfanview and Word. <br>
+<br>
+<br>
+<br>
+<br>
+Hi Barb,<br>
+Thanks for the advice. Here are the results of the resource monitor<br>
+Clsid       -------------------------------<br>
+Clsid       {00021401-0000-0000-C000-000000000046} Shortcut<br>
+File/Key    -------------------------------<br>
+Image       -------------------------------<br>
+Ipc         -------------------------------<br>
+Ipc      O  \RPC Control\DNSResolver<br>
+Pipe        -------------------------------<br>
+Pipe     O  \Device\Afd<br>
+WinCls      -------------------------------<br>
+WinCls   X  Afx3145017<br>
+===============================================<br>
+I set up a new sandbox and the Prtsc and paste worked, pasting into both a sandboxed and unsandboxed Irfanview<br>
+I haven't tried cleaning out the sandboxes yet, but all of them have the same add-ons and extensions<br>
+<br>
+I disabled MS Security Essentials, butt that did not change the behavior in the prior sandboxes...paste was still greyed out</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox/</h3>
+				<div class="date">Posted: <strong>Thu Jul 06, 2017 9:49 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello howiem,<br>
+
+<blockquote class="uncited"><div>I set up a new sandbox and the Prtsc and paste worked, pasting into both a sandboxed and unsandboxed Irfanview<br>
+I haven't tried cleaning out the sandboxes yet, but all of them have the same add-ons and extensions </div></blockquote>
+
+Sounds like all you have to do is empty your sandboxes. There might be old files that need to be cleaned up.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox/</h3>
+				<div class="date">Posted: <strong>Thu Jul 06, 2017 5:22 pm</strong></div>
+				<div class="author">by <strong>howiem</strong></div>
+				<div class="content">No luck. Deleted contents of default sandbox, disabled all add-ons, restarted Firefox  but the problem persisted, Logging out of Roboform did not help this time. Did same in another sandbox with same results. <br>
+If I open Irfanview sandboxed, I can do the paste, and after I do the paste in a sandboxed Irfanview, I can copy the image in Irfanview and paste it into an unsandboxed Irfanview or unsandboxed Word. <br>
+Anyway, now that I have work arounds, I can finish my tasks, and if anyone comes up with a solution, I will be interested in reading them.  Thanks for your assistance.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox/</h3>
+				<div class="date">Posted: <strong>Fri Jul 07, 2017 10:00 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi  howiem,<br>
+<br>
+Please post your configuration file so we can see what's the difference between your previous Sandboxes and the new ones (which, you stated before do work, right?) <br>
+<br>
+Open Sandboxie Control --&gt; Configure ---&gt; Edit configuration<br>
+Copy and paste the contents here. <br>
+Use the &lt;/&gt; button to format it.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox/</h3>
+				<div class="date">Posted: <strong>Fri Jul 07, 2017 10:18 am</strong></div>
+				<div class="author">by <strong>howiem</strong></div>
+				<div class="content">I'm not sure how you can see the difference since I didn't post the config file before I opened the new sandbox, but here it is. Wasn't sure how to use the &lt;/&gt; function so I put it at the beginning and the end. For privacy purposes I have redacted some files/folder/sandbox names.<br>
+<br>
+<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=7zipShellEx
+Template=OfficeLicensing
+Template=Microsoft_Security_Essentials
+ActivationPrompt=n
+TemplateReject=RoboForm
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=IExplore_Favorites_RecoverFolder
+Template=IExplore_Force
+Template=Firefox_Bookmarks_DirectAccess
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=G:\DOWNLOADS
+RecoverFolder=F:\[REDACTED]
+RecoverFolder=E:
+RecoverFolder=H:
+RecoverFolder=I:
+RecoverFolder=F:
+RecoverFolder=C:
+RecoverFolder=G:
+RecoverFolder=D:
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Desktop%
+BorderColor=#40FF00,ttl
+Enabled=y
+ForceProcess=i_view32.exe
+ForceProcess=powerpnt.exe
+ForceProcess=firefox.exe
+ForceProcess=&lt;FirefoxPrograms&gt;
+BoxNameTitle=y
+OpenIpcPath=\Windows\SharedSection
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+CopyLimitKb=50398
+WriteFilePath=*$MFT*
+
+[UserSettings_0CF0021B]
+
+SbieCtrl_UserName=ssgfg
+SbieCtrl_NextUpdateCheck=1499736702
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_WindowCoords=295,163,608,450
+SbieCtrl_ActiveView=40021
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_RecoverTarget=F:\[REDACTED]
+SbieCtrl_RecoverTarget=F:\
+SbieCtrl_RecoverTarget=F:\[REDACTED]
+SbieCtrl_RecoverTarget=F:\[REDACTED]
+SbieCtrl_RecoverTarget=F:\[REDACTED]
+SbieCtrl_RecoverTarget=F:\[REDACTED]
+SbieCtrl_RecoverTarget=F:\[REDACTED]
+SbieCtrl_RecoverTarget=F:\[REDACTED]
+SbieCtrl_RecoverTarget=F:\[REDACTED]
+SbieCtrl_RecoverTarget=F:\[REDACTED]
+SbieCtrl_RecoverTarget=F:\[REDACTED]
+SbieCtrl_SaveRecoverTargets=y
+SbieCtrl_ShouldDeleteNotify=n
+SbieCtrl_SettingChangeNotify=n
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_ReloadConfNotify=n
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_BoxExpandedView=[REDACTED],[REDACTED],DefaultBox,[REDACTED],[REDACTED],[REDACTED],[REDACTED],[REDACTED],[REDACTED],[REDACTED],[REDACTED],[REDACTED],[REDACTED],[REDACTED],[REDACTED],[REDACTED],[REDACTED],zzz [b][zzz IS THE NEW SANDBOX][/b]
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=Firefox_Bookmarks_DirectAccess
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=H:
+RecoverFolder=E:
+RecoverFolder=D:
+RecoverFolder=C:
+RecoverFolder=G:
+RecoverFolder=F:
+RecoverFolder=I:
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#8000FF,ttl
+BoxNameTitle=y
+ForceProcess=iexplore.exe
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=G:
+RecoverFolder=F:
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FF80,ttl
+ForceProcess=&lt;FirefoxPrograms&gt;
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+Template=qWave
+RecoverFolder=%Desktop%
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=I:
+RecoverFolder=F:
+RecoverFolder=G:
+BorderColor=#8000FF,ttl
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+Template=qWave
+RecoverFolder=C:
+RecoverFolder=%Desktop%
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=I:
+RecoverFolder=F:
+RecoverFolder=G:
+BorderColor=#8000FF,ttl
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+Template=qWave
+RecoverFolder=%Desktop%
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=I:
+RecoverFolder=F:
+RecoverFolder=G:
+BorderColor=#8000FF,ttl
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+Template=qWave
+RecoverFolder=%Desktop%
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=I:
+RecoverFolder=F:
+RecoverFolder=G:
+BorderColor=#8000FF,ttl
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+Template=qWave
+RecoverFolder=%Desktop%
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=D:
+RecoverFolder=G:
+RecoverFolder=C:
+RecoverFolder=F:
+BorderColor=#00FFFF,ttl
+Enabled=y
+ForceProcess=&lt;FirefoxPrograms&gt;
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=Firefox_Bookmarks_DirectAccess
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=G:
+RecoverFolder=F:
+RecoverFolder=I:
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#8000FF,ttl
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=G:
+RecoverFolder=F:
+RecoverFolder=I:
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#8000FF,ttl
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=G:
+RecoverFolder=F:
+RecoverFolder=I:
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#8000FF,ttl
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=RoboForm
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+Template=qWave
+RecoverFolder=%Desktop%
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=I:
+RecoverFolder=H:
+RecoverFolder=F:
+RecoverFolder=G:
+RecoverFolder=C:
+BorderColor=#00FFFF,ttl
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+BoxNameTitle=y
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=C:\Sandbox\ssgfg\TEST\drive\E
+RecoverFolder=C:\Sandbox
+RecoverFolder=H:
+RecoverFolder=G:
+RecoverFolder=F:
+RecoverFolder=I:
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#8000FF,ttl
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+Template=qWave
+RecoverFolder=%Desktop%
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+BorderColor=#00FF80,ttl
+ForceProcess=tor.exe
+ForceProcess=firefox.exe
+ForceProcess=&lt;FirefoxPrograms&gt;
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+Template=qWave
+RecoverFolder=F:\[REDACTED]
+RecoverFolder=G:
+RecoverFolder=F:
+RecoverFolder=C:
+RecoverFolder=%Desktop%
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+BorderColor=#00FF80,ttl
+ForceProcess=&lt;FirefoxPrograms&gt;
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+Template=qWave
+RecoverFolder=%Desktop%
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=I:
+RecoverFolder=F:
+RecoverFolder=G:
+BorderColor=#8000FF,ttl
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[FACEBOOK]
+
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=F:
+RecoverFolder=C:
+RecoverFolder=G:
+RecoverFolder=D:
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+ForceProcess=&lt;FirefoxPrograms&gt;
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[REDACTED]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=RoboForm
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+Template=qWave
+RecoverFolder=C:
+RecoverFolder=%Desktop%
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=I:
+RecoverFolder=F:
+RecoverFolder=G:
+BorderColor=#8000FF,ttl
+BoxNameTitle=y
+OpenPipePath=\Device\NamedPipe\*{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}
+
+[zzz]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+BoxNameTitle=y
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox/</h3>
+				<div class="date">Posted: <strong>Fri Jul 07, 2017 11:47 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello howiem, <br>
+<br>
+Aside from "OpenIpcPath=\Windows\SharedSection" I do not see anything out of the ordinary in your Sandboxes.  I even added it to a test box and did not see any difference.  You can try commenting that entry and see if that helps.<br>
+<br>
+When you do a snipping capture using snipping tool, do you see the image in the Snipping program? If so, at that point it is on your host, not Sandboxie, so it should paste fine. Otherwise, you may have some issue on your host machine. <br>
+<br>
+Any chance your PrtSc key is being used by a different program as a hot key?  <br>
+Also, instead of using the mouse to paste, can you "ctrl V" to paste the image?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox/</h3>
+				<div class="date">Posted: <strong>Fri Jul 07, 2017 11:55 am</strong></div>
+				<div class="author">by <strong>howiem</strong></div>
+				<div class="content">What is commenting an entry?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox/</h3>
+				<div class="date">Posted: <strong>Fri Jul 07, 2017 12:03 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello howiem,<br>
+<br>
+Add # at the beginning of the entry.<br>
+Or you can just delete it for testing purposes, either is fine.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox/</h3>
+				<div class="date">Posted: <strong>Fri Jul 07, 2017 1:38 pm</strong></div>
+				<div class="author">by <strong>howiem</strong></div>
+				<div class="content">It appears to be fixed now. Many thanks. Commenting that entry seems to have solved the problem. As for the other questions:<br>
+ When you do a snipping capture using snipping tool, do you see the image in the Snipping program? <br>
+         Yes<br>
+Any chance your PrtSc key is being used by a different program as a hot key? <br>
+        Probably not because it worked before to copy and paste within the sandbox<br>
+Also, instead of using the mouse to paste, can you "ctrl V" to paste the image? <br>
+        I have been able to do that right along as long as the paste was within a sandbox</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox [SOLVED]</h3>
+				<div class="date">Posted: <strong>Sun Jul 09, 2017 4:40 am</strong></div>
+				<div class="author">by <strong>howiem</strong></div>
+				<div class="content">Although the pasting problem was resolved, after deleting OpenIpcPath=\Windows\SharedSection, I started getting this errSBIE2101 Object name not found: \Windows\SharedSection, error OpenSection (C0000022) access=00000005 initialized=1<br>
+SBIE2314 Canceling process firefox.exe [1680 / 7]<br>
+SBIE2101 Object name not found: \Windows\SharedSection, error OpenSection (C0000022) access=00000005 initialized=1<br>
+SBIE2314 Canceling process iexplore.exe [5740 / 7]or fairly frequently<br>
+nipping tool<br>
+Firefox does not seem to be affected, but again I cannot paste into an unsandboxed (e.g., MSWORD, IRFANVIEW) program unless I use the snipping program.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How can I make screen shots in a sandbox and paste them outside of the sandbox [SOLVED]</h3>
+				<div class="date">Posted: <strong>Mon Jul 10, 2017 10:55 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello howiem,<br>
+<br>
+There is a mention of a Firefox crash, but then you state Firefox does not seem to be affected. If the error messages do not prevent you from working, you can use the "Hide" option so you will not see them again. Otherwise, please re-add it to Sandboxie to avoid the issue. <br>
+It may triggered by a security application, or toolbar / extension. <br>
+<br>
+Regarding the screenshots,If other Sandboxes work, you may want to try deleting the contents of your offending Sandbox, or just go ahead and create a New Sandbox with your current settings and see if that alleviates the issue.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24618&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:04:34 GMT -->
+</html>

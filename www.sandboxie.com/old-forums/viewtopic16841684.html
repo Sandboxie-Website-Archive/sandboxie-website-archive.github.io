@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25024&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:51:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Unable to update Steam / Delete Sandbox contents</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Unable to update Steam / Delete Sandbox contents</h2>
+		<p><a href="viewtopic4fa54fa5.html?f=17&amp;t=25024">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25024</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Unable to update Steam / Delete Sandbox contents</h3>
+				<div class="date">Posted: <strong>Mon Oct 23, 2017 4:30 pm</strong></div>
+				<div class="author">by <strong>Sickest</strong></div>
+				<div class="content">Referring to this as well: <a href="viewtopic65a365a3.html?f=11&amp;t=24988" class="postlink">viewtopic.php?f=11&amp;t=24988</a><br>
+<br>
+Sandboxie: 5.20<br>
+Windows 10 64 bit<br>
+Steam Client: Oct 17, 2017 (1508273419) API: V017<br>
+No virus scanners, windows defender turned off. UAC disabled<br>
+<br>
+Now this has been an on going problem for the last 7 years i've used sandboxie to run mulitple Steam clients<br>
+When ever there is an update for the steam client. The sandboxie accounts keep looping trying to update steam over and over and never actaully complete the update. I've even deleted the sandbox completely and made a new one with a different name. And it's the same thing. I've reinstalled steam. <br>
+<br>
+How does sandbox actually work in this situation? If the main client is up-to-date. And I've deleted my contents from the sandbox, why does it keep checking for updates???? WHAT THE HECK IS GOING ON HERE?<br>
+<br>
+Shouldn't the new steam instant be from the most up-to-date version of steam? Shouldn't it think its creating a virtual version of the most updated executable of steam.exe. <br>
+<br>
+When the dialog to restart steam pops up. It gives me an option to update steam or close. If you press close....<br>
+<br>
+<img src="../i.imgur.com/GpPmdcN.png" class="postimage" alt="Image"><br>
+<br>
+If you try to install the service I get this error in cmd prompt: <br>
+
+<blockquote class="uncited"><div>Failed to add firewall exception for C:\Program Files (x86)\Steam\steam.exe<br>
+Failed to add firewall exception for C:\Program Files (x86)\Steam\bin\cef\cef.win7\steamwebhelper.exe</div></blockquote>
+
+I've checked my firewall settings.<br>
+<br>
+<img src="../i.imgur.com/6baA2tU.png" class="postimage" alt="Image"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Steam will not run in sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 24, 2017 9:54 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Sickest,<br>
+<br>
+Are you getting the same error reported in the first post? <br>
+Please try the the latest beta:<br>
+<a href="viewtopic73f273f2.html?p=129389#p129389" class="postlink">viewtopic.php?p=129389#p129389</a><br>
+<br>
+Be sure to run Steam as administrator inside Sandboxie. <br>
+<br>
+I do receive the Steam update request when launching another instance, however, it does finish correctly. Sometimes, I get a pop-up regarding the update (after it launches), but if I compare the installed versions, they match (thus, just ignore the popup).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Steam will not run in sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 24, 2017 1:45 pm</strong></div>
+				<div class="author">by <strong>Sickest</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic431a431a.html?p=130808#p130808" data-post-id="130808" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Oct 24, 2017 9:54 am</div></cite>
+Hello Sickest,<br>
+<br>
+Are you getting the same error reported in the first post? <br>
+Please try the the latest beta:<br>
+<a href="viewtopic73f273f2.html?p=129389#p129389" class="postlink">viewtopic.php?p=129389#p129389</a><br>
+<br>
+<strong>Be sure to run Steam as administrator inside Sandboxie. </strong><br>
+<br>
+I do receive the Steam update request when launching another instance, however, it does finish correctly. Sometimes, I get a pop-up regarding the update (after it launches), but if I compare the installed versions, they match (thus, just ignore the popup).<br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+How do you do that? I have a batch file that starts my other steam accounts. <br>
+<br>
+example.bat<br>
+start C:\"Program Files"\Sandboxie\Start.exe /box:abc123 "D:\Games\steam.bat" And that bat file<br>
+"C:\Program Files (x86)\steam\steam.exe" -login username password<br>
+<br>
+Can you enable admin mode through one the batches?<br>
+<br>
+Lastly, yes! you are 100% correct, I compare the steam versions on all the accounts, and they are indeed the same with the original software. Which is even more puzzling to me. <br>
+<br>
+So far, I tried to reinstall steam, reinstall sandboxie. I've deleted the sandboxie accounts, renamed them etc. And nothing fixed the issue. <br>
+I've also noticed sort of a bug in the sandboxie software. <br>
+<br>
+IF you, tell sandboxie to delete contents of a sandbox, it doesn't really delete the contents. <br>
+<br>
+For example after I delete the contents of the sandbox, uninstalled sandboxie with the option to not save preferences. I reinstalled the software and crated the same sandbox as before with the same name... and try to open a web browser it has the same saved passwords and cache from before. <br>
+This has to be a huge glitch.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Steam will not run in sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 24, 2017 1:56 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Sickest,<br>
+<br>
+It looks like your post is not related to the original one, so I am going to move this to Quick Questions.<br>
+<br>
+Regarding your questions:
+<blockquote class="uncited"><div>Can you enable admin mode through one the batches?</div></blockquote>
+Please see <a href="../StartCommandLine.html" class="postlink">https://www.sandboxie.com/StartCommandLine</a> and look for elevate.<br>
+
+<blockquote class="uncited"><div>If you, tell sandboxie to delete contents of a sandbox, it doesn't really delete the contents. </div></blockquote>
+Right-click on your Sandbox ---&gt; Delete contents. <br>
+If that doesn't work, please disable any Security Software and re-try the process.<br>
+If you want to manually delete your Sandboxes via Windows explorer, they are typically located under C:\Sandbox .<br>
+
+<blockquote class="uncited"><div>For example after I delete the contents of the sandbox, uninstalled sandboxie with the option to not save preferences. I reinstalled the software and crated the same sandbox as before with the same name... and try to open a web browser it has the same saved passwords and cache from before. <br>
+This has to be a huge glitch.</div></blockquote>
+If you didn't delete the contents of your Sandbox, and only uninstalled/reinstalled it, the contents inside the Sandbox will remain the same.<br>
+Also, for the cache portion:<br>
+Is the cache outside Sandboxie clear?If not, Sandboxie will pick it up from your host browsers.<br>
+Another option is that you are logging in to your browser, in which case is your account passing your settings. <br>
+Please see this thread for more information:<br>
+<a href="viewtopic3421-23421.html?p=74194#p74194" class="postlink">viewtopic.php?p=74194#p74194</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Steam will not run in sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 24, 2017 2:13 pm</strong></div>
+				<div class="author">by <strong>Sickest</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopicbc0dbc0d.html?p=130813#p130813" data-post-id="130813" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Oct 24, 2017 1:56 pm</div></cite>
+Hello Sickest,<br>
+<br>
+It looks like your post is not related to the original one, so I am going to move this to Quick Questions.<br>
+<br>
+Regarding your questions:
+<blockquote class="uncited"><div>Can you enable admin mode through one the batches?</div></blockquote>
+Please see <a href="../StartCommandLine.html" class="postlink">https://www.sandboxie.com/StartCommandLine</a> and look for elevate.<br>
+
+<blockquote class="uncited"><div>If you, tell sandboxie to delete contents of a sandbox, it doesn't really delete the contents. </div></blockquote>
+Right-click on your Sandbox ---&gt; Delete contents. <br>
+If that doesn't work, please disable any Security Software and re-try the process.<br>
+If you want to manually delete your Sandboxes via Windows explorer, they are typically located under C:\Sandbox .<br>
+
+<blockquote class="uncited"><div>For example after I delete the contents of the sandbox, uninstalled sandboxie with the option to not save preferences. I reinstalled the software and crated the same sandbox as before with the same name... and try to open a web browser it has the same saved passwords and cache from before. <br>
+This has to be a huge glitch.</div></blockquote>
+If you didn't delete the contents of your Sandbox, and only uninstalled/reinstalled it, the contents inside the Sandbox will remain the same.<br>
+Also, for the cache portion:<br>
+Is the cache outside Sandboxie clear?If not, Sandboxie will pick it up from your host browsers.<br>
+Another option is that you are logging in to your browser, in which case is your account passing your settings. <br>
+Please see this thread for more information:<br>
+<a href="viewtopic3421-23421.html?p=74194#p74194" class="postlink">viewtopic.php?p=74194#p74194</a><br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+"Right-click on your Sandbox ---&gt; Delete contents."<br>
+<br>
+I did, many many many times. The problem is, it doesn't actually delete the contents. Before I reinstalled sandboxie, I also delete the contents. As stated before I don't have any security software running, and windows defender disabled. <br>
+<br>
+"Sandboxie will pick it up from your host browsers."<br>
+My host broswer is vanilla, aka firefox. I never use it. My main and only broswer is chrome. I only use firefox via sandboxie for my steam sandbox instances. So that's not possible.<br>
+
+<blockquote class="uncited"><div>"Browser cache files are not written outside of the sandbox by default, unless you use some Sandbox Setting that allows it."</div></blockquote>
+I read the last link, And I've changed zero settings for the web browser behavior via sandbox settings. I understand how this process works, i've used sandboxie for many many many years. The issue is, ITS NOT DELETING THE CONTENTS. I don't know why. <br>
+When you delete the contents of a sandboxie, everything should get wiped and it should act as if it's a completely vanilla version of the software it's mirroring. But in the situation for steam, that clearly isn't the case since it keeps attempting to install updates. That makes no sense.<br>
+<br>
+And i've tried to delete the contents of sandbox via c:\sandbox It's the same thing. No dice.<br>
+<br>
+
+<blockquote class="uncited"><div>The parameter /elevate can be used to run a program with Administartor privileges on a system where User Account Control (UAC) is enabled. For example:<br>
+<br>
+  "C:\Program Files\Sandboxie\Start.exe"  /elevate cmd.exe	</div></blockquote>
+
+I have UAC disabled. Does that mean everything automatically runs as administrator mode? This says that /elevate works on systems WHERE UAC is enabled. What if it's disabled?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Unable to update Steam / Delete Sandbox contents</h3>
+				<div class="date">Posted: <strong>Tue Oct 24, 2017 3:47 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Sickest,<br>
+
+<blockquote class="uncited"><div>The problem is, it doesn't actually delete the contents</div></blockquote>
+So, if you navigate to your Sandbox location, are there contents inside each Sandbox? Try manually deleting them as suggested before, which will remove them directly via Windows Explorer. <br>
+You can test creating a new file inside the Sandbox, do not recover it, then delete the contents and navigate to the folder location to see if the file is still there or not. <br>
+<br>
+If after that you are still seeing cached passwords, then you are either logged in to the browser, or they are cached in your host computer (or perhaps you are using an extension?).   Are you using the latest Sandboxie beta? <br>
+Also, make sure you do not have any templates activated for your Web Browsers.  If you post your Sandboxie configuration file, I will have a look --&gt; Configure --&gt; Edit Configuration<br>
+Paste the output here<br>
+Highlight the output and hit the "&lt;/&gt;" button in the forum so it is formatted.<br>
+<br>
+Regarding Steam, that's not related to deleting contents, it is some sort of issue with Steam itself and Sandboxie. And, as explained, running it as Administrator is required for it to work. You can try the command I provided or you can right-click on Steam and use the Compatibility settings to run it as Administrator, see if that works for your setup. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25024&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:51:42 GMT -->
+</html>

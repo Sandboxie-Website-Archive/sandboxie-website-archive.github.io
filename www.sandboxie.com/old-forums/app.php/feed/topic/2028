@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/2028" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-03-17T22:35:41-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/2028</id>
+
+		<entry>
+		<author><name><![CDATA[JerLoe]]></name></author>
+		<updated>2013-03-17T22:35:41-04:00</updated>
+
+		<published>2013-03-17T22:35:41-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=88100#p88100</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=88100#p88100"/>
+		<title type="html"><![CDATA[SandboxToys, a toolbox for Sandboxie: now v07.11.04.09]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=88100#p88100"><![CDATA[
+Well, please accept my apologies. I was finally able to fish thru all the adware on the site and downloaders and got the real McCoy. BTW, it's great. Sorry again, long day.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=14411">JerLoe</a> — Sun Mar 17, 2013 10:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[JerLoe]]></name></author>
+		<updated>2013-03-16T22:34:40-04:00</updated>
+
+		<published>2013-03-16T22:34:40-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=88064#p88064</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=88064#p88064"/>
+		<title type="html"><![CDATA[SandboxToys, a toolbox for Sandboxie: now v07.11.04.09]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=88064#p88064"><![CDATA[
+Boy, I have Sandboxie so I wouldn't have to contend with all the adware and interjections brought on by trying to download SandboxToys2. If you have a clean site I'd be happy to try it. Not with all the garbage that they're trying to get me to sign up to. No thanks to that.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=14411">JerLoe</a> — Sat Mar 16, 2013 10:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[r0lZ]]></name></author>
+		<updated>2010-10-06T05:25:13-04:00</updated>
+
+		<published>2010-10-06T05:25:13-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=59184#p59184</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=59184#p59184"/>
+		<title type="html"><![CDATA[SandboxToys2 for Win7 and Vista (x86 or x64)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=59184#p59184"><![CDATA[
+OK, I've finally really used SandboxToys under my Win7 x64 system, and I have been very disappointed because it doesn't work well, mainly because Win7 and Vista are now very picky with the file locations and access rights.  So, I have decided to write a new version from scratch: <strong>SandboxToys2</strong>.<br><br>Please note that SandboxToys2 is designed to run <strong>ONLY under Win7 and Vista (x86 or x64)</strong>.  It cannot be run under XP, 2000 or Win9x.  Under earlier platforms, you should use the old version.<br><br>It's not at all the same program than SandboxToys one.  Although there are similarities, I haven't implemented all features present in v1, as most of them have been officially implemented in Sandboxie itself.  (BTW, thanks Tzuk!)<br><br>Also, the programming language is not Tcl/Tk like in v1, but Autohotkey.  As a consequence, the executable file is much more lite, and some things that were impossible to do with Tcl/Tk (such as icons in the menu) are now possible and implemented.<br><br>SandboxToys2 is mainly a popup menu.  When you click it, it opens a popup menu where you can see the content of the Start Menu, Desktop and QuickLaunch of your sandboxes.  Just select any menu entry to launch the exe or document in the sandbox.  Unlike the regular Sandboxie Start Menu, only the shortcuts that have been installed in the box are visible in the menu.  That means that something must have been installed in the sandbox, and some shortcuts created in the Start Menu, Desktop or QuickLaunch folders, or these menus will not be available.<br><br>There are also several other tools.  You can use SandboxToys2 to create a sandboxed shortcut to any file (residing in the sandbox or not) on your (real) desktop, to launch it easily.  You can also launch the Windows Explorer, the Registry Editor or the Command Prompt, sandboxed or not, to explore or inspect the content of the box.  Additionally, SandboxToys2 has also handy functions to show the content of the box in a listview window, from where you can batch-export any file or create shortcuts to them.  A similar function allows you to see the content of the registry of the sandbox, and export any keys or values to a REG file that you can use to import the values in your real registry.  Finally, there are simple functions to watch the file system and registry changes in any box, and again you can export the modified or created items to your real system.<br><br>I'm too lazy to insert the manual here, but it is included in the archive.<br><br>Download:  <a href="http://www.4shared.com/file/ZOP5GGsc/SandboxToys2.html" class="postlink">http://www.4shared.com/file/ZOP5GGsc/SandboxToys2.html</a><br><br>The source code is included.<br><br>Have fun!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=937">r0lZ</a> — Wed Oct 06, 2010 5:25 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[r0lZ]]></name></author>
+		<updated>2009-11-29T10:02:54-04:00</updated>
+
+		<published>2009-11-29T10:02:54-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=44502#p44502</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=44502#p44502"/>
+		<title type="html"><![CDATA[IMPORTANT note on installing SandboxToys under Win7 or Vista]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=44502#p44502"><![CDATA[
+As I've just installed Sandboxie and SandboxToys under Windows 7 for the first time, I've noticed a little problem.  The first post of this thread explains that you have to copy SandboxToys.exe to your Sandboxie installation folder and double-click it to complete the installation.  Unfortunately, that doesn't work fine under Vista and Win7, as it doesn't have the rights to create the shortcuts in the Start Menu.  So, instead of just double-clicking it, you have to right-click it and run it as administrator.  Same thing when you try to uninstall it.  (The first post has been modified accordingly.)<br><br>I have also fixed the main download link in the first post, as my homepage has changed.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=937">r0lZ</a> — Sun Nov 29, 2009 9:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[r0lZ]]></name></author>
+		<updated>2009-11-29T09:54:32-04:00</updated>
+
+		<published>2009-11-29T09:54:32-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=44501#p44501</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=44501#p44501"/>
+		<title type="html"><![CDATA[SandboxToys, a toolbox for Sandboxie: now v07.11.04.09]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=44501#p44501"><![CDATA[
+Sorry, ahmahmahm, as I've written above, I visit rarely this forum and I don't receive the email notifications, so I've missed your reply during several months!<br><br>As far as I know, SandboxToys works fine with the current version of Sandboxie.  I've just installed Sandboxie v3.40 and SandboxToys 07.11.04.09 under my new Windows 7, and both work fine.<br><br>The first error message you got might be caused by the fact that something is running in your sandbox doesn't mean that there is something in the Start Menu of the sandbox.  Usually, to have something in the Start Menu, you have to <strong>install</strong> a program in the box, not just run it from outside.  However, if at least one sandbox is not empty, the SandboxToys Start Menu should not refuse to work, as it should at least display its standard menu (with the Tools and Explore sub menus.)<br><br>I have no idea of the cause of the second problem.<br><br>I hope you've sorted out the problem, but if it's still not the case, you should try to repair or uninstall and reinstall SandboxToys.  Also, SandboxToys needs to find where your sandboxes are located, and for that reason, it needs to load the Sandboxie configuration file.  Since it is possible to place it in several different directories, SandboxToys may become confused if you have kept several configuration files in different locations.  Be sure to keep only the configuration file you use really.  Also, verify if SandboxToys has the right to load it!  (This might be a problem in Vista or Win7.)<br><br>Hope this helps!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=937">r0lZ</a> — Sun Nov 29, 2009 8:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ahmahmahm]]></name></author>
+		<updated>2009-05-12T10:29:29-04:00</updated>
+
+		<published>2009-05-12T10:29:29-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=36660#p36660</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=36660#p36660"/>
+		<title type="html"><![CDATA[SandboxToys, a toolbox for Sandboxie: now v07.11.04.09]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=36660#p36660"><![CDATA[
+Hi r0lZ.  Just wondered if SandboxToys works with the current Sandboxie (3.36.04).  If I have the default sandbox running something, and I fire up the SandboxToys Start Menu, I get a dialogue box telling me:<br><br>---------------------------<br>SandboxToys<br>---------------------------<br>There are no programs to run in the Start Menus and QuickLaunch of your Sandboxes.<br>You have to install programs in the sandboxes to use the SandboxToys Start Menu.<br>---------------------------<br>OK   <br>---------------------------<br><br>If I try the 'Delete Temp and Fake Files and Folders' option from Start Menu group, I get:<br><br>---------------------------<br>SandboxToys - Cleanup<br>---------------------------<br>All Sandboxes are empty.<br>Nothing to clean!<br>---------------------------<br>OK   <br>---------------------------<br><br>Is this normal?<br><br>thanks, Andy<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2608">ahmahmahm</a> — Tue May 12, 2009 10:29 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[r0lZ]]></name></author>
+		<updated>2007-11-04T04:16:46-04:00</updated>
+
+		<published>2007-11-04T04:16:46-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=14694#p14694</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=14694#p14694"/>
+		<title type="html"><![CDATA[v 07.11.04.09]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=14694#p14694"><![CDATA[
+New in v 07.11.04.09:<ul><li> Adapted to the newest version of Sandboxie.  A modification was necessary because Control.exe has been renamed to SbieCtrl.exe.</li><li> Skips now the [UserSettings_*] entry in Sandboxie.ini.<br>Previously, this entry was wrongly considered as a regular sandbox, and appeared (although disabled) in the SandboxToys popup menus.</li></ul>This version of SandboxToys should still work fine with the latest official Sandboxie release (currently v3.02).<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=937">r0lZ</a> — Sun Nov 04, 2007 3:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[r0lZ]]></name></author>
+		<updated>2007-11-03T08:07:00-04:00</updated>
+
+		<published>2007-11-03T08:07:00-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=14652#p14652</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=14652#p14652"/>
+		<title type="html"><![CDATA[SandboxToys v07.11.03.13 released!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=14652#p14652"><![CDATA[
+New in v07.11.03.13:<ul><li> Since Start.exe doesn't take into account the working directory of the icon anyway, "Create Sandboxed Shortcut" has now a simplified GUI that asks for the target box only via the standard popup menu.<br>The working directory is now always the same as the input (unsandboxed) file, and the icon parameter is now retrieved from the SandboxToys config file.<br>The manual has been updated accordingly.</li><li> The function to delete the Fake Files and Folders in any or all sandboxes now deletes also the temporary files and folders from the TEMP folders (the sandboxed directories equivalent to the unsandboxed directories pointed to by the TEMP and TMP environment variables.)</li></ul>As usual, use the download links in the <a href="http://www.sandboxie.com/phpbb/viewtopic.php?p=11548#11548" class="postlink">first post of this thread</a>.<br><br>Enjoy!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=937">r0lZ</a> — Sat Nov 03, 2007 8:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[r0lZ]]></name></author>
+		<updated>2007-09-24T10:43:02-04:00</updated>
+
+		<published>2007-09-24T10:43:02-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=13017#p13017</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=13017#p13017"/>
+		<title type="html"><![CDATA[SandboxToys version 07.09.24.16]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=13017#p13017"><![CDATA[
+New in SandboxToys version 07.09.24.16:<ul><li> Added "Add or Remove Programs" control panel in the main menu.  (See the <a href="http://www.sandboxie.com/phpbb/viewtopic.php?p=11549#11549" class="postlink">SandboxToys Manual</a> in this thread.)</li><li> Added the new "__ask__" option in the shortcut creator dialog. (Requires <a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=1843" class="postlink">Sandboxie v3.01.21</a> or greater.)</li><li> The boxes are now sorted in alphabetical order in all SandboxToys menus.</li><li> The popup menus can now be closed without taking any action by clicking elsewhere.  Previously, it was necessary to click on Cancel.</li></ul>As usual, download SandboxToys from the <a href="http://www.sandboxie.com/phpbb/viewtopic.php?p=11548#11548" class="postlink">first post of this thread</a>.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=937">r0lZ</a> — Mon Sep 24, 2007 10:43 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[r0lZ]]></name></author>
+		<updated>2007-09-24T10:38:17-04:00</updated>
+
+		<published>2007-09-24T10:38:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=13016#p13016</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=13016#p13016"/>
+		<title type="html"><![CDATA[SandboxToys, a toolbox for Sandboxie: now v07.11.04.09]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=13016#p13016"><![CDATA[
+Thanks, but my addon doesn't help to protect your computer.  It's the job of Sandboxie.  SandboxToys helps to launch sandboxed programs and to maintain your sandboxes.  Nothing else.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=937">r0lZ</a> — Mon Sep 24, 2007 10:38 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Unknown_User_979]]></name></author>
+		<updated>2007-09-23T07:33:25-04:00</updated>
+
+		<published>2007-09-23T07:33:25-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12954#p12954</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12954#p12954"/>
+		<title type="html"><![CDATA[SandboxToys, a toolbox for Sandboxie: now v07.11.04.09]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12954#p12954"><![CDATA[
+Love this addon hope it helps even more for my computers security.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=979">Unknown_User_979</a> — Sun Sep 23, 2007 7:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[r0lZ]]></name></author>
+		<updated>2007-09-23T06:46:10-04:00</updated>
+
+		<published>2007-09-23T06:46:10-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12952#p12952</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12952#p12952"/>
+		<title type="html"><![CDATA[SandboxToys, a toolbox for Sandboxie: now v07.11.04.09]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12952#p12952"><![CDATA[
+Sorry if I haven't replied before.  I do not receive the notifications of this forum by e-mail any more.  I don't know why!?<br><br>I don't like the idea of moving the file instead of copying it.  IMO, it is dangerous to delete it from its original location, at least without a confirmation of the user, especially when you send a system file to a sandbox.  <br>Anyway, when you use the Send To menu, the file is just under the mouse pointer, already selected.  It is easy enough to delete it manually.<br>I agree that moving the file might be faster, but only for large files, and when the source and destination folders are in the same hard disc partition.<br><br>Anyway, thanks for the suggestion, and for your appreciation!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=937">r0lZ</a> — Sun Sep 23, 2007 6:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2007-09-19T07:46:26-04:00</updated>
+
+		<published>2007-09-19T07:46:26-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12549#p12549</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12549#p12549"/>
+		<title type="html"><![CDATA[Re: Version 07.09.14.10]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12549#p12549"><![CDATA[
+<blockquote><div><cite>r0lZ wrote:</cite>New version 07.09.14.10, with some important changes and additions.<ul><li> Added a shortcut in your "SendTo" folder to enable the context menu option "Send To -&gt; Any Sandbox".<br>This function can be used to copy any file or folder to its corresponding location in any sandbox.</li></ul></div></blockquote>I think "move" would be better and more logical. There is no reason to let  file on the original location. And move would be faster than copy.<br><br>Your extension is really great,  "Main SandboxToys Start Menu" is the most used function in my Sandboxie. Without SandboxToys Sandboxie would be very uncomfortable.<p>Statistics: Posted by Guest — Wed Sep 19, 2007 7:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[r0lZ]]></name></author>
+		<updated>2007-09-18T04:51:34-04:00</updated>
+
+		<published>2007-09-18T04:51:34-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12440#p12440</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12440#p12440"/>
+		<title type="html"><![CDATA[SandboxToys, a toolbox for Sandboxie: now v07.11.04.09]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12440#p12440"><![CDATA[
+The world is so small, dear PgcEdit user!  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=937">r0lZ</a> — Tue Sep 18, 2007 4:51 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[wraithdu]]></name></author>
+		<updated>2007-09-17T11:30:05-04:00</updated>
+
+		<published>2007-09-17T11:30:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12395#p12395</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12395#p12395"/>
+		<title type="html"><![CDATA[SandboxToys, a toolbox for Sandboxie: now v07.11.04.09]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=2028&amp;p=12395#p12395"><![CDATA[
+Holy crap!!  I never put the two together!  I love PgcEdit.  Although I don't use it that ofter or for anything really complex, it's never let me down when I needed it.  No wonder you're addon is so feature rich.  LOL Keep up the good work!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=846">wraithdu</a> — Mon Sep 17, 2007 11:30 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=3606&start=45&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:57:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SandboxDiff - Registry/Files changes - Page 4</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SandboxDiff - Registry/Files changes</h2>
+		<p><a href="viewtopicdbb3dbb3.html?f=22&amp;t=3606">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=3606</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>4</strong> of <strong>8</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 23, 2009 11:44 pm</strong></div>
+				<div class="author">by <strong>gyp</strong></div>
+				<div class="content">I am pretty sure I am using Sandboxie portable.<br>
+<br>
+I say 'pretty sure' because it works as well as installed.  But on my old pc I had a folder of my username under c:\sandbox and I think with portable I only have a DefaultBox folder there.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: comp-reg error</h3>
+				<div class="date">Posted: <strong>Mon May 25, 2009 3:27 pm</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content"><blockquote><div><cite>gyp wrote:</cite>In comp-reg.txt I am getting<br>
+<br>
+1d0<br>
+&lt; hive path err<br>
+\ No newline at end of file<br>
+<br>
+Otherwise seems to be functioning very easy</div></blockquote>
+"hive path err" is related to "RegHive" file that wasn't able to be load by SandboxDiff. There are several reasons for, that you can check:<br>
+<br>
+. When starting the sandbox folder is empty; so "RegHive" file didn't exist to be analyzed. You need to do a dummy action to create it: e.g. open Notepad.exe sandboxed and close it. Start SandboxDiff after.<br>
+<br>
+. "RegHive" file was in use perhaps. You need to terminate all app. that are sandboxed firstly (when is asked by SandboxDiff).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon May 25, 2009 5:47 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Neither of those cases are true.  It is reproducible.  I looked, on initiation of sandboxdiff.exe Files_before reads everything in my c:\sandbox dir, but Reg_before also declares hive path err.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon May 25, 2009 6:01 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">I really don't know what I'm talking about here but I was able to see when the hive.bak files were being created I could peek in one that said HKEY_USERS hive or something...my reghive created when looked at in wrr starts with \Sandbox_&lt;MyUserName_DefaultBox.<br>
+<br>
+Anyway, if I run sandboxdiff before, during, or after a sandboxed app, it is not finding any reghive file which is at C:\Sandbox\DefaultBox</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon May 25, 2009 10:45 pm</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content"><blockquote><div><cite>Anonymous wrote:</cite>but Reg_before also declares hive path err.</div></blockquote>
+When you have "hive path err" SandboxDiff was unable to load "RegHive" file for some reason.<br>
+BTW, do you have "UserPath.bat" customized?<br>
+
+<blockquote><div><cite>Anonymous wrote:</cite>Anyway, if I run sandboxdiff before, during, or after a sandboxed app, it is not finding any reghive file which is at C:\Sandbox\DefaultBox</div></blockquote>
+Can you describe in detail the steps that you do when install an app. sandboxed with SandboxDiff? I think that can allow a clarification.<br>
+
+<blockquote><div><cite>Anonymous wrote:</cite>I was able to see when the hive.bak files were being created I could peek in one that said HKEY_USERS hive or something...my reghive created when looked at in wrr starts with \Sandbox_&lt;MyUserName_DefaultBox.</div></blockquote>
+No annoyance here. I can explain better further along (it's a form issue not a content question).   <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"><br>
+<br>
+BTW, WRR shows the registry status; SandboxDiff performs the registry changes between two status.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 26, 2009 3:03 pm</strong></div>
+				<div class="author">by <strong>gyp</strong></div>
+				<div class="content">Well I have tried many different orders of operations now, including messing with the path declaration, but no avail.<br>
+<br>
+My user path<br>
+C:\Sandbox\DefaultBox<br>
+<br>
+My userpath line<br>
+copy "C:\Sandbox\DefaultBox\RegHive" hive_1.bak /v /y &gt; NUL<br>
+<br>
+1. Sandbox "delete contents"<br>
+2. SandboxDiff.exe (re-read instructions see if i'm missing something)<br>
+3. Press OK<br>
+(3.a.) Maybe look at Reg_before and see hive path err, continue anyway<br>
+4. Pick an app, right click, "run sandboxed"<br>
+5. Right click Sandboxie Control, pick "Terminate all programs"<br>
+6. SandboxDiff press "OK"<br>
+<br>
+1d0<br>
+&lt; hive path err<br>
+\ No newline at end of file<br>
+<br>
+Same results if a RegHive exists or folder is empty.<br>
+<br>
+But also like I said my hive file key starts with Sandbox_Username_DefaultBox even though I have not set it to use a username<br>
+My Sandboxie config is %SystemDrive%\Sandbox\%SANDBOX%<br>
+<br>
+<br>
+I do not see a regdump.exe anywhere on my system.  I have an nlited XP install.<br>
+<br>
+Thank you so much if you can explain</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 26, 2009 4:46 pm</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content">Please try follows the sequence (notes in red):<br>
+<br>
+- The "UserPath.bat" file (don't forget to rename "UserPath.bat.txt" to "UserPath.<strong>bat</strong>") needs to be in same folder that "SandboxDiff.exe". With your customized path:   copy "C:\Sandbox\DefaultBox\RegHive" hive_1.bak /v /y &gt; NUL<br>
+<br>
+1. Sandbox "delete contents" <span style="color: red">--&gt; When you do this you removes "RegHive" file also! ("C:\Sandbox\DefaultBox\RegHive") - Please add step 1A- and 1B<br>
+1A- Run Notepad.exe sandboxed. Close it after - so none app. is running sandboxed now. (this allows to create a "RegHive").<br>
+1B- Check if a "RegHive" is in "C:\Sandbox\DefaultBox". It should be.</span><br>
+2. SandboxDiff.exe (re-read instructions see if i'm missing something) <br>
+3. Press OK <br>
+(3.a.) Maybe look at Reg_before and see hive path err, continue anyway <br>
+4. <span style="color: darkred">Pick an app, right click, "run sandboxed"</span> <span style="color: red">--&gt; Don't do this step. For now <span style="text-decoration: underline">don't run</span> any app. sandboxed.</span><br>
+5. Right click Sandboxie Control, pick "Terminate all programs" <br>
+6. SandboxDiff press "OK" <br>
+<br>
+Please post the text that it is in "<span style="text-decoration: underline">Comp-Reg.txt</span>" file.<br>
+<br>
+Obs.: When you want work with SandboxDiff, you don't need to "delete contents". But if you do that you need to do a dummy action before (e.g. open/close Notepad), to create the "RegHive" file.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 26, 2009 8:58 pm</strong></div>
+				<div class="author">by <strong>gyp</strong></div>
+				<div class="content">Still Reg_before gives hive path err<br>
+and Comp-Reg <br>
+1d0<br>
+&lt; hive path err<br>
+\ No newline at end of file<br>
+<br>
+<br>
+Additionally, although these do exist, filemon reports:<br>
+<br>
+SandboxDiff.exe:3252	DIRECTORY	C:\SANDBOX\	NO MORE FILES	FileNamesInformation	<br>
+<br>
+nircmd.exe:548	QUERY INFORMATION	C:\Sandbox\UserPath.bat	NOT FOUND	Attributes: Error</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 26, 2009 9:43 pm</strong></div>
+				<div class="author">by <strong>gyp</strong></div>
+				<div class="content">Well like checking an alarm clock you set and already double checked 5 times, I made a new UserPath.bat and it is working now.  Scratching my head, then I binary compared this new userpath.bat to the old one I deleted and they are binary = .<br>
+<br>
+??? no clue what, maybe permissions or something???<br>
+<br>
+Anyway, working good!  Sorry to have wasted so much time.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 26, 2009 10:29 pm</strong></div>
+				<div class="author">by <strong>gyp</strong></div>
+				<div class="content">I found the ***.  The file name of my original UserPath.bat file had a SPACE before the U, at the beginning of the filename. lol<br>
+so sorry  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+I will learn to work this *#! netbook touchpad!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed May 27, 2009 3:57 pm</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content"><blockquote><div><cite>gyp wrote:</cite>I found the ***.  The file name of my original UserPath.bat file had a SPACE before the U, at the beginning of the filename. lol</div></blockquote>
+Good to see you found the annoyance.<br>
+<br>
+Because I couldn't find it never...   <img class="smilies" src="images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes"> <br>
+<br>
+Thanks for your time also and feedback. I appreciated that.<br>
+<br>
+ <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed May 27, 2009 10:43 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Thanks so much for sharing your work and not getting mad at me, this functions very well and is so useful.   I do think that the instructions could be written a little bit more clear for dumber users like me, that an initial RegHive must be created first, through, for example, the 'notepad sandbox'.<br>
+<br>
+<br>
+so now how will we save the world economy next?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 17, 2009 3:39 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">I put both SandboxDiff.exe and UserPath.bat to the main root of sandbox folder.<br>
+I configured the path inside the UserPath.bat.<br>
+I doubled click on SandboxDiff.exe to start, running normally <strong>not</strong> being sandboxed!<br>
+I saw a dialog and clicked ok.<br>
+<br>
+msgwait.exe crashed and reported the following error:<br>
+AppName: msgwait.exe AppVer: 0.0.0.0 ModName: crtdll.dll<br>
+ModVer: 4.0.1183.1 Offset: 000115ce<br>
+<br>
+The error report file: <a href="http://rapidshare.com/files/256737870/d098_appcompat.txt.html" class="postlink">http://rapidshare.com/files/256737870/d ... t.txt.html</a><br>
+<br>
+What's up?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jul 18, 2009 10:50 am</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content">Something not easy to clarify. It seems that a google search for GRABMI_FILTER_PRIVACY produces tons of results. And isn't related to the app. itself like <a href="http://www.smartftp.com/forums/index.php?/topic/11657-loading-problems/" class="postlink">here</a>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jul 18, 2009 11:26 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Same msgwait.exe crash here. Not encountered with an older version of SandboxDiff.<br>
+<br>
+Found this during Google search, so I assume that SandboxDiff is creating the msgwait.exe process:<br>
+<a href="http://www.threatexpert.com/report.aspx?md5=077a9baf847b97696c9f82b2263cd4e0" class="postlink">http://www.threatexpert.com/report.aspx ... b2263cd4e0</a></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>4</strong> of <strong>8</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=3606&start=45&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:57:59 GMT -->
+</html>

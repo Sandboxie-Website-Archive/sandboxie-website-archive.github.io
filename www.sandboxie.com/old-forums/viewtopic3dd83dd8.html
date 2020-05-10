@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=14831&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:37:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.03] Clipboard enhancement programs.</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.03] Clipboard enhancement programs.</h2>
+		<p><a href="viewtopiccc55cc55.html?f=38&amp;t=14831">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=14831</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.03] Clipboard enhancement programs.</h3>
+				<div class="date">Posted: <strong>Wed Feb 27, 2013 10:21 pm</strong></div>
+				<div class="author">by <strong>semerra</strong></div>
+				<div class="content">Since upgrading from version 3.76 to the .02 beta on Win 7 64x my clipboard enhancement program CLCL<br>
+<a href="http://www.nakka.com/soft/clcl/index_eng.html" class="postlink">http://www.nakka.com/soft/clcl/index_eng.html</a> no longer works when using Firefox 19 sandboxed.<br>
+<br>
+I can use Ditto without any problem.<br>
+<a href="http://sourceforge.net/projects/ditto-cp/" class="postlink">http://sourceforge.net/projects/ditto-cp/</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 01, 2013 4:41 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks.  I looked into it and there is a problem with putting data on the clipboard in version 4.<br>
+The problem is not with the clipboard viewer (clcl), even if you found one (Ditto) that knows to live with this problem.<br>
+<br>
+I think this is the same problem as the one reported here:<br>
+<a href="../phpbb/viewtopicd40e.php?t=14909" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=14909</a><br>
+<br>
+I think I will have this fixed by the next beta version.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 07, 2013 3:35 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">If you would like to go back to using "clcl", version 4.01.03 <em>may</em> fix the problem.<br>
+<br>
+I say "may" because it turns out Sandboxie has to adjust the data that was copied into the clipboard.  Usually this happens before "clcl" would get to inspect the data, so everything seem fine.  But it is possible "clcl" would get to the data first, and see it before the data was adjusted by Sandboxie.   Unfortunately there isn't a 100% solution in this case.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 07, 2013 6:41 pm</strong></div>
+				<div class="author">by <strong>semerra</strong></div>
+				<div class="content">Thanks. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> So far clcl is working with the .03 beta.<br>
+For the record I used Ditto for about a week with .02 and there  were times when nothing at all was copied to the clipboard.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>[.13] clipboard problems cannot paste</h3>
+				<div class="date">Posted: <strong>Wed Jun 12, 2013 9:30 pm</strong></div>
+				<div class="author">by <strong>semerra</strong></div>
+				<div class="content">I upgraded from the .08 to the .13 beta on Win 7 64-bit and I can no longer paste anything from the clipboard.<br>
+Only the copy function works. <br>
+I tried this with two clipboard enhancement programs CLCL and Ditto using Firefox and Internet Explorer.<br>
+This also happens with a sandboxed notepad.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jun 13, 2013 3:29 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I am sorry but there is nothing I can look into to fix, because it works correctly on my system.<br>
+<br>
+I already explained to you in the topic about CLCL why this will not always work:<br>
+<br>
+<a href="../phpbb/viewtopiccab2.php?t=14831" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=14831</a><br>
+<br>
+Try to use Process Explorer or Task Manager to give the CLCL process a lower priority, see if that makes a difference.<br>
+<br>
+Please note that I will soon merge these posts here into that other topic.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jun 13, 2013 4:04 am</strong></div>
+				<div class="author">by <strong>semerra</strong></div>
+				<div class="content">My apologies.<br>
+The problem was that installing the .13 beta changed the settings in Webroot WSA from allow to deny/monitor for the sbie processes.<br>
+I have changed them back to allow and the clipboard is working again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jun 13, 2013 1:58 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">No problem.  I'm glad to hear the problem was specific to your setup and the fix was simple.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=14831&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:37:50 GMT -->
+</html>

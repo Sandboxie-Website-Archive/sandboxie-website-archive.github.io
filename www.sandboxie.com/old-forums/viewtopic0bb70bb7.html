@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24497&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:28:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Not starting any process</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Not starting any process</h2>
+		<p><a href="viewtopic2f9d-22f9d.html?f=11&amp;t=24497">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24497</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Not starting any process</h3>
+				<div class="date">Posted: <strong>Tue May 30, 2017 8:57 am</strong></div>
+				<div class="author">by <strong>shakalu</strong></div>
+				<div class="content">Hello, i'm using sandboxie for many years ,but now i have a problem and i don't know how to solve it, suddenly sandboxie won't start any process and no error window is displayed. i see Start.exe for a moment in task manager and then the process closes. i tryed to reintstall sandboxie but i get the same result. i'm using sandboxie 5.18 and i tryed also with 5.19.4 beta version, on windows 7 64, what can i do to solve this problem?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Not starting any process</h3>
+				<div class="date">Posted: <strong>Tue May 30, 2017 11:20 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello shakalu ,<br>
+<br>
+Do you have any antivirus software installed? Was there any new software installed/updated before the problem started?<br>
+Does the issue occur in a New Sandbox with default settings?<br>
+<br>
+Try going to Configure --&gt; Forget Hidden Messages, then re-try to reproduce the issue (see if we can get an error). <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Not starting any process</h3>
+				<div class="date">Posted: <strong>Tue May 30, 2017 1:08 pm</strong></div>
+				<div class="author">by <strong>shakalu</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>Hello shakalu ,<br>
+<br>
+Do you have any antivirus software installed? Was there any new software installed/updated before the problem started?<br>
+Does the issue occur in a New Sandbox with default settings?<br>
+<br>
+Try going to Configure --&gt; Forget Hidden Messages, then re-try to reproduce the issue (see if we can get an error). <br>
+<br>
+Regards,<br>
+Barb.-</div></blockquote>
+
+Hello Barb,<br>
+i have trend micro officescan as antivirus but i am using it together with sandboxie for a few years, so i don't think this is the source of the problem, the only software installed recently was malwarebytes, but i already uninstalled it and the problem persists.i tryed to create a new sandbox too. my problem is located on my work pc, i will try to apply the " Forget Hidden Messages" setting and i will come back tomorow with some answer.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Not starting any process</h3>
+				<div class="date">Posted: <strong>Wed May 31, 2017 1:35 am</strong></div>
+				<div class="author">by <strong>shakalu</strong></div>
+				<div class="content">Hello, i tryed to apply that option "forget hidden messages" but i still don't get any error<br>
+<br>
+MERGED POST:<br>
+
+<blockquote><div><cite>shakalu wrote:</cite>Hello, i tryed to apply that option "forget hidden messages" but i still don't get any error</div></blockquote>
+
+if i try to open a sandboxed application many times eventualy i get an error<br>
+<br>
+SBIE2208 Cannot remove registry hive:  [C0000034]<br>
+SBIE2208 Cannot remove registry hive:  [C0000034]</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Not starting any process</h3>
+				<div class="date">Posted: <strong>Wed May 31, 2017 11:58 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello shakalu,<br>
+<br>
+<a href="../indexcd89.html?SBIE2208" class="postlink">https://www.sandboxie.com/index.php?SBIE2208</a><br>
+Does your Sandbox automatically deletes contents? <br>
+<br>
+Does the issue happen when you try to run any programs? <br>
+Is there any  other security software installed on the machine, or any toolbars added to the web browsers?<br>
+<br>
+Can you try disabling your Antivirus and see if that allows for the programs to start?<br>
+Also, see if you can add the following exceptions:<br>
+"Start.exe""License.exe""SandboxieBITS.exe""SandboxieCrypto.exe""SandboxieDcomLaunch.exe""SandboxieRpcSs.exe""SandboxieWUAU.exe""SbieCtrl.exe""SbieIni.exe""SbieSvc.exe"<br>
+<br>
+Please post your sandboxie configuration file (Use the Code button in the forum to format it).<br>
+You can access the file by clicking on Configure--&gt;Edit configuration<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Not starting any process</h3>
+				<div class="date">Posted: <strong>Wed May 31, 2017 2:54 pm</strong></div>
+				<div class="author">by <strong>shakalu</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>Hello shakalu,<br>
+<br>
+<a href="../indexcd89.html?SBIE2208" class="postlink">https://www.sandboxie.com/index.php?SBIE2208</a><br>
+Does your Sandbox automatically deletes contents? <br>
+<br>
+Does the issue happen when you try to run any programs? <br>
+Is there any  other security software installed on the machine, or any toolbars added to the web browsers?<br>
+<br>
+Can you try disabling your Antivirus and see if that allows for the programs to start?<br>
+Also, see if you can add the following exceptions:<br>
+"Start.exe""License.exe""SandboxieBITS.exe""SandboxieCrypto.exe""SandboxieDcomLaunch.exe""SandboxieRpcSs.exe""SandboxieWUAU.exe""SbieCtrl.exe""SbieIni.exe""SbieSvc.exe"<br>
+<br>
+Please post your sandboxie configuration file (Use the Code button in the forum to format it).<br>
+You can access the file by clicking on Configure--&gt;Edit configuration<br>
+<br>
+Regards,<br>
+Barb.-</div></blockquote>
+
+<br>
+yes , my sandbox is automaticaly deletes my contents, that error is pupping up only if i try to open a sandboxed process many many times in a short time (like holding ENTER key on a desktop shortcut). the issue happens on any process and  i can't use sandboxie at all, i have the same antivirus on my second PC at work and it works just fine with the same configuration. the configuration file of the sandbox is the default one since i tryed right after reinstalling sandboxie (and removing the configuration file when unninstalling)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Not starting any process</h3>
+				<div class="date">Posted: <strong>Thu Oct 19, 2017 7:25 am</strong></div>
+				<div class="author">by <strong>shakalu</strong></div>
+				<div class="content">Hello , regarding the topic,this problem still happens.<br>
+In Resource Access Monitor i have only this data when i try to open somethig sandboxed<br>
+<br>
+Clsid       -------------------------------<br>
+File/Key    -------------------------------<br>
+Image       -------------------------------<br>
+Ipc         -------------------------------<br>
+Ipc      O  \KnownDlls\kernel32.dll<br>
+Ipc      O  \KnownDlls\KERNELBASE.dll<br>
+Ipc      O  \KnownDlls\PSAPI.DLL<br>
+Ipc      O  \Sessions\1\Windows\ApiPort<br>
+Ipc      O  \Sessions\1\Windows\SharedSection<br>
+Pipe        -------------------------------<br>
+WinCls      -------------------------------</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Not starting any process</h3>
+				<div class="date">Posted: <strong>Thu Oct 19, 2017 10:30 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello shakalau,<br>
+<br>
+Unfortunately, there isn't much information in that Resource Access Monitor output.<br>
+<br>
+Are there any group policies involved?  Any restrictions applied to the computer? Is your account administrator?<br>
+Have you tried fully removing your Security software? That should help us rule out a compatibility issue with your Antivirus/Firewall software.<br>
+<br>
+Please download the latest beta [<a href="viewtopic73f273f2.html?p=129389#p129389" class="postlink">viewtopic.php?p=129389#p129389</a>], and re-test. <br>
+If the issue persists, post your sandboxie configuration file (Use the Code "&lt;/&gt;" button in the forum to format it).<br>
+You can access the file by clicking on Configure--&gt;Edit configuration<br>
+<br>
+Also, follow these steps to post the results of the Resource Access Monitor (if they look the same as before, don't bother copying them, just let me know).<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24497&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:28:49 GMT -->
+</html>

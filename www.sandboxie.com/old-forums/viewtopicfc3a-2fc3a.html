@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=61&t=24329&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:22:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 5.19 Beta Available (latest version 5.20 RC) - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>5.19 Beta Available (latest version 5.20 RC)</h2>
+		<p><a href="viewtopic99029902.html?f=61&amp;t=24329">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=61&amp;t=24329</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>4</strong></div>
+					<div class="post">
+				<h3>5.19.4</h3>
+				<div class="date">Posted: <strong>Mon May 15, 2017 7:20 pm</strong></div>
+				<div class="author">by <strong>Xeon</strong></div>
+				<div class="content">On this computer, problem installing Windows updates (NET Frame) on Win7 64, EIS would lock up, after this update it was fine.<br>
+My other computer (win7x64 same set-up except SBIE) worked. I guess this new update fixed the problem. Thanks.   <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.19.4)</h3>
+				<div class="date">Posted: <strong>Thu May 25, 2017 11:03 am</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content"><blockquote><div><cite>Dun wrote:</cite>Please fix FF error appearing randomly which makes the browser completely unusable (blank pages)
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2101 Object name not found: \Device\NamedPipe\nod_scriptmon_pipe, error OpenFile (C0000022) access=0012019F initialized=1</code></pre></div></div></blockquote>
+
+<blockquote><div><cite>Barb@Invincea wrote:</cite>Hello Dun,<br>
+<br>
+How are you reproducing the error?  Are there any specific websites involved?<br>
+Do you have any addons installed? <br>
+<br>
+Regards,<br>
+Barb.-</div></blockquote>
+
+<a href="viewtopic423f423f.html?p=127416#p127416" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 16#p127416</a><br>
+<br>
+Is there anyone who has this issue? What can I do to find out the cause?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.19.4)</h3>
+				<div class="date">Posted: <strong>Thu May 25, 2017 12:58 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hey Dun,<br>
+
+<blockquote class="uncited"><div>What can I do to find out the cause?</div></blockquote>
+
+Since the issue happens randomly, you need to start narrowing it down. <br>
+Here are some suggestions:<br>
+<br>
+1- Start disabling your extensions and see if the issue stops.<br>
+2 - Test a new Sandbox with default settings.<br>
+3 - Create a new Firefox profile and see if the problem occurs there.<br>
+4 - Try to see if certain websites are more likely to trigger the issue than others .<br>
+5- Randomly, open the Resource Access Monitor, see if you can capture the error. <br>
+6- If you have an antivirus, disable it and/or remove any browsers protection.<br>
+<br>
+Once you have more info, please start a new thread so that we can better assist you.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.19.4)</h3>
+				<div class="date">Posted: <strong>Fri May 26, 2017 1:47 pm</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">no firefox problem, for sure.<br>
+<br>
+you need to determine the source for "nod_scriptmon_pipe" then you have your culprit.<br>
+have you ESET installed? it is so called "nod" in older versions and "scriptmon" could be the web protection.<br>
+<br>
+ah, there you go with "ESET SS 10+ x64"<br>
+<br>
+PS are you using flash with firefox x64? there are known problems and i dont think they are solved in sandboxie <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+have yo tried to reproduce with firefox x86?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.19.4)</h3>
+				<div class="date">Posted: <strong>Sun May 28, 2017 11:11 am</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">Ok, thanks I will check those suggestions out.<br>
+No, I'm not using flash.<br>
+<br>
+It is impossible to drag and drop pdf file on sandboxed Firefox. The browser will not open a file.<br>
+Works fine outsite of SBIE</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.19.4)</h3>
+				<div class="date">Posted: <strong>Tue May 30, 2017 11:04 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hey Dun,<br>
+<br>
+See this thread for the Firefox drag-drop issue:<br>
+<a href="viewtopic52805280.php?f=11&amp;t=24469" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=24469</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.19.5)</h3>
+				<div class="date">Posted: <strong>Fri Jun 02, 2017 9:49 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">5.19.5 is now available.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.19.5)</h3>
+				<div class="date">Posted: <strong>Sun Jun 04, 2017 11:01 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Curt, Beta 5.19.5 feels great in W7 32 bits.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.20 RC)</h3>
+				<div class="date">Posted: <strong>Mon Jun 05, 2017 3:48 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">5.20 Release Candidate has been released.<br>
+<br>
+It is the same code as 5.19.5. Just different version #'s.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.20 RC)</h3>
+				<div class="date">Posted: <strong>Tue Jun 06, 2017 9:48 am</strong></div>
+				<div class="author">by <strong>MCHAL</strong></div>
+				<div class="content">Hi,<br>
+<br>
+Thanks for your dev efforts.<br>
+<br>
+I have an "issue" to report. Why is it that I keep getting the error message "SBIE2205 Service not implemented: DDE DATA" when using firefox 53.0.3 sandboxed (under Sandboxie 5.19.5) when copying text into Windows clipboard, by selecting and pressing Ctrl+C? This "problem" has persisted in previous versions of Sandboxie since long past. <br>
+<br>
+Regards.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.20 RC)</h3>
+				<div class="date">Posted: <strong>Tue Jun 06, 2017 11:54 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello MCHAL ,<br>
+<br>
+Have a look at these:<br>
+<a href="viewtopicf945f945.html?f=11&amp;t=18422&amp;hilit=BIE2205+Service+not+implemented%3A+DDE+DATA" class="postlink">viewtopic.php?f=11&amp;t=18422&amp;hilit=BIE220 ... A+DDE+DATA</a><br>
+<a href="search4f4c4f4c.html?keywords=SBIE2205+Service+not+implemented%3A+DDE+DATA" class="postlink">search.php?keywords=SBIE2205+Service+no ... A+DDE+DATA</a><br>
+<br>
+If needed, reply to an existing thread and we can go from there. Sounds like this issue is not beta related (since you stated it has happened in the past).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.20 RC)</h3>
+				<div class="date">Posted: <strong>Tue Jun 06, 2017 1:58 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">5.20 has been released.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.20 RC)</h3>
+				<div class="date">Posted: <strong>Tue Jun 06, 2017 11:47 pm</strong></div>
+				<div class="author">by <strong>RedBonnet</strong></div>
+				<div class="content">Just installed 5.20.  In Firefox 53.0.3 (Win 7 64bit), printing to PDF file still does not work unless I use the workaround <a href="viewtopic5ad35ad3.html?p=127787#p127787" class="postlink">Barb mentioned elsewhere</a>:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=C:\Users\&lt;username&gt;\AppData\LocalLow\Mozilla\temp-*</code></pre></div>
+
+Was this issue supposed to be fixed with this release?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.20 RC)</h3>
+				<div class="date">Posted: <strong>Wed Jun 07, 2017 7:04 am</strong></div>
+				<div class="author">by <strong>MCHAL</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic43124312.html?p=128464#p128464" data-post-id="128464" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Jun 06, 2017 11:54 am</div></cite>
+Hello MCHAL ,<br>
+<br>
+Have a look at these:<br>
+<a href="viewtopicf945f945.html?f=11&amp;t=18422&amp;hilit=BIE2205+Service+not+implemented%3A+DDE+DATA" class="postlink">viewtopic.php?f=11&amp;t=18422&amp;hilit=BIE220 ... A+DDE+DATA</a><br>
+<a href="search4f4c4f4c.html?keywords=SBIE2205+Service+not+implemented%3A+DDE+DATA" class="postlink">search.php?keywords=SBIE2205+Service+no ... A+DDE+DATA</a><br>
+<br>
+If needed, reply to an existing thread and we can go from there. Sounds like this issue is not beta related (since you stated it has happened in the past).<br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+Hi, Barb:<br>
+<br>
+Thanks for your support.<br>
+<br>
+Unfortunately, I am afraid to report that, even with SB 5.20 release installed and running (Win10x64 up to date, 8GB RAM, NVidia GeForce GT 730), the problem persists when running Firefox 53.0.3 sandboxed.<br>
+<br>
+Regards.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.19 Beta Available (latest version 5.20 RC)</h3>
+				<div class="date">Posted: <strong>Wed Jun 07, 2017 10:51 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content"><strong>RedBonnet ,</strong><br>
+
+<blockquote class="uncited"><div>Was this issue supposed to be fixed with this release?</div></blockquote>
+No, that issue is still pending a fix.<br>
+<br>
+<strong>MCHAL,</strong><br>
+<br>
+Please reply to an existing topic (if the issue is the same) or start a new thread.<br>
+Make sure to provide all the info required:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>4</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=61&t=24329&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:22:23 GMT -->
+</html>

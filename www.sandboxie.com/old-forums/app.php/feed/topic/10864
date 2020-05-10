@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/10864" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-01-03T19:01:27-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/10864</id>
+
+		<entry>
+		<author><name><![CDATA[TimW]]></name></author>
+		<updated>2013-01-03T19:01:27-04:00</updated>
+
+		<published>2013-01-03T19:01:27-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=10864&amp;p=86244#p86244</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=10864&amp;p=86244#p86244"/>
+		<title type="html"><![CDATA[Recovery Utility for Sandboxed NoScript Whitelist]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=10864&amp;p=86244#p86244"><![CDATA[
+Here is a new download link to the same  RecoverNoScript.vbs file (zipped).<br><br>    <a href="https://sites.google.com/site/mysite5675/home/files-for-download" class="postlink">https://sites.google.com/site/mysite567 ... r-download</a><br><br>FYI, this script is still working well for me on Win 7.<br><br><br>(I got tired of refreshing my free SendSpace account, which the old link pointed to.)<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1678">TimW</a> — Thu Jan 03, 2013 6:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2011-07-14T07:01:09-04:00</updated>
+
+		<published>2011-07-14T07:01:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=10864&amp;p=69935#p69935</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=10864&amp;p=69935#p69935"/>
+		<title type="html"><![CDATA[Recovery Utility for Sandboxed NoScript Whitelist]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=10864&amp;p=69935#p69935"><![CDATA[
+Thanks!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Jul 14, 2011 7:01 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TimW]]></name></author>
+		<updated>2011-07-13T18:51:17-04:00</updated>
+
+		<published>2011-07-13T18:51:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=10864&amp;p=69917#p69917</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=10864&amp;p=69917#p69917"/>
+		<title type="html"><![CDATA[Recovery Utility for Sandboxed NoScript Whitelist]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=10864&amp;p=69917#p69917"><![CDATA[
+I wrote this VBS script because I keep forgetting to recover NoScript whitelist changes made while sandboxed, and didn't want to provide direct access to my Firefox preferences.  The attached script includes a prefix with short Synopsis and Usage comments, and the rest of the script executes with mostly in-line code so is pretty easy to follow or modify.  (This script restores only those whitelist changes created from the NoScript "Allow..." option, not the "Temporarily Allow..." option.)<br><br>    To use, start Firefox in the <strong>default </strong> sandbox, then launch the script, either before or after making new whitelist rules with NoScript.  When you exit Firefox, the line containing NoScript's whitelist in the non-sandboxed preferences file is overwritten with the corresponding line from the  sandboxed file.  Note that this replaces only one line of your Firefox preferences file.  No other lines of your preference file are changed.<br><br>     I'm strictly an amateur programmer, but I've used the script quite a bit and found that it runs cleanly on my system.<br><br>    The script includes a check for the Win7 OS because I don't have the ability to debug on older Windows versions.  That OS check could be commented-out to try it on Vista, XP, etc.<br><br>    Not sure if administrator rights are required, but I'm in that group on my PC.   If needed, a non-admin user could run the script from a desktop shortcut the a Task Scheduler to raise the rights.  In any case, I find it convenient use a desktop shortcut.<br><br>Download Link:  <a href="http://www.sendspace.com/file/yr6z19" class="postlink">http://www.sendspace.com/file/yr6z19</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1678">TimW</a> — Wed Jul 13, 2011 6:51 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

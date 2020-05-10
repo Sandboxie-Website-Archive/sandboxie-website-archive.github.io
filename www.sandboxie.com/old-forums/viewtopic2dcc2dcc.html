@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=960&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Encrypted PGP Disk volume not protected by default</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Encrypted PGP Disk volume not protected by default</h2>
+		<p><a href="viewtopicfa72fa72.html?f=11&amp;t=960">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=960</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Encrypted PGP Disk volume not protected by default</h3>
+				<div class="date">Posted: <strong>Tue Jan 16, 2007 11:53 am</strong></div>
+				<div class="author">by <strong>Stephan</strong></div>
+				<div class="content">I'm using an encrypted PGP Disk volume mountet as drive T:<br>
+notepad.exe running sandboxed is nevertheless able creating, deleting and editing files permantly on drive T: - breakthrough Sandboxie<br>
+<br>
+Online help gives an example for an solution for another product "TrueCrypt":<br>
+	[GlobalSettings]<br>
+	HarddiskVolume=\Device\TrueCryptVolumeT<br>
+	HarddiskVolume=T:<br>
+In my case I looked in the device manager and found a device named PGPdisk and added this line to my Sandboxie.ini. <br>
+	HarddiskVolume=\Device\PGPdisk,asis<br>
+Now my PGP volume T: is protected and can't be modified by sandboxed programs.<br>
+<br>
+Question:<br>
+I found many other devives listed in the device manager - which I do not exactly know . Example: ASPI32, FileDisk, mountmgr, pagedfrg, ...<br>
+Are these all possible security holes ? <br>
+Maybe there exists an device that can access the computer file system, or the disk at low level - and a sandboxed Programm will establish an connection to this device (that resides outside the sandbox) and then use this device to modify something outside the sandbox ? Maybe the topic "Paragon Partition Manager breakthrough Sandboxie" is the same problem - a device installed outside the sandbox is contacted from inside the sandbox ?<br>
+<br>
+It it possible permitting all direct device access inside the sandbox, so that an encrypted PGP Disk volume and other products are protected by default ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 16, 2007 4:45 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Maybe there exists an device that can access the computer file system, or the disk at low level - and a sandboxed Programm will establish an connection to this device (that resides outside the sandbox) and then use this device to modify something outside the sandbox ?</div></blockquote>
+
+There isn't such a device by default, that I know of.  And if you find out the next Windows Update install such a device, you can always add:<br>
+<br>
+ClosedFilePath=\device\TheEvilDevice<br>
+
+<blockquote class="uncited"><div> Maybe the topic "Paragon Partition Manager breakthrough Sandboxie" is the same problem - a device installed outside the sandbox is contacted from inside the sandbox ?</div></blockquote>
+
+This is entirely possible, in version 2.64, if the new device -- such as your PGP disk -- is mounted after Sandboxie has taken inventory of your drives, and noted to itself, what are the hard drive eligible for sandboxing.<br>
+<br>
+But, similar to what I said in that other post:  In version 2.7, there is no such inventory, there is no more HarddiskVolume setting, and drives become eligible for sandboxing as soon as they are mounted into the system.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=960&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:42 GMT -->
+</html>

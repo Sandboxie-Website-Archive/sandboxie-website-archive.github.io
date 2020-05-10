@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=5853&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:32:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Moving the Sandbox folder on another drive or partition</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Moving the Sandbox folder on another drive or partition</h2>
+		<p><a href="viewtopicb9d5-3b9d5.html?f=5&amp;t=5853">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=5853</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Moving the Sandbox folder on another drive or partition</h3>
+				<div class="date">Posted: <strong>Sun Jun 28, 2009 4:52 pm</strong></div>
+				<div class="author">by <strong>J. L.</strong></div>
+				<div class="content">Currently, my downloads are saved in a folder on another larger partition, but SandBoxie's sandbox folder is on my system partition. I download large files (videos mainly) that requires a lot of time to move from one partition to the next when recovering.<br>
+Also, my hard drive is quite old, and isn't at the best of health, so I would like having it not do such work frequently.<br>
+Is there a way for me to move that folder and make Sandboxie use it?<br>
+All help will be appreciated.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 28, 2009 5:50 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">You have a couple of choices. You can change the "container folder" to another drive.<br>
+From Sandbox &gt; Set container folder<br>
+Read the note at the bottom of the window that opens, since you will no longer be using the original C:\Sandbox\(user)\ folder.<br>
+<br>
+You could also put a sandbox folder on a different drive, and keep the one(s) you already have on C:.<br>
+All that is needed is to make a manual edit to your Sandboxie configuration.<br>
+<br>
+I have a sandbox on K: drive, which happens to be a TrueCrypt volume.<br>
+I didn't use the (user) variable for that sandbox, so it's at  K:\Sandbox<br>
+On the drive you want to use for the new sandbox, create a "Sandbox" folder in the root directory.<br>
+For me, that is K:\Sandbox<br>
+<br>
+Use Sandboxie's Sandbox &gt; Create New Sandbox<br>
+then give that sandbox a name<br>
+(I'll use TrueCrypt, but you use a name of your choice)<br>
+Use Configure &gt; Edit Configuration and find the heading for the new sandbox, after it's created.<br>
+Insert a new line after the heading, like this:<br>
+<br>
+[<span style="color: red">TrueCrypt</span>]<br>
+FileRootPath=<span style="color: green"><strong>K</strong></span>:\Sandbox\%SANDBOX%<br>
+<br>
+Your sandbox name will already be in the brackets where I have <span style="color: red">TrueCrypt</span><br>
+Just put your own drive letter in place of <strong><span style="color: green">K</span></strong>, and the rest of the line stays as-is.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 28, 2009 6:11 pm</strong></div>
+				<div class="author">by <strong>J. L.</strong></div>
+				<div class="content">Ok, thanks  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+Better than what I was looking for.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=5853&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:32:20 GMT -->
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25189&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:17:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Problem after updating to Waterfox 56</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Problem after updating to Waterfox 56</h2>
+		<p><a href="viewtopicf363f363.html?f=11&amp;t=25189">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25189</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Problem after updating to Waterfox 56</h3>
+				<div class="date">Posted: <strong>Fri Dec 01, 2017 4:30 pm</strong></div>
+				<div class="author">by <strong>n8chavez</strong></div>
+				<div class="content">Is anyone else having an issue with SBIE 5.22 and Waterfox 56?  Every time I try to launch Waterfox 56 in a sandbox it crashes; werfault.exe requests permission to run then the browser crashes.  This was not the case in Waterfox 55, which I had to revert to.  It ran perfectly.  The config I use it below.<br>
+<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=ComodoInternetSecurity
+Template=Logitech_G15_Keyboard
+Template=WindowsRasMan
+Template=WindowsLive
+Template=OfficeLicensing
+Template=OfficeClickToRun
+FileRootPath=s:\%SANDBOX%
+ActivationPrompt=n
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+NeverDelete=y
+
+[UserSettings_0C78020D]
+
+SbieCtrl_UserName=natha
+SbieCtrl_NextUpdateCheck=1512762185
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_WindowCoords=865,40,679,514
+SbieCtrl_ActiveView=40021
+SbieCtrl_ReloadConfNotify=n
+SbieCtrl_EditConfNotify=n
+SbieCtrl_TerminateWarn=n
+SbieCtrl_ExplorerWarn=n
+SbieCtrl_TerminateNotify=n
+SbieCtrl_HideMessage=2303,DefWindowProcA (33, 5)
+SbieCtrl_HideMessage=2303,DefWindowProcW (33, 5)
+SbieCtrl_HideMessage=2335,WerFault.exe [33 / 0]
+SbieCtrl_HideMessage=2101,OpenProcess (C0000022) access=001FFFFF initialized=1
+SbieCtrl_HideMessage=1308,WerFault.exe [Miranda]
+SbieCtrl_HideMessage=2222,WerFault.exe [Miranda]
+SbieCtrl_HideMessage=1308,WerFault.exe [Firefox]
+SbieCtrl_HideMessage=2314,WerFault.exe
+SbieCtrl_AutoApplySettings=y
+SbieCtrl_SettingChangeNotify=n
+SbieCtrl_EnableLogonStart=y
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=y
+SbieCtrl_AddQuickLaunchIcon=y
+SbieCtrl_AddContextMenu=y
+SbieCtrl_AddSendToMenu=n
+SbieCtrl_BoxExpandedView=Waterfox
+
+[Waterfox]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+BorderColor=#00FFFF,off
+BoxNameTitle=y
+AutoDelete=y
+NeverDelete=n
+ForceProcess=waterfox.exe
+NotifyInternetAccessDenied=y
+ProcessGroup=&lt;StartRunAccess&gt;,&lt;InternetAccess&gt;,dllhost.exe,AgileBits.OnePassword.Desktop.exe
+ProcessGroup=&lt;InternetAccess&gt;,waterfox.exe,1password.nativemessaginghost.exe
+NotifyStartRunAccessDenied=y
+OpenPipePath=waterfox.exe,%AppData%\Waterfox\Profiles\aunfs8jw.default\extension-data\ublock0.sqlite
+OpenPipePath=*\device\namedpipe\1password*
+ClosedIpcPath=!&lt;StartRunAccess&gt;,*
+ClosedFilePath=!&lt;InternetAccess&gt;,InternetAccessDevices
+ClosedFilePath=C:\Scripts\
+ClosedFilePath=C:\Program Files\IFW\
+ClosedFilePath=C:\Program Files (x86)\Mullvad\
+ClosedFilePath=C:\Program Files\COMODO\ </code></pre></div>
+
+Any ideas how I can fix this?  <br>
+<br>
+Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Problem after updating to Waterfox 56</h3>
+				<div class="date">Posted: <strong>Fri Dec 01, 2017 4:56 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello n8chavez,<br>
+<br>
+Please see the workaround here:<br>
+<a href="viewtopic231d-2231d.html?f=11&amp;t=24389" class="postlink">viewtopic.php?f=11&amp;t=24389</a><br>
+<br>
+If that doesn't work, make sure to delete the contents of your Sandbox and re-try. <br>
+<br>
+If the problem persists, provide this info and I will test it:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25189&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:17:26 GMT -->
+</html>

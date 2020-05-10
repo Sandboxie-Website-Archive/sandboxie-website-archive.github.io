@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24936&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:52:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Can I set full file access to drive C: - except the system dirs</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Can I set full file access to drive C: - except the system dirs</h2>
+		<p><a href="viewtopic223b223b.html?f=17&amp;t=24936">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24936</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Can I set full file access to drive C: - except the system dirs</h3>
+				<div class="date">Posted: <strong>Thu Sep 28, 2017 2:52 pm</strong></div>
+				<div class="author">by <strong>CBruce</strong></div>
+				<div class="content">Is there a combination of settings that I can use to allow programs with internet access, installed in a sandbox, full file access to all of the C: drive except the system folders?  I want the sandboxed programs to be able to move <span style="text-decoration: underline">large files</span> to non-system folders on the C: drive - but I also want to make sure that any accidentally downloaded malware has no access to the system folders.<br>
+<br>
+I thought this would be a common configuration, but I can't find anything about it when looking at docs and searching the forums.<br>
+<br>
+I have tried using sandbox settings for full access to C:\ and then setting the system folders to readonly access - (not sure if that's even a valid config) - but then my Sandboxie desktop shortcuts cannot launch the sandboxed programs... ("not found" messages).<br>
+<br>
+Thanks,<br>
+CBruce</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Can I set full file access to drive C: - except the system dirs</h3>
+				<div class="date">Posted: <strong>Fri Sep 29, 2017 2:23 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello CBruce,<br>
+<br>
+Maybe something like this will help:<br>
+<a href="viewtopic1b8b1b8b.html?p=30824#p30824" class="postlink">viewtopic.php?p=30824#p30824</a><br>
+<a href="viewtopic19fb19fb.html?p=126368#p126368" class="postlink">viewtopic.php?p=126368#p126368</a><br>
+<br>
+Regarding copying files:<br>
+<a href="../CopyLimitKb.html" class="postlink">https://www.sandboxie.com/CopyLimitKb</a><br>
+<br>
+Also, you may want to look at the internet access restrictions:<br>
+<a href="../RestrictionsSettings.html#internet" class="postlink">https://www.sandboxie.com/RestrictionsSettings#internet</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Can I set full file access to drive C: - except the system dirs</h3>
+				<div class="date">Posted: <strong>Sat Sep 30, 2017 9:29 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">I really <span style="text-decoration: underline">would <strong>NOT</strong> recommend doing it</span> but in my test with notepad and trying to save files in various folders these seem to be what you want.<br>
+<br>
+OpenPipePath=C:\<br>
+ReadFilePath=C:\Boot<br>
+ReadFilePath=C:\Program Files<br>
+ReadFilePath=C:\Windows<br>
+<br>
+That still doesn't cover other sandbox folders either if the container folders are set up for C:\ as well (like default) so things running in the one with those rules could modify files in those other sandboxes as well.<br>
+<br>
+Doing it this way will also interfere with some normal operations such as if you then try to install a new program into the sandbox and install it to Program Files, it won't be able to create the files and it would fail.<br>
+<br>
+On another note, I did not see any issues using 'Run Sandboxed' from desktop shortcuts as you mentioned after opening all of C:\ unless the program existed only inside the sandbox. Yet another reason to not attempt it that way I suppose.<br>
+<br>
+You'd be much better off poking holes for just a few specific locations (<em>say those user folders you move the files to</em>) instead of opening up the whole drive and then trying to re-protect certain things.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24936&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:52:08 GMT -->
+</html>

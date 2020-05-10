@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24790&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:04:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; BITS Client Error 0x80070005 when Chrome in Sandboxie [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>BITS Client Error 0x80070005 when Chrome in Sandboxie [SOLVED]</h2>
+		<p><a href="viewtopic73a373a3.html?f=11&amp;t=24790">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24790</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>BITS Client Error 0x80070005 when Chrome in Sandboxie [SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Aug 23, 2017 3:12 pm</strong></div>
+				<div class="author">by <strong>iceberg</strong></div>
+				<div class="content">Hello all!<br>
+<br>
+(1) Windows 10 <br>
+(2) Sandboxie 5.20<br>
+(3) Chrome Versions 50 and later in Sandboxie, some chrome extensions<br>
+<br>
+(1) + (2) + (3) -&gt; after some minutes the BITS Client Error 0x80070005 is rising up in the event log.<br>
+<br>
+(2) + (3) but with Windows 7 instaed of 10 -&gt; no error<br>
+<br>
+Someone out there with the same experience? Any ideas? <br>
+<br>
+**********************</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie</h3>
+				<div class="date">Posted: <strong>Wed Aug 23, 2017 3:22 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello iceberg,<br>
+<br>
+What are the extensions installed?<br>
+Are you using windows x64 or x86?  Is there any security software installed?<br>
+What actions are you performing when the error occurs?  <br>
+Which log are you looking at, exactly? <br>
+Does the issue happen in a new Sandbox with default settings?  <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie</h3>
+				<div class="date">Posted: <strong>Thu Aug 24, 2017 3:20 pm</strong></div>
+				<div class="author">by <strong>iceberg</strong></div>
+				<div class="content">Hi Barb!<br>
+<br>
+Thank you for the quick reply.<br>
+<br>
+Yes, I use some 3rd party extensions (AdBlock, Ghostery) but I got this error also without these extensions.<br>
+I get this only under Windows 10 64bit. Currently it's Creators Update, but it happened also versions before. I share the same Chrome installation with Windows 7 Pro 64bit without any errors. Security software only the Defender, which comes with Windows 10, nothing more.<br>
+<br>
+The error (BITS Client Error 0x80070005) is logged in the standard windows event log, nothing special.<br>
+<br>
+The error comes several minutes after starting chrome the first time with empty sandbox, independent from what I am currently browsing. And the error comes 6 times within 2 minutes. <br>
+<br>
+From my perspective Chrome is trying to setup Windows BITS service for some kind of background download and this fails due to rights problems. <br>
+<br>
+Regards,<br>
+ICB</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie</h3>
+				<div class="date">Posted: <strong>Thu Aug 24, 2017 3:25 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello iceberg,<br>
+<br>
+Are you using drop rights? Please have a look at this thread:<br>
+<a href="viewtopic0fb30fb3.html?f=17&amp;t=24734" class="postlink">viewtopic.php?f=17&amp;t=24734</a><br>
+<br>
+Is this error preventing you from doing anything with Chrome ? Sometimes, there are errors showing up in the event log, but they do not mean much. Is functionality affected in any way? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie</h3>
+				<div class="date">Posted: <strong>Mon Sep 11, 2017 6:07 pm</strong></div>
+				<div class="author">by <strong>iceberg</strong></div>
+				<div class="content">Sorry for the late reply. <br>
+<br>
+No, I am not using drop rights. And I don't think this error prevents me from doing anything with Chrome. It seems that Chrome works well with Sandboxie. But, as written previously, it seems that Chrome tries and has not the permission to setup one or more background transfer jobs to Windows BITS service. And I see this error only under Windows 10, always after several running Chrome in Sandboxie, even if I do nothing in Chrome. <br>
+<br>
+Same configuration, same settings for Chrome and Sandboxie under Windows 7 -&gt; no error. <br>
+<br>
+Same configuration, same settings for Chrome, but starting Chrome outside the sandbox -&gt; no error. <br>
+<br>
+Regards, <br>
+ICB</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Sep 12, 2017 10:57 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello iceberg,<br>
+<br>
+If functionality is not affected, then you should be able to ignore the message. <br>
+I will reach out to the devs to see if they can provide more info and update this thread if/when anything new comes up.<br>
+<br>
+Here's more info regarding BITS and Google apps:<br>
+<a href="../ServicePrograms.html" class="postlink">https://www.sandboxie.com/ServicePrograms</a><br>
+<br>
+Regards,<br>
+Barb.-<br>
+<br>
+------------------------------X ----------------------------<br>
+UPDATE, I triggered a manual update of Chrome inside Sandboxie (which is supposed to fail by default), and got this in Google Chrome:
+<blockquote class="uncited"><div>The BITS service failed to start.  Error 0x80070005.<br>
+An error occurred while checking for updates: Update check failed to start (error code 4: 0x80077005 - system level)</div></blockquote>
+
+Right after that, I saw the logs in the Event Viewer, so the errors are expected to be there since Sandboxie will not allow Chrome to update.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie</h3>
+				<div class="date">Posted: <strong>Thu Sep 14, 2017 3:01 pm</strong></div>
+				<div class="author">by <strong>iceberg</strong></div>
+				<div class="content">Yes, this makes sense and I expected something like that.<br>
+<br>
+So it's all ok for me. Thank you for your support.<br>
+<br>
+It would be nice, but not necessary, to understand why I don't have this error logged in Windows 7 (same chrome and sandboxie settings). <br>
+<br>
+Regards,<br>
+ICE</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie</h3>
+				<div class="date">Posted: <strong>Fri Sep 15, 2017 11:18 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi iceberg ,<br>
+<br>
+I think under Windows 7, you can find more info under:<br>
+Event Viewer ---&gt; Applications and Services Logs ---&gt; Microsoft---&gt; Windows ---&gt; Bits-Client ---&gt; Operational <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie [SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Sep 28, 2017 2:08 pm</strong></div>
+				<div class="author">by <strong>iceberg</strong></div>
+				<div class="content">Now I found the difference between my Windows 10 and my Windows 7 installation and the reason why BITS Error 0x80070005 was only logged in Windows 7.<br>
+<br>
+You are right, calling BITS client inside Sandboxie is supposed to fail by default. I can see this in my Windows 10 installation.<br>
+<br>
+I testet this by opening CMD in sandboxie and calling "bitsadmin /list". Windows 7: no errors !!! Windows 10: BITS Error 0x80070005 logged in the event log.<br>
+<br>
+So under Windows 7 I have access to BITS client even when running in sandboxie. And there I see that the chrome component updater is using BITS, which causes this BITS Error 0x80070005 in my Windows 10 installation when opening chrome in sandboxie.<br>
+<br>
+The remaining question is: Why can I access the BITS client from inside sandboxie? I am not aware to have changed something from defaults in the sandboxie configuration on Windows 7. I always aim to synchronize seetings between Windows 7 and Windows 10 installation. But I guess there is something which can be configured to allow/disallow access to BITS client from inside sandboxie. Right?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie [SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Sep 28, 2017 2:36 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello  iceberg,<br>
+<br>
+I get the same error in Chrome if I try to update it inside Sandboxie in Windows 7.<br>
+I am not sure why it is not logged the same in Windows 7. If you want to see the BITS logs, check my previous post and you'll be able to find them as "Information" under the Operational Logs. <br>
+The code I see is 0x0 instead (Windows 7)<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie [SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Sep 28, 2017 3:32 pm</strong></div>
+				<div class="author">by <strong>iceberg</strong></div>
+				<div class="content">Thanks again for the fast response.<br>
+<br>
+It's not a Chrome issue. It's a question of BITS and sandboxie and I can reproduce it very simple: <br>
+<br>
+As described, open a command prompt in sandboxie and type "bitsadmin /list". This lists the status of current bits jobs. For that the bits service gets triggered by bitsadmin.<br>
+<br>
+Under Windows 7 I see with a process monitor that sandboxiebits get launched after calling "bitsadmin /list". Under Windows 10 nothing. <br>
+<br>
+I don't have any idea why sandboxie does not block BITS under Windows 7 installation. But it does under Windows 10 installation.<br>
+<br>
+Even a complete deinstallation (with deleting seetings) followed by a fresh installation of sandboxie 5.20 did not change the behaviour.<br>
+<br>
+Regards, <br>
+ICE</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie [SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Sep 28, 2017 6:52 pm</strong></div>
+				<div class="author">by <strong>iceberg</strong></div>
+				<div class="content">PS: <br>
+<br>
+Under Windows 7 "bitsadmin /list" in sandboxie runs without error, ending in "Listed 0 job(s)." The same output like without sandboxie.<br>
+Under Windows 10 "bitsadmin /list" in sandboxie runs in "Unable to connect to BITS - 0x8007042d".<br>
+The settings for drop rights are disabled as they are for default. If I configure drop right in sandboxie settings, then I get 0x80070005 instead of 0x8007042d.<br>
+<br>
+Under Windows 7 I see with a process monitor that SandboxieBITS.exe gets launched after calling "bitsadmin /list". Under Windows 10 it seems that  SandboxieBITS.exe gets launched and directly terminates.<br>
+<br>
+So I wonder what the intended behaviour is. Is it this what I get under Windows 10 or this what I get under Windows 7 ? And if BITS is blocked by design, then I don't understand the purpose of SandboxieBITS.<br>
+<br>
+I don't care about the chrome component updater which gets blocked under Windows 10. But if I wonder if I have some kind of misconfiguration in the Windows 7 installation, which opens the door for file access via background download.<br>
+<br>
+Regards, <br>
+ICE</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie [SOLVED]</h3>
+				<div class="date">Posted: <strong>Tue Oct 03, 2017 7:16 pm</strong></div>
+				<div class="author">by <strong>iceberg</strong></div>
+				<div class="content">Hello again, <br>
+<br>
+still waiting for an answer. I reduce my question to the following:<br>
+<br>
+Open a command prompt window (simply Windows cmd) in sandboxie and call "bitsadmin /list". Is it expected to run without error or not? Is there a difference between Windows 10 and Windows 7?<br>
+<br>
+Regards, <br>
+ICB</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie [SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Oct 04, 2017 10:29 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello iceberg,<br>
+<br>
+As far as I can tell, Chrome update was blocked as expected, and BITS is working correctly, per this:<br>
+<a href="../ServicePrograms.html#bits" class="postlink">https://www.sandboxie.com/ServicePrograms#bits</a><br>
+The inconsistency is that Windows 7 is not reporting the blocked Chrome update as an error, but as an "Information" entry under the logs mentioned before, but Windows 10 is. It might be the way those OSs handle the events, however I am not 100% sure. <br>
+<br>
+I reached out to the devs but haven't received an answer yet. Once they reply, I will update this thread.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BITS Client Error 0x80070005 when Chrome in Sandboxie [SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Oct 04, 2017 4:16 pm</strong></div>
+				<div class="author">by <strong>iceberg</strong></div>
+				<div class="content">Please don't see it as chrome issue. It's an issue with BITS service and it can be reproduced simple without chrome.<br>
+<br>
+In the meantime I went some steps further reproducing this. I did a total clean install of windows 7 professional SP1, with clean install of sandboxie 5.20, all settings at default, wrote a litte .BAT file (see below), which does steps by step a download of a file from a mircosoft server via BITS service to the temp or download directory of the users profile. Please forward this to the developers. You can see that the download via BITS service works inside a sandboxie window without erros and it really does the download! No blocking. But from my perspective it's ok that it works. The downloaded file gets stored only under the sandbox directory.<br>
+<br>
+Under clean install of Windows 10 Professional (1703) all the commands of this .BAT file get blocked.<br>
+<br>
+Regards, <br>
+ICB<br>
+<br>
+Here is the .BAT file:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>@ECHO OFF
+SETLOCAL
+SET AskForNextStep=Next Step:
+SET Source=http://go.microsoft.com/fwlink/?LinkID=18922
+rem SET DownloadPath=%USERPROFILE%\Downloads\MSSecure.cab
+SET DownloadPath=%TEMP%\MSSecure.cab
+ECHO.
+ECHO %AskForNextStep% sc query bits
+PAUSE
+sc query bits
+ECHO.
+ECHO %AskForNextStep% Bitsadmin /list
+PAUSE
+Bitsadmin /list
+ECHO.
+ECHO %AskForNextStep% Bitsadmin /create /download bitstest
+PAUSE
+Bitsadmin /create /download bitstest
+ECHO.
+ECHO %AskForNextStep% Bitsadmin /list
+PAUSE
+Bitsadmin /list
+ECHO.
+ECHO %AskForNextStep% Bitsadmin /addfile bitstest %Source% %DownloadPath%
+PAUSE
+Bitsadmin /addfile bitstest %Source% %DownloadPath%
+ECHO.
+ECHO %AskForNextStep% Bitsadmin /setproxysettings bitstest preconfig
+PAUSE
+Bitsadmin /setproxysettings bitstest preconfig
+ECHO.
+ECHO %AskForNextStep% Bitsadmin /info bitstest /verbose
+PAUSE
+Bitsadmin /info bitstest /verbose
+ECHO.
+ECHO %AskForNextStep% Bitsadmin /resume bitstest
+PAUSE
+Bitsadmin /resume bitstest
+ECHO.
+ECHO %AskForNextStep% Bitsadmin /info bitstest /verbose
+PAUSE
+Bitsadmin /info bitstest /verbose
+ECHO.
+ECHO %AskForNextStep% Bitsadmin /complete bitstest
+PAUSE
+Bitsadmin /complete bitstest
+ECHO.
+ECHO That's all!
+PAUSE
+ENDLOCAL</code></pre></div></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24790&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:04:07 GMT -->
+</html>

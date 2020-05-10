@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=2976&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:54:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; An external equivalent for &quot;Auto Exec&quot;</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>An external equivalent for &quot;Auto Exec&quot;</h2>
+		<p><a href="viewtopic76cd76cd.html?f=4&amp;t=2976">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=2976</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>An external equivalent for &quot;Auto Exec&quot;</h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2008 7:21 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">Since "Auto Exec" is an internal command (within the sandbox's scope), I don't manage to <a href="../phpbb/viewtopic16ff.php?t=2894" class="postlink">duplicate sandboxes</a> with it.<br>
+<br>
+All I need is a Sandboxie "start up" command that does something externally before creating the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2008 7:26 am</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content">Maybe use a batch file, or code a AutoIt script to do what you want? <img class="smilies" src="images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2008 7:52 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">What do you mean run a batch file...? I need a Sandboxie "start up" command that would run anything, whether it's a batch file or not.<br>
+<br>
+Just like "Delete Command" is an external command.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2008 9:07 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">AutoExec does indeed run <em>sandboxed</em> programs.  Maybe you can workaround that using OpenFilePath settings that will be limited to the program that you're running via AutoExec?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2008 9:56 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">Why not just an unsandboxed AutoExec? Just a "Startup Command" that will work like "Delete Command".</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2008 12:03 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Well, I don't think there is a need for an unsandboxed AutoExec.  I suggested you use OpenFilePath, can you explain why you feel it isn't going to help?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2008 3:55 pm</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Maybe you can workaround that using OpenFilePath settings that will be limited to the program that you're running via AutoExec?</div></blockquote>
+No, because the program I'm running is CMD - as I wrote above, in order to duplicate sandboxes.<br>
+<br>
+Duplicating sandboxes is the reason why it's needed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2008 4:02 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I still don't understand.  What's the problem?  Can't you write a batch file that will copy anything from (OtherSandbox)\drive\c\* to c:\<br>
+and then (OtherSandbox)\drive\d\* to d:\<br>
+and so on?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2008 4:27 pm</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">I've tried it and the xcopy kept failing. Also, since it's internal, how will I copy the registry settings that Sandboxie saves as files?<br>
+<br>
+If you saw what I did with "Delete Command", then you know how easy it is with an external command (especially when you know about %A  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink">  ).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 05, 2008 6:17 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I already described how to use registry export/import functions to populate the sandboxed registry.  As for XCOPY, I really see no reason why it shouldn't work.  So as I said earlier, I still don't see a reason to add an unsandboxed AutoExec, just because you are having some small problem with XCOPY that you have not yet resolved.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 05, 2008 7:55 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">It's really not the same to xcopy multiple folders + exporting registry + importing registry as opposed to just use a single (external) command.<br>
+<br>
+In any case, please move this topic into feature request. I've changed the subject of this topic to reflect Sandboxie currently doesn't have such a thing. Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Feb 04, 2010 9:44 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">I was thinking about this lately because I have a 130 Mb sandbox (which means 260 Mb when resorting to "Delete Command").<br>
+<br>
+You said to use OpenFilePath, but keep in mind I need to copy RegHive &amp; RegHive.LOG. Besides, doesn't Auto Exec only run after they're already created?<br>
+<br>
+Another issue is that environmental variables only work for settings and not for the sandbox itself. So "%Sandbox%" is not useable for Auto Exec.<br>
+<br>
+I just want to copy mysandbox_dummy into mysandbox before mysandbox starts. An external Auto Exec would just be "copy mysandbox_dummy mysandbox". Yes, I realize I can start Sandboxie through a third party (e.g. a batch file), but it'll never be the same thing. If Sandboxie already has the foundation for the external "Delete Command", why not doing the same thing for sandboxes' restarts (i.e. an external "Auto Exec")?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Feb 04, 2010 10:25 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">You can't copy over the reghive files of a sandbox if your program is running in that same sandbox.  You will have to use registry import/export commands to populate the sandboxed registry.<br>
+<br>
+I could add %sandbox% for AutoExec processing, but not external AutoExec, because it wouldn't work with forced programs, whereas the current form of AutoExec would work just fine.<br>
+<br>
+Why do you say that a batch file would "never be the same thing" ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Feb 04, 2010 11:40 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">So what I mean is something that runs before the sandbox even starts. Maybe "Pre Exec" would be a better a name for it. It does what it does before Sandboxie even has anything to do with the sandbox. Kind of like the difference between autoexec.bat and Programs=&gt;Startup.<br>
+<br>
+A batch file would mean:<br>
+1) An intimidating black screen.<br>
+2) It would have to be carried arround with the Sandboxie installation.<br>
+<br>
+BTW, I've noticed Delete Command doesn't support any internal variables except "%sandbox%" (which, as you know, is not the original "%sandbox%"). It also seems to do various minor things like taking the read-only flag off the root folder and unhiding RegHive.LOG. I was thinking to use Toucan - a portable free utlity that mirrors only changes - and then rename the special "%sandbox%" back to its name. Alas, the aforementioened small changes probably mean it's not a good idea. It would have only worked if there was a "Post Exec" command that doesn't necessarily involve deletion.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 05, 2010 12:43 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">lwc, I am not sure where you're going with this.  To whom are you distributing (or are you planning to distribute) installations of Sandboxie, who would be intimidated by the black screen?</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=2976&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:54:16 GMT -->
+</html>

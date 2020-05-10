@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/16614" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-10-02T02:55:55-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/16614</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-10-02T02:55:55-04:00</updated>
+
+		<published>2013-10-02T02:55:55-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16614&amp;p=94342#p94342</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16614&amp;p=94342#p94342"/>
+		<title type="html"><![CDATA[[.12] SbieCtrl.exe crash when opening Foobar in Sandboxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16614&amp;p=94342#p94342"><![CDATA[
+Fixed in version 4.05.12.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Oct 02, 2013 2:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[King Grub]]></name></author>
+		<updated>2013-09-30T07:50:55-04:00</updated>
+
+		<published>2013-09-30T07:50:55-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16614&amp;p=94290#p94290</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16614&amp;p=94290#p94290"/>
+		<title type="html"><![CDATA[[.12] SbieCtrl.exe crash when opening Foobar in Sandboxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16614&amp;p=94290#p94290"><![CDATA[
+Awesome! Thank you very much for the quick reply and a fantastic product.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=8143">King Grub</a> — Mon Sep 30, 2013 7:50 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-09-30T06:35:51-04:00</updated>
+
+		<published>2013-09-30T06:35:51-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16614&amp;p=94289#p94289</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16614&amp;p=94289#p94289"/>
+		<title type="html"><![CDATA[[.12] SbieCtrl.exe crash when opening Foobar in Sandboxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16614&amp;p=94289#p94289"><![CDATA[
+Thanks.  I am seeing the problem even in the later beta version 4.05.11.  I will check it out.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Sep 30, 2013 6:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[King Grub]]></name></author>
+		<updated>2013-09-29T09:37:40-04:00</updated>
+
+		<published>2013-09-29T09:37:40-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16614&amp;p=94272#p94272</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16614&amp;p=94272#p94272"/>
+		<title type="html"><![CDATA[[.12] SbieCtrl.exe crash when opening Foobar in Sandboxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16614&amp;p=94272#p94272"><![CDATA[
+Sandboxie 4.04<br><br>Windows 7 x64 Home Premium<br><br>When using restricted Start/Run access settings (I only let my browser run in the sandbox), and testing what happens when you try to run programs that aren't allowed to run in the sandbox, I found that running the Foobar executable <a href="http://www.foobar2000.org/getfile/d0f5125c10ff6354210f387cf999fff1/foobar2000_v1.2.9.exe" class="postlink">http://www.foobar2000.org/getfile/d0f51 ... v1.2.9.exe</a> after having put it in the sandbox makes SbieCtrl.exe crash with the following error:<br><br>Problem signature:<br>  Problem Event Name:APPCRASH<br>  Application Name:SbieCtrl.exe<br>  Application Version:4.4.0.0<br>  Application Timestamp:51daa260<br>  Fault Module Name:ntdll.dll<br>  Fault Module Version:6.1.7601.18229<br>  Fault Module Timestamp:51fb164a<br>  Exception Code:c0000005<br>  Exception Offset:000000000003076a<br>  OS Version:6.1.7601.2.1.0.768.3<br>  Locale ID:1053<br>  Additional Information 1:5261<br>  Additional Information 2:5261497c0de6f3305c0cd092aa569670<br>  Additional Information 3:3506<br>  Additional Information 4:35061099ccb780f80ea63c4c2a406621<br><br>Any other program I have tried to open in the sandbox gives the proper message from Sandboxie, that it can't start because it is restricted, but running the Foobar executable makes SbieCrtl.exe crash.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=8143">King Grub</a> — Sun Sep 29, 2013 9:37 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

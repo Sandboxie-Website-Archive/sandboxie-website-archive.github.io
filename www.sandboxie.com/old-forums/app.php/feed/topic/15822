@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15822" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-07-16T12:58:50-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15822</id>
+
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2013-07-16T12:58:50-04:00</updated>
+
+		<published>2013-07-16T12:58:50-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91959#p91959</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91959#p91959"/>
+		<title type="html"><![CDATA[Re: Strange problem with 4.02]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91959#p91959"><![CDATA[
+<blockquote><div><cite>djg05 wrote:</cite><br>Happy to report that the problem is not fixed in 404</div></blockquote>djg05, Tzuk is saying  that this problem will be fixed in the next beta version. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Tue Jul 16, 2013 12:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[djg05]]></name></author>
+		<updated>2013-07-16T05:41:02-04:00</updated>
+
+		<published>2013-07-16T05:41:02-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91944#p91944</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91944#p91944"/>
+		<title type="html"><![CDATA[Re: Strange problem with 4.02]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91944#p91944"><![CDATA[
+<blockquote><div><cite>djg05 wrote:</cite>I am using Windows 8/64 Pro.<br><br>I thought I had some sort of virus and have spent ages tracking it down. Eventually it turns out that it only occurs when I install ver 4.02. <br><br>This problem happens when I click on a link in my email client (The Bat) which is not run sandboxed. It happens whether or not the computer is plugged into the internet, and will also happen when I click on a link in Outpost f/w to connect to their site.<br><br>I deleted the content of the sandbox before trying.<br><br>The only other security at the time was Avast. The browser is Opera (default)<br><br>I am enclosing a screenshot of the problem. It seems to be trying to search some chinese location.<br><br>For the time being I am using ver 3.76 which is not affected<br><br>It appears I cannot upload an image.</div></blockquote>Happy to report that the problem is not fixed in 404<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1106">djg05</a> — Tue Jul 16, 2013 5:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-15T04:48:01-04:00</updated>
+
+		<published>2013-07-15T04:48:01-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91922#p91922</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91922#p91922"/>
+		<title type="html"><![CDATA[Opera strange Problems]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91922#p91922"><![CDATA[
+Finally able to reproduce this.  The key thing was as <strong>nph</strong> mentioned above -- must have an instance of Opera already running in the sandbox to see the problem.  Should have noticed this point earlier, I apologize.  This will be fixed in the next beta version.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Jul 15, 2013 4:48 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-07-12T08:11:12-04:00</updated>
+
+		<published>2013-07-12T08:11:12-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91825#p91825</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91825#p91825"/>
+		<title type="html"><![CDATA[Opera strange Problems]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91825#p91825"><![CDATA[
+I would like to point out that I get the same error in Opera 12.16 as well in Windows 8 x64 and the latest maxthon Stable.<p>Statistics: Posted by Guest — Fri Jul 12, 2013 8:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-12T03:52:05-04:00</updated>
+
+		<published>2013-07-12T03:52:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91806#p91806</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91806#p91806"/>
+		<title type="html"><![CDATA[Opera strange Problems]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91806#p91806"><![CDATA[
+I was not able to experience the problem first hand and I don't know what I changed in Sandboxie that made a difference in Opera.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Jul 12, 2013 3:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Shinigami]]></name></author>
+		<updated>2013-07-11T12:37:38-04:00</updated>
+
+		<published>2013-07-11T12:37:38-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91787#p91787</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91787#p91787"/>
+		<title type="html"><![CDATA[Same Problem with Opera 12.16]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91787#p91787"><![CDATA[
+Hey,<br><br>I updated now my Sandboxie to 4.04 and it seams to work now with Opera 15.0.1147.141 but I have still the same Problem now with Opera 12.16.<br>Can it be fixed too?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16389">Shinigami</a> — Thu Jul 11, 2013 12:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-07-08T11:40:00-04:00</updated>
+
+		<published>2013-07-08T11:40:00-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91625#p91625</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91625#p91625"/>
+		<title type="html"><![CDATA[same problem]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91625#p91625"><![CDATA[
+Same problem with Opera (12.14) and  Sandboxie 4.03 x64 ... Update to 4.04 does not change it.<p>Statistics: Posted by Guest — Mon Jul 08, 2013 11:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-04T06:05:22-04:00</updated>
+
+		<published>2013-07-04T06:05:22-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91477#p91477</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91477#p91477"/>
+		<title type="html"><![CDATA[Opera strange Problems]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91477#p91477"><![CDATA[
+I can't reproduce the problem, I'm afraid.  Please try version 4.03.03 to see if it makes a difference.<br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=15836" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15836</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Jul 04, 2013 6:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-03T07:34:13-04:00</updated>
+
+		<published>2013-07-03T07:34:13-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91447#p91447</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91447#p91447"/>
+		<title type="html"><![CDATA[Opera strange Problems]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91447#p91447"><![CDATA[
+There are a couple of posts about Opera strangely changing the character set it uses.<br><br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=15842" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15842</a><br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=15822" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15822</a><br><br>I will try to look into this soon.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Jul 03, 2013 7:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nph]]></name></author>
+		<updated>2013-07-02T22:01:01-04:00</updated>
+
+		<published>2013-07-02T22:01:01-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91433#p91433</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91433#p91433"/>
+		<title type="html"><![CDATA[[4.03.03] IPC Problem]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91433#p91433"><![CDATA[
+Hi,<br><br>first of all, thanks for the great sw!<br><br>I have a problem with IPC in the new versions (4.02 - 4.03.03)<br><br>When I start Opera with an argument, like this:<div class="codebox"><p>CODE: </p><pre><code>start.exe /box:default opera.exe google.com</code></pre></div>it works perfectly for the first time. But if the process already exists, the second one finds the first one successfully, and then sends junk characters to it (instead of "google.com"). In fact, it sends them even without passing any argument to opera.exe.<br><br>Opera 11.64:<br><a href="http://www.opera.com/download/guide/?ver=11.64" class="postlink">http://www.opera.com/download/guide/?ver=11.64</a><br><br>Win 7 x64<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16546">nph</a> — Tue Jul 02, 2013 10:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gilladur]]></name></author>
+		<updated>2013-06-27T05:21:39-04:00</updated>
+
+		<published>2013-06-27T05:21:39-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91196#p91196</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91196#p91196"/>
+		<title type="html"><![CDATA[Same her]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91196#p91196"><![CDATA[
+I can confirm this problem - very strange. All external links, if opera is the standard browser open a google page with Asian typos in the searchbox? Here is some already complaining about that issue but no reply so far<br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=15822&amp;highlight=external+link+opera" class="postlink">http://www.sandboxie.com/phpbb/viewtopi ... link+opera</a><br><br>I am using Windows 8/64 Pro too, but had this problem also with windows 7 x64 and v4.02<br><br>This is at some point very disappointing, using a software to be more secure which behaves that strange an no one reacts on this issue. <br><br><br>Cheers<br><br>Gilladur<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16496">gilladur</a> — Thu Jun 27, 2013 5:21 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[djg05]]></name></author>
+		<updated>2013-06-25T15:59:20-04:00</updated>
+
+		<published>2013-06-25T15:59:20-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91121#p91121</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91121#p91121"/>
+		<title type="html"><![CDATA[Strange problem with 4.02]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91121#p91121"><![CDATA[
+I am using Windows 8/64 Pro.<br><br>I thought I had some sort of virus and have spent ages tracking it down. Eventually it turns out that it only occurs when I install ver 4.02. <br><br>This problem happens when I click on a link in my email client (The Bat) which is not run sandboxed. It happens whether or not the computer is plugged into the internet, and will also happen when I click on a link in Outpost f/w to connect to their site.<br><br>I deleted the content of the sandbox before trying.<br><br>The only other security at the time was Avast. The browser is Opera (default)<br><br>I am enclosing a screenshot of the problem. It seems to be trying to search some chinese location.<br><br>For the time being I am using ver 3.76 which is not affected<br><br>It appears I cannot upload an image.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1106">djg05</a> — Tue Jun 25, 2013 3:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Shinigami]]></name></author>
+		<updated>2013-06-24T05:10:10-04:00</updated>
+
+		<published>2013-06-24T05:10:10-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91034#p91034</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91034#p91034"/>
+		<title type="html"><![CDATA[Opera strange Problems]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15822&amp;p=91034#p91034"><![CDATA[
+Hi Sandboxie Community,<br><br>I have since the v4.02 strange Problems with my Browser Opera in Sandboxie.<br><br>I`m using Windows 7 64bit Pro <br><br>First Problem:<br>With this Version it opens Opera in a new instance:  <img src="http://s15.postimg.org/j8twyenbb/klick1.jpg" class="postimage" alt="Image">  <img src="http://s12.postimg.org/65kx5dmyx/klick2.jpg" class="postimage" alt="Image"><br>This is not that grave but still irritating.<br><br>The bigger Problem is:<br>If Opera is already open in Sandboxie and I click on a external link like from Teamspeak or Word Document it looks like that: <a href="http://postimg.org/image/ocadyyytv/" class="postlink"><img src="http://s13.postimg.org/ocadyyytv/strange.jpg" class="postimage" alt="Image"></a><br><br>I had no one of this Problems in the previous Version. Hope u can fix it soon.<br><br>Sincere regards and sorry for my bad english <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>Shinigami<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16389">Shinigami</a> — Mon Jun 24, 2013 5:10 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

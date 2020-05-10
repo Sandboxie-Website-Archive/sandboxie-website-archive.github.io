@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10042&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; open in .. sandboxie</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>open in .. sandboxie</h2>
+		<p><a href="viewtopic1ed71ed7.html?f=4&amp;t=10042">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=10042</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>open in .. sandboxie</h3>
+				<div class="date">Posted: <strong>Sat Mar 05, 2011 10:01 am</strong></div>
+				<div class="author">by <strong>richrmg</strong></div>
+				<div class="content">i don't always browse in a sandbox instance of Firefox. but sometimes i come across a link that i just not sure i can trust on a web page and would link to sandbox . i would like to see a feature added to that i can right click the link and along with open in new tab and open new window a third option of open in sandboxie would be avail.   <br>
+<br>
+if this is already a feature  please let me know how to turn it on    if it is not  i think it would be useful and would like to see this added  thank-you</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 05, 2011 3:01 pm</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content">The problem with this request, is that I believe it would mean tzuk would have to create an addon for Firefox as thats the only way to edit the Firefox context menu, which tzuk would have to do if he wanted to add a "Open link in Sandboxie" option.<br>
+I think Sandboxie used to do this with Internet Explorer though years ago, like 5-6 years, it was a toolbar for IE if I remember correctly? <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 05, 2011 3:22 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Yeah, there was a toolbar for IE 6, a long time ago.  Probably not going to bring back that kind of functionality.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 05, 2011 5:53 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">You can use the Firefox extension <a href="https://addons.mozilla.org/en-US/firefox/addon/ie-view/" class="postlink">IE View</a> to do what you want.<br>
+I've done this in the past.<br>
+Since IE View adds a context menu to Firefox, you have to remember that 'IE' means 'sandboxed Fx', on its right-click context menu.<br>
+<br>
+Explanation:<br>
+IE View is normally used to open a web page or a link in IE, while browsing with Firefox, if you find a web page that doesn't work well in Firefox.<br>
+You normally use its right-click menu in Firefox, to open the page or link using IE.<br>
+But since you can define the path\filename for the program that IE View runs, you don't have to set it to run IE.<br>
+You can set the path\filename so that it runs Sandboxie's "Start.exe" program, instead of "iexplore.exe".<br>
+Then you use the Arguments (Optional) box to list the sandbox name, and also the path to "Firefox.exe".<br>
+<br>
+Instructions -<br>
+After installing the IE View extension and then restarting Firefox to complete the install, go to Options for IE View.<br>
+Use the "Find" button, to navigate to and select Sandboxie's "Start.exe" program.<br>
+<br>
+For example (<strong>for Windows XP</strong>):<br>
+IE Location box:<br>
+<strong>C:\Program Files\Sandboxie\Start.exe</strong><br>
+<br>
+Then in the Arguments (Optional) box:<br>
+<strong>/box:DefaultBox C:\Program Files\Mozilla Firefox\Firefox.exe</strong><br>
+<br>
+Put your sandbox name in place of 'DefaultBox', if you are using some other sandbox.<br>
+If your path to firefox.exe is not the same as above, you must edit that.<br>
+Please NOTE: There must not be any quote characters (") in either of the two lines.<br>
+So, don't enclose path\filename inside quotes ("").<br>
+Save your work.<br>
+<br>
+From unsandboxed Firefox's menus, you would use the choices:<br>
+Open Link target in IE<br>
+View This Page in IE<br>
+Open in Internet Explorer<br>
+<br>
+What they would actually do is to:<br>
+Open Link target in sandboxed Fx<br>
+View This Page in sandboxed Fx<br>
+Open in sandboxed Firefox<br>
+<br>
+Check out the "Advanced" tab in IE View's Options -<br>
+If there are sites that you want to <strong>Always</strong> view in a sandboxed Fx, when you are using the unsandboxed browser:<br>
+from the Firefox Tools menu, you can select to Always View this page using IE (or in this case, using sandboxed Fx).<br>
+<br>
+And, there's also an option to close any blank tab or window that may be created when you use the right-click menu choices.<br>
+-----------<br>
+A problem with the above, is that if you only have one Firefox profile, then when the sandboxed instance of Firefox runs it will be using the same profile files as the unsandboxed instance.<br>
+The sandboxed instance may not be able to access items like bookmarks, since the unsandboxed Firefox already has those items open.<br>
+<br>
+If you have (or create) a second Firefox profile, you can change the Arguments line to list the other profile's 'name' on the command line.<br>
+That way an instance of Firefox that uses a different set of profile files, will run sandboxed:<br>
+<br>
+<strong>/box:DefaultBox C:\Program Files\Mozilla Firefox\firefox.exe <span style="color: red">-P</span> <span style="color: green">name</span></strong><br>
+<br>
+Note: The <span style="color: red"><strong>-P</strong></span> on the line MUST be a capital -P; a lower case -p will not work.<br>
+And <span style="color: green"><strong>name</strong></span> is the name given to the second Firefox profile.<br>
+<br>
+This way, the sandboxed instance of Firefox that runs, will be using its own profile files.<br>
+Again, please note that quote characters are NOT used around the program path\filename or around the profile name - as would normally be the case for Windows command lines, or when including a Firefox profile name on the command line.<br>
+<br>
+Keep the number of extensions in the second Firefox profile to a minimum, since you will be updating extensions in that profile too (while running it unsandboxed).<br>
+<br>
+If the second Firefox profile also has IE View installed, and you set up it's options so that it actually does run IE - by putting the path to "iexplore.exe" in the IE Location box - then the sandboxed Firefox can be used to open a page or a link in a sandboxed IE, using the same sandbox.<br>
+Example, on XP -<br>
+IE Location:<br>
+<strong>C:\Program Files\Internet Explorer\iexplore.exe</strong><br>
+<br>
+Arguments (Optional):<br>
+(Not used)</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10042&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:16 GMT -->
+</html>

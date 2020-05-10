@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=3492&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; NTFS permissions</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>NTFS permissions</h2>
+		<p><a href="viewtopicab48-2ab48.html?f=4&amp;t=3492">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=3492</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>NTFS permissions</h3>
+				<div class="date">Posted: <strong>Wed Jun 18, 2008 10:32 am</strong></div>
+				<div class="author">by <strong>ç</strong></div>
+				<div class="content">I noticed that every file or folder created by Sandboxie on a NTFS volume has Full Control to the Everyone group. This sounds like a security issue for me, as anybody can read/write sandboxed content created by other user. I know that the sandboxes are supposed to be able to read each other's content, but I think there's no need to let all files world-writable.<br>
+<br>
+Wouldn't it be better if we could choose the NTFS permissions applied to the sandboxes or the container folder? (without breaking compatibility with FAT units, of course)  Say, adding a system-wide option to set the permissions applied to the container folder, and a per-user option to set the permissions applied to all sandboxes belonging to that user.<br>
+<br>
+Setting the permissions manually does seem to work, but every new file created doesn't inherit the permissions.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jun 19, 2008 8:47 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The rationale, even if you find it meaningless for your use case, is to make it easy for many user accounts to share the same sandbox, and to make it as easy as possible to move the contents of a sandbox across computers.<br>
+<br>
+What if you set permissions on the folder above the sandboxes?  Your sandboxes should be within a C:\Sandbox\user folder, so you can try to set permission on that folder.<br>
+<br>
+If you think that could be useful, consider that you may also need to strip the "Bypass traverse checking" privilege from user accounts in your computer.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun May 06, 2012 7:17 pm</strong></div>
+				<div class="author">by <strong>rotbart</strong></div>
+				<div class="content"><blockquote class="uncited"><div>I noticed that every file or folder created by Sandboxie on a NTFS volume has Full Control to the Everyone group. This sounds like a security issue for me, as anybody can read/write sandboxed content created by other user. I know that the sandboxes are supposed to be able to read each other's content, but I think there's no need to let all files world-writable. <br>
+<br>
+Wouldn't it be better if we could choose the NTFS permissions applied to the sandboxes or the container folder? (without breaking compatibility with FAT units, of course) Say, adding a system-wide option to set the permissions applied to the container folder, and a per-user option to set the permissions applied to all sandboxes belonging to that user. <br>
+<br>
+Setting the permissions manually does seem to work, but every new file created doesn't inherit the permissions.</div></blockquote>
+I totally agree with you. On a multi user system the default permissions of the Sandbox folder are unacceptable.<br>
+
+<blockquote class="uncited"><div>The rationale, even if you find it meaningless for your use case, is to make it easy for many user accounts to share the same sandbox, and to make it as easy as possible to move the contents of a sandbox across computers.</div></blockquote>
+Why should different users share the same sandbox? What's the benefit?<br>
+<br>
+Or do you refer to the "Sandbox" <em>folder</em> (i.e. <strong>C:\Sandbox</strong>). If that is the case, I have to disagree with you. Because this is not about the permissions of the <strong>C:\Sandbox</strong> folder, but rather about the permissions of the <strong>C:\Sandbox\&lt;User&gt;</strong> folders.<br>
+<br>
+For example, the folder <strong>C:\Sandbox\<span style="text-decoration: underline">rotbart</span></strong> should be readable/writable only by the user <strong><span style="text-decoration: underline">rotbart</span></strong>. However, at the moment every user of the system can read all the files in the sandboxes of all other users. This is a serious breach of privacy. <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> <br>
+<br>
+Best regards,<br>
+rotbart</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 02, 2012 1:17 pm</strong></div>
+				<div class="author">by <strong>Stephan</strong></div>
+				<div class="content"><blockquote><div><cite>rotbart wrote:</cite><blockquote class="uncited"><div>I noticed that every file or folder created by Sandboxie on a NTFS volume has Full Control to the Everyone group. This sounds like a security issue for me, as anybody can read/write sandboxed content created by other user. I know that the sandboxes are supposed to be able to read each other's content, but I think there's no need to let all files world-writable. <br>
+<br>
+Wouldn't it be better if we could choose the NTFS permissions applied to the sandboxes or the container folder? (without breaking compatibility with FAT units, of course) Say, adding a system-wide option to set the permissions applied to the container folder, and a per-user option to set the permissions applied to all sandboxes belonging to that user. <br>
+<br>
+Setting the permissions manually does seem to work, but every new file created doesn't inherit the permissions.</div></blockquote>
+I totally agree with you. On a multi user system the default permissions of the Sandbox folder are unacceptable.<br>
+
+<blockquote class="uncited"><div>The rationale, even if you find it meaningless for your use case, is to make it easy for many user accounts to share the same sandbox, and to make it as easy as possible to move the contents of a sandbox across computers.</div></blockquote>
+Why should different users share the same sandbox? What's the benefit?<br>
+<br>
+Or do you refer to the "Sandbox" <em>folder</em> (i.e. <strong>C:\Sandbox</strong>). If that is the case, I have to disagree with you. Because this is not about the permissions of the <strong>C:\Sandbox</strong> folder, but rather about the permissions of the <strong>C:\Sandbox\&lt;User&gt;</strong> folders.<br>
+<br>
+For example, the folder <strong>C:\Sandbox\<span style="text-decoration: underline">rotbart</span></strong> should be readable/writable only by the user <strong><span style="text-decoration: underline">rotbart</span></strong>. However, at the moment every user of the system can read all the files in the sandboxes of all other users. This is a serious breach of privacy. <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> <br>
+<br>
+Best regards,<br>
+rotbart</div></blockquote>I support this 100%. Why should other people be able to open my sandbox by default?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Dec 08, 2012 12:53 pm</strong></div>
+				<div class="author">by <strong>rotbart</strong></div>
+				<div class="content">Actually, this should not be in Feature Requests. It poses a serious vulnerability on multi-user systems. Anybody can see this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 09, 2012 6:20 am</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content"><blockquote><div><cite>rotbart wrote:</cite>Actually, this should not be in Feature Requests. It poses a serious vulnerability on multi-user systems. Anybody can see this.</div></blockquote>
+
+I agree with what has been mentioned in this thread. I'm the only user of this system, but many people share the same system, using different user accounts, and therefore each user should have his/her own sandbox container folder, thus retaining privacy.<br>
+<br>
+I hope this is taken care of as soon as possible.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 09, 2012 6:22 am</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content"><blockquote><div><cite>fanish wrote:</cite><blockquote><div><cite>rotbart wrote:</cite>Actually, this should not be in Feature Requests. It poses a serious vulnerability on multi-user systems. Anybody can see this.</div></blockquote>
+
+I agree with what has been mentioned in this thread. I'm the only user of this system, but many people share the same system, using different user accounts, and therefore each user should have his/her own sandbox container folder, thus retaining privacy.<br>
+<br>
+I hope this is taken care of as soon as possible.</div></blockquote>
+
+What I meant with with "each user should have his/her own sandbox container folder", is that, it work just fine if each user's sandbox container was created in the user profile folder instead of C:\.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 09, 2012 11:16 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">There was a time, years ago, when the "Sandbox" folder was located at:<br>
+%AppData%\Sandbox<br>
+<br>
+But it sometimes led to some very long paths to files in the sandbox, especially on XP:<br>
+Example:<br>
+C:\Documents and Settings\Paul\Application Data\Sandbox\DefaultBox\user\current\Mozilla\Firefox\Profiles\xxxxxxxx.Default\bookmarkbackups\bookmarks-2012-12-09.json<br>
+<br>
+Occasionally the paths to files in the sandbox were much longer than that, if a program made use of many sub-folders.<br>
+It was enough to sometimes give Windows a problem, because those programs didn't anticipate that Sandboxie would add additional folders to the path to its files, so the "Sandbox" folder was moved to C:\Sandbox to shorten the path a little.<br>
+<br>
+That's the default location for the "Sandbox" folder now, but anyone who wants to can move their sandboxes underneath the users' %AppData% folder by using "Set Container Folder" under the Sandbox menu:<br>
+%AppData%\Sandbox\%Sandbox%</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Dec 10, 2012 10:21 am</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content"><blockquote><div><cite>Guest10 wrote:</cite>There was a time, years ago, when the "Sandbox" folder was located at:<br>
+%AppData%\Sandbox<br>
+<br>
+But it sometimes led to some very long paths to files in the sandbox, especially on XP:<br>
+Example:<br>
+C:\Documents and Settings\Paul\Application Data\Sandbox\DefaultBox\user\current\Mozilla\Firefox\Profiles\xxxxxxxx.Default\bookmarkbackups\bookmarks-2012-12-09.json<br>
+<br>
+Occasionally the paths to files in the sandbox were much longer than that, if a program made use of many sub-folders.<br>
+It was enough to sometimes give Windows a problem, because those programs didn't anticipate that Sandboxie would add additional folders to the path to its files, so the "Sandbox" folder was moved to C:\Sandbox to shorten the path a little.<br>
+<br>
+That's the default location for the "Sandbox" folder now, but anyone who wants to can move their sandboxes underneath the users' %AppData% folder by using "Set Container Folder" under the Sandbox menu:<br>
+%AppData%\Sandbox\%Sandbox%</div></blockquote>
+
+Now that you mention it, it actually makes sense to be placed at C:\Sandbox. So, like user <strong>rotbart</strong>, it would be best that each user sandbox is only available to the user, and also to the administrator, of course.<br>
+<br>
+It would similar to what happens in C:\Program Files (or another place). If the administrator wants, he can restrict ABC user from accessing a folder XYZ. Sandboxie could do the same to each user sandbox. Only the user and the administrator would be able to access it.<br>
+<br>
+<img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 30, 2012 3:50 pm</strong></div>
+				<div class="author">by <strong>slbox</strong></div>
+				<div class="content">Thanks for pointing out this thread, Guest10.<br>
+
+<blockquote><div><cite>Guest10 wrote:</cite>There was a time, years ago, when the "Sandbox" folder was located at:<br>
+%AppData%\Sandbox <br>
+<br>
+But it sometimes led to some very long paths to files in the sandbox, especially on XP:<br>
+Example:<br>
+C:\Documents and Settings\Paul\Application Data\Sandbox\DefaultBox\user\current\Mozilla\Firefox\Profiles\xxxxxxxx.Default\bookmarkbackups\bookmarks-2012-12-09.json<br>
+<br>
+Occasionally the paths to files in the sandbox were much longer than that, if a program made use of many sub-folders.<br>
+It was enough to sometimes give Windows a problem, because those programs didn't anticipate that Sandboxie would add additional folders to the path to its files, so the "Sandbox" folder was moved to C:\Sandbox to shorten the path a little.</div></blockquote>
+
+Well I guess on Windows 7, it would be C:\Users\username\AppData\Roaming\SandBox\DefaultBox\... versus C:\Sandbox\username\DefaultBox\...  So it saves about 20 characters in the path to keep it in C:\Sandbox.  But still there is the possibility of paths that are too long even if you keep it in C:\Sandbox, right?<br>
+
+<blockquote><div><cite>Guest10 wrote:</cite>
+That's the default location for the "Sandbox" folder now, but anyone who wants to can move their sandboxes underneath the users' %AppData% folder by using "Set Container Folder" under the Sandbox menu:<br>
+%AppData%\Sandbox\%Sandbox%</div></blockquote>
+
+Thanks, I will look into that.  The other possibility is to just change permissions on the C:\Sandbox\username directories.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 06, 2013 10:41 pm</strong></div>
+				<div class="author">by <strong>slbox</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>What if you set permissions on the folder above the sandboxes?  Your sandboxes should be within a C:\Sandbox\user folder, so you can try to set permission on that folder.<br>
+<br>
+If you think that could be useful, consider that you may also need to strip the "Bypass traverse checking" privilege from user accounts in your computer.</div></blockquote>
+
+I have changed the permissions on the C:\Sandbox\&lt;username&gt; folders, and can confirm that you would need to remove the "Bypass traverse checking" privilege in order to make it 100% secure.  My limited-user account is not able to cd into C:\Sandbox\Administrator, but is able to cd into C:\Sandbox\Administrator\DefaultBox from the command line.  That's not good.<br>
+<br>
+From what I've read about the "Bypass traverse checking" privilege, it's probably not a good idea to remove it.  Microsoft says on this page <a href="http://technet.microsoft.com/en-us/library/dd349804(v=ws.10).aspx#BKMK_9" class="postlink">http://technet.microsoft.com/en-us/libr ... spx#BKMK_9</a> that many applications were designed under the assumption that users would have that privilege, so if you remove it, then applications may break.  Also I've read that removing the privilege will decrease performance because the system needs to check the permissions of all the directories along a path.<br>
+<br>
+Is there any reason why the C:\Sandbox\&lt;username&gt;\&lt;sandbox name&gt; folders need to have the Allow Full Control to Authenticated Users/Everyone permissions directly defined on them?  Can you make those sandbox folders just inherit the permissions of C:\Sandbox\&lt;username&gt; (which I believe already default to allowing Full Control to Authenticated Users/Everyone), that way people like me can change the permissions on C:\Sandbox\&lt;username&gt; and everything underneath will just inherit those permissions and it will be fully secure?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 17, 2013 2:15 pm</strong></div>
+				<div class="author">by <strong>Username</strong></div>
+				<div class="content"><strong>Ronen</strong>, why don't you let the people go?<br>
+<br>
+I mean if a person is able to use your PC then what you could mind against it, pals?<br>
+If you were clever enough to use a simple login or even autologin then what it has to do with the SBIE, I wonder? I'll tell you what, the software is for virtual machine environment separation only, not for  <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> <br>
+Should you really like some extra-secure-secure security then consider using efs/ciphering, locking or an extra restricted partition, providing you have the rights.<br>
+<br>
+Sorry guys, but you are not talking sense.<br>
+<br>
+<br>
+On the other hand, instead of bushing around in vain, perhaps it might be handy to have some keyfile, say on the flashdrive, without which users can't run/delete/ configure the SBIE...<br>
+<br>
+Even more loud cries and moans from those who 'purely by chance' lost the file, yep?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 21, 2013 10:07 am</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content"><blockquote><div><cite>Username wrote:</cite><strong>Ronen</strong>, why don't you let the people go?<br>
+<br>
+I mean if a person is able to use your PC then what you could mind against it, pals?<br>
+If you were clever enough to use a simple login or even autologin then what it has to do with the SBIE, I wonder? I'll tell you what, the software is for virtual machine environment separation only, not for  <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> <br>
+Should you really like some extra-secure-secure security then consider using efs/ciphering, locking or an extra restricted partition, providing you have the rights.<br>
+<br>
+Sorry guys, but you are not talking sense.<br>
+<br>
+<br>
+On the other hand, instead of bushing around in vain, perhaps it might be handy to have some keyfile, say on the flashdrive, without which users can't run/delete/ configure the SBIE...<br>
+<br>
+Even more loud cries and moans from those who 'purely by chance' lost the file, yep?</div></blockquote>
+
+I think you're forgetting about one important aspect:<br>
+<br>
+Not everyone owns their own computer. There are millions of children whose computers are property of their parents, and the parents control the use of the computer. That includes not letting brother A access sister B user account data. So, as a parent I would like to retain child A privacy from child B and so on and so forth.<br>
+<br>
+Please, let's not discuss about parental control, because that's another topic and well taken care of in this house. I'm only talking about privacy. Child A has no business knowing what Child B is doing... only the parents have to know what happens under the different children user accounts.<br>
+<br>
+It's just my opinion. But, I don't believe anyone should have to lose their privacy due to security.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 21, 2013 4:42 pm</strong></div>
+				<div class="author">by <strong>Sputnik</strong></div>
+				<div class="content"><blockquote><div><cite>Username wrote:</cite><strong>Ronen</strong>, why don't you let the people go?<br>
+<br>
+I mean if a person is able to use your PC then what you could mind against it, pals?<br>
+If you were clever enough to use a simple login or even autologin then what it has to do with the SBIE, I wonder? I'll tell you what, the software is for virtual machine environment separation only, not for  <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> <br>
+Should you really like some extra-secure-secure security then consider using efs/ciphering, locking or an extra restricted partition, providing you have the rights.<br>
+<br>
+Sorry guys, but you are not talking sense.<br>
+<br>
+<br>
+On the other hand, instead of bushing around in vain, perhaps it might be handy to have some keyfile, say on the flashdrive, without which users can't run/delete/ configure the SBIE...<br>
+<br>
+Even more loud cries and moans from those who 'purely by chance' lost the file, yep?</div></blockquote>So if I download some horse (censored) to my computer and it sits there in Sandboxie I should have no privacy whatsoever just because I get turned on by something weird and I happen to have siblings, that's what you are saying?<br>
+<br>
+HP was just an example BTW.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 29, 2013 3:02 pm</strong></div>
+				<div class="author">by <strong>Guestd</strong></div>
+				<div class="content">I'd like to ask if one were to change the permissions in C:\Sandbox\username, what exactly would need to be done, in order to keep things secure/manageable?<br>
+<br>
+By default the allowed groups are Authenticated Users and Everyone, and they all have full access, including to C:\Sandbox.<br>
+<br>
+I was wondering if it would be a safe best to mimic the C:\Users folder permissions into C:\Sandbox, meaning that now Everyone, SYSTEM, Administrators and Users groups have access to C:\Sandbox. Then, for each C:\Sandbox\&lt;user_account_name&gt;, we would then mimic the permissions for the user profile folders inside of C:\Users? Meaning that for each user sandbox folder, we'd have the permissions for SYSTEM, Administrators and User.account. With the exact permissions, of course as we have in both C:\Users and C:\Users\User.account.<br>
+<br>
+By doing this, then User.A (and the administrator) would access C:\Sandbox\UserA_Sandbox, but User.B would not be able to access it, the same way it wouldn't be able to access User.B's user profile folder, and vice-versa.<br>
+<br>
+What do you think? And, would a new Sandboxie install (an upgrade) restore the permissions back to what they were? (I suppose it would, not sure.)<br>
+<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=3492&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:12 GMT -->
+</html>

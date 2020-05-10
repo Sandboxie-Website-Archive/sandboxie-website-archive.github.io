@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15561" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-06-02T06:33:47-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15561</id>
+
+		<entry>
+		<author><name><![CDATA[Barnaba]]></name></author>
+		<updated>2013-06-02T06:33:47-04:00</updated>
+
+		<published>2013-06-02T06:33:47-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90341#p90341</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90341#p90341"/>
+		<title type="html"><![CDATA[Sandboxie and Solid Converter]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90341#p90341"><![CDATA[
+Thank you.<br>All works perfectly!<br><br>Sandboxie does not display any messages.<br>Perhaps because the created PDF file is opened in Adobe Reader (my default PDF viewer).<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1343">Barnaba</a> — Sun Jun 02, 2013 6:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-05-31T05:47:03-04:00</updated>
+
+		<published>2013-05-31T05:47:03-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90310#p90310</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90310#p90310"/>
+		<title type="html"><![CDATA[Sandboxie and Solid Converter]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90310#p90310"><![CDATA[
+I tried this on 64-bit Windows 7 (but not Windows 8 or XP) and I could reproduce a crash during printing so I assume it is the same crash.<br><br>I fixed it by adding compatibility settings for SolidConverterPDF, which would be offered to you automatically on upgrade to version 4.10.12.<br><br>Please note that the PDF viewer part of Solid Converter seems to hang under Sandboxie, so I added a setting to block it from running under Sandboxie.  You'll get an error that Sandboxie is canceling some process, you can safely hide it and ignore it.  (I.e. just click the HIDE button when the message appears the first time.)<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri May 31, 2013 5:47 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-05-29T10:37:18-04:00</updated>
+
+		<published>2013-05-29T10:37:18-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90255#p90255</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90255#p90255"/>
+		<title type="html"><![CDATA[Sandboxie and Solid Converter]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90255#p90255"><![CDATA[
+I had somewhat different results on my <strong>XP</strong> VirtualBox install.<br><br>The SolidConverterPDF program did not crash, and was successful in printing the .PDF from sandboxed Firefox.<br>However, sandboxed Firefox was shutdown each time that I printed, for unknown reasons.<br><br>----<br>Firefox 21, Sandboxie 4.01.11, XP SP3<br>Trial version installs:<br>.NET Framework 4 Extended<br>Visual Studio 2010 Tools for Office Runtime<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Wed May 29, 2013 10:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Barnaba]]></name></author>
+		<updated>2013-05-29T08:30:24-04:00</updated>
+
+		<published>2013-05-29T08:30:24-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90252#p90252</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90252#p90252"/>
+		<title type="html"><![CDATA[Sandboxie and Solid Converter]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90252#p90252"><![CDATA[
+For example:<br>I run Firefox (or another program) in the sandbox and I want to "print" page (create a PDF file from the content of this page).<br> <br>Firefox -&gt; Print (Printer Solid PDF Creator) -&gt; OK<br><br>When creating a PDF, program Solid Converter crashes.<br><br>Log Windows<br><br><em>snipped. --tzuk</em><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1343">Barnaba</a> — Wed May 29, 2013 8:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-05-29T07:14:14-04:00</updated>
+
+		<published>2013-05-29T07:14:14-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90249#p90249</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90249#p90249"/>
+		<title type="html"><![CDATA[Sandboxie and Solid Converter]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90249#p90249"><![CDATA[
+You didn't say the program crashes on start up -- you said it crashes when you do something specific with it.  So, I have to know what to do, so I can trigger the crash.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed May 29, 2013 7:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Barnaba]]></name></author>
+		<updated>2013-05-29T06:32:46-04:00</updated>
+
+		<published>2013-05-29T06:32:46-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90247#p90247</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90247#p90247"/>
+		<title type="html"><![CDATA[Sandboxie and Solid Converter]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90247#p90247"><![CDATA[
+I have installed the latest version 4.01.11. <br>The program does not work with any version Sandboxie 4.<br><br>Program website:<br><br><a href="http://www.soliddocuments.com/features.htm?product=SolidConverterPDF" class="postlink">http://www.soliddocuments.com/features. ... nverterPDF</a><br><br>Log  Sandboxie:<br><br><em>snipped. --tzuk</em><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1343">Barnaba</a> — Wed May 29, 2013 6:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-05-29T05:25:34-04:00</updated>
+
+		<published>2013-05-29T05:25:34-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90245#p90245</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90245#p90245"/>
+		<title type="html"><![CDATA[Sandboxie and Solid Converter]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90245#p90245"><![CDATA[
+I don't know this software so I am going to need exact instructions.  Where do I get it, how do I use it.<br><br>And did you try with the latest version 4.01.11 ?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed May 29, 2013 5:25 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Barnaba]]></name></author>
+		<updated>2013-05-29T04:27:44-04:00</updated>
+
+		<published>2013-05-29T04:27:44-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90241#p90241</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90241#p90241"/>
+		<title type="html"><![CDATA[Sandboxie and Solid Converter]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15561&amp;p=90241#p90241"><![CDATA[
+I use Solid Converter v8 on Windows 8 (64-bit).<br>Solid Converter adds a virtual printer Solid PDF Creator to the system, which allows you to create a PDF file from any application.<br><br>If I print with Solid PDF Creator in Firefox 21 sandboxed (Sandboxie 4) is Solid PDF Creator crashes.<br>If I print with Solid PDF Creator in Firefox 21 sandboxed (Sandboxie 3) the Solid PDF Creator works perfectly!<br><br>Please solve this problem in Sandboxie 4<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1343">Barnaba</a> — Wed May 29, 2013 4:27 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25333&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; cannot read osver from CLR, what should I do</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>cannot read osver from CLR, what should I do</h2>
+		<p><a href="viewtopic62c562c5.html?f=17&amp;t=25333">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25333</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>cannot read osver from CLR, what should I do</h3>
+				<div class="date">Posted: <strong>Fri Jan 12, 2018 11:45 am</strong></div>
+				<div class="author">by <strong>v2y</strong></div>
+				<div class="content">build.cmd: <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>%windir%\Microsoft.NET\Framework\v4.0.30319\csc test.cs /win32manifest:test.manifest</code></pre></div>
+
+test.cs: <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>using System;
+
+namespace ConsoleApplication
+{
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+			Console.WriteLine("ver.{0}.{1}",Environment.OSVersion.Version.Major,Environment.OSVersion.Version.Minor);
+		}
+	}
+}
+
+</code></pre></div>
+
+test.manifest: <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1"&gt;
+    &lt;compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1"&gt;
+        &lt;application&gt;
+            &lt;supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/&gt;
+            &lt;supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"/&gt;
+            &lt;supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/&gt;
+            &lt;supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" /&gt;
+        &lt;/application&gt;
+    &lt;/compatibility&gt;
+&lt;/assembly&gt;
+</code></pre></div>
+
+Under Windows 10 and sandboxed, test.exe said: <blockquote class="uncited"><div>ver.6.2</div></blockquote>
+
+related: <a href="http://msdn.microsoft.com/library/dn481241" class="postlink">http://msdn.microsoft.com/library/dn481241</a><br>
+<br>
+// this prevents vs_Community.exe bootsrap.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: cannot read osver from CLR, what should I do</h3>
+				<div class="date">Posted: <strong>Mon Jan 15, 2018 3:20 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello v2y ,<br>
+<br>
+I am waiting on further info from the devs to answer your question.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25333&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:50 GMT -->
+</html>

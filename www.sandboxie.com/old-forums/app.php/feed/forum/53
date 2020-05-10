@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/forum/53" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2015-11-10T11:16:13-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/forum/53</id>
+
+		<entry>
+		<author><name><![CDATA[rogerk]]></name></author>
+		<updated>2015-11-10T11:16:13-04:00</updated>
+
+		<published>2015-11-10T11:16:13-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=21354&amp;p=115673#p115673</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=21354&amp;p=115673#p115673"/>
+		<title type="html"><![CDATA[Beta Version 5.01 • Re: 5.01 Beta Available (latest version 5.04 RC)]]></title>
+
+					<category term="Beta Version 5.01" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=53" label="Beta Version 5.01"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=21354&amp;p=115673#p115673"><![CDATA[
+<blockquote><div><cite>Craig@Invincea wrote:</cite>Can't say we've seen the same or able to recreate it. Normally, we don't test add-ons or extensions to browsers, but Last Pass is one that is popular and I do use on Chrome and FF. Thus far, it's working as intended.</div></blockquote>Is there any kind of logging I can turn on that would help me debug this? When it crashes, I get the error message "SBIE2203 Failed to communicate with Sandboxie Service:  null reply (msg 00001B81 len 2457974)". It very definitely happens when I enable the Lastpass extension and everything works find when I disable the Lastpass extension (I do have other extensions loaded).<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2514">rogerk</a> — Tue Nov 10, 2015 10:16 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24937&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:45:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Firefox 56/57/58 sound/videos/printing not working when sandboxed - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Firefox 56/57/58 sound/videos/printing not working when sandboxed</h2>
+		<p><a href="viewtopic3a953a95.html?f=11&amp;t=24937">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24937</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>4</strong></div>
+					<div class="post">
+				<h3>Re: Firefox 56.0 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Tue Oct 24, 2017 2:47 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Frog8,<br>
+<br>
+If the workaround listed below doesn't work for you:<br>
+<a href="viewtopicad5aad5a.html?p=129898#p129898" class="postlink">viewtopic.php?p=129898#p129898</a><br>
+<br>
+You can also try to disable multi-process:<br>
+<a href="viewtopice82ae82a.html?p=130710#p130710" class="postlink">viewtopic.php?p=130710#p130710</a><br>
+<br>
+Be sure to delete the contents of your Sandbox prior to re-trying.<br>
+<br>
+If the problem persists, please provide the required info so that I can test it:<br>
+<a href="viewtopic03920392.html?p=104180#p104180" class="postlink">viewtopic.php?p=104180#p104180</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56.0 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Tue Oct 31, 2017 8:00 am</strong></div>
+				<div class="author">by <strong>bz-mof</strong></div>
+				<div class="content">Hello everyone,<br>
+<br>
+after one month without sound in FF56, 56.0.1, and 56.0.2 (64bit) inside SB5.20 (64bit) on Windows 7 prof SP1 64bit I finally found a workaround:<br>
+Setting <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>browser.tabs.remote.autostart.2=false</code></pre></div> is the solution for me.<br>
+<br>
+Changing security.sandbox.content.level to 2/1/0 did <strong>not</strong> help, browser.tabs.remote.autostart was already set to false.<br>
+<br>
+So my current config is al follows:<br>
+browser.tabs.remote.autostart.2=false (manually set)<br>
+security.sandbox.content.level = 3 (standard)<br>
+browser.tabs.remote.autostart = false (standard)<br>
+<br>
+When I toggle autostart.2 and restart the browser the sound goes on/off.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>FF no Audio in video 5.22 64bit</h3>
+				<div class="date">Posted: <strong>Fri Nov 03, 2017 8:32 am</strong></div>
+				<div class="author">by <strong>Tasver</strong></div>
+				<div class="content">Hello i've installed first the beta 5.21.7 then this 5.22, i got the same error no audio in firefox 56.0.2 (64 bit) on windows 7 64 bit ultimate.<br>
+This is the quote from the beta post i did.<br>
+
+<blockquote class="uncited"><div>Hello I'm using sandbox from 7 years as you can see from my post, i've never got any problem from all beta and all official version, now i'm using firefox 56.0.2 (64 bit) on windows 7 64 bit ultimate, and i don't have sound on any video website like youtube for example, i've updated the flash (but now 90% of websites uses html5...), out of the sandboxie firefox works very well with the sound.<br>
+<br>
+<br>
+I'm using the release candidate of sandboxie with no extension on firefox 56.0.2 (64 bit) on windows 7 64 bit ultimate<br>
+<br>
+Thanks for your attention</div></blockquote>
+
+Thanks for your attention</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56.0 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Nov 03, 2017 3:55 pm</strong></div>
+				<div class="author">by <strong>Tasver</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlisted78.html?mode=viewprofile&amp;u=31035">bz-mof</a> wrote: <a href="viewtopic5dc75dc7.html?p=130901#p130901" data-post-id="130901" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Oct 31, 2017 8:00 am</div></cite>
+Hello everyone,<br>
+<br>
+after one month without sound in FF56, 56.0.1, and 56.0.2 (64bit) inside SB5.20 (64bit) on Windows 7 prof SP1 64bit I finally found a workaround:<br>
+Setting <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>browser.tabs.remote.autostart.2=false</code></pre></div> is the solution for me.<br>
+<br>
+Changing security.sandbox.content.level to 2/1/0 did <strong>not</strong> help, browser.tabs.remote.autostart was already set to false.<br>
+<br>
+So my current config is al follows:<br>
+<strong><span style="color: #FF0000">browser.tabs.remote.autostart.2=false</span></strong> (manually set)<br>
+security.sandbox.content.level = 3 (standard)<br>
+browser.tabs.remote.autostart = false (standard)<br>
+<br>
+When I toggle autostart.2 and restart the browser the sound goes on/off.
+</div></blockquote>
+
+I agree with all previous message, i tryied to lower security.sandbox.content.level from 3,2,1,0 and it doesn't work<br>
+<strong><span style="color: #FF0000">It works only the browser.tabs.remote.autostart.2=false</span></strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Video Keeps Buffering Sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Nov 17, 2017 9:24 am</strong></div>
+				<div class="author">by <strong>Sandlllodan</strong></div>
+				<div class="content">Video keeps buffering when i'm watching something like Xvideos.<br>
+<br>
+This only this only happens when Sandboxed and i'm using Firefox 57 (Firefox Quantum) 64 Bit on Windows 8.1 Pro 64 Bit and Sandboxie 5.22 64 bit.<br>
+<br>
+No buffering not Sandboxed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Video Keeps Buffering Sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Nov 17, 2017 3:36 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberliste7c1.html?mode=viewprofile&amp;u=5041">Sandlllodan</a> wrote: <a href="viewtopicb0cab0ca.html?p=131158#p131158" data-post-id="131158" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Nov 17, 2017 9:24 am</div></cite>
+Video keeps buffering when i'm watching something like Xvideos.<br>
+<br>
+This only this only happens when Sandboxed and i'm using Firefox 57 (Firefox Quantum) 64 Bit on Windows 8.1 Pro 64 Bit and Sandboxie 5.22 64 bit.<br>
+<br>
+No buffering not Sandboxed.
+</div></blockquote>
+You can try to workaround your issue by changing Sandbox content level in Firefox. Open about:config, search for "security.sandbox.content.level" and change it from 3 to 2, or 1. or 0.<br>
+<br>
+You could also try disabling Multiprocess in Firefox. Open about:config, search for "browser.tabs.remote.autostart", and change it to false.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Video Keeps Buffering Sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Nov 17, 2017 3:39 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Sandlllodan,<br>
+<br>
+What type of videos are these? html5? or...?  <br>
+I have not experienced any issues with videos on FF v57 + Win 8.1 v64<br>
+Does the issue follow you to a new Sandbox with default settings? <br>
+Is there any antivirus software involved? <br>
+Are your video drivers up to date?<br>
+<br>
+Have you tried the workarounds listed here?:<br>
+<a href="viewtopice9bae9ba.html?p=130456#p130456" class="postlink">viewtopic.php?p=130456#p130456</a><br>
+<a href="viewtopic5ffc5ffc.html?p=130980#p130980" class="postlink">viewtopic.php?p=130980#p130980</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Video Keeps Buffering Sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Nov 17, 2017 9:20 pm</strong></div>
+				<div class="author">by <strong>tech48</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberliste7c1.html?mode=viewprofile&amp;u=5041">Sandlllodan</a> wrote: <a href="viewtopicb0cab0ca.html?p=131158#p131158" data-post-id="131158" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Nov 17, 2017 9:24 am</div></cite>
+Video keeps buffering when i'm watching something like Xvideos.<br>
+<br>
+This only this only happens when Sandboxed and i'm using Firefox 57 (Firefox Quantum) 64 Bit on Windows 8.1 Pro 64 Bit and Sandboxie 5.22 64 bit.<br>
+<br>
+No buffering not Sandboxed.
+</div></blockquote>
+
+I tested videos on youtube.com using security.sandbox.content.level 3 on a clean profile with Firefox 57 64-bit on Windows 8.1 Pro 64-bit and Sandboxie 5.22 64-bit. I don't see any buffering issues with Firefox and Sandboxie as you report which can be related to other things but I do notice the videos being sluggish with slight delayed pauses. All runs smooth on security.sandbox.content.level 2 with sound working.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Video Keeps Buffering Sandboxed</h3>
+				<div class="date">Posted: <strong>Sat Nov 18, 2017 4:58 am</strong></div>
+				<div class="author">by <strong>Sandlllodan</strong></div>
+				<div class="content">Setting security.sandbox.content.level  to 2 did the trick in Firefox.I also had a problem with no sound on videos Sandboxed and it works now.<br>
+<br>
+Youtube worked fine before i altered the setting.Xvideos Html 5 Videos keept buffering.It was unwatchable.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56/57 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Sat Nov 18, 2017 8:10 pm</strong></div>
+				<div class="author">by <strong>Newbeak</strong></div>
+				<div class="content">I have FF 57.0 and Win 7 Home Premium. I had sound on YouTube <span style="text-decoration: underline">outside</span> SB,but not inside. I am writing this to advise the following worked for me ( which I found somewhere on this forum):<br>
+<em>Open Firefox outside Sandboxie<br>
+type about:config and accept the risk<br>
+search sandbox<br>
+Switch security.sandbox.content.level to 2 (mine was 3, if needed switch it to 1 or 0 ).<br>
+Close Firefox<br>
+Relaunch it Sandboxed and play a YouTube video-sound should be restored.<br>
+</em><br>
+I found I had to drop it to <span style="text-decoration: underline">1</span> . <span style="text-decoration: underline">2</span> didn't work for me. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56/57 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Sun Nov 19, 2017 8:07 pm</strong></div>
+				<div class="author">by <strong>Garrett</strong></div>
+				<div class="content">Same issue with me, version 57.0 (64 bit) and SBIE ver 5.22 (64 bit), Win 7<br>
+YouTube works with sound outside Sandboxie, but no sound inside.<br>
+<br>
+I've reinstalled Firefox three times and Sandboxie once. <br>
+<br>
+I had a miraculous fix that lasted about an hour, simply by deleting all history in FF (outside Sandboxie), deleting the Sandboxie folder at the C:/ directory.  For no known reason, sound disappeared again... and none of these fixes helped a second time.  Noe:  I also used ACE Utilities to do a deep clean of all history.  And *that* is what got my sound back for an hour.<br>
+<br>
+Have since implemented these changes in about:config<br>
+<br>
+browser.tabs.remote.autostart.2 = false <br>
+security.sandbox.content.level = 1<br>
+browser.tabs.remote.autostart = false<br>
+<br>
+None of the above helps.<br>
+<br>
+Additional clue:  recently, FF did an upgrade and automatically gave me 32 bit version by some bonehead mistake. I manually fixed that by forcing 64 bit version, but chose to keep it in the same "programs files" folder, rather than "programs (x86)" folder.  Sandboxie forced me into that because the desktop link could not be modified for opening a sandboxed browser.  It would not allow for the programs (x86) folder to be accessed.  Eventually, I was able to hack past that issue and did get the 64 bit FF into the (x86) folder AND the desktop link to link appropriately.  It was soon after that when my sound disappeared in YouTube videos in Sandboxed FireFox windows.<br>
+<br>
+My thought here is that maybe there's a registry entry that points the sound DLL driver to the "program files" folder, rather than the "programs (x86)" folder?  OR... maybe Sandboxie does this crooked pointing?  After all, it was Sandboxie that fought me in allowing a link to be made to the Firefox program in "program files (x86)" folder.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Video Keeps Buffering Sandboxed</h3>
+				<div class="date">Posted: <strong>Mon Nov 20, 2017 10:59 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Will combine this thread with the main Firefox one.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56.0 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Nov 24, 2017 9:33 pm</strong></div>
+				<div class="author">by <strong>Stardance</strong></div>
+				<div class="content">@Invincea <br>
+<strong>Note:</strong> currently my computer runs 64-bit Sandboxie 5.22 and 64-bit Windows 7 Professional SP1 (fully updated to current).   Mozilla updated to Firefox Quantum v. 57 (64-bit)  -- without any warning as to the severity of the changes -- after I responded to a prompt that it was outdated. The only "bug" that I have noticed thus far is that when Firefox launches a video, there is no audio output that accompanies it, regardless of the website to which Firefox is connected.<br>
+
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist73b9.html?mode=viewprofile&amp;u=19885">ChickenSoup</a> wrote: <a href="viewtopic30ed30ed.html?p=130533#p130533" data-post-id="130533" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Oct 05, 2017 11:15 pm</div></cite>
+I got audio to work when Firefox is in Sandboxie by changing the security level to 2 (it was set to 3). Make sure you have taken Firefox out of Sandboxie at first. Then, start Firefox and type in "about:config" (without quotes) into the URL box. Firefox displays a warning. I accepted the consequences. Typed into the search box "security.sandbox.content.level" (without quotes) and that should appear below. Click on modify the value and enter 2. If that doesn't work you can keep reducing that value to 0 security level... not advised.
+</div></blockquote>
+
+Lowering the <strong>security.sandbox.content.level </strong>does <em>not</em> work for me, even with the security level reduced to <strong>1</strong>. Maybe I should reduce it to zero just to see whether that will resolve the problem, but I have my doubts.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56.0 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Nov 24, 2017 11:00 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlista2a1.html?mode=viewprofile&amp;u=2046">Stardance</a> wrote: <a href="viewtopicad7dad7d.html?p=131299#p131299" data-post-id="131299" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Nov 24, 2017 9:33 pm</div></cite>
+Lowering the <strong>security.sandbox.content.level </strong>does <em>not</em> work for me, even with the security level reduced to <strong>1</strong>. Maybe I should reduce it to zero just to see whether that will resolve the problem, but I have my doubts.
+</div></blockquote>
+Stardance, try that. Or, disable Multiprocess (that should do it).<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56/57 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Sat Nov 25, 2017 5:06 pm</strong></div>
+				<div class="author">by <strong>mouse</strong></div>
+				<div class="content">I have gone through all these changes and only get success occasionally. FF57 works well outside the sandbox but once I run the browser inside the sandbox, i am getting the no sound problem and most videos are either not playing or start very sluggishly. Sometimes I am getting an error relating to shockwave plug in - so it's hard to understand what really is going on. <br>
+Clicking Videos on Washington Post doesn't do anything, on NY Times they start with long delays- radiostations may or may not provide sound.<br>
+I modified the settings via about:config ( now using security 0 and both autostarts set as false) and even disabled multiprocesses within the gui -<br>
+at the moment I am constantly opening chrome just to manage.  I am not willing to give up on Sandboxie but as FF works without I would hope that invincea can come up with a fix for this issue that would allow for FF to be run without having to do all these work-arounds which may or may not have unintended consequences.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>4</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24937&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:45:58 GMT -->
+</html>

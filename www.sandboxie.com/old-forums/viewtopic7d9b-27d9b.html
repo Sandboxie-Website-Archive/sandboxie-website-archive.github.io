@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24818&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:52:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; PaleMoon - How to set up other folders in the sandbox? [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>PaleMoon - How to set up other folders in the sandbox? [SOLVED]</h2>
+		<p><a href="viewtopic98e898e8.html?f=17&amp;t=24818">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24818</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>PaleMoon - How to set up other folders in the sandbox? [SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Aug 31, 2017 8:36 am</strong></div>
+				<div class="author">by <strong>John connor</strong></div>
+				<div class="content">I want to disable all access to the Pale Moon folder, but allow access to two other folders from my profile in Pale Moon. I simply don't know how to do this looking at the options. I know how to disable all access to the Pale Moon folder, but how to add folders I don't know. I go under Folders and click Add and nothing happens for me to add the two folders I want.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How to set up other folders in the sandbox?</h3>
+				<div class="date">Posted: <strong>Thu Aug 31, 2017 10:50 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello John connor,<br>
+<br>
+If you want to allow direct access to the folders (meaning allowing Sandboxie to modify those locations on your host), please try this:<br>
+<a href="../ResourceAccessSettings.html#file" class="postlink">https://www.sandboxie.com/ResourceAccessSettings#file</a><br>
+<br>
+Right-Click on your Sandbox --&gt; Sandbox Settings---&gt; Resource Access --&gt; File Access --&gt; Direct Access<br>
+Click Add Program to choose the program that should have access to those locations (in this case, Pale Moon). <br>
+Hit Add and select the folders you want that program to be able to access.<br>
+Hit Apply and Ok your way out<br>
+Configure --&gt; Reload Configuration.<br>
+<br>
+Also, if you are trying to access bookmarks/history, etc , there are templates in Sandboxie that will help you:<br>
+Right-Click on your Sandbox --&gt; Sandbox Settings---&gt; Applications---&gt;Web Browser ---&gt; Firefox<br>
+Scroll down until finding the Pale Moon options.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How to set up other folders in the sandbox?</h3>
+				<div class="date">Posted: <strong>Fri Sep 01, 2017 2:32 pm</strong></div>
+				<div class="author">by <strong>John connor</strong></div>
+				<div class="content">Thanks. I had two Pale Moons's show up on choosing the program. There was Pale Moon and Palemoon.exe. I chose Palemoon.exe. Is that correct?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How to set up other folders in the sandbox?</h3>
+				<div class="date">Posted: <strong>Fri Sep 01, 2017 2:37 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi John connor,<br>
+<br>
+Palemoon.exe should be fine.  Did the settings work? <br>
+<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How to set up other folders in the sandbox?</h3>
+				<div class="date">Posted: <strong>Fri Sep 01, 2017 2:39 pm</strong></div>
+				<div class="author">by <strong>John connor</strong></div>
+				<div class="content">Looks like they have. Thanks a million!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How to set up other folders in the sandbox? [SOLVED]</h3>
+				<div class="date">Posted: <strong>Tue Sep 05, 2017 8:10 am</strong></div>
+				<div class="author">by <strong>John connor</strong></div>
+				<div class="content">I have another question. I need to grant access to Pale Moon's dictionary file so that when I add words via right click to the dictionary they stick on Sandboxie close. I can't add the path to the dictionary as it resides in the Programs folder and when I press Add all I see is Desktop and my profile name on Windows. No C drive is present to Nav to.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How to set up other folders in the sandbox? [SOLVED]</h3>
+				<div class="date">Posted: <strong>Tue Sep 12, 2017 12:05 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello John connor,<br>
+<br>
+Is this what you are seeing?<br>
+<a href="viewtopic91499149.html?f=17&amp;t=24574&amp;p=129207&amp;hilit=desktop+icons+80#p128795" class="postlink">viewtopic.php?f=17&amp;t=24574&amp;p=129207&amp;hil ... 80#p128795</a><br>
+If so, try removing icons from your Desktop and re-try (see the last response in the thread).<br>
+<br>
+Otherwise, you can add any changes directly to the Sandboxie configuration file:<br>
+Configure---&gt; Edit Configuration<br>
+<br>
+For example, to give direct access to the entire PaleMoon profile folder, you can do this:<br>
+OpenFilePath=palemoon.exe,%Tmpl.PaleMoon%\ <br>
+Modify the path after "palemoon.exe," to add a specific location of your choice. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: PaleMoon - How to set up other folders in the sandbox? [SOLVED]</h3>
+				<div class="date">Posted: <strong>Tue Sep 12, 2017 3:33 pm</strong></div>
+				<div class="author">by <strong>John connor</strong></div>
+				<div class="content">Okay, yes, I have a lot of icons on the desktop, but I really don't want to remove them as I use all those short cuts. I did use the Edit/Add feature to add the path to the dictionary files, but it doesn't seem like the words that I right click and add to the dictionary in Pale Moon get added. So I'm not sure if that's the correct file. The reason why I just don't grant access to the entire Pale Moon folder is for security. I have been getting a lot of meta data stored on the computer if I grant Sandboxie permission to the entire PM folder, but when I tailor the Sandboxie settings for PM I insure meta data is always contained in the sandbox.<br>
+<br>
+I'll do some more research here on the dictionary and ask over at the Pale Moon forum.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: PaleMoon - How to set up other folders in the sandbox? [SOLVED]</h3>
+				<div class="date">Posted: <strong>Tue Sep 12, 2017 3:50 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Try this:<br>
+OpenFilePath=palemoon.exe,%AppData%\Moonchild Productions\Pale Moon\Profiles\*\persdict.dat<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: PaleMoon - How to set up other folders in the sandbox? [SOLVED]</h3>
+				<div class="date">Posted: <strong>Tue Sep 12, 2017 8:00 pm</strong></div>
+				<div class="author">by <strong>John connor</strong></div>
+				<div class="content">That worked! Thank you very much! I thought perhaps another file was at play here.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24818&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:52:33 GMT -->
+</html>

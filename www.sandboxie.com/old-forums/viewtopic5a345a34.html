@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=41&t=16994&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:47:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.03] Printing problems on Windows 8.1</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.03] Printing problems on Windows 8.1</h2>
+		<p><a href="viewtopic95e795e7.html?f=41&amp;t=16994">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=41&amp;t=16994</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>[.03] Printing problems on Windows 8.1</h3>
+				<div class="date">Posted: <strong>Fri Nov 08, 2013 2:42 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Initially I thought the Windows 8.1 printing problem was just on 64-bit Windows 8.1, but turns out it also affected 32-bit Windows 8.1.<br>
+<br>
+Version 4.07.03 should fix this problem (which is specific to Windows 8.1).<br>
+<br>
+Related topic:<br>
+<a href="../phpbb/viewtopicf51c.php?t=16845" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=16845</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Nov 08, 2013 3:59 am</strong></div>
+				<div class="author">by <strong>doktornotor</strong></div>
+				<div class="content">Excellent. Works now.<br>
+<br>
+Note for others: Had to run<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>net stop spooler &amp;&amp; net start spooler</code></pre></div>
+
+before printing worked (or you can simply reboot ) <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Nov 08, 2013 5:00 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I wonder why you needed to restart the spooler service.  That was not necessary in my tests, but let's see what others report.<br>
+In case this happens again, please take a look at spoolsv.exe using Process Explorer, the View &gt; Show Lower Pane command (Ctrl+L).<br>
+You should see one resource/handle with the name \RPC Control\LRPC-xxxxxxxxxxxxxxx.<br>
+If you see more than one, or if you see something like \RPC Control\OLExxxxxxxxxxxx instead, please let me know.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Nov 08, 2013 7:17 pm</strong></div>
+				<div class="author">by <strong>dja2k</strong></div>
+				<div class="content">Thank tzuk! Problem fixed here on Win8.1 x64 and didn't have to stop\restart the spooler service nor restart windows for it to work properly.<br>
+<br>
+dja2k</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Nov 09, 2013 3:31 am</strong></div>
+				<div class="author">by <strong>doktornotor</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I wonder why you needed to restart the spooler service.  That was not necessary in my tests, but let's see what others report.</div></blockquote>
+
+No idea. The printers simply still were not visible after SBIE upgrade, until spooler restart... No problems since then.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Nov 10, 2013 1:23 am</strong></div>
+				<div class="author">by <strong>dja2k</strong></div>
+				<div class="content">Was working fine after the upgrade, but not anymore after a restart.  As soon as I press PRINT, Firefox crashes and closes itself.<br>
+<br>
+dja2k</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 28, 2013 5:09 am</strong></div>
+				<div class="author">by <strong>ede74</strong></div>
+				<div class="content">Printing not working, window popping up saying no printer installed. All sandboxed applications are affected. Win 8.1 64 Bit Sandboxie 4.07.04<br>
+<br>
+edit: a reboot solved the problem  <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Dec 02, 2013 2:19 am</strong></div>
+				<div class="author">by <strong>SLE</strong></div>
+				<div class="content">Printing still doesn't work on Win 8.1. x64. Sandboxie 4.07.04. (Message: no printer installed)<br>
+If I stop and restart spooler service it works - but then ONLY for sandboxed programs and only for the current session.<br>
+<br>
+<img src="../abload.de/img/handleso1f56.jpg" class="postimage" alt="Image"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 03, 2013 3:04 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Interesting to see an \RPC CONTROL\OLE* resource in your screenshot, SLE.<br>
+Tell me please, when you restart the spooler service, do you still see an OLE resource in <strong>spoolsv.exe</strong> ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 03, 2013 3:43 pm</strong></div>
+				<div class="author">by <strong>SLE</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Tell me please, when you restart the spooler service, do you still see an OLE resource in <strong>spoolsv.exe</strong> ?</div></blockquote>
+
+No after restart of spooler service RPC CONTROL\OLE is gone. But only until i reboot machine...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 04, 2013 2:12 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I want to clarify:  When you restart your computer, your spoolsv.exe starts and has both an LRPC and an OLE resource?<br>
+<br>
+* * *<br>
+<br>
+If you restart spoolsv.exe and it comes up with just the LRPC resource, can you identify when it adds the OLE resource?<br>
+Does it do that in response to something that you do?<br>
+<br>
+Are you trying to print in the sandbox and outside the sandbox at the same time?<br>
+<br>
+* * *<br>
+<br>
+I've been experimenting a bit with printing on my test 64-bit Windows 8.1 system and everything seems to work fine<br>
+even when I switch between more than one user account, and between printing in the sandbox and printing outside<br>
+the sandbox.  So I need to understand what to do to trigger the errors.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 04, 2013 3:32 am</strong></div>
+				<div class="author">by <strong>SLE</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I want to clarify:  When you restart your computer, your spoolsv.exe starts and has both an LRPC and an OLE resource?</div></blockquote>
+Right, just after reboot of pc both handles are there. Before I start something in a sandbox.<br>
+<br>
+
+<blockquote><div><cite>tzuk wrote:</cite>
+If you restart spoolsv.exe and it comes up with just the LRPC resource, can you identify when it adds the OLE resource?<br>
+Does it do that in response to something that you do?</div></blockquote>
+
+I works some time after spooler restart via CLI  (for printing within and without the sandbox) but after some time the OLE resource came back. I tried some time but wasn't able to find a more specific pattern until now.<br>
+<br>
+No printing jobs inside and outside at the same time. <br>
+<br>
+If there is something possible to trigger it deeper (procmon?) than just let me know.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Dec 05, 2013 1:51 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I have no idea how to trigger these OLE resources in spoolsv.exe.  I don't see them on my test system.  But I will add some code to treat the OLE resource the same way as the LRPC resource, and we'll see if that fixes the problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Dec 06, 2013 1:37 am</strong></div>
+				<div class="author">by <strong>dja2k</strong></div>
+				<div class="content">Maybe I am facing a similar problem but I keep getting that same error as SLE.  Thanks tzuk for looking into it.<br>
+<br>
+dja2k</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Dec 06, 2013 2:55 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I reviewed the code again and I'm afraid I don't see where the OLE resource would fit.  So no solution yet I'm afraid.  I'd like to ask you to check something else.  You say that after restarting the spooler service, it works for a while.  Can you please use Process Explorer and check if the actual name of that LRPC resource changes?<br>
+<br>
+That is to say, restart spooler, check and note exact name of that LRPC resource, also note the process ID for spoolsv.exe.  Then after a while, when printing stops working, look at spoolsv.exe again.  Is it the same process ID, and does the LRPC resource still have the same name?</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=41&t=16994&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:47:05 GMT -->
+</html>

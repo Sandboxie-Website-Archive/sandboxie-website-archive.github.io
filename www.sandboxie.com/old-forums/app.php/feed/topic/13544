@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/13544" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2012-08-29T03:50:34-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/13544</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2012-08-29T03:50:34-04:00</updated>
+
+		<published>2012-08-29T03:50:34-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13544&amp;p=83399#p83399</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13544&amp;p=83399#p83399"/>
+		<title type="html"><![CDATA[Regression in 3.74 with a batch script]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13544&amp;p=83399#p83399"><![CDATA[
+Thanks.  Good to see you have a workaroud for now.  I'll make a note to look into this.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Aug 29, 2012 3:50 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Max100]]></name></author>
+		<updated>2012-08-28T16:18:30-04:00</updated>
+
+		<published>2012-08-28T16:18:30-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13544&amp;p=83380#p83380</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13544&amp;p=83380#p83380"/>
+		<title type="html"><![CDATA[Regression in 3.74 with a batch script]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13544&amp;p=83380#p83380"><![CDATA[
+In 3.74 x64 I found a regression  with <a href="http://www.sandboxie.com/phpbb/viewtopic.php?p=80413#80413" class="postlink">this batch script</a>.<br><br>I have this desktop shortcut:<br><div class="codebox"><p>CODE: </p><pre><code>"C:\Program Files\Sandboxie\Start.exe" /box:Trash /hide_window "C:\svabi\program\start.bat"</code></pre></div>If I run the shortcut, I have this message: "File ca-start.exe not found. Please verify path".<br><br>Ca-start.exe is called from this script (start.bat):<br><div class="codebox"><p>CODE: </p><pre><code>sc start "Micro Focus License Manager"start /wait ca-start.exe</code></pre></div>To fix this issue in 3.74 I replaced<br><div class="codebox"><p>CODE: </p><pre><code>start /wait ca-start.exe</code></pre></div> with <div class="codebox"><p>CODE: </p><pre><code>start /wait c:\svabi\program\ca-start.exe</code></pre></div>But in 3.72 there was no error with the previous code. Full path wasn't obligatory in 3.72.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3067">Max100</a> — Tue Aug 28, 2012 4:18 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

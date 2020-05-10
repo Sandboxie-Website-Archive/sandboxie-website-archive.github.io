@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25408&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:03:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Invalid box name parameter: DefaultBox - Win 8.1 x86 [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Invalid box name parameter: DefaultBox - Win 8.1 x86 [SOLVED]</h2>
+		<p><a href="viewtopic14d714d7.html?f=11&amp;t=25408">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25408</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Invalid box name parameter: DefaultBox - Win 8.1 x86 [SOLVED]</h3>
+				<div class="date">Posted: <strong>Tue Feb 06, 2018 11:56 am</strong></div>
+				<div class="author">by <strong>__jhc</strong></div>
+				<div class="content">Hello someone can help me,does not open an application inside sandboxie.<br>
+  -  uninstall sandboxie.<br>
+  -  clean records and folders<br>
+  -  Sandboxie Service running<br>
+  -  I have windows 8.1 x 32 bits.<br>
+<br>
+ Image GIF:<br>
+  <br>
+  <a href="https://gfycat.com/ImmaterialPartialAuklet" class="postlink">https://gfycat.com/ImmaterialPartialAuklet</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: does not run in sandbox</h3>
+				<div class="date">Posted: <strong>Tue Feb 06, 2018 1:13 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello __jhc,<br>
+<br>
+It looks like Sandboxie is looking for the sandbox "DefaultBox", but it is not there.<br>
+Have you made any changes to the sandboxie.ini file?  Please copy-paste your configuration so that we can review it: <br>
+Configure--&gt;Edit configuration<br>
+Copy/paste it to your response<br>
+Highlight the output and click on the "&lt;/&gt;" button to format it in the forums. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: does not run in sandbox</h3>
+				<div class="date">Posted: <strong>Tue Feb 06, 2018 3:14 pm</strong></div>
+				<div class="author">by <strong>__jhc</strong></div>
+				<div class="content">thanks,this is the configuration :<br>
+<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+KnownConflicts={90160000-007E-0000-0000-0000000FF1CE}
+TemplateReject=WindowsLive
+TemplateReject=OfficeClickToRun
+Template=OfficeLicensing
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+
+[UserSettings_0F8A0230]
+
+SbieCtrl_UserName=pc01
+SbieCtrl_NextUpdateCheck=1518030767
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_WindowCoords=425,130,880,450
+SbieCtrl_ActiveView=40021
+SbieCtrl_ReloadConfNotify=n
+SbieCtrl_EditConfNotify=n
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_BoxExpandedView=,</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: does not run in sandbox</h3>
+				<div class="date">Posted: <strong>Tue Feb 06, 2018 3:27 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello __jhc,<br>
+<br>
+You are missing entries in your Sandbox configuration file. Please create a new Sandbox and see if you can run programs via that Sandbox (if yes, copy the settings from the new sandbox under the DefaultBox). <br>
+<br>
+If the issue persists, uninstall Sandboxie without keeping your Settings (you will be asked during the uninstallation process "Would you like to keep your Sandboxie.ini configuration file?  Select "No". ) . Then,  re-install it (be sure to use the latest version 5.22 or the latest beta 5.23.5).<br>
+Latest beta can be found here:<br>
+<a href="viewtopicb0cbb0cb.html?f=64&amp;t=25114" class="postlink">viewtopic.php?f=64&amp;t=25114</a><br>
+<br>
+If you are still experiencing issues after following those steps, please provide this information:<br>
+What's your Sandboxie version?<br>
+Is there any antivirus involved?<br>
+Are there any security policies in place? (GPO, applocker, etc )/<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Invalid box name parameter: DefaultBox - Win 8.1 x86</h3>
+				<div class="date">Posted: <strong>Tue Feb 06, 2018 4:24 pm</strong></div>
+				<div class="author">by <strong>__jhc</strong></div>
+				<div class="content">Thank very much,solved.<br>
+<br>
+-create a new Sandbox.<br>
+-uninstall Sandboxie ("Would you like to keep your Sandboxie.ini configuration file? Select "No").<br>
+_reboot pc.<br>
+-Install sandboxie v5.22.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25408&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:03:58 GMT -->
+</html>

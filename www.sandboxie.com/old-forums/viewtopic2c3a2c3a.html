@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=25236&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:58:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Parent-Child Sandboxes</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Parent-Child Sandboxes</h2>
+		<p><a href="viewtopic950f950f.html?f=4&amp;t=25236">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=25236</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Parent-Child Sandboxes</h3>
+				<div class="date">Posted: <strong>Thu Dec 21, 2017 1:40 am</strong></div>
+				<div class="author">by <strong>RadarNyan</strong></div>
+				<div class="content">Use case:
+<ol style="list-style-type: decimal"><li>Create a Parent Sandbox <span style="color: #00BF00"><strong>Sandbox-Parent</strong></span> and install a Web Browser <strong><span style="text-decoration: underline">inside</span></strong> it.<br>
+Once the installation is finalized, in most cases the Parent Sandbox container should be made <strong>READ ONLY</strong> (but don't force it).</li>
+<li>Create child sandbox <span style="color: #0080FF"><strong>Sandbox-Child1</strong></span> with <span style="color: #00BF00"><strong>Sandbox-Parent</strong></span> as its parent.<br>
+When reading files, registry, etc... it goes like this: <span style="text-decoration: underline"><span style="color: #0080FF"><strong>Sandbox-Child1</strong></span> -&gt; <span style="color: #00BF00"><strong>Sandbox-Parent</strong></span> -&gt; <strong>Real OS</strong></span>.</li>
+<li>Run the Web Browser from <span style="color: #0080FF"><strong>Sandbox-Child1</strong></span>, do some tests like trying out a Browser Extension.<br>
+Now I've finished testing, I reset sandbox to clean state by using <em>[Delete Contents]</em> command on <span style="color: #0080FF"><strong>Sandbox-Child1</strong></span>.</li>
+<li>After that <span style="color: #0080FF"><strong>Sandbox-Child1</strong></span> should contain nothing, but I can still run the Web Browser from it.<br>
+As all the program files, registry entries, etc... of the Web Browser are stored inside <span style="color: #00BF00"><strong>Sandbox-Parent</strong></span> thus not affected by deleting the content of the child sandbox <span style="color: #0080FF"><strong>Sandbox-Child1</strong></span>.</li>
+<li>Best part is, I can create multiple child sandboxes of <strong>one</strong> parent sandbox.<br>
+(a browser for using online banking, another one for working, yet another one for entertainment with tons of extensions, etc...)</li>
+</ol>
+
+Currently there's no Parent-Child feature like that, of course I can install <strong>multiple</strong> copy of an software inside <strong>multiple</strong> sandboxes <strong>multiple</strong> times, but that's just suck a waste of time, waste of disk space, and <strong>every time</strong> I use "Delete Contents" command I'll have to install the software <strong>all over again</strong>.<br>
+<br>
+<span style="font-size: 110%; line-height: normal"><strong>Why not just install the Web Browser directly and create different sandboxes to run it with?</strong></span><br>
+"Trust No Program" is the slogan of sandboxie, and that's why I don't install programs outside sandbox. Besides that, even if I fully trust the program I'm using, installing the program directly to OS has limitations. For example, it's hard to keep different versions of some program to co-exist, installing them to separate sandbox solves this problem. If I accidentally upgraded the program outside sandbox, it could break all the sandboxes.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Parent-Child Sandboxes</h3>
+				<div class="date">Posted: <strong>Thu Dec 21, 2017 8:29 am</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">I understood all you said above, I think. Except this phrase not clear enough to me:
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistf63e.html?mode=viewprofile&amp;u=24079">RadarNyan</a> wrote: <a href="viewtopic39ae39ae.html?p=131515#p131515" data-post-id="131515" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Dec 21, 2017 1:40 am</div></cite>
+<span style="font-size: 110%; line-height: normal"><strong>Why not just install the Web Browser directly ?</strong></span>
+</div></blockquote>
+By directly, you mean to install it outside a sandbox directly to the real OS?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Parent-Child Sandboxes</h3>
+				<div class="date">Posted: <strong>Thu Dec 21, 2017 5:21 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content">I actually do this very thing already with the majority of my sandboxed software.<br>
+<br>
+By default my sandboxie folder (FileRootPath) points to my ramdisk, but I also have a folder called "PersistentSandbox" which houses permanent template sandboxes that other boxes pull from. <br>
+So for instance create 2 sandboxes, the first called "FirefoxPersistent" and the second called "Firefox". Change the FileRootPath of "FirefoxPersistent" to "C:\PersistentSandbox\Firefox", leave the "Firefox" sandbox defaulting to it's original location. Install firefox in the "FirefoxPersistent" sandbox and set it up exactly how you want it, then protect the sandbox from deletion in sandboxie options. <br>
+<br>
+Once done create a batchfile like the following:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>mkdir "C:\Sandbox\username\Firefox"
+copy "C:\PersistentSandbox\Firefox\RegHive" "C:\Sandbox\username\Firefox"
+xcopy "C:\PersistentSandbox\Firefox\user" "C:\Sandbox\username\Firefox\user\" /E /H /K /I /Y
+C:\ProgFiles\Sandboxie\Start.exe /box:Firefox "C:\PersistentSandbox\Firefox\drive\C\Program Files\Mozilla Firefox\Firefox.exe"</code></pre></div>
+
+Create a shortcut to the batchfile and change the icon (of the shortcut) to that of firefox's.<br>
+<br>
+Now each time you run the batchfile it copies files from "FirefoxPersistent" over to the "Firefox" sandbox and then runs firefox (in the "Firefox" sandbox). After use the "Firefox" sandbox can be cleared and no changes will have been made to the "FirefoxPersistent" box. I personally went further with the batchfile but above are the basics.<br>
+<br>
+If you wish to update firefox or make permanent changes to the template just run it in the "FirefoxPersistent" sandbox. Personally I take a copy of the PersistentSandbox folders before upgrading so I can quickly copy the template folder back if something goes wrong or I don't like the update for whatever reason.<br>
+<br>
+If you want multiple "child" sandboxes you can create extra sandboxes, eg "Firefox2" then copy/create a second batchfile which pulls from the same firefox template in the same manner. I'm yet to find a program this doesn't work on; I have Firefox, GIMP, OpenOffice, Streamlink, Kodi and a host of other software working this way.<br>
+<br>
+<em><strong>A note</strong>: I found I needed to use the offline installer to upgrade the firefox template with this setup (may be my restrictions though). Thats why I say always backup template folders before major changes if you do the above.<br>
+Also note that it doesn't copy the entire content of the persistent sandbox, just the user settings. It actually runs firefox directly from the persistent sandbox meaning it doesn't need to copy the entire install over each time</em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Parent-Child Sandboxes</h3>
+				<div class="date">Posted: <strong>Fri Dec 22, 2017 6:41 pm</strong></div>
+				<div class="author">by <strong>RadarNyan</strong></div>
+				<div class="content">@RooJ<br>
+I have tried something like that before, <strong>it doesn't really work well</strong> and that's why I'm making this feature request. This kind of workarounds have problems:<br>
+
+<ol style="list-style-type: decimal">
+<li>Registry files are not so large - so not really a problem.</li>
+<li>User data folder could be large depends on the software you use and the way it installs<br>
+(Google Chrome would install program files into AppData when no administrator privilege given)</li>
+<li>Program files could be really large in most cases.<br>
+Copying those file would work, but it's just <strong>a waste of time and disk space</strong>. What if the program is really large, like Steam, Photoshop... etc?</li>
+</ol>
+
+I've noticed that in <span style="text-decoration: underline"><em>your practice</em></span> you didn't copy the program files, instead runs it from the real location ("<span style="text-decoration: underline">C:\PersistentSandbox\Firefox\drive\C\Program Files\Mozilla Firefox</span>") inside the "fake-child-sandbox".<br>
+I'm not sure how well this procedure would work for other programs <strong>as from their point of view, they are <span style="color: #FF0000">not running from their installation directory</span></strong>. Some program may work, some may have broken functions or not even start at all. I've also thought about using junctions/symbolic links but they don't work under sandbox (I can't create links in real OS as that would defeat the whole purpose)<br>
+<br>
+So basically, there's no perfect workaround unless you're willing to create a full duplicate of a parent sandbox, which have nothing to do with Parent-Child structure at all - bascially it's nothing different from installing the program twice in different sandboxes.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Parent-Child Sandboxes</h3>
+				<div class="date">Posted: <strong>Fri Dec 22, 2017 11:26 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content">I agree an official solution would be great, this isn't an attack on your request, and my solution isn't perfect... But I do disagree with most of your response.<br>
+
+<blockquote class="uncited"><div><strong> it doesn't really work well</strong></div></blockquote>
+
+I currently have 12 different software installations using this technique. It works perfectly well for me.<br>
+
+<blockquote class="uncited"><div><strong>I'm not sure how well this procedure would work</strong> for other programs as from their point of view, they are not running from their installation directory.</div></blockquote>
+
+Then try it. When I first started using this technique I would select custom install and manually select the installation path to that of the persistent sandbox folder (and change reghive if needed). This way registry entries would point to the correct persistent sandbox folder so software <strong>would </strong>be running from it's installation directory. Future installs I realised this just wasn't needed for the vast majority of software.<br>
+
+<blockquote class="uncited"><div> it's just a waste of time and disk space</div></blockquote>
+
+It takes seconds to copy user files for the majority of software I have, and my PC's around 5 years old. It takes no extra disk space as I copy to a ramdisk. Saying that, even if I didn't, clearing the sandbox free's up the diskspace. A child sandbox with different settings is always going to take up extra disk space.<br>
+
+<blockquote class="uncited"><div>What if the program is really large, like Steam, Photoshop... etc?</div></blockquote>
+
+I have OpenOffice working this way, it doesn't require me to copy the program files over, only the user settings/registry.<br>
+
+<blockquote class="uncited"><div>So basically, there's no perfect workaround unless you're willing to create a full duplicate of a parent sandbox, which have nothing to do with Parent-Child structure at all - bascially it's nothing different from installing the program twice in different sandboxes.</div></blockquote>
+
+This doesn't create a full duplicate, for the majority of software only user/reg data is copied. This pulls from a template sandbox on running and can be edited, played with, and deleted without touching the original template files. The issue with installing into and then editing software in a sandbox is that it takes a long time to re-install when you want a fresh sandbox. This technique allows you to experiment with software, clear a sandbox and within seconds have a fresh copy of the software running from the template/parent sandbox. So it's not really like "installing the program twice in different sandboxes". This seems to hit most of your numbered criteria which is why I posted, sorry if it's not perfect, I'm sure someone will find it useful.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Parent-Child Sandboxes</h3>
+				<div class="date">Posted: <strong>Sat Dec 23, 2017 7:03 am</strong></div>
+				<div class="author">by <strong>RadarNyan</strong></div>
+				<div class="content">Not trying to be rude but let me repeat myself:<br>
+
+<blockquote class="uncited"><div>There's no <strong><em>perfect</em></strong> workaround unless you're willing to create a full duplicate.</div></blockquote>
+
+And I've already explained the reason: <br>
+
+<blockquote class="uncited"><div>from their (programs running in sandbox) point of view, they are <strong><em>not running from their installation directory</em></strong>.</div></blockquote>
+
+From your experience it seems you have been pretty successful with your setup, but I have to point out that most software your listed are <strong><em>cross-platform which means they are very likely to be self-contained and less dependent on Windows OS</em></strong>, running from location different than installation folder may work for them.<br>
+<br>
+But most programs I use are Windows only and very likely to break. For example, I have a Sandbox with some kind of "runtime" installed in it, and I install&amp;run other programs require the runtime in the same sandbox to make them work. If I only copy the user folder and registry, the programs would <strong><em>refuse run in the "fake-child-sandbox" complaining couldn't find the runtime.</em></strong> Some program could also fail as some environmental variables (like PATH) is pointed to a non-exist location.<br>
+<br>
+Of course, if I dig deeper, change some registry entries, modify environmental variables..., there's a good chance I got it up and run but that's <strong>just too much trouble</strong>. The reason I choose to run programs with Sandboxie is it's much easier to configure than <em>PortableApps Suite</em> (I pack my own programs to use it with). Just install programs into a sandbox and run it inside that sandbox, everything would work and everything is contained. There's no way to write a script that suits all the programs and even if I write a script for a specific program, one upgrade would easily break it (that's why I gave up on PortableApps Suite in the first place)<br>
+<br>
+The setup you suggested is not only "not perfect" but also very limited. It <strong><em>explicitly requires</em></strong> the program <span style="text-decoration: underline">being able to run when moved away from it's installation directory.</span> As I stated before and from the years I've been playing around with different programs, some may work, some may work partially and some make not run at all.<br>
+<br>
+<span style="font-size: 110%; line-height: normal">To be clear, the point of this argument is to show this scenario <strong>needs</strong> the <em>Parent-Child Sandboxes</em> and <strong>can not be achieved</strong> with the current version of Sandboxie.</span></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Parent-Child Sandboxes</h3>
+				<div class="date">Posted: <strong>Sat Dec 23, 2017 12:52 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistf63e.html?mode=viewprofile&amp;u=24079">RadarNyan</a> wrote: <a href="viewtopiccda3cda3.html?p=131548#p131548" data-post-id="131548" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sat Dec 23, 2017 7:03 am</div></cite>
+Of course, if I dig deeper, change some registry entries, modify environmental variables..., there's a good chance I got it up and run but that's just too much trouble.
+</div></blockquote>
+
+No pain no gain  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">. There's been a tonne of great feature suggestions on this board but I think dev focus is entirely on compatibility at the moment. I can't remember the last time a new feature was introduced. I hope something like this is added but I have a feeling you're stuck with finding workarounds for the foreseeable future.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Parent-Child Sandboxes</h3>
+				<div class="date">Posted: <strong>Wed Dec 27, 2017 11:28 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Have a look at these threads: (not the exact same thing, but may help)<br>
+<a href="viewtopicb351b351.html?p=124683#p124683" class="postlink">viewtopic.php?p=124683#p124683</a><br>
+<a href="viewtopice2d6e2d6.html?p=18473#p18473" class="postlink">viewtopic.php?p=18473#p18473</a><br>
+<a href="viewtopic12c412c4.html?p=73448#p73448" class="postlink">viewtopic.php?p=73448#p73448</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Parent-Child Sandboxes</h3>
+				<div class="date">Posted: <strong>Tue Jan 16, 2018 8:06 am</strong></div>
+				<div class="author">by <strong>bestazy</strong></div>
+				<div class="content">thanks Barb. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=25236&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:58:12 GMT -->
+</html>

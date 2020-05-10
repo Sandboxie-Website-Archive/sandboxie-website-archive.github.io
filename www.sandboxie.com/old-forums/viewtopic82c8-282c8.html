@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=21639&hilit=Could+not+instrument+service+functions by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:25:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>SBIE2204 Cannot start sandboxed service RpcSs (-1) - Sandboxie Support</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - Sandboxie Support" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="app.php/feed/topics_active">			
+	<link rel="canonical" href="viewtopicf3ddf3dd.html?t=21639">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="assets/css/font-awesome.mince91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/en/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/sbie_prosilver/theme/tweaks.css?assets_version=7" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="../index.html" title="Home"><span class="site_logo"></span></a>
+				<h1>Sandboxie Support</h1>
+				<p>Support Forum for Sandboxie</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									<div id="search-box" class="search-box search-header" role="search">
+				<form action="https://forums.sandboxie.com/phpBB3/search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+					<button class="button button-search" type="submit" title="Search">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+					</button>
+					<a href="search.html" class="button button-search-end" title="Advanced search">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+					</a>
+					
+				</fieldset>
+				</form>
+			</div>
+						
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a733a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+																			<li>
+								<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp26c326c3.html?mode=login" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp83198319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs">
+							<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="../index.html" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">Home</span></a></span>
+										<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="index-2.html" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Board index</span></a></span>
+
+											<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="43"><a href="viewforum107e107e.html?f=43" itemprop="url"><span itemprop="title">Problems and Questions</span></a></span>
+															<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="11"><a href="viewforum8a838a83.html?f=11" itemprop="url"><span itemprop="title">Problem Reports</span></a></span>
+												</li>
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="viewtopic82c8-282c8.html?f=11&amp;t=21639&amp;hilit=Could+not+instrument+service+functions">SBIE2204 Cannot start sandboxed service RpcSs (-1)</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Please post your problem description here<br /></div>
+<p>
+	<strong>Moderator:</strong> <a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>
+</p>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="https://www.sandboxie.com/old-forums/posting6261-2.html?mode=reply&amp;f=11&amp;t=21639" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopicce6ece6e.html?f=11&amp;t=21639&amp;hilit=Could+not+instrument+service+functions&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://forums.sandboxie.com/phpBB3/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="21639" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			26 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic5dfa5dfa.html?f=11&amp;t=21639&amp;hilit=Could+not+instrument+service+functions&amp;start=15" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic5dfa5dfa.html?f=11&amp;t=21639&amp;hilit=Could+not+instrument+service+functions&amp;start=15" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p112582" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112582">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist16ab.html?mode=viewprofile&amp;u=28107" class="username">ktchong</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search35503550.html?author_id=28107&amp;sr=posts">5</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Aug 20, 2015 7:39 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112582">
+
+						<h3 class="first"><a href="#p112582">SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postinge46e.html?mode=quote&amp;f=11&amp;p=112582" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic23f4-423f4.html?p=112582#p112582" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist16ab.html?mode=viewprofile&amp;u=28107" class="username">ktchong</a></strong> &raquo; </span>Fri Aug 21, 2015 4:09 am
+			</p>
+			
+			
+			
+			<div class="content">Trying out Sandboxie for the first time.  Currently have Windows 10, upgraded from Windows 8.  Downloaded the latest Sandboxie version twice, and couldn't even get past the tutorial twice.  Tutorial 3/6 prompted me to run the Sandboxed Web Browser.  I did, but nothing happened.  So I ran it as administrator.  Sandboxie popped up an error message, which repeated over and over again: <br>
+<br>
+SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)<br>
+<br>
+I closed the tutorial and tried the program anyway.  Same problem. <br>
+<br>
+Uninstalling.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112607" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112607">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist6ab4-2.html?mode=viewprofile&amp;u=28125" class="username">TrainSpotter</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8eef8eef.html?author_id=28125&amp;sr=posts">3</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Aug 21, 2015 11:33 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112607">
+
+						<h3 ><a href="#p112607">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingb4b1.html?mode=quote&amp;f=11&amp;p=112607" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic61786178.html?p=112607#p112607" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist6ab4-2.html?mode=viewprofile&amp;u=28125" class="username">TrainSpotter</a></strong> &raquo; </span>Fri Aug 21, 2015 12:09 pm
+			</p>
+			
+			
+			
+			<div class="content">Yes, I suddenly have the same problem.<br>
+<br>
+I've used Sandboxie for years, but I had a hard drive fail and I just got a bunch of new parts and rebuilt the PC. It's been running (with sandboxie) for about 5 days, and sandboxie has been functioning properly.<br>
+<br>
+I'm running Windows 8.1 x64 on and AMD A10 APU with an MSI AX88XM mainboard. I've installed a couple of Windows updates that DEMANDED to be insalled (lol) a couple of days ago. (I <span class="posthilit">could</span> probably figure out what they are if anyone needs to know.)<br>
+<br>
+I use Sandboxie to check applications I see on the internet for malware, etc., and (as I said) it's been working fine.<br>
+<br>
+Yesterday I tried to run an app (that I had run in the sandbox a couple of days ago successfully) sandboxed. It would <span class="posthilit">not</span> run, and I got "SBIE2303 <span class="posthilit">Could</span> <span class="posthilit">not</span> hook PowerSettingRegisterNotification (1)". I assumed it was a trojan in the application and gave up.<br>
+<br>
+Today, just as a quick check, I tried to run a notepad file sandboxed. When I did, I got the same error. So I looked (using Windows Explorer) at the DefaultBox. It wasn't there! I mean the entire DefautBox wasn't there! Just my user name, nothing after that.<br>
+<br>
+I uninstalled sandboxie (including the settings) and reinstalled it. Once again I tried to run a notepad document sandboxed, and I got the same error. So I went to the notification icon and selected default box, delete contents. IT DELETED THE DefaultBox FOLDER AGAIN!<br>
+<br>
+Once again, I've reinstalled Sandboxie, and even though I haven't even tried to do anything with it, I'm getting a pop-up saying "SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)". It keeps repeatingly popping up, so I looked in the DefaultBox, and what in there is (of course DONT_USE.TXT) and RegHive 256k...<br>
+<br>
+I was blaming the malware app, but now I think that it's a Windows update that's causing the problem.<br>
+<br>
+<span class="posthilit">Could</span> someone from Sandboxie check an updated Windows 8.1 AMD A10 PC and see what the problem is?<br>
+<br>
+Thanks!</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112623" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112623">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistb9e0.html?mode=viewprofile&amp;u=28131" class="username">xphilc</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search6b83-26b83.html?author_id=28131&amp;sr=posts">2</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Aug 21, 2015 5:44 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112623">
+
+						<h3 ><a href="#p112623">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting41ac.html?mode=quote&amp;f=11&amp;p=112623" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic62f762f7.html?p=112623#p112623" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistb9e0.html?mode=viewprofile&amp;u=28131" class="username">xphilc</a></strong> &raquo; </span>Fri Aug 21, 2015 5:52 pm
+			</p>
+			
+			
+			
+			<div class="content">Hello,<br>
+<br>
+I have the same error message under Windows 10 when I try to install any program with Sandboxie.<br>
+<br>
+It is also impossible to launch any program with Sandboxie.<br>
+<br>
+This problem appeared after the Windows upgrade : 7 to 10.<br>
+<br>
+Thanks for your work to resolve this issue.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112624" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112624">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistb9e0.html?mode=viewprofile&amp;u=28131" class="username">xphilc</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search6b83-26b83.html?author_id=28131&amp;sr=posts">2</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Aug 21, 2015 5:44 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112624">
+
+						<h3 ><a href="#p112624">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting38cc.html?mode=quote&amp;f=11&amp;p=112624" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic89de-289de.html?p=112624#p112624" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistb9e0.html?mode=viewprofile&amp;u=28131" class="username">xphilc</a></strong> &raquo; </span>Fri Aug 21, 2015 6:01 pm
+			</p>
+			
+			
+			
+			<div class="content">Additional precision :<br>
+<br>
+This error occurs again after reinstalling Sandboxie and a reboot.<br>
+<br>
+Thanks.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112631" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112631">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist381b.html?mode=viewprofile&amp;u=25609" class="username">ameneses54</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search28182818.html?author_id=25609&amp;sr=posts">4</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Jan 05, 2015 8:59 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112631">
+
+						<h3 ><a href="#p112631">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting4ea2.html?mode=quote&amp;f=11&amp;p=112631" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic0b900b90.html?p=112631#p112631" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist381b.html?mode=viewprofile&amp;u=25609" class="username">ameneses54</a></strong> &raquo; </span>Fri Aug 21, 2015 7:24 pm
+			</p>
+			
+			
+			
+			<div class="content">Same problem here with Win 10 both with the latest beta and v4.2</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112636" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112636">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Lead Developer<br /><img src="images/ranks/gloss/yellow/yellow-developer.png" alt="Sandboxie Lead Developer" title="Sandboxie Lead Developer" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search70b370b3.html?author_id=20645&amp;sr=posts">1638</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jan 17, 2014 5:21 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Curt@invincea">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Curt@invincea</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.invincea.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112636">
+
+						<h3 ><a href="#p112636">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting98da.html?mode=quote&amp;f=11&amp;p=112636" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic959f959f.html?p=112636#p112636" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a></strong> &raquo; </span>Fri Aug 21, 2015 11:14 pm
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>ktchong wrote:</cite>Trying out Sandboxie for the first time.  Currently have Windows 10, upgraded from Windows 8.  Downloaded the latest Sandboxie version twice, and couldn't even get past the tutorial twice.  Tutorial 3/6 prompted me to run the Sandboxed Web Browser.  I did, but nothing happened.  So I ran it as administrator.  Sandboxie popped up an error message, which repeated over and over again: <br>
+<br>
+SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)<br>
+<br>
+I closed the tutorial and tried the program anyway.  Same problem. <br>
+<br>
+Uninstalling.</div></blockquote>
+Are you using the default Edge browser installed by Windows 10?  Sandboxie is <span class="posthilit">not</span> compatible with the Edge browser.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112644" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112644">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlista33c.html?mode=viewprofile&amp;u=24635" class="username">BishopJ</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc865c865.html?author_id=24635&amp;sr=posts">14</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 11, 2014 5:13 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112644">
+
+						<h3 ><a href="#p112644">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting7637.html?mode=quote&amp;f=11&amp;p=112644" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic34dc-334dc.html?p=112644#p112644" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlista33c.html?mode=viewprofile&amp;u=24635" class="username">BishopJ</a></strong> &raquo; </span>Sat Aug 22, 2015 6:42 am
+			</p>
+			
+			
+			
+			<div class="content">I have the same problem as of yesterday -- running Windows 8.0, last automatic updates installed 19 Aug, and Opera browser v31.0.  Problem also arises using Firefox v.38.  Opening the browser within Sandbox first produces a message that Sandbox has failed to load  rpcepmap.dll, then the repeating SBIE2204 message described by other sufferers.  Currently forced to use the internet outside Sandbox and to disable the Sandbox error repitition through Task Manager.  This does <span class="posthilit">not</span> seem to be an only-Windows-10 issue.<br>
+Looking forward to early assistance!  Thanks</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112647" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112647">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistb3d7.html?mode=viewprofile&amp;u=28139" class="username">clem</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchf5fef5fe.html?author_id=28139&amp;sr=posts">1</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Aug 22, 2015 8:31 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112647">
+
+						<h3 ><a href="#p112647">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting1d8d.html?mode=quote&amp;f=11&amp;p=112647" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc163-2c163.html?p=112647#p112647" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistb3d7.html?mode=viewprofile&amp;u=28139" class="username">clem</a></strong> &raquo; </span>Sat Aug 22, 2015 8:42 am
+			</p>
+			
+			
+			
+			<div class="content">Same here.<br>
+<br>
+Had sandboxie installed on Windows 8.1<br>
+Upgraded W8.1 to W10<br>
+Uninstalled Sandboxie <br>
+Reboot<br>
+Install SandboxieInstall64-501-10 (the beta SB for W10)<br>
+Cant run or install anything. Even if I try to open a .jpg sandboxed I get error "Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)"<br>
+<br>
+Awsome if someone can fix or explain to me what I might be doing wrong <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";-)" title="Wink"></div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112659" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112659">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist16ab.html?mode=viewprofile&amp;u=28107" class="username">ktchong</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search35503550.html?author_id=28107&amp;sr=posts">5</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Aug 20, 2015 7:39 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112659">
+
+						<h3 ><a href="#p112659">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting8505-2.html?mode=quote&amp;f=11&amp;p=112659" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic3e87-23e87.html?p=112659#p112659" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist16ab.html?mode=viewprofile&amp;u=28107" class="username">ktchong</a></strong> &raquo; </span>Sun Aug 23, 2015 5:09 am
+			</p>
+			
+			
+			
+			<div class="content">Nevermind, my bad.  I downloaded the OLD version.  I click on the big download link instead of the "Click here" in the tiny "Sandboxie now supports Windows 10. <span style="text-decoration: underline">Click here</span> for the beta version" below everything bigger and shinier that distracted me.  It is working fine now.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112666" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112666">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Lead Developer<br /><img src="images/ranks/gloss/yellow/yellow-developer.png" alt="Sandboxie Lead Developer" title="Sandboxie Lead Developer" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search70b370b3.html?author_id=20645&amp;sr=posts">1638</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jan 17, 2014 5:21 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Curt@invincea">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Curt@invincea</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.invincea.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112666">
+
+						<h3 ><a href="#p112666">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting6c97.html?mode=quote&amp;f=11&amp;p=112666" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopice288e288.html?p=112666#p112666" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a></strong> &raquo; </span>Sun Aug 23, 2015 11:03 pm
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>clem wrote:</cite>Same here.<br>
+<br>
+Had sandboxie installed on Windows 8.1<br>
+Upgraded W8.1 to W10<br>
+Uninstalled Sandboxie <br>
+Reboot<br>
+Install SandboxieInstall64-501-10 (the beta SB for W10)<br>
+Cant run or install anything. Even if I try to open a .jpg sandboxed I get error "Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)"<br>
+<br>
+Awsome if someone can fix or explain to me what I might be doing wrong <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";-)" title="Wink"></div></blockquote>
+Do you have any other security apps installed?</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112724" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112724">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist1554.html?mode=viewprofile&amp;u=22527" class="username">cryptogram</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search7af87af8.html?author_id=22527&amp;sr=posts">33</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Apr 25, 2014 6:27 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112724">
+
+						<h3 ><a href="#p112724">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting6f5e.html?mode=quote&amp;f=11&amp;p=112724" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic17521752.html?p=112724#p112724" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist1554.html?mode=viewprofile&amp;u=22527" class="username">cryptogram</a></strong> &raquo; </span>Tue Aug 25, 2015 11:07 am
+			</p>
+			
+			
+			
+			<div class="content">I have this problem on two computers. One now has W10 and I've assumed this was the problem, but I've lost internet connection for some reason so can't download the new beta version at the moment. <br>
+<br>
+Tthe other has W8.1. SB was working fine on this but doesn't now. I just get the RpcSs error and also a message saying SB can't use the RegisterPowerSettingNotification function. I've uninstalled and reinstalled SB. <br>
+<br>
+I have AVG Internet Security 2015.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112800" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112800">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist97b1.html?mode=viewprofile&amp;u=28191" class="username">BasketcaseSoftware</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search683b683b.html?author_id=28191&amp;sr=posts">1</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Aug 26, 2015 5:29 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112800">
+
+						<h3 ><a href="#p112800">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting3933-2.html?mode=quote&amp;f=11&amp;p=112800" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic997b997b.html?p=112800#p112800" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist97b1.html?mode=viewprofile&amp;u=28191" class="username">BasketcaseSoftware</a></strong> &raquo; </span>Wed Aug 26, 2015 11:32 pm
+			</p>
+			
+			
+			
+			<div class="content">I to have an updated OS to Windows 10. I'm running AVG as my antivirus program. I've tried disabling virus protection, UAC, etc. Nothing works. The tutorial is a fail (my browser is set to the latest version of Firefox). I'm about to run Dependency Walker over the damn thing to figure out where it hangs up.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112803" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112803">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlista33c.html?mode=viewprofile&amp;u=24635" class="username">BishopJ</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc865c865.html?author_id=24635&amp;sr=posts">14</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 11, 2014 5:13 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112803">
+
+						<h3 ><a href="#p112803">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting3bb8.html?mode=quote&amp;f=11&amp;p=112803" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic2ba6-32ba6.html?p=112803#p112803" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlista33c.html?mode=viewprofile&amp;u=24635" class="username">BishopJ</a></strong> &raquo; </span>Thu Aug 27, 2015 4:35 am
+			</p>
+			
+			
+			
+			<div class="content">I have to hope some assistance with this will be forthcoming — currently still have an intrusively useless Sandbox.  <span class="posthilit">Not</span> planning to shift to Win10 v soon.<br>
+Any suggestions from on high / out there...?</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112809" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112809">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistd98b.html?mode=viewprofile&amp;u=27430" class="username">Craig@Invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Support<br /><img src="images/ranks/gloss/yellow/yellow-supportteam.png" alt="Sandboxie Support" title="Sandboxie Support" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search042b042b.html?author_id=27430&amp;sr=posts">3523</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jun 18, 2015 3:00 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> DC Metro Area</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Craig@Invincea">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Craig@Invincea</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.invincea.com | www.sandboxie.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112809">
+
+						<h3 ><a href="#p112809">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingcbd4.html?mode=quote&amp;f=11&amp;p=112809" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8f68-48f68.html?p=112809#p112809" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistd98b.html?mode=viewprofile&amp;u=27430" class="username">Craig@Invincea</a></strong> &raquo; </span>Thu Aug 27, 2015 9:39 am
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>BishopJ wrote:</cite>I have to hope some assistance with this will be forthcoming — currently still have an intrusively useless Sandbox.  <span class="posthilit">Not</span> planning to shift to Win10 v soon.<br>
+Any suggestions from on high / out there...?</div></blockquote>
+
+In the change log here <a href="viewtopicb6bdb6bd.html?f=53&amp;t=21354" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 53&amp;t=21354</a> it's detailed. This is an error that is machine dependent. With that sad, after you get the error and relaunch..does it happen again?? I'm told by the Devs it should <span class="posthilit">not</span>. It's a load/race issue. And simply trying again resolves it.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p112846" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile112846">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlista33c.html?mode=viewprofile&amp;u=24635" class="username">BishopJ</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc865c865.html?author_id=24635&amp;sr=posts">14</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 11, 2014 5:13 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content112846">
+
+						<h3 ><a href="#p112846">Re: SBIE2204 Cannot start sandboxed <span class="posthilit">service</span> RpcSs (-1)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingd493-2.html?mode=quote&amp;f=11&amp;p=112846" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicb37b-2b37b.html?p=112846#p112846" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlista33c.html?mode=viewprofile&amp;u=24635" class="username">BishopJ</a></strong> &raquo; </span>Fri Aug 28, 2015 4:28 am
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite><blockquote><div><cite>BishopJ wrote:</cite>I have to hope some assistance with this will be forthcoming — currently still have an intrusively useless Sandbox.  <span class="posthilit">Not</span> planning to shift to Win10 v soon.<br>
+Any suggestions from on high / out there...?</div></blockquote>
+
+In the change log here <a href="viewtopicb6bdb6bd.html?f=53&amp;t=21354" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 53&amp;t=21354</a> it's detailed. This is an error that is machine dependent. With that sad, after you get the error and relaunch..does it happen again?? I'm told by the Devs it should <span class="posthilit">not</span>. It's a load/race issue. And simply trying again resolves it.</div></blockquote>
+
+Thank you for responding, though I'm afraid I'm <span class="posthilit">not</span> much clearer.  The change log you refer to doesn't seem to help me much as I don't know what a "rare race condition" or a "load/race issue" (outside of medicine and politics), though I assume it means something is grabbing the DLL before Sandboxie can use it.  Please forgive the confusion (and no doubt long-windedness) of a technically illiterate old man:  feel free to treat me as a child (you'd probably be better off with a real one)!<br>
+<br>
+Should I have installed a newer beta version of SBIE (currently v.4.20 64-bit)?<br>
+<br>
+I'm <span class="posthilit">not</span> sure exactly what you mean when you say "relaunch".  At the moment trying to open a browser inside SBIE (all that I am trying to do) produces first a message "<span class="posthilit">Could</span> <span class="posthilit">not</span> load <span class="posthilit">service</span> DLL - rpcepmap.dll".  The only option is to OK that, which produces much machine activity (&gt;30% of CPU being used by Sandboxie COM Services (RPC) according to Task Manager) and then the looping SBIE2204 message.  There doesn't seem to be a way of stopping this other than Task Manager.  Trying to open the browser again while it is happening produces nothing.  Stopping the looping then opening the browser again, or opening a different browser inside SBIE, just starts the process over again.<br>
+<br>
+What has caused this to happen after some years of relatively uneventful Sandboxie use?<br>
+<br>
+For the record it's a basic Lenovo G505S laptop with AMD A10 chip, running Windows 8.0 <span class="posthilit">not</span> upgraded but automatically updated, also running a Stardock 'Start8' Windows front end mask and AVG Internet Security 2015.<br>
+<br>
+Many thanks.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="https://www.sandboxie.com/old-forums/posting6261-2.html?mode=reply&amp;f=11&amp;t=21639" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopicce6ece6e.html?f=11&amp;t=21639&amp;hilit=Could+not+instrument+service+functions&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21639">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			26 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic5dfa5dfa.html?f=11&amp;t=21639&amp;hilit=Could+not+instrument+service+functions&amp;start=15" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic5dfa5dfa.html?f=11&amp;t=21639&amp;hilit=Could+not+instrument+service+functions&amp;start=15" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum8a838a83.html?f=11" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Problem Reports”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum907f907f.html?f=42" class="jumpbox-cat-link"> <span> Sandboxie Forums</span></a></li>
+																<li><a href="viewforum12a312a3.html?f=2" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Announcements</span></a></li>
+																<li><a href="viewforumcf19cf19.html?f=6" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Positive Reviews</span></a></li>
+																<li><a href="viewforum107e107e.html?f=43" class="jumpbox-cat-link"> <span> Problems and Questions</span></a></li>
+																<li><a href="viewforum8a838a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Problem Reports</span></a></li>
+																<li><a href="viewforum48ab48ab.html?f=17" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Quick Questions</span></a></li>
+																<li><a href="viewforumbcb4bcb4.html?f=65" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.25</span></a></li>
+																<li><a href="viewforumab78ab78.html?f=44" class="jumpbox-cat-link"> <span> More Forums</span></a></li>
+																<li><a href="viewforum31e631e6.html?f=4" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Feature Requests</span></a></li>
+																<li><a href="viewforume774e774.html?f=5" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Anything Else</span></a></li>
+																<li><a href="viewforum89418941.html?f=22" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Contributed Utilities &amp; Templates</span></a></li>
+																<li><a href="viewforum97809780.html?f=14" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; International Translations</span></a></li>
+																<li><a href="viewforum2b892b89.html?f=38" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.01</span></a></li>
+																<li><a href="viewforumdfa4dfa4.html?f=39" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.03</span></a></li>
+																<li><a href="viewforuma3f5a3f5.html?f=40" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.05</span></a></li>
+																<li><a href="viewforum51ee51ee.html?f=41" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.07</span></a></li>
+																<li><a href="viewforum590b590b.html?f=46" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.09</span></a></li>
+																<li><a href="viewforumcdbacdba.html?f=48" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.13</span></a></li>
+																<li><a href="viewforum30ac30ac.html?f=49" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.15</span></a></li>
+																<li><a href="viewforum91409140.html?f=50" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.17</span></a></li>
+																<li><a href="viewforum208f208f.html?f=51" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.19</span></a></li>
+																<li><a href="viewforum26492649.html?f=53" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.01</span></a></li>
+																<li><a href="viewforum9e0d9e0d.html?f=54" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.05</span></a></li>
+																<li><a href="viewforumfac0fac0.html?f=55" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.07</span></a></li>
+																<li><a href="viewforuma05ca05c.html?f=56" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.09</span></a></li>
+																<li><a href="viewforum6ac36ac3.html?f=57" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.11</span></a></li>
+																<li><a href="viewforume57de57d.html?f=58" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.13</span></a></li>
+																<li><a href="viewforum07560756.html?f=59" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.15</span></a></li>
+																<li><a href="viewforumb8c1b8c1.html?f=60" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.17</span></a></li>
+																<li><a href="viewforumdbf5dbf5.html?f=61" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.19</span></a></li>
+																<li><a href="viewforum75c275c2.html?f=62" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.21</span></a></li>
+																<li><a href="viewforume5f3e5f3.html?f=64" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.23</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="stat-block online-list">
+		<h3>Who is online</h3>
+		<p>Users browsing this forum: No registered users and 1 guest</p>
+	</div>
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="../index.html" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Home</span></a></span>									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="America/New York">UTC-04:00</span></li>
+							<li class="rightside">
+				<a href="ucp033a033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete all board cookies</span>
+				</a>
+			</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+									</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="cron50895089.gif?cron_type=cron.task.text_reparser.post_text" width="1" height="1" alt="cron" /></div>
+
+<script type="text/javascript" src="assets/javascript/jquery.mince91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="assets/javascript/corece91ce91.js?assets_version=7"></script>
+
+
+
+<script type="text/javascript" src="styles/sbie_prosilver/template/forum_fnce91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="styles/sbie_prosilver/template/ajaxce91ce91.js?assets_version=7"></script>
+
+
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=21639&hilit=Could+not+instrument+service+functions by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:25:36 GMT -->
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=12899&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:55:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; BSA+Sandboxie Portable</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>BSA+Sandboxie Portable</h2>
+		<p><a href="viewtopic10b710b7.html?f=22&amp;t=12899">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=12899</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>BSA+Sandboxie Portable</h3>
+				<div class="date">Posted: <strong>Fri May 04, 2012 8:04 pm</strong></div>
+				<div class="author">by <strong>gjf</strong></div>
+				<div class="content">The constantly updated portable Buster Sandbox Analyzer + Sandboxie system is located at <a href="http://tools.safezone.cc/gjf/Sandboxie-portable.zip" class="postlink">http://tools.safezone.cc/gjf/Sandboxie-portable.zip</a><br>
+All manuals are within the archive.<br>
+If you have some problems and/or suggestions - please PM me.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri May 04, 2012 8:30 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I noticed bsa.conf contains next lines:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[BSA]
+
+InjectDll=C:\Program Files\Sandboxie\Buster Sandbox Analyzer\sbiextra.dll
+InjectDll=C:\Program Files\Sandboxie\Buster Sandbox Analyzer\antidel.dll
+InjectDll=C:\Program Files\Sandboxie\Buster Sandbox Analyzer\LAPI.dll
+OpenWinClass=TFormBSA
+ConfigLevel=6
+Enabled=y
+NotifyInternetAccessDenied=y
+BoxNameTitle=n
+BorderColor=#0000FF
+
+OpenFilePath=C:\Sandbox\TEST!!!\</code></pre></div>
+
+"NotifyDirectDiskAccess=y" is missing. Without that parameter, BSA will be unable to notice direct disk writing behaviour.<br>
+<br>
+Other two important parameters are:<br>
+<br>
+ProcessLimit1=20<br>
+ProcessLimit2=30<br>
+<br>
+That is used to avoid certain type of malware that floods the system making it unstable. Normally none (malicious or not) application will be running over 30 processes at the same time.<br>
+<br>
+More things...<br>
+<br>
+You include "DLLLDR.EXE". That file is obsolete and can be removed because it is not used anymore.<br>
+<br>
+The same happens with "HideDriver.sys" and "HideDriverGUI.exe". They were replaced by BSA.SYS. Anyway someone could use HideDriver instead BSA´s own driver, so I could understand why it is kept in the package.<br>
+<br>
+"regdump.exe" is dropped everytime BSA needs it, so it is unnecesary to have it in the package.<br>
+<br>
+The same for "sigcheck.exe" and "ssdeep.exe".</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 26, 2012 8:21 pm</strong></div>
+				<div class="author">by <strong>gjf</strong></div>
+				<div class="content">Thanks, Buster, but I believe you mean Sandboxie.ini file, not BSA.conf.<br>
+<br>
+All your suggestions will be used.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 28, 2012 9:54 am</strong></div>
+				<div class="author">by <strong>otreus</strong></div>
+				<div class="content">don't work for me (win8 64bit) and in the archive I haven't find the Faq for using it. Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 28, 2012 10:08 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>otreus wrote:</cite>don't work for me (win8 64bit) and in the archive I haven't find the Faq for using it. Thanks</div></blockquote>
+
+Download Buster Sandbox Analyzer and learn to configure it by yourself.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 28, 2012 2:51 pm</strong></div>
+				<div class="author">by <strong>gjf</strong></div>
+				<div class="content">otreus, x64 is not supported yet by this portable system. You should install Sandboxie and BSA and configure them by yourself.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BSA+Sandboxie Portable</h3>
+				<div class="date">Posted: <strong>Sat Oct 11, 2014 7:11 am</strong></div>
+				<div class="author">by <strong>brdlstone007</strong></div>
+				<div class="content">Don't work for me (win8 64bit) and in the document I haven't find the Faq for utilizing it. Much appreciated                                 <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BSA+Sandboxie Portable</h3>
+				<div class="date">Posted: <strong>Wed Jun 07, 2017 6:57 am</strong></div>
+				<div class="author">by <strong>Gioanvm</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6310.html?mode=viewprofile&amp;u=3972">gjf</a> wrote: <a href="viewtopic9fcd9fcd.html?p=79948#p79948" data-post-id="79948" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri May 04, 2012 8:04 pm</div></cite>
+The constantly updated portable Buster Sandbox Analyzer + Sandboxie system is located at <a href="http://tools.safezone.cc/gjf/Sandboxie-portable.zip" class="postlink">http://tools.safezone.cc/gjf/Sandboxie-portable.zip</a><br>
+All manuals are within the archive.<br>
+If you have some problems and/or suggestions - please PM me.
+</div></blockquote>
+Could you please provide the password for the zip file? Or upload an unprotected zip file?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BSA+Sandboxie Portable</h3>
+				<div class="date">Posted: <strong>Wed Jun 07, 2017 10:27 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Gioanvm,<br>
+<br>
+Hopefully the user will see the message and give you the password, however I tried unzipping the file using a blank password (just hit enter) and it seemed to work.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BSA+Sandboxie Portable</h3>
+				<div class="date">Posted: <strong>Wed Jun 07, 2017 11:23 am</strong></div>
+				<div class="author">by <strong>Gioanvm</strong></div>
+				<div class="content">Hi Barb.<br>
+<br>
+Will give that a try. Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BSA+Sandboxie Portable</h3>
+				<div class="date">Posted: <strong>Wed Jun 07, 2017 4:35 pm</strong></div>
+				<div class="author">by <strong>Gioanvm</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+I tried extracting it with WinRAR and IZArc but no luck.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BSA+Sandboxie Portable</h3>
+				<div class="date">Posted: <strong>Thu Jun 08, 2017 10:30 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Gioanvm,<br>
+<br>
+You'll have to wait for the user to provide the password.  <br>
+I can decompress it with 7zip without entering the password, but the files are empty. I was hoping to find the password somewhere in there, but no luck. <br>
+<br>
+You should also be able to find the tools (separate files) here:<br>
+<a href="../index4d6e.html?ContributedUtilities" class="postlink">https://www.sandboxie.com/index.php?Con ... dUtilities</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BSA+Sandboxie Portable</h3>
+				<div class="date">Posted: <strong>Thu Aug 10, 2017 6:32 am</strong></div>
+				<div class="author">by <strong>gjf</strong></div>
+				<div class="content">The link without password: hxxp://www5.zippyshare.com/v/6wcBDcHb/file.html<br>
+However the development is stopped. I am not interested any more in this project as long as BSA is not supported in Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BSA+Sandboxie Portable</h3>
+				<div class="date">Posted: <strong>Sat Sep 16, 2017 4:02 am</strong></div>
+				<div class="author">by <strong>Gioanvm</strong></div>
+				<div class="content"><img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> Thanks gjf</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=12899&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:55:17 GMT -->
+</html>

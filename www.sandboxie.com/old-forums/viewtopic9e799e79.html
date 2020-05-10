@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25092&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:51:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; FCU Exploit Protection</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>FCU Exploit Protection</h2>
+		<p><a href="viewtopic980e-2980e.html?f=17&amp;t=25092">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25092</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>FCU Exploit Protection</h3>
+				<div class="date">Posted: <strong>Sun Nov 12, 2017 9:55 pm</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">Hi admin,<br>
+<br>
+Need some advice what I need to enabled/disable for FCU Exploit protection to work in SBIE, added Chrome in exploit protection ticked everything and now chrome doesn't work in SBIE. If possible also some setting for Firefox and Potplayer(installed in sandbox). <br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FCU Exploit Protection</h3>
+				<div class="date">Posted: <strong>Mon Nov 13, 2017 10:43 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Nix,<br>
+<br>
+I need more information in order to help you.  Please provide all the required data from here:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FCU Exploit Protection</h3>
+				<div class="date">Posted: <strong>Tue Nov 14, 2017 7:25 am</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+Enable FCU exploit protection on chrome with all options ticked&gt;on, after that chrome doesn't worked sandboxed. For now there are only a few that are enabled by default and SBIE is working just fine.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FCU Exploit Protection</h3>
+				<div class="date">Posted: <strong>Tue Nov 14, 2017 10:26 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Nix,<br>
+<br>
+I really need more information regarding what are you doing. What is this FCU protection that you are referring to? <br>
+What do you mean Chrome doesn't work? Are there any error messages? What's going on exactly?<br>
+<br>
+Please, see my previous post and provide the required information so that I can set up the environment and test your issue.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FCU Exploit Protection</h3>
+				<div class="date">Posted: <strong>Tue Nov 14, 2017 7:40 pm</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+Sorry was using my win7 desktop last time, a bit lazy to open my laptop. <img class="smilies" src="images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green"> <br>
+<br>
+The Windows version number? (Win 10 x64, 1709)<br>
+Sandboxie version number (SBIE v5.22)<br>
+NAME &amp; Version/build numbers of any applications involved? (Chrome v62)<br>
+Are you running antivirus/anti-malware software? (WD,Appguard, and Windows exploit protection)<br>
+<br>
+<strong><span style="text-decoration: underline">Windows Defender Security Center &gt; App &amp; Browser Control &gt; Exploit Protection</span></strong><br>
+Currently Enabled(chrome works fine sandboxed):
+<ul><li>Control Flow Guard, Data Execution Prevention, Bottom-up ASLR, SEHOP, and Validate Heap Integrity</li></ul> <br>
+<br>
+Just enabled Arbitrary Code Guard (ACG) and this is what I get. "SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1". Just want to know which setting should be enabled, not too familiar with setting up exploit protection.<br>
+<br>
+Regards,</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FCU Exploit Protection</h3>
+				<div class="date">Posted: <strong>Wed Nov 15, 2017 2:47 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Nix,<br>
+<br>
+If I enable ACG under Exploit Protection ---&gt; Program Settings<br>
+Then, I cannot launch Chrome at all outside Sandboxie.  Does it work for you out of the Sandbox? <br>
+<br>
+The default settings for Exploit Protection in Windows Defender do work fine with Sandboxie 5.22 <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FCU Exploit Protection</h3>
+				<div class="date">Posted: <strong>Wed Nov 15, 2017 7:18 pm</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+Ah I see haven't tried it outside sandboxie, try it out later. <br>
+<br>
+Regards,<br>
+Nix</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25092&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:51:00 GMT -->
+</html>

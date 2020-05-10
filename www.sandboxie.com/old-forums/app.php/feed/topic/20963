@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/20963" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2015-03-30T17:10:54-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/20963</id>
+
+		<entry>
+		<author><name><![CDATA[laclac1]]></name></author>
+		<updated>2015-03-30T17:10:54-04:00</updated>
+
+		<published>2015-03-30T17:10:54-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108315#p108315</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108315#p108315"/>
+		<title type="html"><![CDATA[Re: Improve the security of its browser ?!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108315#p108315"><![CDATA[
+Ok, I found the solution.  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br><div class="codebox"><p>CODE: </p><pre><code>:: Save Login/Passwordmove "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\jzxafyuy.default-1424544488418\key3.db" "%TEMP%\key3.db"move "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\jzxafyuy.default-1424544488418\logins.json" "%TEMP%\logins.json":: Remove the SandboxeRMDIR /s /q "%1":: Restore Login/Passwordmd "C:\Sandbox\myuser\DefaultBox\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\jzxafyuy.default-1424544488418\"move "%TEMP%\key3.db" "C:\Sandbox\myuser\DefaultBox\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\jzxafyuy.default-1424544488418\key3.db"move "%TEMP%\logins.json" "C:\Sandbox\myuser\DefaultBox\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\jzxafyuy.default-1424544488418\logins.json"</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=26346">laclac1</a> — Mon Mar 30, 2015 5:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[laclac1]]></name></author>
+		<updated>2015-03-30T09:12:27-04:00</updated>
+
+		<published>2015-03-30T09:12:27-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108309#p108309</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108309#p108309"/>
+		<title type="html"><![CDATA[Re: Improve the security of its browser ?!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108309#p108309"><![CDATA[
+HI,<br><br>I have a problem,<br><br>When you active the “automatically delete”, the sandboxe has a new name on each session.<br>So when I restore my key file, it’s on the old sandboxe. So it’s without effect.<br><br>I should disable the  “automatically delete”, if I want the same name.<br>But if I disable this option, the DeleteCommand  command is never called.<br><br>So my solution doesn’t work.<br>Do you have an idea ? <p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=26346">laclac1</a> — Mon Mar 30, 2015 9:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[laclac1]]></name></author>
+		<updated>2015-03-30T06:02:12-04:00</updated>
+
+		<published>2015-03-30T06:02:12-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108306#p108306</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108306#p108306"/>
+		<title type="html"><![CDATA[Re: Improve the security of its browser ?!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108306#p108306"><![CDATA[
+Hi,<br><br>I find a solution, I use the parameter DeleteCommand.<br>I include the line in the Sandboxie.ini.<br>DeleteCommand =c:\security.bat "%SANDBOX%"<br><br>And in the bat file I writed:<div class="codebox"><p>CODE: </p><pre><code>:: Save Login/Passwordmove "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\ekarny6u.default\key.db" "%TEMP%\key.db"move "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\ekarny6u.default\logins.json" "%TEMP%\logins.json":: Remove the SandboxeRMDIR /s /q "%1":: Restore Login/Passwordmd "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\ekarny6u.default\"move "%TEMP%\key.db" "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\ekarny6u.default\key.db"move "%TEMP%\logins.json" "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\ekarny6u.default\logins.json"</code></pre></div>Now I can empty the real key.db and logins.json of Firefox.<br>The only good file will be in the sandboxe with a access very secure.<br><br>So if a virus attack my computer:<br>-In the sandboxe, he is block by the closepath<br>-And outside the sandboxe, the file is empty.<br><br>So it’s impossible a program get my passwords.<br>We can make this with a lot of programs. For example, the password of Filezilla available in the sitemanager, very easy to hack. Or Chrome.<br>We can secure it with the same method.<br><br>Note: If you have an ideo to improve my script, or a feedback <p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=26346">laclac1</a> — Mon Mar 30, 2015 6:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[laclac1]]></name></author>
+		<updated>2015-03-30T13:41:43-04:00 </updated>
+
+		<published>2015-03-29T09:33:33-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108292#p108292</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108292#p108292"/>
+		<title type="html"><![CDATA[Re: Improve the security of its browser ?!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108292#p108292"><![CDATA[
+Oh my god. It works.<br>It's perfect ! I'm very happy, my passwords were very safe now. It's a very good news.<br><br>But I have an other question..<br>And if it's possible to have better (but it's already perfect).<br><br>My firefox is always in a sandboxe and only it can read the key.db.. But my system (go out the sandboxe) can read it.<br>So if my system is really infected by a virus ouside the sandboxe, it can read my password.<br>Is it possible to remove the key.db in my real system, and keep it only in my sandboxe with firefox ?<br>It s a very very safe <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>Note: But I automatically my sandboxie. So is it possible to remove the sandboxe automatically but make an exception on the key.db.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=26346">laclac1</a> — Sun Mar 29, 2015 9:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Mr.X]]></name></author>
+		<updated>2015-03-28T20:05:31-04:00</updated>
+
+		<published>2015-03-28T20:05:31-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108290#p108290</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108290#p108290"/>
+		<title type="html"><![CDATA[Re: Improve the security of its browser ?!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108290#p108290"><![CDATA[
+Add this line to your Sandboxie.ini (in the sandbox where Firefox runs):<div class="codebox"><p>CODE: </p><pre><code>ClosedFilePath=!firefox.exe,key.db</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16759">Mr.X</a> — Sat Mar 28, 2015 8:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[laclac1]]></name></author>
+		<updated>2015-03-28T17:51:01-04:00</updated>
+
+		<published>2015-03-28T17:51:01-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108289#p108289</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108289#p108289"/>
+		<title type="html"><![CDATA[Improve the security of its browser ?!]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=20963&amp;p=108289#p108289"><![CDATA[
+I have a question.<br>I always execute firefox in a sandboxe. But if I download and execute a virus in the same sandboxe, the virus can't infect my system with sandboxie <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>But it can get my personal and important data.<br>For example, it can read the list of my password saved by firefox (key.db).<br><br>Is it possible to block the access to key.db file for all program except firefox ?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=26346">laclac1</a> — Sat Mar 28, 2015 5:51 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

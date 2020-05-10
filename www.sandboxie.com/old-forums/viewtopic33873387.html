@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25174&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:17:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; HitmanPro.Alert blocking sandboxed browsers</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>HitmanPro.Alert blocking sandboxed browsers</h2>
+		<p><a href="viewtopic20ef20ef.html?f=11&amp;t=25174">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25174</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>HitmanPro.Alert blocking sandboxed browsers</h3>
+				<div class="date">Posted: <strong>Thu Nov 23, 2017 4:43 am</strong></div>
+				<div class="author">by <strong>kerflot</strong></div>
+				<div class="content">I believe this to be more a HitmanPro problem and have written to them.<br>
+<br>
+Their latest version v3-7-1-723 will not allow either Firefox or Opera (both latest versions) run sandboxed.<br>
+If I turn off Exploit Mitigation in Hitman I get repeatedly the error "SBIE2205 Service not implemented:  Win32Init.6 (000000AA)".<br>
+The browsers will then open with some interference with Add-ons in Firefox but Opera appears to be okay.<br>
+Experimenting with Opera, when I navigate I get more lines of the above error.<br>
+<br>
+So until Hitman brings out a fix I have had to "Stop" the HitmanPro.Alert service in Windows Services.<br>
+<br>
+I'm using Windows 7 Pro 32bit.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: HitmanPro.Alert blocking sandboxed browsers</h3>
+				<div class="date">Posted: <strong>Thu Nov 23, 2017 7:19 am</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistd983.html?mode=viewprofile&amp;u=2365">kerflot</a> wrote: <a href="viewtopicc5d4c5d4.html?p=131279#p131279" data-post-id="131279" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Nov 23, 2017 4:43 am</div></cite>
+I believe this to be more a HitmanPro problem and have written to them.<br>
+<br>
+Their latest version v3-7-1-723 will not allow either Firefox or Opera (both latest versions) run sandboxed.<br>
+If I turn off Exploit Mitigation in Hitman I get repeatedly the error "SBIE2205 Service not implemented:  Win32Init.6 (000000AA)".<br>
+The browsers will then open with some interference with Add-ons in Firefox but Opera appears to be okay.<br>
+Experimenting with Opera, when I navigate I get more lines of the above error.<br>
+<br>
+So until Hitman brings out a fix I have had to "Stop" the HitmanPro.Alert service in Windows Services.<br>
+<br>
+I'm using Windows 7 Pro 32bit.
+</div></blockquote>
+
+Had a lot of PrivGuard problems with Sandboxie 5.22 and HmP.Alert 723. More info: <a href="https://www.wilderssecurity.com/threads/hitmanpro-alert-support-and-discussion-thread.324841/page-575" class="postlink">https://www.wilderssecurity.com/threads ... 1/page-575</a><br>
+<br>
+Possible solution:<br>
+
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file0b530b53.png?id=1298" class="postimage" alt="Screenshot-2017-11-23 HitmanPro Alert BETA.png" onclick="viewableArea(this);" /></dt>
+						<dd>Screenshot-2017-11-23 HitmanPro Alert BETA.png (38.35 KiB) Viewed 3323 times</dd>
+		</dl>
+		
+		
+		
+			</div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: HitmanPro.Alert blocking sandboxed browsers</h3>
+				<div class="date">Posted: <strong>Thu Nov 23, 2017 8:12 am</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content">Or add HitmanPro.Alert:<br>
+
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/filea316a316.jpg?id=1299" class="postimage" alt="1.JPG" onclick="viewableArea(this);" /></dt>
+						<dd>1.JPG (67.23 KiB) Viewed 3316 times</dd>
+		</dl>
+		
+		
+		
+			</div>
+
+<br>
+Sandboxie Control &gt; Configure &gt; Software Compatibility</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: HitmanPro.Alert blocking sandboxed browsers</h3>
+				<div class="date">Posted: <strong>Thu Nov 23, 2017 8:59 am</strong></div>
+				<div class="author">by <strong>cocoon</strong></div>
+				<div class="content">I had the same problem with a specific program (not a browser). The workaround for me was to add it to HMPA's exceptions.<br>
+<br>
+EDIT: It also occurred with Firefox after I made the above posting.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: HitmanPro.Alert blocking sandboxed browsers</h3>
+				<div class="date">Posted: <strong>Fri Dec 01, 2017 10:37 pm</strong></div>
+				<div class="author">by <strong>kerflot</strong></div>
+				<div class="content">Thank you one and all for your input.<br>
+<br>
+The Sandboxie settings were already in place, that's why I did not have an issue before the latest HMPA update.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: HitmanPro.Alert blocking sandboxed browsers</h3>
+				<div class="date">Posted: <strong>Fri Dec 01, 2017 10:40 pm</strong></div>
+				<div class="author">by <strong>kerflot</strong></div>
+				<div class="content">I eventually received the following "solutions" from HMPA over a few days:<br>
+<br>
+<em>"Change the Action mode to 'Silent audit'. Is everything back to normal now?"</em><br>
+[didn't do a thing]<br>
+<br>
+<em>"Sandboxie is stealing security tokens and applying that the the sandboxed browser, and that is exactly what PrivGuard is supposed to block.<br>
+So unfortunately these two don't play nice, if you wish to keep Sandboxie you can disable 'Local Priviledge mitigation' on process protection."</em><br>
+[didn't do a thing - "stealing"? Oh really? Also, their spelling not mine]<br>
+<br>
+<br>
+And finally after me asking if PrivGuard was not blocking this before the update:<br>
+<br>
+<em>"No, the feature is new, hence the previous version had no protection against this.<br>
+But there are more issues with running Alert and Sandboxie, I have informed our developers and they are looking in to it.".</em><br>
+<br>
+So there you have it. Unfortunately you cannot prevent HMPA from updating itself. You just have to stop using it.<br>
+For now I let HMPA start on boot up, check for updates manually (just in case), then go to services.msc and Stop the HitmanPro.Alert service before running a sandboxed browser.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: HitmanPro.Alert blocking sandboxed browsers</h3>
+				<div class="date">Posted: <strong>Tue Dec 05, 2017 5:38 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">All,<br>
+<br>
+I downloaded Hitman Pro Alert v3.7.1 build723 + Win 7 x86 +Sbie 5.23.1 . I ensured Process Protection ---&gt; Local Privilege Mitigation was enabled (it is by default), and tested launching web browsers in a new Sandbox with default settings. I did not experience any issues launching Firefox or Chrome in the Sandbox. <br>
+I went to the Exploit Mitigation settings, and Sandboxie was listed as "Not Protected" under Running applications.<br>
+<br>
+After a reboot, I did get a PrivGuard Alert when I launched Chrome Sandboxed, but no error messages appeared and functionality was not affected.<br>
+Can somebody please provide repro steps? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: HitmanPro.Alert blocking sandboxed browsers</h3>
+				<div class="date">Posted: <strong>Tue Dec 05, 2017 5:52 pm</strong></div>
+				<div class="author">by <strong>kerflot</strong></div>
+				<div class="content">I was using Sanboxie 5.22 full version.<br>
+<br>
+After updating to the above Beta version nothing changed.<br>
+Even with HMPA uninstalled and reinstalled.<br>
+<br>
+With Exploit Mitigation enabled I noticed that by going to Delete Contents (SB) there is only 1MB of data.<br>
+Firefox does not show in Windows Task Manager.<br>
+The attached image shows a list of what is sandboxed. There are no "All Files and Folders" but I suppose this is expected.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: HitmanPro.Alert blocking sandboxed browsers</h3>
+				<div class="date">Posted: <strong>Tue Dec 05, 2017 7:23 pm</strong></div>
+				<div class="author">by <strong>kerflot</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic23ba-223ba.html?p=131391#p131391" data-post-id="131391" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Dec 05, 2017 5:38 pm</div></cite>
+Can somebody please provide repro steps? 
+</div></blockquote>
+
+Repro steps not possible.<br>
+HMPA updated itself, requested that I reboot.<br>
+I did.<br>
+Then tried using Firefox and nothing happened.<br>
+Which Win7 version are you using, Pro?<br>
+Which version of Firefox are you using? I'm using v57.0.1 (FF Quantum).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: HitmanPro.Alert blocking sandboxed browsers</h3>
+				<div class="date">Posted: <strong>Wed Dec 06, 2017 7:32 am</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content">@Barb.<br>
+<br>
+Cant reproduce a mitigation, it occurs sometimes out of the blue. Maybe You could contact Erik or Mark Loman from  Sophos/Surfright, they are aware of this issue.<br>
+<br>
+Info of the mitigation can be found via the Windows Event viewer.<br>
+<br>
+Logboeknaam: Application<br>
+Bron: HitmanPro.Alert<br>
+Datum: 30-11-2017 08:09:56<br>
+Gebeurtenis-id:911<br>
+Taakcategorie: Mitigation<br>
+Niveau: Fout<br>
+Trefwoorden: Klassiek<br>
+Gebruiker: n.v.t.<br>
+Computer: ****<br>
+Beschrijving:<br>
+Mitigation ROP<br>
+<br>
+Platform 10.0.16299/x64 v723 06_5e<br>
+PID 8264<br>
+Application C:\Program Files\Mozilla Firefox\firefox.exe<br>
+Description Firefox 57<br>
+<br>
+Callee Type LoadLibrary<br>
+<br>
+Stack Trace
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code># Address Module Location
+-- ---------------- ------------------------ ----------------------------------------
+1 00007FFE81D6966D KernelBase.dll
+2 00007FFE85848508 ntdll.dll
+3 00007FFE85830F56 ntdll.dll __C_specific_handler +0x96
+4 00007FFE85844C3D ntdll.dll __chkstk +0x11d
+5 00007FFE857BD1B8 ntdll.dll
+6 00007FFE85843B6E ntdll.dll KiUserExceptionDispatcher +0x2e
+
+7 00007FFE3CD64B9E xul.dll
+cc INT 3
+
+8 00007FFE3D10F90A xul.dll
+9 00007FFE3D0F8E66 xul.dll
+10 00007FFE3CE09EF6 xul.dll
+
+Code Injection
+0000000000BC0000-0000000000BC6000 24KB C:\Program Files\Sandboxie\SbieSvc.exe [2336]
+0000000000BD0000-0000000000BD1000 4KB
+00007FFE85819000-00007FFE8581A000 4KB
+000001DE89C3B000-000001DE89C3C000 4KB C:\Program Files\Mozilla Firefox\firefox.exe [17656]
+00007FFE85840000-00007FFE85841000 4KB
+00007FFE85842000-00007FFE85843000 4KB
+00007FFE8583F000-00007FFE85840000 4KB
+1 C:\Program Files\Sandboxie\SbieSvc.exe [2336]
+2 C:\Windows\System32\services.exe [900]
+3 C:\Windows\System32\wininit.exe [788]
+wininit.exe
+1 C:\Program Files\Mozilla Firefox\firefox.exe [17656]
+2 C:\Program Files\Sandboxie\Start.exe [9476]
+"C:\Program Files\Sandboxie\Start.exe" /env:00000000_SBIE_CURRENT_DIRECTORY="C:\Program Files\Mozilla Firefox" /env:=Refresh "C:\Users\****\Desktop\Firefox 57.0.lnk"
+3 C:\Program Files\Sandboxie\SbieSvc.exe [2336]
+4 C:\Windows\System32\services.exe [900]
+5 C:\Windows\System32\wininit.exe [788]
+wininit.exe
+
+Process Trace
+1 C:\Program Files\Mozilla Firefox\firefox.exe [8264]
+"C:\Program Files\Mozilla Firefox\firefox.exe" -contentproc --channel="17656.12.1897105222\717771794" -childID 2 -isForBrowser -intPrefs 5:50|6:-1|28:1000|34:20|35:5|36:10|45:128|46:10000|51:0|53:400|54:1|55:0|56:0|61:0|62:120|63:120|98:2|99:1|114:5000|124
+2 C:\Program Files\Mozilla Firefox\firefox.exe [17656]
+3 C:\Program Files\Sandboxie\Start.exe [9476]
+"C:\Program Files\Sandboxie\Start.exe" /env:00000000_SBIE_CURRENT_DIRECTORY="C:\Program Files\Mozilla Firefox" /env:=Refresh "C:\Users\****\Desktop\Firefox 57.0.lnk"
+4 C:\Program Files\Sandboxie\SbieSvc.exe [2336]
+5 C:\Windows\System32\services.exe [900]
+6 C:\Windows\System32\wininit.exe [788]
+wininit.exe
+
+Thumbprint
+7e016af425dd8125a9190f43f3da3d150b3c68d6cd73d7ad8ebefe5a0f4d5f4b</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: HitmanPro.Alert blocking sandboxed browsers</h3>
+				<div class="date">Posted: <strong>Wed Dec 06, 2017 6:14 pm</strong></div>
+				<div class="author">by <strong>kerflot</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistd983.html?mode=viewprofile&amp;u=2365">kerflot</a> wrote: <a href="viewtopic22312231.html?p=131392#p131392" data-post-id="131392" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Dec 05, 2017 5:52 pm</div></cite>
+The attached image shows a list of what is sandboxed. There are<strong> no "All Files and Folders"</strong> but I suppose this is expected.<br>
+
+</div></blockquote>
+
+I meant to say: There are no "User Files".</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: HitmanPro.Alert blocking sandboxed browsers</h3>
+				<div class="date">Posted: <strong>Wed Dec 06, 2017 6:25 pm</strong></div>
+				<div class="author">by <strong>kerflot</strong></div>
+				<div class="content">Info in my Windows Event Viewer, if it's of any help (under HitmanPro.Alert Events):<br>
+<br>
+Mitigation   PrivGuard<br>
+<br>
+Platform     6.1.7601/x86 v723 06_17*<br>
+PID          7560<br>
+Application  D:\Program Files\Mozilla Firefox\firefox.exe<br>
+Description  Firefox 57<br>
+<br>
+Sweep<br>
+<br>
+Code Injection<br>
+00030000-00031000    4KB C:\Program Files\Sandboxie\SbieSvc.exe [1592]<br>
+00040000-00041000    4KB<br>
+77C73000-77C74000    4KB<br>
+00384000-00385000    4KB D:\Program Files\Mozilla Firefox\firefox.exe [9436]<br>
+77C55000-77C56000    4KB<br>
+77C56000-77C57000    4KB<br>
+0023F000-00240000    4KB<br>
+0023E000-0023F000    4KB<br>
+1  D:\Program Files\Mozilla Firefox\firefox.exe [9436]<br>
+2  C:\Program Files\Sandboxie\Start.exe [1836]<br>
+"C:\Program Files\Sandboxie\Start.exe" /env:00000000_SBIE_CURRENT_DIRECTORY="C:\Program Files\Sandboxie" /env:=Refresh "D:\Program Files\Mozilla Firefox\firefox.exe"</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25174&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:17:18 GMT -->
+</html>

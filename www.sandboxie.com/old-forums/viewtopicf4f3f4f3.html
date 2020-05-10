@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=984&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:15:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Switch to allow/disallow internet access?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Switch to allow/disallow internet access?</h2>
+		<p><a href="viewtopic763c763c.html?f=4&amp;t=984">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=984</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Switch to allow/disallow internet access?</h3>
+				<div class="date">Posted: <strong>Sun Jan 21, 2007 3:56 am</strong></div>
+				<div class="author">by <strong>Unknown_User_606</strong></div>
+				<div class="content">Hi <br>
+<br>
+first thx for the programm, its really great and usefull.<br>
+<br>
+i havent found any thread relating to internet on/off , so im starting a new one.<br>
+<br>
+Maye a very simple switch to allow or disallow the content of a sandbox to reach the internet would be nice, so one could prevent apps from calling home. Its not easy to do that with an external firewall cause the firewall only sees sandboxie and not the app inside. Blocking sandboxie would prevent legitimate surfing inside the sandbox.<br>
+<br>
+thx<br>
+jeff</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 21, 2007 12:16 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Okay, this is possible, I guess.  I'll add it to the list of features to-do.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 21, 2007 12:29 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_606</strong></div>
+				<div class="content">OK, thx alot</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 31, 2007 4:13 am</strong></div>
+				<div class="author">by <strong>Unknown_User_335</strong></div>
+				<div class="content">Hi all<br>
+<br>
+now, I am confused... when I run firefox sandboxed (it appears to be sandboxed by the #'s), then my firewall (ZoneAlarm Pro) asks for firefox to get access to the internet, not sandboxie. Should it be sandboxie requesting internet access if firefox is sandboxed correctly???<br>
+<br>
+Thanks a lot for the great program!<br>
+Oliver</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 31, 2007 6:55 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Should it be sandboxie requesting internet access if firefox is sandboxed correctly??? </div></blockquote>
+
+That's fine, the running program <em>is</em> Firefox after all, and the firewall sees it as such.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>a suggestion</h3>
+				<div class="date">Posted: <strong>Thu Feb 01, 2007 3:59 pm</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content">This is actually a good suggestion, but how about taking it one step further, how about allowing/disallowing internet access for <em>particular process(es)</em> instead of every single process running in sandboxie, would that be possible or would it be too hard to do?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 02, 2007 6:01 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Actually I thought about a per-sandbox setting.<br>
+<br>
+But really it's just a matter of blocking access to resources, which is alreadyd a per-process (as well as per-sandbox) setting.<br>
+<br>
+In other words, you can say:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>ClosedFilePath=\Device\Afd
+</code></pre></div>
+
+As with all Closed/OpenFilePath settings, you can say:<br>
+<br>
+ClosedFilePath=iexplore.exe,\Device\Afd<br>
+<br>
+Or <br>
+<br>
+ClosedFilePath=!iexplore.exe,\Device\Afd<br>
+<br>
+To block non-IEXPLORE programs from network access.<br>
+<br>
+Oh the possibilities are endless.   <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=984&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:15:45 GMT -->
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=6267&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:48:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; What is \Device\Mup\</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>What is \Device\Mup\</h2>
+		<p><a href="viewtopic66f566f5.html?f=5&amp;t=6267">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=6267</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>What is \Device\Mup\</h3>
+				<div class="date">Posted: <strong>Sat Sep 12, 2009 1:49 pm</strong></div>
+				<div class="author">by <strong>SandinShoes</strong></div>
+				<div class="content">I was adding stuff that I didn't want to run to File Access &gt; Blocked Access and noticed that \Device\Mup\ appeared in the blocked access after adding a folder. Is it supposed to do this or did I accidentally add something I didn't mean to.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Sep 12, 2009 2:05 pm</strong></div>
+				<div class="author">by <strong>Ruhe</strong></div>
+				<div class="content">I don't know what it is, but on <a href="http://msdn.microsoft.com/en-us/library/aa488427.aspx" class="postlink">http://msdn.microsoft.com/en-us/library/aa488427.aspx</a> we can find <em>\Device\Mup</em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: What is \Device\Mup\</h3>
+				<div class="date">Posted: <strong>Sat Sep 12, 2009 10:05 pm</strong></div>
+				<div class="author">by <strong>bs1</strong></div>
+				<div class="content"><blockquote><div><cite>SandinShoes wrote:</cite>I was adding stuff that I didn't want to run to File Access &gt; Blocked Access and noticed that \Device\Mup\ appeared in the blocked access after adding a folder. Is it supposed to do this or did I accidentally add something I didn't mean to.</div></blockquote>
+This post is coincidental because I noticed the same thing on my system about an hour ago.   I have several sandboxes and \Device\Mup\ appeared in my default box in File Access&gt;Blocked Access.  I don't know how long it's been there; I've been trying to recall if I had performed some action that resulted in \Device\Mup\  being displayed.  I don't see it in my other sandboxes.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 14, 2009 5:06 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">There I go adding explanation text and pop up boxes and nobody bothers to read them.<br>
+<br>
+When you add something in Blocked File Access and press OK/Apply, Sandboxie will tell you:<br>
+
+<blockquote class="uncited"><div>Windows file sharing can be used to circumvent Blocked File Access settings.<br>
+Adding resource to block access to Windows file sharing.</div></blockquote>
+
+And at this point, \Device\Mup is added to the list of blocked resources.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: What is \Device\Mup\</h3>
+				<div class="date">Posted: <strong>Mon Jan 30, 2017 11:26 am</strong></div>
+				<div class="author">by <strong>Spaceman Spiff</strong></div>
+				<div class="content">I noticed that "\Device\Mup\" is no longer added automatically.<br>
+<br>
+Am I missing something, or is "\Device\Mup\" obsolete and thus no longer necessary ?<br>
+<br>
+Thanks,<br>
+Spaceman Spiff</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: What is \Device\Mup\</h3>
+				<div class="date">Posted: <strong>Mon Jan 30, 2017 11:43 am</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">CloseFilePath=\Device\Mup has been deprecated and replaced with BlockNetworkFiles<br>
+
+<blockquote><div><cite>Curt@invincea wrote:</cite>Just open the desired network paths using the normal Sandbox Settings -&gt; Resource Access -&gt; File Access<br>
+<br>
+E.g.<br>
+OpenFilePath=z:\MyFolder<br>
+ReadFilePath=\\MyServer\MyShare\MyFolder<br>
+<br>
+If you currently have ClosedFilePath=\device\mup\, you need to delete that setting. We removed it from automatically being applied because BlockNetworkFiles=y is now the default and is more flexible.</div></blockquote></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=6267&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:48:09 GMT -->
+</html>

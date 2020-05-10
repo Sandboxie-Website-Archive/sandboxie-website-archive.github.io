@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15022&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:37:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.05] Things that don't work in 4.01</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.05] Things that don't work in 4.01</h2>
+		<p><a href="viewtopic22be22be.html?f=38&amp;t=15022">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15022</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>[.05] Things that don't work in 4.01</h3>
+				<div class="date">Posted: <strong>Wed Mar 20, 2013 9:30 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">I'll just make one thread for the several things I noticed that don't work as in 3.76, other than <a href="../phpbb/viewtopic7516.php?p=87517#87517" class="postlink">Drop Rights still allowing Administrators-only stuff to be accessed</a> (and SBIE2205: SetInformationProcess, etc.). (One thing that unfortunately IS the same is the <a href="../phpbb/viewtopic4757.php?p=86784#86784" class="postlink">Firefox+EMET issues</a>; one of the main things I wanted to test 4.01 for. But just returned a few hours ago! That didn't take long. <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"> I still didn't post a final update there of EVERY possible combination of things I tried since then, that ultimately made no difference.)<br>
+<br>
+<br>
+*) <a href="../phpbb/viewtopic6401.php?t=13290" class="postlink">Recent  Documents won't work?</a> - After all that, it's not working again. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Even with Open=*. On the <em>plus</em> side, at least Explorer doesn't accidentally open UNsandboxed with * or Open=$:explorer.exe (or whatever the "dangerous" scenario was).<br>
+<br>
+*) <a href="../phpbb/viewtopic9b9d.php?t=13376" class="postlink">IE 6 usability: Full Screen</a> - It can't unhide the taskbar anymore. In a general sense, is SetWindowPos() being blocked again...?<br>
+<br>
+*) Links from outside the sandbox (e.g. Automatic Updates, ...) that are forced inside a sandbox (for IE 6 at least) don't work. IE opens but doesn't go anywhere.<br>
+<br>
+*) When Firefox gets minimized, if an UNsandboxed window should then be focused, it is not. I think I had this problem with 4t Tray Minimizer adding buttons to the title bar (nothing to do with SBIE). Nothing to do with that now. But, I think it must have to do with how Firefox is drawing its title bar (non-standard?) that seems to alter messages when minimizing? I haven't noticed it with another program yet.<br>
+<br>
+*) An InjectDll= that works fine in 3.76 (basically, the <a href="../indexaa23.html?SBIE_DLL_API#Hook" class="postlink">hook example</a>, simple testing) causes "Application failed to initialize" (for forced programs) or, with Run Sandboxed, nothing to happen at all. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> I didn't try another DLL yet, though I recompiled mine a couple times (surely it's not done wrong?). I haven't seen other InjectDll reports (other than about Buster's tool in .03), so I'm assuming that's all supposed to work the same? Edit: No, Buster's <a href="../phpbb/viewtopic1ef6.php?t=6764" class="postlink">Anti Delete</a> doesn't work either.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 21, 2013 3:35 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thank you for the summary.  I had a feeling I was going to break the SetWindowPos change with version 4 but then forgot to revisit that.  Sorry!  I'll take a look at this and the other problems you report here.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 21, 2013 3:58 pm</strong></div>
+				<div class="author">by <strong>corvey</strong></div>
+				<div class="content">Hi.   I installed beta 4 the newest one this week (first time trying it) and I have a problem with this version as well.  My dos console window popups from the applications no longer show anymore on the taskbar and I can't access it to view it or enter commands.    The console is running in the taskMGR, but not visible or accessible on the taskbar.   The console popups work fine in 3.76.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 28, 2013 10:48 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Haven't looked into the Recent Documents but I think it is caused by the same issue as reported here,<br>
+<br>
+<a href="../phpbb/viewtopic66ea.php?t=15083" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15083</a><br>
+<br>
+Which was caused by filtering on messages going out to Windows Explorer windows was too aggressive (incorrectly).<br>
+<br>
+SetWindowPos, I fixed.<br>
+<br>
+InjectDll, there is an issue here, which I hope I can resolve.<br>
+<br>
+Also, haven't looked into the speed/performance issue yet (from the other topic), but hopefully next week.<br>
+<br>
+Appreciate your patience  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Things that don't work in 4.01</h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 10:05 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>
+<br>
+*) <a href="../phpbb/viewtopic6401.php?t=13290" class="postlink">Recent  Documents won't work?</a> - After all that, it's not working again. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Even with Open=*. On the <em>plus</em> side, at least Explorer doesn't accidentally open UNsandboxed with * or Open=$:explorer.exe (or whatever the "dangerous" scenario was).<br>
+<br>
+*) <a href="../phpbb/viewtopic9b9d.php?t=13376" class="postlink">IE 6 usability: Full Screen</a> - It can't unhide the taskbar anymore. In a general sense, is SetWindowPos() being blocked again...?<br>
+<br>
+*) Links from outside the sandbox (e.g. Automatic Updates, ...) that are forced inside a sandbox (for IE 6 at least) don't work. IE opens but doesn't go anywhere.<br>
+<br>
+*) When Firefox gets minimized, if an UNsandboxed window should then be focused, it is not. I think I had this problem with 4t Tray Minimizer adding buttons to the title bar (nothing to do with SBIE). Nothing to do with that now. But, I think it must have to do with how Firefox is drawing its title bar (non-standard?) that seems to alter messages when minimizing? I haven't noticed it with another program yet.<br>
+<br>
+*) An InjectDll= that works fine in 3.76 (basically, the <a href="../indexaa23.html?SBIE_DLL_API#Hook" class="postlink">hook example</a>, simple testing) causes "Application failed to initialize" (for forced programs) or, with Run Sandboxed, nothing to happen at all. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> I didn't try another DLL yet, though I recompiled mine a couple times (surely it's not done wrong?). I haven't seen other InjectDll reports (other than about Buster's tool in .03), so I'm assuming that's all supposed to work the same? Edit: No, Buster's <a href="../phpbb/viewtopic1ef6.php?t=6764" class="postlink">Anti Delete</a> doesn't work either.</div></blockquote>
+
+These issues should be fixed in version 4.01.05.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Apr 11, 2013 10:06 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Thanks for the update! The IE Full Screen/unhide taskbar is now working again, and my InjectDll seems to load fine as well. Cool. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> The other stuff (3 things you quoted) doesn't, unfortunately.<br>
+<br>
+Recent Docs won't work, even with OpenWin=* (but that DID lead me to a discovery about the speed/performance for the other topic!).<br>
+<br>
+And I just noticed something else where minimizing Firefox doesn't refocus an UNsandboxed window. Previously, I only had UNsandboxed windows visible (other sandboxed stuff minimized), but now I just had UNsandboxed on top of sandboxed, and noticed that minimizing Firefox in that case actually refocuses the last (top) sandboxed window instead.<br>
+<br>
+<br>
+BTW, I know you didn't quote the other stuff, but the other main thing I'm wondering about that still doesn't work as in 3.x is that Drop Rights allows access to Administrators-only files/reg. keys (so it doesn't "drop rights" in that sense). That's not how it's <em>supposed to be</em>, is it? <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> Just wondering since I reported it right away after the first beta. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> I kinda need that to work. Luckily SRP dropping rights before Forced sandboxing is covering that for now. (But that also doesn't allow Run Sandboxed to work on those programs because of SBIE2205: SetInformationProcess  <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"> Hmm, actually don't see SBIE2205 now, but still doesn't start: "A device attached to the system is not functioning. (31)" as before.)<br>
+<br>
+<br>
+I'll post an update in the other topic later/tomorrow, don't think I have time right now. But big improvements(!) and I just now mostly narrowed down the cause of some slowness I'm still seeing. <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 28, 2013 2:16 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Well, now my coding/DLL experimentation <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> has led me to discover another issue with 4.01's InjectDll... (BTW, on the <a href="../indexa956.html?InjectDll" class="postlink">InjectDll page</a>, is this an incomplete 3rd sentence: <em>"Inject" means the DLL is</em> ?)<br>
+<br>
+Anyway, since this particular DLL doesn't need any of Sbie* API functions, I figured I'd just try loading my regular "outside the sandbox DLL," after first thinking it was required to use InjectDllMain, etc. (Then I noticed the InjectDll page says "<strong>If</strong> the DLL exports" InjectDllMain.)<br>
+<br>
+So what happened? Same result as I originally reported. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> I spent way too much time trying to track this down exactly (ha, when I'm just trying different stuff), since I was getting different results between 4.01.04 and .05/06, with 3 different (similar) DLLs compiled with VC++ Express 2005 and 2010, as well as an MASM32 assembly version. They're all basically the "same" DllMain-wise, so I thought it was some weird compiler mismatch or such, and proceeded to create empty DllMain DLLs via each method to upload a .zip for you to check..... But then I didn't get the same behavior as the previous DLLs! Then to see why that was...<br>
+<br>
+Turns out this is probably a rare situation, the first being that DllMain returns (dwReason != DLL_PROCESS_ATTACH), so FALSE when it's loaded after it's done its thing, so it can unload as not needed anymore. Change that to TRUE and it works.<br>
+<br>
+Except it also CAN work returning FALSE before your changes in .05. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> The difference I finally found between my differently-compiled DLLs that I thought were "same enough" was not the compiler, but the EXPORT table! (If that's the right term; I don't really know what I'm doing. <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz">)<br>
+<br>
+VC++ seems to create NO export table if nothing's exported. MASM32 version also didn't export anything, although it tries to with default "project" files (empty .def file), so I guess an <em>empty</em> export table is OK for Sandboxie 4.01.04. And of course adding:<br>
+<br>
+__declspec(dllexport) void Dummy(void) { }<br>
+<br>
+makes it work too. <em>Nothing</em> allows FALSE to work however since .05.<br>
+<br>
+Does it go without saying that everything works as expected (and out of sandbox) with 3.76? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Also, I see 3.76 does unload the DLL when FALSE is returned (if there's no InjectDllMain). .04 when it works with FALSE, leaves the DLL loaded. Hopefully you can make things behave as 3.76! <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"><br>
+<br>
+(I had typed wrong info (can't keep stuff straight in my head) but it looks correct now!)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 28, 2013 5:22 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I'm sorry, I'm probably not going to touch that.  Why don't you just return TRUE?  I'm sorry, I don't understand why this is an issue.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 6:10 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Hmm, that was a bit unexpected. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I just wanted to explain the details, which have changed over the last couple releases, needed to reproduce this DLL loading <em>error</em> in Sandboxie. Error -- I don't consider it simply an "issue" that I'm doing something <em>wrong</em>, etc. I haven't really gone around searching for DLLs to load, so I don't know what else might do that (ret FALSE)... Didier Stevens' <a href="http://blog.didierstevens.com/2010/10/26/update-loaddllviaappinit/" class="postlink">LoadDLLViaAppInit</a> (code included), et al. is about all I've looked at. These normal, nothing-to-do-with-a-sandbox AppInit type DLLs I realized could simply be used with InjectDll, if desired, instead of system-wide with AppInit. That is, like I said, after originally thinking that InjectDll's <em>needed to be</em> Sandboxie-specific, with InjectDllMain, Sbie*, etc. So I thought it was great that "normal" DLLs can be used also, but then I ran into this problem! <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"><br>
+<br>
+There seems to be some major DLL loading problems/weirdness in 4.01 (AppCompat Shims/<a href="../phpbb/viewtopic9a1f.php?t=15260" class="postlink">EMET</a> and <a href="../phpbb/viewtopic66ea-2.php?t=15293" class="postlink">ExploitShield</a>), so I figure this might be related, and would be fixed when those issues are. <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"><br>
+<br>
+<br>
+*I* don't understand why this is an issue either when InjectDll with anything seems to work perfect in 3.76. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I don't understand why any of that loading code would change with 4.01. (So it's already <em>been</em> "touched.") Isn't it just doing like LoadLibrary in the processes? So I don't get why Sandboxie is interfering or being messed up by that. The code and DLLs are legitimate, no? Why not return TRUE? Because I don't need to like I said -- the DLL doesn't need to stay loaded once it's done what it needs to do. And it's nice that 3.76 even unloads it too (if no InjectDllMain), like Windows.<br>
+<br>
+Are you saying that this is an <em>intentional</em> change in 4.01, not allowing valid DLLs to load, and 3.76 was somehow broken? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> And remember, returning FALSE <em>did work</em> in 4.01/.02/03/04, so again, it was "touched" in .05 (I know, obviously for the Sandboxie-specific InjectDll failure I reported here). So then the bug was that for FALSE to not fail, it needed an export table (again, if that's the right term). Again, I don't understand that, since if SBIE would just do a normal LoadLibrary and then look for InjectDllMain, if present, there should be no problem, which is what 3.76 seems to do...<br>
+<br>
+If you could go back to the .04 code, fix the need-an-export-table issue, and leave the OP InjectDll fix, that would be pretty good! e.g. functional with valid DLLs. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Then the only thing would be that the DLL still remains loaded with FALSE in 4.01, but whatever..... Though it'd be nice to unload it like 3.76.<br>
+<br>
+I guess it's not unexpected, but FWIW an "empty" DLL without an entry point (so nothing to return TRUE) even loads fine. <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad">  Just "void Dummy(void) { }" compiled with: cl /LD Test.c /link /NOENTRY</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 6:58 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The intention of InjectDll is to develop stuff based on Sandboxie, it is not a general DLL injection scheme for random DLLs.<br>
+<br>
+The way SbieDll is injected into a process in the sandbox has changed a lot between version 3.76 and version 4.  This is not an change intentional that returning FALSE on an InjectDll should cause the process to fail to load.<br>
+<br>
+Here's a workaround for you, set the AppInit registry key inside the sandbox rather than as a system wide AppInit key.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 8:30 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>The intention of InjectDll is to develop stuff based on Sandboxie, it is not a general DLL injection scheme for random DLLs.</div></blockquote>
+
+OK, so my initial thought about it this whole time was correct then? <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> Cool, I just hope that things have some defined/reliable consistency. (I had assumed I'd [<em>have to</em>] create a SBIE-specific DLL anyway...) So can you update the InjectDll page to say something different? What are the requirements for its use? Right now it says it's to inject "some DLL" (what I was doing; very different than what you said). Also, it's suggested InjectDllMain is definitely optional like I said, so what IS there supposed to be for the DLL to meet the "intention of InjectDll" -- there should be a specifically defined standard, right?<br>
+<br>
+It seems it should just error/reject a DLL without InjectDllMain. That should take care of everything?<br>
+<br>
+But then you had just told me to return TRUE from the DLL's entry point, and that would no longer work either if InjectDllMain is required (which I'm not objecting to, it seems the best to "mandate a standard," so if it's done, stick with it!). So not only is an entry point not required at all (when exporting InjectDllMain), you could even go so far as to say there shouldn't be an entry point...? <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+<br>
+BTW, again, what does this mean on the InjectDll page:<br>
+<br>
+<em>"Inject" means the DLL is</em><br>
+
+<blockquote class="uncited"><div>The way SbieDll is injected into a process in the sandbox has changed a lot between version 3.76 and version 4.  This is not an change intentional that returning FALSE on an InjectDll should cause the process to fail to load.</div></blockquote>
+
+And I don't get that since it seems like a basic thing... Not that I understand much of its operation, obviously, I'm just sayin'. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+It's not an intentional change, OK, but it is the "way it should be" now? Even though it just wasn't before 4.01.05? Again, no problem however it is, just looking for a specific STANDARD, as with most computing things. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+I <em>could</em> return (dwReason != DLL_PROCESS_ATTACH || GetModuleHandle("SbieDll.dll")) it seems, but I don't really like the idea (just have 2 DLLs #ifdef'd DllMain/InjectDllMain <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad">). Not to mention it breaking if InjectDllMain is required. <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> <br>
+
+<blockquote class="uncited"><div>Here's a workaround for you, set the AppInit registry key inside the sandbox rather than as a system wide AppInit key.</div></blockquote>
+
+I already thought about that (but didn't try), but that's a <em>little</em> more work for others to add... Using <a href="../index0b59.html?AutoExec" class="postlink">AutoExec</a> with REG ADD ... with the registry path and file path, I guess. And then there's the problem if there's already a value there, it's overwritten instead of being appended, etc.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 3:11 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I don't want to mess around with the SbieDll/InjectDll injection mechanism too much.  Now in version 4 this is tied into the standard Windows DLL loader, as opposed to an emulation of the Windows DLL loader in version 3.76.  If this means some esoteric things are not going to work as before, that's a reasonable trade off for me.  Hopefully if you return TRUE from the DllMain in your injeted DLL, that should fix the problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 07, 2013 7:30 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Well, if it's supposed to be tied into the <em>standard</em> Windows DLL loader, that would suggest to me that it should be MORE likely that this <em>valid</em> behavior (right? <em>Or</em> hmm: <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms682583(v=vs.85).aspx" class="postlink">DllMain</a>, Return value...) would work (and it DID before .05!), but... Anyway, I'll look at automating the sandboxed AppInit reg. entry with the program or a script (AutoExec), although I still wish we could simply use any DLL with Inject (any updates to the Help page to clarify?), but whatever's cool. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I think any other DLLs I have in mind will need to stay loaded, so I'd have to return TRUE for them anyway.<br>
+<br>
+<br>
+<br>
+I'll also wanted to ask if the other 3 issues from this topic, that weren't fixed in .05, are still on your list? No hurry of course, although the "minimizing Firefox not refocusing the right window" thing is getting annoying! Just so you didn't forget. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 07, 2013 4:20 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I think Windows loader now sees InjectDlls as static import DLLs for the process, so if your InjectDll DllMain returns FALSE, the process will fail to initialize.  If this was a simple issue where Sandboxie is checking the return value from DllMain then I would change it.  But it's in NTDLL loader code and I can't control it.  I could hook DllMain from the loaded InjectDll DLL and make sure it always returns TRUE but it seems too much work for a rather esoteric use case.  I'm sorry I have to disappoint you but sometimes I have to make these cost/benefit decisions.<br>
+<br>
+I still plan to look into those other three issues, yes!  But regarding the minimize issue, it's not something I see on my system.  If I understand correctly you say this only happens with 4t Tray Minimizer?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 07, 2013 4:36 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I think Windows loader now sees InjectDlls as static import DLLs for the process, so if your InjectDll DllMain returns FALSE, the process will fail to initialize.  If this was a simple issue where Sandboxie is checking the return value from DllMain then I would change it.  But it's in NTDLL loader code and I can't control it.  I could hook DllMain from the loaded InjectDll DLL and make sure it always returns TRUE but it seems too much work for a rather esoteric use case.  I'm sorry I have to disappoint you but sometimes I have to make these cost/benefit decisions.</div></blockquote>
+
+Ah, I see! (About acting like a static import.) I guess that would explain the MSDN part: "If the return value is <strong>FALSE</strong> when <strong>DllMain</strong> is called during process initialization, the process terminates with an error."<br>
+<br>
+No problem, I understand. Sorry to be a pain when trying to understand things! <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"><br>
+
+<blockquote class="uncited"><div>I still plan to look into those other three issues, yes!  But regarding the minimize issue, it's not something I see on my system.  If I understand correctly you say this only happens with 4t Tray Minimizer?</div></blockquote>
+
+No, I also installed Firefox fresh on the clean laptop system, and had the same behavior (at the time of the bug report). I only mentioned 4t Tray Minimizer because I had a similar (or the same) issue when it was adding extra buttons to the title bar (outside of Sandboxie even). I got the impression that Firefox uses some non-standard/custom drawing of the title bar, buttons, whatever (since it can hide the Menu Bar and put the Firefox menu on the title bar)... And that is somehow affecting messages when minimized, or something. Just figured it might be the same type of thing happening with Sandboxie.<br>
+<br>
+To reproduce: Open some other sandboxed window, open something unsandboxed on top/focused, switch to sandboxed Firefox, minimize Firefox, and the most recently focused <em>sandboxed</em> window will get focus instead of the unsandboxed one...</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15022&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:37:26 GMT -->
+</html>

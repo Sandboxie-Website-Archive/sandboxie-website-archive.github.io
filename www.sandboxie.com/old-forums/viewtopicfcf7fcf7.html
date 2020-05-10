@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9632&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Hotkeys</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Hotkeys</h2>
+		<p><a href="viewtopic85de85de.html?f=4&amp;t=9632">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=9632</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Hotkeys</h3>
+				<div class="date">Posted: <strong>Mon Dec 27, 2010 11:21 pm</strong></div>
+				<div class="author">by <strong>Oneder</strong></div>
+				<div class="content">Built in dedicated Hotkeys that can't be circumvented to the terminate command would be of help against some ransom/screenlockers type malware.<br>
+<br>
+I know they are contained but hotkeys could save a reset.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 28, 2010 3:00 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I support this feature request.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 28, 2010 4:20 am</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content">Sounds good to me too.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 28, 2010 6:24 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I explained the problem at the bottom of this post:<br>
+<br>
+<a href="../phpbb/viewtopic5e49.php?t=9338" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=9338</a><br>
+<br>
+I've not fixed that yet, but what I described there is going to be the approach that I will take to deal with this issue.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 29, 2010 12:21 am</strong></div>
+				<div class="author">by <strong>Oneder</strong></div>
+				<div class="content">Ok thanks tzuk. <br>
+<br>
+For those that are testing these ransom/screenlockers the below batch file will run the terminate command every 30 seconds whilst the command window is open.<br>
+<br>
+Thanks to majoMo wilders.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>::30=30 sec.
+@echo off
+:START
+ping 127.0.0.1 -n 30 &gt; nul
+start "" "C:\Program Files\Sandboxie\Start.exe" /box:DefaultBox /terminate
+GOTO START </code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 29, 2010 8:44 am</strong></div>
+				<div class="author">by <strong>soccerfan</strong></div>
+				<div class="content"><blockquote><div><cite>Oneder wrote:</cite>For those that are testing these ransom/screenlockers the below batch file will run the terminate command every 30 seconds whilst the command window is open.[/code]</div></blockquote>
+Thanks Oneder. In a followup post in that thread <a href="http://www.wilderssecurity.com/showpost.php?p=1804785&amp;postcount=6" class="postlink">http://www.wilderssecurity.com/showpost ... ostcount=6</a> Franklin says: <br>
+
+<blockquote class="uncited"><div>I was using WinHotKey here but some of these new Ransom/Winlock/Screenlockers lock everything up where hotkeys just won't work whereas the batchfile, which has to be running before executing the malware, works a treat.</div></blockquote>
+The batchflie <strong>must be already running before executing the malware</strong>. <br>
+This may be nice for those testing malware (not me!)  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 29, 2010 10:02 am</strong></div>
+				<div class="author">by <strong>Oneder</strong></div>
+				<div class="content"><blockquote><div><cite>soccerfan wrote:</cite>
+The batchflie <strong>must be already running before executing the malware</strong>. <br>
+This may be nice for those testing malware (not me!)  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div></blockquote>
+Franklin and I are always testing malware so the batch works a treat in not having to reset with these screenlockers. <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> <br>
+<br>
+On my XP VM's where I'm not using SB I point the batch to RogueKiller. <br>
+<br>
+Yes you can use Task scheduler to run a normal terminate bat but minimum wait to execute is a minute.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 29, 2010 11:14 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I coded a tool to manage malware and I added a feature to allow to terminate sandboxed processes in a user defined amount of time.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 29, 2010 7:34 pm</strong></div>
+				<div class="author">by <strong>Oneder</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>I coded a tool to manage malware and I added a feature to allow to terminate sandboxed processes in a user defined amount of time.</div></blockquote>
+Sounds good buster, wouldn't mind a look at it if OK by you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Dec 30, 2010 3:16 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Oneder wrote:</cite>Sounds good buster, wouldn't mind a look at it if OK by you.</div></blockquote>
+
+The program, named Extractor, is used to extract contents from all kind of packed files: archives, setups, embedded files, etc.<br>
+<br>
+It supports: 7z, ZIP, GZIP, BZIP2, TAR, RAR, CAB, ISO, ARJ, LZH, CHM, Z, CPIO, RPM, DEB, NSIS, ACE, EML, Inno Setup, Microsoft SZDD, Microsoft TNEF, RTF, Gentee, Setup Factory, RapSFX, Thraex´s Astrum InstallWizard, SEA, Instyler, BInstall, Cexe, Quick Batch File Compiler, WScript, Smart Install Maker, Stubbie SFX Extractor, ARC, ZOO, SIS and virtually any executable compressed file format.<br>
+<br>
+I can show you a screenshot of the project:<br>
+<br>
+<img src="../img227.imageshack.us/img227/3262/clipboardjz.jpg" class="postimage" alt="Image"><br>
+<br>
+Extractor is an improved version of Universal Extractor: <a href="http://legroom.net/software/uniextract" class="postlink">http://legroom.net/software/uniextract</a><br>
+<br>
+In fact I started coding Extractor in 2007 because I was not satified with UE. Right now Extractor is the best program of its kind (there are not many of them  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> ). It´s able to automatize many setups even. That means contents get extracted without any user intervention because the program automatically clicks on "Next" button.<br>
+<br>
+Here you can see some statistics:<br>
+<br>
+<img src="../img259.imageshack.us/img259/3305/clipboard2u.jpg" class="postimage" alt="Image"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Dec 30, 2010 6:37 am</strong></div>
+				<div class="author">by <strong>Oneder</strong></div>
+				<div class="content">Excellent Buster. Will give it a whirl in a little while.  <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Dec 30, 2010 7:29 am</strong></div>
+				<div class="author">by <strong>soccerfan</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>Extractor is an improved version of Universal Extractor:...<br>
+In fact I started coding Extractor in 2007 because I was not satified with UE...</div></blockquote>
+Wow. I have been using uniextract for quite a while but your Extractor even wraps it all in sandboxie. <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> <br>
+Buster, do you have any plans of a public release (or a contributed utility)?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Dec 30, 2010 7:33 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>soccerfan wrote:</cite>Wow. I have been using uniextract for quite a while but your Extractor even wraps it all in sandboxie. <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> </div></blockquote>
+
+Well, Extractor uses a combination of 7Zip, Sandboxie and other custom extraction procedures.<br>
+<br>
+As you can see in the statistics, 7Zip does the job most of the time and Sandboxie usually does the rest.<br>
+
+<blockquote><div><cite>soccerfan wrote:</cite>Buster, do you have any plans of a public release (or a contributed utility)?</div></blockquote>
+
+No, I don´t have plans of releasing this tool.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9632&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:26 GMT -->
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=22399&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Context menu -&gt; Run Unsandboxed</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Context menu -&gt; Run Unsandboxed</h2>
+		<p><a href="viewtopic96ca96ca.html?f=22&amp;t=22399">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=22399</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Tue Jan 19, 2016 1:15 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Thanks to @BUCKAROO (ZIP &amp; OP is here <a href="viewtopic014f014f.html?f=4&amp;t=21785#p114094" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 85#p114094</a><br>
+
+<div class="inline-attachment">The attachment <strong>sansbox.png</strong> is no longer available</div>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>REGEDIT4
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\sansbox]
+@="Run &amp;Unsandboxed"
+"Icon"="\"C:\\Program Files\\Sandboxie\\Start.exe\",-104"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\sansbox\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /disable_force \"%1\" %*"
+
+</code></pre></div>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>REGEDIT4
+
+[-HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\sansbox]
+
+</code></pre></div>
+Bonus fun with File Association verbs
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>; *verb usage
+; AutoHotkey:
+
+IsSandboxed:=!!DllCall("GetModuleHandle","Str","SbieDll")
+
+if(A_IsCompiled)
+	Target="%A_ScriptName%"
+else
+	Target="%A_AhkPath%" "%A_ScriptName%"
+
+if(!IsSandboxed) ; Sandbox ourself
+{
+	Run,*sandbox %Target%,%A_ScriptDir%
+;	ExitApp
+}
+
+if(A_IsCompiled)
+{
+	MsgBox,fizzle...
+	ExitApp
+}
+else
+{
+	if(IsSandboxed)
+		Target:=TargetAhk("MsgBox`,There's no such escape!")
+	else
+		Target:=TargetAhk("MsgBox`,Defeats* Force Process.")
+	
+	Run,*sansbox %Target%
+}
+
+TargetAhk(string)
+{
+	string="%ComSpec%" /C"ECHO %string%|"%A_AhkPath%" *"
+	return string
+}
+</code></pre></div></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=22399&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:40 GMT -->
+</html>

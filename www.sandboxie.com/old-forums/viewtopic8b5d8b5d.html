@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=18694&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:47:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie Isolation Demonstration: Cryptoplocker</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie Isolation Demonstration: Cryptoplocker</h2>
+		<p><a href="viewtopicc141c141.html?f=5&amp;t=18694">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=18694</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Tue Apr 08, 2014 5:26 pm</strong></div>
+				<div class="author">by <strong>PiwPi</strong></div>
+				<div class="content">On the Sandboxie homepage there is a youtube video demonstrating the effectiveness of SB against cryptolocker <a href="https://www.youtube.com/watch?v=aMtyGNviiRY" class="postlink">https://www.youtube.com/watch?v=aMtyGNviiRY</a><br>
+I noticed in the video, and it's pointed out in the youtube comments, that at the 02:15 mark it shows the files that got encrypted by cryptolocker. One of those files was outside of the sandbox directory. The file is "Penguins.jpg" and it shows the location as C:\Users\Public\Pictures\Sample Pictures. <br>
+<br>
+I'm curious how this file was able to get encrypted by cryptolocker. Did Sandboxie fail to fully protect the system?  Was it some leftover file from testing? Anyone know?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Tue Apr 08, 2014 8:53 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">The malware was successfully contained but for some reason Sandboxie is not returning a fake path. The path that should be showing is the path to real system, like it does with "Penguins.jpg" file, but instead is showing the path inside sandbox folder.<br>
+<br>
+I consider this a glitch that should be fixed. I already requested a feature to show fake path in other conditions too:<br>
+<br>
+<a href="viewtopic6d3f6d3f.html?f=4&amp;t=18356" class="postlink">http://forums.sandboxie.com/phpBB3/view ... =4&amp;t=18356</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Wed Apr 09, 2014 3:26 am</strong></div>
+				<div class="author">by <strong>PiwPi</strong></div>
+				<div class="content">Why do you think it's a glitch? Cryptolocker was activated inside the sandbox so it will encrypt all the files inside the sandbox. The filepath is correct. The only thing is how did Penguins.jpg get encrypted outside the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Wed Apr 09, 2014 6:27 am</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">Strange <img class="smilies" src="images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes"> ...<br>
+Even upon deletion the file path to sample picture is not included.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Fri Apr 11, 2014 4:55 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">@ Curt: any comment about this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Fri Apr 11, 2014 10:44 pm</strong></div>
+				<div class="author">by <strong>nicknomo</strong></div>
+				<div class="content">There are only three things I can think of... <br>
+<br>
+1) There was an Immediate recovery box, in which the user could have accidentally recovered a single file...<br>
+<br>
+2) All of the other files were in his profile folder.  Sandboxie has two sandbox folders, one for the user and one for the drive.  The public user folder would have ended up in the drive sandbox, and the path could have been hidden.<br>
+<br>
+3) The Public user folder was given full access?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Mon Apr 14, 2014 7:08 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Curt: Please don´t miss commenting on this thread, please.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Tue Apr 15, 2014 12:01 am</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">Anyone in Invincea care to comment on this...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Wed Apr 16, 2014 12:02 am</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">I will look into this as soon as I have time.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Fri Apr 18, 2014 7:52 am</strong></div>
+				<div class="author">by <strong>Hamy</strong></div>
+				<div class="content">I think Buster, provided the best explanation so far. the sandbox applications, should not be able to see the real sandboxed locations of the files. sandboxie has the responsibility to intercept the api's being used to retrieve the files locations and adjust them. so the problem is not the application reporting Penguins.jpg file in "C:\Users\Public\Pictures\Sample Pictures", but rather every other single file, and the fact that the real location of the files, somehow leaked to the sandboxed program. Buster apparently has also identified the required api that needs to be intercepted to fix this. nice work <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> . it is important to note that this could be a potential problem for legitimate softwares as well. as if they use the same method that this malware uses to retrive the files locations, they might not be able to work properly in sandboxie.<br>
+I also gave the Cryptoplocker a try myself just to make sure.  and was able to reproduce this exact behavior. Even tho i am unsure atm why only that single file's location (C:\Users\Public\Pictures\Sample Pictures\Penguins.jpg) differs from others in the malware's list of affected files, i can confirm that nothing has leaked from the sandboxie. and the real jpg file is still intact.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Fri Apr 18, 2014 10:01 pm</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content"><blockquote class="uncited"><div>I also gave the Cryptoplocker a try myself just to make sure. and was able to reproduce this exact behavior. Even tho i am unsure atm why only that single file's location (C:\Users\Public\Pictures\Sample Pictures\Penguins.jpg) differs from others in the malware's list of affected files, i can confirm that nothing has leaked from the sandboxie. and the real jpg file is still intact.</div></blockquote>
+
+<br>
+That's reassuring... but the bug still need to be fix!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Tue Apr 22, 2014 8:11 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Curt: Any update about this issue?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Thu Apr 24, 2014 12:29 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Buster and Hamy are correct.  A sandboxed app should not be able to see the "real", sandboxed path.  To Cryptolocker, they should all look like C:\Users\Public\Pictures\Sample Pictures\penguins.jpg.<br>
+<br>
+This does not present any kind of a leak or hole.  The sandboxed app cannot access the file outside the sandbox.  The only issue here is that the sandboxed app can determine that it is inside a sandbox by looking at the file path.  But there are many others ways to accomplish that goal already (that cannot be plugged).  We will attend to these as soon as we can get to them.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Thu Apr 24, 2014 12:46 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Buster and Hamy are correct.  A sandboxed app should not be able to see the "real", sandboxed path.  To Cryptolocker, they should all look like C:\Users\Public\Pictures\Sample Pictures\penguins.jpg.<br>
+<br>
+This does not present any kind of a leak or hole.  The sandboxed app cannot access the file outside the sandbox.  The only issue here is that the sandboxed app can determine that it is inside a sandbox by looking at the file path.  But there are many others ways to accomplish that goal already (that cannot be plugged).  We will attend to these as soon as we can get to them.</div></blockquote>
+
+As Hamy pointed:<br>
+
+<blockquote class="uncited"><div>it is important to note that this could be a potential problem for legitimate softwares as well. as if they use the same method that this malware uses to retrive the files locations, they might not be able to work properly in sandboxie.</div></blockquote>
+
+it is important to fix this issue not just because an app can determine is being run sandboxed, but also because legitimate software may get confused.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Thu May 15, 2014 4:03 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Curt: Do you know already why the malware is showing the path to sandbox?</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=18694&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:47:33 GMT -->
+</html>

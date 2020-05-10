@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=54&t=21855&start=60&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:05:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 5.05 Beta Available (latest version 5.06) - Page 5</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>5.05 Beta Available (latest version 5.06)</h2>
+		<p><a href="viewtopiccd44cd44.html?f=54&amp;t=21855">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=54&amp;t=21855</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>5</strong> of <strong>8</strong></div>
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.2)</h3>
+				<div class="date">Posted: <strong>Fri Oct 16, 2015 4:49 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">Sandboxie service seems to block dxtory injection. Can anyone confirm?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.2)</h3>
+				<div class="date">Posted: <strong>Fri Oct 16, 2015 6:22 pm</strong></div>
+				<div class="author">by <strong>Bertus</strong></div>
+				<div class="content">I am having a problem with the Immediate Recovery function when downloading a .zip file.<br>
+I wanted to download a .zip file that I had already downloaded before. First I noticed that the Immediate Recovery window did not appear and after a while even the sandboxie control gets terminated.<br>
+After some investigation I discovered it has something to do with the file name you want to download. If there is a minus sign '-' in the file name then the Immediate Recovery window does not appear anymore.<br>
+The problem occurs when I follow these steps below:<br>
+- Download a .zip file , for example download emdb.zip from <a href="http://www.emdb.eu/" class="postlink">http://www.emdb.eu/</a><br>
+- Before saving the file change the file name to emdb-.zip<br>
+- After download complete, let sandboxie recover the file<br>
+- Download the file again and also change the file name to emdb-.zip<br>
+- After downloading you will notice that the Immediate Recovery window does not appear<br>
+- Wait for approxmitly 60 seconds<br>
+- Download the .zip file and change the file name to emdb-.zip once more and the sandboxie control is terminated.<br>
+<br>
+System:<br>
+Windows 8.1 (64 bit)<br>
+Sandboxie 5.05.2 64 bit (registered)<br>
+Firefox 41.0.2<br>
+<br>
+Bertus</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.2)</h3>
+				<div class="date">Posted: <strong>Fri Oct 16, 2015 6:59 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Dun wrote:</cite>Sandboxie service seems to block dxtory injection. Can anyone confirm?</div></blockquote>
+Sandboxie does not block any injection within the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.2)</h3>
+				<div class="date">Posted: <strong>Fri Oct 16, 2015 7:14 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">When SBIE service is running Dxtory doesn't work properly - OSD is not displayed in games, FPS limiter probably doesn't work too. As soon as SBIE service is stopped, OSD starts working. Everything outside of SBIE. Dxtory 2.0.127 worked fine with 5.05.1, while Dxtory 2.0.133 for some reason fails with 5.05.1. I'll investigate this...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.2)</h3>
+				<div class="date">Posted: <strong>Sat Oct 17, 2015 4:18 am</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content">Error-message during start sandboxed Firefox. Sandboxie beta 5.05.2/Firefox 41.0.2 (W10 build 10240 64 bits).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.2)</h3>
+				<div class="date">Posted: <strong>Sat Oct 17, 2015 9:40 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Yes, the rcpsss race issue may still happen, although it's more rare. It's more prevalent in Windows 10 and multi-core systems. This is a machine dependent error, and at this time not much can be done with that error as it has to do with hardware, parallel processing and timing. It's still being investigated, but a permant fix has not been found. <br>
+<br>
+If you can post your hardware here and the software you are running by running this command in powershell:<br>
+Get-WmiObject -Class Win32_Product | Select-Object -Property Name &gt; C:\Software\PCapps.txt  <br>
+<br>
+The pcapps.txt is the name of the file it will create. you can email that to <a href="mailto:support@sandboxie.com">support@sandboxie.com</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.2)</h3>
+				<div class="date">Posted: <strong>Sun Oct 18, 2015 10:26 am</strong></div>
+				<div class="author">by <strong>exciteduser</strong></div>
+				<div class="content">Just stopped by to say thanks for this update! After updating Windows, the old version (5.04) crashed my system and left me with a defect NTFS file system  <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> So I am glad to hear about the fix!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.2)</h3>
+				<div class="date">Posted: <strong>Sun Oct 18, 2015 10:44 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Thanks, but SBIE would have no affect on your NTFS file system. The updates (or removal/roll back of them) can cause that issue.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.2)</h3>
+				<div class="date">Posted: <strong>Sun Oct 18, 2015 12:57 pm</strong></div>
+				<div class="author">by <strong>Nyte</strong></div>
+				<div class="content">Hi,<br>
+<br>
+The following error occured when starting Google Chrome:<br>
+<br>
+SBIE2203 Fehler bei der Kommunikation mit dem Sandboxie-Dienst: *GUIPROXY_00000001 - chrome.exe [FF000000]<br>
+<br>
+System:<br>
+<br>
+SBoxie 5.05.02<br>
+Win10 Pro (64)<br>
+Emsisoft Anti-Malware<br>
+MBAM<br>
+HitmanPro.Alert<br>
+Google Chrome Version 48.0.2535.0 dev-m (64-bit)<br>
+<br>
+Any ideas how to solve the problem?<br>
+<br>
+Kind regards,<br>
+Detlef</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.2)</h3>
+				<div class="date">Posted: <strong>Sun Oct 18, 2015 1:38 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Nyte wrote:</cite>
+<br>
+The following error occured when starting Google Chrome:<br>
+<br>
+SBIE2203 Fehler bei der Kommunikation mit dem Sandboxie-Dienst: *GUIPROXY_00000001 - chrome.exe [FF000000]
+</div></blockquote>
+Nyte, I think thats one message that can be hidden. I hide one like that and the sandboxed program still works fine. I dont use Chrome but if you close the message or hide it and Chrome still runs well, you can hide it.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.1)</h3>
+				<div class="date">Posted: <strong>Mon Oct 19, 2015 8:21 am</strong></div>
+				<div class="author">by <strong>Obscurax</strong></div>
+				<div class="content"><blockquote><div><cite>Vince wrote:</cite><blockquote><div><cite>Show_me_your_tithes wrote:</cite>There is still something wrong with Firefox in Sandboxie, at least on my PC. I'm using Windows 10 and Firefox 40.0.1. There is a delay, kind of a glitch, between mouse clicks and response; between web pages loading and the ability to scroll; between the cursor leaving a link and the time it changes back to the standard cursor, between the stroke of a key and the time the character shows up in the text box. It's very bizarre and I'm not sure how else to explain it. I have none of these problems when Firefox is not sandboxed.</div></blockquote>
+
+<blockquote><div><cite>Craig@Invincea wrote:</cite>We've not been able to reproduce that, nor have we had any other reports of this.</div></blockquote>
+
+Hi all, i can confirm that i have the same problem, there is a sort of FF freezing sometimes, only when it's sandboxed. When i open a tab, or scrolling a page, or sometimes whern typing a text like this one, it can freezes for 1 second or 2. I thought it was a FF plugin problem, or profile problem, so i tried to clean profile by removing crap (old unnecessary files in profile folder), and freezes are less frequent, but still there. So i tried to create a new profile with FF command line -p but it was already freezing in the profiles window choosing box...<br>
+Just for info, i'm on W10 x64 Pro, with ESET SS 8.</div></blockquote>
+
+<br>
+I was experiencing the same problems. I pinned it down to the addon "uBlock Origin 1.2.1" I hope the devs can can have a look at it.<br>
+I know Sandboxie can't support all addons but I think there is an underlying problem as multiple users seem to have this problem (with different addons).<br>
+I am running Win10 x64,  Firefox 41.0.2 and SB 5.05.2, I wasn't experiencing these issues with on Win7.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.2)</h3>
+				<div class="date">Posted: <strong>Mon Oct 19, 2015 10:50 am</strong></div>
+				<div class="author">by <strong>Nyte</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite>
+Nyte, I think thats one message that can be hidden. I hide one like that and the sandboxed program still works fine. I dont use Chrome but if you close the message or hide it and Chrome still runs well, you can hide it.Bo</div></blockquote>
+
+Thanks Bo <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.1)</h3>
+				<div class="date">Posted: <strong>Mon Oct 19, 2015 12:35 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Obscurax wrote:</cite>
+I was experiencing the same problems. I pinned it down to the addon "uBlock Origin 1.2.1" I hope the devs can can have a look at it.<br>
+I know Sandboxie can't support all addons but I think there is an underlying problem as multiple users seem to have this problem (with different addons).<br>
+I am running Win10 x64,  Firefox 41.0.2 and SB 5.05.2, I wasn't experiencing these issues with on Win7.</div></blockquote>
+I dont use Ublock but I know a few SBIE users that are using it with no problem. Perhaps the issue between SBIE and Ublock that you are experiencing is due to a rule you are using. By the way, I use NoScript to block scripts and Adblock plus to block ads, I have been using this addons for many years, they works very well with SBIE. I never experienced any issue. You might like to try them instead of Ublock.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.2)</h3>
+				<div class="date">Posted: <strong>Mon Oct 19, 2015 1:11 pm</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content">@Bo and Obscurax<br>
+<br>
+Ublock Origin 1.3.0 is out (by gorhill).<br>
+<br>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/?src=ss" class="postlink">https://addons.mozilla.org/en-US/firefo ... in/?src=ss</a><br>
+<br>
+Changes: <a href="https://github.com/gorhill/uBlock/releases/tag/1.3.0" class="postlink">https://github.com/gorhill/uBlock/releases/tag/1.3.0</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.2)</h3>
+				<div class="date">Posted: <strong>Mon Oct 19, 2015 2:04 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">uBlock with FF 44.02 works fine with SBIE</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>5</strong> of <strong>8</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=54&t=21855&start=60&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:05:01 GMT -->
+</html>

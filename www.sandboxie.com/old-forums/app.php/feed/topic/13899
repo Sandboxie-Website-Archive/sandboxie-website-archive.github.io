@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/13899" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2012-10-23T06:08:34-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/13899</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2012-10-23T06:08:34-04:00</updated>
+
+		<published>2012-10-23T06:08:34-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13899&amp;p=84804#p84804</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13899&amp;p=84804#p84804"/>
+		<title type="html"><![CDATA[[.01] Revised [Template_Thunderbird_PGP]]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13899&amp;p=84804#p84804"><![CDATA[
+Thanks!  I copied the new settings into Templates.ini for inclusion in the next release.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Tue Oct 23, 2012 6:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2012-10-22T16:31:35-04:00</updated>
+
+		<published>2012-10-22T16:31:35-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13899&amp;p=84791#p84791</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13899&amp;p=84791#p84791"/>
+		<title type="html"><![CDATA[[.01] Revised [Template_Thunderbird_PGP]]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=13899&amp;p=84791#p84791"><![CDATA[
+I've recently been testing OpenPGP <strong>v2</strong> with Thunderbird, using a local template.<br>Here's a replacement template for 'templates.ini', for use with OpenPGP v1 and v2:<br><br>[Template_Thunderbird_PGP]<br><br>Tmpl.Title=OpenPGP for Thunderbird<br>Tmpl.Class=EmailReader<br>OpenFilePath=thunderbird.exe,%AppData%\gnupg<br>OpenFilePath=thunde~1.exe,%AppData%\gnupg<br>ProcessGroup=&lt;gpg_programs&gt;,gpg.exe,gpg2.exe,gpg-agent.exe<br>OpenFilePath=&lt;gpg_programs&gt;,%Tmpl.Thunderbird%<br>OpenFilePath=&lt;gpg_programs&gt;,%AppData%\Thunderbird<br>OpenFilePath=&lt;gpg_programs&gt;,%Local AppData%\Thunderbird<br>OpenFilePath=&lt;gpg_programs&gt;,%AppData%\gnupg\<br>LingerProcess=gpg-agent.exe<br><br>------------------------------------<br>For comparison purposes only...<br>The original template in 'templates.ini' (for OpenPGP v1):<br><br>[Template_Thunderbird_PGP]<br><br>Tmpl.Title=OpenPGP for Thunderbird<br>Tmpl.Class=EmailReader<br>OpenFilePath=thunderbird.exe,%AppData%\gnupg<br>OpenFilePath=thunde~1.exe,%AppData%\gnupg<br>OpenFilePath=gpg.exe,%Tmpl.Thunderbird%<br>OpenFilePath=gpg.exe,%AppData%\Thunderbird<br>OpenFilePath=gpg.exe,%Local AppData%\Thunderbird<br>OpenFilePath=gpg.exe,%AppData%\gnupg\<br><br>------------------------------------<br>A local template for v1 and v2 that can be used until the one in 'templates.ini' is updated:<br><br>[Template_Local_Thunderbird_PGP]<br><br>Tmpl.Title=OpenPGP for Thunderbird<br>Tmpl.Class=Local<br>OpenFilePath=thunderbird.exe,%AppData%\gnupg<br>OpenFilePath=thunde~1.exe,%AppData%\gnupg<br>ProcessGroup=&lt;gpg_programs&gt;,gpg.exe,gpg2.exe,gpg-agent.exe<br>OpenFilePath=&lt;gpg_programs&gt;,%Tmpl.Thunderbird%<br>OpenFilePath=&lt;gpg_programs&gt;,%AppData%\Thunderbird<br>OpenFilePath=&lt;gpg_programs&gt;,%Local AppData%\Thunderbird<br>OpenFilePath=&lt;gpg_programs&gt;,%AppData%\gnupg\<br>LingerProcess=gpg-agent.exe<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Mon Oct 22, 2012 4:31 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

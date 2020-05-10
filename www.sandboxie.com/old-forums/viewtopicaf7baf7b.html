@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=21785&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:56:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Context menu -&gt; Run Unsandboxed</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Context menu -&gt; Run Unsandboxed</h2>
+		<p><a href="viewtopic014f014f.html?f=4&amp;t=21785">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=21785</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Fri Sep 18, 2015 10:45 am</strong></div>
+				<div class="author">by <strong>nshmourne</strong></div>
+				<div class="content">So the context menu for a file already contains "run sandboxed", but I'd like to have an option to run "un-sandboxed". This way I don't have to disabled forced programs / locations first. This would speed up some of my work flow. <br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Fri Sep 18, 2015 1:41 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">nshmourne, the option to run a file unsandboxed without disabling Forced programs is there already. After you right click a file and choose Run sandboxed, at the bottom of the screen you ll see the option "Run outside sandbox". If you click there, the file runs out of the sandbox.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Fri Oct 02, 2015 1:06 pm</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">I only have, and want, the "send to" right-click shortcuts enabled. Any way of adding run unsandboxed to this - would make life a lot easier (for me).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Sat Oct 03, 2015 5:09 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content"><div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file07010701.png?id=460" class="postimage" alt="sansbox.png" onclick="viewableArea(this);" /></dt>
+						<dd>sansbox.png (10.45 KiB) Viewed 5968 times</dd>
+		</dl>
+		
+		
+		
+			</div>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>REGEDIT4
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\sansbox]
+@="Run &amp;Unsandboxed"
+"Icon"="\"C:\\Program Files\\Sandboxie\\Start.exe\",-104"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\sansbox\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /disable_force \"%1\" %*"
+
+</code></pre></div>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>REGEDIT4
+
+[-HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\sansbox]
+
+</code></pre></div>
+Bonus fun with File Association verbs
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>; *verb usage
+; AutoHotkey:
+
+IsSandboxed:=!!DllCall("GetModuleHandle","Str","SbieDll")
+
+if(A_IsCompiled)
+	Target="%A_ScriptName%"
+else
+	Target="%A_AhkPath%" "%A_ScriptName%"
+
+if(!IsSandboxed) ; Sandbox ourself
+{
+	Run,*sandbox %Target%,%A_ScriptDir%
+;	ExitApp
+}
+
+if(A_IsCompiled)
+{
+	MsgBox,fizzle...
+	ExitApp
+}
+else
+{
+	if(IsSandboxed)
+		Target:=TargetAhk("MsgBox`,There's no such escape!")
+	else
+		Target:=TargetAhk("MsgBox`,Defeats* Force Process.")
+	
+	Run,*sansbox %Target%
+}
+
+TargetAhk(string)
+{
+	string="%ComSpec%" /C"ECHO %string%|"%A_AhkPath%" *"
+	return string
+}
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Sat Oct 03, 2015 12:36 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">@BUCKAROO<br>
+Thank you. Great job!  <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Mon Oct 05, 2015 8:41 pm</strong></div>
+				<div class="author">by <strong>btm</strong></div>
+				<div class="content">That's some nice work @BUCKAROO.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Mon Oct 05, 2015 11:24 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Yes indeed, thanks to BUCKAROO</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Tue Oct 06, 2015 8:20 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">Curt, this thread should be sticked somewhere.   Buckaroo, that is a work of art.<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Tue Oct 06, 2015 11:28 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Peter2150 wrote:</cite>Curt, this thread should be sticked somewhere.   Buckaroo, that is a work of art.<br>
+<br>
+Pete</div></blockquote>
+Agreed. I made it a sticky.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Tue Oct 06, 2015 1:37 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">It works really nice, thanks Buckaroo <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool">.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Tue Oct 06, 2015 4:35 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">Hmm, maybe to implement this in next release?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Tue Oct 06, 2015 4:54 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content"><blockquote><div><cite>Dun wrote:</cite>Hmm, maybe to implement this in next release?</div></blockquote>
+To be honest I do prefer this tweak as optional. Sometimes when I right-click and select a function I click on the wrong one  <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> <br>
+Hence it could be dangerous especially when dealing with unknown programs...  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Tue Oct 06, 2015 5:34 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">Well, right. There was shortcut key combination to do the same. Does anyone remember the keys?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Wed Oct 07, 2015 7:36 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Mr.X wrote:</cite><blockquote><div><cite>Dun wrote:</cite>Hmm, maybe to implement this in next release?</div></blockquote>
+To be honest I do prefer this tweak as optional. Sometimes when I right-click and select a function I click on the wrong one  <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> <br>
+Hence it could be dangerous especially when dealing with unknown programs...  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div></blockquote>
+
+I think Curt was<em> considering</em> adding this to the next beta.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Context menu -&gt; Run Unsandboxed</h3>
+				<div class="date">Posted: <strong>Wed Oct 07, 2015 10:39 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Mr.X wrote:</cite>
+Hence it could be dangerous especially when dealing with unknown programs...  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div></blockquote>
+If you install an unknown program in your computer that happens to be malware, it wont matter if it runs sandboxed or not.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=21785&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:56:37 GMT -->
+</html>

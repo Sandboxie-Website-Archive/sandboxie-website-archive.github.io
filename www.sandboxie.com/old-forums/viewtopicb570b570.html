@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24937&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:46:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Firefox 56/57/58 sound/videos/printing not working when sandboxed - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Firefox 56/57/58 sound/videos/printing not working when sandboxed</h2>
+		<p><a href="viewtopic3a953a95.html?f=11&amp;t=24937">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24937</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>4</strong></div>
+					<div class="post">
+				<h3>Sound Problem</h3>
+				<div class="date">Posted: <strong>Sat Nov 25, 2017 9:56 pm</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">Hi Admin,<br>
+<br>
+<br>
+I'm having a bit of a problem with Firefox on windows 7, any video I'm playing doesn't have a sound when FF is inside SBIE outside no problem at all. But in my win1 x64 1709 laptop I don't have such issue, need you advice in this matter. Already reinstalled FF no such luck with the sound issue.<br>
+<br>
+Regards,<br>
+Nix</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sound Problem</h3>
+				<div class="date">Posted: <strong>Sun Nov 26, 2017 1:09 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Hi Nix<br>
+<br>
+Try, Open about:config, change "security.sandbox.content.level" to 2 or 1 or 0.<br>
+<br>
+If that don't work, try disabling Multiprocess, in about:config, change value to false: "browser.tabs.remote.autostart", make sure browser.tabs.remote.autostart.2 is also set to false-<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sound Problem</h3>
+				<div class="date">Posted: <strong>Sun Nov 26, 2017 6:42 am</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">Hi Bo,<br>
+<br>
+"security.sandbox.content.level" to 2 works, didn't know FF already implemented a sandbox... been almost a year that I haven't used FF. Thanks!<br>
+<br>
+Nix</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56.0 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Wed Nov 29, 2017 6:17 pm</strong></div>
+				<div class="author">by <strong>Stardance</strong></div>
+				<div class="content">To recapitulate: currently I am running Sandboxie 5.22 on 64-bit Windows 7 Professional SP2 (fully updated). <strong>Firefox Quantum v. 57</strong> ordinarily has not output any sound when it displays a video on a website page while Firefox is running sandboxed. While running without a Sandboxie sandbox, Firefox has functioned as expected. (I run Microsoft Security Essentials as the "anti-virus".) <br>
+<br>
+With regard to Firefox Quantum v. 57 settings and configuration: <br>
+<br>
+<strong>(1)</strong> For the Options Performance preferences:  If I enable "recommended settings", then Hardware Acceleration is enabled, and the Content Process Limit is 1 (default) unless I increase it -- there is no "0" option. <br>
+<br>
+Disenabling Hardware Acceleration makes no difference. The comment about the Content Process Limit is <em>"Additional content processes can improve performance when using multiple tabs, but will also use more memory."</em> Since there is 16 GB of system memory on this rig, increasing it shouldn't cause a problem.<br>
+<br>
+<strong>(2)</strong> Reducing the <strong>about:config</strong> setting for <strong>security.sandbox.content.level </strong> to zero makes no difference, nor did reducing it to a value of 1 or of 2 from the initial value of 3.<br>
+<br>
+<strong>(3)</strong> The <strong>about:config</strong> setting for <strong>browser.tabs.remote.autostart </strong> was already set to false. I toggled  <strong>browser.tabs.remote.autostart2</strong> to false also.  Doing that has not resolved the problem.<br>
+<br>
+<strong>(4)</strong> Note: currently the Firefox NoScript 10.1 add-on is configured to "Scripts Globally Allowed" because there have been problems with using it the way that I have customarily used it before. But there aren't any problems when I use that setting, as undesirable and risky as it is. There also seem to be some hidden Firefox Quantum "security" setting(s) that attempt to control website usage of JavaScript, but I haven't had an opportunity to investigate that aspect of the issue. <br>
+<br>
+<strong><em>THUS FAR: </em></strong><br>
+<br>
+<strong>(A)</strong> Sandboxed Firebox Quantum <em>does not</em> display video with sound for <a href="https://www.youtube.com/" class="postlink">https://www.youtube.com</a>, for  <a href="https://www.msn.com/?cp=p:news" class="postlink">https://www.msn.com/?cp=p:news</a>, or for any video shown on <a href="https://www.facebook.com/" class="postlink">https://www.facebook.com/</a> (including video on the pages of various and sundry websites to which Newsfeed items link). Frankly, though, apparently Facebook either has other problems with Firefox Quantum or problems of their own with the website, or probably both.<br>
+<br>
+<strong>(B)</strong> Currently, sandboxed Firefox Quantum displays video with sound for <a href="http://www.msnbc.com/" class="postlink">http://www.msnbc.com/</a> as anyone would expect. However, I haven't tested it with each of the respective changes (above) so I don't know whether it would not have worked previously.<br>
+<br>
+FYI: following is the configuration for the sandbox in which Sandboxie runs Firefox Quantum v. 57, preceded by Global Settings and definitions of Templates:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+ActivationPrompt=n
+Template=nVidia_Stereoscopic3D
+Template=Logitech_G15_Keyboard
+Template=OfficeLicensing
+Template=Microsoft_Security_Essentials
+Template=Microsoft_MSMQ
+Template=LastPass
+TemplateReject=WindowsLive
+TemplateReject=KeyScrambler
+ForceDisableSeconds=10
+
+[TemplateSettings]
+
+Template=LastPass
+
+[Template_Local_Secure_Directories]
+
+Tmpl.Title=Local Secure Directories
+Tmpl.Class=WebBrowser
+ClosedFilePath=!firefox.exe,%Local AppData%\Mozilla\Firefox
+ClosedFilePath=!firefox.exe,%AppData%\Mozilla\Firefox
+ClosedFilePath=!iexplore.exe,%Favorites%
+ClosedFilePath=!iexplore.exe,%Cookies%
+ClosedFilePath=!chrome.exe,googleupdate.exe,%Local AppData%\Google\Chrome
+ClosedFilePath=!chrome.exe,googleupdate.exe,%AppData%\Google\Chrome
+ClosedFilePath=!wmplayer.exe,C:\Program Files\Windows Media Player\
+
+[Template_Local_AutoIgnore_Directories]
+
+Tmpl.Title=Local AutoIgnore Directories
+Tmpl.Class=WebBrowser
+AutoRecoverIgnore=C:\Users\SYSOP\AppData\Roaming\Microsoft\Windows\Recent
+AutoRecoverIgnore=C:\Users\SYSOP\AppData\Roaming\Microsoft\Windows\Temporary Internet Files
+AutoRecoverIgnore=C:\Users\SYSOP\AppData\Local\Temp
+AutoRecoverIgnore=C:\Users\SYSOP\AppData\Roaming\Adobe\FlashPlayer
+AutoRecoverIgnore=C:\Users\SYSOP\AppData\Roaming\Adobe\Macromedia
+AutoRecoverIgnore=C:\Users\SYSOP\AppData\Roaming\Macromedia
+
+[Template_Local_Recover_Folders]
+
+Tmpl.Title=Local Recover Folders
+Tmpl.Class=WebBrowser
+RecoverFolder=C:\ProgramData
+RecoverFolder=C:\Users\SYSOP\Downloads
+RecoverFolder=C:\Users\SYSOP\AppData
+RecoverFolder=C:\TEMP
+RecoverFolder=C:\WINDOWS
+RecoverFolder=F:\AGAPE
+RecoverFolder=F:\BACKUPS
+RecoverFolder=F:\COMPUTER
+RecoverFolder=F:\DNL
+RecoverFolder=F:\GAMES
+RecoverFolder=F:\GAMES\Alan Wake (Remedy)
+RecoverFolder=F:\GAMES\World of Warcraft (Blizzard)
+RecoverFolder=F:\GAMES\The Elder Scrolls Online (Zenimax)
+RecoverFolder=F:\GAMES\The Elder Scrolls V - Skyrim (Bethesda)
+RecoverFolder=F:\GAMES\HUMBLE BUNDLES
+RecoverFolder=F:\INSTALL
+RecoverFolder=F:\INSTALLERS
+RecoverFolder=F:\LIVING
+RecoverFolder=F:\LIBRARY
+RecoverFolder=F:\MEDIA
+RecoverFolder=F:\NOTES
+RecoverFolder=F:\Program Data
+RecoverFolder=F:\ProgramData
+RecoverFolder=F:\Program Files
+RecoverFolder=F:\Program Files (x86)
+RecoverFolder=F:\SCRAPBOOK
+RecoverFolder=F:\SCREENSHOTS
+RecoverFolder=F:\SNAPSHOTS
+RecoverFolder=F:\TEMP
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%AppData%\Mozilla\Firefox\Crash Reports
+RecoverFolder=%AppData%\Mozilla\Firefox\Profiles\extensions
+RecoverFolder=%Favorites%
+RecoverFolder=%Cookies%
+RecoverFolder=%Personal%
+RecoverFolder=%Desktop%
+
+[Firebox]
+
+Enabled=y
+BoxNameTitle=y
+BorderColor=#00FFFF,ttl
+ConfigLevel=7
+DropAdminRights=n
+ForceProcess=firefox.exe
+NotifyInternetAccessDenied=y
+NotifyStartRunAccessDenied=y
+CopyLimitKb=128000
+Template=Firefox_Cookies_DirectAccess
+Template=Firefox_Session_DirectAccess
+Template=Firefox_Bookmarks_DirectAccess
+Template=Firefox_Profile_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=LastPass
+Template=Local_Secure_Directories
+Template=Local_AutoIgnore_Directories
+Template=Local_Recover_Folders
+Template=AutoRecoverIgnore
+Template=BlockPorts
+Template=LingerPrograms
+OpenProtectedStorage=y
+OpenCredentials=y
+ClosedFilePath=!&lt;InternetAccess&gt;,InternetAccessDevices
+ClosedFilePath=D:\
+ClosedFilePath=E:\
+ClosedFilePath=!firefox.exe,F:\
+ClosedFilePath=*\GEARAspiWDMDevice*
+OpenFilePath=firefox.exe,%Local AppData%\Mozilla\Firefox\
+OpenFilePath=firefox.exe,%AppData%\Mozilla\Firefox\Crash Reports\
+OpenFilePath=wmplayer.exe,C:\Program Files\Windows Media Player\
+OpenFilePath=WerFault.exe,C:\Users\SYSOP\AppData\Local\
+OpenFilePath=F:\DNL\
+OpenFilePath=F:\GAMES\
+OpenFilePath=F:\INSTALL\
+OpenFilePath=F:\LIBRARY\
+OpenFilePath=F:\MEDIA\
+OpenFilePath=F:\SCREENSHOTS\
+ReadFilePath=C:\WINDOWS
+ReadFilePath=G:\
+LingerProcess=firefox.exe
+LingerProcess=wuauclt.exe
+LingerProcess=rundll.exe
+LeaderProcess=&lt;FirefoxPrograms&gt;
+AutoRecover=y
+AutoDelete=y
+NeverDelete=n
+ProcessGroup=&lt;InternetAccess&gt;,firefox.exe,plugin-container.exe,updater.exe,xpicleanup.exe,xpicle~1.exe,crashreporter.exe,crashr~1.exe,iedw.exe,container.exe,icwconn1.exe,icwconn2.exe,icwrmind.exe,icwtutor.exe,inetwiz.exe,isignup.exe,wuauclt.exe,jqsnotify.exe,dwwin.exe,SandboxieBITS.exe,SandboxieCrypto.exe,SandboxieDcomLaunch.exe,SandboxieEventSys.exe,SandboxieWUAU.exe,SWDNLD.EXE,SwHelper_1205146.exe,xpnetdiag.exe,wmplayer.exe,Foxit Reader.exe,Foxit Updater.exe,GenuineCheck.exe,dllhost.exe,WerFault.exe,java.exe,setup_wm.exe,BitTorrent.exe,notepad++.exe,DNTPService.exe,SwHelper_1214154.exe,wermgr.exe,FlashPlayerPlugin_26_0_0_137.exe,explorer.exe
+</code></pre></div>
+Thank you for your time and attention to this issue.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56/57 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Thu Nov 30, 2017 10:15 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Stardance,<br>
+<br>
+Have you performed the steps outside Sandboxie? If not, please do that and then delete the contents of your sandbox to re-try.<br>
+<br>
+If the issue still persists, create a new Sandbox with default settings and let us know if the problem follows you there. <br>
+<br>
+If all fails, please create a new Firefox profile, make sure that the sandbox content level is set to 2 or lower, and if needed disable multiprocess (browser.tabs.remote... ). Then re-try using Firefox to play videos inside Sandboxie.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56/57 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Sun Dec 10, 2017 5:32 pm</strong></div>
+				<div class="author">by <strong>DrAlrek</strong></div>
+				<div class="content">I found a work-around for this problem.<br>
+<br>
+(Sandbox settings for the sandboxes that you use firefox in)&gt;restrictions&gt;drop rights&gt; tick the setting to deny admin rights to apps running inside sandboxie. Then sound SHOULD start playing in firefox again, at least it did for me. <br>
+<br>
+I run windows 7 home premium with all updates (and a lot of the optional updates) I used GWX control panel to disable windows 10 updates. I have the latest stable build of firefox and the latest stable build of sandboxie and I run Comodo I.S. along side sandboxie with it set to auto-block all of the unknown and auto-quarantine the known bad. <br>
+<br>
+I hope this work-around helps. I personally find it better to run sandboxed programs without admin privileges, that way if there's ransomware that gets loaded through an exploit kit in a banner ad or something, the ransomware almost always gets stopped by just sandboxie, because it gets denied admin access</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56/57 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Tue Jan 02, 2018 4:56 pm</strong></div>
+				<div class="author">by <strong>Stardance</strong></div>
+				<div class="content">To whom it may concern: eventually everything started working as expected, for no apparent reason. <br>
+<br>
+I have no idea as to which specific measure(s) that I took to resolve this problem, and a couple of others with Firefox Quantum v. 57, that might have been responsible for the change. They did not change anything immediately or after restarting Firefox at the time. Firefox has since been updated to 57.0.1 and again to 57.0.2 and it still works as expected.<br>
+<br>
+In my prior experience with Firefox, changes made with <em>about:config</em> often do not survive an update, especially when the major version number increments. Sometimes a setting which I changed (or introduced, upon expert advice) no longer exists ("deprecated"). But most often it is simply re-set to the current default for that version. So there is no guarantee that whatever caused this problem will not recurr in the future. On the other hand, re-setting a configuration option to the default in a future version might not cause any problems.<br>
+<br>
+That said, thank you all very much for your time, attention, and advice in resolving this and other problems that occurred after the upgrade to Firefox Quantum.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>No sound in YouTube with Firefox 58.0.1</h3>
+				<div class="date">Posted: <strong>Tue Jan 30, 2018 10:58 am</strong></div>
+				<div class="author">by <strong>Peter 123</strong></div>
+				<div class="content">Just a quick report:<br>
+<br>
+After updating Firefox to the latest version <strong>58.0.1</strong> the sound in YouTube does not work any longer. <br>
+<br>
+Outside of the sandbox the sound in YouTube is o.k.<br>
+<br>
+Windows 7 Home Premium, 32 bit<br>
+Sandboxie version 5.22</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: No sound in YouTube with Firefox 58.0.1</h3>
+				<div class="date">Posted: <strong>Tue Jan 30, 2018 11:51 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopicad5aad5a.html?p=129898#p129898" data-post-id="129898" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Aug 29, 2017 1:39 pm</div></cite>
+Open Firefox outside Sandboxie<br>
+type about:config and accept the risk<br>
+search sandbox<br>
+Switch security.sandbox.content.level to 2 (mine was 3, if needed switch it to 1 or 0 ).<br>
+Close Firefox<br>
+Relaunch it Sandboxed...
+</div></blockquote>
+If that doesn't work, please check this thread: <a href="viewtopic15b715b7.html?f=11&amp;t=25364&amp;p=132002&amp;hilit=firefox+sound#p132002" class="postlink">viewtopic.php?f=11&amp;t=25364&amp;p=132002&amp;hil ... nd#p132002</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56/57/58 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Tue Jan 30, 2018 4:43 pm</strong></div>
+				<div class="author">by <strong>Peter 123</strong></div>
+				<div class="content">Thank you, APMichael, for your reply and thank you, Barb, for the advice. <br>
+<br>
+Yes, indeed, the sound in Youtube is back when switching the value for <em>"security.sandbox.content.level"</em> from 4 (as it was in my case) to 2.  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+<br>
+Alternatively, the method described by bo.elam and Geordy in the other thread works also for me: changing the value for <em>"browser.tabs.remote.autostart"</em> from "true" to "false". (Perhaps that's the "softer" method as it does not influence the security level given as default by Firefox.) - Thanks to both of you too. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56/57/58 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Mon Feb 05, 2018 1:39 pm</strong></div>
+				<div class="author">by <strong>Webfra</strong></div>
+				<div class="content">Hi All,<br>
+<br>
+I had the same problem, enabling the following setting helped:<br>
+<strong>media.useAudioChannelAPI    modified            boolean         true</strong><br>
+<br>
+I don't know what it does, but at least it really seems to be related to "audio" ...<br>
+<br>
+Update: Just checked, I also have security.sandbox.content.level = 2, (and 4 doesn't work) so I guess both settings are needed...<br>
+<br>
+Greets,<br>
+Webfra</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56/57/58 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Sat Feb 17, 2018 11:58 am</strong></div>
+				<div class="author">by <strong>VanessaF</strong></div>
+				<div class="content">Hi guys,<br>
+<br>
+I have the same problem. I tried the following:<br>
+- security.sandbox.content.level to 2<br>
+- media.useAudioChannelAPI modified boolean true<br>
+- browser.tabs.remote.autostart --&gt; false<br>
+- browser.tabs.remote.autostart.2 --&gt; false<br>
+<br>
+Unfortunately nothing changed and the problem still exists. One think that I noticed is that if I watch the video in a sandboxed Firefox it does not start immediatley. You have to wait some 5 seconds for the video to start but you see the first picture of the video immediately. But if you use Firefox without sandboxie the video (and sound) starts automatically. Does anyone have a suggestion?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56/57/58 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Tue Feb 20, 2018 11:19 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello VanessaF,<br>
+<br>
+Did you ensure the changes were made outside sandboxed Firefox, and that they are still there after relaunching Firefox (non sandboxed)?  If so have you tried, after making the changes, to launch Firefox in a new Sandbox with default settings? <br>
+Please re-try, starting withe the Sandbox content level settings (outside sandboxie), and if that fails, do the multiprocess (remote tabs), and if needed, the audio channel changes. <br>
+<br>
+If the issue persists, please provide the required information so that I can test it:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 56/57/58 sound not working when sandboxed</h3>
+				<div class="date">Posted: <strong>Sat Feb 24, 2018 5:55 pm</strong></div>
+				<div class="author">by <strong>rodalsa</strong></div>
+				<div class="content">I had the same problem.<br>
+Windows 7 Pro<br>
+Firefox 58.0.2 (64-Bit)<br>
+Sandboxie 5.22 (64-Bit)<br>
+<br>
+Firefox was running stand alone for the fix.<br>
+<br>
+I had only to change the Firefox setting under the URL entry  about:config<br>
+From&gt; browser.tabs.remote.autostart       Default | boolean | true<br>
+To&gt;     browser.tabs.remote.autostart    Modified | boolean | false<br>
+By using the right-click menu's Toggle choice.<br>
+<br>
+I got my sound back in both configurations:<br>
+Firefox stand alone<br>
+Firefox hosted by Sandboxie.   <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+The setting "security.sandbox.content.level" discussed as 2, 3 or 4 was 4 for my system. I did not change it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Firefox &amp; security.sandbox.content.level</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 5:00 am</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">Is it still necessary to reduce the security.sandbox.content.level to 2 to stop various problems inc pdf printing?<br>
+<br>
+Windows 10x64 fully updated; Firefox 60b3; SB 5.24</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>4</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24937&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:46:26 GMT -->
+</html>

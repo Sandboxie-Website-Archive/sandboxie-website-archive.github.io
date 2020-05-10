@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=21743&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:33:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SDelete 1.51 Need MD5/SHA1</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SDelete 1.51 Need MD5/SHA1</h2>
+		<p><a href="viewtopicf0b9f0b9.html?f=5&amp;t=21743">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=21743</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>SDelete 1.51 Need MD5/SHA1</h3>
+				<div class="date">Posted: <strong>Sat Sep 12, 2015 4:26 pm</strong></div>
+				<div class="author">by <strong>SandinShoes</strong></div>
+				<div class="content">I was looking for a download of the 1.51 version of SDelete an found one on archive.org. It's in one of the archives of the "<a href="https://technet.microsoft.com/en-us/sysinternals/bb897443.aspx" class="postlink">https://technet.microsoft.com/en-us/sys ... 97443.aspx</a>" site, here's the archived version "<a href="https://web.archive.org/web/20110217051910/http://technet.microsoft.com/en-us/sysinternals/bb897443.aspx" class="postlink">https://web.archive.org/web/20110217051 ... 97443.aspx</a>".<br>
+<br>
+Can someone who has 1.51 please post the MD5/SHA1 of the official SDelete 1.51 so that I can compare it with this file, I wanted to just be sure that I was getting the correct file. I've never used a site like archive.org so i wasn't sure if it was possible for the archived webpages to be altered any an not contain the original file.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SDelete 1.51 Need MD5/SHA1</h3>
+				<div class="date">Posted: <strong>Sat Sep 12, 2015 6:28 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">I think that I added a "SDelete Usage.txt" file to my archived copy of SDelete 1.51, so I can't give you a hash value to compare with your .zip file download.<br>
+You can compare hash values for the sdelete.exe file - from your download, and the one that I have from 2006:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>==================================================
+Filename          : sdelete.exe
+MD5               : e7982d4f83cb999ef7b8bbcf9cc6e227
+SHA1              : 187beea1ed4738cd3af648b6ee51d631fc059a71
+CRC32             : 3234dc77
+SHA-256           : 3b6b19c9bf757aea345f6571afd4a0891041c758cfa4cbde741a8a0ae9ba0146
+SHA-512           : e3f800b80fd200300ef59747884695cd58bb242f73a253a4fc31ee635f602776f5d4f63905d4dddbeac11daa808c96e836451e4cc74863c235cc93de64803e78
+SHA-384           : 251d9f6bbf7355446436a57978410ab736a8e55822d3c79752efbb883f44a3bcf4cbbb6df707ba29f61869a5e3778898
+Full Path         : C:\Temp\sdelete.exe
+Modified Time     : 11/1/2006 12:06:26 PM
+Created Time      : 11/1/2006 12:06:26 PM
+File Size         : 166,712
+File Version      : 1.51
+Product Version   : 1.51
+Identical         : 
+Extension         : exe
+File Attributes   : A
+==================================================</code></pre></div>Be sure to run sdelete.exe at least once in a command window, before you try using it in Sandboxie. There's a EULA that must be agreed to, or the program will hang when run from Sandboxie Control.<br>
+Or, add the EULA agreement manually, using a .reg file:<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Windows Registry Editor Version 5.00
+
+;This will add the acceptance of SDelete's End User
+;License Agreement to your Registry.
+;Rename this file to Accept_EULA.reg and then double-click it.
+
+[HKEY_CURRENT_USER\Software\Sysinternals\SDelete]
+"EulaAccepted"=dword:00000001
+
+</code></pre></div>
+To remove the EULA:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Windows Registry Editor Version 5.00
+
+;This will remove the acceptance of SDelete's End User
+;License Agreement from your Registry.
+;Rename this file to Remove_EULA_acceptance.reg and then double-click it.
+
+[HKEY_CURRENT_USER\Software\Sysinternals\SDelete]
+"EulaAccepted"=-
+
+</code></pre></div></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=21743&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:33:18 GMT -->
+</html>

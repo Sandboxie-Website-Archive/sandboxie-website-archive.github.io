@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14806" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-03-07T16:37:43-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14806</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-03-07T16:37:43-04:00</updated>
+
+		<published>2013-03-07T16:37:43-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87786#p87786</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87786#p87786"/>
+		<title type="html"><![CDATA[[.03] LOG_API from Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87786#p87786"><![CDATA[
+This problem has to do with circular dependency in DLLs, and should be fixed in version 4.01.03.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Mar 07, 2013 3:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-02-25T15:37:05-04:00</updated>
+
+		<published>2013-02-25T15:37:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87514#p87514</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87514#p87514"/>
+		<title type="html"><![CDATA[[.03] LOG_API from Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87514#p87514"><![CDATA[
+OK.  I'll do that.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Feb 25, 2013 2:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Buster]]></name></author>
+		<updated>2013-02-25T15:36:15-04:00</updated>
+
+		<published>2013-02-25T15:36:15-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87513#p87513</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87513#p87513"/>
+		<title type="html"><![CDATA[[.03] LOG_API from Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87513#p87513"><![CDATA[
+Nice, thanks!<br><br>You must use LOG_API from BSA 1.87 package.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=904">Buster</a> — Mon Feb 25, 2013 2:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-02-25T15:35:17-04:00</updated>
+
+		<published>2013-02-25T15:35:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87512#p87512</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87512#p87512"/>
+		<title type="html"><![CDATA[[.03] LOG_API from Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87512#p87512"><![CDATA[
+That's not good.  Sorry!  I'll look into it.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Feb 25, 2013 2:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Buster]]></name></author>
+		<updated>2013-02-25T15:28:44-04:00</updated>
+
+		<published>2013-02-25T15:28:44-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87506#p87506</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87506#p87506"/>
+		<title type="html"><![CDATA[[.03] LOG_API from Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14806&amp;p=87506#p87506"><![CDATA[
+Sandboxie 4.01.02 32-bit:<br><br>When LOG_API from BSA package is injected, sandboxed applications do not run.<br><br>Same LOG_API is working fine for other versions of Sandboxie.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=904">Buster</a> — Mon Feb 25, 2013 2:28 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

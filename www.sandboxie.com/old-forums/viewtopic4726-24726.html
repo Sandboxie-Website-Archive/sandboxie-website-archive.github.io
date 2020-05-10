@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=20016&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:43:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Strange Javascript/? Malware Problem</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Strange Javascript/? Malware Problem</h2>
+		<p><a href="viewtopicd232d232.html?f=5&amp;t=20016">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=20016</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Strange Javascript/? Malware Problem</h3>
+				<div class="date">Posted: <strong>Wed Dec 10, 2014 1:46 pm</strong></div>
+				<div class="author">by <strong>charlestek</strong></div>
+				<div class="content">I started having problems on my desktop machine last night when ebay filters would not work as well as links on pages that used javascript, probably both locally and for javascript ajax calls.<br>
+Today I discovered that all javascript functionality in all browsers (chrome, IE, opera, firefox) was not working.<br>
+<br>
+On this machine I am running Win 7 Ultimate, MalwareBytes premium and Kaspersky antivirus, plus EMET and something called hitmanpro.alert and cryptoprevent.<br>
+<br>
+I then booted my laptop which was last used weeks ago,  and found to my surprise that I have the same symptoms on the laptop which is running Win8.1 Pro<br>
+The laptop has Webroot SecureAnywhere, MBAM and crytoprevent, emet and hitmanpro.alert.<br>
+<br>
+I just uninstalled MBAM on the desktop which did not help.  Tried disabling Kaspersky, no luck. Tried uninstalling EMET, no effect<br>
+<br>
+I did find that if I run say firefox in Sandboxie, javascript does work.  Can anyone tell me what is unique to Sandboxie that might help me identify what is disabling javascript in both machines.<br>
+I can only guess that this may be malware, but neither AV which are different in both machines plus MalwareBytes has detected anything.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Strange Javascript/? Malware Problem</h3>
+				<div class="date">Posted: <strong>Wed Dec 10, 2014 9:55 pm</strong></div>
+				<div class="author">by <strong>charlestek</strong></div>
+				<div class="content">I found the problem which is DD-WRT's fault.    A few days ago, I had to go into DD-WRT setup and I remember going to the security tab and remember seeing the "Additional Filters" with its "Filter Java Applets".  I said to myself, hey that's great, even though I have removed java on all my machines.  So I checked the checkbox.<br>
+<br>
+Well, guess what, the moronic DD-WRT developers do not know that Java is not the same as javascript, as I found out when I displayed the help menu on the DD-WRT gui webage :<br>
+Help  says:  "Filter Java Applets - Blocks HTTP requests containing a URL ending in ".js" or ".class"<br>
+<br>
+"Filter Java Applets" therefore would block any non inline javascript being downloaded for a page get or post, and probably would block any Json javascript ajax requests.<br>
+<br>
+I guess I need to write a post on the DD-WRT forum.....<br>
+<br>
+Why sandboxie managed to sneak the http calls through is a mystery.......<br>
+But I'm thinking maybe since I hadn't blown away the sandbox it maybe contained say JQuery library scripts and any other scripts the page needed without fetching them from the host .</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=20016&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:43:40 GMT -->
+</html>

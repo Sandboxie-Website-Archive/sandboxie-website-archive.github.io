@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25461&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:00:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Thunderbird - can't stop it writing back to system [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Thunderbird - can't stop it writing back to system [SOLVED]</h2>
+		<p><a href="viewtopic549f549f.html?f=11&amp;t=25461">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25461</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Thunderbird - can't stop it writing back to system [SOLVED]</h3>
+				<div class="date">Posted: <strong>Fri Feb 16, 2018 9:31 pm</strong></div>
+				<div class="author">by <strong>Giselle567</strong></div>
+				<div class="content">I have up-to-date Windows 7 Pro (64), Thunderbird 52.6.0 (32), and licensed Sandboxie 5.23.3 (64).<br>
+I've been running Thunderbird outside Sandboxie, no problem, and decided to try sandboxing it in it's own separate sandbox<br>
+(called "QP" ... I'll also refer to Thunderbird as TB and Sandboxie as SB ...)<br>
+1)  In SB settings for QP, in Program Start / Forced Programs, I added <span style="text-decoration: underline"><em>thunderbird.exe</em></span>.  With the yellow border, I can clearly see TB is running inside QP (and the Control Window shows those files open).<br>
+2)  While QP/TB is running, I check for the <span style="text-decoration: underline">QP sandbox path</span> that virtualizes TB data (<em><span style="text-decoration: underline">C:\Users\Owner\AppData\Roaming\Thunderbird</span></em>) where I would expect to find the sandboxed data.  Wasn't there.<br>
+3)  I downloaded some email inside SB, close the sandboxed TB, and checked again ... data not there in sandbox path.<br>
+4)  Next, I opened TB <span style="text-decoration: underline">outside SB</span>, and there were my updated emails back in the system!  (<em>Without downloading them from the server.</em>)<br>
+SB wrote data back to the system without permission (and seemingly on-the-fly).<br>
+5)  Back in SB QP settings, I turned <span style="text-decoration: underline">off</span> Quick and Immediate Recovery, and added the system path (<em><span style="text-decoration: underline">C:\Users\Owner\AppData\Roaming\Thunderbird</span></em>) for TB data to Forced Folders ... ran TB in SB ... I could see SB running TB in QP ... same result ... no SB path data, and system gets written to.<br>
+6)  All my other progs behave properly in SB.  Am I doing something wrong?  Is there an incompatibility with TB?<br>
+Thanks,<br>
+G.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Thunderbird - can't stop it writing back to system</h3>
+				<div class="date">Posted: <strong>Fri Feb 16, 2018 9:55 pm</strong></div>
+				<div class="author">by <strong>Giselle567</strong></div>
+				<div class="content">Whoops, stumbled on my problem/solution ...<br>
+Under Sandbox settings / Applications / Email Reader, I had Thunderbird checked.<br>
+Without reading the heading carefully, I mistakenly thought that was keeping the data INSIDE the sandbox.<br>
+Thanks anyway ... maybe this will helps someone with a similar problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Thunderbird - can't stop it writing back to system [SOLVED]</h3>
+				<div class="date">Posted: <strong>Tue Feb 20, 2018 12:24 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Giselle567,<br>
+<br>
+Glad you found the solution. Here's a thread which contains all the Email setup requirements in one place:<br>
+<a href="viewtopic42294229.html?p=132327#p132327" class="postlink">viewtopic.php?p=132327#p132327</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25461&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:00:10 GMT -->
+</html>

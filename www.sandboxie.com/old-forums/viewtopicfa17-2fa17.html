@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=54&t=21855&start=105&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:04:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 5.05 Beta Available (latest version 5.06) - Page 8</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>5.05 Beta Available (latest version 5.06)</h2>
+		<p><a href="viewtopiccd44cd44.html?f=54&amp;t=21855">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=54&amp;t=21855</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>8</strong> of <strong>8</strong></div>
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.06)</h3>
+				<div class="date">Posted: <strong>Sun Oct 25, 2015 3:51 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Alger wrote:</cite>SB 5.06 Windows 10 x64 10565<br>
+Crash on Delphi XE4 when I am opening project:<br>
+Access violation at address 5EC9E6D3 in module 'SbieDll.dll'. Read of address E2546A54.<br>
+SbieDll.dll' base address: 5ec70000<br>
+Details:<br>
+[5EC9E6D3]{SbieDll.dll } Unknown function at _SbieDll_RegisterDllCallback@4 + $793<br>
+[0041F160]{bds.exe     } AppMain.TArray.BinarySearch&lt;IDEDesktopComboBox.TDesktopComboBox&gt; (Line 551, "System.Generics.Collections.pas" + 1) + $1A<br>
+[0041C170]{bds.exe     } AppMain.TGalleryItemAction.Execute (Line 7086, "AppMain.pas" + 15) + $7<br>
+...</div></blockquote>
+
+Are you installing the program in a Sandbox? You may want to install/open it on your host then "run as sandboxed.""<br>
+<br>
+What is the program?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.06)</h3>
+				<div class="date">Posted: <strong>Mon Oct 26, 2015 11:56 am</strong></div>
+				<div class="author">by <strong>Alger</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite><blockquote><div><cite>Alger wrote:</cite>SB 5.06 Windows 10 x64 10565<br>
+Crash on Delphi XE4 when I am opening project:<br>
+Access violation at address 5EC9E6D3 in module 'SbieDll.dll'. Read of address E2546A54.<br>
+SbieDll.dll' base address: 5ec70000<br>
+Details:<br>
+[5EC9E6D3]{SbieDll.dll } Unknown function at _SbieDll_RegisterDllCallback@4 + $793<br>
+[0041F160]{bds.exe     } AppMain.TArray.BinarySearch&lt;IDEDesktopComboBox.TDesktopComboBox&gt; (Line 551, "System.Generics.Collections.pas" + 1) + $1A<br>
+[0041C170]{bds.exe     } AppMain.TGalleryItemAction.Execute (Line 7086, "AppMain.pas" + 15) + $7<br>
+...</div></blockquote>
+
+Are you installing the program in a Sandbox? You may want to install/open it on your host then "run as sandboxed.""<br>
+<br>
+What is the program?</div></blockquote>
+
+The program is Delphi XE4<br>
+Crash happened when I am tried to open my project file<br>
+I insalled Delphi XE4 in SandBox and it worked for Win8.1<br>
+After that I upgrade my OS to Win10 and I am now using build 10565 <br>
+To run Delphi XE4 I use command: <br>
+"C:\Program Files\Sandboxie\Start.exe"  /box:prog /silent /nosbiectrl s:\batfiles\delphi.bat<br>
+Delphi.bat content:<br>
+cd "s:\Program Files (x86)\Embarcadero\RAD Studio\11.0\bin\"<br>
+start  "" "s:\Program Files (x86)\Embarcadero\RAD Studio\11.0\bin\bds.exe" -pDelphi<br>
+As you can see crash happens inside SbIEDLL.dll</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sound Issues</h3>
+				<div class="date">Posted: <strong>Sat Nov 14, 2015 2:10 pm</strong></div>
+				<div class="author">by <strong>BhT9kq1U</strong></div>
+				<div class="content">Despite the claims of the developer, I too had sound issues in every sandbox I have. (Win10, 64bit, 5.06)   Specifically, NO sound.<br>
+Of those, apps, some allowed me to configure sounds, and of those, they all reported NO sound device.<br>
+<br>
+So, On a whim, I created a new sandbox called "SteamV2" or something.<br>
+I copied the entire contents of "Steam" to "SteamV2".<br>
+I then deleted the old "Steam".<br>
+<br>
+Sound in every app works now, and the hardware is available.<br>
+<br>
+I wish we could rename populated sandboxes. :/</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.06)</h3>
+				<div class="date">Posted: <strong>Sat Nov 14, 2015 9:31 pm</strong></div>
+				<div class="author">by <strong>huldu</strong></div>
+				<div class="content">I installed flash 19.0.0.245 and ran firefox with sandboxie 5.05.2(x64). It all started fine but when I closed the browser the computer completely froze. Firefox being the only program running in the sandboxie and considering the earlier bluescreens related to the previous version of sandboxie I can only assume the new flash casues new issues in sandboxie. &lt;edit&gt; Windows 7 and firefox 42.0. I updated to 5.05 a while back because I was getting bluescreens due to the "new" flash back then. It worked until now at least.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.06)</h3>
+				<div class="date">Posted: <strong>Mon Nov 16, 2015 9:00 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>huldu wrote:</cite>I installed flash 19.0.0.245 and ran firefox with sandboxie 5.05.2(x64). It all started fine but when I closed the browser the computer completely froze. Firefox being the only program running in the sandboxie and considering the earlier bluescreens related to the previous version of sandboxie I can only assume the new flash casues new issues in sandboxie. &lt;edit&gt; Windows 7 and firefox 42.0. I updated to 5.05 a while back because I was getting bluescreens due to the "new" flash back then. It worked until now at least.</div></blockquote>
+
+Make sure you are using SBIE v5.06. Issues were addressed in subsequent releases.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sound Issues</h3>
+				<div class="date">Posted: <strong>Mon Nov 16, 2015 8:18 pm</strong></div>
+				<div class="author">by <strong>stonerd</strong></div>
+				<div class="content"><blockquote><div><cite>BhT9kq1U wrote:</cite>Despite the claims of the developer, I too had sound issues in every sandbox I have. (Win10, 64bit, 5.06)   Specifically, NO sound.<br>
+Of those, apps, some allowed me to configure sounds, and of those, they all reported NO sound device.<br>
+<br>
+So, On a whim, I created a new sandbox called "SteamV2" or something.<br>
+I copied the entire contents of "Steam" to "SteamV2".<br>
+I then deleted the old "Steam".<br>
+<br>
+Sound in every app works now, and the hardware is available.<br>
+<br>
+I wish we could rename populated sandboxes. :/</div></blockquote>
+
+This happens when you copy a sandbox from 1 computer to another (or, what's likely in your case, when you upgraded to 10)<br>
+<br>
+Just delete the "reghive" file in the sandboxes with sound issues. It'll be recreated and fix itself.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.06)</h3>
+				<div class="date">Posted: <strong>Tue Nov 24, 2015 2:31 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Beta 5.07 is out</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.05.1)</h3>
+				<div class="date">Posted: <strong>Fri Feb 19, 2016 9:09 pm</strong></div>
+				<div class="author">by <strong>devilmaycry010</strong></div>
+				<div class="content"><blockquote><div><cite>aufkrawall wrote:</cite>Hello,<br>
+madHcCtrl.exe still crashes sandboxed.<br>
+To reproduce: Just download the madVR archive, extract it somewhere and start madHcCtrl.exe sandboxed. Works fine outside of the sandbox, inside it crashes.<br>
+<a href="http://www.smartphonetool.com/" class="postlink">http://madshi.net/madVR.zip</a><br>
+Windows 10 x64</div></blockquote>
+
+yes right! it crashes inside</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.05 Beta Available (latest version 5.06)</h3>
+				<div class="date">Posted: <strong>Sat Feb 20, 2016 10:50 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">please use the most current beta.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>8</strong> of <strong>8</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=54&t=21855&start=105&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:04:30 GMT -->
+</html>

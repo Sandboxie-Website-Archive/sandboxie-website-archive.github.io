@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=23510&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:12:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Autodesk Inventor breaks Sandboxie [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Autodesk Inventor breaks Sandboxie [SOLVED]</h2>
+		<p><a href="viewtopic3b633b63.html?f=11&amp;t=23510">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=23510</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Autodesk Inventor breaks Sandboxie [SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Oct 13, 2016 7:42 am</strong></div>
+				<div class="author">by <strong>salyx</strong></div>
+				<div class="content">Functionality of sandboxie breaks when I install Autodesk Inventor Pro 2017 x64 Trial outside Sandboxie.<br>
+<br>
+Could you please let me know how I can fix this as I will need Inventor on this system as well as Sandboxie. The inventor trial can be downloaded from Autodesk's website.<br>
+<br>
+System:<br>
+Windows 10 Pro x64, 1607, 14393.321. fully updated.<br>
+Sandboxie 5.14 64 bit  (latest version)<br>
+<br>
+Details:<br>
+<br>
+After installing Inventor outside sandboxie...<br>
+<br>
+I am unable run Windows File Explorer (eg, sandbox &gt; context menu &gt; run sandboxed &gt; run windows explorer. The sandboxie support apps start, then there is a long wait, then briefly explorer.exe starts and then silently closes.<br>
+<br>
+I am unable to run various applications inside any sandbox.<br>
+<br>
+I am able to run notepad.exe inside a sandbox.<br>
+<br>
+I am able to run cmd.exe inside a sandbox. <br>
+<br>
+From that command prompt, when I try to run explorer.exe, I get an error message "Windows cannot find 'shell::{52205fd8-5dfb-447d-801a-d0b52f2e83e1}' Make sure you typed the name correctly and try again.<br>
+<br>
+I am unable to run regedt32.exe from that command prompt or from Sandboxie directly.<br>
+<br>
+<br>
+Things I tried without success:<br>
+* Uninstall and reinstall Sandboxie.<br>
+* Uninstall various Inventor components, including vcredist installs (which naturally breaks Inventor).<br>
+* Searched for shell-error related google items and stuffed around with registry settings.<br>
+* Use SysInternals AutoRuns, and under "explorer" uncheck all add-ins related to Autodesk.<br>
+* Use SysInternals Process Explorer and try to compare what DLLs are loaded (I didn't do a thorough good job at that one..)<br>
+* Searched this forum but all these items are not resolved: <a href="searchd099d099.php?keywords=inventor" class="postlink">http://forums.sandboxie.com/phpBB3/sear ... s=inventor</a><br>
+<br>
+Basically, the only remedy is to run Windows Restore to get rid of the Inventor installation. I also can't install Inventor inside a Sandbox (Grrr).<br>
+<br>
+I did a Windows restore and tried again, with the same result, so it's repeatable.<br>
+<br>
+tried it with various sandoxes, including default.<br>
+<br>
+Help would be greatly appreciated.<br>
+<br>
+Salyx</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk Inventor breaks Sandboxie</h3>
+				<div class="date">Posted: <strong>Mon Oct 17, 2016 12:36 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Well, I downloaded the 5+GB installer and was able to duplicate your issue. I have not, however, figured out why it is happening or come up with a workaround. There are a massive number of changes and I'm thinking about giving up on this one...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk Inventor breaks Sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 18, 2016 4:32 am</strong></div>
+				<div class="author">by <strong>salyx</strong></div>
+				<div class="content"><blockquote><div><cite>Syrinx wrote:</cite>Well, I downloaded the 5+GB installer and was able to duplicate your issue. I have not, however, figured out why it is happening or come up with a workaround. There are a massive number of changes and I'm thinking about giving up on this one...</div></blockquote>
+
+Thanks for looking at it. I retried and reproduced it on a virtual machine but haven't had time to solve it out either.<br>
+<br>
+Is there a way you could debug-step-through sandboxie in your IDE to the point of failure and give me some info as to why it dies?<br>
+<br>
+Alternatively, if you give me some info of what exactly happens when sandboxie tries to execute, say, regedt32.exe, then maybe I can dig around myself. Though admittedly, my skills are limited.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk Inventor breaks Sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 18, 2016 10:52 am</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">See this thread <a href="viewtopic6e6c6e6c.html?f=11&amp;t=23275" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=23275</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk Inventor breaks Sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 18, 2016 1:43 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Is there a way you could debug-step-through sandboxie in your IDE to the point of failure and give me some info as to why it dies?</div></blockquote>
+I'm not part of Invincea, just a user. I think the only reason Curt would hire me is so that he could turn around and fire me! :P<br>
+<br>
+@Curt<br>
+I saw that thread but didn't think it was related to what we were seeing so I dismissed it.<br>
+After your pointing us back to it I figured I'd test it out anyway.<br>
+<br>
+installed Inventor (and NetFX3)<br>
+uninstalled the VC2010 it adds (seemed cleaner/safer then manually deleting them) x86&amp;x64 [salyx, you may want to avoid this step and try the original instructions of deleting those files]<br>
+installed SBIE (vc2010 didn't show up under programs and features after this but)<br>
+the issues seem to be resolved in my limited test...<br>
+Guess we just have to see if it works for Salyx on the real pc now.<br>
+Doh!<br>
+
+<blockquote class="uncited"><div><a href="viewtopic6e6c6e6c.html?f=11&amp;t=23275#p122766" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 75#p122766</a><br>
+Sbie requires these DLL's: msvcr100.dll, mfc100u.dll, msvcp100.dll. You can manually delete these from \windows\system32 &amp; windows\syswow64. Then rerun the Sbie install and it will restore these files.</div></blockquote></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk Inventor breaks Sandboxie</h3>
+				<div class="date">Posted: <strong>Sat Oct 22, 2016 12:56 am</strong></div>
+				<div class="author">by <strong>salyx</strong></div>
+				<div class="content">Thanks for your continued support.<br>
+<br>
+I had tried the suggestion in that post previously (though I uninstalled, not deleted the dlls) and it didn't help, but I tried again just now. Again no luck.<br>
+<br>
+All on a Windows 10 x64 running in a Virtual Machine with Inventor installed outside Sandboxie.<br>
+<br>
+Attempt 1: <br>
+1. Uninstall VC 2010 x64 and then x86 from Add Remove Programs<br>
+1.a This required me to stop the sandboxie service and autodesk simulation moldflow mitsi 2017 job manager service to avoid a reboot.<br>
+2. Run Sandboxie Installer &gt; Override<br>
+3. Problem remains<br>
+<br>
+Attempt 2: <br>
+1. Under System32, delete the 3 dlls. Made sure I picked the right ones.<br>
+2. Under SysWow64 delete the 3 dlls.<br>
+3. Run Sandboxie Installer &gt; Override<br>
+4. Problem remains<br>
+<br>
+Attempt 3:<br>
+1. Uninstall Sandboxie<br>
+2. Under System32, delete the 3 dlls.<br>
+3. Under SysWow64 delete the 3 dlls.<br>
+4. Reboot<br>
+5. Ensure the DLLs didn't magically return<br>
+6. Install Sandboxie<br>
+7. Problem remains<br>
+<br>
+<br>
+Since I'm running this in a VM, I'd be quite happy to go for a more aggressive "progressively delete files / registry settings" approach, if you give me some pointers.<br>
+I did trace the explorer.exe startup in sandboxie with SysInternals Process Explorer, but there is too much to digest and make sense of.<br>
+<br>
+<br>
+Very depressed now. Must find coffee..</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk Inventor breaks Sandboxie</h3>
+				<div class="date">Posted: <strong>Sun Oct 23, 2016 8:44 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Sorry to hear it didn't work for you. In my test case I didn't have Sandboxie installed first, just Autodesk inventor then did the uninstalls followed by installing Sandboxie the first time.<br>
+<br>
+Are you using the combined installer for Sandboxie or one of the specific x86/x64 versions? I tested the one found here:<br>
+<a href="../SandboxieInstall.html" class="postlink">http://www.sandboxie.com/SandboxieInstall.exe</a><br>
+<br>
+Unfortunately I didn't keep the inventor setup files as I actually expected it to work for you. I'll see if I can re-download it and test more variations within the next couple days but no promises! =( /cry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk Inventor breaks Sandboxie</h3>
+				<div class="date">Posted: <strong>Wed Oct 26, 2016 1:27 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">OK, got the installer and ran 2 tests so far.<br>
+Instead of uninstalling the vc++2010 autodesk installs I started using the update version found here: <a href="https://www.microsoft.com/en-us/download/details.aspx?id=26999" class="postlink">https://www.microsoft.com/en-us/downloa ... x?id=26999</a> and installing it over top. It was easier then deleting everything manually or worrying about if the SBIE installer might be involved. I did select ignore and do a reboot during the update as some AutoDesk stuff was using the files.<br>
+<br>
+After the reboot I still had issues in sandboxie *until* I de-selected something that I noticed had been activated after AutoDesk was installed.<br>
+Menu &gt; Configure &gt; Software Compatibility &gt; Unchecked Screen Readers: JAWS,(etc) and I was able to launch Explorer and IE sandboxed again.<br>
+<br>
+I'll hold onto the VM &amp; installer for a couple days so I can do more testing later if doing it that way instead doesn't fix your issue....<br>
+<br>
+/crossfingers</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk Inventor breaks Sandboxie</h3>
+				<div class="date">Posted: <strong>Thu Oct 27, 2016 7:00 am</strong></div>
+				<div class="author">by <strong>salyx</strong></div>
+				<div class="content">Switching off Screen Readers does the job!!!!<br>
+In my VM, I switched off JAWS, and now I can start Windows Explorer inside Sandboxie.<br>
+Will have a closer look the next few days when I have time and report back.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk Inventor breaks Sandboxie</h3>
+				<div class="date">Posted: <strong>Fri Oct 28, 2016 1:52 am</strong></div>
+				<div class="author">by <strong>salyx</strong></div>
+				<div class="content">Ok. I can now confirm that the solution works. Tried on VM as well as real machine.<br>
+<br>
+Summary:<br>
+Windows 10 Pro x64, fully patched.<br>
+Sandboxie 5.14 64 bit.<br>
+Installed Inventor 2017 Trial outside Sandboxie.<br>
+<br>
+Symptoms:<br>
+* Unable to run Explorer inside Sandboxie<br>
+* Unable to run regedt32.exe inside Sandboxie<br>
+* Unable to start shortcuts / executables via rightclick inside Sandboxie<br>
+* When running cmd.exe inside Sandboxie and then trying to run Windows Explorer from there, getting mixed error messages about shell::{52205fd8-5dfb-447d-801a-d0b52f2e83e1} and "out of memory" etc.<br>
+<br>
+Solution:<br>
+* Sandboxie &gt; Menu &gt; Configure &gt; Software Compatibility<br>
+** Uncheck "Screen Readers: JAWS, NVDA, ..."<br>
+* Click OK<br>
+<br>
+That's all. No need to fiddle with Visual C-runtime installs or anything else.<br>
+<br>
+<br>
+BIG THANK YOU to Syrinx for uncovering this mystery!<br>
+<br>
+..still need a coffee, though. This time to celebrate.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk Inventor breaks Sandboxie</h3>
+				<div class="date">Posted: <strong>Fri Oct 28, 2016 5:29 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Why were you using the JAWS template? I don't think it will work under any scenario any longer due to Windows changes  E.g. opening epmapper no longer works. So, I am thinking about deleting it from templates.ini.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk Inventor breaks Sandboxie</h3>
+				<div class="date">Posted: <strong>Fri Oct 28, 2016 6:45 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">It was automatically selected/activated after installing AutoDesk Inventor. I assume the template scan detected something.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk Inventor breaks Sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Jan 09, 2018 3:56 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">I will try this I ended up giving up and only running sandboxie on computers that did not require Inventor by Autodesk none of my testing worked. <br>
+<br>
+I have a new PC and I have to use Inventor2018 it was one of teh first things installed (Win 10, then Office then Inventor). I now added sandboxie and it did not work again so I will try this fix, fingers crossed (so glad I was not the only one).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Autodesk Inventor breaks Sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Jan 09, 2018 4:08 pm</strong></div>
+				<div class="author">by <strong>caduser</strong></div>
+				<div class="content">Somebody give that man a huge handshake!!!! That works to think it was so simple a fix (very hard to find I am sure) I spent days going back and forth with all those libraries.<br>
+<br>
+I have sandboxie back YES!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=23510&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:12:31 GMT -->
+</html>

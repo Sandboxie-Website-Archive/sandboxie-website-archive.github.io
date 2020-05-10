@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=939&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Problems with FS-driver</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Problems with FS-driver</h2>
+		<p><a href="viewtopic59f559f5.html?f=11&amp;t=939">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=939</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Problems with FS-driver</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2007 6:10 am</strong></div>
+				<div class="author">by <strong>muecke</strong></div>
+				<div class="content">I am using the ext2 driver <a href="http://www.fs-driver.org/" class="postlink">www.fs-driver.org</a> for mounting Linux USB drives to my XP workstation. <br>
+<br>
+I found no issues with 2.64.<br>
+Since I installed today 2.74 I get the following message starting e.g. IE7: <br>
+<br>
+SBOX2307 Colud not map Drive Y [C000003A]<br>
+SBOX 2304 Initialization faeild for process iexplorer.exe<br>
+<br>
+Important to know: When the ext2 drive is connected ( drive Y) everything works fine. The message just appears in case the ext2 is not connected.<br>
+<br>
+-muecke</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 11, 2007 11:44 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I've installed and downloaded the driver but I was not able to map any drives because I don't have an ext2 filesystem.  So I wasn't able to reproduce the problem.<br>
+
+<blockquote class="uncited"><div>SBOX2307 Colud not map Drive Y [C000003A] </div></blockquote>
+
+Can you use a tool like <a href="http://www.microsoft.com/technet/sysinternals/SystemInformation/WinObj.mspx" class="postlink">WinObj</a> to see where drive Y: is pointing?  (It's a symbolic link object)<br>
+<br>
+And also check if the target of the link exists.<br>
+<br>
+You should be able to find Y: in the "GLOBAL??" folder in WinObj, or if not there, then there is a "Sessions" folder, with a "DosDevices" sub-folder, and somewhere below this, you may be able to see additional drive mappings.<br>
+<br>
+Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 11, 2007 12:02 pm</strong></div>
+				<div class="author">by <strong>muecke</strong></div>
+				<div class="content">Under Globals?? there is an entry Y: Type is symbolic link and it is pointing to \Device\Harddisk1\Partition1<br>
+<br>
+How can check if the target exists?<br>
+<br>
+-muecke<br>
+<br>
+PS: I just tried 2.75 without success. Even worse I removed 2.75 and installed 2.64. I now get the message Sandboxie RpcSs "Could not instrument service functions.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 11, 2007 12:46 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">You then visit the "Device" folder, and the "Harddisk1" folder below it.<br>
+Does Partition1 exist there?  If yes, what kind of object is it?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 11, 2007 12:47 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">To re-install an older verison over a newver version (2.64 over 2.75) is probably not a good idea.  Try un-installing 2.75 first.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 11, 2007 2:46 pm</strong></div>
+				<div class="author">by <strong>muecke</strong></div>
+				<div class="content">Is the ext3 drive connected the Object exists and Sanboxies 2.75 works fine. As soon as I disconnect the drive the Object Harddisk1 is gone and SB shows the error.<br>
+<br>
+-muecke</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Problem solved!</h3>
+				<div class="date">Posted: <strong>Thu Jan 11, 2007 4:49 pm</strong></div>
+				<div class="author">by <strong>muecke</strong></div>
+				<div class="content">I just found the following hint in the release notes.<br>
+<br>
+USB hard disk drives <br>
+Currently there is one issue you have to note when you are using external USB hard disk drives (USB memory sticks are not affected): <br>
+<br>
+After you have connected an USB drive to the computer and have created a drive letter with the "IFS Drives" item of the control panel, you may remove that USB drive in two different ways: either with the "Safely Remove Hardware" icon on your taskbar or (not recommended, but possible) simply by unplugging the USB plug. <br>
+<br>
+Even the Ext2fs.sys file system driver will dismount Ext2 volumes correctly. The "IFS Drives" component of the Ext2 IFS software will not realize the removal of an USB drive as a Plug and Play event, and hence it will not remove any drive letter. <br>
+<br>
+Please remove the appropriate drive letters of Ext2 volumes manually by using the "IFS Drives" of the control panel before you attempt to remove a USB drive. <br>
+<br>
+If you have not manually removed any drive letters, but already have unplugged the USB drive, you can only remove these drive letters by inconvenient means: <br>
+<br>
+Double-click on the "IFS Drives" item of the control panel, so that its window appears. Please close that window now (you need not to do anything else here). Reboot your computer and all the drive letters of removed USB drives will be gone. <br>
+<br>
+Note that there is another workaround for the mentioned USB drive issue: you may modify the type of any Ext2/Ext3 partition on your USB drives. Linux Ext2/Ext3 partitions usually have as type 83 (hex). You may set the type of them to 7 (hex) for example with the Linux fdisk tool (using its t-command). The partition type of 7 (hex) - usually used on NTFS partitions - causes Windows to create and remove drive letters for a plugged or an unplugged USB drive itself. <br>
+<br>
+Since Windows doesn't check the type of a partition while determining the file system, everything works well. <br>
+<br>
+Linux does not check the types of partitions either. <br>
+<br>
+<br>
+I tried it and after a reboot everything works as expected. The object Y: is gone. I verified with Winobj<br>
+<br>
+Thanks<br>
+-muecke</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 11, 2007 6:29 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>I tried it and after a reboot everything works as expected. The object Y: is gone. I verified with Winobj </div></blockquote>
+
+Okay, that's a good solution I guess!<br>
+<br>
+I will also change later versions of Sandboxie to not abort everything if it can't map a particular drive letter.  It could just warn you about it but still go on.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=939&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:42 GMT -->
+</html>

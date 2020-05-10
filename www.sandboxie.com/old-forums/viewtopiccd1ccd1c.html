@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15209&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.06] Causes sandboxes to not delete</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.06] Causes sandboxes to not delete</h2>
+		<p><a href="viewtopic23122312.html?f=38&amp;t=15209">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15209</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.06] Causes sandboxes to not delete</h3>
+				<div class="date">Posted: <strong>Thu Apr 11, 2013 6:33 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">I have found (using 4.01.05) that I can cause "System" to have locks on the 2 Reghive files in a sandbox just by sandboxing a program that is not listed in the Start/Run Restrictions list.<br>
+<br>
+With these programs in the list:<br>
+ProcessGroup=&lt;StartRunAccess&gt;,firefox.exe,plugin-container.exe,flashgot.exe<br>
+<br>
+Sandboxing Notepad gives:<br>
+2013-04-11 18:09:18 SBIE1308 Program cannot start due to restrictions - notepad.exe [Test_Start_Run]<br>
+2013-04-11 18:09:18 SBIE2314 Canceling process notepad.exe<br>
+<br>
+Double-clicking the SBIE2222 line to allow Notepad to run gives:<br>
+ProcessGroup=&lt;StartRunAccess&gt;,firefox.exe,plugin-container.exe,flashgot.exe,notepad.exe<br>
+<br>
+With no programs running at this time, and the sandbox set to auto-delete, delete contents fails (not renamed).<br>
+Manual Delete Contents is unable to delete contents due to "System" locks.<br>
+<br>
+Notepad will run the next time it's tried, but when the program ends the sandbox still cannot be renamed or deleted.<br>
+So far, I've had to reboot to delete the contents of the 3 sandboxes that I've tried this with.<br>
+-----<br>
+[Test_Start_Run]<br>
+<br>
+Enabled=y<br>
+ConfigLevel=7<br>
+AutoRecover=y<br>
+Template=BlockPorts<br>
+Template=LingerPrograms<br>
+Template=Firefox_Phishing_DirectAccess<br>
+Template=AutoRecoverIgnore<br>
+RecoverFolder=%Personal%<br>
+RecoverFolder=%Favorites%<br>
+RecoverFolder=%Desktop%<br>
+BorderColor=#00FFFF,ttl<br>
+NotifyStartRunAccessDenied=y<br>
+AutoDelete=y<br>
+ProcessGroup=&lt;StartRunAccess&gt;,firefox.exe,plugin-container.exe,flashgot.exe<br>
+ClosedIpcPath=!&lt;StartRunAccess&gt;,*</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Apr 11, 2013 11:01 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">I can reproduce this on XP and W7 32bits. I am seeing same messages as Guest10 when I right click on a file and choose to run it sandboxed in a sandbox where the file has not Start/Run access. The sandbox doesn't delete when it closes even though it is set to delete on closing and Reghive files remain in the sandbox.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Causes sandboxes to not delete</h3>
+				<div class="date">Posted: <strong>Fri Apr 12, 2013 12:00 am</strong></div>
+				<div class="author">by <strong>w0lfrun</strong></div>
+				<div class="content">Had the same problem using 4.01.05. I have went back to version 3.76 and no problem with deletion. Windows 7 64bit. (Just wanted to add that I have KB2813170 update installed and 3.76 is working o.k..)<br>
+ Along with Windows 7 64 bit also have MBAM pro, MSE, Windows firewall, UAC and my browser is Pale Moon with NoScript and Adblock plus Macrium Reflect as backup.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 12, 2013 2:44 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks, I'll check it out!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 22, 2013 6:43 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Please check version 4.01.06.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 22, 2013 3:27 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Fixed for me, W7 SP1 32Bits. I ll try .06 in my XP later today.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 22, 2013 6:32 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Fixed for me, on XP.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 22, 2013 7:18 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Ahh, I hadn't seen this thread before, and I just had the RegHive locked/in use when trying to manually delete the sandbox before upgrading to .06... I thought that was odd, since I think I've only had that previously if Regedit was open (or maybe open to the particular RegHive) when the sandbox became inactive. Turns out I accidentally tried to run more.com yesterday when I only have *.exe allowed to start, so I guess that's why. Nice find Guest10! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+And I never want to restart for any reason if I can help it, so I was able to fix it by manually unloading the Sandbox_..._... hive from Regedit.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Apr 23, 2013 12:01 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Guest10 wrote:</cite>Fixed for me, on XP.</div></blockquote>
+Same here.<img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15209&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:42 GMT -->
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=21139&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:39:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie on Windows 8 / multiple accounts for kids</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie on Windows 8 / multiple accounts for kids</h2>
+		<p><a href="viewtopic477b477b.html?f=5&amp;t=21139">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=21139</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie on Windows 8 / multiple accounts for kids</h3>
+				<div class="date">Posted: <strong>Thu May 14, 2015 7:48 pm</strong></div>
+				<div class="author">by <strong>The Conman</strong></div>
+				<div class="content">Greetings,<br>
+<br>
+I have a Win 8 machine with 2 admin accounts (myself and my wife) and (currently) one limited account for the kids.  I was wondering if it's possible to have different settings for Sandboxie for the different user accounts?  What I'm looking to do is be much more restrictive permissions.<br>
+<br>
+Currently, I noticed they too get the option when a file has been downloaded to recover it.  I especially don't want them to be able to do that at all.  However, for my account I don't mind that.<br>
+<br>
+Does anyone else use Sandboxie to ensure other accounts on their computer are not used to download, save, and run things such as Cryptolocker?<br>
+<br>
+Thanks in advance...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie on Windows 8 / multiple accounts for kids</h3>
+				<div class="date">Posted: <strong>Fri May 15, 2015 12:51 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">Hi!<br>
+Each user should be given their own Sandbox. This is important.<br>
+In each Sandbox Settings Add appropriate User to User Accounts.<br>
+<br>
+Now you configure each Sandbox Settings how ever you wish them.<br>
+<br>
+If you're licensed, you can have virtually unlimited Sandboxes-<br>
+active simultaneously without need to sign out of others first.<br>
+<br>
+.<br>
+<br>
+If you want security against changes or exploring your Sandbox.<br>
+<br>
+First Delete Contents of existing Sandboxes.<br>
+Check with your other users before deletion. Equally important. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Sandboxie Control<br>
+	Configure<br>
+		Edit Configuration<br>
+<br>
+Sandboxie.ini - Notepad<br>
+<br>
+# under [GlobalSettings]<br>
+# add this next line<br>
+EditAdminOnly=y<br>
+# limited account will not be able to create or change Sandbox/settings.<br>
+<br>
+# change the following line (which is your Set Container Folder setting)<br>
+FileRootPath=C:\Sandbox\%USER%\%SANDBOX%<br>
+# change it to exactly this next line<br>
+FileRootPath=%USERPROFILE%\Sandbox\%SANDBOX%</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie on Windows 8 / multiple accounts for kids</h3>
+				<div class="date">Posted: <strong>Tue May 19, 2015 2:25 pm</strong></div>
+				<div class="author">by <strong>Janam</strong></div>
+				<div class="content"><blockquote><div><cite>BUCKAROO wrote:</cite>Hi!<br>
+Each user should be given their own Sandbox. This is important.<br>
+In each Sandbox Settings Add appropriate User to <a href="http://softlay.net/operating-system/windows-8-1-download-free-with-key.html" class="postlink">Windows 8</a>User Accounts.<br>
+<br>
+Now you configure each Sandbox Settings how ever you wish them.<br>
+<br>
+If you're licensed, you can have virtually unlimited Sandboxes-<br>
+active simultaneously without need to sign out of others first.<br>
+<br>
+If you want security against changes or exploring your Sandbox.<br>
+<br>
+First Delete Contents of existing Sandboxes.<br>
+Check with your other users before deletion. Equally important. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Sandboxie Control<br>
+	Configure<br>
+		Edit Configuration<br>
+<br>
+Sandboxie.ini - Notepad<br>
+<br>
+# under [GlobalSettings]<br>
+# add this next line<br>
+EditAdminOnly=y<br>
+# limited account will not be able to create or change Sandbox/settings.<br>
+<br>
+# change the following line (which is your Set Container Folder setting)<br>
+FileRootPath=C:\Sandbox\%USER%\%SANDBOX%<br>
+# change it to exactly this next line<br>
+FileRootPath=%USERPROFILE%\Sandbox\%SANDBOX%</div></blockquote>
+Thanks for the help i was also dealing with the same situation i will update my status here</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie on Windows 8 / multiple accounts for kids</h3>
+				<div class="date">Posted: <strong>Thu May 21, 2015 1:50 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">Heads up, with my last recommended .ini change (to protect your Sandbox files from the prying eyes of users of limited accounts on your PC), these warning messages appear occasionally at random for all Sandboxes at the same time (through the outlet of standard Sandboxie Control Messages dialog and Event Viewer - Windows Logs - System - SbieDrv).<br>
+<br>
+SBIE1406 Missing or invalid expansion for USERPROFILE:  [C0000034]<br>
+SBIE1412 In text: [DefaultBox] %USERPROFILE%\Sandbox\%SANDBOX%<br>
+<br>
+No side effects found. Safe to Hide and ignore.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie on Windows 8 / multiple accounts for kids</h3>
+				<div class="date">Posted: <strong>Sat May 23, 2015 10:15 pm</strong></div>
+				<div class="author">by <strong>The Conman</strong></div>
+				<div class="content">Can I copy one of the games that the kids had under their user account (and up to now) within the same sandbox as all user accounts on this system to their new sandbox?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie on Windows 8 / multiple accounts for kids</h3>
+				<div class="date">Posted: <strong>Sat May 23, 2015 10:17 pm</strong></div>
+				<div class="author">by <strong>The Conman</strong></div>
+				<div class="content">While I'm thinking of it I recently noticed that when I click on a file to download it's hanging . . . extremely long times.  I'm talking I've seen it take up to hours before it even starts.  Any change it may have anything to do with Sandboxie?  A setting of some sort?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie on Windows 8 / multiple accounts for kids</h3>
+				<div class="date">Posted: <strong>Sat May 23, 2015 10:41 pm</strong></div>
+				<div class="author">by <strong>The Conman</strong></div>
+				<div class="content">One last thought I had for the night:  Can I set up Sandboxie for the kids account to NOT allow files to be copied outside of the sandbox?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie on Windows 8 / multiple accounts for kids</h3>
+				<div class="date">Posted: <strong>Mon May 25, 2015 12:11 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content"><blockquote><div><cite>The Conman wrote:</cite>Can I copy one of the games that the kids had under their user account (and up to now) within the same sandbox as all user accounts on this system to their new sandbox?</div></blockquote>
+They did have their own Sandbox subfolder, didn't they? Well of course. Now you can move their subfolder and situate it at their new Sandbox container root path. Cut and Paste, but beforehand Delete the new, existing subfolder that may have been created recently - use that as an indication where it should end up with respect to our new FileRootPath configuration. I hope that's easy enough to understand... Most of the time there shouldn't be any problem moving actual [box_name] around and/or assigning it a new name. Access this Sandbox's start menu from Sandboxie Control to verify that the move was successful, try and launch a game.<br>
+<br>
+.<br>
+<br>
+It might be best to fresh install the game(s) in the fresh Sandbox. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Saved Games, you can hunt those up, and copy them into the respective location in the new Sandbox.<br>
+<br>
+A lot of games you can just migrate their folder by hand, depends, others will complain or err.<br>
+<br>
+.<br>
+<br>
+Shortcuts on the real Desktop to those games in the new Sandbox location will be broken. Recreate any Sandbox shortcuts by jumping through hoops in the Sandboxie Control - Configure - Windows Shell Integration - Add Shortcut Icons. It is also possible to create shortcuts to various files from Sandboxie Control, Files and Folders view. And as I'm sure you're aware, it's even possible to copy and "Paste shortcut" to a file directly from within the Sandbox to outside of it, but this way, if for some reason Sandboxie services are not running (say, it is uninstalled) then opening that shortcut, well, it won't be sandboxed. Whereas the other methods of creating Sandbox shortcuts, opening them will fail as hoped without Sandboxie installed.<br>
+
+<blockquote><div><cite>The Conman wrote:</cite>While I'm thinking of it I recently noticed that when I click on a file to download it's hanging . . . extremely long times.  I'm talking I've seen it take up to hours before it even starts.  Any change it may have anything to do with Sandboxie?  A setting of some sort?</div></blockquote>
+Try the latest beta version [<a href="viewtopic5c2d5c2d.html?f=50&amp;t=20793" class="postlink">4.17.x</a>] of Sandboxie. We install wildly varying Sandboxie versions on top of existing installation, no harm has come of it, apart from experimental features.<br>
+<br>
+Or, if you're running Windows 8.0 or below, install 3.x version, trusty 3.76 from the attic.<br>
+<a href="../attic/SandboxieInstall-376.exe" class="postlink">http://www.sandboxie.com/attic/SandboxieInstall-376.exe</a><br>
+
+<blockquote><div><cite>The Conman wrote:</cite>One last thought I had for the night:  Can I set up Sandboxie for the kids account to NOT allow files to be copied outside of the sandbox?</div></blockquote>
+I don't know. I can't think of a way off the top of my head, besides a custom made Copy/Cut &amp; Paste clipboard monitor - but that wouldn't cover file operations outside of Windows Explorer, e.g. copy by command line.<br>
+<br>
+Sandboxie is not fit anymore (since version 4) to Sandbox the whole desktop Shell, namely Explorer, not talking the entire Session as was a once planned feature, but then it was never completely fit for this.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=21139&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:39:10 GMT -->
+</html>

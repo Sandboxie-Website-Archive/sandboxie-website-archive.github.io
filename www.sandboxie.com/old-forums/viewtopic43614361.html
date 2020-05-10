@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=14951&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:41:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.04] XP SP3, Drop Rights/Forced programs issue</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.04] XP SP3, Drop Rights/Forced programs issue</h2>
+		<p><a href="viewtopice44fe44f.html?f=38&amp;t=14951">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=14951</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.04] XP SP3, Drop Rights/Forced programs issue</h3>
+				<div class="date">Posted: <strong>Tue Mar 12, 2013 1:21 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Hi tzuk, I noticed since the first beta for version 4 that the only way to get Forced programs to work in my XP SP3 is to disable Drop rights. If Drop rights is enabled, I get SBIE message 2203. <br>
+<br>
+Thanks<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 12, 2013 3:20 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Drop Rights <a href="../phpbb/viewtopic7516.php?p=87517#87517" class="postlink">doesn't even do anything</a> anyway, at least for file/reg. permissions (as far as <strong>Deny</strong>ing the Administrators group). Although it must change things in other ways, since it breaks/freezes stuff trying to connect to the Interent (crashing SbieSvc), causes total denial-of-service in certain circumstances (run Process Explorer sandboxed) that can only be fixed by restarting the computer, etc.<br>
+<br>
+Did you try Forced Programs with Drop Rights on something that does NOT try to connect to the Internet? (I didn't.) Also, I believe you'll get the same 2203 message (I think that's what it was, after SbieSvc crashes) with Drop Rights if you manually do Run Sandboxed (e.g. not forced)...<br>
+<br>
+<br>
+I don't know if this stuff is just on XP (I've done very limited testing on 64-bit 7), but I can't believe the people that are using it "for real" and say that everything works like before...  <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> I think I'm going to try to work around the issues (if I'm not forgetting anything) and try to carefully run it "in production" soon (on XP of course) to evaluate further, like my sandboxed Firefox+EMET issues.<br>
+<br>
+Dropping rights with <strong>SRP</strong> seems to work fine when launching Forced sandboxed programs (<em>not</em> via Run Sandboxed though), so that should still allow me to have dropped rights I guess, if there's not something else being missed by not enabling it in SBIE. It seems to be equivalent in 3.x.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 12, 2013 3:43 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Hi Larry, about if I tried Forced Programs with Drop Rights on something that does NOT try to connect to the Internet, yes,  I tried most programs that I sandbox and force, including some that I don't allow to connect:  KMPlayer, WMP, Foxit, Word and Excel. I don't allow internet on any of their respective sandboxes and they all gave me message 2203 when I close the sandbox. In my case, all programs give me the message. If I don't enable Drop rights, all programs work well as forced except Excel and Word. <br>
+<br>
+About whether this issue exist on other systems, I can tell you that up to beta .02, on my W7 32 bits, I did not experience this issue. There were other issues but I haven't tried .03 on it yet to see if its better now.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 13, 2013 5:49 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I fixed this problem and this will be corrected in the next beta I release.  Apologize about the inconvenience.  This was caused due to some special handling for Drop Rights on Vista and later, which was incorrectly applied on XP as well.  So just a minor bug, not related to the effect that Drop Rights has on security.<br>
+<br>
+There was a similar problem report here:<br>
+<a href="../phpbb/viewtopic256a.php?t=14826" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=14826</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 13, 2013 9:49 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Nice, thanks.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Mar 18, 2013 12:27 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Related topic:<br>
+<a href="../phpbb/viewtopic256a.php?t=14826" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=14826</a><br>
+<br>
+Fixed in version 4.01.04.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 19, 2013 12:05 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Yes, its fixed for all programs in my computer except Excel and Word.<br>
+<br>
+When I click a Word or Excel file, this is what I see for either program:<br>
+<br>
+ <a href="../img291.imagevenue.com/img1a501a50.php?image=59323_Office1_122_591lo.JPG" class="postlink"><img src="../img291.imagevenue.com/loc591/th_59323_Office1_122_591lo.JPG" class="postimage" alt="Image"></a><br>
+<br>
+I ll use Word as an example. Sandboxie doesn't give messages when I click on a Word file, Word runs in the sandbox. The funny thing is that if I navigate to a Word file (File&gt;Open) from the UI in the picture, the file runs sandboxed in the Office sandbox and it gets displayed as it should.<br>
+<br>
+So, I think, Word and Excel are working forced somewhat but something is keeping the file from being displayed properly when it is a forced program. XP SP3 32Bits. Microsoft Office Professional Edition 2003.<br>
+<br>
+Tzuk, this version feels great, no messages from SBIE whatsoever.<img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=14951&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:41:06 GMT -->
+</html>

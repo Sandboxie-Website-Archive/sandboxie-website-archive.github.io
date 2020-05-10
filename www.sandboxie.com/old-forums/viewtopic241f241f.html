@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24555&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:07:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie not saving changes in Opera [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie not saving changes in Opera [SOLVED]</h2>
+		<p><a href="viewtopic024f024f.html?f=17&amp;t=24555">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24555</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie not saving changes in Opera [SOLVED]</h3>
+				<div class="date">Posted: <strong>Fri Jun 16, 2017 7:44 am</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content">When using Firefox, all changes made during the session are saved. When using Opera, all changes made during the session are lost Even new bookmarks and passwords are lost.<br>
+<br>
+PLEASE help. I cannot accept losing all my work and Opera must be my default browser since Firefox are withdrawing support for Windows XP in September and have placed me on a special pre-withdrawl version. I have no problems with Opera unsandboxed and it works OK sandboxed except for the loss of data changes when closing the session.<br>
+<br>
+If there is a Sancboxie fix I can apply  or something needed in the configuration, please tell me what it is and how to do it.<br>
+<br>
+Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie not saving changes in Opera</h3>
+				<div class="date">Posted: <strong>Fri Jun 16, 2017 9:37 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello yabbadoo ,<br>
+<br>
+Try this:<br>
+<br>
+Right-click on your Sandbox ---&gt; Sandbox settings<br>
+Applications --&gt; Web Browser ---&gt; Other<br>
+<br>
+You should see options to allow direct access to different things in Opera (profile folder and bookmarks). <br>
+Check the ones you want, hit OK and then test Opera in the Sandbox. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie not saving changes in Opera</h3>
+				<div class="date">Posted: <strong>Fri Jun 16, 2017 10:14 am</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content">I discoverd that I have had this problem before some years ago, see -<br>
+<br>
+<a href="viewtopic36f0-236f0.html?f=11&amp;t=22882" class="postlink">viewtopic.php?f=11&amp;t=22882</a><br>
+<br>
+The solution was given by "rpljhun", page 2nd second post.<br>
+I repeated that and although the added items appeared in the panel, they disappeared when I hit "apply".<br>
+Have you a clue why they disappeared when I did the "edit/add" ?<br>
+<br>
+"CODE: SELECT ALL<br>
+opera.exe,%AppData%\Opera Software\*\Bookmarks*<br>
+opera.exe,%AppData%\Opera Software\*\Thumbnails*<br>
+<br>
+Just go to File Access &gt; Direct Access in sandbox settings and under All Programs. Click Edit/Add and add those settings one at time. Don't forget to apply."</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie not saving changes in Opera</h3>
+				<div class="date">Posted: <strong>Fri Jun 16, 2017 10:30 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi yabbadoo,<br>
+<br>
+See if this helps:<br>
+<a href="viewtopic3b2a3b2a.html?f=11&amp;t=22882&amp;start=15#p120735" class="postlink">viewtopic.php?f=11&amp;t=22882&amp;start=15#p120735</a><br>
+<br>
+Are things working now? If so, I'll see if we can get the Opera templates updated.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie not saving changes in Opera</h3>
+				<div class="date">Posted: <strong>Fri Jun 16, 2017 10:41 am</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content">No Barb - no progress. I tried the fix shown in my post from a previous years ago thread - it worked then - but as I said. the fix goes into the Direct Access panel but when i hit Apply it disappears. So whilst it worked in those days, it does not now - must be something to do with Sandboxie later versions.<br>
+<br>
+Can you help ? We seem to be so close to solving it using the previous fix technique. If it  worked then the problem must be a very tiny matter.<br>
+<br>
+So yes, if you think the Opera template needs a nudge - please do it and let me know and I will try again.<br>
+<br>
+ou know better than me if the fixes look OK regarding Sandboxie. They are -<br>
+<br>
+opera.exe,%AppData%\Opera Software\*\Bookmarks*<br>
+opera.exe,%AppData%\Opera Software\*\Thumbnails*<br>
+<br>
+My track is - SBxie&gt;Default box&gt;Settings&gt;Resource Access&gt;File Access&gt;Direct Access&gt;Edit/Add&gt;Apply&gt;OK</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie not saving changes in Opera</h3>
+				<div class="date">Posted: <strong>Fri Jun 16, 2017 12:48 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi yabbadoo,<br>
+<br>
+Did you get a chance to confirm this via the link I sent?:
+<blockquote class="uncited"><div>Something you need to be aware. After you click OK and Apply, the setting does disappear. But you ll see it if you click on the Drop down menu and select Opera. This means only Opera has direct access to bookmarks.</div></blockquote>
+Is opera.exe not listed in the drop-down menu after you apply the changes? <br>
+<br>
+Are you still unable to save bookmarks?<br>
+It works fine for me when adding :<br>
+opera.exe,%AppData%\Opera Software\*\Bookmarks*<br>
+opera.exe,%AppData%\Opera Software\*\Thumbnails*<br>
+<br>
+I created a bookmark inside Sandboxie, deleted the contents of my Sandbox. <br>
+Relaunched Opera and the bookmark was present. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie not saving changes in Opera</h3>
+				<div class="date">Posted: <strong>Fri Jun 16, 2017 2:29 pm</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content">Barb, that post has excited me. I will investigate what you have said this  evening and like Macarthur said "I will return".<br>
+<br>
+But thanks so much for your time and effort in providing such an encouraging comment. It looks like at least you have cracked it, so if I do not mess it up, my problems will be solved just like years ago.<br>
+<br>
+Yabbadoo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie not saving changes in Opera</h3>
+				<div class="date">Posted: <strong>Fri Jun 16, 2017 2:46 pm</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content">My dear Barb,<br>
+<br>
+i just could not wait to try what you said, so I have done.<br>
+<br>
+<strong>IT WORKED !</strong> I save tested 2 bookmarks, completely logged off and started again using Sandboxie to open Opera.<br>
+<br>
+The 2 bookmarks were still <strong>there</strong> (before they would have been deleted on shutdown). So it seems yet again the problem is SOLVED just like years ago.<br>
+<br>
+My grateful thanks to <strong>rpljhun</strong> and yourself for helping me in what was a very worrying problem. Boy, how very pleased I am and if anybody else has this  problem, they have only to read this thread..<br>
+<br>
+My sincere thanks<br>
+Yabbadoo.<br>
+<br>
+PS - you can mark the thread as being solved.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24555&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:07:38 GMT -->
+</html>

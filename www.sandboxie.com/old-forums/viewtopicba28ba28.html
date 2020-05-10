@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=39&t=15670&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:42:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.01] SBIE2205 Service not implemented: WM_MDICREATE</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.01] SBIE2205 Service not implemented: WM_MDICREATE</h2>
+		<p><a href="viewtopic197e197e.html?f=39&amp;t=15670">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=39&amp;t=15670</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.01] SBIE2205 Service not implemented: WM_MDICREATE</h3>
+				<div class="date">Posted: <strong>Mon Jun 10, 2013 6:08 am</strong></div>
+				<div class="author">by <strong>xslater</strong></div>
+				<div class="content">An applications want's to cerate a new child document window. After sandboxie is showing the error message, the application crashes.<br>
+Never had this issue with version 3.x.<br>
+Any ideas?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jun 10, 2013 7:17 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">If you are getting this message then you must be on Windows 8.<br>
+MDI windows behave differently in Windows 8 and I included support for this but it does not cover all use cases.<br>
+If you tell me which program is triggering this error, I may be able to look into this in the future.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jun 10, 2013 11:31 am</strong></div>
+				<div class="author">by <strong>xslater</strong></div>
+				<div class="content">Yes, correct. Windows 8 / Sandboxie 4.0.13 x64<br>
+The application is a special piece of software used in the avation business. From a company called Jeppesen. But nevertheless, it looks like a standard Microsoft C++ app. Including all the runtime DLL's which are known from the Visual .Net framework...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 11, 2013 4:58 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Perhaps if you add an exclusion for * (a single wildcard star) in Sandbox Settings &gt; Resource Access &gt; Window Access it might be a way around this problem for now.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jun 15, 2013 12:06 pm</strong></div>
+				<div class="author">by <strong>SLE</strong></div>
+				<div class="content">Have the same problems on Win8x64 with current Sandboxie Beta ( 4.0.13)<br>
+Tried exclusion *  in Sandbox Settings &gt; Resource Access &gt; Window Access but it not helped.<br>
+<br>
+If you need an example Tzuk, you can try with that program: IRT Student Edition<br>
+<a href="http://www.ssicentral.com/irt/student.html" class="postlink">http://www.ssicentral.com/irt/student.html</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jun 15, 2013 12:59 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks.  I'll give it a look after I release the official version.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 23, 2013 2:52 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content"><span style="font-size: 75%; line-height: normal">Windows 8 (64-bit)</span><br>
+<br>
+Both Sandboxie 3.76 and 4.02, officially, give:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2205 Service not implemented:  WM_MDICREATE</code></pre></div>
+but 3.76 creates (and shows) the Child window(s) where 4.02 does not; leaving the odd (if not all) MDI application(s) unusable under Sbie 4.<br>
+<br>
+After reinstalling 3.76, I didn't think to test OpenWinClass=*<br>
+<br>
+<strong>A pure Win32 based MDI application</strong><br>
+<a href="http://www.codeproject.com/Articles/35634/A-pure-Win32-based-MDI-application" class="postlink">http://www.codeproject.com/Articles/356 ... pplication</a><br>
+(Download exe and src - requires registration - sorry - simple email membership, anyway.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 25, 2013 5:44 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thank you everyone who provided sample programs.  Please check version 4.03.01.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 25, 2013 1:37 pm</strong></div>
+				<div class="author">by <strong>SLE</strong></div>
+				<div class="content">Version 4.03.01. fixes the problem for all programs with which I had it before! Great and THX!!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=39&t=15670&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:42:38 GMT -->
+</html>

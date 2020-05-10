@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25416&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:01:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; COD:BO3 won't work sandboxed</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>COD:BO3 won't work sandboxed</h2>
+		<p><a href="viewtopic53485348.html?f=11&amp;t=25416">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25416</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>COD:BO3 won't work sandboxed</h3>
+				<div class="date">Posted: <strong>Wed Feb 07, 2018 10:19 pm</strong></div>
+				<div class="author">by <strong>stmp</strong></div>
+				<div class="content">Hi everyone,<br>
+<br>
+I've seen more than a few mentions of Call Of Duty:Black Ops 3 in sandboxes.  I thought I would try this too. It turns out that it will not run; just pop-up in Sandboxie Control with the following error:<br>
+---------------------------------------<br>
+BlackOps3.exe - Application error<br>
+The application was unable to start correctly (0xc0000142).<br>
+Click OK to close the application.<br>
+---------------------------------------<br>
+and then close. I was hoping someone could give me some suggestions on what the typical problems are and how to solve them.   Please also note that CODBO3 is currently installed outside of the sandbox and works just fine with no special steps taken. My preference is to have the game entirely sandboxed. Thanks very much!<br>
+<br>
+Software Specs:<br>
+Windows 10 Home (x64) Version 1709 (build 16299.192)<br>
+Sandboxie 5.22 (64bit)<br>
+Call of Duty Black Ops 3<br>
+Comodo AntiVirus 10.1.0.6476</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: COD:BO3 won't work sandboxed</h3>
+				<div class="date">Posted: <strong>Thu Feb 08, 2018 11:06 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello stmp,<br>
+<br>
+How are you launching the game? Have you tried launching it via its installation folder? <br>
+Try removing your antivirus software to see if that makes a difference. <br>
+<br>
+Not all games will run inside a Sandbox, but provide the results or running Resource Access Monitor while reproducing the problem and we'll review the output to see if there's anything we can suggest. <br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+Copy/paste the output.<br>
+Highlight it and click on the "&lt;/&gt;" button to format it in the forums.<br>
+<br>
+And, just to be sure, are you able to launch any other applications in the Sandbox? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: COD:BO3 won't work sandboxed</h3>
+				<div class="date">Posted: <strong>Thu Feb 08, 2018 7:45 pm</strong></div>
+				<div class="author">by <strong>stmp</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+I usually launch the game thru a shortcut. I have just tried launching it again and now there is no error message at all, no matter how I launch.  I know Comodo is a Known Conflict but I have SB exclusions added to Comodo and have never experienced any problems before this. I will try removing it completely to test. Other programs run within the sandbox with no issue.<br>
+<br>
+Here are the results of Resource Access Monitor:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\CdRom0
+(Drive)     \Device\HarddiskVolume13
+(Drive)     \Device\HarddiskVolume3
+(Drive)     \Device\HarddiskVolume4
+(Drive)     \Device\HarddiskVolume7
+(Drive)     \Device\HarddiskVolume9
+(Drive)     \Device\IsoCdRom0
+Clsid       -------------------------------
+File/Key    -------------------------------
+Image       -------------------------------
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\__ComCatalogCache__
+Ipc         \BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \BaseNamedObjects\RotHintTable
+Ipc         \BaseNamedObjects\SC_AutoStartComplete
+Ipc         \RPC Control\actkernel
+Ipc         \RPC Control\epmapper
+Ipc         \Sessions\7\BaseNamedObjects\__ComCatalogCache__
+Ipc         \Sessions\7\BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \Sessions\7\BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \Sessions\7\BaseNamedObjects\ComPlusCOMRegTable
+Ipc         \Sessions\7\BaseNamedObjects\LibpadOutput
+Ipc         \Sessions\7\BaseNamedObjects\RotHintTable
+Ipc         \Sessions\7\BaseNamedObjects\SBIE_BOXED_DummyEvent_204752
+Ipc         \Sessions\7\BaseNamedObjects\SBIE_BOXED_DummyEvent_876548
+Ipc         \Sessions\7\BaseNamedObjects\SBIE_BOXED_DummyEvent_877684
+Ipc         \Sessions\7\BaseNamedObjects\SBIE_BOXED_DummyEvent_877708
+Ipc         \Sessions\7\BaseNamedObjects\SBIE_BOXED_RPCSS_SXS_READY
+Ipc         \Sessions\7\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_DcomLaunch
+Ipc         \Sessions\7\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_Mutex1
+Ipc         \Sessions\7\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcEptMapper
+Ipc         \Sessions\7\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\7\BaseNamedObjects\SboxSession
+Ipc         \Sessions\7\BaseNamedObjects\SC_AutoStartComplete
+Ipc         \Sessions\7\BaseNamedObjects\ScmCreatedEvent
+Ipc         \Sessions\7\BaseNamedObjects\SM0:204752:304:WilStaging_02
+Ipc         \Sessions\7\BaseNamedObjects\SM0:204752:304:WilStaging_02_p0
+Ipc         \Sessions\7\BaseNamedObjects\SM0:204752:304:WilStaging_02_p0h
+Ipc         \Sessions\7\BaseNamedObjects\SM0:876548:120:WilError_01
+Ipc         \Sessions\7\BaseNamedObjects\SM0:876548:120:WilError_01_p0
+Ipc         \Sessions\7\BaseNamedObjects\SM0:876548:120:WilError_01_p0h
+Ipc         \Sessions\7\BaseNamedObjects\SM0:876548:304:WilStaging_02
+Ipc         \Sessions\7\BaseNamedObjects\SM0:876548:304:WilStaging_02_p0
+Ipc         \Sessions\7\BaseNamedObjects\SM0:876548:304:WilStaging_02_p0h
+Ipc         \Sessions\7\BaseNamedObjects\SM0:877684:120:WilError_01
+Ipc         \Sessions\7\BaseNamedObjects\SM0:877684:120:WilError_01_p0
+Ipc         \Sessions\7\BaseNamedObjects\SM0:877684:120:WilError_01_p0h
+Ipc         \Sessions\7\BaseNamedObjects\Steam3Master_SharedMemLock
+Ipc         \Sessions\7\BaseNamedObjects\windows_shell_global_counters
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\bcryptPrimitives.dll
+Ipc      O  \KnownDlls\cfgmgr32.dll
+Ipc      O  \KnownDlls\combase.dll
+Ipc      O  \KnownDlls\CRYPT32.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\gdi32full.dll
+Ipc      O  \KnownDlls\IMM32.dll
+Ipc      O  \KnownDlls\kernel.appcore.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\kernelbase.dll
+Ipc      O  \KnownDlls\MSASN1.dll
+Ipc      O  \KnownDlls\MSCTF.dll
+Ipc      O  \KnownDlls\msvcp_win.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\powrprof.dll
+Ipc      O  \KnownDlls\profapi.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\sechost.dll
+Ipc      O  \KnownDlls\Setupapi.dll
+Ipc      O  \KnownDlls\SHCORE.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\ucrtbase.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\win32u.dll
+Ipc      O  \KnownDlls\windows.storage.dll
+Ipc      O  \KnownDlls\WINTRUST.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\lsasspirpc
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \Security\LSA_AUTHENTICATION_INITIALIZED
+Ipc      O  \Sessions\7\BaseNamedObjects\DirectSound DllMain mutex (0x00031FD0)
+Ipc      O  \Sessions\7\Windows\ApiPort
+Ipc      O  \Sessions\7\Windows\SharedSection
+Ipc      O  \Sessions\7\Windows\Theme3037268207
+Ipc      O  \Sessions\7\Windows\ThemeSection
+Ipc      O  \ThemeApiPort
+Ipc      O  \Windows\Theme232469358
+Pipe        -------------------------------
+Pipe        ?
+Pipe        \Device\00000047
+Pipe        \Device\00000048
+Pipe        \Device\0000004d
+Pipe        \Device\000000b4
+Pipe        \Device\000000b5
+Pipe        \Device\000000b6
+Pipe        \Device\CNG
+Pipe        \Device\KsecDD
+Pipe        \Device\Ndis
+Pipe        \Device\NDMP10
+Pipe        \Device\NDMP11
+Pipe        \Device\NDMP12
+Pipe        \Device\NDMP13
+Pipe        \Device\NDMP14
+Pipe        \Device\NDMP15
+Pipe        \Device\NDMP16
+Pipe        \Device\NDMP5
+Pipe        \Device\NDMP6
+Pipe        \Device\NDMP7
+Pipe        \Device\NDMP8
+Pipe        \Device\NDMP9
+WinCls      -------------------------------
+WinCls   O  Shell_TrayWnd</code></pre></div>
+
+Looking forward to your observations,<br>
+stmp</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: COD:BO3 won't work sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Feb 09, 2018 10:03 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello stmp,<br>
+<br>
+I am not really seeing much in that output. You can try opening the following path (if it doesn't make any difference, please revert the changes):<br>
+*\BaseNamedObjects*\Steam3Master*<br>
+<br>
+To open that path go to Configure --&gt; Edit Configuration <br>
+Copy paste the following under your desired Sandbox:<br>
+OpenIpcPath=*\BaseNamedObjects*\Steam3Master*<br>
+Save, close the file.<br>
+Configure --&gt; Reload Configuration<br>
+Re-try launching the game.<br>
+More info here: <a href="../OpenIpcPath.html" class="postlink">https://www.sandboxie.com/OpenIpcPath</a><br>
+<br>
+Did you try launching the game from the install location, as suggested? <br>
+Otherwise, the game may not work in a Sandbox. You can contact their tech support to find out if they are blocking these type of programs. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: COD:BO3 won't work sandboxed</h3>
+				<div class="date">Posted: <strong>Sat Feb 10, 2018 8:02 pm</strong></div>
+				<div class="author">by <strong>stmp</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+I tried inserting *\BaseNamedObjects*\Steam3Master* and there was no change.  Also, launching from the executable directly made no change either. Comodo AV was removed for testing and COD still failed to run.  However, the error message of:<br>
+---------------------------------------<br>
+BlackOps3.exe - Application error<br>
+The application was unable to start correctly (0xc0000142).<br>
+Click OK to close the application.<br>
+---------------------------------------<br>
+came back after a reboot and removong Comodo. While I have seen a few attempts of COD-BO3 in sandboxes that doesn't mean success. Perhaps COD:BO3 just doesn't run sandboxed?<br>
+<br>
+Software Specs:<br>
+Windows 10 Home (x64) Version 1709 (build 16299.192)<br>
+Sandboxie 5.22 (64bit)<br>
+Call of Duty Black Ops 3<br>
+Comodo AntiVirus 10.1.0.6476 (removed for testing)<br>
+<br>
+Thanks for your help Barb,<br>
+stmp</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25416&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:01:20 GMT -->
+</html>

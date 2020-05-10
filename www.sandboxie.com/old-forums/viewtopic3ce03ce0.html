@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25328&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:59:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Cannot run paint.net installer inside Sandboxie... Error.</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Cannot run paint.net installer inside Sandboxie... Error.</h2>
+		<p><a href="viewtopic0db90db9.html?f=11&amp;t=25328">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25328</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Cannot run paint.net installer inside Sandboxie... Error.</h3>
+				<div class="date">Posted: <strong>Tue Jan 09, 2018 4:18 pm</strong></div>
+				<div class="author">by <strong>Special</strong></div>
+				<div class="content"><a href="https://www.getpaint.net/download.html#download" class="postlink">https://www.getpaint.net/download.html#download</a><br>
+<br>
+<strong>paint.net.4.0.20.install.exe</strong><br>
+<br>
+When I try to run this inside of Sandboxie I get this message<br>
+<br>
+<img src="../i.imgur.com/Lw2x8ui.png" class="postimage" alt="Image"><br>
+<br>
+I'm clearly on Window 10, fully updated as of today, and use latest Sandboxie version (stable).<br>
+<br>
+<a href="../i.imgur.com/7QOHERI.png" class="postlink">https://i.imgur.com/7QOHERI.png</a> and <a href="../i.imgur.com/E2yV6qe.png" class="postlink">https://i.imgur.com/E2yV6qe.png</a><br>
+<br>
+Any ideas?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot run paint.net installer inside Sandboxie... Error.</h3>
+				<div class="date">Posted: <strong>Tue Jan 09, 2018 6:42 pm</strong></div>
+				<div class="author">by <strong>Special</strong></div>
+				<div class="content">To add to this, it wont even run Paint.NET, gives the same error, Paint.NET.4.0.19 worked just fine.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot run paint.net installer inside Sandboxie... Error.</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2018 5:16 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">Maybe this is related to the following change in version 4.0.20?
+<blockquote class="uncited"><div><strong>New:</strong> .NET Framework 4.7 is now required, and will be automatically installed if needed</div></blockquote>
+Is your installed .NET Framework version 4.7?<br>
+<br>
+<strong><span style="text-decoration: underline">Edit:</span></strong> I see you are using Windows 10. The .NET Framework should be up to date then! I can confirm the issue, version 4.0.20 won't run sandboxed and shows the message always.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot run paint.net installer inside Sandboxie... Error.</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2018 9:28 am</strong></div>
+				<div class="author">by <strong>Special</strong></div>
+				<div class="content">Yeah as you can tell, I'm on Windows 10 so .NET should not be the issue, the installer and Paint.NET it self run fine outside of Sandboxie, and previous versions also ran fine inside Sandboxie, just not this version.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot run paint.net installer inside Sandboxie... Error.</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2018 12:10 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Special,<br>
+<br>
+I can repro the issue and, so far, haven't found a workaround other than installing it on the host and running it Sandboxed.<br>
+<br>
+The latest version I successfully tested can be found here:<br>
+<a href="viewtopic797f797f.html?f=11&amp;t=24030" class="postlink">viewtopic.php?f=11&amp;t=24030</a><br>
+<br>
+I'll update this thread if anything new comes up.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot run paint.net installer inside Sandboxie... Error.</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2018 3:16 pm</strong></div>
+				<div class="author">by <strong>windwakr</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist9fdd.html?mode=viewprofile&amp;u=16420">Special</a> wrote: <a href="viewtopic5ec0-25ec0.html?p=131830#p131830" data-post-id="131830" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Jan 09, 2018 6:42 pm</div></cite>
+To add to this, it wont even run Paint.NET, gives the same error, Paint.NET.4.0.19 worked just fine.
+</div></blockquote>
+
+With version 4.0.19 were you able to copy-paste or use the line tools in the sandboxed paint.net? On W7 that results in a crash, as documented <a href="viewtopic6b9c6b9c.html?t=21732" class="postlink">here in this two and a half year old problem report</a>. Wonder if it's different on W10.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot run paint.net installer inside Sandboxie... Error.</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2018 5:22 pm</strong></div>
+				<div class="author">by <strong>Special</strong></div>
+				<div class="content">Not sure about copy/paste but everything as far as I know worked well on 4.0.19 in sandboxie, I've never had it crash on me and I used the thing for hours at a time, probably a hundred hours or so just on that version.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot run paint.net installer inside Sandboxie... Error.</h3>
+				<div class="date">Posted: <strong>Mon Feb 19, 2018 1:54 pm</strong></div>
+				<div class="author">by <strong>Special</strong></div>
+				<div class="content">Any update to this yet? Have you found the cause, can we expect a fix in the next version, etc.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Cannot run paint.net installer inside Sandboxie... Error.</h3>
+				<div class="date">Posted: <strong>Tue Feb 20, 2018 12:47 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Special,<br>
+<br>
+If any new info comes up / a fix is found at some point, we will update this thread.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25328&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:59:58 GMT -->
+</html>

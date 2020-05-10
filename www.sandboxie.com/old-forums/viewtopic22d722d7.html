@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24953&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:18:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Applocker +Sandboxie fails to start after Windows patch installs [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Applocker +Sandboxie fails to start after Windows patch installs [SOLVED]</h2>
+		<p><a href="viewtopic910f910f.html?f=11&amp;t=24953">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24953</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Applocker +Sandboxie fails to start after Windows patch installs [SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Oct 04, 2017 5:42 am</strong></div>
+				<div class="author">by <strong>toddbtx</strong></div>
+				<div class="content">We are receiving the error below after the patch Tuesday install of patches when trying to run Chrome or Internet Explorer in Sandboxie.<br>
+<br>
+The systems are running Windows 10 x64.<br>
+ <br>
+We tried it in an older version of Sandboxie 5.14, current 5.20, and the latest beta 5.21.4.<br>
+<br>
+After giving the error, the sandboxed browser closes and each attempt to start it sandboxes fails with no new errors.<br>
+ <br>
+How can we get this working again?<br>
+ <br>
+SBIE2313 Could not execute SandboxieDcomLaunch.exe (1260)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (1260)<br>
+SBIE2313 Could not execute SandboxieDcomLaunch.exe (1260)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (1260)<br>
+SBIE2313 Could not execute SandboxieDcomLaunch.exe (1260)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (1260)<br>
+SBIE2313 Could not execute SandboxieDcomLaunch.exe (1260)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (1260)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie fails to start after Windows patch installs</h3>
+				<div class="date">Posted: <strong>Wed Oct 04, 2017 10:13 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello toddbtx,<br>
+<br>
+Are you using AppLocker, or Group Policies perhaps? :  (see the end portion of Syrinx's response)<br>
+<a href="viewtopic3790-23790.html?p=124147#p124147" class="postlink">viewtopic.php?p=124147#p124147</a><br>
+<br>
+Here's more information regarding SBIE2313:<br>
+<a href="../SBIE2313.html" class="postlink">https://www.sandboxie.com/SBIE2313</a><br>
+<br>
+Are you using any security programs? (Antivirus, Firewall, etc..) <br>
+<br>
+Does the issue happen in a new Sandbox with default settings? How are you triggering the message? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie fails to start after Windows patch installs</h3>
+				<div class="date">Posted: <strong>Sun Oct 08, 2017 1:09 pm</strong></div>
+				<div class="author">by <strong>toddbtx</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+I am using GPO/Applocker/AV and a firewall.<br>
+<br>
+No changes to those configs in a couple months.<br>
+<br>
+The one change was the install of the latest Microsoft patches.<br>
+<br>
+This does happen with a new install and default settings.  Both with older versions of Sandboxie and the latest beta.<br>
+<br>
+The errors are triggered as soon as I start any app inside Sandboxie (right click on Chrome and start in Sandboxie).<br>
+<br>
+What can I try next?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie fails to start after Windows patch installs</h3>
+				<div class="date">Posted: <strong>Mon Oct 09, 2017 1:38 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello toddbtx ,<br>
+<br>
+What are the security programs that you are using?  Something installed on your system (or a setting) is blocking Sandboxie from working. We need more information in order to test/review the scenario.<br>
+<br>
+Also, you may need to look at the thread I provided above and test if adding rules for Anonymous Logon does the trick. I think the topic covers all the details but let us know if you encounter any problems following it.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie fails to start after Windows patch installs</h3>
+				<div class="date">Posted: <strong>Sat Oct 21, 2017 11:58 am</strong></div>
+				<div class="author">by <strong>toddbtx</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+It doesn't look like its related to our security software.   I created a new VM of Windows 10 Enterprise 1703 64 bit - build 15063.608 - installed all the security products and all was working fine for the last week.  <br>
+<br>
+Yesterday I allowed SCCM to start pushing patches to this system.<br>
+<br>
+Looks like all of the patches installed yesterday were Office 2016.<br>
+<br>
+Rebooted VM this morning, and now same problem as before - any attempt to launch a Sandboxied browser (Chrome, IE, etc) doesn't start.  Most of the time, no errors either.<br>
+<br>
+Any ideas how to fix this?<br>
+<br>
+I will attempt to uninstall the Office 2016 patches on at a time and see if that is related.<br>
+<br>
+Edition 	        Windows 10 Enterprise<br>
+Version		1703 <br>
+OS Build 	        15063.608</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie fails to start after Windows patch installs</h3>
+				<div class="date">Posted: <strong>Mon Oct 23, 2017 11:45 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello toddbtx,<br>
+<br>
+Without the information I asked for, I cannot recreate the scenario to test the behavior.  <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie fails to start after Windows patch installs</h3>
+				<div class="date">Posted: <strong>Mon Oct 23, 2017 11:54 pm</strong></div>
+				<div class="author">by <strong>ActiveDirect</strong></div>
+				<div class="content">After a Recent Windows Update on my Main Desktop Sandboxie fails to start the Dcom, and RPcSS. It was working fine before update. I rolled back and it worked fine updated again, not working. It's the KB4041676 update "Cumulative update version 1703. 2017-10 and the KB4049179 for Adobe Flash . It's one of those updates. Was working fine before.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie fails to start after Windows patch installs</h3>
+				<div class="date">Posted: <strong>Tue Oct 24, 2017 9:48 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello ActiveDirect,<br>
+<br>
+Please provide the required information so that we can test the scenario.<br>
+<a href="viewtopic03920392.html?p=104180#p104180" class="postlink">viewtopic.php?p=104180#p104180</a><br>
+<br>
+Be sure to test using the latest beta, and a new Sandbox with default settings:<br>
+<a href="viewtopic95959595.html?f=62&amp;t=24741" class="postlink">viewtopic.php?f=62&amp;t=24741</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie fails to start after Windows patch installs</h3>
+				<div class="date">Posted: <strong>Tue Oct 31, 2017 2:07 pm</strong></div>
+				<div class="author">by <strong>toddbtx</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+I have uninstalled the Windows patches that were recently installed, uninstalled both Symantec Endpoint and Cisco AMP, installed 5.21.7, rebooted, and I am still unable to get a Sandboxied application to start.  Same errors as before on the first attempt and then no errors, no log entries in Windows Event log.<br>
+<br>
+What else do you need to get this working again?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie fails to start after Windows patch installs</h3>
+				<div class="date">Posted: <strong>Tue Oct 31, 2017 4:10 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello toddbtx,<br>
+<br>
+Can you see if disabling your group policies (not sure if you had a chance to set them to anonymous logon?)  works for you?  <br>
+From what I can find online, error 1260 is related to policies:<br>
+<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms681383(v=vs.85).aspx" class="postlink">https://msdn.microsoft.com/en-us/librar ... s.85).aspx</a><br>
+<br>
+Regarding the rest: <br>
+Please see the current issues with Norton:<br>
+<a href="viewtopic4f074f07.html?f=11&amp;t=24879" class="postlink">viewtopic.php?f=11&amp;t=24879</a><br>
+<br>
+Also, I recommend that you try the latest version of Sandboxie:<br>
+<a href="../DownloadSandboxie.html" class="postlink">https://www.sandboxie.com/DownloadSandboxie</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie fails to start after Windows patch installs</h3>
+				<div class="date">Posted: <strong>Fri Nov 24, 2017 8:45 pm</strong></div>
+				<div class="author">by <strong>toddbtx</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+It was Applocker.  <br>
+<br>
+To verify I disabled the AppIdSvc and Chrome in Sandboxie was able to start for a regular user with no issue.<br>
+<br>
+The fix:  Add a rule to Applocker executable rules that allowed 'NT AUTHORITY\ANONYMOUS LOGON' the right to run exes.<br>
+<br>
+Now a regular user can run Sandboxie'd apps.<br>
+<br>
+Thanks,<br>
+<br>
+Todd.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24953&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:18:02 GMT -->
+</html>

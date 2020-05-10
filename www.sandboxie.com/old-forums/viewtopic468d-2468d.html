@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25314&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:35:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandbox escape by Specter and Meltdown?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandbox escape by Specter and Meltdown?</h2>
+		<p><a href="viewtopic18b518b5.html?f=17&amp;t=25314">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25314</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandbox escape by Specter and Meltdown?</h3>
+				<div class="date">Posted: <strong>Sat Jan 06, 2018 1:10 pm</strong></div>
+				<div class="author">by <strong>asbai</strong></div>
+				<div class="content">Can Sandboxie prevent programs read memory out of its sandbox by using Specter and Meltdown vulnerabilities ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox escape by Specter and Meltdown?</h3>
+				<div class="date">Posted: <strong>Sat Jan 06, 2018 11:44 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Despite my best efforts in the past (yes I'm looking at you, Curt &amp; fam) SBIE has never attempted to include preventing memory reads into its protections so far. As such, there is literally not a single routine (I'm aware of) that attempts (via SBIE) to block memreads at any point! Even if there had ever been, with the small amount of (and lack of public POCs so far) it'd be hard to gauge how that might have worked out for us. For the moment however you can revel in the fact that SBIE <strong>has never attempted to block such memory reads</strong> and <em>as such</em> is <span style="text-decoration: underline">not explicitly impacted by spectre attacks in a meaningful way</span>. <br>
+<br>
+<em><span style="text-decoration: underline"><strong>This does NOT mean you are safe from spectre, <span style="font-size: 150%; line-height: normal">while sandboxed</span>, it really just amounts to there 'is no true difference atm.'</strong></span></em><br>
+<br>
+I can't say I'd be displeased if this caused them to rethink the entire memread aspect as it's something I've been drooling (and crowing?) about for years...but how helpful any such previous attempts to apply it outside of the existing protected process layers windows now contains might have been is another story that we will never know the answer to, as they never tried it. I actually suspect not much, if anything at all in the end, if they were to rely on readily available kernel APIs prior to recent patches (as I'd actually hope for) and <em>possible</em> future firmware updates. Even without that, regarding Spectre in particular, there is not a simulation that I can (currently) understand (and reproduce) to attempt and test, much less, say how that may have turned out thus far even if there had been such attempts to block memreads on their end. [Sorry, not a multiverse genius like Trump!]<br>
+<br>
+To be honest with myself, despite also turning out to be an awesome potential '<span style="text-decoration: underline">drool over yourself</span>' moment, I haven't really felt slighted with the possible (or impossible) protections SBIE might have offered with such a situation.<br>
+<br>
+I'm still waiting for more information and perhaps some real life POC's so that I may have a better chance of understanding it all. Perhaps I'm entirely wrong but at this point I just don't see how we could expect SBIE to have protected us from either meltdown or spectre in the past or in the future without also subverting (and ruining)  innocent routines. That all being said there are a couple of (other) areas that were previously exposed [months and months ago] which have still not been properly addressed [To My Knowledge] on their end and I have zero issues with reminding them or the rest of humanity of those...<br>
+<br>
+I'm sorry, I'm an a-hole! I've been trying to keep to myself these last months per but the responses (and lack of) you folks are giving to the ppl with legit (if not innocent) questions regarding understandable worries (given the media) is just p***ing me the f*** off.<br>
+<br>
+OK, I think I'm done talking to myself now ~ no wait we're all still here! DOH!<br>
+<br>
+P.S.<br>
+Keep in mind that we are just lowly souls seeking attention and nothing we say should be construed as facts or acted upon without prior professional council. Oh, and of course, nothing I say should be held against anyone (until proven true) in a court of law.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox escape by Specter and Meltdown?</h3>
+				<div class="date">Posted: <strong>Sun Jan 07, 2018 11:57 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645">Curt@invincea</a> wrote: <a href="viewtopic1eb71eb7.html?p=131705#p131705" data-post-id="131705" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Jan 04, 2018 4:04 pm</div></cite>
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistb417.html?mode=viewprofile&amp;u=30718">shmu26</a> wrote: <a href="viewtopicd89ed89e.html?p=131703#p131703" data-post-id="131703" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Jan 04, 2018 1:46 pm</div></cite>
+They are now saying that it can be exploited also from web pages, and both chrome and firefox are vulnerable.<br>
+So the question comes back: will sandboxing the browser protect from a web exploit of this type, which steals data from memory?
+</div></blockquote>
+We are still investigating these issues. Since these are hardware problems that bypass Windows entirely, I doubt they can be stopped by sandboxing. Most likely these can only be mitigated by Windows kernel patches (i.e. Microsoft).<br>
+<br>
+There is no reason to panic. There is no known exploit of this bug in the wild, and MS patches are being distributed now.
+</div></blockquote></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox escape by Specter and Meltdown?</h3>
+				<div class="date">Posted: <strong>Tue Jan 09, 2018 10:32 am</strong></div>
+				<div class="author">by <strong>asbai</strong></div>
+				<div class="content">OK, thanks. <br>
+<br>
+Hope 5.24 GA version release quickly.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox escape by Specter and Meltdown?</h3>
+				<div class="date">Posted: <strong>Thu Jan 11, 2018 12:01 pm</strong></div>
+				<div class="author">by <strong>asbai</strong></div>
+				<div class="content">The Spectre &amp; Meltdown Checker: <a href="https://www.ashampoo.com/en/usd/pin/1304/security-software/spectre-meltdown-cpu-checker" class="postlink">https://www.ashampoo.com/en/usd/pin/130 ... pu-checker</a><br>
+cloud not run in a sandboxie (crashed), is it shown sandboxie can defend these two bugs effectively?  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+UPDATE: If I run it out of the sandbox firstly, then it back to work even if I re-run it in a sandbox.<br>
+<br>
+Sandboxie: 5.23.3<br>
+Win7 64bit<br>
+ucode patch: Yes<br>
+MSW Patch: No</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25314&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:35:33 GMT -->
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=19811&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:45:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SandBoxIE to harden SRP (software restriction policy)?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SandBoxIE to harden SRP (software restriction policy)?</h2>
+		<p><a href="viewtopicd6a9d6a9.html?f=4&amp;t=19811">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=19811</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Mon Nov 03, 2014 9:08 am</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content">Dear Tzur!<br>
+Thank you for your great utility!<br>
+<br>
+For quite some time I believed that (among other measures) the Software Restriction Policies would be a serious barrier against an exploit. (I'm talking about the <a href="http://www.mechbgon.com/srp/" class="postlink">"disallowed by default" SRP</a> settings)<br>
+<br>
+To my horrorzz MS has sabotaged its implementation of SRP - a series of posts by <a href="http://blog.didierstevens.com/?s=srp" class="postlink">Didier Stevens</a> proves that bypassing SRP is rather easy.<br>
+<br>
+It involves (among other things) the SANDBOX_INERT flag in the <em>CreateRestrictedToken</em> function, the SAFER_TOKEN_MAKE_INERT flag in the <em>SaferComputeTokenFromLevel</em> function, the LOAD_IGNORE_CODE_AUTHZ_LEVEL argument to the <em>LoadLibraryEx</em> call.<br>
+<br>
+My question is:
+<ul><li>is SandBoxIE able to disable or remove those flags and arguments, replace the <em>LoadLibraryEx</em> call with the SRP-compliant <em>LoadLibrary</em> one?</li></ul>
+
+My goal is to restore the protecting power of the "disallowed by default" SRP as a proper preventive measure.<br>
+<br>
+Thank you in advance!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Mon Nov 10, 2014 12:56 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">The goal of Sbie is not to restrict, but to contain.  These SRP settings were added by MS and fully documented.  I expect they had a reason to add these (e.g. a lot of applications won't work without them).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Tue Nov 11, 2014 4:57 am</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content">As I understand those MS's descriptions - SRP bypass is there only for software installers, not for everyday use.<br>
+<br>
+And since sandboxing a particular program is already a deviation from what MS has expected - adding the SRP/Applocker-hardening feature would be greatly beneficial security-wise. If someone does not need them - these hardening features could be optional - just like the current "Drop rights" check-box.<br>
+<br>
+I kindly ask you to consider adding SRP/Applocker-hardening to SandBoxIE:
+<ol style="list-style-type: decimal">
+<li>it will apply only to sandboxed program(s) (will not interfere with normal installation procedure to the outside of a sandbox)</li>
+<li>as an additional protection layer it will improve security (not only an exploit would be contained but also made nearly impossible)</li>
+<li>the SandBoxIE is the only place where this SRP/Applockler-hardening could be implemented cleanly</li></ol>
+
+I hope other SandBoxIE users could join the discussion regarding this topic.<br>
+<br>
+Thank you in advance!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Mon Nov 24, 2014 4:44 am</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content">Please excuse my insistence, but I find this topic very serious.<br>
+<br>
+Curt says SandBoxIE's goal is to contain - indeed, containing things is good.<br>
+May I ask - why do we want to contain things from spreading into our OSes?<br>
+<br>
+As I see it - the answer is: for security reasons.<br>
+<br>
+The additional features I ask for are intended to lessen the harm that a sandboxied program could inflict even within its' sandbox.<br>
+Any harm-preventing measures are welcome in a multi-layered security approach.<br>
+<br>
+Please comment.<br>
+Thank you in advance.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Mon Nov 24, 2014 8:09 am</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content">Like Simple Software-restriction Policy?<br>
+<br>
+<a href="http://sourceforge.net/projects/softwarepolicy/" class="postlink">http://sourceforge.net/projects/softwarepolicy/</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Mon Nov 24, 2014 10:42 am</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">@catBot<br>
+Want a layered security? Look at the combo in my signature, and in here you will find everything about it: <a href="http://www.wilderssecurity.com/threads/appguard-4-x-32-64-bit.355206/#post-2298875" class="postlink">http://www.wilderssecurity.com/threads/ ... st-2298875</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Mon Nov 24, 2014 1:42 pm</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content">Thanks for the suggestion but I want to use as little of 3rd-party software as possible. If an OS has its' built-in policies - I'd prefer to use them instead to some external code.<br>
+<br>
+My multi-layered approach consists of the following:
+<ol style="list-style-type: decimal">
+<li>a non-administrative account for everyday jobs;</li>
+<li>the "disallowed by default" SRP setting; (only the administrator-preapproved/preinstalled programs are allowed to run by a user, no code from user-writable areas is runnable)</li>
+<li>all available OS-hardening measures are enabled (DEP == "always ON", ASLR, etc)</li>
+<li>users are prevented from installing printer drivers;</li>
+<li>unsigned drivers are not installable even by an administrator;</li>
+<li>if I were on vista or above - I'd disable UAC; (there should be no way for a mortal user to mess with OS's settings, any code requiring administrative rights should silently fail)</li>
+<li>the Enhanced Write Filter is used to protect the system disk from all unwanted alterations; (after a reboot OS returns to a known-to-be-clean state)</li>
+<li>all security fixes and patches are installed;</li>
+<li>all non-essential system services are turned off; (like remote registry edit, DNS cache, etc);</li>
+<li>auto-run is disabled on all drives;</li>
+<li>all internet-facing programs are run SandBoxIEd.</li></ol>
+
+So far this works for me since ~2002 when I've moved to winXP-SP1.<br>
+<br>
+Until I've read Didier Stevens' articles I thought I was [s]completely[/s]reasonably safe.<br>
+As I've said, I was horror-ed to learn that SRP is trivial to bypass.<br>
+<br>
+I ask SandBoxIE developers to have a look if masking off/disabling those flags/parameters of the certain system calls could be implemented in the SandBoxIE - the only clean and easy place to properly enforce the SRP discipline, since all the potentially-vulnerable/exploitable programs are running SandBoxIEd.<br>
+<br>
+I'd like to accept no compromises security-wise if technically possible.<br>
+<br>
+Thank you in advance.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Wed Dec 03, 2014 11:26 am</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content">I attempted to contact Tzur with PM, but seems he left the forum - last visit was 2014-January.<br>
+<br>
+Are there other ways to contact the development team to have their comments on the topic?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Wed Dec 10, 2014 12:56 pm</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content">I've PMed Tzur two weeks ago - PM is not delivered yet...<br>
+<br>
+Is Tzur still in this business?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Wed Dec 10, 2014 1:04 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">See this thread <a href="viewtopic74ed74ed.html?f=17&amp;t=17514" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 17&amp;t=17514</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Wed Dec 10, 2014 2:27 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">To respond to your original point, I don't think this is something we want to add to Sandboxie.  The design of Sandboxie is to allow applications in the sandbox to run freely, but to contain them within the sandbox.  Adding restrictions will just cause more compatibility issues.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Thu Dec 11, 2014 4:18 am</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>To respond to your original point, I don't think this is something we want to add to Sandboxie.  The design of Sandboxie is to allow applications in the sandbox to run freely, but to contain them within the sandbox.  Adding restrictions will just cause more compatibility issues.</div></blockquote>
+Dear Curt,<br>
+<br>
+I kindly ask you to reconsider this again.<br>
+<br>
+Hardening the Applocker/SRP by means of SandBoxIE's handling of said flags and parameters is perfectly in-line with the already existing SandBoxIE's measures like the "Drop Rights" and all the features managing the inter-process communications (Resource Access-&gt;IPC/Window/COM). Just like those measures - this could be also optional.<br>
+<br>
+I strongly believe that applying those SRP-hardening measures would provide more robustness to SandBoxIE's containment capabilities.<br>
+<br>
+It is clearly stated in MS's documentation that the only valid reason for Applocker/SRP bypass is the software installation process. No compatibility issues would arise from it for <span style="text-decoration: underline">running</span> <strong>the already installed</strong> programs under SandBoxIE - I'm talking about the non-malevolent/exploit sort of programs.<br>
+Any "compatibility issue" would therefore constitute a successful exploit prevention.<br>
+<br>
+In my scenario I install the software I use to the outside of a sandbox, I almost never install things within a sandbox.<br>
+My scenario is about further hardening the every-day usage security of the already installed software running under the SandBoxIE's supervision, as an additional defense measure against any 0-day threat.<br>
+<br>
+<br>
+Please have a look into this again.<br>
+<br>
+Thank you in advance.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Sun Dec 21, 2014 3:29 pm</strong></div>
+				<div class="author">by <strong>JoeHood</strong></div>
+				<div class="content">Have you looked at the Restrictions tab in Sandboxie Control? You can limit which programs can access the internet and limit what programs can even run at all.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Mon Dec 22, 2014 3:56 am</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content"><blockquote><div><cite>JoeHood wrote:</cite>Have you looked at the Restrictions tab in Sandboxie Control?</div></blockquote>
+Thank you for the advise.<br>
+<br>
+I do not have any programs that I do not want to run - only the pre-approved programs are there to be used by a non-administrative user.<br>
+Therefore I have nothing to include in the Restrictions tab.<br>
+<br>
+My goal is to combine the strengths of SRP/Applocker with SandBoxIE <span style="text-decoration: underline">to prevent attacker's ability to bring in his own code <strong>and run it</strong></span>.<br>
+As of now it is possible to make a browser to download an attack tool to a user-writable folder and to make it (this same tool) to run - because it is possible to circumvent SRP/Applocker rules.<br>
+This is exactly what I want to stop.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Mon Dec 22, 2014 6:41 am</strong></div>
+				<div class="author">by <strong>JoeHood</strong></div>
+				<div class="content"><blockquote><div><cite>catBot wrote:</cite>Therefore I have nothing to include in the Restrictions tab.</div></blockquote>
+
+It works the opposite - whitelisting. You include only those preapproved programs.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=19811&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:45:50 GMT -->
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=21390&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:47:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; OpenFilePath for print spooler</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>OpenFilePath for print spooler</h2>
+		<p><a href="viewtopic5a3e5a3e.html?f=4&amp;t=21390">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=21390</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>OpenFilePath for print spooler</h3>
+				<div class="date">Posted: <strong>Thu Jul 09, 2015 12:35 pm</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">Hello!<br>
+<br>
+Is it possible to add a special tag, so that the OpenFilePath is only valid for the "SBIE1319 Blocked spooler print to file" case?<br>
+<br>
+<span style="text-decoration: underline">Example:</span> "OpenFilePath=<strong>&lt;printspooler&gt;</strong>,C:\Windows\TEMP" or "OpenFilePath=<strong>&lt;SBIE1319&gt;</strong>,C:\Windows\TEMP"  <br>
+<br>
+Otherwise all programs in a sandbox can use the OpenFilePath also.<br>
+<br>
+Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: OpenFilePath for print spooler</h3>
+				<div class="date">Posted: <strong>Thu Jul 09, 2015 5:12 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">You can restrict it to certain processes in the normal way:<br>
+OpenFilePath=notepad.exe,C:\Windows\TEMP</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: OpenFilePath for print spooler</h3>
+				<div class="date">Posted: <strong>Fri Jul 10, 2015 4:42 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">Thanks for your fast reply.<br>
+<br>
+I know this already, but for the print spooler this isn't an optimal solution: You have to add an OpenFilePath for <span style="text-decoration: underline">every</span> application you are using inside a sandbox. This is not very comfortable. A special tag for the print spooler would make this much easier. (And the "issue" is caused by the print spooler and not by the applications, so a special tag for the print spooler would be the corollary.)</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=21390&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:47:17 GMT -->
+</html>

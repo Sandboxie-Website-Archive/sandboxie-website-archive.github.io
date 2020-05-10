@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=12607&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:43:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; possible to sandbox steam with Team Fortress 2 pre-install?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>possible to sandbox steam with Team Fortress 2 pre-install?</h2>
+		<p><a href="viewtopic7dc87dc8.html?f=5&amp;t=12607">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=12607</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>possible to sandbox steam with Team Fortress 2 pre-install?</h3>
+				<div class="date">Posted: <strong>Wed Mar 07, 2012 3:31 pm</strong></div>
+				<div class="author">by <strong>buppus</strong></div>
+				<div class="content">I am of the firm belief that isntalling Steam bogs down windows pc's.<br>
+<br>
+I have been trying to figure out how to play steam games like TF2 without having to install steam so that it doesn't touch the windows registry.<br>
+<br>
+I've tried making steam a portable app using ThinApp and P-apps, and I can get steam to work that way but it has no ability to interact with the game files, so no go.<br>
+<br>
+<strong>Bottom Line</strong><br>
+My ideal situation would be to get steam/TF2 installed on a secondary HDD [D:] without touching the windows system on the main SSD [C:]. Is this possible with Sandboxie? How would I accomplish this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 07, 2012 6:15 pm</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content">SBIE Control &gt; Sandbox &gt; Set container folder<br>
+<br>
+voila</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 07, 2012 10:32 pm</strong></div>
+				<div class="author">by <strong>buppus</strong></div>
+				<div class="content">Could you be a little more specific on how this works?<br>
+
+<blockquote class="uncited"><div>Set Container Folder &gt; C:</div></blockquote>    - what does this mean? Does this mean that sandboxes will be written/stored/operated on [C:]? Because that's the opposite of what I want. Or does it mean that the whole [C:] drive will be sandboxed so that when I install Steam/TF2 onto my secondary drive [D:] it won't actually change Windows?<br>
+<br>
+Again, I'm looking for Windows [C:] to be left alone, while Steam/TF2 are allowed to write to [D:]. In other words, how can I get the game files to reside/install on [D:], but have the installation to windows[C:] be virtualized/sandboxed?<br>
+<br>
+<br>
+If what I asked for is not possible, would it be simpler to make a sandbox for steam and just run the whole thing off of [D:]? (is that what you were suggesting in the first place?)<br>
+<br>
+But then wouldn't file size become a problem? My steam folder with just TF2 installed is like 13GB...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 09, 2012 1:22 am</strong></div>
+				<div class="author">by <strong>buppus</strong></div>
+				<div class="content">I had an idea, let me know if I'm on the right track here:<br>
+<br>
+What if I made a backup of my entire current Steam folder, moved it to [D:] on the new system, and then went to run steam.exe sandboxed w/ set container folder [D:] (to make it adjust installation to that location)?<br>
+<br>
+Does that sound like it would work?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 09, 2012 10:25 am</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content">The option I described allows you to set Sandboxie to write its sandboxes to the D drive or any other of your choice. You select the drive letter from the list. By running the steam installer sandboxed after that, it'll have it's writes redirected to the custom location specified.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 09, 2012 11:05 am</strong></div>
+				<div class="author">by <strong>buppus</strong></div>
+				<div class="content">I see, so you're saying it virtualizes in [C:], but is actually taking place in [D:]?<br>
+<br>
+In light of already having a 13GB Steam folder with all of my application data, shouldn't I start by migrating that data to the actual [D:], then running Steam sandboxed w/ set container folder &gt; [D:]?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 09, 2012 11:14 am</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content"><blockquote><div><cite>buppus wrote:</cite>I see, so you're saying it virtualizes in [C:], but is actually taking place in [D:]?</div></blockquote>
+
+I'm saying that by slecting D you will be virtualizing on D although the folder is located on C.<br>
+<br>
+
+<blockquote><div><cite>buppus wrote:</cite>
+In light of already having a 13GB Steam folder with all of my application data, shouldn't I start by migrating that data to the actual [D:], then running Steam sandboxed w/ set container folder &gt; [D:]?</div></blockquote>
+
+Sure that could work also. I don't know if registry keys related to steam would be a problem however but you could always move it back if thats the case.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 09, 2012 11:52 am</strong></div>
+				<div class="author">by <strong>buppus</strong></div>
+				<div class="content">Well the standard procedure for moving a Steam installation is to delete everything in the Steam folder <em>except</em> application data and Steam.exe, then move the folder to its new location and open Steam.exe. From there it adjusts itself. This assumes that the Steam client is already installed.<br>
+<br>
+In my case, it seems like it could work if I do the same thing, but first sandbox the whole Steam folder on [D:] and then run the installer out of that folder. <br>
+<br>
+I'll give that a try and let you know if it works.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 09, 2012 12:38 pm</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content">I suggest you do the following:<br>
+<br>
+1. move your steamapps folder anywhere you like on D<br>
+2. uninstall the steam client from your system<br>
+3. create a sandbox for the steamclient (which can be on C, D or anywhere, but I suggest you keep it on C- the SSD)<br>
+4. after the client successfully installed in the sandbox use folder junctions to link Program Files (x86)\Steam\steamapps to the steamapps folder on D<br>
+<br>
+this way the client can still profit from SSD read speed without downloading/updating games on C. So the client will consume around 140MBs on the SSD, but all your games will run from D.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 09, 2012 2:11 pm</strong></div>
+				<div class="author">by <strong>buppus</strong></div>
+				<div class="content">Perfect, this is exactly the solution I was looking for!<br>
+<br>
+By junctioning the folders, will that allow the sandboxed Steam client on [C:] to forward permanent updates to D:/...steamapps? If not I would be worried that all future updates, etc will continue to be written to the sandbox on [C:], and then the 140mb sandbox would continue to grow - I don't want that!<br>
+<br>
+Can you give me some info on how to implement the folder junction?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 10, 2012 5:33 am</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content"><blockquote><div><cite>buppus wrote:</cite>By junctioning the folders, will that allow the sandboxed Steam client on [C:] to forward permanent updates to D:/...steamapps?</div></blockquote>
+That's correct.<br>
+If game updates are not programmed to go outside the steamapps folder, then the client folder size will never increase (unless the client itself is updated and requires more space).<br>
+
+<blockquote><div><cite>buppus wrote:</cite>Can you give me some info on how to implement the folder junction?</div></blockquote>
+I recommend <a href="http://schinagl.priv.at/nt/hardlinkshellext/hardlinkshellext.html" class="postlink">Link Shell Extension</a> for junction management (create/delete junctions).<br>
+<br>
+The method I described is the one I'm using and it's working.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 10, 2012 11:59 am</strong></div>
+				<div class="author">by <strong>buppus</strong></div>
+				<div class="content">This is great, thanks so much for the help!<br>
+<br>
+I just realized how incredibly useful this junction tool is - can also forward (to the recycle bin) steam's html cache and cookies from the stupid server splash screens that are currently taking up ~300mb in my steam folder...<br>
+<br>
+So with the LSE utility, just select "Pink Link Source" on <strong>C:/....steamapps</strong> and then "Drop Here &gt; Junction" on <strong>D:/...steamapps</strong> ... is that right?<br>
+<br>
+<br>
+<br>
+<br>
+As for the sandbox on Steam, are there any particular settings I should change (like restrictions or resource access?), or should I just use the default? <br>
+<br>
+I was thinking allowing hardware changes, making steam a forced program, and making shortcuts, but I don't know about all those other settings...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 10, 2012 12:43 pm</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content"><blockquote><div><cite>buppus wrote:</cite>I just realized how incredibly useful this junction tool is</div></blockquote>
+Yeah. First time I used it was to junction folders on RAM Disks.<br>
+
+<blockquote><div><cite>buppus wrote:</cite>So with the LSE utility, just select "Pink Link Source" on <strong>C:/....steamapps</strong> and then "Drop Here &gt; Junction" on <strong>D:/...steamapps</strong> ... is that right?</div></blockquote>
+No. You need to create the junction from D to C, from source to destination. So, you first move the steamapps folder to some location on D, then select Pick Link Source on steamapps from D and Drop as junction where steamapps used to be on C. I guess you already know that the junction needs to have the same name as the original source (steamapps), but the steamapps folder you moved on D can be called anything else, it doesn't matter (for example, you move steamapps to D and call it steamapppppzzzzz, then pick link source on it and drop it as a junction in the steam client folder- the junction will be called steamapppppzzzzz, but then you rename the junction as steamapps for things to work as expected).<br>
+
+<blockquote><div><cite>buppus wrote:</cite>As for the sandbox on Steam, are there any particular settings I should change (like restrictions or resource access?), or should I just use the default? </div></blockquote>
+The use of junctions within a sandbox doesn't require special sandbox settings, just the settings that games would need to run properly (because games run under steam's sandbox).<br>
+You should know though that the spurce folder (the one you moved on D) is not under sandboxie's control if something/someone launches files directly from it and not using the sandboxed client's path, but that's hardly an issue- you can optionally sandbox the source if you're concerned with security problems.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 10, 2012 1:45 pm</strong></div>
+				<div class="author">by <strong>buppus</strong></div>
+				<div class="content"><blockquote><div><cite>MichaelS wrote:</cite>No. You need to create the junction from D to C, from source to destination.</div></blockquote>
+OK got it; I was thinking of C as source, since changes/updates are [kind of] moving from C to D, but I realize that the actual files, and therefore source, are on D.<br>
+<br>
+Do I have to remove the original steamapps folder from C:/...Steam before creating the junction? (just right click inside the steam folder to drop as junction?)<br>
+
+<blockquote><div><cite>MichaelS wrote:</cite>Yeah. First time I used it was to junction folders on RAM Disks.</div></blockquote>
+Interesting that you bring up Ram disks - I was thinking of setting one up but it seems like there wouldn't be much real benefit for it on my setup, and it would require a lot of additional configuration that could easily become a source of conflict (imaging/restoring cache on startup, etc...).<br>
+<br>
+I've got 16GB DDR3 2133 on Win7x64, driven by an i5-2500k @ 4.5gHz.<br>
+<br>
+Do you think it's worth it to set up a RAM disk for internet cache and temp? or is it unneccesary with the new capabilites of this generation SSD?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 10, 2012 4:26 pm</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content"><blockquote><div><cite>buppus wrote:</cite>Do I have to remove the original steamapps folder from C:/...Steam before creating the junction? (just right click inside the steam folder to drop as junction?)</div></blockquote>
+Normally there should be no steamapps folder left on C, you're supposed to have it moved somewhere on D. And, yes, a steamapps folder should not be there if you intend to create a junction with the same name. Applications regard junctions as folders, so an app can't distinguish a junction from a folder (unless it compares atributes, but not path-wise).<br>
+
+<blockquote><div><cite>buppus wrote:</cite>Do you think it's worth it to set up a RAM disk for internet cache and temp? or is it unneccesary with the new capabilites of this generation SSD?</div></blockquote>
+I permanently keep 1 GB RAM dedicated for the browser (profile files and cache), but I also use temporary RAM Disks for temp files of other applications (like Photoshop's temp files, etc) and you get the best read/write speed possible without bothering your SSD controller and tearing cells.<br>
+Unless you do heavy video/photo editing, I'm pretty sure you won't get to use more than 30% of your RAM, so RAM disks bring value to your buy. You can even store an entire game installation in RAM if you play it often and then discard it when you're done with it. For RAM DIsk software, I recommend Romex's VSuite Ramdisk or Primo Ramdisk- performs wonderfully and has plenty management options. I have ram disks loading up at boot time and set to auto-save their images every 15 minutes (saves only differences, not the size of the ram disk every time) and auto-save at shutdown, so the chances to lose data are small.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=12607&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:43:02 GMT -->
+</html>

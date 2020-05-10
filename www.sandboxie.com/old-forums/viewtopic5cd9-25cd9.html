@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=59&t=23535&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:27:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 5.15 Beta Available (latest version 5.16 RC) - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>5.15 Beta Available (latest version 5.16 RC)</h2>
+		<p><a href="viewtopic00b2-200b2.html?f=59&amp;t=23535">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=59&amp;t=23535</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>8</strong></div>
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.3)</h3>
+				<div class="date">Posted: <strong>Thu Nov 03, 2016 5:01 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>123456 wrote:</cite><blockquote><div><cite>Curt@invincea wrote:</cite>Beta 5.15.3 has been released.</div></blockquote>
+
+Why Can't You fix this issue?<br>
+<a href="viewtopicf30ef30e.php?f=11&amp;t=23402" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=23402</a><br>
+<br>
+ I can terminate with PCHunter<br>
+<a href="http://www.softpedia.com/get/Security/Security-Related/PC-Hunter.shtml" class="postlink">http://www.softpedia.com/get/Security/S ... nter.shtml</a></div></blockquote>
+As I said in that thread, it is not possible to terminate some processes. If we spend resources to fix this particular case, all they have to do is move to the technique (open kernel handle) that can't be fixed. And we're right back where we started.<br>
+<br>
+It isn't worth the time &amp; effort.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.3)</h3>
+				<div class="date">Posted: <strong>Thu Nov 03, 2016 9:46 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">So after upgrading to 5.15.3 from 5.15.2 I started getting errors and was unable to run anything sandboxed.<br>
+
+<blockquote class="uncited"><div>SBIE2204 Cannot start sandboxed service RpcSs (C0000364)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (-4)</div></blockquote>
+
+Reverting to 5.15.2 solved it but I did a little digging and as it turns out something in this version seems to have changed and now AppLocker is detecting and blocking stuff from Program Files and System32/SysWow64 even though there is already an 'Everyone' rule which worked for these before.<br>
+<br>
+I added four more rules (two for exes, two for dlls) for ANONYMOUS LOGON and it's back to normal again:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>    &lt;/FilePathRule&gt;
+    &lt;FilePathRule Id="c66ebb93-a8cb-47db-bdc1-f6ad12779b4c" Name="Windows" Description="" UserOrGroupSid="S-1-5-7" Action="Allow"&gt;
+      &lt;Conditions&gt;
+        &lt;FilePathCondition Path="%WINDIR%\*" /&gt;
+      &lt;/Conditions&gt;
+    &lt;/FilePathRule&gt;
+    &lt;FilePathRule Id="84149cbb-c1c3-4ef7-bde5-23b093d15009" Name="Program Files" Description="" UserOrGroupSid="S-1-5-7" Action="Allow"&gt;
+      &lt;Conditions&gt;
+        &lt;FilePathCondition Path="%PROGRAMFILES%\*" /&gt;
+      &lt;/Conditions&gt;
+    &lt;/FilePathRule&gt;
+  &lt;/RuleCollection&gt;
+        &lt;FilePathRule Id="aaa55716-c39a-4538-aa87-ae8fd330e23a" Name="Program Files" Description="" UserOrGroupSid="S-1-5-7" Action="Allow"&gt;
+      &lt;Conditions&gt;
+        &lt;FilePathCondition Path="%PROGRAMFILES%\*" /&gt;
+      &lt;/Conditions&gt;
+    &lt;/FilePathRule&gt;
+    &lt;FilePathRule Id="ad24b95e-7d7f-418d-87a1-f369489067c5" Name="Windows" Description="" UserOrGroupSid="S-1-5-7" Action="Allow"&gt;
+      &lt;Conditions&gt;
+        &lt;FilePathCondition Path="%WINDIR%\*" /&gt;
+      &lt;/Conditions&gt;
+    &lt;/FilePathRule&gt;
+  &lt;/RuleCollection&gt;</code></pre></div>
+
+I'm curious as to what might've changed that these were suddenly required but at least it's more <strong>consistent</strong> now!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.3)</h3>
+				<div class="date">Posted: <strong>Fri Nov 04, 2016 1:19 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">I had to make a small change to our sandboxed token to allow Win 10-AU Immersive dialogs to work inside the sandbox.<br>
+<br>
+So are you saying you had rules to allow Everyone, and now you have to specifically allow Anonymous? Perhaps you should tell me exactly what you were doing before and what you had to change.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.3)</h3>
+				<div class="date">Posted: <strong>Fri Nov 04, 2016 3:26 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Yes, previously the 'Everyone' (S-1-1-0) rules worked for dlls and exes in Program Files or Windows\System32 &amp; SysWOW64<br>
+eg
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>    &lt;FilePathRule Id="297fce9c-3f54-4403-ad73-47576f2f64d3" Name="(Default Rule) Windows DLLs" Description="" UserOrGroupSid="S-1-1-0" Action="Allow"&gt;
+      &lt;Conditions&gt;
+        &lt;FilePathCondition Path="%WINDIR%\*" /&gt;
+      &lt;/Conditions&gt;
+    &lt;/FilePathRule&gt;</code></pre></div>
+was fine. As I found <a href="viewtopic6d9f6d9f.html?f=22&amp;t=23307" class="postlink">however (previously)</a> they didn't work with specific users though that's a bit offtopic.<br>
+<br>
+But suddenly with 5.15.3 they were being blocked and resulting in even Sandboxies own exes running inside being unable to load the dlls and in turn the errors reported above being shown in SbieCtrl.<br>
+<br>
+Here's a couple sample Event Log errors:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>- &lt;Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event"&gt;
+- &lt;System&gt;
+  &lt;Provider Name="Microsoft-Windows-AppLocker" Guid="{CBDA4DBF-8D5D-4F69-9578-BE14AA540D22}" /&gt; 
+  &lt;EventID&gt;8004&lt;/EventID&gt; 
+  &lt;Version&gt;0&lt;/Version&gt; 
+  &lt;Level&gt;2&lt;/Level&gt; 
+  &lt;Task&gt;0&lt;/Task&gt; 
+  &lt;Opcode&gt;0&lt;/Opcode&gt; 
+  &lt;Keywords&gt;0x8000000000000000&lt;/Keywords&gt; 
+  &lt;TimeCreated SystemTime="2016-11-04T19:11:32.170424000Z" /&gt; 
+  &lt;EventRecordID&gt;88832&lt;/EventRecordID&gt; 
+  &lt;Correlation /&gt; 
+  &lt;Execution ProcessID="1328" ThreadID="2144" /&gt; 
+  &lt;Channel&gt;Microsoft-Windows-AppLocker/EXE and DLL&lt;/Channel&gt; 
+  &lt;Computer&gt;SNIPPED&lt;/Computer&gt; 
+  &lt;Security UserID="SNIPPED" /&gt; 
+  &lt;/System&gt;
+- &lt;UserData&gt;
+- &lt;RuleAndFileData xmlns:auto-ns2="http://schemas.microsoft.com/win/2004/08/events" xmlns="http://schemas.microsoft.com/schemas/event/Microsoft.Windows/1.0.0.0"&gt;
+  &lt;PolicyName&gt;DLL&lt;/PolicyName&gt; 
+  &lt;RuleId&gt;{00000000-0000-0000-0000-000000000000}&lt;/RuleId&gt; 
+  &lt;RuleName&gt;-&lt;/RuleName&gt; 
+  &lt;RuleSddl&gt;-&lt;/RuleSddl&gt; 
+  &lt;TargetUser&gt;S-1-5-7&lt;/TargetUser&gt; 
+  &lt;TargetProcessId&gt;1328&lt;/TargetProcessId&gt; 
+  &lt;FilePath&gt;%SYSTEM32%\MSVCR100.DLL&lt;/FilePath&gt; 
+  &lt;FileHash /&gt; 
+  &lt;Fqbn&gt;O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US\MICROSOFT® VISUAL STUDIO® 2010\MSVCR100_CLR0400.DLL\10.0.40219.325&lt;/Fqbn&gt; 
+  &lt;/RuleAndFileData&gt;
+  &lt;/UserData&gt;
+  &lt;/Event&gt;
+
+- &lt;Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event"&gt;
+- &lt;System&gt;
+  &lt;Provider Name="Microsoft-Windows-AppLocker" Guid="{CBDA4DBF-8D5D-4F69-9578-BE14AA540D22}" /&gt; 
+  &lt;EventID&gt;8004&lt;/EventID&gt; 
+  &lt;Version&gt;0&lt;/Version&gt; 
+  &lt;Level&gt;2&lt;/Level&gt; 
+  &lt;Task&gt;0&lt;/Task&gt; 
+  &lt;Opcode&gt;0&lt;/Opcode&gt; 
+  &lt;Keywords&gt;0x8000000000000000&lt;/Keywords&gt; 
+  &lt;TimeCreated SystemTime="2016-11-04T19:11:04.261975300Z" /&gt; 
+  &lt;EventRecordID&gt;88757&lt;/EventRecordID&gt; 
+  &lt;Correlation /&gt; 
+  &lt;Execution ProcessID="1164" ThreadID="2364" /&gt; 
+  &lt;Channel&gt;Microsoft-Windows-AppLocker/EXE and DLL&lt;/Channel&gt; 
+  &lt;Computer&gt;SNIPPED&lt;/Computer&gt; 
+  &lt;Security UserID="SNIPPED" /&gt; 
+  &lt;/System&gt;
+- &lt;UserData&gt;
+- &lt;RuleAndFileData xmlns:auto-ns2="http://schemas.microsoft.com/win/2004/08/events" xmlns="http://schemas.microsoft.com/schemas/event/Microsoft.Windows/1.0.0.0"&gt;
+  &lt;PolicyName&gt;DLL&lt;/PolicyName&gt; 
+  &lt;RuleId&gt;{00000000-0000-0000-0000-000000000000}&lt;/RuleId&gt; 
+  &lt;RuleName&gt;-&lt;/RuleName&gt; 
+  &lt;RuleSddl&gt;-&lt;/RuleSddl&gt; 
+  &lt;TargetUser&gt;S-1-5-7&lt;/TargetUser&gt; 
+  &lt;TargetProcessId&gt;1164&lt;/TargetProcessId&gt; 
+  &lt;FilePath&gt;%SYSTEM32%\IMM32.DLL&lt;/FilePath&gt; 
+  &lt;FileHash /&gt; 
+  &lt;Fqbn&gt;O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US\MICROSOFT® WINDOWS® OPERATING SYSTEM\IMM32\6.1.7600.16385&lt;/Fqbn&gt; 
+  &lt;/RuleAndFileData&gt;
+  &lt;/UserData&gt;
+  &lt;/Event&gt;
+</code></pre></div>
+
+Adding just DLL rules for ANONYMOUS LOGON then caused events like this to be logged and a different set of errors:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>- &lt;Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event"&gt;
+- &lt;System&gt;
+  &lt;Provider Name="Microsoft-Windows-AppLocker" Guid="{CBDA4DBF-8D5D-4F69-9578-BE14AA540D22}" /&gt; 
+  &lt;EventID&gt;8004&lt;/EventID&gt; 
+  &lt;Version&gt;0&lt;/Version&gt; 
+  &lt;Level&gt;2&lt;/Level&gt; 
+  &lt;Task&gt;0&lt;/Task&gt; 
+  &lt;Opcode&gt;0&lt;/Opcode&gt; 
+  &lt;Keywords&gt;0x8000000000000000&lt;/Keywords&gt; 
+  &lt;TimeCreated SystemTime="2016-11-04T19:15:56.072295000Z" /&gt; 
+  &lt;EventRecordID&gt;89027&lt;/EventRecordID&gt; 
+  &lt;Correlation /&gt; 
+  &lt;Execution ProcessID="2276" ThreadID="2440" /&gt; 
+  &lt;Channel&gt;Microsoft-Windows-AppLocker/EXE and DLL&lt;/Channel&gt; 
+  &lt;Computer&gt;SNIPPED&lt;/Computer&gt; 
+  &lt;Security UserID="SNIPPED" /&gt; 
+  &lt;/System&gt;
+- &lt;UserData&gt;
+- &lt;RuleAndFileData xmlns:auto-ns2="http://schemas.microsoft.com/win/2004/08/events" xmlns="http://schemas.microsoft.com/schemas/event/Microsoft.Windows/1.0.0.0"&gt;
+  &lt;PolicyName&gt;EXE&lt;/PolicyName&gt; 
+  &lt;RuleId&gt;{00000000-0000-0000-0000-000000000000}&lt;/RuleId&gt; 
+  &lt;RuleName&gt;-&lt;/RuleName&gt; 
+  &lt;RuleSddl&gt;-&lt;/RuleSddl&gt; 
+  &lt;TargetUser&gt;S-1-5-7&lt;/TargetUser&gt; 
+  &lt;TargetProcessId&gt;3456&lt;/TargetProcessId&gt; 
+  &lt;FilePath&gt;%PROGRAMFILES%\SANDBOXIE\SANDBOXIEDCOMLAUNCH.EXE&lt;/FilePath&gt; 
+  &lt;FileHash /&gt; 
+  &lt;Fqbn&gt;O=INVINCEA, INC., L=FAIRFAX, S=VIRGINIA, C=US\SANDBOXIE\SANDBOXIEDCOMLAUNCH.EXE\5.15.3.00&lt;/Fqbn&gt; 
+  &lt;/RuleAndFileData&gt;
+  &lt;/UserData&gt;
+  &lt;/Event&gt;
+</code></pre></div>
+<blockquote class="uncited"><div>
+SBIE2204 Cannot start sandboxed service DcomLaunch (1260)
+</div></blockquote>
+
+So after adding 2 rules for ANONYMOUS LOGON to both the EXE and DLL rules in addition to the existing EVERYONE (S-1-1-0) rules for Program Files &amp; the Windows folders, AppLocker was once again allowing them to launch.<br>
+This is more like what I experienced before with specific user rules and other areas but for some reason the EVERYONE rule worked for those areas before but now it doesn't.<br>
+Either way it's not a complaint and <em>I'm unsure if there is even anything to correct</em>. As I said in the last post, now at least things are much more <strong>constant</strong> in the way AppLocker handles the paths/rules and detection of ANONYMOUS LOGON. It was just weird that in one version it worked without the extra rules and one suddenly needed them.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>5.15.3</h3>
+				<div class="date">Posted: <strong>Sat Nov 05, 2016 12:36 pm</strong></div>
+				<div class="author">by <strong>424tsiai</strong></div>
+				<div class="content">Still the same issues as described: <br>
+<br>
+<a href="viewtopicfc88fc88.html?p=124013#p124013" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 13#p124013</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.1)</h3>
+				<div class="date">Posted: <strong>Sun Nov 06, 2016 7:00 am</strong></div>
+				<div class="author">by <strong>Bertus</strong></div>
+				<div class="content"><blockquote><div><cite>Bertus wrote:</cite>Problem with printing in firefox, Iron and cyberfox. When I try to print from the browser, the browser crashes before the print preview.<br>
+It seems splwow64.exe is unable to run in the sandbox.
+</div></blockquote>
+
+Printing is working again without problems in sandboxie 5.15.3.<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.3)</h3>
+				<div class="date">Posted: <strong>Sun Nov 06, 2016 2:31 pm</strong></div>
+				<div class="author">by <strong>ITSecMedia</strong></div>
+				<div class="content">Installation / Crash / Fail <br>
+<br>
+All attempts to install PrePros6 beta installer in sandboxie fails:<br>
+<br>
+To test simply request free beta thru this form : <a href="https://prepros.io/prepros-6" class="postlink">https://prepros.io/prepros-6</a><br>
+<br>
+Then try to run the installer in sandboxie ... fails for msi and exe installer.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.3)</h3>
+				<div class="date">Posted: <strong>Mon Nov 07, 2016 11:59 am</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">is there a known problem between games from "deutschland spielt" and sandboxie on windows 10 redstone 1607?<br>
+<br>
+eg "Northern Tales" (a smaller download)<br>
+<a href="http://www.deutschland-spielt.de/spiele/klick-management/northern-tale/" class="postlink">http://www.deutschland-spielt.de/spiele ... hern-tale/</a><br>
+(happens also on other DS games)<br>
+<br>
+i cannot reproduce the error with windows pro th2 (1511) or LTSB.<br>
+<br>
+the games startup, but no windows, no message, nothing - and quit. no log files from game.<br>
+<br>
+the games run fine outside sandboxie.<br>
+<br>
+thx</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Nov 08, 2016 8:00 am</strong></div>
+				<div class="author">by <strong>a3739349drdrbcom</strong></div>
+				<div class="content">Opera 42.0.2393.14Beta &amp; Opera 43.0.2403.0Dev sandboxed are opened with a "loading" blank page and unable to visit any website even its settings.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.3)</h3>
+				<div class="date">Posted: <strong>Tue Nov 08, 2016 3:35 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">The "System process" cpu usage seems to be high in some cases like when you run 2 firefox instances in separate sandboxes. May be win10 issue. Has anyone noticed this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>BSOD in 5.15.3</h3>
+				<div class="date">Posted: <strong>Thu Nov 10, 2016 6:45 am</strong></div>
+				<div class="author">by <strong>Anocs</strong></div>
+				<div class="content">After installing 5.15.3 the BSOD welcomes me.<br>
+<br>
+HW: Dell Vostro 3350<br>
+OS: Windows 10 Pro 64bit PL (version 1607, compilation 14393.351)<br>
+AV: Norton Security 2017 (version 22.8.0.50)<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>==================================================
+Dump File         : 111016-7171-01.dmp
+Crash Time        : 10.11.2016 11:29:29
+Bug Check String  : SYSTEM_SERVICE_EXCEPTION
+Bug Check Code    : 0x0000003b
+Parameter 1       : 00000000`c0000005
+Parameter 2       : fffff803`66ed221f
+Parameter 3       : ffffc780`9006b1c0
+Parameter 4       : 00000000`00000000
+Caused By Driver  : SbieDrv.sys
+Caused By Address : SbieDrv.sys+221f
+File Description  : 
+Product Name      : 
+Company           : 
+File Version      : 
+Processor         : x64
+Crash Address     : ntoskrnl.exe+14a510
+Stack Address 1   : 
+Stack Address 2   : 
+Stack Address 3   : 
+Computer Name     : 
+Full Path         : C:\WINDOWS\Minidump\111016-7171-01.dmp
+Processors Count  : 4
+Major Version     : 15
+Minor Version     : 14393
+Dump File Size    : 416 620
+Dump File Time    : 10.11.2016 11:30:38
+==================================================
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BSOD in 5.15.3</h3>
+				<div class="date">Posted: <strong>Thu Nov 10, 2016 12:00 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Anocs wrote:</cite>After installing 5.15.3 the BSOD welcomes me.<br>
+<br>
+HW: Dell Vostro 3350<br>
+OS: Windows 10 Pro 64bit PL (version 1607, compilation 14393.351)<br>
+AV: Norton Security 2017 (version 22.8.0.50)
+</div></blockquote>
+There is a bug that is fixed in 5.15.4. If your Sbie license has expired, and you are using Office ClickToRun, you will get a BSOD when starting Windows.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BSOD in 5.15.3</h3>
+				<div class="date">Posted: <strong>Thu Nov 10, 2016 7:52 pm</strong></div>
+				<div class="author">by <strong>nanana1</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>There is a bug that is fixed in 5.15.4. If your Sbie license has expired, and you are using Office ClickToRun, you will get a BSOD when starting Windows.</div></blockquote>
+
+<strong>5.15 Beta Available (latest version 5.15.4)</strong><br>
+Post by nanana1 » Thu Nov 11, 2016 7:49 pm<br>
+<br>
+Combined 32/64 installer:<br>
+<a href="../SandboxieInstall-515-4.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall-515-4.exe</a><br>
+<br>
+Separate:<br>
+<a href="../SandboxieInstall32-515-4.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall32-515-4.exe</a><br>
+<a href="../SandboxieInstall64-515-4.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall64-515-4.exe</a><br>
+<br>
+Changes in 5.15.4:<br>
+Fixed BSOD when running Office ClickToRun if SBIE license expired</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Stick Password issue</h3>
+				<div class="date">Posted: <strong>Fri Nov 11, 2016 8:04 am</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">Not sure it is new to 5.14 but I am getting frequent crashes:<br>
+<br>
+SBIE2101 Object name not found: , error OpenProcess (C0000022) access=00123FFA initialized=1<br>
+SBIE2314 Canceling process stpass.exe [2632 / 7]<br>
+<br>
+I gave using the SP template some time ago because it is (was?) old and SP worked better without it. IME!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.4)</h3>
+				<div class="date">Posted: <strong>Fri Nov 11, 2016 1:27 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">5.15.4 has been <em>officially</em> released.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>8</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=59&t=23535&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:27:56 GMT -->
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24536&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:50:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; AVG + Web Browser -SBIE2101 Object name not found -(C0000022) [SOLVED] - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>AVG + Web Browser -SBIE2101 Object name not found -(C0000022) [SOLVED]</h2>
+		<p><a href="viewtopicc63cc63c.html?f=11&amp;t=24536">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24536</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Re: AVG + Web Browser -SBIE2101 Object name not found -(C0000022)</h3>
+				<div class="date">Posted: <strong>Mon Jun 12, 2017 1:14 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Mings and all,<br>
+<br>
+I have been testing disabling different AVG components and changing options, however I was not able to get it to work until I added the following to the Sandbox settings:<br>
+<br>
+Right Click on your Sandbox --&gt; Sandbox Settings<br>
+Resource Access --&gt;File Access --&gt; Write-Only Access<br>
+Hit Add and enter the following: <br>
+C:\Program Files (x86)\AVG\Antivirus*<br>
+<br>
+After that, I was able to launch Firefox and Chrome in the Sandbox. (I have not tested other apps yet).<br>
+Still looking into this, will update this thread with further info, whenever possible.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG + Web Browser -SBIE2101 Object name not found -(C0000022)</h3>
+				<div class="date">Posted: <strong>Tue Jul 11, 2017 4:11 pm</strong></div>
+				<div class="author">by <strong>SandChrome</strong></div>
+				<div class="content">Hey Hey!!! It worked for me!!<br>
+<br>
+This is strange because I've been runnin a sandboxed Google Chrome + AVG + Windows 7 64 bit for years with no issues at all. The crashing started with the windows 10 update.<br>
+<br>
+Anyway, thanks again!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG + Web Browser -SBIE2101 Object name not found -(C0000022)</h3>
+				<div class="date">Posted: <strong>Wed Jul 26, 2017 9:08 pm</strong></div>
+				<div class="author">by <strong>HolmesIV</strong></div>
+				<div class="content">This has not helped me. I installed a well-known anti-virus program I cannot name due to your rules and things worked fine for some time. I uninstalled it today replacing it with another program I also cannot name (though I am posting in the correct topic) due to your rules.<br>
+<br>
+I gave a precise and concise description of my problem but was falsely told I was trying to advertise another program. Needless to say this has left me unable to describe my problem other than very vaguely, and a little unhappy. I was told to post here if it didn't solve my problem and it didn't.<br>
+<br>
+If you care to look at my original post you should find more detail.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG + Web Browser -SBIE2101 Object name not found -(C0000022)</h3>
+				<div class="date">Posted: <strong>Thu Jul 27, 2017 10:16 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello HolmesIV,<br>
+<br>
+If you have AVG installed, the steps above should cover the issue. Be sure to test them in a new Sandbox with default settings (you can also try deleting the contents of your current one, to see if that helps).<br>
+If you are using a different antivirus, please let us know which one, I believe your last post mentioned BitDefender, we have a specific fix for that one:<br>
+<br>
+Free version:<br>
+<a href="viewtopic44be44be.html?f=11&amp;t=21539&amp;start=165#p128854" class="postlink">viewtopic.php?f=11&amp;t=21539&amp;start=165#p128854</a><br>
+If you have the paid version, the workaround is the same, except for:<br>
+WriteFilePath=C:\Program Files\Bitdefender\*   (instead of WriteFilePath=C:\Program Files\Bitdefender Antivirus Free\*) <br>
+<br>
+If you are still experiencing problems, be sure to have fully uninstalled your previous antivirus software (many provide a removal tool, as there might be leftovers), then reboot and test the steps in a new sandbox with default settings.<br>
+<br>
+Please provide this information should the problem persist:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Regards,<br>
+Barb.-<br>
+<br>
+PS: You can mention any software you need to in order for us to troubleshoot your problem. Just make sure to run a search and post in an existing thread when there is one. Otherwise, feel free to start a new one. <br>
+If you have any questions regarding approvals, shoot me a PM and we will clarify the process <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> .</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG + Web Browser -SBIE2101 Object name not found -(C0000022)</h3>
+				<div class="date">Posted: <strong>Fri Aug 11, 2017 4:39 pm</strong></div>
+				<div class="author">by <strong>shadek</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic6dc0-26dc0.html?p=129406#p129406" data-post-id="129406" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Jul 27, 2017 10:16 am</div></cite>
+Hello HolmesIV,<br>
+<br>
+If you have AVG installed, the steps above should cover the issue. Be sure to test them in a new Sandbox with default settings (you can also try deleting the contents of your current one, to see if that helps).<br>
+If you are using a different antivirus, please let us know which one, I believe your last post mentioned BitDefender, we have a specific fix for that one:<br>
+<br>
+Free version:<br>
+<a href="viewtopic44be44be.html?f=11&amp;t=21539&amp;start=165#p128854" class="postlink">viewtopic.php?f=11&amp;t=21539&amp;start=165#p128854</a><br>
+If you have the paid version, the workaround is the same, except for:<br>
+WriteFilePath=C:\Program Files\Bitdefender\*   (instead of WriteFilePath=C:\Program Files\Bitdefender Antivirus Free\*) <br>
+<br>
+If you are still experiencing problems, be sure to have fully uninstalled your previous antivirus software (many provide a removal tool, as there might be leftovers), then reboot and test the steps in a new sandbox with default settings.<br>
+<br>
+Please provide this information should the problem persist:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Regards,<br>
+Barb.-<br>
+<br>
+PS: You can mention any software you need to in order for us to troubleshoot your problem. Just make sure to run a search and post in an existing thread when there is one. Otherwise, feel free to start a new one. <br>
+If you have any questions regarding approvals, shoot me a PM and we will clarify the process <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> .
+</div></blockquote>
+
+Hi Barb! This solved compatibility problems perfectly between Sandboxie and Bitdefender Free.<br>
+<br>
+Would this setting mean all sandboxed applications can write to the real Bitdefender Free folder (meaning, write outside sandbox). I assume any sandboxed application writing malicious files to such a folder would still be sandboxed and prevented from doing real damage to the system, unless I tried to actually execute the dropped file outside the sandbox?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG + Web Browser -SBIE2101 Object name not found -(C0000022)</h3>
+				<div class="date">Posted: <strong>Fri Aug 11, 2017 4:56 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello shadek,<br>
+<br>
+Please see below for information regarding how WriteFilePath works (which is what we used for the workaround):<br>
+<a href="../index2441.html?WriteFilePath" class="postlink">https://www.sandboxie.com/index.php?WriteFilePath</a><br>
+<br>
+Also, please have a look at the updated workaround provided by Syrinx:<br>
+<a href="viewtopic57465746.html?f=11&amp;t=21539&amp;start=180#p129509" class="postlink">viewtopic.php?f=11&amp;t=21539&amp;start=180#p129509</a><br>
+<br>
+If you have further questions, please reply on the Antivirus topic listed above so that we can keep it all in one place.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG + Web Browser -SBIE2101 Object name not found -(C0000022)</h3>
+				<div class="date">Posted: <strong>Tue Sep 19, 2017 9:37 pm</strong></div>
+				<div class="author">by <strong>calaard</strong></div>
+				<div class="content">I have had this same problem on my computer for a couple of months now, My Pc is running windows 10 10.0.15063 Build 15063  <br>
+I also have AVG antivirus currently installed <br>
+<br>
+I would like some help on fixing this please, I have tried uninstalling and reinstalling sanboxie multiple time now and still have no solution. <br>
+Thanks- Caleb</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG + Web Browser -SBIE2101 Object name not found -(C0000022)</h3>
+				<div class="date">Posted: <strong>Wed Sep 20, 2017 10:54 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello calaard ,<br>
+<br>
+Did you follow the steps posted above?<br>
+<a href="viewtopicb9dcb9dc.html?p=128578#p128578" class="postlink">viewtopic.php?p=128578#p128578</a><br>
+After following them, you may need to delete the contents of your Sandbox.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG + Web Browser -SBIE2101 Object name not found -(C0000022)</h3>
+				<div class="date">Posted: <strong>Wed Sep 20, 2017 8:42 pm</strong></div>
+				<div class="author">by <strong>calaard</strong></div>
+				<div class="content">Thank you very much! it worked</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG + Web Browser -SBIE2101 Object name not found -(C0000022) [SOLVED]</h3>
+				<div class="date">Posted: <strong>Tue Sep 26, 2017 2:41 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Fixed in Beta 5.21.4<br>
+<a href="viewtopic95959595.html?f=62&amp;t=24741" class="postlink">viewtopic.php?f=62&amp;t=24741</a></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24536&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:50:49 GMT -->
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15205&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:37:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome</h2>
+		<p><a href="viewtopic1bad1bad.html?f=38&amp;t=15205">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15205</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jun 17, 2013 11:31 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Sorry that I didn't check Firefox, I didn't think Firefox would handle that bit differently than Chrome.  I'll make a note to fix that later.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jun 20, 2013 6:16 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I looked into this but I'm sorry to say this isn't fixable.  The way Firefox interacts with the taskbar involves putting data into the Windows Explorer process.  Now since you're running as full Admin, your Windows Explorer is only accessible to administrators.  At the same time, you're using Drop Rights which means the process in the sandbox does not have administrator privileges.  So it can't put data into the Windows Explorer process.<br>
+<br>
+You can prove this to yourself by using Process Explorer, double click to display properties for explorer.exe, view Security tab, click the Permissions button on the bottom (just above Cancel), then add your user account and give it full access.  This way you're making it possible to put data into Windows Explorer for processes that run with your user account but don't have admin privileges.  And then your rights-dropped sandboxed Firefox will be able to un-hide the taskbar (as a result of being allowed to put data into Windows Explorer).<br>
+<br>
+If you're saying this worked in version 3.76 then that's actually not something to strive for, and while the new behavior may be less convenient for you, it is nevertheless the correct behavior.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15205&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:37:49 GMT -->
+</html>

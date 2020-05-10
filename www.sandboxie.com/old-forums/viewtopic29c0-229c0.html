@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25163&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:18:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Problem with Firefox 57 with localhost and other sites</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Problem with Firefox 57 with localhost and other sites</h2>
+		<p><a href="viewtopic0bda0bda.html?f=11&amp;t=25163">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25163</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Problem with Firefox 57 with localhost and other sites</h3>
+				<div class="date">Posted: <strong>Tue Nov 21, 2017 9:23 am</strong></div>
+				<div class="author">by <strong>cocoon</strong></div>
+				<div class="content">I recently installed Firefox 57.<br>
+<br>
+My previous browser was Opera and I therefore added Firefox in the sandbox that I use for web browsing with Opera.<br>
+<br>
+In a nutshell, sandboxed Firefox doesn't open certain pages including <a href="http://mozillazine.org/" class="postlink">http://mozillazine.org</a>. Moreover it doesn't open the web interface of a program that I sometimes use, which should normally be shown in the web browser by entering <a href="http://localhost:6789/" class="postlink">http://localhost:6789</a>.<br>
+<br>
+There must be something wrong with my web browsing sandbox (or specifically settings related to Firefox) because Firefox and the localhost entry actually do work if I run them in a clean Default sandbox. Is there a solution other than having to start a new sandbox from scratch? I would rather not have to duplicate all the settings in my existing sandbox to another one!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Problem with Firefox 57 with localhost and other sites</h3>
+				<div class="date">Posted: <strong>Tue Nov 21, 2017 11:43 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello cocoon,<br>
+<br>
+I am able to access <a href="http://mozillazine.org/" class="postlink">http://mozillazine.org/</a> without any issues. What happens when you try to access it? are there any error messages? What's the exact issue? <br>
+<br>
+Can you please apply these steps, and the re-try? <br>
+<a href="viewtopice9bae9ba.html?p=130456#p130456" class="postlink">viewtopic.php?p=130456#p130456</a><br>
+<br>
+Have you deleted the contents of your Sandbox and re-tried? <br>
+<br>
+If all fails,  please post a copy of your Sandboxie Configuration so that I can have a look:<br>
+Configure--&gt; Edit Configuration<br>
+Copy/paste the contents in your response<br>
+Highlight the contents and use the "&lt;/&gt;" button in the forum to format them.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Problem with Firefox 57 with localhost and other sites</h3>
+				<div class="date">Posted: <strong>Tue Nov 21, 2017 12:35 pm</strong></div>
+				<div class="author">by <strong>cocoon</strong></div>
+				<div class="content">Currently I have two sessions of Firefox open. One is with the problem that I mentioned and the other one is using the new sandbox that I recently created. The problematic session now does open mozzillazine.org (!), but does not open the web page when I enter the localhost entry. The new sandbox Firefox instance works fine with both examples.<br>
+<br>
+The error I see is <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Unable to connect
+
+Firefox can’t establish a connection to the server at localhost:6789.
+
+    The site could be temporarily unavailable or too busy. Try again in a few moments.
+    If you are unable to load any pages, check your computer’s network connection.
+    If your computer or network is protected by a firewall or proxy, make sure that Firefox is permitted to access the Web.
+
+</code></pre></div>
+
+I think that after all I'll just move over to the new sandbox and delete the old one. However, if you consider it useful, here's the configuration information.<br>
+<br>
+<strong>EDIT: All above has to be ignored! The problem appears with the new sandbox as well. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad">  <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> </strong><br>
+<strong>EDIT 2: It's becoming more confusing. I reduced the security.sandbox.content.level to 2 and I deleted the original problematic sandbox. I have one sandbox called Banking. I do not run it normally. Upon starting Firefox I received certain errors: SBIE 1308 about dllhost.exe, followed by SBIE 2222, and SBIE 2314. The problems that I mentioned earlier continue.</strong>  <br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=WindowsRasMan
+Template=HitmanProAlert
+Template=BitDefenderInternetSecurity
+Template=LogitechSetPoint
+Template=WindowsLive
+Template=OfficeLicensing
+KnownConflicts=BitDefender
+FileRootPath=D:\Sandbox\%USER%\%SANDBOX%
+ForceDisableSeconds=600
+WriteFilePath=C:\Program Files\Bitdefender\*
+
+[UserSettings_0CA4021B]
+
+SbieCtrl_UserName=xxxxxxxxxxxx
+SbieCtrl_NextUpdateCheck=1511719837
+SbieCtrl_UpdateCheckNotify=y
+SbieCtrl_ShowWelcome=y
+SbieCtrl_WindowCoords=438,131,747,501
+SbieCtrl_ActiveView=40022
+SbieCtrl_TerminateNotify=y
+SbieCtrl_TerminateWarn=y
+SbieCtrl_ExplorerNotify=y
+SbieCtrl_ExplorerWarn=y
+SbieCtrl_EditConfNotify=y
+SbieCtrl_ReloadConfNotify=y
+SbieCtrl_HideWindowNotify=y
+SbieCtrl_ProcSettingsNotify=y
+SbieCtrl_SettingChangeNotify=y
+SbieCtrl_ShortcutNotify=y
+SbieCtrl_ShouldDeleteNotify=y
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_SaveRecoverTargets=y
+SbieCtrl_EnableLogonStart=y
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=y
+SbieCtrl_AddQuickLaunchIcon=y
+SbieCtrl_AddContextMenu=y
+SbieCtrl_AddSendToMenu=y
+SbieCtrl_AutoApplySettings=y
+SbieCtrl_RecoverTarget=D:\Documents\Temp
+SbieCtrl_RecoverTarget=D:\Documents\My Scans\2017-09 (Sep)
+SbieCtrl_BoxExpandedView=Banking,MPC_BE
+
+[Banking]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=Firefox_Force
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=D:\Documents\Temp
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+AutoDelete=y
+NeverDelete=n
+NotifyStartRunAccessDenied=y
+ProcessGroup=&lt;StartRunAccess&gt;,launcher.exe,opera.exe,opera_crashreporter.exe,opera_autoupdate.exe,firefox.exe,dllhost.exe,pingsender.exe,crashreporter.exe
+ProcessGroup=&lt;InternetAccess&gt;,firefox.exe,pingsender.exe
+DropAdminRights=y
+NotifyInternetAccessDenied=y
+BlockPort=*,443
+ClosedFilePath=!&lt;InternetAccess&gt;,InternetAccessDevices
+ClosedIpcPath=!&lt;StartRunAccess&gt;,*
+
+[MPC_BE]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+AutoDelete=y
+NeverDelete=n
+ForceProcess=mpc-be64.exe
+NotifyInternetAccessDenied=y
+ClosedFilePath=InternetAccessDevices
+DropAdminRights=y
+
+[Keepass]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+AutoDelete=y
+NeverDelete=n
+ForceFolder=D:\Documents\
+NotifyInternetAccessDenied=y
+ClosedFilePath=InternetAccessDevices
+DropAdminRights=y
+
+[xDefaultBox]
+
+ConfigLevel=7
+BlockNetworkFiles=y
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+Template=qWave
+Template=Chrome_Force
+Template=Firefox_Force
+RecoverFolder=%Desktop%
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=D:\Documents\Temp
+RecoverFolder=D:\Documents\Downloads\Software
+BorderColor=#00FFFF,ttl
+Enabled=y
+CopyLimitKb=1160453
+AutoDelete=y
+NeverDelete=n
+AllowSpoolerPrintToFile=y
+AutoRecover=y
+ForceFolder=D:\Documents\Downloads
+
+[UserSettings_174002C0]
+
+SbieCtrl_UserName=costas2
+SbieCtrl_ShowWelcome=n
+SbieCtrl_NextUpdateCheck=1511585480
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_WindowCoords=200,150,1237,703
+SbieCtrl_ActiveView=40021
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+
+[DefaultBox]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+
+[Firefox]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+Template=qWave
+Template=Opera_Force
+Template=Opera_Bookmarks_DirectAccess
+Template=Firefox_Force
+Template=Firefox_Bookmarks_DirectAccess
+Template=Firefox_Cookies_DirectAccess
+Template=Firefox_Passwords_DirectAccess
+RecoverFolder=D:\Documents\Temp
+RecoverFolder=D:\Documents\Downloads
+RecoverFolder=%Desktop%
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+BorderColor=#00FFFF,ttl
+AutoDelete=y
+NeverDelete=n
+CopyLimitKb=299337
+
+[NewFirefox]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=Firefox_Passwords_DirectAccess
+Template=Firefox_Cookies_DirectAccess
+Template=Firefox_Bookmarks_DirectAccess
+Template=Firefox_Force
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=D:\Documents\Temp
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+ForceProcess=mpc-be64.exe
+ForceProcess=launcher.exe
+ForceProcess=opera.exe
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Problem with Firefox 57 with localhost and other sites</h3>
+				<div class="date">Posted: <strong>Tue Nov 21, 2017 2:43 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello cocoon,<br>
+<br>
+Do the sites work outside Sandboxie?<br>
+Do they work inside other Sandboxed browsers?<br>
+Did you delete the contents of your Sandbox prior to launching Firefox? <br>
+Do you have any addons that might be blocking non https sites? (or any addons installed in general?)<br>
+<br>
+Your Banking Sandbox seems to have restrictions, thus you are getting messages until you allow internet access as needed.<br>
+<br>
+Please test in a new Sandbox with default settings, do not copy them from a previous Sandbox. <br>
+Sanbox--&gt; Create new Sandbox<br>
+Copy settings from existing sandbox: none<br>
+<br>
+If all fails, try disabling your antivirus/firewall and see if that makes a difference. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Problem with Firefox 57 with localhost and other sites</h3>
+				<div class="date">Posted: <strong>Tue Nov 21, 2017 2:56 pm</strong></div>
+				<div class="author">by <strong>cocoon</strong></div>
+				<div class="content">Thank you Barb.<br>
+<br>
+To begin with let me apologize for the continuous postings-edits. I was writing things down as they occurred.<br>
+The sites do work outside the sandbox. So does the localhost entry.<br>
+They also work in sandboxed Opera.<br>
+I made sure that I deleted the contents of my Firefox sandbox before launching it.<br>
+I don't have any blocking addons of the sort you describe. I do have other addons including uBlock origin and HTTPS Everywhere. I mention these as they may be of special interest.<br>
+<br>
+What I have done since my last posting is to delete the Banking sandbox and Firefox now <em>seems[/] to be working fine. I suggest that I give it some time to test it as is, before I do anything else. That at least will give you some (needed) quiet from my pestering! If a problem arises again, I'll go through your suggestions.</em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Problem with Firefox 57 with localhost and other sites</h3>
+				<div class="date">Posted: <strong>Tue Nov 21, 2017 3:00 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello cocoon,<br>
+<br>
+I'll wait for your update.  It could have been a combination of settings + corrupted Sandbox (not the usual issue, but it may happen).<br>
+Let's see how it goes.<br>
+<br>
+If the issue comes back, please create a new Firefox profile without extensions and re-test that way (be sure to use a newly created Sandbox).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25163&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:18:14 GMT -->
+</html>

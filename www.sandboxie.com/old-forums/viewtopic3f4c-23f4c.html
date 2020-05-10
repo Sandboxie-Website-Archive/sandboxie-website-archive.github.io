@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=15716&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:44:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.01] The application was unable to start correctly - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.01] The application was unable to start correctly</h2>
+		<p><a href="viewtopic9b699b69.html?f=40&amp;t=15716">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=15716</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 18, 2013 7:48 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thank you for the reminder PeterPan.  In version 4.05.01, Sandboxie warns about compatibility issues with avast and BitDefender and the Known Conflicts page describes the settings in avast and BitDefender that have to be changed to resolve this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 19, 2013 7:37 am</strong></div>
+				<div class="author">by <strong>InTheMood</strong></div>
+				<div class="content">Does that mean that we have to "compromise" system security when upgrading from Sandboxie 3.76 to 4.0x?<br>
+<br>
+Keep in mind that lowering the system security level affects all programs, not just those running in Sandboxie.<br>
+<br>
+For now, I am sticking with 3.76.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 19, 2013 3:31 pm</strong></div>
+				<div class="author">by <strong>Triage</strong></div>
+				<div class="content">Well, i just realized that Avast Antivirus was the culprit on my side too, as reported by Zeff.<br>
+<br>
+Im currently running the latest version of Sandboxie (4.04) and removing Avast resolved the issue. I will try disabling of the behavior shield as recommended.<br>
+<br>
+Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jul 20, 2013 8:03 am</strong></div>
+				<div class="author">by <strong>InTheMood</strong></div>
+				<div class="content">Some more testing/info:<br>
+<br>
+I did the following:<br>
+1) I set Avast! Behavior Shield "ON" for all suspicious behavior including "Monitor the system for unauthorized modifications".  (This is the default setting).<br>
+2) In Avast! Behavior Shield Settings I added Website-Watcher to the "Trusted processes" list.<br>
+<br>
+Now WW works in Sandboxie 4.04.<br>
+<br>
+My Conclusion:<br>
+Avast! thinks that Website-Watcher is trying to make an "unauthorized modification" when initialized by Sandboxie.<br>
+<br>
+Questions:<br>
+1) Is this safe to do?  <br>
+2) Is the "unauthorized modification" going to take place in the real system or in the Sandboxie sandbox?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jul 21, 2013 3:58 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The unauthorized modification is probably the way Sandboxie 4 itself is trying to modify the program in the sandbox to take control over it.<br>
+And not something malicious that program in the sandbox is trying to do.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 24, 2013 8:25 pm</strong></div>
+				<div class="author">by <strong>InTheMood</strong></div>
+				<div class="content">So, what is the status of this problem?<br>
+Is the solution to permanently tweak Avast!? <br>
+Is there going to be a fix in Sandboxie?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 25, 2013 9:12 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I think the incompatibility comes from the avast behavior monitor which doesn't like what Sandboxie is doing, and this is not something that I can fix in Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 25, 2013 8:41 pm</strong></div>
+				<div class="author">by <strong>InTheMood</strong></div>
+				<div class="content">I reported the problem to Avast! support via their Forum.<br>
+<br>
+You can follow this topic at:<br>
+<a href="http://forum.avast.com/index.php?topic=130925.0" class="postlink">http://forum.avast.com/index.php?topic=130925.0</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 26, 2013 3:17 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 02, 2013 9:05 pm</strong></div>
+				<div class="author">by <strong>InTheMood</strong></div>
+				<div class="content">I received an email response from Avast! support.  <br>
+<br>
+Their response:  "Thank you for your report. Only solution is to add the application to "Trusted processes" list in Avast! Behavior Shield Settings as you mentioned. We will pass this report to our QA team. We are sorry for your inconvenience."<br>
+<br>
+So, it looks like this problem will take a long time to fix, if ever.<br>
+<br>
+Meanwhile, I found another application that has the same problem.  It is AceMoney Lite from <a href="http://www.mechcad.net/" class="postlink">http://www.mechcad.net/</a>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>the application was unable to start correctly (0xc0000142)</h3>
+				<div class="date">Posted: <strong>Tue Sep 17, 2013 4:06 am</strong></div>
+				<div class="author">by <strong>blugene05@gmail.com</strong></div>
+				<div class="content">I was already upgrade my laptop to windows 8.1 preview 64-bit:<br>
+<br>
+The Application was unable to start correctly (0xc0000142) <br>
+<br>
+I have this only one error when was start my cad application autodesk inventor pro 2014,<br>
+already successfully during installation the software.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=15716&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:44:41 GMT -->
+</html>

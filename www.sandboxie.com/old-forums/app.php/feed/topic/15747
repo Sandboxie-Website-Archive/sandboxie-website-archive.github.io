@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15747" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-07-18T07:46:26-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15747</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-18T07:46:26-04:00</updated>
+
+		<published>2013-07-18T07:46:26-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=92008#p92008</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=92008#p92008"/>
+		<title type="html"><![CDATA[[.01] Thunderbird identification does not work with sandoxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=92008#p92008"><![CDATA[
+It seems that avast is starting a helper process to do the certificate check, and the process is running outside the sandbox in the ANONYMOUS LOGON account because that is the account that programs in the sandbox use in version 4.  Unfortunately avast does not detect the failue in the helper process and Thunderbird remains stuck.<br><br>Version 4.05.01 unfortunately does not fix the problem, but points you to the Known Conflicts page.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Jul 18, 2013 7:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuNiNi]]></name></author>
+		<updated>2013-06-28T08:23:56-04:00</updated>
+
+		<published>2013-06-28T08:23:56-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91263#p91263</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91263#p91263"/>
+		<title type="html"><![CDATA[[.01] Thunderbird identification does not work with sandoxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91263#p91263"><![CDATA[
+Hello tzuk <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>thank you very much for your concern and your answer. - And yes, I also use Avast. To turn of Avast’s mail shield is a solution with which I can live.<br><br>I’m sure you'll solve this little problem until the next update of Sandboxie is released. Or perhaps it even vanishes, when Avast releases a new update <br> <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> <br><br>greetings SuNiNi<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16395">SuNiNi</a> — Fri Jun 28, 2013 8:23 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-06-27T10:03:59-04:00</updated>
+
+		<published>2013-06-27T10:03:59-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91207#p91207</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91207#p91207"/>
+		<title type="html"><![CDATA[[.01] Thunderbird identification does not work with sandoxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91207#p91207"><![CDATA[
+This problem has to do with avast as Grail Wuwetl suggested earlier.  With avast installed I got the same problem with the password window not showing.  Unfortunately I don't see anything I can do about it:  Same problem even if I block avast DLLs from going into Thunderbird, and run with very permissive settings in Sandboxie.  Only thing that fixes the problem is to turn off the Mail Shield feature in avast.  I'm sorry that I can't offer a better solution.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Jun 27, 2013 10:03 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-06-27T08:49:25-04:00</updated>
+
+		<published>2013-06-27T08:49:25-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91203#p91203</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91203#p91203"/>
+		<title type="html"><![CDATA[[.01] Thunderbird identification does not work with sandoxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91203#p91203"><![CDATA[
+Hi,<br><br>I have the same problem with the latest Sandboxie and the latest Thunderbird.  I have both IMAP and POP accounts configured.  I rarely use the POP accounts, so I don't know if they're working or not.  I definitely know that my IMAP is not working.  My passwords were previously saved in Thunderbird (for quite some time) before upgrading to the latest Sandboxie.  I don't have any add-ons installed in Thunderbird or use any 3rd party password management.  Starting Thunderbird outside of Sandboxie, however, works fine.  I'm at work now and don't have all of the specific versions, but here's what I have installed at home:<br><br>Windows 7 x64 Professional<br>Sandboxie (4.02)<br>Thunderbird (17.0.7)<br>Avast! Free (latest)<br>MBAM Pro (latest)<br><br>Thanks,<br>Chuck<p>Statistics: Posted by Guest — Thu Jun 27, 2013 8:49 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-06-27T03:32:35-04:00</updated>
+
+		<published>2013-06-27T03:32:35-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91190#p91190</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91190#p91190"/>
+		<title type="html"><![CDATA[[.01] Thunderbird identification does not work with sandoxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91190#p91190"><![CDATA[
+I am sorry but I was not able to reproduce the problem on 64-bit Windows 7.<br><br>Installed Thunderbird (17.0.7), set up a POP3 account.<br>When I start Thunderbird in the sandbox, it pops a dialog box to ask for my password.<br><br>Do you have any addons/utilities that are related to password entry, that could play a part here?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Jun 27, 2013 3:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-06-26T21:36:04-04:00</updated>
+
+		<published>2013-06-26T21:36:04-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91170#p91170</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91170#p91170"/>
+		<title type="html"><![CDATA[Maybe a trouble with Avast (and not with Thunderbird) ?]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=91170#p91170"><![CDATA[
+HI, I have the same trouble.<br><br>Thunderbird remember my password, so i have no popup window for authentication.<br><br>When I try receive messages with Thunderbird sandboxed, nothing happens.<br><br>If I run Thunderbird unsandboxed, messages are received normally.<br><br>This happens since the installation of Sandboxie 4.02.<br><br>My antivirus is Avast Free 8.0.1489. Maybe a trouble with Avast ? In this post <a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=14839" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=14839</a> same issue is described.<br><br><br>Thunderbird 17.0.7<br>Sandoboxie 4.02<br>Windows 7 x86 SP1<br>Avast Free Antivirus 8.0.1489<br>Comodo Firewall 5.12.256249.2599<p>Statistics: Posted by Guest — Wed Jun 26, 2013 9:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-06-22T13:11:20-04:00</updated>
+
+		<published>2013-06-22T13:11:20-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90975#p90975</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90975#p90975"/>
+		<title type="html"><![CDATA[[.01] Thunderbird identification does not work with sandoxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90975#p90975"><![CDATA[
+Thanks for the problem report.  I will look into it.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sat Jun 22, 2013 1:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-06-21T09:05:42-04:00</updated>
+
+		<published>2013-06-21T09:05:42-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90924#p90924</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90924#p90924"/>
+		<title type="html"><![CDATA[[.01] Thunderbird identification does not work with sandoxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90924#p90924"><![CDATA[
+Sorry for the double posting, but I don't know who to edit the one before.<br><br>My son just told me, that his PC, win 8  home (fully updated, Thunderbird 17.0.6), just shows the same problem with sandboxie 4.02  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><p>Statistics: Posted by Guest — Fri Jun 21, 2013 9:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-06-20T12:53:46-04:00</updated>
+
+		<published>2013-06-20T12:53:46-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90881#p90881</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90881#p90881"/>
+		<title type="html"><![CDATA[[.01] Thunderbird identification does not work with sandoxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90881#p90881"><![CDATA[
+Hallo Kai  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br><br>vielleicht ist es ja ein Problem der deutschsprachigen Variante <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br><br>Hello all <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>is it possible that the experimental mode in which version 3.76 ran causes this problem when sandboxie is updated to 4.02 without changing settings?<br><br>and I forgot: my e-mail-client is Thunderbird 17.0.6<br><br>Greetings SuNiNi<p>Statistics: Posted by Guest — Thu Jun 20, 2013 12:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-06-20T12:55:42-04:00 </updated>
+
+		<published>2013-06-20T12:51:30-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90880#p90880</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90880#p90880"/>
+		<title type="html"><![CDATA[[.01] Thunderbird identification does not work with sandoxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90880#p90880"><![CDATA[
+I guess that this does not affect XP.<br>I deleted one of my email passwords, then used a newly created sandbox in which only the Thunderbird template was applied.<br><br>When I tried to check email messages for that account the "Enter your password" box opened, and the "Use Password Manager ..." box was unchecked.<br>After entering my password, the email server was checked for new emails.<br><br>Until a possible fix is found, if you are the only user you may want to run Thunderbird unsandboxed long enough to save your passwords to Password Manager.<br>You can always go back and delete them at:<br>Tools &gt; Options &gt; Security tab &gt; Saved Passwords<br><br>If you're not the only user, then maybe you won't want to do that.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Thu Jun 20, 2013 12:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Securebrowser12]]></name></author>
+		<updated>2013-06-20T11:04:27-04:00</updated>
+
+		<published>2013-06-20T11:04:27-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90874#p90874</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90874#p90874"/>
+		<title type="html"><![CDATA[Re: Thunderbird identification does not work with sandoxie 4]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90874#p90874"><![CDATA[
+<blockquote><div><cite>SuNiNi wrote:</cite>Hello,<br><br>today I updated my sandboxie 3.76 to 4.02 (without changing settings). After that sandboxed Thunderbird started without showing the identification pop-up anymore. </div></blockquote>hello sunini, <br><br><br>unfortunately I've got the same problem!   I don't understand the problem as well! <br><br>If you find a solution, please write it here into the forum. I was'nt able to find the cause by google. <br><br>Greetings, <br><br>Kai<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16376">Securebrowser12</a> — Thu Jun 20, 2013 11:04 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-06-19T07:24:31-04:00</updated>
+
+		<published>2013-06-19T07:24:31-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90802#p90802</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90802#p90802"/>
+		<title type="html"><![CDATA[[.01] Thunderbird identification does not work with sandoxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90802#p90802"><![CDATA[
+I have Thunderbird remember my passwords for downloading emails, so maybe that's why I don't see that problem.<br>Also, I use XP so that might be another reason why I don't see that problem.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Wed Jun 19, 2013 7:24 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-06-19T02:41:06-04:00</updated>
+
+		<published>2013-06-19T02:41:06-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90798#p90798</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90798#p90798"/>
+		<title type="html"><![CDATA[[.01] Thunderbird identification does not work with sandoxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90798#p90798"><![CDATA[
+Hello Paul ,<br><br>thank your for your reply and sorry for my poor English!<br><br>What I mean is: Thunderbird starts without problems in sandboxie, but I cannot receive mails because the authentication window to submit my password does not occur when sandboxed with sandboxie 4.02.  So I reinstalled sandboxie 3.76 and erverything was fine again.<br><br>My system is win 7 home premium, 64 bit, service pack 1 and completly updated<br><br>Thank you again for your concern <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>greets SuNiNi<p>Statistics: Posted by Guest — Wed Jun 19, 2013 2:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-06-18T14:21:23-04:00</updated>
+
+		<published>2013-06-18T14:21:23-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90779#p90779</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90779#p90779"/>
+		<title type="html"><![CDATA[[.01] Thunderbird identification does not work with sandoxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90779#p90779"><![CDATA[
+I'm not sure what you are referring to as an identification pop-up.<br>Can you describe it further?<br><br>Whatever it is I probably have it turned off, since I don't like pop-ups of any kind.<br>Plus, I use XP and haven't had any problems with the v4 series.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Tue Jun 18, 2013 2:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-06-18T10:43:27-04:00</updated>
+
+		<published>2013-06-18T10:43:27-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90767#p90767</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90767#p90767"/>
+		<title type="html"><![CDATA[[.01] Thunderbird identification does not work with sandoxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15747&amp;p=90767#p90767"><![CDATA[
+Hello,<br><br>today I updated my sandboxie 3.76 to 4.02 (without changing settings). After that sandboxed Thunderbird started without showing the identification pop-up anymore. <br><br>After reinstalling sandboxie 3.76 it all worked fine again. Do you have any clou what went wrong?<br><br>My system: win 7 64 bit service pack 1<br><br>Thank you for every information<br><br><br>greets SuNiNi<p>Statistics: Posted by Guest — Tue Jun 18, 2013 10:43 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

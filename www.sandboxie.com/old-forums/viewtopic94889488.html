@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25270&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Firefox 57 - I cannot print</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Firefox 57 - I cannot print</h2>
+		<p><a href="viewtopica24da24d.html?f=17&amp;t=25270">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25270</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Firefox 57 - I cannot print</h3>
+				<div class="date">Posted: <strong>Sun Dec 31, 2017 3:03 am</strong></div>
+				<div class="author">by <strong>cocoon</strong></div>
+				<div class="content">I looked for a solution to print outside the sandbox with sandboxed Firefox, but the solution that I saw in the forum which involves adding an entry in the sandboxie.ini file and in Firefox settings did not help.<br>
+<br>
+Every time I try to print something in Firefox I see a message box <blockquote class="uncited"><div>SBIE1319 Blocked spooler print to file, [11836] firefox.exe, \Device\HarddiskVolume2\Windows\Temp\HPVB3DE.tmp.vdf<br>
+SBIE1320 To allow print spooler to write outside the sandbox for this process, please double-click on this message line
+</div></blockquote>
+Unfortunately, double-clicking on the line does not solve the problem.<br>
+<br>
+I take this opportunity to wish all Sandboxie users, developers and supporters a Happy New Year!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 57 - I cannot print</h3>
+				<div class="date">Posted: <strong>Sun Dec 31, 2017 6:42 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">Please add the following line to the sandboxie.ini:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=firefox.exe,%SystemDrive%\Windows\Temp\*.vdf</code></pre></div>
+
+Happy New Year!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 57 - I cannot print</h3>
+				<div class="date">Posted: <strong>Sun Dec 31, 2017 1:03 pm</strong></div>
+				<div class="author">by <strong>cocoon</strong></div>
+				<div class="content">Thank you for the suggestion. I tried it but it still doesn't work. I have to delete print files from the spool as none are printed. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 57 - I cannot print</h3>
+				<div class="date">Posted: <strong>Mon Jan 01, 2018 5:44 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">See if adding this to the configuration for your sandbox will allow printing:<br>
+<br>
+AllowSpoolerPrintToFile=y</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 57 - I cannot print</h3>
+				<div class="date">Posted: <strong>Mon Jan 01, 2018 6:17 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistc2f5.html?mode=viewprofile&amp;u=34038">cocoon</a> wrote: <a href="viewtopic59d459d4.html?p=131628#p131628" data-post-id="131628" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sun Dec 31, 2017 1:03 pm</div></cite>
+Thank you for the suggestion. I tried it but it still doesn't work. I have to delete print files from the spool as none are printed. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad">
+</div></blockquote>
+
+Strange! Did you stop all sandboxes and reload the configuration before printing? Or did you get another message box?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 57 - I cannot print</h3>
+				<div class="date">Posted: <strong>Mon Jan 01, 2018 11:38 am</strong></div>
+				<div class="author">by <strong>cocoon</strong></div>
+				<div class="content">No luck with printing. I added the AllowSpoolerPrintToFile=y to my sandbox, but without any success.<br>
+I stopped all sandboxes and reloaded the configuration before printing. I got the message box again.<br>
+The files to be printed end up in the print spooler, and I have to clear them by running a batch file as Administrator (net stop spooler<br>
+del %systemroot%\System32\spool\printers\* /Q /F /S<br>
+net start spooler), otherwise I cannot print any other files.<br>
+<br>
+EDIT: I found the following.<br>
+By disabling the preview of jobs to be printed, I can print from Firefox even though the message box comes up.<br>
+I suspect that the preview feature must be a separate program running for my printer (HP model). I'll try and find out what it is and add it to the Sandboxie as an allowed program.<br>
+<br>
+By the way, what is the effect on security by changing the setting in Firefox (security.sandbox.content.level) from 3 to 2?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 57 - I cannot print</h3>
+				<div class="date">Posted: <strong>Tue Jan 02, 2018 4:59 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistc2f5.html?mode=viewprofile&amp;u=34038">cocoon</a> wrote: <a href="viewtopic03230323.html?p=131633#p131633" data-post-id="131633" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jan 01, 2018 11:38 am</div></cite>
+...I stopped all sandboxes and reloaded the configuration before printing. I got the message box again...</div></blockquote>
+
+Was it exactly the same text in the message box? Or another path in the SBIE1319 line? Sometimes you have to open more than one path.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 57 - I cannot print</h3>
+				<div class="date">Posted: <strong>Tue Jan 02, 2018 9:50 am</strong></div>
+				<div class="author">by <strong>cocoon</strong></div>
+				<div class="content">The message is <blockquote class="uncited"><div>SBIE1319 Blocked spooler print to file, [4604] firefox.exe, \Device\HarddiskVolume2\Windows\Temp\HPVC68D.tmp.vdf<br>
+SBIE1320 To allow print spooler to write outside the sandbox for this process, please double-click on this message line </div></blockquote>
+Based on this which path should I open?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 57 - I cannot print</h3>
+				<div class="date">Posted: <strong>Tue Jan 02, 2018 11:26 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">It's the same path as in my first reply: <a href="viewtopic2f042f04.html?p=131638#p131625" class="postlink">viewtopic.php?p=131638#p131625</a>.<br>
+<br>
+Did you add the line under the correct section of sandboxie.ini (= below the name of the Sandbox using for Firefox)?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 57 - I cannot print</h3>
+				<div class="date">Posted: <strong>Tue Jan 02, 2018 11:40 am</strong></div>
+				<div class="author">by <strong>cocoon</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist0a71.html?mode=viewprofile&amp;u=24269">APMichael</a> wrote: <a href="viewtopic6c60-26c60.html?p=131640#p131640" data-post-id="131640" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Jan 02, 2018 11:26 am</div></cite>
+It's the same path as in my first reply: <a href="viewtopic2f042f04.html?p=131638#p131625" class="postlink">viewtopic.php?p=131638#p131625</a>.<br>
+Did you add the line under the correct section of sandboxie.ini (= below the name of the Sandbox using for Firefox)?
+</div></blockquote>
+I checked the location in sandboxie.ini and the entry is in the sandbox that I use to run Firefox.<br>
+What may be odd is that the printing proceeds without me doing anything even though the dialog asks me to double click on the specific line in order to allow printing.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 57 - I cannot print</h3>
+				<div class="date">Posted: <strong>Wed Jan 03, 2018 4:26 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">Strange! Sorry, I don't know why your Sandboxie installation neither accepts the OpenFilePath nor the AllowSpoolerPrintToFile. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox 57 - I cannot print</h3>
+				<div class="date">Posted: <strong>Wed Jan 03, 2018 8:49 am</strong></div>
+				<div class="author">by <strong>cocoon</strong></div>
+				<div class="content">Thank you for your assistance anyway. I'll try it again when I have time with a new sandbox or even a new Firefox profile.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25270&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:56 GMT -->
+</html>

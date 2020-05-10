@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1027&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; PC Pitstop Optimize Software Hangs</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>PC Pitstop Optimize Software Hangs</h2>
+		<p><a href="viewtopic07e607e6.html?f=11&amp;t=1027">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=1027</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>PC Pitstop Optimize Software Hangs</h3>
+				<div class="date">Posted: <strong>Thu Feb 01, 2007 3:43 pm</strong></div>
+				<div class="author">by <strong>Johnincal</strong></div>
+				<div class="content">When running PC Pitstop's Optimize software in the sandbox, it hangs using 100% CPU when scanning "Registry For Invalid CLSID's".<br>
+<br>
+This is just the trial version that can't change anything. From what I understand, it simply scans and reads the reg.<br>
+<br>
+Shouldn't it work in Sandboxie?<br>
+<br>
+Here is the link to the software:<br>
+<br>
+<a href="http://www.pcpitstop.com/store/optimize.asp" class="postlink">http://www.pcpitstop.com/store/optimize.asp</a><br>
+<br>
+(By the way, it works outside of the sandbox.)<br>
+<br>
+Also, this may also be the same issue and possibly the same answer. When I scan using Secunia Software Inspector ( <a href="http://secunia.com/software_inspector/" class="postlink">http://secunia.com/software_inspector/</a> ) it shows an error when trying to determine if I have all the latest Windows Updates and then also hangs.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 02, 2007 7:03 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Technically it doesn't hang.  It just runs very, very slowly.<br>
+<br>
+At least part of the problem is that the keys, as they are scanned, are opened for write access.  This causes Sandboxie to create a separate sandboxed key for each instance.  Since there are thousands of keys in the CLSID area of the registry, this takes a looooooong time.<br>
+<br>
+I was able to speed it up (manually) by going into the sandboxed registry with RegEdit, and deleting the sandboxed keys created as a side-effect of the scan.<br>
+<br>
+When there are no sandboxed keys, Sandboxie has a lot less "merging" to do, so this considerably speeds up the process.  But like I said, this is a manual "fix".<br>
+<br>
+But after doing this during the scan of CLSIDs, the program goes on to scan ProgIDs, TypeLibs, and Interfaces (all below HKEY_CLASSES_ROOT).  Finally it goes on to scan the entire registry ... <br>
+<br>
+But eventually I got to "Scan Complete"  <img class="smilies" src="images/smilies/icon_exclaim.gif" width="15" height="15" alt=":!:" title="Exclamation"> <br>
+<br>
+* * *<br>
+<br>
+So, I can say there's no bug here, this is just how Sandboxie works:  if a program declares it wants write access to a key, then the key is duplicated . . .  It's too bad that a program that just scans stuff, opens everything for write access.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1027&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:41 GMT -->
+</html>

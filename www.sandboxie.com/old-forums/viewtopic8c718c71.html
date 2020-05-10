@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24359&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:19:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Trying to run Otohits</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Trying to run Otohits</h2>
+		<p><a href="viewtopice37ae37a.html?f=17&amp;t=24359">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24359</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Trying to run Otohits</h3>
+				<div class="date">Posted: <strong>Thu Apr 27, 2017 4:15 pm</strong></div>
+				<div class="author">by <strong>antfuentes87</strong></div>
+				<div class="content">Wanted to try out this Traffic Exchange program (<a href="https://www.otohits.net/" class="postlink">https://www.otohits.net</a> using their VPS app, not the browser surf). <br>
+<br>
+Keep getting these errors:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1
+SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1
+SBIE2101 Object name not found: , error AlpcConnectPort (C0000022) access=001F0001 initialized=1
+SBIE2314 Canceling process Otohits.Viewer.exe [10836 / 7]
+</code></pre></div>
+
+Guessing Sandboxie is blocking ports and not allowing the Otohits.Viewer.exe to run correctly? You start the program by using the Otohits.App.exe but it uses the Otohits.Viewer.exe as well. If anyone has any ideas, let me know. Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Trying to run Otohits</h3>
+				<div class="date">Posted: <strong>Thu Apr 27, 2017 5:46 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello antfuentes87,<br>
+<br>
+What are your OS, Antivirus and Sandboxie versions? <br>
+Is the program installed inside Sbie or on your host?  <br>
+<br>
+I installed it inside Sbie 5.18 + Win 10x64 CU,and it seems to be doing something "Navigating" and visiting links. No errors so far. <br>
+Please provide more info so that I can test the behavior. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Trying to run Otohits</h3>
+				<div class="date">Posted: <strong>Thu Apr 27, 2017 5:53 pm</strong></div>
+				<div class="author">by <strong>antfuentes87</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>Hello antfuentes87,<br>
+<br>
+What are your OS, Antivirus and Sandboxie versions? <br>
+Is the program installed inside Sbie or on your host?  <br>
+<br>
+I installed it inside Sbie 5.18 + Win 10x64 CU,and it seems to be doing something "Navigating" and visiting links. No errors so far. <br>
+Please provide more info so that I can test the behavior. <br>
+<br>
+Regards,<br>
+Barb.-</div></blockquote>
+
+I have Windows 10 64bit and running 5.18 of Sandboxie.<br>
+<br>
+When you say inside of Sbie, you right click on the installer and select run with Sandboxie?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Trying to run Otohits</h3>
+				<div class="date">Posted: <strong>Fri Apr 28, 2017 9:37 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi antfuentes87,<br>
+
+<blockquote class="uncited"><div>When you say inside of Sbie, you right click on the installer and select run with Sandboxie?</div></blockquote>
+
+Yes, that's what I did.  If you can provide more information regarding how to reproduce the problem, I will continue testing.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Trying to run Otohits</h3>
+				<div class="date">Posted: <strong>Fri Apr 28, 2017 11:13 am</strong></div>
+				<div class="author">by <strong>antfuentes87</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>Hi antfuentes87,<br>
+
+<blockquote class="uncited"><div>When you say inside of Sbie, you right click on the installer and select run with Sandboxie?</div></blockquote>
+
+Yes, that's what I did.  If you can provide more information regarding how to reproduce the problem, I will continue testing.<br>
+<br>
+Regards,<br>
+Barb.-</div></blockquote>
+I  just did not understand what you meant by installing through Sandboxie but I figured it out! Thank you! Now just need to figure out how to get proxies to work. I am guessing Sandboxie does not have built-in proxy support? I did not see anything.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24359&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:19:12 GMT -->
+</html>

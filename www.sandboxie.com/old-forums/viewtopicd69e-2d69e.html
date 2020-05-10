@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=22319&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:51:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Program Compatibility Templates [non-security programs] - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Program Compatibility Templates [non-security programs]</h2>
+		<p><a href="viewtopic063e063e.html?f=22&amp;t=22319">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=22319</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Re: Program Compatibility Templates [non-security programs]</h3>
+				<div class="date">Posted: <strong>Thu Sep 14, 2017 12:45 pm</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">Updated settings for Firefox add-on <strong>uBlock Origin</strong>: 
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=firefox.exe,%AppData%\Mozilla\Firefox\Profiles\*\browser-extension-data\uBlock0@raymondhill.net\storage.js
+OpenFilePath=firefox.exe,%AppData%\Mozilla\Firefox\Profiles\*\storage\default\moz-extension+++*\idb\1671402671ueBglaorcokt0SCeahc.*
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>firefox quantum cookies direct access template fix</h3>
+				<div class="date">Posted: <strong>Sun Dec 03, 2017 4:19 pm</strong></div>
+				<div class="author">by <strong>Bertus</strong></div>
+				<div class="content">I always run firefox in a sandbox.For some sites I want to preserve the cookie.<br>
+In order to do this I enable the "Allow direct access to firefox cookies" setting but this doesn't seem to work with the new Firefox quantum.<br>
+To make it work I also have to create an OpenFilePath to the webappsstore.sqlite in the firefox profile folder.<br>
+My new "Allow direct access to firefox cookies" template:<br>
+<br>
+[Template_Local_Firefox_Cookies_DirectAccess]<br>
+OpenFilePath=firefox.exe,%Tmpl.Firefox%\cookies*<br>
+OpenFilePath=firefox.exe,%Tmpl.Firefox%\webappsstore*<br>
+Tmpl.Title=Template_Local_Firefox_Cookies_DirectAccess<br>
+Tmpl.Class=Local</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Program Compatibility Templates [non-security programs]</h3>
+				<div class="date">Posted: <strong>Tue Jan 23, 2018 12:51 pm</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">Updated template for Firefox 58.0: 
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[Template_Firefox_Phishing_DirectAccess]
+Tmpl.Title=#4337,Firefox/Waterfox/Pale Moon
+Tmpl.Class=WebBrowser
+ProcessGroup=&lt;FirefoxPrograms&gt;,firefox.exe,waterfox.exe,palemoon.exe
+OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\blocklist*
+OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\cert*.db
+OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\safebrowsing*
+</code></pre></div></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=22319&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:51:56 GMT -->
+</html>

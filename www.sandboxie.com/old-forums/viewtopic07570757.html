@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24734&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:53:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Allowing BITS service tobe avaliable for a sandbox while dropping Admin rights otherwise</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Allowing BITS service tobe avaliable for a sandbox while dropping Admin rights otherwise</h2>
+		<p><a href="viewtopic0fb30fb3.html?f=17&amp;t=24734">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24734</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Allowing BITS service tobe avaliable for a sandbox while dropping Admin rights otherwise</h3>
+				<div class="date">Posted: <strong>Tue Aug 08, 2017 10:26 pm</strong></div>
+				<div class="author">by <strong>claws_lon</strong></div>
+				<div class="content">I'm trying to configure a secured version of Chromium, which still can use the Background Intelligent Transfer Service (BITS) for downloading. The messages I got seems to indicate that starting the service in not allowed due to dropped rights. This part makes sense and is coherent with the protection I expect. <br>
+<br>
+On the other hand, granting full admin rights in the sandbox just to run 1 service (which seems to be the suggestion brought up in several posts here) also conflicts with the level of protection I'd like to achieve. The ideal solution would be a sandbox configuration, for which the service is already available. Programs running in the sandbox could then use the service, but at the same time the isolation level does not allow them access to any other administrative functions, services etc. <br>
+<br>
+So far I tried starting Sandboxiebits inside the sandbox - it doesn't achieve much, because the program shortly runs and stops later. Starting it externally causes an association issue SBIE2303. Starting the normal BITS service (which is set to manual) also doesn't seem to help either.<br>
+<br>
+Is anyone aware of a way to properly associate a service with a sandbox, while keeping the extra protection of dropped admin rights for other programs running inside the same sandbox?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allowing BITS service tobe avaliable for a sandbox while dropping Admin rights otherwise</h3>
+				<div class="date">Posted: <strong>Wed Aug 09, 2017 11:29 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello claws_Ion,<br>
+<br>
+What is the exact error that you are receiving? <br>
+What are your OS, Sandboxie and Antivirus versions? <br>
+<br>
+Is this the message that you are receiving? <br>
+<a href="../index5dd3.html?SBIE2214" class="postlink">https://www.sandboxie.com/index.php?SBIE2214</a><br>
+<br>
+Please have a look at this entry for more info regarding Drop Rights:<br>
+<a href="../index7ac3-2.html?RestrictionsSettings" class="postlink">https://www.sandboxie.com/?RestrictionsSettings</a><br>
+<br>
+Perhaps you can use restrictions to disable other programs from running in your Sandbox:<br>
+<a href="../index7ac3-2.html?RestrictionsSettings" class="postlink">https://www.sandboxie.com/?RestrictionsSettings</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allowing BITS service tobe avaliable for a sandbox while dropping Admin rights otherwise</h3>
+				<div class="date">Posted: <strong>Wed Aug 09, 2017 9:26 pm</strong></div>
+				<div class="author">by <strong>claws_lon</strong></div>
+				<div class="content">Hi Barb,<br>
+I'm receiving the following (as you already guessed):<br>
+SBIE2214 Request to start service 'bits' was denied due to dropped rights<br>
+SBIE2219 Request was issued by program SandboxieDcomLaunch.exe [Iron]<br>
+SBIE2220 To permit use of Administrator privileges, please double-click on this message line<br>
+<br>
+Software Setup:<br>
+Microsoft Windows [Version 10.0.15063] (W10 64 bit CU)<br>
+Sandboxie 5.20 (64 bit)<br>
+Chromium Version 61.0.3147.0 (Developer Build) (64-bit)<br>
+Bitdefender TS 2017<br>
+<br>
+As mentioned, I'd ideally apply the dropped rights to all programs running in the sandbox - including Chromium itself (similar to running as a limited user, just without enforcing this kind of a profile switch). Therefore, the granting full permissions as the SBIE2214 related posts here suggest doesn't solve this part. <br>
+<br>
+The goal would be similar to using setuid / setgid under Linux for BITS (which allows a particular file to be executed with the owner's permission) and this way grants admin permissions to SandboxieBITS.exe, but at the same time ensures no other programs can run with administrative privileges.<br>
+<br>
+The run restrictions - e.g. only allowing Chromium to run (but with full admin rights) is not a good choice to my mind. There were cases where a script in the browser used a buffer overflow in Chromium (or one of it's plugins / extensions in case of other users as I don't run any in my setup)  to do something malicious with browser itself. Then the attacker does not need to run any other program and enjoys full admin access at this time already, because I granted it to Chromium just to start the BITS service.<br>
+<br>
+This is exactly the scenario I'd like to protect against by limiting permissions.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allowing BITS service tobe avaliable for a sandbox while dropping Admin rights otherwise</h3>
+				<div class="date">Posted: <strong>Thu Aug 10, 2017 4:36 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Hi claws_Ion, I dont use Chrome but I know that in some computers to avoid getting the BITS messages when running Chrome sandboxed you have to disable Drop rights. There is no way getting around that. This works like that due to how Chrome works. Read here about SandboxieBITS.exe and Chrome.<br>
+<a href="../indexd4aa.html?ServicePrograms#bits" class="postlink">https://www.sandboxie.com/index.php?Ser ... grams#bits</a><br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allowing BITS service tobe avaliable for a sandbox while dropping Admin rights otherwise</h3>
+				<div class="date">Posted: <strong>Sat Aug 12, 2017 1:48 pm</strong></div>
+				<div class="author">by <strong>claws_lon</strong></div>
+				<div class="content">Hi Bo,<br>
+Thank you for posting the link. It was one of those I've already read before asking the question. If there is indeed no way of achieving the ability of running a specific service inside the sandbox while restricting the rights to all other programs within it than this might be a useful feature for the future. <br>
+<br>
+It would be nice if Barb could also confirm this. <br>
+<br>
+In the meantime, I'll then have to come up with a different approach to achieve something similar. I'll probably use PSexec by MS(part of the sysinternals suite) then to drop the rights for the browser, potentially by just running it as a different limited user inside the sandbox.<br>
+<br>
+Thanks for your help</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allowing BITS service tobe avaliable for a sandbox while dropping Admin rights otherwise</h3>
+				<div class="date">Posted: <strong>Mon Aug 14, 2017 1:18 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello claws_lon,<br>
+<br>
+You will need to either enable drop rights, or use restrictions so that only Chrome can run inside that Sandbox.<br>
+You may also try to "hide" the message instead of closing it, and see if you are still able to use Chrome (just hit "Hide" when the message appears). If that doesn't work, you can un-hide it by going to Configure--&gt; Forget hidden messages.<br>
+<br>
+You could also install Chrome directly inside Sandboxie, which might help you achieve your goal:<br>
+<a href="viewtopice041e041.html?f=11&amp;t=21974&amp;start=60#p128829" class="postlink">viewtopic.php?f=11&amp;t=21974&amp;start=60#p128829</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allowing BITS service tobe avaliable for a sandbox while dropping Admin rights otherwise</h3>
+				<div class="date">Posted: <strong>Mon Aug 14, 2017 8:05 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopice3b5e3b5.html?p=129664#p129664" data-post-id="129664" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Aug 14, 2017 1:18 pm</div></cite>
+You may also try to "hide" the message instead of closing it, and see if you are still able to use Chrome (just hit "Hide" when the message appears). </div></blockquote>
+Hi Barb, remember, I don't use Chrome, but as I understand it the BITS message for some reason is one message that can not be hidden. The user clicks Hide, and it ll comes back next time they run Chrome. I seen a few users report that. Perhaps it can be hidden in some systems but not all.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24734&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:53:24 GMT -->
+</html>

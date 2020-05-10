@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=479&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:15:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Secure deletion</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Secure deletion</h2>
+		<p><a href="viewtopicb797b797.html?f=4&amp;t=479">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=479</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Secure deletion</h3>
+				<div class="date">Posted: <strong>Sat Aug 19, 2006 11:18 pm</strong></div>
+				<div class="author">by <strong>Oneder</strong></div>
+				<div class="content">Hi Tzuk,<br>
+<br>
+Wonder if you may be able to use a little known XP inbuilt function into Sandboxie to implement a secure file deletion that some posters have asked about.<br>
+<br>
+Quote:<br>
+<br>
+How to Use the Cipher Security Tool to Overwrite Deleted Data<br>
+To overwrite deleted data on a volume by using Cipher.exe, use the /w switch with the cipher command. Use the following steps:<br>
+1.	Quit all programs.<br>
+2.	Click Start, click Run, type cmd, and then press ENTER.<br>
+3.	Type cipher /w:driveletter:\foldername, and then press ENTER. Specify the drive and the folder that identifies the volume that contains the deleted data that you want to overwrite. Data that is not allocated to files or folders will be overwritten. This permanently removes the data. This can take a long time if you are overwriting a large space.<br>
+<br>
+<a href="http://support.microsoft.com/default.aspx?scid=kb;en-us;315672&amp;sd=tech" class="postlink">http://support.microsoft.com/default.as ... 72&amp;sd=tech</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 20, 2006 1:55 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Hi Oneder, please see this:<br>
+<br>
+<a href="../wiki/index572c.php?SecureDeleteSandbox" class="postlink">SecureDeleteSandbox in wiki</a><br>
+<br>
+This is a new feature in version 2.57.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Secure Deletion</h3>
+				<div class="date">Posted: <strong>Mon Sep 11, 2006 3:28 pm</strong></div>
+				<div class="author">by <strong>Irondell</strong></div>
+				<div class="content">Nice to see secure deletion at last.  Is there any chance of making it a bit more accessible to those of us not comfortable editing the registry?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 11, 2006 4:27 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Yeah, sure.  I guess it's a good idea to migrate as much stuff as possible into Sandboxie.ini.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 09, 2006 5:25 am</strong></div>
+				<div class="author">by <strong>Unknown_User_461</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Hi Oneder, please see this:<br>
+<br>
+<a href="../wiki/index572c.php?SecureDeleteSandbox" class="postlink">SecureDeleteSandbox in wiki</a><br>
+<br>
+This is a new feature in version 2.57.</div></blockquote>I have been trying to get this to work. I made the following sandboxie.reg file<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\tzuk\Sandboxie\Control]
+"DeleteCommand"="c:\\sdelete.exe -p 2 -s -q "%SANDBOX%""</code></pre></div>and successfully installed the key into the registry. However sandboxie seems to not see the key because the standard "cmd" command is being executed. I tried confirming the result by making a folder c:\xx and changing to this: <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"DeleteCommand"="c:\\sdelete.exe -p 2 -s -q "c:\\xx""</code></pre></div>But still no success the xx folder was not deleted, but the sandboxed folder was deleted. I then tried the same "cmd" command as shown in link but changed the folder to c:\xx and still the xx folder was not cleared but the sandbox folder was erased as per the default command.<br>
+<br>
+Please help me, what am I doing wrong?<br>
+<br>
+BTW: when I type the "sdelete" command manually into a "cmd" window sdelete.exe works perfectly fine.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 09, 2006 6:55 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Please help me, what am I doing wrong? </div></blockquote>
+
+You're not doing anything wrong, I can confirm this is a bug in Start.exe.   Perhaps I can publish a quick fix tomorrow.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 10, 2006 6:27 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Please try <a href="http://sandboxie.com/phpbb/viewtopic.php?p=2790" class="postlink">version 2.64.</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 12, 2006 4:16 pm</strong></div>
+				<div class="author">by <strong>Darwin</strong></div>
+				<div class="content">I'd like to try 2.64 too, but the link that you've provided here and in another thread <a href="http://sandboxie.com/phpbb/viewtopic.php?t=608&amp;highlight=sbox+1051+cannot+resolve+path+imagebased+section+c000009a" class="postlink">http://sandboxie.com/phpbb/viewtopic.ph ... n+c000009a</a> point right back here...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 12, 2006 4:35 pm</strong></div>
+				<div class="author">by <strong>searcher</strong></div>
+				<div class="content">tzuk needs to fix links  <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> <br>
+<br>
+Latest builds: <a href="http://sandboxie.com/phpbb/viewforum.php?f=2" class="postlink">Announcements</a><br>
+Latest final: <a href="../index05f1.html?DownloadSandboxie" class="postlink">Download</a><br>
+<br>
+p.s. if tzuk release Announcement version as final, always get again from Download cause sometimes minor changes maybe.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 13, 2006 7:30 am</strong></div>
+				<div class="author">by <strong>Unknown_User_461</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Please try version 2.64.</div></blockquote>Yes, now it works nicely with secure deletion.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>An easier 'Secure Delete' option</h3>
+				<div class="date">Posted: <strong>Tue Nov 21, 2006 3:06 pm</strong></div>
+				<div class="author">by <strong>esk</strong></div>
+				<div class="content">Eraser seems to work fine (using the registry method described in <a href="../index572c.html?SecureDeleteSandbox" class="postlink">http://www.sandboxie.com/index.php?SecureDeleteSandbox</a>).<br>
+<br>
+I used the following registry key value:-<br>
+c:\PathToEraser\eraser\eraserl.exe -folder "%SANDBOX%" -subfolders -method Random 1<br>
+<br>
+(Change PathToEraser to suit your system).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: An easier 'Secure Delete' option</h3>
+				<div class="date">Posted: <strong>Sat Dec 09, 2006 2:18 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_545</strong></div>
+				<div class="content"><blockquote><div><cite>esk wrote:</cite>Eraser seems to work fine (using the registry method described in <a href="../index572c.html?SecureDeleteSandbox" class="postlink">http://www.sandboxie.com/index.php?SecureDeleteSandbox</a>).<br>
+<br>
+I used the following registry key value:-<br>
+c:\PathToEraser\eraser\eraserl.exe -folder "%SANDBOX%" -subfolders -method Random 1<br>
+<br>
+(Change PathToEraser to suit your system).</div></blockquote>
+
+Yes seems to work....I think....did the same thing, watching the task manager eraser becomes busy during the delete sandbox and it takes longer so I assume all is working properly</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Dec 11, 2006 9:45 am</strong></div>
+				<div class="author">by <strong>Oneder</strong></div>
+				<div class="content">I think an easy way is to use Ccleaner's custom files and folders and add SB's top level folder and set for secure deletion.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Dec 11, 2006 9:57 am</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content"><blockquote><div><cite>Oneder wrote:</cite>I think an easy way is to use Ccleaner's custom files and folders and add SB's top level folder and set for secure deletion.</div></blockquote>
+
+That works well.<br>
+<br>
+You can also use my batch file that uses Eraserl.exe to securely erase the top-level sanbox.  You'll find it on the forum or let me know and I'll repost it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 19, 2007 2:50 am</strong></div>
+				<div class="author">by <strong>searcher</strong></div>
+				<div class="content">Check <a href="http://sandboxie.com/phpbb/viewforum.php?f=2" class="postlink">Announcements</a> forum for beta and pre releases.<br>
+<br>
+When final released, always get program from official <a href="../index05f1.html?DownloadSandboxie" class="postlink">Download</a> link as may be minor changes still from same pre released.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=479&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:15:25 GMT -->
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=7825&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:00:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Open sandbox folder PowerTool</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Open sandbox folder PowerTool</h2>
+		<p><a href="viewtopic83e783e7.html?f=22&amp;t=7825">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=7825</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Open sandbox folder PowerTool</h3>
+				<div class="date">Posted: <strong>Thu Apr 22, 2010 8:46 pm</strong></div>
+				<div class="author">by <strong>albinohawk</strong></div>
+				<div class="content">I run Firefox in a sandbox. Unfortunately this means all my downloads/PDF prints etc save to the Sandbox. When I go to retrieve a file I can do it one of two (not very good) ways:<br>
+<br>
+1. Through a sandboxed explorer <br>
+<br>
+- Very confusing at to which files are sandboxed and which aren't<br>
+- Have to open the equivalent non-sandboxed explorer window to copy into<br>
+- Dragging out of the sandbox doesn't work<br>
+<br>
+2. Browsing into the Sandbox folder<br>
+<br>
+- Requires lots of navigation to get to the equivalent sandbox folder<br>
+<br>
+So... I wrote this tool to automate the second option, modelled along the lines of the "Open Command Window Here" PowerTool. It adds a item to the context menu of  folders "Open sandbox", which when clicked will open explorer at the sandbox equivalent of that folder. Retrieving files is then a simple matter of cut and paste/drag and drop etc.<br>
+<br>
+The zip file (links below) has 2 files:<br>
+ <br>
+OpenSandbox.exe is a package of batch file, the PHP 5.3 cli/dll and PHP script. The batch file calls the PHP script which does the path handling, and returns the sandbox path. The batch file then checks if the path exists and if so, calls explorer with it.<br>
+<br>
+Add Open Sandbox.reg adds the item to the folder context menu. This passes in all the paths to OpenSandbox.exe, so can be edited to suit your sandbox.<br>
+<br>
+Links here:<br>
+<a href="http://www.massmirror.com/3896d0fa9813707166596f29cd3cd543.html" class="postlink">http://www.massmirror.com/3896d0fa98137 ... cd543.html</a><br>
+<br>
+Direct links:<br>
+<a href="http://www.massmirror.com/get.php?dl=OpenSandbox%20PowerTool.zip" class="postlink">http://www.massmirror.com/get.php?dl=Op ... erTool.zip</a><br>
+<a href="http://www.megaupload.com/?d=DQSTOUWN" class="postlink">http://www.megaupload.com/?d=DQSTOUWN</a><br>
+<a href="http://rapidshare.com/files/379009969/OpenSandbox_PowerTool.zip.html" class="postlink">http://rapidshare.com/files/379009969/O ... l.zip.html</a><br>
+<a href="http://www.zshare.net/download/75276831d2968a58/" class="postlink">http://www.zshare.net/download/75276831d2968a58/</a><br>
+<a href="http://www.badongo.com/file/22197770" class="postlink">http://www.badongo.com/file/22197770</a><br>
+<br>
+Installation:<br>
+<br>
+1. Copy OpenSandbox.exe to the Sandboxie program folder<br>
+2. Edit the .reg file to specify<br>
+  a. OpenSandbox.exe location<br>
+  b. Sandbox folder<br>
+  c. Sandbox name<br>
+3. Merge the .reg file<br>
+<br>
+Enjoy!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 01, 2010 12:44 pm</strong></div>
+				<div class="author">by <strong>Mature</strong></div>
+				<div class="content">maybe i don't get you enough...but won't that work with same effect just right click the file you want to retrive and  choose "recover to the same folder"?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Reply</h3>
+				<div class="date">Posted: <strong>Sun Jul 11, 2010 6:45 pm</strong></div>
+				<div class="author">by <strong>mydarkpassenger</strong></div>
+				<div class="content">Little confused by your problem.  Do you save your pdfs or view them and want to recover them?  If you download them why don't you just add the download path to quick recovery or use direct access?  I use sandboxie for all by browsing and I never need to go into the sandboxie contents folder.  I just save all downloads to my download folder.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 12, 2010 7:06 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">albinohawk, there is a third way, in Sandboxie Control -&gt; View -&gt; Files and Folders.<br>
+<br>
+And before you point out the problems in this feature of Sandboxie, let me say that I am fully aware of them and plan to improve that soon.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 12, 2010 1:52 pm</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">For Downloads etc - Options &gt; Resources &gt; Direct access/full access<br>
+enter desired folder for dl'ed files <br>
+<br>
+funny what people create for certain "problems".</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>All download-links are dead!</h3>
+				<div class="date">Posted: <strong>Wed Jun 19, 2013 2:28 pm</strong></div>
+				<div class="author">by <strong>Uwe</strong></div>
+				<div class="content">Hi albinohawk,<br>
+<br>
+all download-links are dead!  <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"> <br>
+<br>
+Can your or anyone else re-upload the file.<br>
+<br>
+Thanks   <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Use Internet Download Manager?</h3>
+				<div class="date">Posted: <strong>Sat Aug 17, 2013 5:51 pm</strong></div>
+				<div class="author">by <strong>Prestones</strong></div>
+				<div class="content">I'm still working on getting up to speed with Sandboxie, but thought I'd throw this into the mix.<br>
+<br>
+I can open Firefox in Sandboxie and click on a link to download a file. I have Internet Download Manager installed as an extension in FF, and it intercepts the download - asking me for a file / folder name. Once I hit the "start download" button, IDM finishes the download and saves the file in the folder I designated - outside the sandbox. <br>
+<br>
+FWIW</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=7825&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:00:17 GMT -->
+</html>

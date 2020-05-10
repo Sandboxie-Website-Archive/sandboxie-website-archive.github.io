@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=18436&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:52:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie detection</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie detection</h2>
+		<p><a href="viewtopic89208920.html?f=5&amp;t=18436">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=18436</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie detection</h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2014 6:24 am</strong></div>
+				<div class="author">by <strong>Nenner</strong></div>
+				<div class="content">N. Rin and EP_X0FF made a great work over virtual machine (VM) and sandbox detection in current malware.<br>
+
+<blockquote class="uncited"><div>As a short conclusion: Sandboxie does so many modifications to the sandboxed <br>
+process so detecting fact of sandboxing is a trivial task even if the above described methods <br>
+will be out-dated.</div></blockquote>
+
+<blockquote class="uncited"><div>As for Sandboxie, with its current implementation <br>
+it cannot be hidden at all and not recommended as platform for malware research. More to <br>
+say we would not recommend using this product on real PC on the regular basis as well, and <br>
+if you still plan use it for malware research then do this only inside additionally controlled <br>
+environment such as, you might already guess, virtual machine. </div></blockquote>
+
+<a href="http://www.heise.de/security/downloads/07/1/1/8/3/5/5/9/vmde.pdf" class="postlink">http://www.heise.de/security/downloads/ ... 9/vmde.pdf</a><br>
+<br>
+I would love to see a statment from the devolepers of Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie detection</h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2014 11:32 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">The debate about this does not exist. If nobody can provide a malware or POC able to write to real system, saying that Sandboxie is not secure is just blah blah blah.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie detection</h3>
+				<div class="date">Posted: <strong>Wed Mar 05, 2014 5:00 pm</strong></div>
+				<div class="author">by <strong>Nenner</strong></div>
+				<div class="content">Nobody is saying that Sandboxie is not secure. Please read the paper.<br>
+<br>
+The problem is that it is very easy to check, if your code runs in Sandboxie or not.<br>
+This is a huge problem if you test new software in sandboxie to check if it is malicious or not,<br>
+and then use it on your main System.<br>
+<br>
+The malicious code could simply be skipped in the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie detection</h3>
+				<div class="date">Posted: <strong>Thu Mar 06, 2014 7:47 pm</strong></div>
+				<div class="author">by <strong>SLE</strong></div>
+				<div class="content">Sandboxie is not made for malware analysis and never was. Sandboxie is for safe use of programs that are often attacked by malware. If malware detects that it is in sandboxie and thatswhy not runs - who cares? You stay safe.<br>
+<br>
+Beside the good technical analysis of the paper - it's a known fact that sandboxie can easyly be detected. Beside that, the market share is very low and there is not much sandboxie aware malware until now.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie detection</h3>
+				<div class="date">Posted: <strong>Fri Mar 07, 2014 2:47 am</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content"><blockquote><div><cite>Nenner wrote:</cite>Nobody is saying that Sandboxie is not secure. Please read the paper.<br>
+<br>
+The problem is that it is very easy to check, if your code runs in Sandboxie or not.<br>
+This is a huge problem if you test new software in sandboxie to check if it is malicious or not,<br>
+and then use it on your main System.<br>
+<br>
+The malicious code could simply be skipped in the sandbox.</div></blockquote>
+
+Try Buster Sandbox Analyzer (<a href="http://bsa.isoftware.nl/" class="postlink">http://bsa.isoftware.nl/</a>)<br>
+<br>
+"A common problem to all malware analyzers is that malwares can detect they are running under a malware analyzer environment or virtual machine and abort execution. The only way to solve this problem would be using a private malware analyzer so malware coders ignore it exists and are unable to add checkings to detect it.<br>
+<br>
+<br>
+Note: Buster Sandbox Analyzer package includes countermeasures against malwares detecting Sandboxie´s presence."</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie detection</h3>
+				<div class="date">Posted: <strong>Fri Mar 07, 2014 5:41 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">The difficulty with malware analysis is that very sophisticated malware can tell it is being analyzed and will behave differently or not function at all.  For example, malware can tell it if is sandboxed, or running in a VM, and it can also check for debuggers, analyzers, etc.  The malware does not need to know the details of the analyzer.  All it has to do is check for the presence of anything that is not part of the normal OS.  This is why you can't test executables under any kind of analysis/security software and assume they are 100% clean and safe.<br>
+<br>
+But, this is also a trap for the malware writers.  Because now their malware won't run at all if the user has protection software.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie detection</h3>
+				<div class="date">Posted: <strong>Fri Mar 07, 2014 5:53 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>But, this is also a trap for the malware writers.  Because now their malware won't run at all if the user has protection software.</div></blockquote>
+
+Not to mention that any software which checks for Sandboxie or VM presence is automatically suspicious of being a malware.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=18436&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:52:46 GMT -->
+</html>

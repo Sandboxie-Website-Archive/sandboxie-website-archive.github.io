@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=41&t=16924&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:47:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.03] BSOD caused by Sandboxie</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.03] BSOD caused by Sandboxie</h2>
+		<p><a href="viewtopic7b92-27b92.html?f=41&amp;t=16924">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=41&amp;t=16924</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>[.03] BSOD caused by Sandboxie</h3>
+				<div class="date">Posted: <strong>Thu Oct 31, 2013 6:53 am</strong></div>
+				<div class="author">by <strong>Arcanez</strong></div>
+				<div class="content">It seems like Sandboxie causes my Computer to bsod (page fault in nonpaged area). The bluescreen has always come up when opening IE in Sandboxie. Right after I click on the IE Icon in the taskbar the machine crashes with the bluescreen. However this does not always happen. I have looked into the Memory.dmp file and this is what it says:<br>
+<br>
+<br>
+Microsoft (R) Windows Debugger Version 6.3.9600.16384 AMD64<br>
+Copyright (c) Microsoft Corporation. All rights reserved.<br>
+<br>
+<br>
+Loading Dump File [C:\Windows\MEMORY.DMP]<br>
+Kernel Bitmap Dump File: Only kernel address space is available<br>
+<br>
+Symbol search path is: *** Invalid ***<br>
+****************************************************************************<br>
+* Symbol loading may be unreliable without a symbol search path.           *<br>
+* Use .symfix to have the debugger choose a symbol path.                   *<br>
+* After setting your symbol path, use .reload to refresh symbol locations. *<br>
+****************************************************************************<br>
+Executable search path is: <br>
+*********************************************************************<br>
+* Symbols can not be loaded because symbol path is not initialized. *<br>
+*                                                                   *<br>
+* The Symbol Path can be set by:                                    *<br>
+*   using the _NT_SYMBOL_PATH environment variable.                 *<br>
+*   using the -y &lt;symbol_path&gt; argument when starting the debugger. *<br>
+*   using .sympath and .sympath+                                    *<br>
+*********************************************************************<br>
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for ntkrnlmp.exe - <br>
+Windows 8 Kernel Version 9600 MP (8 procs) Free x64<br>
+Product: WinNt, suite: TerminalServer SingleUserTS<br>
+Built by: 9600.16404.amd64fre.winblue_gdr.130913-2141<br>
+Machine Name:<br>
+Kernel base = 0xfffff800`b6c80000 PsLoadedModuleList = 0xfffff800`b6f44990<br>
+Debug session time: Thu Oct 31 11:43:14.489 2013 (UTC + 1:00)<br>
+System Uptime: 0 days 0:25:10.179<br>
+*********************************************************************<br>
+* Symbols can not be loaded because symbol path is not initialized. *<br>
+*                                                                   *<br>
+* The Symbol Path can be set by:                                    *<br>
+*   using the _NT_SYMBOL_PATH environment variable.                 *<br>
+*   using the -y &lt;symbol_path&gt; argument when starting the debugger. *<br>
+*   using .sympath and .sympath+                                    *<br>
+*********************************************************************<br>
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for ntkrnlmp.exe - <br>
+Loading Kernel Symbols<br>
+...............................................................<br>
+...........................................................Page 13ad53 not present in the dump file. Type ".hh dbgerr004" for details<br>
+.Page 13b6b5 not present in the dump file. Type ".hh dbgerr004" for details<br>
+....<br>
+...................<br>
+Loading User Symbols<br>
+PEB is paged out (Peb.Ldr = 00007ff6`de22f018).  Type ".hh dbgerr001" for details<br>
+Loading unloaded module list<br>
+.......<br>
+<br>
+************* Symbol Loading Error Summary **************<br>
+Module name            Error<br>
+ntkrnlmp               The system cannot find the file specified<br>
+<br>
+You can troubleshoot most symbol related issues by turning on symbol loading diagnostics (!sym noisy) and repeating the command that caused symbols to be loaded.<br>
+You should also verify that your symbol search path (.sympath) is correct.<br>
+*******************************************************************************<br>
+*                                                                             *<br>
+*                        Bugcheck Analysis                                    *<br>
+*                                                                             *<br>
+*******************************************************************************<br>
+<br>
+Use !analyze -v to get detailed debugging information.<br>
+<br>
+BugCheck 50, {ffffc00010ef0000, 0, fffff800b6dda525, 0}<br>
+<br>
+*** ERROR: Module load completed but symbols could not be loaded for SbieDrv.sys<br>
+***** Kernel symbols are WRONG. Please fix symbols to do analysis.<br>
+<br>
+*************************************************************************<br>
+***                                                                   ***<br>
+***                                                                   ***<br>
+***    Either you specified an unqualified symbol, or your debugger   ***<br>
+***    doesn't have full symbol information.  Unqualified symbol      ***<br>
+***    resolution is turned off by default. Please either specify a   ***<br>
+***    fully qualified symbol module!symbolname, or enable resolution ***<br>
+***    of unqualified symbols by typing ".symopt- 100". Note that   ***<br>
+***    enabling unqualified symbol resolution with network symbol     ***<br>
+***    server shares in the symbol path may cause the debugger to     ***<br>
+***    appear to hang for long periods of time when an incorrect      ***<br>
+***    symbol name is typed or the network symbol server is down.     ***<br>
+***                                                                   ***<br>
+***    For some commands to work properly, your symbol path           ***<br>
+***    must point to .pdb files that have full type information.      ***<br>
+***                                                                   ***<br>
+***    Certain .pdb files (such as the public OS symbols) do not      ***<br>
+***    contain the required information.  Contact the group that      ***<br>
+***    provided you with these symbols if you need this command to    ***<br>
+***    work.                                                          ***<br>
+***                                                                   ***<br>
+***    Type referenced: nt!_KPRCB                                     ***<br>
+***                                                                   ***<br>
+*************************************************************************<br>
+*************************************************************************<br>
+***                                                                   ***<br>
+***                                                                   ***<br>
+***    Either you specified an unqualified symbol, or your debugger   ***<br>
+***    doesn't have full symbol information.  Unqualified symbol      ***<br>
+***    resolution is turned off by default. Please either specify a   ***<br>
+***    fully qualified symbol module!symbolname, or enable resolution ***<br>
+***    of unqualified symbols by typing ".symopt- 100". Note that   ***<br>
+***    enabling unqualified symbol resolution with network symbol     ***<br>
+***    server shares in the symbol path may cause the debugger to     ***<br>
+***    appear to hang for long periods of time when an incorrect      ***<br>
+***    symbol name is typed or the network symbol server is down.     ***<br>
+***                                                                   ***<br>
+***    For some commands to work properly, your symbol path           ***<br>
+***    must point to .pdb files that have full type information.      ***<br>
+***                                                                   ***<br>
+***    Certain .pdb files (such as the public OS symbols) do not      ***<br>
+***    contain the required information.  Contact the group that      ***<br>
+***    provided you with these symbols if you need this command to    ***<br>
+***    work.                                                          ***<br>
+***                                                                   ***<br>
+***    Type referenced: nt!_KPRCB                                     ***<br>
+***                                                                   ***<br>
+*************************************************************************<br>
+*************************************************************************<br>
+***                                                                   ***<br>
+***                                                                   ***<br>
+***    Either you specified an unqualified symbol, or your debugger   ***<br>
+***    doesn't have full symbol information.  Unqualified symbol      ***<br>
+***    resolution is turned off by default. Please either specify a   ***<br>
+***    fully qualified symbol module!symbolname, or enable resolution ***<br>
+***    of unqualified symbols by typing ".symopt- 100". Note that   ***<br>
+***    enabling unqualified symbol resolution with network symbol     ***<br>
+***    server shares in the symbol path may cause the debugger to     ***<br>
+***    appear to hang for long periods of time when an incorrect      ***<br>
+***    symbol name is typed or the network symbol server is down.     ***<br>
+***                                                                   ***<br>
+***    For some commands to work properly, your symbol path           ***<br>
+***    must point to .pdb files that have full type information.      ***<br>
+***                                                                   ***<br>
+***    Certain .pdb files (such as the public OS symbols) do not      ***<br>
+***    contain the required information.  Contact the group that      ***<br>
+***    provided you with these symbols if you need this command to    ***<br>
+***    work.                                                          ***<br>
+***                                                                   ***<br>
+***    Type referenced: nt!_KPRCB                                     ***<br>
+***                                                                   ***<br>
+*************************************************************************<br>
+Probably caused by : SbieDrv.sys ( SbieDrv+1ca95 )<br>
+<br>
+Followup: MachineOwner<br>
+---------<br>
+<br>
+<br>
+System info:<br>
+win8.1 x64<br>
+IE 11<br>
+Sandboxie 4.06 64bit<br>
+EMET 4.0<br>
+Crucial m4 SSD<br>
+Gigabyte 990FXA UD5<br>
+FX8350<br>
+MSI R9 280x<br>
+8GB 1866Mhz DDR3</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 31, 2013 7:26 am</strong></div>
+				<div class="author">by <strong>nsb</strong></div>
+				<div class="content">this is the same error reported previously in this thread,<br>
+<a href="../phpbb/viewtopicbf7d.php?t=16752" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=16752</a>  <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+Can i ask you if you have EMET?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 31, 2013 7:27 am</strong></div>
+				<div class="author">by <strong>Arcanez</strong></div>
+				<div class="content"><blockquote><div><cite>nsb wrote:</cite>this is the same error reported previously in this thread,<br>
+<a href="../phpbb/viewtopicbf7d.php?t=16752" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=16752</a>  <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+Can i ask you if you have EMET?</div></blockquote>
+
+Yes, I do. Forgot to mention it. I have EMET 4.0 installed. I have read the Topic that you posted and I disabled fast Startup of Windows.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 31, 2013 7:41 am</strong></div>
+				<div class="author">by <strong>nsb</strong></div>
+				<div class="content"><blockquote><div><cite>Arcanez wrote:</cite>
+yes, I do. Forgot to mention it. I have EMET 4.0 installed.</div></blockquote>
+so do i...
+<blockquote><div><cite>Arcanez wrote:</cite> I have read the Topic that you posted and I disabled fast Startup of Windows.</div></blockquote>
+do you have a more informative memory dump?<br>
+<br>
+Are you logged in as standard user?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 31, 2013 7:44 am</strong></div>
+				<div class="author">by <strong>scarid</strong></div>
+				<div class="content">I also have this problem but I don't use EMET. My user account is just member of the local Users group.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 31, 2013 8:21 am</strong></div>
+				<div class="author">by <strong>doktornotor</strong></div>
+				<div class="content">Never seen this with EMET 4.0 and W8.1</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 31, 2013 9:06 am</strong></div>
+				<div class="author">by <strong>Arcanez</strong></div>
+				<div class="content"><blockquote><div><cite>nsb wrote:</cite><blockquote><div><cite>Arcanez wrote:</cite>
+yes, I do. Forgot to mention it. I have EMET 4.0 installed.</div></blockquote>
+so do i...
+<blockquote><div><cite>Arcanez wrote:</cite> I have read the Topic that you posted and I disabled fast Startup of Windows.</div></blockquote>
+do you have a more informative memory dump?<br>
+<br>
+Are you logged in as standard user?</div></blockquote>
+
+I always log on as a standard user. Whenever I have to do administrative things I use a dos box with admin privileges and do everything from there.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 31, 2013 4:09 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">There are a few similar problem reports about crashes.  Usually close to the time when Windows finishes the start up sequence.  I made some change that may have an effect, so please hold on until the next beta (which will be version 4.07.02) and we'll see if it makes a difference.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Nov 01, 2013 6:54 am</strong></div>
+				<div class="author">by <strong>balloonshark</strong></div>
+				<div class="content">Good to hear you may have found something tzuk.<br>
+<br>
+Since disabling fast startup and waiting for all of my icons to load in the system tray I've only had one BSOD since September 15th. Unfortunately it usually takes about 4 minutes for everything to load because a couple items are on delayed startup.<br>
+<br>
+Here are my hardware specs. Perhaps there is something in common.<br>
+<br>
+i5-4670K, Hyper 212 Evo, ASRock Z87 Extreme6, Sapphire Vapor-X Radeon HD 7970 Ghz Edition 3GB, 120GB Samsung 840 Series SSD, 1TB WD Blue HDD, Team Vulcan DDR3 1600 2x4GB, Corsair CX600 PSU, Asus 24x DVD Burner, Corsair Carbide 500R case, Windows 8 Pro 64 bit.<br>
+<br>
+I'm not using EMET and I do use a standard user account. It's a local account.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Nov 01, 2013 7:49 am</strong></div>
+				<div class="author">by <strong>Arcanez</strong></div>
+				<div class="content">I have disabled the fast Startup but unfortunately I got another bsod when I started my Computer this morning. One Thing I recognized though was that it seems like the Crash does only occur when I try to Launch Internet Explorer sandboxed right after the Startup sequence of Windows. When I click on Media Player or VLC Player right after the Windows Startup These work programs work just fine under sandboxie. I haven't seen this Crash with any other program but Internet Explorer so far. <br>
+<br>
+A good Thing with this bsod is though that you can be sure that you don't have any serious Hardware issues. Let's see what the future beta Version Looks like in this regard. Until then I might have to wait some time after the Startup sequence before running Internet Explorer.<br>
+<br>
+Thanks Tzuk and Keep it going! <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Nov 01, 2013 8:08 am</strong></div>
+				<div class="author">by <strong>doktornotor</strong></div>
+				<div class="content"><blockquote><div><cite>Arcanez wrote:</cite>One Thing I recognized though was that it seems like the Crash does only occur when I try to Launch Internet Explorer sandboxed right after the Startup sequence of Windows</div></blockquote>
+
+Have this one installed? <a href="http://www.microsoft.com/en-us/download/details.aspx?id=40852" class="postlink">http://www.microsoft.com/en-us/download ... x?id=40852</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Nov 02, 2013 3:25 am</strong></div>
+				<div class="author">by <strong>zhanghaixia</strong></div>
+				<div class="content">It seems like Sandboxie causes my Pc to  Buy FUT 14 Coins PC bsod (page mistake in nonpaged area). The bluescreen has always come up when starting IE in Sandboxie. Right after I simply simply select the IE Symbol in the taskbar the device accidents with the bluescreen.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Nov 06, 2013 6:03 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Please check if version 4.07.02 makes any difference.  Keep in mind the change I did is a guess and will not necessarily fix the problem.<br>
+<br>
+<a href="../phpbb/viewtopica0e2.php?t=16838" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=16838</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Nov 08, 2013 5:02 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Version 4.07.03 includes the same fix and also should not cause problems with Internet Explorer.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Nov 08, 2013 8:14 am</strong></div>
+				<div class="author">by <strong>balloonshark</strong></div>
+				<div class="content">Thanks tzuk. I will give this version a try. Should I re-enable fast startup which is default for a Windows 8 install?</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=41&t=16924&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:47:10 GMT -->
+</html>

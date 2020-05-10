@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15141" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-04-23T02:43:05-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15141</id>
+
+		<entry>
+		<author><name><![CDATA[nick s]]></name></author>
+		<updated>2013-04-23T02:43:05-04:00</updated>
+
+		<published>2013-04-23T02:43:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=89167#p89167</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=89167#p89167"/>
+		<title type="html"><![CDATA[[.06] Sandboxie 4.01.04, Chrome 26.0.1410.43, and EditPlus]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=89167#p89167"><![CDATA[
+<blockquote><div><cite>tzuk wrote:</cite>Please check version 4.01.06.</div></blockquote>Fixed. Thank you!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2005">nick s</a> — Tue Apr 23, 2013 2:43 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-04-22T06:42:11-04:00</updated>
+
+		<published>2013-04-22T06:42:11-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=89124#p89124</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=89124#p89124"/>
+		<title type="html"><![CDATA[[.06] Sandboxie 4.01.04, Chrome 26.0.1410.43, and EditPlus]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=89124#p89124"><![CDATA[
+Please check version 4.01.06.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Apr 22, 2013 6:42 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-04-19T04:49:41-04:00</updated>
+
+		<published>2013-04-19T04:49:41-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=89042#p89042</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=89042#p89042"/>
+		<title type="html"><![CDATA[[.06] Sandboxie 4.01.04, Chrome 26.0.1410.43, and EditPlus]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=89042#p89042"><![CDATA[
+Thanks.  This was indeed related to DDE, as EditPlus registers itself as a DDE server for .TXT files.  Should be fixed in the next beta.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Apr 19, 2013 4:49 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nick s]]></name></author>
+		<updated>2013-04-17T16:17:07-04:00</updated>
+
+		<published>2013-04-17T16:17:07-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=88995#p88995</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=88995#p88995"/>
+		<title type="html"><![CDATA[[.06] Sandboxie 4.01.04, Chrome 26.0.1410.43, and EditPlus]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=88995#p88995"><![CDATA[
+<blockquote><div><cite>tzuk wrote:</cite>How do I get Chrome try to open the .TXT file in an external viewer?</div></blockquote>I should have been more clear with Step 3. Navigate to and open a .TXT file using an unsandboxed windows explorer. That's what is weird about the problem. It's an operation that's external to the sandboxed Chrome.<br><blockquote><div><cite>tzuk wrote:</cite>Also, I did not see how to ask EditPlus to handle .TXT files from within EditPlus, so I used the Default Programs feature in Windows, but I guess either approach should have the same result.</div></blockquote>You need to tick off "Associate in Explorer" and then click Apply which requires admin rights...<br><br><img src="http://img62.imageshack.us/img62/2450/editplussettings01.png" class="postimage" alt="Image"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2005">nick s</a> — Wed Apr 17, 2013 4:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-04-17T15:28:38-04:00</updated>
+
+		<published>2013-04-17T15:28:38-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=88992#p88992</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=88992#p88992"/>
+		<title type="html"><![CDATA[[.06] Sandboxie 4.01.04, Chrome 26.0.1410.43, and EditPlus]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=88992#p88992"><![CDATA[
+How do I get Chrome try to open the .TXT file in an external viewer?<br><br>Also, I did not see how to ask EditPlus to handle .TXT files from within EditPlus, so I used the Default Programs feature in Windows, but I guess either approach should have the same result.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Apr 17, 2013 3:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-04-03T07:03:29-04:00</updated>
+
+		<published>2013-04-03T07:03:29-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=88601#p88601</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=88601#p88601"/>
+		<title type="html"><![CDATA[[.06] Sandboxie 4.01.04, Chrome 26.0.1410.43, and EditPlus]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=88601#p88601"><![CDATA[
+I imagine that has something to do with DDE.  I'll check it out.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Apr 03, 2013 7:03 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nick s]]></name></author>
+		<updated>2013-04-03T02:04:55-04:00</updated>
+
+		<published>2013-04-03T02:04:55-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=88597#p88597</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=88597#p88597"/>
+		<title type="html"><![CDATA[[.06] Sandboxie 4.01.04, Chrome 26.0.1410.43, and EditPlus]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15141&amp;p=88597#p88597"><![CDATA[
+An interesting conflict with an unsandboxed application...<br><br>Windows 7 64-bit and 32-bit<br>Sandboxie 4.01.04<br>Chrome 26.0.1410.43 stable forced<br>EditPlus Text Editor 3.51 unsandboxed (<a href="http://www.editplus.com/" class="postlink">http://www.editplus.com/</a>):<br><br>Steps to reproduce:<br><br>1. Install EditPlus and set it as the default handler of .txt files (which requires running EditPlus with admin rights).<br>2. Start Chrome sandboxed.<br>3. Navigate to any text file and double-click to open.<br><br>I am seeing a 30-second hang on 7 64-bit (20 seconds on 7 32-bit) before EditPlus opens the .txt file on the screen. If I start Chrome unsandboxed, no hang.<br><br>During the hang, the EditPlus process is not listed in Process Explorer until the .txt file is on the screen. If I close the sandboxed Chrome during the hang, EditPlus opens the file immediately.<br><br>Other text editors (Notepad++, UltraEdit) are unaffected. No hang with Sandboxie 3.76. No hang with previous Chrome stable versions and Sandboxie 4.01.04. Other than Sandboxie, EMET (3.0) is the only other security app I use.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2005">nick s</a> — Wed Apr 03, 2013 2:04 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

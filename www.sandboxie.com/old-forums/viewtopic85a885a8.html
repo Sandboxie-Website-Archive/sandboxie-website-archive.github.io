@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24407&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:53:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Uninstalling programs installed inside sandbox</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Uninstalling programs installed inside sandbox</h2>
+		<p><a href="viewtopicfb37fb37.html?f=17&amp;t=24407">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24407</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Uninstalling programs installed inside sandbox</h3>
+				<div class="date">Posted: <strong>Wed May 10, 2017 9:19 am</strong></div>
+				<div class="author">by <strong>undrline2</strong></div>
+				<div class="content">I just started using Sandboxie, but I'm having issues.  I run a suspicious installation program inside the sandbox, everything checks out fine, then I want to install it outside the sandbox.  <br>
+<br>
+I tried both just using the function to delete sandbox files (per the faq, this will uninstall anything), as well as running ccleaner in the sandbox to uninstall.  In both cases, trying to install outside the sandbox fails (depending upon the installation, the error may be different, but none of them give a detailed reason for the failure).  Trying to install again inside the sandbox it works fine.<br>
+<br>
+What am I doing wrong?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Uninstalling programs installed inside sandbox</h3>
+				<div class="date">Posted: <strong>Wed May 10, 2017 11:28 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello undrline2,<br>
+<br>
+What are your OS, Antivirus and Sandboxie versions?<br>
+What application are you trying to install?<br>
+What is the exact error message that you are receiving? <br>
+<br>
+Installing inside the Sandbox should not affect your host. <br>
+If needed, you can completely delete/review the contents of the Sandbox via ---&gt; C:\Sandbox\Username\Sandboxname using Windows Explorer (outside Sandboxie).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Uninstalling programs installed inside sandbox</h3>
+				<div class="date">Posted: <strong>Wed May 10, 2017 1:38 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>undrline2 wrote:</cite>I just started using Sandboxie, but I'm having issues.  I run a suspicious installation program inside the sandbox, everything checks out fine, then I want to install it outside the sandbox.  </div></blockquote>
+You can use Sandboxie for testing programs, and keep the installation for a while, that usually works out great. But using Sandboxie for telling if a suspicious program is malicious or not is not a good idea. Some malware can tell when they are in the sandbox and wont do nothing harmful to fool you into running it outside the sandbox. <br>
+<br>
+To get rid of sandboxed installations, deleting contents is all you need to do. No need to run CCleaner.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Uninstalling programs installed inside sandbox</h3>
+				<div class="date">Posted: <strong>Mon May 15, 2017 10:58 am</strong></div>
+				<div class="author">by <strong>undrline2</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>Hello undrline2,<br>
+<br>
+What are your OS, Antivirus and Sandboxie versions?<br>
+What application are you trying to install?<br>
+What is the exact error message that you are receiving? <br>
+<br>
+Installing inside the Sandbox should not affect your host. <br>
+If needed, you can completely delete/review the contents of the Sandbox via ---&gt; C:\Sandbox\Username\Sandboxname using Windows Explorer (outside Sandboxie).<br>
+<br>
+Regards,<br>
+Barb.-</div></blockquote>
+Thank you for the response.  <br>
+<br>
+Win10 Pro, Avast, 5.18 64bit<br>
+<br>
+Any application I install within the sandbox seems to have an issue when trying to install outside the sandbox.  An old version of SnagIt, in particular, was what I was getting frustrated with when I posted this.  I should probably note that while running installations, Sandboxie pops up errors that it was trying to use this-or-that from the system.  I just skip the errors, and everything seems to work.<br>
+<br>
+I'm sorry I can't recall the exact error messages when I install outside the sandbox.  It was always something generic about the installation not being able to continue.<br>
+<br>
+Of course, now that I try it again, the SnagIt installation works just fine.  Though, this time, I didn't run it sandboxed first.<br>
+<br>
+<br>
+<br>
+ ----------------------------MERGED POST ----------------------------<br>
+
+<blockquote><div><cite>bo.elam wrote:</cite><blockquote><div><cite>undrline2 wrote:</cite>I just started using Sandboxie, but I'm having issues.  I run a suspicious installation program inside the sandbox, everything checks out fine, then I want to install it outside the sandbox.  </div></blockquote>
+You can use Sandboxie for testing programs, and keep the installation for a while, that usually works out great. But using Sandboxie for telling if a suspicious program is malicious or not is not a good idea. Some malware can tell when they are in the sandbox and wont do nothing harmful to fool you into running it outside the sandbox. <br>
+<br>
+To get rid of sandboxed installations, deleting contents is all you need to do. No need to run CCleaner.<br>
+<br>
+Bo</div></blockquote>
+By suspect, I'm all encompassing: something from an untrusted source like a random freeware site, to likely malicious file from a clearly disreputable site, to a program that might just add too much junk and integration for my tastes.<br>
+<br>
+It's not foolproof for sure, and I shouldn't ever get too comfortable, but testing in a sandbox is always worth it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Uninstalling programs installed inside sandbox</h3>
+				<div class="date">Posted: <strong>Mon May 15, 2017 12:56 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello undrline2,<br>
+<br>
+Unless you have explicitly opened paths, your Sandboxed applications should not be able to modify your host.<br>
+Without further details, I cannot test the behavior. If you encounter the issue again (as it seems from your last response, you are no longer able to reproduce it), please provide repro steps, as well as the full error message(s),  and I will have a look.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>help  Re: Uninstalling programs installed inside sandbox</h3>
+				<div class="date">Posted: <strong>Tue Aug 29, 2017 12:48 am</strong></div>
+				<div class="author">by <strong>apple</strong></div>
+				<div class="content"><span style="font-size: 150%; line-height: normal"></span><br>
+long time ago installed sandboxie on other laptop and did not figure out how to remove the programs in it<br>
+so when transferred files to this laptop transferred sandboxie program too<br>
+not sure how may have removed some things however mozilla firefox and malwarebytes are still sandboxied when try trying to delete the <br>
+malwarbytes folder or do uninstall it says unable to delete or it prompts to run in or out of sandboxie i attempt to do out side of will only take me to message again so try to run in sandbox does not let me<br>
+<br>
+then not sure how to remove  firefox from it and internet explorer<br>
+<br>
+   when to to sandboxie control it is  not even showing the malwaerbytes as being it it as it was on the other laptop yet folder now needs to be deleted  <br>
+any assistance is much appreciated <br>
+as not sure if will even be able to access the documents had prev in sandboxie either as unable to open them <br>
+thanks in advance</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Uninstalling programs installed inside sandbox</h3>
+				<div class="date">Posted: <strong>Tue Aug 29, 2017 10:10 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello apple,<br>
+<br>
+To delete programs installed inside Sandboxie, right-click on the Sandbox ---&gt; "Delete contents". <br>
+To manually delete your Sandboxes, go to C:\Sandbox\YourUserName   (this is the default location, if you changed it in the past, it may be located elsewhere). Delete the desired folders.<br>
+<br>
+If your browsers are still opening Sandboxed you may have set them as Forced Programs. Please see this entry so that you can check your Sandbox:<br>
+<a href="../ProgramStartSettings.html#program" class="postlink">https://www.sandboxie.com/ProgramStartSettings#program</a><br>
+<br>
+The same applies to folders, please see this entry:<br>
+<a href="../ForceFolder.html" class="postlink">https://www.sandboxie.com/ForceFolder</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Uninstalling programs installed inside sandbox</h3>
+				<div class="date">Posted: <strong>Tue Aug 29, 2017 10:29 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">I assume that you know to install programs inside of a sandbox by...<br>
+1) Create a sandbox to use for the program (Sandbox &gt; Create New Sandbox).<br>
+2) Right-click the program's installer file, and then click on "Run Sandboxed".<br>
+Choose the sandbox which will contain the program, from the list.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24407&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:53:15 GMT -->
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10038&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie service and tray bar</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie service and tray bar</h2>
+		<p><a href="viewtopic4f19-24f19.html?f=4&amp;t=10038">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=10038</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie service and tray bar</h3>
+				<div class="date">Posted: <strong>Fri Mar 04, 2011 8:49 pm</strong></div>
+				<div class="author">by <strong>is_m00nbl00d</strong></div>
+				<div class="content">I belialeve something like what I'm bringing to discussion has already been mentioned quite some time ago, but I'd like to provide the following suggestion and explain why.<br>
+<br>
+First of all, I know that Sandboxie's FAQ states this:<br>
+
+<blockquote class="uncited"><div>
+How to configure Sandboxie for only an occasional use?<br>
+<br>
+By default Sandboxie is configured to load and start automatically. To have Sandboxie load only when you need it, make the following changes.<br>
+<br>
+In Sandboxie Control, open the Configure -&gt; Shell Integration window, and clear the checkbox When Windows starts to stop Sandboxie Control from starting.<br>
+Open the Windows Services configuration window: Start menu -&gt; Control Panel -&gt; Administrative Tools -&gt; Services. Then locate the Sandboxie Service. Double click to bring up its properties window. Set its Startup type to Manual rather than automatic.<br>
+The driver component of Sandboxie is started by the Sandboxie Service. Therefore, setting the service to start manually, indirectly also sets the driver to start manually.<br>
+Starting Sandboxie Control will also start the service. (But note that Administrative rights are required to start a service.)
+</div></blockquote>
+
+I have been installing Sandboxie in a few systems with few resources for friends, and therefore, along side other applications, I've set Sandboxie's service to Manual and deleted Sandboxie's autostart registry entry. I created a batch file to automatically start Sandboxie's service a few seconds after session logon and a few seconds after Sandboxie's tray bar icon will appear as well.<br>
+<br>
+I'd like for a much finer solution, though. So, what do you think of having Sandboxie allow the user to create a scheduled task, with Administrative privileges obviously, so that Sandboxie's service is started a few seconds after session logon and then after a few seconds Sandboxie's tray bar icon load?<br>
+<br>
+It could done via install/upgrade process is some advanced configuration or some option in Sandboxie Control (Sandboxie would need to ask for permissions to create such task.), with options to set the time interval between session logon - Sandboxie's service - tray bar icon. And, upon each install/upgrade it should verify that such tasks are already created and skip it.<br>
+<br>
+I truly believe this would be a great "feature". Something that Sandboxie could do at user's request, rather than the user having to know to create batch files and create tasks.<br>
+<br>
+It would be really nice if you could do it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 05, 2011 3:18 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I don't understand something.  If you're setting up a script to start Sandboxie a few seconds after log on, why would you set the service to manual in the first place?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 05, 2011 4:09 pm</strong></div>
+				<div class="author">by <strong>is_m00nbl00d</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I don't understand something.  If you're setting up a script to start Sandboxie a few seconds after log on, why would you set the service to manual in the first place?</div></blockquote>
+
+Because it's on Automatic mode, and I want it to be on Manual mode and only have it to start after session logon? Why would I want it to be on Automatic wasting resources, if there's no need for such due to the way I use Sandboxie?<br>
+<br>
+So, rather than having to do it, myself, in all systems I install Sandboxie, I'd rather have Sandboxie to provide such options.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 06, 2011 6:38 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">What kind of resources do you think it is wasting, when nobody is logged on the computer? That's the part that I don't understand.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 06, 2011 12:41 pm</strong></div>
+				<div class="author">by <strong>is_m00nbl00d</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>What kind of resources do you think it is wasting, when nobody is logged on the computer? That's the part that I don't understand.</div></blockquote>
+
+Maybe I'm the one confusing things, but I always were under the impression that the more services running in automatic mode, the longer the system will take to fully boot. At least, that's always been my experience, which is why I always disable unneeded services and set to manual those that are needed, when I need them. These steps do make systems boot faster than it would with them enabled and set to automatic.<br>
+<br>
+Not to mention I may not want unneeded services (unneeded at a given moment) to start right when I logon, but delay the start a few seconds, or even a few minutes, according to my own needs, hence making the system respond better, and actually free the resources to other services that actually need to be automatically started.<br>
+<br>
+Then again, maybe just my own perception of what it happens.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 06, 2011 6:11 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I'm still not sure I completely understand.  The time to get a usable system would be "time spent in boot" plus "time spent in logon."  So wouldn't you just be moving the Sandboxie service start up from "time spent in boot" to ""time spent in logon?"<br>
+<br>
+Anyway, I take this feature request to mean that you would want Sandboxie Control to elevate to administrator and start the service, in case the service is not started already.<br>
+<br>
+OK, that's a nice idea, but probably a niche use case so it's not going to be a high priority for me.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Oct 26, 2011 8:53 am</strong></div>
+				<div class="author">by <strong>elba23</strong></div>
+				<div class="content">the idea is really good, it would <a href="http://www.beardstownopera.com/" class="postlink">Beardstown Opera House</a> be nice if things work out!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10038&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:50 GMT -->
+</html>

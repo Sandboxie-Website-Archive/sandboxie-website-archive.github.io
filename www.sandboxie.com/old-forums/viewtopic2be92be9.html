@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4008&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:04:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Question regarding Sandboxed programs that attempt to delete - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Question regarding Sandboxed programs that attempt to delete</h2>
+		<p><a href="viewtopicdb10db10.html?f=22&amp;t=4008">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=4008</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 24, 2008 10:25 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">GetModuleFileName.  Pass NULL in the first parameter.<br>
+<br>
+<a href="http://msdn.microsoft.com/en-us/library/ms683197(VS.85).aspx" class="postlink">http://msdn.microsoft.com/en-us/library ... S.85).aspx</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 24, 2008 2:41 pm</strong></div>
+				<div class="author">by <strong>raid</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I don't see Sandboxie as a malware research tool, so I'm not going to add features that are dedicated to malware research.  Buster, I've already mentioned the InjectDll setting which would let you inject DLLs into sandboxed programs.  All you need is to write a small DLL that hooks DeleteFile and prevent the deletion.  Maybe you and guys can team up and figure out how to do that.</div></blockquote>
+
+Perfectly understandable Tzuk. Although, Sandboxie does a fine job of assisting in malware research. You've really got one fantastic little program.<br>
+<br>
+I will be purchasing a license for it very soon. Your a professional author and have gone out of your way as far as I'm concerned to answer my question.<br>
+<br>
+Thanks again!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 24, 2008 8:20 pm</strong></div>
+				<div class="author">by <strong>dynarx</strong></div>
+				<div class="content"><blockquote><div><cite>raid wrote:</cite>You've really got one fantastic little program.</div></blockquote>
+
+Little it may be, but as we say round here, it's not the amount of code in the fight that counts, but the amount of fight in the code!  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> <br>
+<br>
+Just passing, don't mind me <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+<br>
+Cheers, all.<br>
+Dynarx</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Sep 25, 2008 2:44 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Would be anyone able to code the same stuff tzuk did but in Delphi?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Sep 25, 2008 2:54 am</strong></div>
+				<div class="author">by <strong>Ruhe</strong></div>
+				<div class="content">I'm a home and hobby Delphi coder but always have problems to read this C/C++ stuff.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Sep 25, 2008 3:46 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Ruhe wrote:</cite>I'm a home and hobby Delphi coder but always have problems to read this C/C++ stuff.</div></blockquote>
+
+I´m in the same situation.  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 28, 2008 7:30 am</strong></div>
+				<div class="author">by <strong>Ruhe</strong></div>
+				<div class="content">After some tries, I'm not able to convert this code to Delphi.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Oct 01, 2008 5:47 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><a href="http://www.megaupload.com/?d=EDI97UO3" class="postlink">http://www.megaupload.com/?d=EDI97UO3</a><br>
+<br>
+There you can get a working DLL to avoid file deletion with source code included in Delphi.<br>
+<br>
+I was unable to convert tzuk´s code so I used a hooking unit from other person.<br>
+<br>
+tzuk: a question...<br>
+<br>
+I tried to hook NtSetInformationFile from ntdll.dll but Sandboxie rejects to inject the DLL and aborts opening a sandbox. <br>
+<br>
+Why does it happen?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Oct 01, 2008 9:56 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">up!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Oct 01, 2008 10:41 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I don't know why it happens.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Oct 01, 2008 12:15 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Fixed, thanks!<br>
+<br>
+What about NtSetInformationFile from ntdll.dll? Do you know why it happens?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 02, 2008 5:26 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I don't know why it happens.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 02, 2008 6:01 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Sorry, I thought you were meaning other thing.<br>
+<br>
+If I send you the DLL could you check what´s going wrong?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 02, 2008 6:21 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">No, Buster, I am sorry but I don't think that's a good idea for me to debug your DLL.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4008&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:04:20 GMT -->
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1085&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; v2.7x Files with &quot;Acces Denied&quot; in the Sandbox</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>v2.7x Files with &quot;Acces Denied&quot; in the Sandbox</h2>
+		<p><a href="viewtopicf19af19a.html?f=11&amp;t=1085">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=1085</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>v2.7x Files with &quot;Acces Denied&quot; in the Sandbox</h3>
+				<div class="date">Posted: <strong>Wed Feb 14, 2007 9:51 am</strong></div>
+				<div class="author">by <strong>eternalbeta</strong></div>
+				<div class="content">By now I've accumulated several files, which were downloaded and unrarred etc, in different sandboxes which can't be deleted and thus, neither the sandbox itself. The moment you try open, move or delete such a file you get the message "Access Denied".  <br>
+<br>
+Some I could get rid of with the help of a program called Dr. Delete but the others won't budge. I also tried to disable sandboxie to run at startup and then booting in safemode but even then you get "Access Denied" <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> <br>
+<br>
+Any suggestions how to get rid of these files and how to avoid this error?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 14, 2007 4:00 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Try Properties on the file, Security tab, the Advanced button near the bottom, then the Owner tab, and change the ownership of the file to you.  <br>
+Click OK, then go to the Security tab again, and give yourself Full Access to the file.  Click OK again.  Now you <em>should</em> be able to access them.  Hopefully.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 16, 2007 11:46 am</strong></div>
+				<div class="author">by <strong>eternalbeta</strong></div>
+				<div class="content">Tzuk, I followed your advise and looked at the properties and it turns out that the correct description should be "non accessable" folders, not files. <br>
+<br>
+Thus, the properties show only 3 tabs (general, sharing and customize). General showed that it concerns File folders of 0 bytes size, containing 0 files and 0 folders, with a read-only attribute.<br>
+<br>
+I didn't manage to change anything in attributes or whatever, so they're still there. I've never seen this kind of problematic folders before and I only have them in the sandboxes.<br>
+<br>
+Any other suggestions as to how to get rid of them as, because of this problem, I also can't delete the sandboxes in question.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Feb 17, 2007 2:11 am</strong></div>
+				<div class="author">by <strong>mart</strong></div>
+				<div class="content">I had alot of trouble with this when using version 2.64. The reason I had lots of sandbox folders in 'Application Data' was because a backup seemed to be created every time I did an XP System Restore.<br>
+<br>
+I eventually noticed this but was unable to delete the folders (Access denied). I tried lots of things including working with XP's Recovery Console (the default capabilities of this can be extended). This gave some success deleting files within the folders. But there was one stubborn file buried deep within each one that refused to go (flash9.ocx). The cure was simple in the end. Just a little different to the advice already given.<br>
+<br>
+Rename the flash9.ocx to flash9.ocx.txt, Click 'Ignore' when the error message arises.<br>
+Right-click the file and go to 'Properties &gt; Security &gt; Advanced'.<br>
+Select and remove any permission that says 'Deny'.<br>
+Close properties.<br>
+Delete flash9.ocx.txt (thanks to post #16 <a href="http://www.techspot.com/vb/topic56571.html" class="postlink">here</a>).<br>
+<br>
+Maybe you could see if you have a similar situation with a file within the folders?<br>
+<br>
+These days, whenever I do a System Restore, I always make sure the sandbox is emptied first. This seems to avoid the problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Feb 17, 2007 6:28 am</strong></div>
+				<div class="author">by <strong>eternalbeta</strong></div>
+				<div class="content">Thanks Mart for your suggestions. However, renaming turns out to be impossible due to the "access denied" problem.<br>
+<br>
+I've tried killbox but no luck there. Then I downloaded and installed GiPo@Utilities with a trial key  from <a href="http://www.gibinsoft.net/gipoutils/index.htm" class="postlink">http://www.gibinsoft.net/gipoutils/index.htm</a>. <br>
+<br>
+Although this program also didn't succeed in deleting the folders at least things became a bit clearer because when I added the three folders for deletion at reboot, the program warned that the folders were not empty at all. In the end one folder only could be added for deletion while the other two were blocked immediately with "access denied". <br>
+<br>
+After reboot this one folder was still there however, it now showed a file size of 1.7 Mb instead of 0 bytes and contained 3 files and 0 folders plus still read-only as attribute but I could now open the folder and see the 3 files inside but all are "access denied". Inside are an exe, a txt and a html file with different numbers of tabs in properties but no security tab where I could change the ownership.<br>
+<br>
+So there is a problem with wrong sizes and content involved with this "access denied" problem but in the end the folders are still there and no security tab is shown where to change ownership. The presence of these folders, which also prohibit the elimination of the sandboxes, kinda defeats also one of the purposes of the sandboxing itself I'm afraid.<br>
+<br>
+Any other suggestions please?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Feb 17, 2007 10:29 am</strong></div>
+				<div class="author">by <strong>mart</strong></div>
+				<div class="content">To be able to set permissions on any individual file or folder you first need to disable 'file sharing'. If this is done, the file permission options <em>should</em> become available for you to change. To disable file sharing:<br>
+<br>
+* Click 'Start'.<br>
+* Click 'My Computer'.<br>
+* Click on the 'Tools' menu.<br>
+* Click 'Folder Options'.<br>
+* Click the 'View' tab.<br>
+* In the Advanced Settings section, clear the 'Use simple file sharing (Recommended)' check box.<br>
+* Click OK.<br>
+<br>
+<a href="http://support.microsoft.com/kb/307874" class="postlink">http://support.microsoft.com/kb/307874</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Feb 17, 2007 10:33 am</strong></div>
+				<div class="author">by <strong>Cadillakin</strong></div>
+				<div class="content">Deltree would delete those file/folders for sure. Without deltree (win98) in your arsenal, try to remove the folder by issuing the rd (winxp "remove directory) command. Open a command prompt, go to the file/folders parent, and type:<br>
+<br>
+rd /s &lt;folder name&gt;<br>
+<br>
+Thus, if one wanted to delete the folder Sandbox, which was a subfolder of the root C, we would change into C:, and type this command<br>
+<br>
+rd /s sandbox<br>
+<br>
+It's more effective issued from winxp's recovery consul but it will generally work from a plain command prompt within windows. Good luck.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Feb 17, 2007 11:28 am</strong></div>
+				<div class="author">by <strong>eternalbeta</strong></div>
+				<div class="content">Bingo, thanks Mart. Your latest suggestion together with Tzuk's first reply did it <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+
+<blockquote class="uncited"><div> To be able to set permissions on any individual file or folder you first need to disable 'file sharing'. If this is done, the file permission options should become available for you to change. To disable file sharing:<br>
+<br>
+* Click 'Start'.<br>
+* Click 'My Computer'.<br>
+* Click on the 'Tools' menu.<br>
+* Click 'Folder Options'.<br>
+* Click the 'View' tab.<br>
+* In the Advanced Settings section, clear the 'Use simple file sharing (Recommended)' check box.<br>
+* Click OK.
+</div></blockquote>
+
+<blockquote class="uncited"><div>Try Properties on the file, Security tab, the Advanced button near the bottom, then the Owner tab, and change the ownership of the file to you.<br>
+Click OK, then go to the Security tab again, and give yourself Full Access to the file. Click OK again. Now you should be able to access them.</div></blockquote>
+
+Once I got a security tab I was able to follow Tzuk's directions and now al three folders are finally gone and I could also delete these sandboxes now. Thanks also to Cadillakin for his suggestion.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1085&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:37 GMT -->
+</html>

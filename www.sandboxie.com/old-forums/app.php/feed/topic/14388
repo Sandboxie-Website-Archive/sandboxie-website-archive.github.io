@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14388" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-02-25T15:24:44-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14388</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-02-25T15:24:44-04:00</updated>
+
+		<published>2013-02-25T15:24:44-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14388&amp;p=87504#p87504</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14388&amp;p=87504#p87504"/>
+		<title type="html"><![CDATA[[.02] Start.exe does not handle space in parameter properly]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14388&amp;p=87504#p87504"><![CDATA[
+This problem should be fixed in version 4.01.02.<br><br>Related topic:<br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=14605" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=14605</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Feb 25, 2013 2:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-01-02T07:53:55-04:00</updated>
+
+		<published>2013-01-02T07:53:55-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14388&amp;p=86218#p86218</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14388&amp;p=86218#p86218"/>
+		<title type="html"><![CDATA[[.02] Start.exe does not handle space in parameter properly]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14388&amp;p=86218#p86218"><![CDATA[
+Thanks.  Will look into it.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Jan 02, 2013 6:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ssin]]></name></author>
+		<updated>2013-01-02T04:31:45-04:00</updated>
+
+		<published>2013-01-02T04:31:45-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14388&amp;p=86214#p86214</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14388&amp;p=86214#p86214"/>
+		<title type="html"><![CDATA[[.02] Start.exe does not handle space in parameter properly]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14388&amp;p=86214#p86214"><![CDATA[
+First let me thank you for this excellent product, I have used it extensively for a few years and has just made my purchase =]<br><br>A bug I have observed is that Start.exe cannot properly pass parameter with space to programs to be sandboxed.<br><br>Replicating the behavior:<br>1. Make a simple batch file, test.bat, which print the parameters and exit.<div class="codebox"><p>CODE: </p><pre><code>@echo %*@pause</code></pre></div>2. Create a shortcut with the Shell Integration menu, which would make a Desktop shortcut with target:<div class="codebox"><p>CODE: </p><pre><code>"C:\Program Files\Sandboxie\Start.exe" /box:DefaultBox "C:\***\test.bat"</code></pre></div>3. Drap and Drop any file onto the shortcut.<br>The sanboxed batch script usually show the parameter correctly.<br>But if the file contains space anywhere in its path, it will fail to start.<br><br>Even if I run the start.exe from commandline and supply the (double-quoted)parameter manually, it also fails.<br><br>Please kindly look into this problem.<br>Thanks.<br><br><br>Sandboxie: v3.76 (version 64-bit)<br>Windows 8, 64 bit. Fully updated.[/code]<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=13080">ssin</a> — Wed Jan 02, 2013 3:31 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

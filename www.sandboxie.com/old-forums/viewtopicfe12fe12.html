@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=15321&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:32:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.06] Links clicked in unsandboxed programs open two instanc</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.06] Links clicked in unsandboxed programs open two instanc</h2>
+		<p><a href="viewtopicabfdabfd.html?f=11&amp;t=15321">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=15321</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.06] Links clicked in unsandboxed programs open two instanc</h3>
+				<div class="date">Posted: <strong>Fri Apr 26, 2013 11:42 am</strong></div>
+				<div class="author">by <strong>barny</strong></div>
+				<div class="content">Sandboxie 4.01.06 beta<br>
+Win 7 SP1 x64<br>
+<br>
+If Firefox 20.0.1 is running sanboxed and I click a hyperlink in an unsandboxed program, like Thunderbird, two unsandboxed instances of Firefox launch with the link opened in it. The link does not open in the sandboxed version of Firefox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 26, 2013 8:37 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">In Sandboxie 3.76 there was a workaround that could allow an unsandboxed program to open a tab in a running instance of sandboxed Firefox, but that workaround does not work in 4.01.<br>
+I don't see why you would have 2 unsandboxed instances of Firefox open, though.<br>
+If that happens when running Firefox unsandboxed, you might try deleting the sessionstore.js and sessionstore.bak files in the Firefox profile folder, then restarting Firefox unsandboxed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu May 02, 2013 10:08 am</strong></div>
+				<div class="author">by <strong>barny</strong></div>
+				<div class="content">I was using the .reg workaround tzuk mentioned <a href="http://sandboxie.com/phpbb/viewtopic.php?p=82343#82343" class="postlink">here</a>, with the addition of changing permissions on those registry keys, to stop Firefox from changing those registry keys every time it started (which undid the fix). Without the permissions change, the .reg solution did not work.<br>
+<br>
+This was working fine for me in 3.x, but with 4.x betas this is not longer working. I tried Mike's workaround <a href="http://sandboxie.com/phpbb/viewtopic.php?p=82188#82188" class="postlink">here</a>, and while that allows unsandboxed programs to open links in sandboxed Firefox, it has a couple of problems:<br>
+<br>
+1) I can no longer open an unsandboxed version of Firefox when a sandboxed version is already open.<br>
+2) If I click on a URL in KeePass password manager, the link opens in sandboxed Firefox fine, but KeePass displays an eror dialog saying "An error occurred in sending the command to the application."<br>
+<br>
+Any ideas why the previous .reg fix with my additional permissions modification no longer works with 4.x betas ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu May 16, 2013 11:42 am</strong></div>
+				<div class="author">by <strong>barny</strong></div>
+				<div class="content">My mistake - I wasn't using tzuk's .reg workaround, but was using a similar workaround which made the same changes but to different keys:<br>
+<br>
+HKEY_CURRENT_USER\Software\Classes\FirefoxHTML\shell\open\ddeexec<br>
+HKEY_CURRENT_USER\Software\Classes\FirefoxURL\shell\open\ddeexec<br>
+<br>
+I then changed permissions for these keys (and subkeys), for the standard user account that Firefox runs under when running in the sandbox, to Deny "Set Value" and "Delete". All other permissions were left the same (ie. Effective permissions on these keys for standard user account were Full control, apart from these two which were denied). This stopped Firefox from deleting the relevant keys on startup. NOTE: As you can't change permissions from the standard user account, you have to run regedit as admin, and then determine which key under HKEY_USERS corresponds to the standard user account. If you have one admin account and one standard user account, you should probably have two keys which look like S-1-5-21-NNNNNNNNN-NNNNNNNNN-NNNNNNNNNN-NNNNN (where N are different digits) - one of these is for the admin account and the other for the satndard user account. When you find out which one mirrors the standard user account, just make the changes to the above two keys (but substituing HKEY_CURRENT_USER with HKEY_USERS\S-1-5-21-NNNNNNNNN-NNNNNNNNN-NNNNNNNNNN-NNNNN)<br>
+<br>
+My solution above with the permissions was preferable to Mike's as there were no side-effects.<br>
+<br>
+One of the problems with Sandboxie 4.01.xx betas is that sandboxed Firefox no longer runs under standard user account, but instead runs under the user account, "NT AUTHORITY\ANONYMOUS LOGON". I'm guessing that this means Firefox is using different registry path to the above two keys, but I haven't been able to work out what they are.<br>
+<br>
+If I can find out which keys relate to "NT AUTHORITY\ANONYMOUS LOGON", I'm hopeful that the same trick may work with Sandboxie 4.01.xx betas</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 24, 2014 9:07 am</strong></div>
+				<div class="author">by <strong>barny</strong></div>
+				<div class="content">My fix ended up working perfectly on Win 7 x64 SP1 once tzuk had made some further changes to DDE in the SB 4 release. However, I've been testing out Windows 8.1 and the my fix no longer works. Even when using an older version of Firefox (eg. 3, 10, 13), I am unable to get links outside the sandbox open within the sandbox, unless I use the fix provided by Mike (which isn't ideal as it has a couple of downsides).<br>
+<br>
+For anyone on Windows 8.1 (or possibly 8 ), has anyone managed to get links outside the sandbox to open within a sandboxied Firefox (even old versions of FF) without using Mike's fix ?<br>
+<br>
+If not, could the new devs look into this again as I'd like to get the old behaviour back.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 24, 2014 7:54 pm</strong></div>
+				<div class="author">by <strong>barny</strong></div>
+				<div class="content">Just confirmed that Windows 8.1 (and possibly 8 ) have affected the changes (work arounds) made to Sandboxie 4 (after 4.02 I believe) to get DDE working on Win 7 x64 SP1.<br>
+<br>
+I installed fresh Windows 7 x64, Thunderbird, Firefox 4, Sandboxie 4.08, and clicking on URL in Thunderbird opened it in running Sanboxied Firefox 4. I was also able to open a non-sandboxed Firefox at the same time, and external links would still open in sandboxied FF (essentially it would open in whatever FF was launched first).<br>
+<br>
+I then upgraded to Firefox 27 beta 7 and the installer broke the DDE, but after applying my fixes everything was working fine, as above.<br>
+<br>
+After that I installed fresh Windows 8.1 x64 and did the same as above, and even with Firefox 4, the DDE was broken and external links opened in a new unsandboxed instance of Firefox, instead of the already running sandboxied FF. After installing Firefox 27 beta 7 and applying my fixes, the same happened, but this time two instances of an unsandboxied Firefox were launched with the external link.<br>
+<br>
+Can you fix/change Sandboxie so DDE works again on Win 8.1, like it does on Win 7 x64 ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [.06] Links clicked in unsandboxed programs open two ins</h3>
+				<div class="date">Posted: <strong>Fri Feb 21, 2014 5:22 pm</strong></div>
+				<div class="author">by <strong>barny</strong></div>
+				<div class="content">Not fixed in 4.09.01 beta</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [.06] Links clicked in unsandboxed programs open two ins</h3>
+				<div class="date">Posted: <strong>Fri Feb 21, 2014 7:07 pm</strong></div>
+				<div class="author">by <strong>joohwan@invincea</strong></div>
+				<div class="content">Hi barny,<br>
+<br>
+Looks like the Security Identifier (sid) for Anonymous is S-1-5-7, here's an article that lists out well known sids: <a href="http://support.microsoft.com/kb/243330" class="postlink">http://support.microsoft.com/kb/243330</a>.<br>
+<br>
+Hope that helps...<br>
+<br>
+<br>
+BTW, I'll be trying out the reg fix myself on Monday...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [.06] Links clicked in unsandboxed programs open two ins</h3>
+				<div class="date">Posted: <strong>Fri Mar 07, 2014 8:05 pm</strong></div>
+				<div class="author">by <strong>barny</strong></div>
+				<div class="content">Thanks for the info on the SID, but it doesn't help since no user registry branch appears for that SID.<br>
+<br>
+As mentioned, something definitely seems to have changed to the way DDE is handled in Windows 8.1 x64 (and 8 ?) compared to Win 7 x64. The fix/change that tzuk made to one of the SBIE 4 betas that made it work again on Win 7 x64 (with my registry fix method) no longer works on 8.1 x64.<br>
+<br>
+I really need to switch to Windows 8.1 x64 but use SBIE all the time, so I'm caught in a trap as, although it works, it doesn't work the way I'm used to.<br>
+<br>
+Hoping this can be made to work in the near future on 8.1 x64 as it does on Win 7 x64.<br>
+<br>
+@joohwan@invincea - did you manage to test out the reg fix (ie. my fix, not the ones mentioned by tzuk or Mike) and reproduce the issue ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [.06] Links clicked in unsandboxed programs open two ins</h3>
+				<div class="date">Posted: <strong>Thu Apr 10, 2014 10:33 am</strong></div>
+				<div class="author">by <strong>barny</strong></div>
+				<div class="content"><blockquote><div><cite>joohwan@invincea wrote:</cite>BTW, I'll be trying out the reg fix myself on Monday...</div></blockquote>
+<blockquote><div><cite>barny wrote:</cite>As mentioned, something definitely seems to have changed to the way DDE is handled in Windows 8.1 x64 (and 8 ?) compared to Win 7 x64. The fix/change that tzuk made to one of the SBIE 4 betas that made it work again on Win 7 x64 (with my registry fix method) no longer works on 8.1 x64.<br>
+<br>
+I really need to switch to Windows 8.1 x64 but use SBIE all the time, so I'm caught in a trap as, although it works, it doesn't work the way I'm used to.<br>
+<br>
+Hoping this can be made to work in the near future on 8.1 x64 as it does on Win 7 x64.<br>
+<br>
+@joohwan@invincea - did you manage to test out the reg fix (ie. my fix, not the ones mentioned by tzuk or Mike) and reproduce the issue ?</div></blockquote>
+You mentioned you were going to try it out - Any update on this ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [.06] Links clicked in unsandboxed programs open two ins</h3>
+				<div class="date">Posted: <strong>Sun Apr 20, 2014 10:19 pm</strong></div>
+				<div class="author">by <strong>barny</strong></div>
+				<div class="content">I know changelog for 4.09.04 beta doesn't mention any fix related to this issue, but I tested it out anyway 4.09.04 beta still has this DDE issue.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=15321&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:32:05 GMT -->
+</html>

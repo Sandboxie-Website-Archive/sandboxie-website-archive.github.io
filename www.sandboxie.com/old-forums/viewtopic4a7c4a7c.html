@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24337&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:17:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Need help running PlayerUnknowns Battlegrounds in Sandboxie</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Need help running PlayerUnknowns Battlegrounds in Sandboxie</h2>
+		<p><a href="viewtopic707f707f.html?f=17&amp;t=24337">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24337</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Need help running PlayerUnknowns Battlegrounds in Sandboxie</h3>
+				<div class="date">Posted: <strong>Sat Apr 22, 2017 6:00 pm</strong></div>
+				<div class="author">by <strong>xago</strong></div>
+				<div class="content"><img class="smilies" src="images/smilies/icon_exclaim.gif" width="15" height="15" alt=":!:" title="Exclamation"> Windows 10 Pro 64 bit<br>
+<img class="smilies" src="images/smilies/icon_exclaim.gif" width="15" height="15" alt=":!:" title="Exclamation"> Sandboxie version number 5.18<br>
+<br>
+I'm trying to run the new game PlayerUnknowns Battlegrounds in sandboxie through Steam. I can run the game with no problems outside of sandboxie and I can also run other games like CS:GO inside sandboxie without issues. I believe the problem exists because Battlegrounds needs another program to run alongside the main game client called BattleEye. This is the popup I get when I try to run the game through sandboxie:<br>
+<br>
+ <img src="../i.imgur.com/3HuyiJk.png" class="postimage" alt="Image"><br>
+<br>
+From what I can guess, sandboxie is blocking the loading of this program or it can't load because it is trying to install drivers. I've added "BlockDrivers=n" and "OpenKeyPath=HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services" to my config but it is still unable to run BattleEye. I'm not sure what else I can change to allow this program to run. I'm not really worried about the security of the sandbox at this point, I'd just like to give it whatever access I need to for it to successfully run. My config for the sandbox is currently the following:<br>
+<br>
+[Idle1]<br>
+Enabled=y<br>
+ConfigLevel=7<br>
+AutoRecover=y<br>
+Template=BlockPorts<br>
+Template=LingerPrograms<br>
+Template=Firefox_Phishing_DirectAccess<br>
+Template=AutoRecoverIgnore<br>
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%<br>
+RecoverFolder=%Personal%<br>
+RecoverFolder=%Favorites%<br>
+RecoverFolder=%Desktop%<br>
+CopyLimitKb=49152999<br>
+CopyLimitSilent=y<br>
+OpenPipePath=C:\<br>
+BlockDrivers=n<br>
+OpenKeyPath=HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services<br>
+<br>
+I'll try any suggestions you guys have</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Need help running PlayerUnknowns Battlegrounds in Sandbo</h3>
+				<div class="date">Posted: <strong>Sat Apr 22, 2017 6:53 pm</strong></div>
+				<div class="author">by <strong>xago</strong></div>
+				<div class="content"><img src="../i.imgur.com/mKH9Csb.png" class="postimage" alt="Image"><br>
+<br>
+I have found a BattleEye Service in my Microsoft services that I believe sandboxie needs access to so I added the exe to OpenIpcPath but it didn't seem to solve the issue. These 3 lines were added to my config<br>
+<br>
+OpenIpcPath=$:BEService.exe<br>
+OpenIpcPath=$:BEService_h1z1<br>
+OpenIpcPath=$:BEService_pubg<br>
+<br>
+Did I do that the correct way?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Need help running PlayerUnknowns Battlegrounds in Sandbo</h3>
+				<div class="date">Posted: <strong>Sat Apr 22, 2017 7:49 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Post 3.x versions of SBIE, eg 4.x and 5.x thus far do not respect or use the BlockDrivers= setting.<br>
+It is currently not possible to install drivers and services within a sandbox.<br>
+If the required services or drivers have been installed to the host (as seems to be the case from your screenshot) it *might* be possible to open up a few holes and get it to play well with something in the sandbox but I have this weighing dread that I've heard of this before and didn't see an answer. If the service exists and is active outside of the sandbox a resource access monitor log might hold some clues as to what we could try but it is certainly not something that will work trying to install the service 'inside a sandbox'. =(</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Need help running PlayerUnknowns Battlegrounds in Sandbo</h3>
+				<div class="date">Posted: <strong>Sat Apr 22, 2017 8:38 pm</strong></div>
+				<div class="author">by <strong>xago</strong></div>
+				<div class="content">If there's some way to give sandboxie access and permissions to literally everything on my PC I would try it just to see if it's possible to get BattlEye running at all. I've given the box both Full and Direct access to my entire C: drive with OpenFilePath=C:\ and OpenPipePath=C:\ <br>
+<br>
+The only other thing I could find was the BEService exe but there must be something else since OpenIpcPath=$:BEService.exe didn't resolve the error. Is it possible to have OpenIpcPath=C:\ or is that redundant?  Maybe a registry key active somewhere? Here is my Resource Access Monitor when trying to load the game:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\CdRom0
+(Drive)     \Device\HarddiskVolume3
+(Drive)     \Device\HarddiskVolume7
+(Drive)     \Device\HarddiskVolume8
+(Drive)     \Device\HarddiskVolume9
+Clsid       -------------------------------
+Clsid       {00021401-0000-0000-C000-000000000046} Shortcut
+File/Key    -------------------------------
+Image       -------------------------------
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\[CoreUI]-PID(6060)-TID(5864) 4a517d99-7011-46f3-bd7e-ce939058729f
+Ipc         \BaseNamedObjects\__ComCatalogCache__
+Ipc         \BaseNamedObjects\FontCachePort
+Ipc         \BaseNamedObjects\SteamClientService_SharedMemLock
+Ipc         \RPC Control\epmapper
+Ipc         \SBIE_DummyJob_steamwebhelper.exe_3
+Ipc         \Sessions\1\BaseNamedObjects\__ComCatalogCache__
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users********.DESKTOP-IHAES7O*AppData*Local*Microsoft*Windows*Caches*{3DA71D5A-20CC-432F-A115-DFE92379E91F}.3.ver0x00000000000000f8.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users********.DESKTOP-IHAES7O*AppData*Local*Microsoft*Windows*Caches*cversions.3.ro
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_11ca7870cf9a094d1d6754093bd8821a846e2061c6caaaad5bdb7e38103d2647
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_125892385e2f05055e0cfdada19ab88051514e536c917998459fcd77f36d9a56
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_1985806c60f72965f4232128934b8cd17397d0e94b37fdaf1a1172bf8c4771c4
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_36879cc9ea19ac162f5362aff28221404dd1f67e3874737414ac696a684874dd
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_472b5880b42b86090314aacf6abd726522cd8649fa1d0d5456860dc18c4604bb
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_510cfa85c90c1865e2ec9ed6adc0a77f7a3dd6d9fe78a38d43895fde77387a46
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_5ad9babccab05f62015e9bde4e24b91fb1ff844e0b048e9eef9f6507512ac316
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_5d560196e5769e05e80e7d7e9f1cde06af80da4e1db5d04ac5e2157fa2d96ef8
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_652e58caf6e09bd2c30670cb67f4f611463bc15990f80571ff6645e625ac3137
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_a8a8839ce0ee966d04eb5dd99897e3cc6591e72e2d389a4309fb0d88e404931c
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_bf021818f5bf5fef651b07ac077d8eb09148f53f0f8286967641f4260601819b
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_c27faa13d298ebabc05dfb30fc05abc6427700fd4ac5fe4062f1e3f24ae9e206
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_d38e085378cd9f6dc90ba461d56fb4965ecd4b1f36c6febfc8a4a5a2c754b69c
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_d3fc235851a3509c84231dba5541c3c9b11107bab4c57f0ad1be5bc04e94f7ae
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_d79956bf3c72767aff9ed617e96d361bb281c1ef3df1de531d7c99fbceeb1131
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_e049b9c841f793cb0d6b690ebf811c75958994abb728dfa774965ee54191166f
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_e70a76ee07ce8f253cfe202430d12b1b337a4ede61260a738197d979e3cabe90
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_efbd7250116a746d29bf90060ba574433fd2e4e78241d521abf4d3da88b6ad74
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlay_GameExitingEvent_11064-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlay_InGameRenderingCompleted_11064-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlay_InputEventStream_11064_avail-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlay_InputEventStream_11064_mem-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlay_InputEventStream_11064_mutex-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlay_InputEventStream_11064_written-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlay_ScreenshotStream_11064_avail-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlay_ScreenshotStream_11064_mem-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlay_ScreenshotStream_11064_mutex-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlay_ScreenshotStream_11064_written-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlay_SerializedWorkQueued_11064-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlay_VGUIPaintingCompleted_11064-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlayRender_DetourErrorStream_avail-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlayRender_DetourErrorStream_mem-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlayRender_DetourErrorStream_mutex-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlayRender_DetourErrorStream_written-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlayRender_PaintCmdStream_11064_avail-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlayRender_PaintCmdStream_11064_mem-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlayRender_PaintCmdStream_11064_mutex-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlayRender_PaintCmdStream_11064_written-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlayRender_PIDStream_avail-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlayRender_PIDStream_mem-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlayRender_PIDStream_mutex-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\GameOverlayRender_PIDStream_written-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\HWNDInterface:100a1e
+Ipc         \Sessions\1\BaseNamedObjects\HWNDInterface:140a2e
+Ipc         \Sessions\1\BaseNamedObjects\HWNDInterface:20ae6
+Ipc         \Sessions\1\BaseNamedObjects\HWNDInterface:809fa
+Ipc         \Sessions\1\BaseNamedObjects\HWNDInterface:80a3c
+Ipc         \Sessions\1\BaseNamedObjects\HWNDInterface:a09f8
+Ipc         \Sessions\1\BaseNamedObjects\HWNDInterface:b0a30
+Ipc         \Sessions\1\BaseNamedObjects\HWNDInterface:dc0a28
+Ipc         \Sessions\1\BaseNamedObjects\HWNDInterface:f09ce
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_11064
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_8996
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_DcomLaunch
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\1\BaseNamedObjects\SboxSession
+Ipc         \Sessions\1\BaseNamedObjects\SessionImmersiveColorMutex
+Ipc         \Sessions\1\BaseNamedObjects\SessionImmersiveColorPreference
+Ipc         \Sessions\1\BaseNamedObjects\SM0:11064:64:WilError_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:11064:64:WilError_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SteamGameStream_11064_mem-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\SteamGameStream_11064_mutex-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\SteamOverlayRunning_578080-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\SteamStart_SharedMemFile
+Ipc         \Sessions\1\BaseNamedObjects\SteamStart_SharedMemLock
+Ipc         \Sessions\1\BaseNamedObjects\SteamXInput_mem-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\SteamXInput_mutex-IPCWrapper
+Ipc         \Sessions\1\BaseNamedObjects\windows_shell_global_counters
+Ipc      O  \BaseNamedObjects\msctf.server*******1
+Ipc      O  \KernelObjects\MaximumCommitCondition
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\Wow64.dll
+Ipc      O  \KnownDlls\Wow64cpu.dll
+Ipc      O  \KnownDlls\Wow64win.dll
+Ipc      O  \KnownDlls32\advapi32.dll
+Ipc      O  \KnownDlls32\bcryptPrimitives.dll
+Ipc      O  \KnownDlls32\cfgmgr32.dll
+Ipc      O  \KnownDlls32\clbcatq.dll
+Ipc      O  \KnownDlls32\combase.dll
+Ipc      O  \KnownDlls32\COMDLG32.dll
+Ipc      O  \KnownDlls32\CRYPT32.dll
+Ipc      O  \KnownDlls32\CRYPTBASE.dll
+Ipc      O  \KnownDlls32\gdi32.dll
+Ipc      O  \KnownDlls32\gdi32full.dll
+Ipc      O  \KnownDlls32\IMM32.dll
+Ipc      O  \KnownDlls32\kernel.appcore.dll
+Ipc      O  \KnownDlls32\kernel32.dll
+Ipc      O  \KnownDlls32\kernelbase.dll
+Ipc      O  \KnownDlls32\MSASN1.dll
+Ipc      O  \KnownDlls32\MSCTF.dll
+Ipc      O  \KnownDlls32\msvcp_win.dll
+Ipc      O  \KnownDlls32\MSVCRT.dll
+Ipc      O  \KnownDlls32\NSI.dll
+Ipc      O  \KnownDlls32\ole32.dll
+Ipc      O  \KnownDlls32\OLEAUT32.dll
+Ipc      O  \KnownDlls32\powrprof.dll
+Ipc      O  \KnownDlls32\profapi.dll
+Ipc      O  \KnownDlls32\PSAPI.DLL
+Ipc      O  \KnownDlls32\rpcrt4.dll
+Ipc      O  \KnownDlls32\sechost.dll
+Ipc      O  \KnownDlls32\Setupapi.dll
+Ipc      O  \KnownDlls32\SHCORE.dll
+Ipc      O  \KnownDlls32\SHELL32.dll
+Ipc      O  \KnownDlls32\SHLWAPI.dll
+Ipc      O  \KnownDlls32\SspiCli.dll
+Ipc      O  \KnownDlls32\ucrtbase.dll
+Ipc      O  \KnownDlls32\user32.dll
+Ipc      O  \KnownDlls32\win32u.dll
+Ipc      O  \KnownDlls32\windows.storage.dll
+Ipc      O  \KnownDlls32\WINTRUST.dll
+Ipc      O  \KnownDlls32\WS2_32.dll
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\LSARPC_ENDPOINT
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \Sessions\1\BaseNamedObjects\CicLoadWinStaWinSta0
+Ipc      O  \Sessions\1\BaseNamedObjects\CTF.AsmListCache.FMP*******1
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.Asm.Mutex*******1
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.CtfMonitorInstMutex*******1
+Ipc      O  \Sessions\1\Windows\ApiPort
+Ipc      O  \Sessions\1\Windows\SharedSection
+Ipc      O  \Sessions\1\Windows\Theme658795379
+Ipc      O  \Sessions\1\Windows\ThemeSection
+Ipc      O  \ThemeApiPort
+Ipc      O  \Windows\Theme1110549837
+Pipe        -------------------------------
+Pipe        ?
+Pipe        \Device\CNG
+Pipe        \Device\KsecDD
+Pipe        \Device\MountPointManager
+Pipe        \Device\NamedPipe\mojo.664.10456.9007112863202930907
+Pipe        \device\namedpipe\mojo.664.10456.9007112863202930907
+Pipe        \Device\NamedPipe\mojo.664.10456.9007112863202930907
+Pipe        \device\namedpipe\mojo.664.10456.9007112863202930907
+Pipe        \Device\NamedPipe\mojo.664.6332.4367153607394446264
+Pipe        \device\namedpipe\mojo.664.6332.4367153607394446264
+Pipe     O  \Device\Afd
+Pipe     O  \Device\NetBT_Tcpip_{2A21A6DC-9EFA-4EB6-BC8F-15F9A6E1E62B}
+Pipe     O  \Device\NetBT_Tcpip_{BA372717-96C2-4ED3-9895-935E96B84353}
+WinCls      -------------------------------
+WinCls   O  Shell_TrayWnd
+WinCls   X  ApplicationManager_DesktopShellWindow
+WinCls   X  Progman
+WinCls   X  Valve001</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Need help running PlayerUnknowns Battlegrounds in Sandbo</h3>
+				<div class="date">Posted: <strong>Sun Apr 23, 2017 5:26 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Looks like others have tried to get BattleEye working with Sandboxed games before:<br>
+<a href="viewtopicfc0cfc0c.php?f=11&amp;t=23568&amp;p=124068&amp;hilit=BattlEye#p124068" class="postlink">http://forums.sandboxie.com/phpBB3/view ... ye#p124068</a><br>
+It doesn't appear to have turned out well. =(</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Need help running PlayerUnknowns Battlegrounds in Sandbo</h3>
+				<div class="date">Posted: <strong>Sun May 14, 2017 9:58 pm</strong></div>
+				<div class="author">by <strong>GotMilk?</strong></div>
+				<div class="content">Hey, first post and this caught my eye. I play this game and its super buggy as you know....everyone's got their own problem without sandboxed so even if you got it working, you'll probably have more problems with this unfinished game. I know nothing of this but have you tried adding these too?<br>
+<br>
+C:\Program Files (x86)\Steam\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye<br>
+BEService.x64.exe<br>
+BEClient_x64.dll<br>
+BELauncher.ini<br>
+Install_BattleEye.bat<br>
+Uninstall_BattleEye.bat<br>
+<br>
+Hope that helps, if you get it working keep this thread updated. I'm going to have everything more secure through Sandboxie so it'll benefit me and others.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24337&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:17:33 GMT -->
+</html>

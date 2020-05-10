@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24125&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:50:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Office 2016 fails to launch</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Office 2016 fails to launch</h2>
+		<p><a href="viewtopic2e292e29.html?f=11&amp;t=24125">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24125</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Office 2016 fails to launch</h3>
+				<div class="date">Posted: <strong>Wed Mar 08, 2017 7:25 pm</strong></div>
+				<div class="author">by <strong>downloaderfan</strong></div>
+				<div class="content">As the title says, Office 2016 fails to launch when I try to run it sandboxed. I'm using 32 bit office on 64 bit windows 10 anniversary updated. My sandboxie is registered and version is 5.16 (64 bit). When I try to run as administrator, it says could not invoke program.<br>
+System error code:<br>
+%1 is not a valid Win32 application.<br>
+(193)<br>
+ When I try to run it without administrator access, it says<br>
+Something went wrong. We couldn't start your program. Please try starting it again.<br>
+<br>
+Microsoft Office click to run is checked in Software Compatibility options. What am I doing wrong?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2016 fails to launch</h3>
+				<div class="date">Posted: <strong>Thu Mar 09, 2017 10:30 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello downloaderfan,<br>
+<br>
+Are you trying to open the application itself (Word, Excel, etc...) or a file? <br>
+If a file--&gt;Are they opening directly in Office outside Sbie? (If not, you will have to associate the file type to the program).<br>
+<br>
+Any chance you have changed the installation path for Sandboxie (meaning, other than the default) ?<br>
+Please have a look at this: <br>
+<a href="viewtopic91049104.php?f=2&amp;t=23015&amp;hilit=something+went+wrong&amp;start=15#p122288" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 15#p122288</a><br>
+<br>
+Make sure to update the template to the correct location, if needed. Then reboot and re-try (empty the contents of your Sandbox first). <br>
+<br>
+If you are still experiencing issues, please let us know if other applications launch and if you have any Antivirus software installed.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2016 fails to launch</h3>
+				<div class="date">Posted: <strong>Thu Mar 09, 2017 11:07 am</strong></div>
+				<div class="author">by <strong>downloaderfan</strong></div>
+				<div class="content">Hi, thanks for the reply <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+
+<blockquote><div><cite>Barb@Invincea wrote:</cite>
+Are you trying to open the application itself (Word, Excel, etc...) or a file? <br>
+If a file--&gt;Are they opening directly in Office outside Sbie? (If not, you will have to associate the file type to the program).</div></blockquote>
+
+I'm trying to open a docx file from the file explorer, it launches in Office 2016 perfectly outside sandboxie.<br>
+
+<blockquote><div><cite>Barb@Invincea wrote:</cite>
+Any chance you have changed the installation path for Sandboxie (meaning, other than the default) ?<br>
+Please have a look at this: <br>
+<a href="viewtopic91049104.php?f=2&amp;t=23015&amp;hilit=something+went+wrong&amp;start=15#p122288" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 15#p122288</a></div></blockquote>
+
+No, installation path is the default C:\Program Files\Sandboxie<br>
+
+<blockquote><div><cite>Barb@Invincea wrote:</cite>
+If you are still experiencing issues, please let us know if other applications launch and if you have any Antivirus software installed.</div></blockquote>
+
+I fiddled around with Sandboxie some more after I posted this thread &amp; was able to fix this. Until now, I only had 1 sandbox, that is the DefaultBox. It's settings were customized to my liking. Sandboxie refused to open Office 2016 under that sandbox.<br>
+<br>
+So I created a new sandbox named Office_2016 with default settings and tried to launch Office 2016 in it &amp; guess what? It worked. Now when I tried to launch the office file in my first defaultbox sandbox without changing any settings, to my surprise, it worked &amp; launched properly. Now, when I deleted my second sandbox i.e. Office_2016, office 2016 again stopped working for DefaultBox. The presence of a second sandbox somehow makes office 2016 work in both sandboxes, else office 2016 just refuses to work. Weird behavior, but I'm happy I'm able to launch office 2016 whatsoever. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2016 fails to launch</h3>
+				<div class="date">Posted: <strong>Thu Mar 09, 2017 11:21 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello downloaderfan,<br>
+<br>
+Having multiple Sandboxes will not affect program functionality. Have you tried deleting the contents of your Sandbox?<br>
+If you provide your configuration file (Sandboxie Control --&gt; Configure---&gt; Edit configuration), we can take a look and see if anything stand out.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2016 fails to launch</h3>
+				<div class="date">Posted: <strong>Thu Mar 09, 2017 11:43 am</strong></div>
+				<div class="author">by <strong>downloaderfan</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>Hello downloaderfan,<br>
+<br>
+Having multiple Sandboxes will not affect program functionality. Have you tried deleting the contents of your Sandbox?<br>
+Barb.-</div></blockquote>
+
+Yes, defaultbox sandbox is set to delete automatically once the last program closes.<br>
+
+<blockquote><div><cite>Barb@Invincea wrote:</cite>
+If you provide your configuration file (Sandboxie Control --&gt; Configure---&gt; Edit configuration), we can take a look and see if anything stand out.
+</div></blockquote>
+
+Here you go, <br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+KnownConflicts={BD71D245-1A8B-4FB3-83E4-74F77FB39267},{77E7AE5C-181C-4CAF-ADBF-946F11C1CE26}
+Template=OfficeClickToRun
+Template=WindowsRasMan
+Template=Evernote
+Template=WindowsLive
+Template=AdobeAcrobatReader
+Template=Kaspersky
+Template=InternetDownloadManager
+Template=OfficeLicensing
+ActivationPrompt=n
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=OfficeClickToRun
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+Enabled=y,downloaderfan
+BoxNameTitle=-
+BorderColor=#0080FF
+AutoDelete=y
+NeverDelete=n
+
+[UserSettings_2DC00426]
+
+SbieCtrl_UserName=downloaderfan
+SbieCtrl_ShowWelcome=n
+SbieCtrl_NextUpdateCheck=1489572033
+SbieCtrl_UpdateCheckNotify=y
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_WindowCoords=47,134,873,449
+SbieCtrl_ActiveView=40021
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_EnableLogonStart=n
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=y
+SbieCtrl_AddQuickLaunchIcon=y
+SbieCtrl_AddContextMenu=y
+SbieCtrl_AddSendToMenu=y
+SbieCtrl_ExplorerNotify=n
+SbieCtrl_BoxExpandedView=DefaultBox,Office_2016
+
+[Office_2016]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF
+BoxNameTitle=-
+AutoDelete=y
+NeverDelete=n</code></pre></div>
+
+Without the Office_2016 sandbox, office 2016 refuses to launch. I recreated &amp; deleted  Office_2016 sandbox twice &amp; both time office 2016 stopped working after the second sandbox deletion so I'm pretty sure the existence of second sandbox is somehow making office 2016 work.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2016 fails to launch</h3>
+				<div class="date">Posted: <strong>Thu Mar 09, 2017 1:05 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi downloaderfan,<br>
+<br>
+Definitely strange, and I cannot reproduce it. <br>
+
+<blockquote class="uncited"><div>Without the Office_2016 sandbox, office 2016 refuses to launch. I recreated &amp; deleted Office_2016 sandbox twice &amp; both time office 2016 stopped working after the second sandbox deletion so I'm pretty sure the existence of second sandbox is somehow making office 2016 work.</div></blockquote> <br>
+So, if you create the second Sandbox, you can run Office 2016 under the Default one? <br>
+Any chance that the default Sandbox is located anywhere other than C: drive?  <br>
+<br>
+Last but not least, can you please try the latest Beta and see if that issue follows you there? <br>
+<a href="viewtopiccca7cca7.php?f=60&amp;t=23888#p125732" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 88#p125732</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2016 fails to launch</h3>
+				<div class="date">Posted: <strong>Wed Apr 11, 2018 9:03 am</strong></div>
+				<div class="author">by <strong>sand1</strong></div>
+				<div class="content">Hello, <br>
+<br>
+Which ver of win 10 are you using ?<br>
+<br>
+Maybe win 10 pro N and not win 10 pro ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2016 fails to launch</h3>
+				<div class="date">Posted: <strong>Mon Apr 16, 2018 11:56 am</strong></div>
+				<div class="author">by <strong>sand1</strong></div>
+				<div class="content">Well, I installed office 2016 again on win 10 pro ( Not N this time ) <br>
+<br>
+And the same thing It wont launch under sandboxie and "click to run" selected . (sandboxie 5.24) <br>
+<br>
+The error is " We're sorry , but word has run into an error that is preventing it prom working correctly. Word will need to be closed as a result. Would you like to repair it now ?" <br>
+<br>
+This is after word is like opening and the "Select a template" page is behind the message . <br>
+<br>
+My operating system is win 10 pro RS (With fall creators) . I think and not sure (About the RS) . Which means that is a version for developers (I think).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2016 fails to launch</h3>
+				<div class="date">Posted: <strong>Mon Apr 16, 2018 12:04 pm</strong></div>
+				<div class="author">by <strong>sand1</strong></div>
+				<div class="content">I have an idea now . <br>
+<br>
+Because this is a second win 10 installation on the same pc , windows gave me the "windows.old" folder which suppose to be gone by itself 15 days after the installation .<br>
+Let's see then .</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2016 fails to launch</h3>
+				<div class="date">Posted: <strong>Mon Apr 16, 2018 12:06 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello sand1,<br>
+<br>
+Are you experiencing the same issue as the original poster? <br>
+Does Office work fine outside Sandboxie?<br>
+Is it activated correctly, oustside Sbie? <br>
+<br>
+Please provide all of  the required information so that we can test this behavior :<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Also, please follow the suggested steps from this thread (check the installation path, test a new Sandbox with default settings, etc..it is all listed above). <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2016 fails to launch</h3>
+				<div class="date">Posted: <strong>Sat Apr 28, 2018 7:44 am</strong></div>
+				<div class="author">by <strong>sand1</strong></div>
+				<div class="content">The issue is solved In terms that i have managed to sandbox word 2016 :<br>
+<br>
+In sandboxie settings &gt; applications &gt; all applications <br>
+<br>
+<strong>Don't select "microsoft office click to run"  but select "Windows and office licencing service"</strong>  <br>
+<br>
+ <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> <br>
+<br>
+What about sandboxing windows app store applications or edge ? <br>
+<br>
+Didn't try to force a virus through this applications though   <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"><br>
+<br>
+The windows 10 creators DPI issue is concerning me more then a virus these days ...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2016 fails to launch</h3>
+				<div class="date">Posted: <strong>Mon Apr 30, 2018 10:02 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello sand1,<br>
+<br>
+Sandboxie should automatically detect and add templates as needed. To use Office Click-to-run template you need the paid version of Sandboxie. <br>
+If you would like me to test and troubleshoot your scenario, I need the info I asked for in my previous response. <br>
+<br>
+Regarding your other questions (if you have additional questions, please reply on the respective threads)<br>
+Metro apps: <a href="../KnownConflicts.html#Windows%2010" class="postlink">https://www.sandboxie.com/KnownConflicts#Windows%2010</a><br>
+<br>
+Some malware threads:<br>
+<a href="viewtopic75e775e7.html?p=129247#p129247" class="postlink">viewtopic.php?p=129247#p129247</a><br>
+<a href="viewtopic34c834c8.html?p=127482#p127482" class="postlink">viewtopic.php?p=127482#p127482</a><br>
+<br>
+Win 10 DPI threads:<br>
+<a href="viewtopic02b502b5.html?p=127396#p127396" class="postlink">viewtopic.php?p=127396#p127396</a><br>
+<a href="viewtopic378e378e.html?t=22271" class="postlink">viewtopic.php?t=22271</a><br>
+<a href="viewtopic81fb81fb.html?t=24332" class="postlink">viewtopic.php?t=24332</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24125&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:50:38 GMT -->
+</html>

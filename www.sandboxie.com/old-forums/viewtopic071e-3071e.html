@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24171&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:22:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; How do I change the Sandbox folder path and Sandboxie.ini</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>How do I change the Sandbox folder path and Sandboxie.ini</h2>
+		<p><a href="viewtopicadf9adf9.html?f=17&amp;t=24171">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24171</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>How do I change the Sandbox folder path and Sandboxie.ini</h3>
+				<div class="date">Posted: <strong>Thu Mar 23, 2017 10:17 pm</strong></div>
+				<div class="author">by <strong>TryKindness</strong></div>
+				<div class="content">The sandbox path is currently set to C:\Sandbox<br>
+<br>
+I tried adding the following lines to the <strong>[GlobalSettings]</strong> section in Sandboxie.ini but it didn't work.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>FileRootPath=D:\Sandbox\%SANDBOX%
+BoxRootFolder=D:\Sandbox</code></pre></div>
+
+Also, is there a way to change the path of Sandboxie.ini?<br>
+It's currently set to C:\Windows but I don't want it there.<br>
+<br>
+Sandboxie version: 5.16</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How do I change the Sandbox folder path and Sandboxie.in</h3>
+				<div class="date">Posted: <strong>Fri Mar 24, 2017 9:52 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello TryKindness,<br>
+<br>
+To change the rooth path, open Sandboxie Control --&gt; Sandbox ---&gt; Set Container Folder, choose the desired location.<br>
+This is what it looks line under Global Settings in Sandboxie.ini<br>
+  [ GlobalSettings]<br>
+   FileRootPath=C:\Sandbox\%USER%\%SANDBOX%<br>
+<br>
+As for your second question:<br>
+<a href="../index6e14.html?SandboxieIni" class="postlink">https://www.sandboxie.com/index.php?SandboxieIni</a>
+<blockquote class="uncited"><div>Sandboxie looks for the file Sandboxie.ini in the following folders, in this order:<br>
+In the Windows folder: C:\WINDOWS on most Windows installation; C:\WINNT on Windows 2000<br>
+In the Sandboxie installation folder: Typically C:\Program Files\Sandboxie.<br>
+...<br>
+Sandboxie does not support any other, custom location for the Sandboxie.ini file.</div></blockquote>
+
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24171&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:22:37 GMT -->
+</html>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/22696" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2016-03-25T23:56:49-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/22696</id>
+
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-03-25T23:56:49-04:00</updated>
+
+		<published>2016-03-25T23:56:49-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22696&amp;p=119565#p119565</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22696&amp;p=119565#p119565"/>
+		<title type="html"><![CDATA[Re: Sandboxie Hotkey]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22696&amp;p=119565#p119565"><![CDATA[
+Not a problem!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Fri Mar 25, 2016 11:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[PaulaTheKoala]]></name></author>
+		<updated>2016-03-25T23:53:18-04:00</updated>
+
+		<published>2016-03-25T23:53:18-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22696&amp;p=119564#p119564</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22696&amp;p=119564#p119564"/>
+		<title type="html"><![CDATA[Re: Sandboxie Hotkey]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22696&amp;p=119564#p119564"><![CDATA[
+<blockquote><div><cite>Craig@Invincea wrote:</cite>Thank you very much!</div></blockquote>Sorry about making you have to approve it again, didn't know editing the post would do that. &gt;_&lt;<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=30684">PaulaTheKoala</a> — Fri Mar 25, 2016 11:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-03-25T23:31:39-04:00</updated>
+
+		<published>2016-03-25T23:31:39-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22696&amp;p=119563#p119563</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22696&amp;p=119563#p119563"/>
+		<title type="html"><![CDATA[Re: Sandboxie Hotkey]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22696&amp;p=119563#p119563"><![CDATA[
+Thank you very much!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Fri Mar 25, 2016 11:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[PaulaTheKoala]]></name></author>
+		<updated>2016-03-25T18:37:10-04:00</updated>
+
+		<published>2016-03-25T18:37:10-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22696&amp;p=119556#p119556</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22696&amp;p=119556#p119556"/>
+		<title type="html"><![CDATA[Sandboxie Hotkey]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22696&amp;p=119556#p119556"><![CDATA[
+Due to the lack of support for a hotkey to terminate all running applications, I ended up doing it myself.<br>At first, I wrote a small tool to solve this problem, but it wasn't really necessary since I had Auto Hotkey installed, so I ended up turning it into an AHK script instead:<br><div class="codebox"><p>CODE: </p><pre><code>Sandboxie := NULLIfExist, C:\Program Files\Sandboxie\Start.exe{Sandboxie := "C:\Program Files\Sandboxie"}IfExist, C:\Program Files (x86)\Sandboxie\Start.exe{Sandboxie := "C:\Program Files (x86)\Sandboxie"}if (Sandboxie == NULL){ExitApp}Menu, Tray, Icon, %Sandboxie%\SbieCtrl.exe, 11Menu, Tray, Tip, Sandboxie Hotkey (CTRL + F1)Menu, Tray, NoStandardMenu, Tray, Add, Exit^F1::Run, %Sandboxie%\Start.exe /terminate_allreturnExit:ExitAppreturn</code></pre></div>You must have AHK installed to use the script.<br>To use the script, paste the above code into notepad and save it as Sandboxie.ahk, double click the file to run it, use CTRL + F1 to terminate all running applications.<br><br>The script can be compiled into an EXE but since I'm new here and I don't know the rules on posting EXEs I decided not to.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=30684">PaulaTheKoala</a> — Fri Mar 25, 2016 6:37 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

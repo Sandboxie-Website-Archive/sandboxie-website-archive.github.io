@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=3606&start=60&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:58:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SandboxDiff - Registry/Files changes - Page 5</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SandboxDiff - Registry/Files changes</h2>
+		<p><a href="viewtopicdbb3dbb3.html?f=22&amp;t=3606">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=3606</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>5</strong> of <strong>8</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jul 18, 2009 1:39 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Sounds like a C++ runtime problem maybe?  What version of the runtime was the app compiled against, and what version do you all have installed?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jul 18, 2009 6:16 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>wraithdu wrote:</cite>... and what version do you all have installed?</div></blockquote>msvcp60.dll is apparently a part of the C++ Run-time package. Mine is:<br>
+Microsoft (R) C++ Runtime Library, V 6.2.3104.0, Date Modified 4/13/2008.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 20, 2009 12:38 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">So is there any fix? msgwait.exe keeps crashing when sandboxdiff is running.<br>
+I need this tool very much. Any alternatives?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 20, 2009 10:00 am</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content"><blockquote><div><cite>Anonymous wrote:</cite>So is there any fix? msgwait.exe keeps crashing when sandboxdiff is running.<br>
+I need this tool very much. Any alternatives?</div></blockquote>
+Please wait a little bit, if you can...  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>SandboxDiff updated</h3>
+				<div class="date">Posted: <strong>Mon Jul 20, 2009 10:52 am</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content">SandboxDiff updated. <br>
+<br>
+Changes: <br>
+<br>
+- Fixed: an issue when the RegHive file size is bigger that 6 MB.<br>
+- Added: when RegHive file can't be load for some reason, the user is advised - and SandboxDiff closed.<br>
+- Fixed: get around the 'msgwait.exe' file crash issue in some users'systems.<br>
+<br>
+<br>
+Download in: <a href="../index4d6e.html?ContributedUtilities#SandboxDiff" class="postlink">Contributed Utilities page</a>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 21, 2009 5:04 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Thanks for the update. It fixed the msgwait.exe problem.<br>
+<br>
+I have configured the path:<br>
+<strong>copy "C:\Sandbox\Superman\DefaultBox\RegHive" hive_1.bak /v /y &gt; NUL</strong><br>
+<br>
+Every time I run the sandboxdiff I encounter this error message:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>file open error:[hive_1.reg.txt]</code></pre></div>
+What is this?<br>
+What could cause such a problem?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 21, 2009 11:40 am</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content">Humm. What is your OS? Do you have a 'reg.exe' file  in 'WINDOWS\system32' folder?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 22, 2009 12:44 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content"><blockquote><div><cite>majoMo wrote:</cite>Humm. What is your OS? Do you have a 'reg.exe' file  in 'WINDOWS\system32' folder?</div></blockquote>
+Windows XP<br>
+Yes<br>
+Did you hardcode the default path of Windows? In other words does it still work if people installs Windows in other drives (drive letter other than C)?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 22, 2009 9:02 am</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content">Yes it should works. BTW is your Windows folder'path in another drive, other than C?<br>
+<br>
+1. Can you try this?: to do the bat file e.g. 'name.bat' in your text editor with:<br>
+<br>
+<span style="font-size: 75%; line-height: normal">@echo off<br>
+reg.exe load HKU\hive hive_1.bak<br>
+reg.exe export HKU\hive hive_1.reg.txt<br>
+reg.exe unload HKU\hive<br>
+pause</span><br>
+<br>
+Run it; some warnings? did it create a 'hive_1.reg.txt' file?<br>
+<br>
+2. Copy 'reg.exe' to where 'SandboxDiff.exe' is. Run 'SandboxDiff.exe'. Same message yet?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 24, 2009 1:16 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">My account is a limited user account I guess it's the cause of the problem.<br>
+<br>
+1. It cannot run even though the account has "read" and "read and run" rights on reg.exe<br>
+The message complains:<br>
+Error: The client has no special rights to run it<br>
+System couldn't find specific registry key<br>
+Error: The client has no special rights to run it<br>
+<br>
+2. I copied the reg.exe using the admin account.<br>
+I added my account into the group. Set "read" and "read and run" rights.<br>
+Same error message:<br>
+file open error:[hive_1.reg.txt]<br>
+<br>
+What should I configure to allow a limited user account to run it successfully?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 24, 2009 4:03 pm</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content"><blockquote class="uncited"><div><span style="font-size: 75%; line-height: normal">1. Right-click the program and select 'Run as...'. Specify a non-limited account.<br>
+<br>
+2. As a workaround, you can use an Administrator account to run the program by performing the following steps: <br>
+<br>
+Right-click the program shortcut, then select Properties. <br>
+From the Shortcut tab, click Advanced. <br>
+Select the "Run with different credentials" check box, as this figure shows, then click OK. <br>
+Click OK to close the Properties dialog box. <br>
+<br>
+Now, when you execute the program shortcut, XP will prompt you to enter the user context in which you want to run the program. Select "The following user" and specify a non-limited account.</span></div></blockquote>
+Hope this help.  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>File Comparison: More than Filename/Presence of File?</h3>
+				<div class="date">Posted: <strong>Thu Aug 13, 2009 12:49 am</strong></div>
+				<div class="author">by <strong>Todd</strong></div>
+				<div class="content">Much thanks for this SBie add-on; works great!<br>
+<br>
+Regarding the file comparison, does SandboxDiff compare any more than the filename--or simply the presence of the file(s)--in the sandbox?  For example, if a file already present in the sandbox was updated (but filename remained the same) during a sandboxed program session, would SandboxDiff detect the difference and highlight it green in the results?  Or would the before and after entries remain un-highlighted?<br>
+<br>
+The reason I ask is after testing it on a program installation, I thought it would be interesting to test it on a subsequent update to that program (weeks later).  Prior to the update test, I ran a sandboxed session of the program to pre-populate the sandbox with files already installed and used by the program (so those that didn't change after the update wouldn't show up highlighted green in the results [they would if they weren't in the sandbox already]).  I then started SandboxDiff, started the sandboxed program, then updated it in the sandbox.<br>
+<br>
+SandboxDiff worked just fine.  But what I'm not sure is whether one or more files that were updated (but no change to filename) were recognized by SandboxDiff as having changed.  Does SandboxDiff check any other file attributes?  One way to be sure would be to compare a before and after hash (such as SHA1) of the files, but not sure how that would impact comparison speed (runs pretty zippy on my XP SP3 quad-core CPU).<br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: File Comparison: More than Filename/Presence of File?</h3>
+				<div class="date">Posted: <strong>Sat Aug 15, 2009 10:05 am</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content"><blockquote><div><cite>Todd wrote:</cite>Does SandboxDiff check any other file attributes?</div></blockquote>
+No, it doesn't do that. I'll check if it's easy to do something like that.<br>
+<br>
+I appreciated your feedback and your question/suggestion. Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 22, 2009 12:54 pm</strong></div>
+				<div class="author">by <strong>slatester</strong></div>
+				<div class="content">Hi, thanks for this, very helpful.<br>
+<br>
+I also get a regdump.exe crash, but like you said the changes are still visible in Comp-Reg.REG.txt.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Sep 26, 2009 7:40 pm</strong></div>
+				<div class="author">by <strong>majoMo</strong></div>
+				<div class="content">@ <em>slatester</em>, <br>
+<br>
+Good to know you didn't lose the registry entries'changes.<br>
+<br>
+Glad you found it helpful.     <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> <br>
+<br>
+Regards</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>5</strong> of <strong>8</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=3606&start=60&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:58:02 GMT -->
+</html>

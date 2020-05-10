@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=39&t=15899&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:41:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.03] Fixes/improvements to DDE across the sandbox - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.03] Fixes/improvements to DDE across the sandbox</h2>
+		<p><a href="viewtopic39363936.html?f=39&amp;t=15899">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=39&amp;t=15899</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 08, 2013 9:10 pm</strong></div>
+				<div class="author">by <strong>stevet</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>How about if you add in Sandbox Settings &gt; Resource Access &gt; Window Access:<br>
+<br>
+<strong>BMKBUDDY/IgnoreUIPI</strong><br>
+<br>
+Does this help?</div></blockquote>
+
+No, that does not work, with 4.04 64bit.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 08, 2013 9:23 pm</strong></div>
+				<div class="author">by <strong>stevet</strong></div>
+				<div class="content"><blockquote><div><cite>stevet wrote:</cite><blockquote><div><cite>tzuk wrote:</cite>How about if you add in Sandbox Settings &gt; Resource Access &gt; Window Access:<br>
+<br>
+<strong>BMKBUDDY/IgnoreUIPI</strong><br>
+<br>
+Does this help?</div></blockquote>
+
+No, that does not work, with 4.04 64bit.</div></blockquote>
+
+It does fetch the bookmark on the first try but the error message still come up "SBIE2205 Service not implemented: DDE DATA" On the second try it does not work. This is with Drop-Rights enabled. Getting closer!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 09, 2013 3:33 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Yes, on reviewing the code, it seems the code that handles DDE DATA does not respect the /IgnoreUIPI switch at all.<br>
+I can probably fix that in a future version.  Consider turning off Drop Rights for now.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 10, 2013 2:26 am</strong></div>
+				<div class="author">by <strong>incognito555</strong></div>
+				<div class="content">Chrome doesn't support DDE right?<br>
+<br>
+Hope we can get a workaround for the issue seen here:<br>
+<a href="../phpbb/viewtopic633d.php?t=15746" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15746</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>BookmarkBuddy</h3>
+				<div class="date">Posted: <strong>Thu Aug 01, 2013 9:12 pm</strong></div>
+				<div class="author">by <strong>stevet</strong></div>
+				<div class="content">4.05.03<br>
+Windows 7 64<br>
+Iron<br>
+<br>
+BookmarkBuddy does not fetch bookmarks.<br>
+I was wondering if this is being work on yet?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 02, 2013 3:20 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">No.  Please note that I am going to move your post into this topic:<br>
+<br>
+<a href="../phpbb/viewtopic0de9.php?t=15899" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15899</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Aug 03, 2013 6:25 am</strong></div>
+				<div class="author">by <strong>cj716</strong></div>
+				<div class="content">I've assumed a problem I have with forcing Excel 2013 (both programme and folder force) on Win 8 is related to the DDE issue as 'send to' works fine. It may not be of course but I wanted to see if  the work being done on this might also fix my problem before reporting.  <br>
+<br>
+Is this issue part of the plans for the current (.05) beta cycle?<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 04, 2013 3:10 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">As far as I know the DDE features now work reasonably well and I wasn't planning on making any more changes there.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=39&t=15899&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:41:16 GMT -->
+</html>

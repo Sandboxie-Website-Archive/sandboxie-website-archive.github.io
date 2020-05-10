@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/19837" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2015-02-28T14:42:16-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/19837</id>
+
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2015-02-28T14:42:16-04:00</updated>
+
+		<published>2015-02-28T14:42:16-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107619#p107619</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107619#p107619"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107619#p107619"><![CDATA[
+<blockquote><div><cite>MrBoxer wrote:</cite>Chrome 64 bit ( 40.0.2214.115 m ) bookmarks won't save in sandboxie ( 4.16 64 bit). I already allowed " direct access to bookmarks/bookmark &amp; history database.</div></blockquote>This can happen if your Chrome profile folder is not where the Sandboxie templates expect it to be:<br>%Local AppData%\Google\Chrome\User Data\Default<br><br>That's:<br>C:\Users\(username)\AppData\Local\Google\Chrome\User Data\Default<br><br>If the "Default" profile folder isn't there, you must tell Sandboxie where it is:<br>Sandbox Settings &gt; Applications &gt; Folders<br>If Chrome is listed in the box with the pull-down arrow, you must Browse to and select the "Default" folder using the Alternate Location box.<br>(Sorry I can't be more specific, but the Win 8 PC that I'm using doesn't have anything in the box with the pull-down arrow, so I can only assume that you will see a Browse button there)<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Sat Feb 28, 2015 1:42 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MrBoxer]]></name></author>
+		<updated>2015-02-26T23:01:17-04:00</updated>
+
+		<published>2015-02-26T23:01:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107594#p107594</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107594#p107594"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107594#p107594"><![CDATA[
+Yes, i already have.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=26321">MrBoxer</a> — Thu Feb 26, 2015 10:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Mr.X]]></name></author>
+		<updated>2015-02-26T17:14:16-04:00</updated>
+
+		<published>2015-02-26T17:14:16-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107589#p107589</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107589#p107589"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107589#p107589"><![CDATA[
+<blockquote><div><cite>MrBoxer wrote:</cite>Chrome 64 bit ( 40.0.2214.115 m ) bookmarks won't save in sandboxie ( 4.16 64 bit). I already allowed " direct access to bookmarks/bookmark &amp; history database. Still no luck but firefox &amp; IE is working fine. Btw i'm using window 8.1 ( 64 bit). Any help will appreciated.</div></blockquote>Check your Sandboxie.ini file, you must have these lines in it:<br>Template=Chrome_Phishing_DirectAccess<br>Template=Chrome_Bookmarks_DirectAccess<br>Template=Chrome_Sync_DirectAccess<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16759">Mr.X</a> — Thu Feb 26, 2015 4:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MrBoxer]]></name></author>
+		<updated>2015-02-26T16:00:49-04:00</updated>
+
+		<published>2015-02-26T16:00:49-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107588#p107588</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107588#p107588"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107588#p107588"><![CDATA[
+Chrome 64 bit ( 40.0.2214.115 m ) bookmarks won't save in sandboxie ( 4.16 64 bit). I already allowed " direct access to bookmarks/bookmark &amp; history database. Still no luck but firefox &amp; IE is working fine. Btw i'm using window 8.1 ( 64 bit). Any help will appreciated.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=26321">MrBoxer</a> — Thu Feb 26, 2015 3:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AMD]]></name></author>
+		<updated>2015-02-21T09:18:29-04:00</updated>
+
+		<published>2015-02-21T09:18:29-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107493#p107493</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107493#p107493"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107493#p107493"><![CDATA[
+Bo<br><br>Thanks for the explanation.<br><br>Andy<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11559">AMD</a> — Sat Feb 21, 2015 8:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2015-02-20T15:47:09-04:00</updated>
+
+		<published>2015-02-20T15:47:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107481#p107481</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107481#p107481"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107481#p107481"><![CDATA[
+<blockquote><div><cite>AMD wrote:</cite>It's helped a bit but it used to delete almost immediately after closing the browser but now it either takes a while or not at all.</div></blockquote>Andy, IE10 and IE11 takes a few extra seconds more than before to close. It really has nothing to do with SBIE. You can check this yourself by opening IE out of the sandbox and after closing it, you ll still see it running in task manager for a few more seconds. IE9 is not like that. IE9 closes bang bang.<br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Fri Feb 20, 2015 2:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AMD]]></name></author>
+		<updated>2015-02-20T14:59:50-04:00</updated>
+
+		<published>2015-02-20T14:59:50-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107479#p107479</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107479#p107479"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107479#p107479"><![CDATA[
+<blockquote><div><cite>bo.elam wrote:</cite><blockquote><div><cite>AMD wrote:</cite>Auto delete on latest beta not working for me on closing IE browser (default sandbox).</div></blockquote>Andy, try making IE the leader program in your IE sandbox. That might solve your issue.<br>Sandbox settings&gt;Program stop&gt;Leader program<br><br>Bo</div></blockquote>Thanks Bo<br><br>It's helped a bit but it used to delete almost immediately after closing the browser but now it either takes a while or not at all.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11559">AMD</a> — Fri Feb 20, 2015 1:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2015-02-20T14:29:26-04:00</updated>
+
+		<published>2015-02-20T14:29:26-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107478#p107478</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107478#p107478"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107478#p107478"><![CDATA[
+4.16 has been officially released.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Fri Feb 20, 2015 1:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2015-02-20T11:59:57-04:00</updated>
+
+		<published>2015-02-20T11:59:57-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107471#p107471</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107471#p107471"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107471#p107471"><![CDATA[
+<blockquote><div><cite>AMD wrote:</cite>Auto delete on latest beta not working for me on closing IE browser (default sandbox).</div></blockquote>Andy, try making IE the leader program in your IE sandbox. That might solve your issue.<br>Sandbox settings&gt;Program stop&gt;Leader program<br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Fri Feb 20, 2015 10:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AMD]]></name></author>
+		<updated>2015-02-19T19:18:16-04:00</updated>
+
+		<published>2015-02-19T19:18:16-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107460#p107460</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107460#p107460"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107460#p107460"><![CDATA[
+Auto delete on latest beta not working for me on closing IE browser (default sandbox).<br><br>Using Windows 8.1 64 bit if it helps.<br><br>Andy<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11559">AMD</a> — Thu Feb 19, 2015 6:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nick s]]></name></author>
+		<updated>2015-02-19T07:28:09-04:00</updated>
+
+		<published>2015-02-19T07:28:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107454#p107454</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107454#p107454"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107454#p107454"><![CDATA[
+A random Chrome error has reappeared with the 4.16 preview. Haven't seen in it in quite a few builds. I execute Chrome and the process terminates immediately. Never appears on screen. It's random. Once a week or several times in a day. Applies to both Chrome x86 or x64 on Windows 8.1.1 x64. Only running AppGuard along with Sandboxie.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2005">nick s</a> — Thu Feb 19, 2015 6:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2015-02-18T13:31:39-04:00</updated>
+
+		<published>2015-02-18T13:31:39-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107435#p107435</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107435#p107435"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107435#p107435"><![CDATA[
+4.16 preview is available!  If everything is good, then I'll just be changing the exe names for the official release later today or tomorrow.<br><br>Combined 32/64 installer:<br><a href="http://www.sandboxie.com/SandboxieInstall-416.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall-416.exe</a><br><br>Separate:<br><a href="http://www.sandboxie.com/SandboxieInstall32-416.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall32-416.exe</a><br><a href="http://www.sandboxie.com/SandboxieInstall64-416.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall64-416.exe</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Wed Feb 18, 2015 12:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Astrohere]]></name></author>
+		<updated>2015-02-17T10:55:05-04:00</updated>
+
+		<published>2015-02-17T10:55:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107386#p107386</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107386#p107386"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107386#p107386"><![CDATA[
+This error is also back for me in 4.15.12:<br><br>SBIE2335 Initialization failed for process opera.exe [33 / 0]<br><br>In which case the whole of Opera becomes sluggish and that error keeps popping up at pretty much every tab.<br>And sometimes the tabs won't load at all.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=25785">Astrohere</a> — Tue Feb 17, 2015 9:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2015-02-14T16:09:02-04:00</updated>
+
+		<published>2015-02-14T16:09:02-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107321#p107321</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107321#p107321"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107321#p107321"><![CDATA[
+<blockquote><div><cite>Curt@invincea wrote:</cite> It is the best Sbie available.</div></blockquote>....to date. It does feel that way (XP and W7 32 bits). <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"> <br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Sat Feb 14, 2015 3:09 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[boxthefox]]></name></author>
+		<updated>2015-02-14T05:55:15-04:00</updated>
+
+		<published>2015-02-14T05:55:15-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107314#p107314</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107314#p107314"/>
+		<title type="html"><![CDATA[Re: 4.15 Beta Available (Latest Version 4.15.12)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19837&amp;p=107314#p107314"><![CDATA[
+Thanks guys!   <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><img src="./../../.https://forums.sandboxie.com/phpBB3/download/file.php?id=228" class="postimage" alt="sandboxie.png" onclick="viewableArea(this);" /></dt></dl></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=26090">boxthefox</a> — Sat Feb 14, 2015 4:55 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

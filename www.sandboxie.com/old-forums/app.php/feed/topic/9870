@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/9870" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-03-01T18:00:48-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/9870</id>
+
+		<entry>
+		<author><name><![CDATA[DSAnd]]></name></author>
+		<updated>2012-11-29T14:01:19-04:00</updated>
+
+		<published>2012-11-29T14:01:19-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=85561#p85561</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=85561#p85561"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=85561#p85561"><![CDATA[
+<strong>tzuk</strong>, <strong>Guest10</strong><br>Thank you, guys!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3751">DSAnd</a> — Thu Nov 29, 2012 1:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-03-01T18:00:48-04:00 </updated>
+
+		<published>2012-11-29T09:27:41-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=85558#p85558</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=85558#p85558"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=85558#p85558"><![CDATA[
+[Edit] I originally had my own revised help file for SbieIni.exe in this thread, but it's not really a good place to post it.<br>So, I've moved it to my Dropbox folder and have included a link to it, below.<br><br>There are also a number of other files there, for use with SbieIni.exe.<br>You should read the file in Notepad, to get an idea of what it will do, if you rename it with a .cmd extension.<br>For the most part, these files are intended as examples, to show how to do something.<br>In a couple of cases, you can use the file as a template and add your own commands to the file before running it.<br><br>IN ALL CASES: The .cmd file must be placed in the 'Program Files\Sandboxie' folder, in the same folder as SbieIni.exe, before it will run correctly. That's because the files do not include a Path to the SbieIni.exe file.<br><br>YOU MAY WANT TO USE RIGHT-CLICK &gt; SAVE LINK AS... , or SAVE TARGET AS... to download the file.<br>My expanded help file:<br>SbieIni command line parameters.txt<br><a href="https://dl.dropbox.com/u/16046062/Sandboxie/SbieIni%20command%20line%20parameters.txt" class="postlink">https://dl.dropbox.com/u/16046062/Sandb ... meters.txt</a><br>------<br>Other files:<br>Sbieini List all sections.cmd.txt<br><a href="https://dl.dropbox.com/u/16046062/Sandboxie/Sbieini%20List%20all%20sections.cmd.txt" class="postlink">https://dl.dropbox.com/u/16046062/Sandb ... ns.cmd.txt</a><br><br>Sbieini List and sort boxes.cmd.txt<br><a href="https://dl.dropbox.com/u/16046062/Sandboxie/Sbieini%20List%20and%20sort%20boxes.cmd.txt" class="postlink">https://dl.dropbox.com/u/16046062/Sandb ... es.cmd.txt</a><br><br>Sbieini Query list of settings from [UserSetting].cmd.txt<br><a href="https://dl.dropbox.com/u/16046062/Sandboxie/Sbieini%20Query%20list%20of%20settings%20from%20%5BUserSetting%5D.cmd.txt" class="postlink">https://dl.dropbox.com/u/16046062/Sandb ... 5D.cmd.txt</a><br><br>Sbieini Query settings from a specified [UserSetting].cmd.txt<br><a href="https://dl.dropbox.com/u/16046062/Sandboxie/Sbieini%20Query%20settings%20from%20a%20specified%20%5BUserSetting%5D.cmd.txt" class="postlink">https://dl.dropbox.com/u/16046062/Sandb ... 5D.cmd.txt</a><br><br>Sbieini UnApply a local template.cmd.txt<br><a href="https://dl.dropbox.com/u/16046062/Sandboxie/Sbieini%20UnApply%20a%20local%20template.cmd.txt" class="postlink">https://dl.dropbox.com/u/16046062/Sandb ... te.cmd.txt</a><br><br>SBieini Create Sandbox.cmd.txt<br><a href="https://dl.dropbox.com/u/16046062/Sandboxie/SBieini%20Create%20Sandbox.cmd.txt" class="postlink">https://dl.dropbox.com/u/16046062/Sandb ... ox.cmd.txt</a><br><br>Sbieini Delete a RecoverFolder setting.cmd.txt<br><a href="https://dl.dropbox.com/u/16046062/Sandboxie/Sbieini%20Delete%20a%20RecoverFolder%20setting.cmd.txt" class="postlink">https://dl.dropbox.com/u/16046062/Sandb ... ng.cmd.txt</a><br><br>Sbieini Delete value from all UserSettings.cmd.txt<br><a href="https://dl.dropbox.com/u/16046062/Sandboxie/Sbieini%20Delete%20value%20from%20all%20UserSettings.cmd.txt" class="postlink">https://dl.dropbox.com/u/16046062/Sandb ... gs.cmd.txt</a><br><br>Sbieini Find UserSettings sections.cmd.txt<br><a href="https://dl.dropbox.com/u/16046062/Sandboxie/Sbieini%20Find%20UserSettings%20sections.cmd.txt" class="postlink">https://dl.dropbox.com/u/16046062/Sandb ... ns.cmd.txt</a><br><br>Sbieini Modify template settings in GlobalSettings.cmd.txt<br><a href="https://dl.dropbox.com/u/16046062/Sandboxie/Sbieini%20Modify%20template%20settings%20in%20GlobalSettings.cmd.txt" class="postlink">https://dl.dropbox.com/u/16046062/Sandb ... gs.cmd.txt</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Thu Nov 29, 2012 8:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2012-11-29T06:53:08-04:00</updated>
+
+		<published>2012-11-29T06:53:08-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=85550#p85550</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=85550#p85550"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=85550#p85550"><![CDATA[
+Yes, check out the SbieIni utility in the Sandboxie program files folder.  This is a console application so start it from cmd.exe.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Nov 29, 2012 5:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DSAnd]]></name></author>
+		<updated>2012-11-29T02:16:51-04:00</updated>
+
+		<published>2012-11-29T02:16:51-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=85542#p85542</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=85542#p85542"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=85542#p85542"><![CDATA[
+Hi, Ronen!<br>Is it possible to set a folder for storage from the command line (FileRootPath)?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3751">DSAnd</a> — Thu Nov 29, 2012 1:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2011-11-22T07:56:06-04:00</updated>
+
+		<published>2011-11-22T07:56:06-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74703#p74703</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74703#p74703"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74703#p74703"><![CDATA[
+There isn't a <em>shortcut</em> to make shortcuts appear on the desktop.  (Pardon the pun.)<br>What Sandboxie Control does is actually create new shortcut files on the desktop.<br>I think you would have to do something similar.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Tue Nov 22, 2011 6:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DSAnd]]></name></author>
+		<updated>2011-11-22T05:45:55-04:00</updated>
+
+		<published>2011-11-22T05:45:55-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74700#p74700</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74700#p74700"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74700#p74700"><![CDATA[
+<strong>tzuk</strong><br>Whether it is possible for any application installed in the sandbox, create a shortcut on the desktop, by analogy with SbieCtrl_AddDesktopIcon=y?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3751">DSAnd</a> — Tue Nov 22, 2011 4:45 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DSAnd]]></name></author>
+		<updated>2011-11-15T00:04:15-04:00</updated>
+
+		<published>2011-11-15T00:04:15-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74540#p74540</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74540#p74540"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74540#p74540"><![CDATA[
+<strong>daeins</strong><br>I can not simulate your problem<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3751">DSAnd</a> — Mon Nov 14, 2011 11:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[daeins]]></name></author>
+		<updated>2011-11-14T17:41:56-04:00</updated>
+
+		<published>2011-11-14T17:41:56-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74539#p74539</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74539#p74539"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74539#p74539"><![CDATA[
+<blockquote><div><cite>DSAnd wrote:</cite><strong>daeins</strong><br><a href="http://www.sandboxie.com/index.php?SBIE2331" class="postlink">http://www.sandboxie.com/index.php?SBIE2331</a></div></blockquote>This is the explanation of the error but no solution of the problem in portable version .<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=8586">daeins</a> — Mon Nov 14, 2011 4:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DSAnd]]></name></author>
+		<updated>2011-11-14T15:03:37-04:00</updated>
+
+		<published>2011-11-14T15:03:37-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74537#p74537</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74537#p74537"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74537#p74537"><![CDATA[
+<strong>daeins</strong><br><a href="http://www.sandboxie.com/index.php?SBIE2331" class="postlink">http://www.sandboxie.com/index.php?SBIE2331</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3751">DSAnd</a> — Mon Nov 14, 2011 2:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[daeins]]></name></author>
+		<updated>2011-11-13T12:21:51-04:00</updated>
+
+		<published>2011-11-13T12:21:51-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74497#p74497</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74497#p74497"/>
+		<title type="html"><![CDATA[SBIE2331]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74497#p74497"><![CDATA[
+After that I start the first portable Sandboxie the second time I get this error : SBIE2331<br><br>Then to restart it I have reboot winxp or  install Sandboxie in another folder.<br>Do it possibile to avoid this?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=8586">daeins</a> — Sun Nov 13, 2011 11:21 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DSAnd]]></name></author>
+		<updated>2011-10-27T23:56:10-04:00</updated>
+
+		<published>2011-10-27T23:56:10-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74024#p74024</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74024#p74024"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=74024#p74024"><![CDATA[
+Thank you tzuk, that I need<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3751">DSAnd</a> — Thu Oct 27, 2011 11:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2011-10-27T08:18:23-04:00</updated>
+
+		<published>2011-10-27T08:18:23-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=73975#p73975</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=73975#p73975"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=73975#p73975"><![CDATA[
+Shortcuts can be created/adjusted/removed by Sandboxie Control when it starts, but only if you give the parameter <strong>/sync</strong>.<br><br>So at the end of your installation, you need to run <strong>SbieCtrl.exe /sync</strong> to force the creation of the shortcuts.<br><br>* * *<br><br>You may also have the problem then when the SBP installer is elevated in order to install, then at the end of the installation, you will be launching SbieCtrl also as administrator.<br><br>If you want to run SbieCtrl under the standard user account, even if the installer itself was elevated, then use this command instead:<br><br><strong>C:\Program Files\Sandboxie\Start.exe run_sbie_ctrl</strong><br><br>Note that when you invoke Sandboxie Control this way, it will be launched with both the /sync and /open options.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Oct 27, 2011 8:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DSAnd]]></name></author>
+		<updated>2011-10-27T08:04:36-04:00</updated>
+
+		<published>2011-10-27T08:04:36-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=73974#p73974</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=73974#p73974"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=73974#p73974"><![CDATA[
+<strong>tzuk</strong><br>After you install Sandboxie in portable mode (SBP), there is no line in the context menu "Run Sandboxed".<br>The string is visible after the transition to the main menu: Configure&gt; Windows Shell Integration after clicking on the "Ok" button or "Cancel"<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3751">DSAnd</a> — Thu Oct 27, 2011 8:04 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DSAnd]]></name></author>
+		<updated>2011-11-01T14:25:48-04:00 </updated>
+
+		<published>2011-10-27T03:40:15-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=73965#p73965</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=73965#p73965"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=73965#p73965"><![CDATA[
+Added updated version of the SBP, link in first post<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3751">DSAnd</a> — Thu Oct 27, 2011 3:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DSAnd]]></name></author>
+		<updated>2011-10-24T13:32:32-04:00</updated>
+
+		<published>2011-10-24T13:32:32-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=73863#p73863</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=73863#p73863"/>
+		<title type="html"><![CDATA[SBP - SANDBOXIE PORTABLE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=9870&amp;p=73863#p73863"><![CDATA[
+<strong>Hareton</strong><br>Yes, I'm doing. Only need admin rights.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3751">DSAnd</a> — Mon Oct 24, 2011 1:32 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

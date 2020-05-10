@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14811" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-03-18T12:35:03-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14811</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-03-18T12:35:03-04:00</updated>
+
+		<published>2013-03-18T12:35:03-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=88122#p88122</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=88122#p88122"/>
+		<title type="html"><![CDATA[[.04] Sandboxie and MetaProducts Inquiry]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=88122#p88122"><![CDATA[
+I added Guest10's settings in version 4.01.04 of Sandboxie, in the PDF/Printing category.<br>Thank you Guest10 !<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Mar 18, 2013 12:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[genieautravail]]></name></author>
+		<updated>2013-02-27T06:52:03-04:00</updated>
+
+		<published>2013-02-27T06:52:03-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=87564#p87564</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=87564#p87564"/>
+		<title type="html"><![CDATA[[.04] Sandboxie and MetaProducts Inquiry]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=87564#p87564"><![CDATA[
+Thank you very much Tzuk and Guest10  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=13998">genieautravail</a> — Wed Feb 27, 2013 5:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-02-26T18:41:06-04:00</updated>
+
+		<published>2013-02-26T18:41:06-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=87549#p87549</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=87549#p87549"/>
+		<title type="html"><![CDATA[[.04] Sandboxie and MetaProducts Inquiry]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=87549#p87549"><![CDATA[
+Tested with IE8, Firefox 19, and Chrome 25.<br>Only IE required it's program .exe name to be included in the "ProcessGroup=" line, in the template below.<br>I didn't try Opera or Iron.<br><br>Downloaded pages/data are saved to the user folder:<br>%AppData%\MetaProducts\Inquiry\<br>and can also be saved to the user's Documents folder:<br>%Personal%<br>as well as to user defined folder(s) of choice.<br><br>Add the local template (below) to the Sandboxie configuration file:<br>Sandbox Settings &gt; Applications &gt; Local &gt; "Create New" button<br>Copy the template (8 lines) to the Clipboard and Paste into the window &gt; OK<br>For each sandbox where you will use Inquiry:<br>Sandbox Settings &gt; Applications &gt; Local &gt; (select the template from the list) &gt; "Add" &gt; OK<br><br>[Template_Local_MetaProducts_Inquiry]<br>Tmpl.Title=MetaProducts Inquiry<br>Tmpl.Url=<a href="http://www.metaproducts.com/mp/Inquiry_Standard_Edition.htm" class="postlink">http://www.metaproducts.com/mp/Inquiry_ ... dition.htm</a><br>ProcessGroup=&lt;InquiryPrograms&gt;,iqls.exe,iqserv.exe,inquiry.exe,iexplore.exe<br>OpenFilePath=&lt;InquiryPrograms&gt;,%AppData%\MetaProducts\Inquiry\<br>OpenFilePath=&lt;InquiryPrograms&gt;,%Personal%\<br>LingerProcess=iqserv.exe<br>Tmpl.Class=Local<br><br>------<br>Notes:<br>As with any program that I'm not familiar with, I can't be certain that all necessary settings have been identified.<br>Program .exe names: iqserv.exe; iqls.exe; inquiry.exe (the Inquiry Browser)<br><br>If a custom folder is used to save pages/data, you can either add it to Sandbox Settings as a Quick Recovery folder, or as a Direct Access folder.<br>For Quick Recovery: Sandbox Settings &gt; Recovery &gt; Quick Recovery &gt; Add Folder &gt; OK<br>Repeat to add another folder.<br><br>For Direct Access, such as those that I used in the local template:<br>Sandbox Settings &gt; Resource Access &gt; File Access &gt; Direct Access<br> - "Add Program" button: choose &lt;InquiryPrograms&gt; in the window that opens<br> - "Add" button: Navigate to and select the custom folder &gt; OK<br>Repeat to add another folder.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Tue Feb 26, 2013 5:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-02-26T15:26:02-04:00</updated>
+
+		<published>2013-02-26T15:26:02-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=87538#p87538</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=87538#p87538"/>
+		<title type="html"><![CDATA[[.04] Sandboxie and MetaProducts Inquiry]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=87538#p87538"><![CDATA[
+Alright.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Tue Feb 26, 2013 2:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[genieautravail]]></name></author>
+		<updated>2013-02-26T10:38:05-04:00</updated>
+
+		<published>2013-02-26T10:38:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=87531#p87531</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=87531#p87531"/>
+		<title type="html"><![CDATA[[.04] Sandboxie and MetaProducts Inquiry]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14811&amp;p=87531#p87531"><![CDATA[
+Hello,<br><br>Please, can you add support for MetaProducts Inquiry plugins integration in Opera, Chrome (SRware Iron) Firefox and Internet Explorer.<br>With these browsers, the pages saved with MetaProducts Inquiry are saved in the sandbox and I don't know how to configurean exception with Sandboxie.  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"> <br><br>MetaProducts Inquiry homepage:<br><a href="http://www.metaproducts.com/Inquiry_Standard_Edition.htm" class="postlink">http://www.metaproducts.com/Inquiry_Sta ... dition.htm</a><br><br>Best regards,  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=13998">genieautravail</a> — Tue Feb 26, 2013 9:38 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15010&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.05] Major slowness with 4.01</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.05] Major slowness with 4.01</h2>
+		<p><a href="viewtopicd63dd63d.html?f=38&amp;t=15010">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15010</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>[.05] Major slowness with 4.01</h3>
+				<div class="date">Posted: <strong>Tue Mar 19, 2013 12:24 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">I didn't notice this as much when launching stuff on the laptop with nothing installed. (Stuff=IE 6 on laptop.) But I checked and see IE 6 takes ~0.6s to launch there in 3.76 (a bit longer than main desktop) vs ~0.9s with 4.01.04. I could hardly "feel" that difference since it already feels a bit too slow with 3.76, but it feels acceptable just during launch to get something into the sandbox. (Those times are with nothing already running in the sandbox, which is slightly slower I believe. And with 2.1 GHz T8100 processor.)<br>
+<br>
+But WOW after installing 4.01 on this main desktop last week, it's way slower! <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"> Really concerning and disappointing, and I know it's a brand new version, but I'm not sure how much, if any, more optimization is possible as it matures?<br>
+<br>
+I'd say I wouldn't even want to use it the way it is now. It's that bad and annoying! But what would I do without Sandboxie?! (BTW, I had wondered before already if 3.x will still get further updates?)<br>
+<br>
+It seems like it takes forever (2 seconds) to launch IE 6 -- not quite that long, but over a second for sure (I didn't time it here yet). I think it was about ~0.5s with 3.76. I'd say the DIFFERENCE <em>feels</em> like the difference between launching unsandboxed and launching in 3.76. So:<br>
+<br>
+Unsandboxed &lt;<strong>2-3x</strong>&gt; 3.76 &lt;<strong>2-3x</strong>&gt; 4.01<br>
+<br>
+Firefox not that much of a difference. This processor might be 5-years-old (Q9400 @ 2.8 GHz), but I wouldn't consider it weak or low-end. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+Stuff seems to mostly "run" and "process" OK once it's launched, with the exception of interface-type stuff:<br>
+<br>
+*) You can <em>watch</em> IE's long favorites lists load/draw (initially).<br>
+*) Outlook Express' changing interface, loading folders etc, is so slow, you can literally watch things change over the course of a second.<br>
+*) Firefox's download/save windows appearing can be observed almost bit-by-bit as they slowly appear.<br>
+*) I just noticed with Explorer sandboxed, massive lag while scrolling. And e.g. system32 folder, MAJOR CPU usage and delay loading that number of files (as it's like proxying access to each file).<br>
+<br>
+With 3.76, ZERO difference felt with any performance vs unsandboxed, which is what made it great, and I was OK with the ~1/3 second launch delay (understandable, although I wondered if it could be sped up more <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">). The only exception was if something spent the <em>majority</em> of time on registry (primarily?) or file operations. e.g. regedit searching, but again, that's understandable. (I just tried a regedit search, and it seems a LOT slower that 3.76, although it's been awhile.) And I never noticed a difference with Explorer.<br>
+<br>
+I noticed the SbieSvc processes are using a HUGE amount of CPU time, compared to 3.x. I think I had a couple/few minutes after a couple weeks, and now the 2 processes combined are almost an hour after 4-5 days.<br>
+<br>
+<br>
+Are others feeling/observing this? Thoughts?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Major slowness with 4.01</h3>
+				<div class="date">Posted: <strong>Tue Mar 19, 2013 1:54 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>
+*) Outlook Express' changing interface, loading folders etc, is so slow, you can literally watch things change over the course of a second.<br>
+<br>
+<br>
+Are others feeling/observing this? Thoughts?</div></blockquote>
+Now that you mention this, I also noticed it in my XP. Other than that, I haven't noticed any other application or folder being slowed down while running under 4.01.04.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 19, 2013 1:56 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">I am not seeing this on any of  my machines or software.<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 19, 2013 6:06 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I think this was reported before:<br>
+<br>
+<a href="../phpbb/viewtopic304b.php?t=14920" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=14920</a><br>
+<br>
+I don't see this myself so I'm not sure where to start.  I think most (or at least some) people who use v4 also don't see this, or I'd imgine I would hear more about this.  Perhaps some third party software is playing a part in this?<br>
+<br>
+Visual enhancements programs perhaps?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 19, 2013 6:21 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">I only see an slowdown while using Outlook Express in XP, pretty much as described by Larry. As far as I can tell all other programs in my XP and all programs in my W7 32 bits move fast using V4.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 19, 2013 7:46 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">I just went back to using v4.01 today [.04], so I don't have a lot of time using it, but the only thing that might be a little slower is when sandboxed Windows Explorer opens the folder contents, and lists the files inside.<br>
+My most used apps of Firefox and Thunderbird are running just fine.<br>
+As are all other programs that I've run, so far.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 20, 2013 7:08 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I don't see this myself so I'm not sure where to start.  I think most (or at least some) people who use v4 also don't see this, or I'd imgine I would hear more about this.  Perhaps some third party software is playing a part in this?<br>
+<br>
+Visual enhancements programs perhaps?</div></blockquote>
+
+I've never used any sort of security software before Sandboxie, because I don't like the idea of something possibly slowing things down or messing stuff up. And in general, I also don't really have any third party software "utilities," enhancements, or anything. I tried disabling EMET just for the heck of it, as well as 4t Tray Minimizer (since it hooks all the shell messages, etc. and seems to use way too much CPU time...), but no difference.<br>
+<br>
+Things are the same on the laptop like I said, now that I started to observe. Literally nothing has been installed there yet; just a fresh XP install with almost all updates (critical) integrated, plus video/network/audio drivers. Nothing else has been put on the cleanly wiped/repartitioned drive there yet.<br>
+<br>
+It's only slightly less noticeable there (Outlook Express interaction), and of course not a problem with folders since they're empty, vs a few thousand here (although a folder with just a couple <em>dozen</em> is just as slow loading). Hmmm, just scrolling the ListView control in the Inbox here, the SbieSvc processes are using 3-4x more CPU than msimn.exe! It doesn't "feel" very laggy like Explorer, although the little scrollbar is visually lagging a bit behind.<br>
+<br>
+GeForce video here, and the Intel GMA 3000 (?) or whatever on laptop.<br>
+<br>
+I'm assuming the larger difference vs 3.76 on main system (like IE launch) may be because more "stuff" to load that's not on laptop: Flash/Shockwave, Java, PDF X-Change, Speckie, EMET.<br>
+<br>
+<br>
+Something others should be able to see: After bringing up the SLOW Firefox "Save Page As" dialog, click Cancel: It just clears the File name, and you have to click Cancel again. Not sure if it's related or anything, just another thing I noticed. (Just confirmed on new laptop Firefox install.)<br>
+<br>
+Toggle "Work Offline" in IE 6 or OE: It freezes the programs for a second or more (OE + 2 IEs open), and the main SbieSvc (not Gui_Proxy) uses a full second of CPU time just for that! <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> Slightly less delay on laptop, although I only had 1 program at-a-time open there.<br>
+<br>
+<br>
+I tried a regedit search benchmark on laptop before (so registry is about as empty/small as can be) for "this is a test" (Keys/Values/Data):<br>
+Unsandboxed: 9-10s<br>
+SBIE 3.76: 1m40s (And I thought that was bad, though understandable)<br>
+SBIE 4.01: 4m35s<br>
+<br>
+So just basic registry reading is almost 3 times slower with 4.01. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 21, 2013 1:55 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Now I have UI benchmarks to hopefully show it's not something on my system(s) since it's getting WORSE with each release! Previous <em>numbers</em> were from laptop with .04. Until a few hours ago I was keeping .03 running on the main system (no need for that now, since same EMET problems, so time to swap SBIE versions, which is luckily a breeze, installing different versions like 20 times <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">).<br>
+<br>
+I said the laptop didn't "feel" like it was slowed down quite as much UI-wise, and benchmarks confirm its hit is a bit less. I used <a href="http://www.passmark.com/products/pt.htm" class="postlink">PerformanceTest's</a> 2D benchmark on the laptop for the first time after posting yesterday. I had last used it as an additional benchmark when checking a few years' worth of GeForce drivers on main system -- there was an annoying (rare?) "see-through window" bug occasionally with a less common program (HDHomeRun GUI) for a couple years, which I later noticed was evident with PT's 2D Solid/Transparent Vectors scores being MUCH higher (from around driver 19<em>x</em> until magically being fixed in GeForce 295 I think). Anyway, so I'm really familiar with what the scores should be, and now it also lets me see just how bad Sandboxie 4.01 is performing. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+I was using PT 7 from awhile ago, but just checked 8.0 and same results... 30-day trial if you want to install INTO a sandbox instead. Ignore warnings when loading v7, doesn't affect the benchmark.<br>
+<br>
+Look at the 2D - <strong>Windows Interface</strong> benchmark (others are fine/same sandboxed). I only used 4.01.04 on the laptop, and got ~58% of the unsandboxed score. NO difference with 3.76.<br>
+<br>
+Then, on main GeForce system - relative to UNsandboxed score:<br>
+<br>
+3.76 - <strong>No difference</strong>, of course<br>
+4.01.01 - <em>Almost</em> 50%<br>
+4.01.02 - ~48%<br>
+4.01.03 - ~46%<br>
+4.01.04 - No more than <strong>34%</strong>! <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"><br>
+<br>
+WOW, no wonder stuff feels choked. Reinstalled all versions again to double-check scores. BTW, Outlook Express is distinctly even slower now than in .03. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> Forget doing anything in it, just CHANGING back to it with a folder selected lets you see it redraw over 1/2 second...<br>
+<br>
+Does that help anything now that you can get and see some hard numbers? What is changing each time to make the UI slower, especially between .03 and .04?!<br>
+<br>
+<br>
+So now everyone has a way to check 4.01 slowness themselves: PT for UI, regedit search for registry access, and <a href="http://www.passmark.com/products/apptimer.htm" class="postlink">AppTimer</a> for additional program launch delay. I haven't even measured startup time here yet (OP: only IE 6 on laptop), but I don't need to! <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"><br>
+<br>
+I was trying to check, but I haven't found much difference for <em>file</em> operations (so the Explorer slowness must be strictly adding UI icons, etc.).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 21, 2013 3:43 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">DR_LaRRY_PEpPeR, I am not doubting that you're seeing this drastic hit on performance.  But it has to be something unique because I don't experience anything like that.  My feeling is that version 4.01 performance is very comparable to version 3.76.  I haven't measured anything because I didn't feel that I need to.<br>
+<br>
+I tried running XP in a VM with an execution cap of 10% and everything was slow, but same kind of slow for programs in and out of the sandbox, so even under such a strained condition I wasn't able to see a difference that I could analyze.<br>
+<br>
+You said you have a custom installation of Windows (you mentioned slipstreamed updates).  Maybe you've also tweaked Windows in some other way that triggers this behavior on your system.  I certainly hope that we end up figuring this out but at this point I don't really have any idea what might be causing this.<br>
+<br>
+Can you look at the DLLs loaded into the SbieSvc GuiProxy process to see if there are any unexpected third party DLLs in there?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 21, 2013 4:40 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Hmm, I hope so too, I'm glad I noticed this as soon as I could, and wish I had sooner. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> That laptop isn't a system I've really used, and I was just testing SBIE functionality on it 2 months ago after initial release, so I didn't really have a baseline feel...<br>
+<br>
+You only try XP in a VM? Could it only happen on a "real" system? Haven't measured anything -- what about just a simple regedit search like I did? Are you saying registry access is as fast as 3.76? Yes, it seems like something that fundamental <em>should</em> be the same, but I obviously have way slower.<br>
+<br>
+Since I can't REinstall everything for a "fully usable real system" with programs and all, I mostly just have the bare laptop install to go by, with program launch times, regedit, and this 2D benchmark. Though that seems to be plenty to compare with 3.76. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+About that other topic with the Windows 7/IE 9 user mentioning slowdown: I have another system (Sandy Bridge) with 64-bit Win 7 which I've hardly looked at as far as Sandboxie, so I could try these simple tests there too... Setup from an untouched SP1 ISO, and other than setting up drivers and Media Center stuff, I haven't touched it, since I'm not so familiar with 7, of course. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+What sort of XP install are YOU using? I can try another install later overnight/tomorrow on laptop... Don't want to just use my SP2 disc... So just integrate SP3 <em>only</em>, and don't do any updates? Does SBIE <em>need</em> any update since SP3...?<br>
+<br>
+I would be absolutely shocked if there was any difference. I haven't really done any sort of "screwy" tweaks as part of my installs (or after) like some people, so I don't really see anything that would make a difference. I make Home install as Pro which basically only changes the "XP Home" in a few places and would allow me to disable Simple File Sharing if I wanted... I integrate the Intel SATA AHCI driver during install; could drop that and install with IDE (again, can't imagine a problem here <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">). Just some info mostly in my WINNT.SIF. Shortly after install, I tweak folder/file permissions precisely with SetACL to tighten stuff running with SRP dropped rights (outside of SBIE). I have an image before the permission changes, which I can try to install SBIE from there before full reinstall to see if that's any different. That would probably be most drastic changes, but again, I can't see a problem...<br>
+<br>
+Just saw your edit. Here's the DLLs in Process Explorer: <a href="../www.realplain.com/sbie/guiproxy_dlls.png" class="postlink">www.realplain.com/sbie/guiproxy_dlls.png</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 22, 2013 6:48 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I don't know for sure that it is something in XP or in Windows that is making the difference.<br>
+It was an idea, which may ultimately not be relevant at all.<br>
+<br>
+I tried scanning the registry but just HKEY_LOCAL_SYSTEM (I picked a search string that is found at the top of the HKEY_USERS tree).<br>
+Unsandboxed regedit: ~10 seconds<br>
+Sandboxed v4.01 regedit: ~70 seconds<br>
+Sandboxed v3.76 regedit: ~25 seconds<br>
+<br>
+I'll look into it to see if I can improve anything there.<br>
+<br>
+I see no external DLLs in SbieSvc, that was a long shot anyway.<br>
+Have you looked at a Resource Access Monitor log to see if any DLLs load inside the sandbox?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 22, 2013 7:45 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">I just reverted back to the earliest laptop image before anything was installed other than wired network driver (no permissions altered yet, just some "cleanup" of the Windows install I do, nothing harmful <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">). Installed PerformanceTest and SBIE 4.01.04. Ran 2D - Windows Interface benchmark unsandboxed, which was SLOW without the video driver installed: barely 10% of what it was with driver. Running it sandboxed actually managed to score 92% of unsandboxed (since that was SO slow to begin with), but yes, distinctly slower score still.<br>
+<br>
+Installed the Intel video driver (skipped INF chipset software stuff),and reran PerformanceTest: ~60% this time instead of the ~58% I got the other day.<br>
+<br>
+So, before attempting a test reinstall, I figured I'd try on the Win 7 system! 2.4 GHz Celeron G530 w/ HD 2000 graphics. As I said, basically untouched 64-bit SP1 install, other than Media Center and supporting stuff. I already had 3.76 (w/ EP) sitting there, so I installed PerformanceTest 8.0 into a sandbox with default settings (as all have been for these tests, BTW). I ran 2D benchmarks in 3.76 to see the baseline (presumably same as unsandboxed) for Windows Interface. I found it interesting that it was a lot lower than even the weak graphics laptop (I guess the Vista/7 desktop/window system (Aero?) is just like that...).<br>
+<br>
+Anyway, after installing 4.01.04, exactly the same result as XP laptop! No more than <strong>60%</strong> of 3.76's score. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> Wow.<br>
+<br>
+<br>
+Then I decided to try the "this is a test" regedit search there in the entire registry. Again, very similar to XP (and yours):<br>
+<br>
+Unsandboxed: 20s<br>
+SBIE 3.76: 3m00s<br>
+SBIE 4.01: 7m20s<br>
+<br>
+<br>
+The Resource Access Monitor from main XP system from running Explorer in default settings sandbox: <a href="http://www.realplain.com/sbie/ram_12-03-22.txt" class="postlink">www.realplain.com/sbie/ram_12-03-22.txt</a><br>
+<br>
+Notes: 4t Tray Minimizer and AutoSizer had already been disabled (first thing I checked). (Tray Minimizer does slow down "Windows Interface" in all cases I see, though I never noticed.) Weren't on laptop anyway, nor is PDF X-Change (xcshinfo.dll). And the DEP DLL in I:\ is just my test AppInit DLL which unloads itself (FALSE from DllMain), and also not present on laptop...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 24, 2013 5:23 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks.  I see you have a few third party DLLS in your resource log but let's assume at this point they aren't the cause of this problem.<br>
+I will see what I can do to version 4 to speed things up a bit.  Let's revisit this subject after I release the next beta version (hopefully with some performance improvements).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 10:15 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I introduced some optimizations into the GUI code so hopefully version 4.01.05 improves performance a bit.  As for registry performance I'm not sure I have anything conclusive yet.  I'd like to hear how version 4.01.05 behaves for you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 10, 2013 2:10 pm</strong></div>
+				<div class="author">by <strong>stvs</strong></div>
+				<div class="content">confirmed. 4.01.05 is faster than previous 4.01.x i had also some slowness issues too.tnx tzuk</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15010&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:48 GMT -->
+</html>

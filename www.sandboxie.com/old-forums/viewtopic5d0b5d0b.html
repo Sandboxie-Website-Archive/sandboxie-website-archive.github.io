@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=3492&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; NTFS permissions - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>NTFS permissions</h2>
+		<p><a href="viewtopicab48-2ab48.html?f=4&amp;t=3492">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=3492</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 29, 2013 3:42 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>Guestd wrote:</cite>I'd like to ask if one were to change the permissions in C:\Sandbox\username, what exactly would need to be done, in order to keep things secure/manageable?</div></blockquote>I don't remember anyone posting a list of steps to do that.<blockquote><div><cite>Guestd wrote:</cite>And, would a new Sandboxie install (an upgrade) restore the permissions back to what they were? </div></blockquote>No, upgrading Sandboxie to a newer version would not restore the old permissions to the C:\Sandbox folder.<br>
+Deleting 'C:\Sandbox' might do it, but I'm not sure if Windows would remember the old permissions when the 'C:\Sandbox' folder is recreated.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 29, 2013 4:01 pm</strong></div>
+				<div class="author">by <strong>Guestd</strong></div>
+				<div class="content"><blockquote><div><cite>Guest10 wrote:</cite>I don't remember anyone posting a list of steps to do that.
+</div></blockquote>
+
+Sorry, I didn't want to imply someone did. I suppose I should have made the question after exposing the rest of the post, related to the permissions. Basically, what I wanted to ask is if mimicking C:\Users\Username to C:\Sandbox\User_Sandbox, would be the best procedure for what some are trying to achieve, including myself. It seems to be the perfect solution for privacy+security. After all, that's how Windows 7 (I suppose the other previous versions as well) isolates each user account folder from every user, so I suppose it would be safe to apply the same set of permissions/restrictions to C:\Sandbox\User_Sandbox. It makes sense in my head.<br>
+<br>
+I was just wondering what you folks think about it. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+
+<blockquote><div><cite>Guest10 wrote:</cite>No, upgrading Sandboxie to a newer version would not restore the old permissions to the C:\Sandbox folder.<br>
+Deleting 'C:\Sandbox' might do it, but I'm not sure if Windows would remember the old permissions when the 'C:\Sandbox' folder is recreated.</div></blockquote>
+
+OK. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 29, 2013 7:18 pm</strong></div>
+				<div class="author">by <strong>Guestd</strong></div>
+				<div class="content">For some reason Sandboxie changes permissions back to Everyone and Authenticated Users groups for C:\Sandbox\Username\Sandbox<br>
+<br>
+I can mimick C:\Sandbox to reflect C:\Users and C:\Sandbox\Username\ to reflect C:\Users\User_account, but the programs sandboxes folders won't inherit those permissions, and I suspect that some Sandboxie process could be behind this behavior... ???<br>
+<br>
+Has anyone been able to successfully make such changes?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 29, 2013 7:24 pm</strong></div>
+				<div class="author">by <strong>Guestd</strong></div>
+				<div class="content"><blockquote><div><cite>Guestd wrote:</cite>For some reason Sandboxie changes permissions back to Everyone and Authenticated Users groups for C:\Sandbox\Username\Sandbox<br>
+<br>
+I can mimick C:\Sandbox to reflect C:\Users and C:\Sandbox\Username\ to reflect C:\Users\User_account, but the programs sandboxes folders won't inherit those permissions, and I suspect that some Sandboxie process could be behind this behavior... ???<br>
+<br>
+Has anyone been able to successfully make such changes?</div></blockquote>
+
+I forgot to mention that from a privacy aspect, it doesn't matter that Everyone and Authenticated users are added back to the sandbox name folder, because other users still can't access C:\Sandbox\UsernameA and vice-verse. I'm just wondering why it won't inherit from the parent?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 30, 2013 10:51 am</strong></div>
+				<div class="author">by <strong>Guestd</strong></div>
+				<div class="content"><blockquote><div><cite>Guestd wrote:</cite>
+I forgot to mention that from a privacy aspect, it doesn't matter that Everyone and Authenticated users are added back to the sandbox name folder, because other users still can't access C:\Sandbox\UsernameA and vice-verse. I'm just wondering why it won't inherit from the parent?</div></blockquote>
+
+OK. I did some experimenting. If I don't delete the sandbox contents using Sandboxie itself, then the sandbox folder itself won't get deleted, which means that the permissions/restrictions will remain those I previously set. So, from now on, I'll use Eraser GUI to delete the contents of the sandbox folders, instead of calling it through Sandboxie.<br>
+<br>
+This seems to be the best approach for those wishing to have sandboxes data separated from each user account. Hopefully, Tzul will implement this design in future releases, which would make things so much easier, I must say, and benefit users that wouldn't know to do this kind of privilege separation, by messing with ACLs/ACEs.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 30, 2013 3:02 pm</strong></div>
+				<div class="author">by <strong>Guestd</strong></div>
+				<div class="content">I was able to play a little more with this experiment, and any folder within C:\Sandbox\Sandbox_Folder\* will still get permissions set by Sandboxie itself. There just isn't a way that I know of to prevent this from happening.<br>
+<br>
+To clarify and make it more understandable for others not understanding much of what I have been mentioning thus far, this is what I managed to change so far:<br>
+<br>
+C:\Sandbox - I removed the default permissions, and applied the permissions of C:\Users to it. They remain.<br>
+C:\Sandbox\Sandbox_Folder - I removed the default permissions, and applied the permissions of C:\Users\User_Profile. They remain, provided that I don't delete contents with Sandboxie. I use Eraser to delete the contents of the folder, but not the folder itself.<br>
+<br>
+Any other container/object (folder, file...) created within C:\Sandbox\Sandbox_Folder have permissions set by Sandboxie itself, and they cannot be changed, at all. These permissions are for the group Authenticated Users and the User.account.<br>
+<br>
+It would be nice if there is a way to force containers/objects within C:\Sandbox\Sandbox_Folder\<strong>*</strong> to inherit from the parent folder (C:\Sandbox\Sandbox_Folder).<br>
+<br>
+The only way I'm thinking, at the moment, and that could possibly do the trick, would be to script something that detects the creating of any new child objects and automatically recreate the permissions from C:\Sandbox\Sandbox_Folder to them. <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=3492&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:17 GMT -->
+</html>

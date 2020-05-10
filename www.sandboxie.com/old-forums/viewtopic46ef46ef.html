@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9112 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:50:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>DEP, ASLR and Integrity Levels - Sandboxie Support</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - Sandboxie Support" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="app.php/feed/topics_active">			
+	<link rel="canonical" href="viewtopicf1bcf1bc.html?t=9112">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="assets/css/font-awesome.mince91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/en/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/sbie_prosilver/theme/tweaks.css?assets_version=7" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="../index.html" title="Home"><span class="site_logo"></span></a>
+				<h1>Sandboxie Support</h1>
+				<p>Support Forum for Sandboxie</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									<div id="search-box" class="search-box search-header" role="search">
+				<form action="https://forums.sandboxie.com/phpBB3/search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+					<button class="button button-search" type="submit" title="Search">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+					</button>
+					<a href="search.html" class="button button-search-end" title="Advanced search">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+					</a>
+					
+				</fieldset>
+				</form>
+			</div>
+						
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a733a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+																			<li>
+								<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp26c326c3.html?mode=login" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp83198319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs">
+							<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="../index.html" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">Home</span></a></span>
+										<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="index-2.html" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Board index</span></a></span>
+
+											<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="44"><a href="viewforumab78ab78.html?f=44" itemprop="url"><span itemprop="title">More Forums</span></a></span>
+															<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="4"><a href="viewforum31e631e6.html?f=4" itemprop="url"><span itemprop="title">Feature Requests</span></a></span>
+												</li>
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="viewtopic46ef46ef.html?f=4&amp;t=9112">DEP, ASLR and Integrity Levels</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Ideas for enhancements to the software<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="https://www.sandboxie.com/old-forums/postinga689.html?mode=reply&amp;f=4&amp;t=9112" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic28a6-228a6.html?f=4&amp;t=9112&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://forums.sandboxie.com/phpBB3/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="9112" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			16 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopice812e812.html?f=4&amp;t=9112&amp;start=15" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopice812e812.html?f=4&amp;t=9112&amp;start=15" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p59316" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59316">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search20422042.html?author_id=4936&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 09, 2010 5:44 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Didier Stevens">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Didier Stevens</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://blog.didierstevens.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59316">
+
+						<h3 class="first"><a href="#p59316">DEP, ASLR and Integrity Levels</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting52c1-2.html?mode=quote&amp;f=4&amp;p=59316" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicadedaded.html?p=59316#p59316" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a></strong> &raquo; </span>Sat Oct 09, 2010 5:50 pm
+			</p>
+			
+			
+			
+			<div class="content">When an application is sandboxed, I would like to be able to configure the sandbox to force the application to use ASLR and DEP (like EMET allows this to force application which are not enabled for ASLR or DEP). I know I can force this by setting the appropriate flags in the dllcharacteristics parameter (PE file format), but I would like to be able to do this with sandboxie.<br>
+<br>
+And I would also like to configure a sandbox to run applications with a low integrity level. I know this can be set with a special ACE entry in the DACL of the executable, but again, I would like to be able to do this via sandboxie.<br>
+<br>
+Didier</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59343" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59343">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist96bc.html?mode=viewprofile&amp;u=2543" class="username">ssj100</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search2f962f96.html?author_id=2543&amp;sr=posts">945</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Apr 23, 2009 1:21 am</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact ssj100">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact ssj100</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://ssj100.fullsubject.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59343">
+
+						<h3 ><a href="#p59343"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting0b47.html?mode=quote&amp;f=4&amp;p=59343" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopice588-2e588.html?p=59343#p59343" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist96bc.html?mode=viewprofile&amp;u=2543" class="username">ssj100</a></strong> &raquo; </span>Sat Oct 09, 2010 8:24 pm
+			</p>
+			
+			
+			
+			<div class="content">Hi Didier Stevens!  Nice to see you on the Sandboxie forums.  I follow your blog fairly closely (as you probably know).  Good to see that you are taking an interest in Sandboxie.</div>
+
+			
+									
+									<div id="sig59343" class="signature">Sandboxie + SUA + DEP<br>
+Windows Firewall + NAT Router<br>
+Drive SnapShot (on-demand)</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59356" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59356">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search20422042.html?author_id=4936&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 09, 2010 5:44 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Didier Stevens">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Didier Stevens</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://blog.didierstevens.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59356">
+
+						<h3 ><a href="#p59356"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting3b7a-2.html?mode=quote&amp;f=4&amp;p=59356" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic2116-22116.html?p=59356#p59356" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a></strong> &raquo; </span>Sun Oct 10, 2010 3:47 am
+			</p>
+			
+			
+			
+			<div class="content">Hi ssj100, nice to meet you here.<br>
+<br>
+Have been using sandboxie for a couple of years, and bought a license more than a year ago.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59365" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59365">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist502d.html?mode=viewprofile&amp;u=990" class="username">soccerfan</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search15e815e8.html?author_id=990&amp;sr=posts">440</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 25, 2007 2:59 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59365">
+
+						<h3 ><a href="#p59365"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting077c.html?mode=quote&amp;f=4&amp;p=59365" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd59bd59b.html?p=59365#p59365" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist502d.html?mode=viewprofile&amp;u=990" class="username">soccerfan</a></strong> &raquo; </span>Sun Oct 10, 2010 10:11 am
+			</p>
+			
+			
+			
+			<div class="content">Welcome to the forums Didier Stevens.<br>
+OT: Thanks for your 'ariad' tool. I've been using it as a fix for autorun as well as <br>
+the .lnk vulnerability that M$ deliberately did not fix for XP SP2 users like me  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+
+			
+									
+									<div id="sig59365" class="signature">soccerfan</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59366" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59366">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search20422042.html?author_id=4936&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 09, 2010 5:44 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Didier Stevens">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Didier Stevens</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://blog.didierstevens.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59366">
+
+						<h3 ><a href="#p59366"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingc77f.html?mode=quote&amp;f=4&amp;p=59366" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic576c576c.html?p=59366#p59366" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a></strong> &raquo; </span>Sun Oct 10, 2010 11:55 am
+			</p>
+			
+			
+			
+			<div class="content">Thanks soccerfan!</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59367" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59367">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search20422042.html?author_id=4936&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 09, 2010 5:44 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Didier Stevens">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Didier Stevens</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://blog.didierstevens.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59367">
+
+						<h3 ><a href="#p59367">Job Objects</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting26b1.html?mode=quote&amp;f=4&amp;p=59367" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8e7b-38e7b.html?p=59367#p59367" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a></strong> &raquo; </span>Sun Oct 10, 2010 12:07 pm
+			</p>
+			
+			
+			
+			<div class="content">I would find it useful to be able to create &amp; associate a job object with a sandbox, and force all processes running in the sandbox to run inside the job object.<br>
+<br>
+Job objects exists since Windows 2000, but I've never found a decent tool to manage them.<br>
+I believe job objects &amp; Sandboxie are made for each other. I would also like Sandboxie to provide a settings dialog that permits me to set the limits of a job object.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59374" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59374">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59374">
+
+						<h3 ><a href="#p59374"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postinga0fb.html?mode=quote&amp;f=4&amp;p=59374" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic5916-35916.html?p=59374#p59374" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Sun Oct 10, 2010 5:49 pm
+			</p>
+			
+			
+			
+			<div class="content">Didier Stevens I don't really see how controlling ASLR and DEP have to do with Sandboxie.  This is some low-level esoteric stuff, and you do have some low-level esoteric utilities in Windows to control this stuff, and that's the way it should remain, at least in my opinion.<br>
+<br>
+As for job objects, I actually used them in Sandboxie at one time, but a process can only belong to one job object at a time.  And when Vista came along and started using job objects for its UAC, I had to change Sandboxie to stop using job objects.</div>
+
+			
+									
+									<div id="sig59374" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59399" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59399">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search20422042.html?author_id=4936&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 09, 2010 5:44 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Didier Stevens">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Didier Stevens</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://blog.didierstevens.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59399">
+
+						<h3 ><a href="#p59399"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting359f-2.html?mode=quote&amp;f=4&amp;p=59399" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic9fc69fc6.html?p=59399#p59399" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a></strong> &raquo; </span>Mon Oct 11, 2010 5:04 am
+			</p>
+			
+			
+			
+			<div class="content">tzuk, I beg to differ.<br>
+<br>
+In the Sandbox Settings dialog box, you have a Restrictions node. These settings allow you to apply several restrictions on the programs running inside the sandbox. For example, there is the Drop Rights settings for which Steve Gibson advised you on his podcast to put it in.<br>
+In this context, DEP is a restriction: you forbid processes to execute code from pages that are no meant to be executed from.<br>
+With a bid of a stretch, I can make the same argument for ASLR: it restricts statis shellcode with hardcoded WIN32 API addresses from operating.<br>
+<br>
+But ultimately, it's your call.<br>
+<br>
+And what about Integrity Levels, you didn't address them in your reply?<br>
+<br>
+Cheers,<br>
+<br>
+Didier</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59402" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59402">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist96bc.html?mode=viewprofile&amp;u=2543" class="username">ssj100</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search2f962f96.html?author_id=2543&amp;sr=posts">945</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Apr 23, 2009 1:21 am</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact ssj100">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact ssj100</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://ssj100.fullsubject.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59402">
+
+						<h3 ><a href="#p59402"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting7fe0.html?mode=quote&amp;f=4&amp;p=59402" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic139b139b.html?p=59402#p59402" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist96bc.html?mode=viewprofile&amp;u=2543" class="username">ssj100</a></strong> &raquo; </span>Mon Oct 11, 2010 5:16 am
+			</p>
+			
+			
+			
+			<div class="content">Interesting points.  I'm sure tzuk will respond appropriately with his own opinions, but I've got a few questions in the mean time.<br>
+<br>
+Firstly, what DEP are you talking about?  The way I'm interpreting it, you're talking about Microsoft Windows' own DEP, which comes in the form of Software or Hardware DEP.  Presumably you are talking about <span style="text-decoration: underline">Software</span> DEP?<br>
+<br>
+Also, if <span style="text-decoration: underline">Hardware</span> DEP is applied to all programs and services (OptOut), wouldn't it also be applied to processes within the sandbox?  And if so, what would be the point of having a <span style="text-decoration: underline">Software</span> DEP configuration within the sandbox?<br>
+<br>
+Thanks.<br>
+<br>
+EDIT: also Didier, since you've brought up this issue of DEP, I'm wondering what your thoughts are on "Ret2Libc" attacks.  From my testings, Hardware DEP fails against it:<br>
+<a href="http://ssj100.fullsubject.com/security-f7/buffer-overflow-bo-tests-t47.htm#216" class="postlink">http://ssj100.fullsubject.com/security- ... 47.htm#216</a><br>
+<a href="http://ssj100.fullsubject.com/security-f7/buffer-overflow-exploit-writing-tutorial-t97.htm#590" class="postlink">http://ssj100.fullsubject.com/security- ... 97.htm#590</a></div>
+
+			
+									
+									<div id="sig59402" class="signature">Sandboxie + SUA + DEP<br>
+Windows Firewall + NAT Router<br>
+Drive SnapShot (on-demand)</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59404" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59404">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search20422042.html?author_id=4936&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 09, 2010 5:44 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Didier Stevens">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Didier Stevens</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://blog.didierstevens.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59404">
+
+						<h3 ><a href="#p59404"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting3217-2.html?mode=quote&amp;f=4&amp;p=59404" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc757c757.html?p=59404#p59404" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a></strong> &raquo; </span>Mon Oct 11, 2010 6:40 am
+			</p>
+			
+			
+			
+			<div class="content">Microsoft DEP uses hardware DEP when the processor supports it.<br>
+<br>
+OptIn is the default:<br>
+On systems with processors that are capable of hardware-enforced DEP, DEP is automatically enabled only for operating system components. This is the default setting for client versions of Windows. DEP can be explicitly enabled for selected applications or the current process.<br>
+<br>
+An application opts-in to DEP by having it's DLLCHARACTERISTICS flag NO_EXECUTE set, or by calling SetProcessDEPPolicy with the proper parameters.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59405" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59405">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59405">
+
+						<h3 ><a href="#p59405"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingdb49.html?mode=quote&amp;f=4&amp;p=59405" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic07fa-207fa.html?p=59405#p59405" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Mon Oct 11, 2010 7:04 am
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>Didier Stevens wrote:</cite>With a bid of a stretch</div></blockquote>
+
+It's all a stretch.  Now look here.  You come to me and argue with me that I should spend time to implement those esoteric feature requests that you had on a whim.  That's not very nice is it?<br>
+<br>
+If you offered to do it yourself and contribute the code, that would be one thing.  But to insist that <em>I</em> must do it?<br>
+<br>
+* * * <br>
+<br>
+And by the way, ASLR is a global system setting.</div>
+
+			
+									
+									<div id="sig59405" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59413" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59413">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search20422042.html?author_id=4936&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 09, 2010 5:44 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Didier Stevens">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Didier Stevens</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://blog.didierstevens.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59413">
+
+						<h3 ><a href="#p59413"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting69df.html?mode=quote&amp;f=4&amp;p=59413" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic21be21be.html?p=59413#p59413" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist7677.html?mode=viewprofile&amp;u=4936" class="username">Didier Stevens</a></strong> &raquo; </span>Mon Oct 11, 2010 7:32 am
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>tzuk wrote:</cite>
+<br>
+Now look here.  You come to me and argue with me that I should spend time to implement those esoteric feature requests that you had on a whim.  That's not very nice is it?
+</div></blockquote>
+Assuming I had these requests on a whim is condescending. That's not very nice to your customer, is it?<br>
+
+<blockquote><div><cite>tzuk wrote:</cite>
+If you offered to do it yourself and contribute the code, that would be one thing.  But to insist that <em>I</em> must do it?
+</div></blockquote>
+As Sandboxie is closed source, you leave me no other option than to ask for these features, as I'm sure your EULA prohibits RE.<br>
+I've contributed to open source projects before when I wanted some new features.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59415" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59415">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59415">
+
+						<h3 ><a href="#p59415"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting4ddc.html?mode=quote&amp;f=4&amp;p=59415" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic3f8e-23f8e.html?p=59415#p59415" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Mon Oct 11, 2010 7:46 am
+			</p>
+			
+			
+			
+			<div class="content">Alright.  There's no sense to keep doing this and turn this into something ugly.<br>
+<br>
+My opinion as I expressed it before, is that these request are not directly related to Sandboxie.  They are more appropriate as a standalone utility.  There is DropMyRights which launches an executable, so you probably want a RandomizeMyDlls or EnableMyDep.<br>
+<br>
+Now please don't argue with me how these things are just like DropMyRights and that I should implement them.  The answer is no.  Please respect that.  End of story.</div>
+
+			
+									
+									<div id="sig59415" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59433" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59433">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<strong><span class="username">Edreck</span></strong>							</dt>
+
+									
+						
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59433">
+
+						<h3 ><a href="#p59433"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting9ecd.html?mode=quote&amp;f=4&amp;p=59433" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic469c-2469c.html?p=59433#p59433" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><span class="username">Edreck</span></strong> &raquo; </span>Mon Oct 11, 2010 12:15 pm
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>tzuk wrote:</cite>It's all a stretch. Now look here. You come to me and argue with me that I should spend time to implement those esoteric feature requests that you had on a whim. </div></blockquote>
+
+Ouch, that sounds a little harsh. He was only asking you nicely. If you hate the idea of people suggesting ideas, just close down the feature request section <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> Keep your shirt on brotha<br>
+<br>
+Didier, your idea sounds very good. If you are interested in making this for the contributed utilities section feel free to use some of the info in the last post about sandboxie and its structure to make this addon a reality. <a href="../phpbb/viewtopicffa7.php?t=9116" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=9116</a> -- best of luck<br>
+<br>
+Shalom</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p59436" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile59436">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Founder<br /><img src="images/ranks/gloss/yellow/yellow-exadministrator.png" alt="Sandboxie Founder" title="Sandboxie Founder" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc9e3c9e3.html?author_id=3&amp;sr=posts">16076</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 22, 2004 12:57 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content59436">
+
+						<h3 ><a href="#p59436"></a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postinga444.html?mode=quote&amp;f=4&amp;p=59436" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic9397-29397.html?p=59436#p59436" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistfe9c.html?mode=viewprofile&amp;u=3" class="username">tzuk</a></strong> &raquo; </span>Mon Oct 11, 2010 12:42 pm
+			</p>
+			
+			
+			
+			<div class="content">Yeah, it was a little harsh.  I'm sorry about that and I apologize.  I still don't intend to implement this feature.  Back then the Drop Rights feature was requested repeatedly and this on the other hand, is something that I feel very few people would care about.  But anyway, clearly I could have handled my response better.  Sorry Didier Stevens.  <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"></div>
+
+			
+									
+									<div id="sig59436" class="signature">tzuk</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="https://www.sandboxie.com/old-forums/postinga689.html?mode=reply&amp;f=4&amp;t=9112" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic28a6-228a6.html?f=4&amp;t=9112&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=9112">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			16 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopice812e812.html?f=4&amp;t=9112&amp;start=15" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopice812e812.html?f=4&amp;t=9112&amp;start=15" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum31e631e6.html?f=4" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Feature Requests”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum907f907f.html?f=42" class="jumpbox-cat-link"> <span> Sandboxie Forums</span></a></li>
+																<li><a href="viewforum12a312a3.html?f=2" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Announcements</span></a></li>
+																<li><a href="viewforumcf19cf19.html?f=6" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Positive Reviews</span></a></li>
+																<li><a href="viewforum107e107e.html?f=43" class="jumpbox-cat-link"> <span> Problems and Questions</span></a></li>
+																<li><a href="viewforum8a838a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Problem Reports</span></a></li>
+																<li><a href="viewforum48ab48ab.html?f=17" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Quick Questions</span></a></li>
+																<li><a href="viewforumbcb4bcb4.html?f=65" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.25</span></a></li>
+																<li><a href="viewforumab78ab78.html?f=44" class="jumpbox-cat-link"> <span> More Forums</span></a></li>
+																<li><a href="viewforum31e631e6.html?f=4" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Feature Requests</span></a></li>
+																<li><a href="viewforume774e774.html?f=5" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Anything Else</span></a></li>
+																<li><a href="viewforum89418941.html?f=22" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Contributed Utilities &amp; Templates</span></a></li>
+																<li><a href="viewforum97809780.html?f=14" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; International Translations</span></a></li>
+																<li><a href="viewforum2b892b89.html?f=38" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.01</span></a></li>
+																<li><a href="viewforumdfa4dfa4.html?f=39" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.03</span></a></li>
+																<li><a href="viewforuma3f5a3f5.html?f=40" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.05</span></a></li>
+																<li><a href="viewforum51ee51ee.html?f=41" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.07</span></a></li>
+																<li><a href="viewforum590b590b.html?f=46" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.09</span></a></li>
+																<li><a href="viewforumcdbacdba.html?f=48" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.13</span></a></li>
+																<li><a href="viewforum30ac30ac.html?f=49" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.15</span></a></li>
+																<li><a href="viewforum91409140.html?f=50" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.17</span></a></li>
+																<li><a href="viewforum208f208f.html?f=51" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.19</span></a></li>
+																<li><a href="viewforum26492649.html?f=53" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.01</span></a></li>
+																<li><a href="viewforum9e0d9e0d.html?f=54" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.05</span></a></li>
+																<li><a href="viewforumfac0fac0.html?f=55" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.07</span></a></li>
+																<li><a href="viewforuma05ca05c.html?f=56" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.09</span></a></li>
+																<li><a href="viewforum6ac36ac3.html?f=57" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.11</span></a></li>
+																<li><a href="viewforume57de57d.html?f=58" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.13</span></a></li>
+																<li><a href="viewforum07560756.html?f=59" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.15</span></a></li>
+																<li><a href="viewforumb8c1b8c1.html?f=60" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.17</span></a></li>
+																<li><a href="viewforumdbf5dbf5.html?f=61" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.19</span></a></li>
+																<li><a href="viewforum75c275c2.html?f=62" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.21</span></a></li>
+																<li><a href="viewforume5f3e5f3.html?f=64" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.23</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="stat-block online-list">
+		<h3>Who is online</h3>
+		<p>Users browsing this forum: No registered users and 1 guest</p>
+	</div>
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="../index.html" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Home</span></a></span>									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="America/New York">UTC-04:00</span></li>
+							<li class="rightside">
+				<a href="ucp033a033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete all board cookies</span>
+				</a>
+			</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+									</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="cron50895089.gif?cron_type=cron.task.text_reparser.post_text" width="1" height="1" alt="cron" /></div>
+
+<script type="text/javascript" src="assets/javascript/jquery.mince91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="assets/javascript/corece91ce91.js?assets_version=7"></script>
+
+
+
+<script type="text/javascript" src="styles/sbie_prosilver/template/forum_fnce91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="styles/sbie_prosilver/template/ajaxce91ce91.js?assets_version=7"></script>
+
+
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9112 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:50:59 GMT -->
+</html>

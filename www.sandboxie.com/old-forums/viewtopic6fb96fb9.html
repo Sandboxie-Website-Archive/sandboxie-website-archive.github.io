@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=20963&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Improve the security of its browser ?!</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Improve the security of its browser ?!</h2>
+		<p><a href="viewtopicad74ad74.html?f=22&amp;t=20963">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=20963</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Improve the security of its browser ?!</h3>
+				<div class="date">Posted: <strong>Sat Mar 28, 2015 5:51 pm</strong></div>
+				<div class="author">by <strong>laclac1</strong></div>
+				<div class="content">I have a question.<br>
+I always execute firefox in a sandboxe. But if I download and execute a virus in the same sandboxe, the virus can't infect my system with sandboxie <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+But it can get my personal and important data.<br>
+For example, it can read the list of my password saved by firefox (key.db).<br>
+<br>
+Is it possible to block the access to key.db file for all program except firefox ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Improve the security of its browser ?!</h3>
+				<div class="date">Posted: <strong>Sat Mar 28, 2015 8:05 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">Add this line to your Sandboxie.ini (in the sandbox where Firefox runs):
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>ClosedFilePath=!firefox.exe,key.db
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Improve the security of its browser ?!</h3>
+				<div class="date">Posted: <strong>Sun Mar 29, 2015 9:33 am</strong></div>
+				<div class="author">by <strong>laclac1</strong></div>
+				<div class="content">Oh my god. It works.<br>
+It's perfect ! I'm very happy, my passwords were very safe now. It's a very good news.<br>
+<br>
+But I have an other question..<br>
+And if it's possible to have better (but it's already perfect).<br>
+<br>
+My firefox is always in a sandboxe and only it can read the key.db.. But my system (go out the sandboxe) can read it.<br>
+So if my system is really infected by a virus ouside the sandboxe, it can read my password.<br>
+Is it possible to remove the key.db in my real system, and keep it only in my sandboxe with firefox ?<br>
+It s a very very safe <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Note: But I automatically my sandboxie. So is it possible to remove the sandboxe automatically but make an exception on the key.db.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Improve the security of its browser ?!</h3>
+				<div class="date">Posted: <strong>Mon Mar 30, 2015 6:02 am</strong></div>
+				<div class="author">by <strong>laclac1</strong></div>
+				<div class="content">Hi,<br>
+<br>
+I find a solution, I use the parameter DeleteCommand.<br>
+I include the line in the Sandboxie.ini.<br>
+DeleteCommand =c:\security.bat "%SANDBOX%"<br>
+<br>
+And in the bat file I writed:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>:: Save Login/Password
+move "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\ekarny6u.default\key.db" "%TEMP%\key.db"
+move "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\ekarny6u.default\logins.json" "%TEMP%\logins.json"
+
+:: Remove the Sandboxe
+RMDIR /s /q "%1"
+
+:: Restore Login/Password
+md "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\ekarny6u.default\"
+move "%TEMP%\key.db" "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\ekarny6u.default\key.db"
+move "%TEMP%\logins.json" "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\ekarny6u.default\logins.json"
+</code></pre></div>
+
+Now I can empty the real key.db and logins.json of Firefox.<br>
+The only good file will be in the sandboxe with a access very secure.<br>
+<br>
+So if a virus attack my computer:<br>
+-	In the sandboxe, he is block by the closepath<br>
+-	And outside the sandboxe, the file is empty.<br>
+<br>
+So it’s impossible a program get my passwords.<br>
+We can make this with a lot of programs. For example, the password of Filezilla available in the sitemanager, very easy to hack. Or Chrome.<br>
+We can secure it with the same method.<br>
+<br>
+Note: If you have an ideo to improve my script, or a feedback </div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Improve the security of its browser ?!</h3>
+				<div class="date">Posted: <strong>Mon Mar 30, 2015 9:12 am</strong></div>
+				<div class="author">by <strong>laclac1</strong></div>
+				<div class="content">HI,<br>
+<br>
+I have a problem,<br>
+<br>
+When you active the “automatically delete”, the sandboxe has a new name on each session.<br>
+So when I restore my key file, it’s on the old sandboxe. So it’s without effect.<br>
+<br>
+I should disable the  “automatically delete”, if I want the same name.<br>
+But if I disable this option, the DeleteCommand  command is never called.<br>
+<br>
+So my solution doesn’t work.<br>
+Do you have an idea ? </div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Improve the security of its browser ?!</h3>
+				<div class="date">Posted: <strong>Mon Mar 30, 2015 5:10 pm</strong></div>
+				<div class="author">by <strong>laclac1</strong></div>
+				<div class="content">Ok, I found the solution.  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>:: Save Login/Password
+move "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\jzxafyuy.default-1424544488418\key3.db" "%TEMP%\key3.db"
+move "%1\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\jzxafyuy.default-1424544488418\logins.json" "%TEMP%\logins.json"
+
+:: Remove the Sandboxe
+RMDIR /s /q "%1"
+
+:: Restore Login/Password
+md "C:\Sandbox\myuser\DefaultBox\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\jzxafyuy.default-1424544488418\"
+move "%TEMP%\key3.db" "C:\Sandbox\myuser\DefaultBox\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\jzxafyuy.default-1424544488418\key3.db"
+move "%TEMP%\logins.json" "C:\Sandbox\myuser\DefaultBox\user\current\AppData\Roaming\Mozilla\Firefox\Profiles\jzxafyuy.default-1424544488418\logins.json"
+</code></pre></div></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=20963&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:40 GMT -->
+</html>

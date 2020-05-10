@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/24038" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2017-10-09T14:30:28-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/24038</id>
+
+		<entry>
+		<author><name><![CDATA[Barb@Invincea]]></name></author>
+		<updated>2017-10-09T14:30:28-04:00</updated>
+
+		<published>2017-10-09T14:30:28-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=130569#p130569</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=130569#p130569"/>
+		<title type="html"><![CDATA[Re: SboxieUtil - Sandboxie enhancement dll - Run w/o AdminRights]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=130569#p130569"><![CDATA[
+Iggiz,<br><br>Per our PM conversation, this is done.<br><br>Please feel free to PM me directly if you need any other changes made to the original topic.<br><br>Regards,<br>Barb.-<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> — Mon Oct 09, 2017 2:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Iggiz]]></name></author>
+		<updated>2017-10-07T20:07:45-04:00</updated>
+
+		<published>2017-10-07T20:07:45-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=130547#p130547</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=130547#p130547"/>
+		<title type="html"><![CDATA[Re: SboxieUtil - Sandboxie enhancement dll - Run w/o AdminRights]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=130547#p130547"><![CDATA[
+Update: <br><br>I simplified everything and replaced the registry tweaks with a new RunAsInvoker= key inside SboxieUtil.ini<br><br><br><br>@Barb (Or any other moderator):<br><br>Could you modify the first post and remove all the lines starting from "Often installers ask ..." up to "Here's the compiled version..." ? <br>Thanks<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32992">Iggiz</a> — Sat Oct 07, 2017 8:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Iggiz]]></name></author>
+		<updated>2017-03-01T13:51:00-04:00</updated>
+
+		<published>2017-03-01T13:51:00-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126744#p126744</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126744#p126744"/>
+		<title type="html"><![CDATA[Re: SboxieUtil - Sandboxie enhancement dll - Run w/o AdminRi]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126744#p126744"><![CDATA[
+I just uploaded a beta version with a newly added feature, follow the link in the first post and open the beta folder to find it.<br><br><strong>New Feature:</strong><br><br>Start/Run restrictions for programs installed <strong>inside</strong> of a sandbox.<br><br><br><br>I know you're actually not supposed to install programs inside of a sandbox, but it can be useful in some cases so I ended up adding this feature.<br>If you install a program normally (outside of a sandbox) then please stick to the Start/Run restrictions offered by sandboxie itself.<br><br><br>Note: It will not show any error messages when a process start was blocked but you can view the debug output with Dbgview from microsoft. (Apply a filter named SboxieUtil)<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32992">Iggiz</a> — Wed Mar 01, 2017 12:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Iggiz]]></name></author>
+		<updated>2017-02-18T16:26:08-04:00</updated>
+
+		<published>2017-02-18T16:26:08-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126492#p126492</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126492#p126492"/>
+		<title type="html"><![CDATA[Re: Run programs that require admin rights without admin rig]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126492#p126492"><![CDATA[
+Sorry Barb, I will pay more attention next time and post it in the right section.<br><br><br>Some updates regarding inno setup installers, I wrote a dll that can be injected via sandboxie to be able to run inno setup installers without admin rights too. <br>Not sure if I'm allowed to upload it here as attachment, but if there is interest then I'll find a place to upload it.<br><br>If someone likes to build a dll on their own, you'll need to hook ShellExecute/ShellExecuteEx and look for the "runas" verb, replace it with "open".<br>Additionally the installer will also call "CheckTokenMembership", you'll have to hook that too and return true.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32992">Iggiz</a> — Sat Feb 18, 2017 3:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Barb@Invincea]]></name></author>
+		<updated>2017-02-17T13:47:23-04:00</updated>
+
+		<published>2017-02-17T13:47:23-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126478#p126478</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126478#p126478"/>
+		<title type="html"><![CDATA[Re: Run programs that require admin rights without admin rig]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126478#p126478"><![CDATA[
+Hello Iggiz,<br><br>I am moving this thread to the Contributed Utilities &amp; Templates  section.<br><br>Regards,<br>Barb.-<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> — Fri Feb 17, 2017 12:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Iggiz]]></name></author>
+		<updated>2017-10-09T14:29:52-04:00 </updated>
+
+		<published>2017-02-17T12:46:44-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126474#p126474</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126474#p126474"/>
+		<title type="html"><![CDATA[SboxieUtil - Sandboxie enhancement dll - Run w/o AdminRights]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126474#p126474"><![CDATA[
+Often installers ask for admin rights but they actually don't need them to install. <br>Mostly, this happens because programs try to install themselves into the program files folder by default.<br><br>Here's the compiled version of <strong>SboxieUtil</strong> and its features:<br><strong>SboxieUtil Features</strong><br><br>1. Install programs without Administrator Rights (no UAC prompts, no SBIE2217 errors).<br>   -Tested with Inno Setup and NSIS installers, but it should work with other installers/programs too.<br><br>2. Clipboard access control for sandboxed programs (ReadWrite, Read, Write, Block, BlockAll).<br><br><strong>New Feature:</strong><br><br>3. Start/Run restrictions for programs installed <strong>inside</strong> of a sandbox.<br><br>Note: It will not show any error messages when a process start was blocked but you can view the debug output with Dbgview from microsoft. (Apply a filter named SboxieUtil)<br><br>Each feature supports exceptions "ProcessExceptions=" "SandboxExceptions=", configurable via SboxieUtil.ini<br>More features will be added later, please check the readme file for the full feature list and installation instructions.<br><a href="https://drive.google.com/file/d/0B5by5H1Q2PxEaTFxanhpSU9GbEk/view" class="postlink">https://drive.google.com/file/d/0B5by5H ... 9GbEk/view</a><br><br><strong>Download (Source code included):<br><a href="https://drive.google.com/drive/folders/0B5by5H1Q2PxERFI0WEJXaHVvV1U" class="postlink">https://drive.google.com/drive/folders/ ... EJXaHVvV1U</a></strong><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32992">Iggiz</a> — Fri Feb 17, 2017 11:46 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

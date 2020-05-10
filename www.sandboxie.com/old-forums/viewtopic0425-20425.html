@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=18042&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:52:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; How to ensure sandboxed Firefox uses its own cookies file?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>How to ensure sandboxed Firefox uses its own cookies file?</h2>
+		<p><a href="viewtopiccf73cf73.html?f=5&amp;t=18042">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=18042</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>How to ensure sandboxed Firefox uses its own cookies file?</h3>
+				<div class="date">Posted: <strong>Fri Jan 31, 2014 1:43 pm</strong></div>
+				<div class="author">by <strong>Brett</strong></div>
+				<div class="content">Does current Firefox use same cookies file while sandboxed and when not sandboxed (shared cookies) ??<br>
+<br>
+I would like to ensure that the sandboxed FF browser does <strong>not</strong> share any data/cookies/history with the unsandboxed FF browser. <br>
+<br>
+How can I guarantee that? <br>
+<br>
+Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 31, 2014 7:31 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>Brett wrote:</cite>Does current Firefox use same cookies file while sandboxed and when not sandboxed (shared cookies)</div></blockquote>Yes.<br>
+The best way to insure that 2 instances of Firefox do not share anything, is to create a second Firefox profile.<br>
+They won't share any the same profile files.<br>
+They will have separate cookies, bookmarks, extensions, etc.<br>
+They can be run simultaneously without interfering with each other.<br>
+Both profiles must be maintained though, by updating their extensions separately.<br>
+Each of them needs to be run unsandboxed one time, whenever the Firefox program is updated - like the next program update scheduled for next Tuesday (Fx 27).<br>
+<br>
+If firefox.exe is in a "<strong>ProgramFiles</strong>" folder (as opposed to "<strong>ProgramFiles(x86)</strong>" )<br>
+"C:\<strong>Program Files</strong>\Mozilla Firefox\firefox.exe" -profilemanager<br>
+Starts the profile manager, and you can then Create a new profile.<br>
+You could create the new profile on a TrueCrypt volume that's mounted as a drive letter, so all of the profile files are encrypted when the TrueCrypt volume is not mounted.<br>
+Profile Manager has the unfortunate tendency to set the new profile as the default profile that Firefox uses when it starts, so after the new profile is created you may want to run the Profile Manager again, select the "default" profile, and then Start Firefox - to set the "default" profile back as the one that Firefox uses if the profile name is not provided on the command line.<br>
+<br>
+To use the new profile without going through Profile Manager each time, create new shortcuts that list the name of the new profile in the Properties &gt; Target box of 2 new shortcuts, as follows.<br>
+--<br>
+Running Firefox with the new profile, unsandboxed, using a profile named NewProfile.<br>
+Substitute the name you give your new profile in place of NewProfile in the command line:<br>
+In the shortcut's Properties &gt; Target box:<br>
+"C:\<strong>Program Files</strong>\Mozilla Firefox\firefox.exe" -no-remote -P "NewProfile"<br>
+(The profile name must be listed inside of quotes)<br>
+The above is used for purposes of adding/updating the extensions in the profile. <br>
+--<br>
+<br>
+To start Firefox sandboxed (using DefaultBox and the Newprofile profile):<br>
+"C:\<strong>Program Files</strong>\Sandboxie\Start.exe" /box:DefaultBox "C:\<strong>Program Files</strong>\Mozilla Firefox\firefox.exe" -no-remote -P "NewProfile"<br>
+----<br>
+As an alternative you could install a version of Portable Firefox, but the location of it's profile folder would need to be specified in your Sandbox Settings, if you want to use the Sandboxie "Firefox" templates that are provided.<br>
+Install the Portable program and create a sandbox, if it doesn't exist.<br>
+Then select at least one of the Firefox templates for that sandbox at:<br>
+Sandbox Settings &gt; Applications &gt; Web Browser &gt; Firefox<br>
+and click OK.<br>
+Then:<br>
+Sandbox Settings &gt; Applications &gt; Folders<br>
+and navigate to and select the profile folder for Portable Firefox.<br>
+OK<br>
+----<br>
+Firefox could be installed inside of a sandbox, but the Firefox install that's outside of the sandbox should be hidden while installing it inside the sandbox. Otherwise, the sandbox install will see the extensions, bookmarks , etc that are in the unsandboxed install.<br>
+Installing inside the sandbox means that you can't use Delete Contents to get rid of junk/malware etc without also deleting the Firefox program in the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How to ensure sandboxed Firefox uses its own cookies fil</h3>
+				<div class="date">Posted: <strong>Mon Mar 10, 2014 5:56 pm</strong></div>
+				<div class="author">by <strong>Mikey9991</strong></div>
+				<div class="content">Sorry for the newbie question but where do I put this or type it in? <br>
+"C:\Program Files\Sandboxie\Start.exe" /box:DefaultBox "C:\Program Files\Mozilla Firefox\firefox.exe" -no-remote -P "NewProfile"<br>
+<br>
+Thanks,<br>
+Mike</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How to ensure sandboxed Firefox uses its own cookies fil</h3>
+				<div class="date">Posted: <strong>Mon Mar 10, 2014 11:55 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Mikey9991 wrote:</cite>where do I put this or type it in? </div></blockquote>
+Right click Desktop&gt;New&gt;Shortcut, Copy the path written by Guest10:<br>
+<br>
+"C:\Program Files\Sandboxie\Start.exe" /box:DefaultBox "C:\Program Files\Mozilla Firefox\firefox.exe" -no-remote -P "NewProfile"<br>
+<br>
+and paste it, Click Next, Finish.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How to ensure sandboxed Firefox uses its own cookies fil</h3>
+				<div class="date">Posted: <strong>Tue Mar 11, 2014 7:04 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">I hope you didn't miss the part where the new Firefox profile needs to have been created first, and that the name you give to the new profile is what gets typed into the line in place of "NewProfile", unless of course you did call the new profile "NewProfile".<br>
+The profile name must be inside of quotes ("") on the line, as shown.<br>
+<br>
+And you don't have to use DefaultBox. You could create a new sandbox first, and use it for sandboxed Firefox by putting its name in the "/box:....." parameter in the line:<br>
+/box:Firefox<br>
+if you created a new sandbox called Firefox.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=18042&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:52:45 GMT -->
+</html>

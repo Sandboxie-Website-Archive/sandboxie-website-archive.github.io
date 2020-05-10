@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=24948&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:59:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Provide better checksum and GPG sigs</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Provide better checksum and GPG sigs</h2>
+		<p><a href="viewtopic7d637d63.html?f=4&amp;t=24948">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=24948</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Provide better checksum and GPG sigs</h3>
+				<div class="date">Posted: <strong>Mon Oct 02, 2017 5:36 pm</strong></div>
+				<div class="author">by <strong>inaboxwithsandornot</strong></div>
+				<div class="content">On your download site (<a href="../AllVersions.html" class="postlink">https://www.sandboxie.com/AllVersions</a>) only MD5 and SHA1 checksum are available.<br>
+Both are broken so please provide SHA2-512 and SHA3 instead of weak MD5 and SHA1.<br>
+<br>
+And to verify the files are realy from you, provide GPG.asc signature for binarys with GPG ID &amp; fingerprint so we can check that.<br>
+Sandboxie is a important security software so it need important secure ways to verify the integrity  <img class="smilies" src="images/smilies/icon_exclaim.gif" width="15" height="15" alt=":!:" title="Exclamation"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Provide better checksum and GPG sigs</h3>
+				<div class="date">Posted: <strong>Tue Oct 03, 2017 9:48 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello inaboxwithsandornot ,<br>
+
+<blockquote class="uncited"><div>On your download site (<a href="../AllVersions.html" class="postlink">https://www.sandboxie.com/AllVersions</a>) only MD5 and SHA1 checksum are available.<br>
+Both are broken so please provide SHA2-512 and SHA3 instead of weak MD5 and SHA1.</div></blockquote>
+
+What is broken, exactly? Could you please provide more info so that I can take a look and make the necessary updates? <br>
+<br>
+Regarding your second request, I am not sure we are going to change the SHA1/MD5 for the time being, however, I will reach out to the devs and see what they think about it. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Provide better checksum and GPG sigs</h3>
+				<div class="date">Posted: <strong>Tue Oct 03, 2017 1:19 pm</strong></div>
+				<div class="author">by <strong>inaboxwithsandornot</strong></div>
+				<div class="content">You found a lot of links with broken MD5 and SHA1.<br>
+The checksum can be spoofed, so its broken</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Provide better checksum and GPG sigs</h3>
+				<div class="date">Posted: <strong>Tue Oct 03, 2017 1:22 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberliste9a5.html?mode=viewprofile&amp;u=34557">inaboxwithsandornot</a> wrote: <a href="viewtopice82be82b.html?p=130500#p130500" data-post-id="130500" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Oct 03, 2017 1:19 pm</div></cite>
+You found a lot of links with broken MD5 and SHA1.<br>
+The checksum can be spoofed, so its broken
+</div></blockquote>
+
+Unless you can provide examples of what is broken on our end, I will not be able to review it.<br>
+The md5 and SHA1 posted for our Sandboxie download are not broken and they are correct at the moment. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Provide better checksum and GPG sigs</h3>
+				<div class="date">Posted: <strong>Sat Oct 07, 2017 1:01 pm</strong></div>
+				<div class="author">by <strong>inaboxwithsandornot</strong></div>
+				<div class="content"><a href="https://duckduckgo.com/?t=palemoon&amp;q=md5+broken" class="postlink">https://duckduckgo.com/?t=palemoon&amp;q=md5+broken</a> &amp; <a href="https://duckduckgo.com/?q=sha1+broken&amp;t=palemoon" class="postlink">https://duckduckgo.com/?q=sha1+broken&amp;t=palemoon</a><br>
+<br>
+The whole way to generate the MD5 &amp; SHA1 checksum is broken and can be spoofed.<br>
+Thats why we need to use stronger ones, like SHA2 and SHA3<br>
+<br>
+MERGED POST<br>
+SHA1: <a href="https://www.schneier.com/blog/archives/2005/02/sha1_broken.html" class="postlink">https://www.schneier.com/blog/archives/ ... roken.html</a>, <a href="https://www.quora.com/In-cryptography-why-are-MD5-and-SHA1-called-broken-algorithms?share=1" class="postlink">https://www.quora.com/In-cryptography-w ... ms?share=1</a> and a lot more.<br>
+Or as TL;DR: On February 23, 2017 CWI Amsterdam and Google announced they had performed a collision attack against SHA-1,[<a href="https://phys.org/news/2017-02-cwi-google-collision-industry-standard.html" class="postlink">14</a>][<a href="https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html" class="postlink">15</a>] publishing two dissimilar PDF files which produce the same SHA-1 hash as <a href="https://shattered.io/" class="postlink">proof of concept</a>.<br>
+<br>
+And MD5 is even worse:<br>
+The security of the MD5 has been severely compromised, with its weaknesses having been exploited in the field, most infamously by the Flame malware in 2012. The CMU Software Engineering Institute considers MD5 essentially "cryptographically broken and unsuitable for further use".[<a href="https://www.kb.cert.org/vuls/id/836068" class="postlink">4</a>] Despite this known vulnerability, MD5 remains in use.<br>
+A 2013 attack by Xie Tao, Fanbao Liu, and Dengguo Feng breaks MD5 <a href="https://en.wikipedia.org/wiki/Collision_resistance" class="postlink">collision resistance</a> in 218 time. This attack runs in less than a second on a regular computer.[<a href="https://eprint.iacr.org/2013/170.pdf" class="postlink">2</a>]<br>
+MD5 is prone to <a href="https://en.wikipedia.org/wiki/Length_extension_attack" class="postlink">length extension attacks</a>.<br>
+<br>
+Is that enough? I dont understand why you dont know that nor just use stronger checksums</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Provide better checksum and GPG sigs</h3>
+				<div class="date">Posted: <strong>Mon Oct 09, 2017 1:30 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello  inaboxwithsandornot ,<br>
+<br>
+It looks like you are talking about a general issue with SHAs / MD5, but you are not reporting anything broken with the ones currently posted. I thought you had examples to provide about incorrect info provided on our end, sorry about any confusion. <br>
+<br>
+I have already replied to the other portion on my first response.<br>
+I will update this thread if new information becomes available.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=24948&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:59:01 GMT -->
+</html>

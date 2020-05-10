@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24676&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:27:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Moving files outside of Sandboxie and opening them still runs them in Sandboxie (impossible to fix without a restart)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Moving files outside of Sandboxie and opening them still runs them in Sandboxie (impossible to fix without a restart)</h2>
+		<p><a href="viewtopicaf76af76.html?f=11&amp;t=24676">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24676</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Moving files outside of Sandboxie and opening them still runs them in Sandboxie (impossible to fix without a restart)</h3>
+				<div class="date">Posted: <strong>Sat Jul 22, 2017 6:41 pm</strong></div>
+				<div class="author">by <strong>Tester100</strong></div>
+				<div class="content">Hello! There has been a weird observation that I made where I haven't been sure if it's intended or not, so that's why I'm posting this. It looks like a bug for me. Whenever I move newly created files in Sandboxie's content folder outside of it, and I run these files, these are kinda forced-opened in Sandboxie and there is no way I can prevent this, unless I restart my system. Then it's normal again and programs or files will run just normally without Sandboxie. I should also note that when I move files inside Sandboxie that had been previously running, and it's a program and I'm trying to view its path in Windows task manager, I'm getting this error message: "Windows cannot find [path]. Make sure you typed the name correctly, and then try again."<br>
+<br>
+How to reproduce the forced-Sandbox behavior:<br>
+- Download Firefox Portable, copy it into the Sandbox folder and run it sandboxed. As soon as all files are unpacked, move the Firefox Portable folder outside the sandbox and run the program. It will automatically run in Sandboxie. Viewing the process properties in Windows Task Manager results in the mentioned error message. This can only be avoided by restarting the system, or copying all required files and folders. Copying them is no option for really huge directories and files.<br>
+<br>
+The opposite way:<br>
+- Launch a program, for example another portable program, close it again and then move it into the sandbox folder. Running it will work, but results in the same error message in the Task Manager again. Interesting observation: It allows to run Chrome and certain applications that use Chromium without any issue (due to its own sandbox).<br>
+<br>
+<strong>Why is this a problem?</strong> Sometimes there are cases where it's necessary to launch a program without Sandboxie, for example when it needs to load a driver. Or the program has issues with certain tasks, but you normally want to run it Sandboxie, but sometimes you just can't. Having to restart the system or copying the whole (huge) directories are both tedious workarounds.<br>
+<br>
+This problem happened on Windows 7 and Windows 8.1 every single time, but interestingly not on Windows 10. I hope you will be able to verify this. What can be done about this issue? Thanks in advance! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Additional info: I was able to verify this with Sandboxie 5.20, and it shows the same behavior even with old versions such as 3.76. Also confirmed this in a virtual machine which barely has any conflicting software, so no anti virus software or such programs.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Moving files outside of Sandboxie and opening them still runs them in Sandboxie (impossible to fix without a restart</h3>
+				<div class="date">Posted: <strong>Sun Jul 23, 2017 7:35 am</strong></div>
+				<div class="author">by <strong>Bertus</strong></div>
+				<div class="content">If you want to launch a program outside the sandbox, you can temporally disable sandboxie by choosing "disable forced programs".</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Moving files outside of Sandboxie and opening them still runs them in Sandboxie (impossible to fix without a restart</h3>
+				<div class="date">Posted: <strong>Sun Jul 23, 2017 7:56 am</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">This has been discussed elsewhere before and I believe the final conclusion was that it was a windows path related quirk but not a bug specific to sandboxie.<br>
+<br>
+<a href="viewtopic7fd07fd0.html?p=110136" class="postlink">viewtopic.php?p=110136</a>
+<blockquote class="uncited"><div>For some reason, when Windows sends us the notification of a process starting, it is giving us the old file path.</div></blockquote></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Moving files outside of Sandboxie and opening them still runs them in Sandboxie (impossible to fix without a restart</h3>
+				<div class="date">Posted: <strong>Tue Jul 25, 2017 4:43 pm</strong></div>
+				<div class="author">by <strong>Tester100</strong></div>
+				<div class="content">Thanks for your responses!<br>
+
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist2183.html?mode=viewprofile&amp;u=2039">Bertus</a> wrote: <a href="viewtopic70547054.html?p=129317#p129317" data-post-id="129317" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sun Jul 23, 2017 7:35 am</div></cite>
+If you want to launch a program outside the sandbox, you can temporally disable sandboxie by choosing "disable forced programs".
+</div></blockquote>
+
+The irony is, it's the free version, not the paid one. This is some kind of file path glitch.<br>
+
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518">Syrinx</a> wrote: <a href="viewtopic57285728.html?p=129318#p129318" data-post-id="129318" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sun Jul 23, 2017 7:56 am</div></cite>
+This has been discussed elsewhere before and I believe the final conclusion was that it was a windows path related quirk but not a bug specific to sandboxie.<br>
+<a href="viewtopic7fd07fd0.html?p=110136" class="postlink">viewtopic.php?p=110136</a>
+<blockquote class="uncited"><div>For some reason, when Windows sends us the notification of a process starting, it is giving us the old file path.</div></blockquote>
+</div></blockquote>
+
+Thanks, I had been unable to find that with the search, seems like I used the wrong words. That thread makes it sound like there will be no fix in the near future, and also no clear answer how and why Windows does that. Fact is, in my tests it happened on Windows 7 and Windows 8.1, both 64 bit and clean. But not on Windows 10, recently tested with version 1703. Might seem like a reason to switch to Windows 10, but at the same time Microsoft loves to break Sandboxie with every major upgrade, and that's every half year...<br>
+So, I can also confirm that copying the affected files and folders works around that bug, but this is too extreme with huge amounts of data. If we can't hope for a bug fix, what do you think is the best way to get around this path error without having to wait forever or killing your hard drives? Please tell me your suggestions if you got any! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Moving files outside of Sandboxie and opening them still runs them in Sandboxie (impossible to fix without a restart</h3>
+				<div class="date">Posted: <strong>Thu Jul 27, 2017 8:07 pm</strong></div>
+				<div class="author">by <strong>Tester100</strong></div>
+				<div class="content">So, I have found a workaround. Making a hard link copy of the whole directory with the help of HardLinkShellExt and deleting the original folder works, and all files are still fine, without doing real disk-intensive copies.<br>
+<br>
+1. Install Link Shell Extension. You can get it here: <a href="http://schinagl.priv.at/nt/hardlinkshellext/linkshellextension.html" class="postlink">http://schinagl.priv.at/nt/hardlinkshel ... nsion.html</a><br>
+2. When you are done with the installation and the required Windows Explorer restart, right click the desired folder and choose "Pick Link Source".<br>
+3. Now head to the destination folder and right click there as well. Select "Drop As..." and then "Hardlink Clone". <br>
+4. Done! Better check the newly created hard linked files by rightclicking them again and choose "Properties". There is a new column for hard- and symbolic links. If it went well, you can see two paths for that file. Delete the folder in the original location, and hard linked files in the newly created directory won't show a red shortcut arrow anymore. Because these are treated as the original files now, as there is just a single hard link pointing to the data on the disk (zero hard links would mean the file is gone).<br>
+<br>
+An alternative which doesn't require you to install anything is to make use of HardLinksShellExt's commandline utility called ls.exe. It's available on this page from the same author: <a href="http://schinagl.priv.at/nt/ln/ln.html" class="postlink">http://schinagl.priv.at/nt/ln/ln.html</a><br>
+<br>
+Once you are done with extracting the archive file, open up a commandline window and switch to its directory by typing<br>
+cd C:\YourPathHere\ln<br>
+Now you are able to enter the command for copying the directory. The syntax is as follows:<br>
+<br>
+ln --recursive C:\dir\Sourcefolder C:\newlocation\Targetfolder<br>
+<br>
+Compared to Link Shell Ext you have to create a new empty folder beforehand, or else all files and folders will be linked in the directory above. Unfortunately one drawback is that you won't be able to see a hard linked file with an icon. <br>
+<br>
+<br>
+Should someone find a better way to work around the Sandboxie Windows path bug or even find a fix, please let us know!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24676&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:27:44 GMT -->
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25553&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SBIE2224 Opera crash</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SBIE2224 Opera crash</h2>
+		<p><a href="viewtopic92459245.html?f=11&amp;t=25553">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25553</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>SBIE2224 Opera crash</h3>
+				<div class="date">Posted: <strong>Sun Mar 11, 2018 10:06 pm</strong></div>
+				<div class="author">by <strong>Castafiore</strong></div>
+				<div class="content">Hello,<br>
+<br>
+For the last few days, I have been getting these popups everytime when I launch Opera browser (sandboxed): <br>
+<br>
+Popup from Sandboxie: <blockquote class="uncited"><div>SBIE2224 Sandboxed program has crashed: opera.exe [DefaultBox]</div></blockquote>
+
+Popup from Windows(?):  <blockquote class="uncited"><div>opera.exe - Erreur d'application ; "L'exception unknow software exception (0xc0000409) s'est produite dans l'application à l'emplacement 0x011ffdab. Cliquez sur OK pour terminer le programme.</div></blockquote>
+
+This issue did not start to occur following any program update. I had been using Opera version 51.0.2830.40 with Sandboxie 5.23.3 for a while without any problem.<br>
+<br>
+Here is what I did so far to try to resolve the issue:<br>
+<br>
+1.  I completely uninstalled Opera (e.g. deleting user settings) and reinstalled the newly released version 51.0.2830.55<br>
+<br>
+2.  I uninstalled Sandboxie (deleted user settings) and upgraded to version 5.24 (release candidate)<br>
+<br>
+At first, it seemed to have resolved the issue, but as soon as I rebooted my PC, the same issue came back again.<br>
+<br>
+<br>
+Additional information: <br>
+<br>
+O.S.: Windows 7 x64<br>
+<br>
+Antivirus:  Webroot SecureAnywhere 9.0.19.43 (I have been running this build for several weeks without any issue with Sandboxie)<br>
+<br>
+Any other info or logs I can submit?<br>
+<br>
+Thanks<br>
+<br>
+p.s.: This issue does not occur with the most recent versions of Firefox (version 58.0.2), Chrome (Version 65.0.3325.146), and Internet Explorer (version 11.0.96.00.18920)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2224 Opera crash</h3>
+				<div class="date">Posted: <strong>Mon Mar 12, 2018 10:03 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Castafiore,<br>
+<br>
+Does Opera work fine outside Sandboxie ? <br>
+Are you using any extensions? <br>
+Have you tried creating a new Sandbox with default settings? <br>
+<br>
+Regarding WebRoot, here's the lastes info he got in our dedicated AV Software. Give these workarounds a go:<br>
+<a href="search8ddb8ddb.html?keywords=webroot&amp;t=21539&amp;sf=msgonly" class="postlink">search.php?keywords=webroot&amp;t=21539&amp;sf=msgonly</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2224 Opera crash</h3>
+				<div class="date">Posted: <strong>Mon Mar 12, 2018 2:50 pm</strong></div>
+				<div class="author">by <strong>Castafiore</strong></div>
+				<div class="content">Hello Barb,<br>
+<br>
+To answer your questions:<br>
+<br>
+1. Yes, Opera does work perfectly fine outside Sandboxie.<br>
+<br>
+2. Yes, I am using two extensions in Opera: LastPass and Adblock Plus. I deactivated them and then launched Opera again in Sandboxie: the same issue persists.  (Please note that I am also using the same extensions in Firefox... with no issue like with Opera)<br>
+<br>
+3. I did create a new Sandbox with defaults settings: the same popups/error messages are showing up repeatedly when I launch Opera.<br>
+<br>
+4. Regarding Webroot SecureAnywhere:<br>
+<br>
+After looking at the thread that you invited me to read, I tried the following workaround: under 'Identity Protection', I did set opera.exe to <strong>Allow</strong> instead of <strong>Protected</strong> (by default, Webroot sets all browsers to <strong>Protected</strong>). Result: The same issue persisted. So, I set opera.exe back to <strong>Protected</strong>. <br>
+<br>
+I also did a clean reinstall of Webroot (which I believe was not mentioned in the thread), and it didn't change anything either.<br>
+<br>
+Anything else I should try?<br>
+<br>
+Regards</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2224 Opera crash</h3>
+				<div class="date">Posted: <strong>Tue Mar 13, 2018 3:09 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Castafiore,<br>
+<br>
+Test if the issue goes away completely when you remove Webroot. <br>
+If yes, then start disabling settings in it to see if you can find out which one is causing the problem. <br>
+<br>
+Also you post the results of Resource Access Monitor and I'll take a look. Not sure we'll find much there since the app crashes right away,  but I'll check it out.<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+Repro the issue, paste the output.<br>
+Highlight your pasted output and hit the "&lt;/&gt;" button to format it please.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25553&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:09 GMT -->
+</html>

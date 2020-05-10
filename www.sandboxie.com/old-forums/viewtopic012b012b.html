@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24346&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:17:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Ditto / Clipboard manager / IE</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Ditto / Clipboard manager / IE</h2>
+		<p><a href="viewtopicb2c1b2c1.html?f=17&amp;t=24346">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24346</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Ditto / Clipboard manager / IE</h3>
+				<div class="date">Posted: <strong>Mon Apr 24, 2017 12:16 pm</strong></div>
+				<div class="author">by <strong>joesph66</strong></div>
+				<div class="content">I have Ditto, a clipboard manager, installed.  I have SB 5.19 and Win10x64 (Creator) insatalled.  The issue is that I cannot paste text from Ditto into the IE search field.  I can, however, paste it in just fine in FireFox.  Any thoughts?  Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Ditto / Clipboard manager / IE</h3>
+				<div class="date">Posted: <strong>Mon Apr 24, 2017 5:40 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello  joesph66,<br>
+<br>
+I copied  3 different things, outside Sandboxie and I was able to paste them into a Sandboxed IE address bar, as well as a google search by double clicking Ditto, and by hitting Ctrl V.<br>
+Do you have more specific repro steps so that I can test it?<br>
+<br>
+Do you have any antivirus software installed?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Ditto / Clipboard manager / IE</h3>
+				<div class="date">Posted: <strong>Mon May 01, 2017 9:24 am</strong></div>
+				<div class="author">by <strong>joesph66</strong></div>
+				<div class="content">I just have MalwareBytes and MS Defender installed.  I simply cannot get thepaste function to work for IE.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Ditto / Clipboard manager / IE</h3>
+				<div class="date">Posted: <strong>Mon May 01, 2017 11:51 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi joesph666,<br>
+<br>
+Does the issue occur in a new Sandbox? <br>
+Is ditto running outside or inside Sandboxie? <br>
+Are you right-clicking /double clicking on the ditto clipboard entry to copy to IE?  <br>
+Are you right-clicking inside IE  to paste the clipboard info or using Ctrl + V?<br>
+Are there any addons or toolbars enabled in IE? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Ditto / Clipboard manager / IE</h3>
+				<div class="date">Posted: <strong>Sat May 06, 2017 11:09 am</strong></div>
+				<div class="author">by <strong>joesph66</strong></div>
+				<div class="content">I just picked IE to put in the sandbox.  So I don't think that is new.<br>
+<br>
+Ditto is running outside of the sandbox (see pic1 attachment)<br>
+<br>
+The answer to #3 and #4 is that I hjave tried double-clicking and right-clicking as well as paste and Ctl + V <br>
+<br>
+There are no addons or toolbars enabled for IE.<br>
+<br>
+Below, of course, is my config file.<br>
+<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=WindowsRasMan
+Template=7zipShellEx
+Template=LogitechSetPoint
+Template=WindowsLive
+Template=AdobeAcrobatReader
+Template=OfficeLicensing
+ActivationPrompt=n
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=Thunderbird
+Template=Firefox_Profile_DirectAccess
+Template=IExplore_Favorites_RecoverFolder
+Template=IExplore_Favorites_DirectAccess
+Template=IExplore_Force
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Desktop%
+BorderColor=#0000FF,ttl
+Enabled=y
+BoxNameTitle=n
+CopyLimitKb=200000
+AutoDelete=y
+NeverDelete=n
+OpenPipePath=D:\UTILITIES\WINDOWSMGMT\BKUP\FireFox URLs\
+OpenPipePath=C:\AZIP\
+OpenPipePath=C:\Download\
+OpenPipePath=%AppData%\Ditto\
+
+[UserSettings_0D280228]
+
+SbieCtrl_UserName=steve
+SbieCtrl_NextUpdateCheck=1494508710
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_WindowCoords=345,165,1237,703
+SbieCtrl_ActiveView=40021
+SbieCtrl_TerminateNotify=y
+SbieCtrl_TerminateWarn=n
+SbieCtrl_ExplorerNotify=y
+SbieCtrl_ExplorerWarn=y
+SbieCtrl_EditConfNotify=y
+SbieCtrl_ReloadConfNotify=y
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_ProcSettingsNotify=y
+SbieCtrl_SettingChangeNotify=n
+SbieCtrl_ShortcutNotify=y
+SbieCtrl_ShouldDeleteNotify=y
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_RecoverTarget=C:\Download
+SbieCtrl_SaveRecoverTargets=y
+SbieCtrl_EnableLogonStart=y
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=n
+SbieCtrl_AddQuickLaunchIcon=n
+SbieCtrl_AddContextMenu=n
+SbieCtrl_AddSendToMenu=n
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_BoxExpandedView=DefaultBox</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Ditto / Clipboard manager / IE</h3>
+				<div class="date">Posted: <strong>Sat May 06, 2017 11:17 am</strong></div>
+				<div class="author">by <strong>joesph66</strong></div>
+				<div class="content">You know I liked.  I forgot I have RoboForm running in IE.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Ditto / Clipboard manager / IE</h3>
+				<div class="date">Posted: <strong>Mon May 08, 2017 4:34 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello  joesph66,<br>
+<br>
+I created a Sanbdbox using the same config settings that you posted (for Internet Explorer), and I am still unable to reproduce the issue.<br>
+Can you please let us know if the problem occurs in a new Sandbox with default settings?<br>
+<br>
+Does Ditto work if you run IE outside Sandboxie? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Ditto / Clipboard manager / IE</h3>
+				<div class="date">Posted: <strong>Sat May 13, 2017 8:53 am</strong></div>
+				<div class="author">by <strong>joesph66</strong></div>
+				<div class="content">Ditto works fine outside the sandbox.  It works fine when I have FireFox and Vivaldi in the sandbox.<br>
+Only IE - and only when I attempt to paste something in the search bar.  If I am filling out a form or an online order it works just fine.<br>
+<br>
+I uninstalled and reinstalled SB.<br>
+Below is the configuration file I used. Which I added via Ditto. Also a picture of SB - the ony difference from the earlier photo is that robotaskicon.exe is NOT running.  No issues with Roboform.<br>
+<br>
+<br>
+[GlobalSettings]<br>
+<br>
+Template=RoboForm<br>
+Template=WindowsRasMan<br>
+Template=7zipShellEx<br>
+Template=LogitechSetPoint<br>
+Template=WindowsLive<br>
+Template=AdobeAcrobatReader<br>
+Template=OfficeLicensing<br>
+ActivationPrompt=n<br>
+<br>
+[UserSettings_0D280228]<br>
+<br>
+SbieCtrl_UserName=steve<br>
+SbieCtrl_NextUpdateCheck=1495113510<br>
+SbieCtrl_UpdateCheckNotify=n<br>
+SbieCtrl_ShowWelcome=n<br>
+SbieCtrl_WindowCoords=345,165,1237,703<br>
+SbieCtrl_ActiveView=40021<br>
+SbieCtrl_TerminateNotify=y<br>
+SbieCtrl_TerminateWarn=n<br>
+SbieCtrl_ExplorerNotify=y<br>
+SbieCtrl_ExplorerWarn=y<br>
+SbieCtrl_EditConfNotify=y<br>
+SbieCtrl_ReloadConfNotify=y<br>
+SbieCtrl_HideWindowNotify=n<br>
+SbieCtrl_ProcSettingsNotify=y<br>
+SbieCtrl_SettingChangeNotify=n<br>
+SbieCtrl_ShortcutNotify=y<br>
+SbieCtrl_ShouldDeleteNotify=y<br>
+SbieCtrl_AutoApplySettings=n<br>
+SbieCtrl_RecoverTarget=C:\Download<br>
+SbieCtrl_SaveRecoverTargets=y<br>
+SbieCtrl_EnableLogonStart=y<br>
+SbieCtrl_EnableAutoStart=y<br>
+SbieCtrl_AddDesktopIcon=n<br>
+SbieCtrl_AddQuickLaunchIcon=n<br>
+SbieCtrl_AddContextMenu=n<br>
+SbieCtrl_AddSendToMenu=n<br>
+SbieCtrl_ProcessViewColumnWidths=250,70,300<br>
+SbieCtrl_HideMessage=2205,DDE DATA<br>
+SbieCtrl_BoxExpandedView=,<br>
+<br>
+[DefaultBox]<br>
+<br>
+ConfigLevel=7<br>
+AutoRecover=y<br>
+BlockNetworkFiles=y<br>
+Template=FinePrint<br>
+Template=Thunderbird<br>
+Template=IExplore_Favorites_RecoverFolder<br>
+Template=IExplore_Favorites_DirectAccess<br>
+Template=IExplore_Force<br>
+Template=qWave<br>
+Template=WindowsFontCache<br>
+Template=BlockPorts<br>
+Template=LingerPrograms<br>
+Template=Chrome_Phishing_DirectAccess<br>
+Template=Firefox_Phishing_DirectAccess<br>
+Template=AutoRecoverIgnore<br>
+RecoverFolder=C:\Download<br>
+RecoverFolder=C:\AZIP<br>
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%<br>
+RecoverFolder=%Personal%<br>
+RecoverFolder=%Desktop%<br>
+BorderColor=#0000FF<br>
+Enabled=y<br>
+AutoDelete=y<br>
+NeverDelete=n<br>
+CopyLimitKb=200000<br>
+BoxNameTitle=n</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Ditto / Clipboard manager / IE</h3>
+				<div class="date">Posted: <strong>Tue May 16, 2017 9:50 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello  joesph66 ,<br>
+<br>
+Unfortunately, I cannot reproduce the problem.  Ditto works everywhere in IE, including the address bar. <br>
+Are you running the latest updates for Windows and IE? <br>
+<br>
+Here are a few more things for you to try:<br>
+1) Create a new Sandbox ( do not copy settings from a previous one), and see if the issue occurs there. <br>
+2) Try resetting Internet Explorer (Tools---&gt; Internet Options ---&gt; Advanced ---&gt; Reset...). Keep in mind this will reset any advanced changes you may have set up. <br>
+3) Try disabling your Antivirus software. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24346&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:17:09 GMT -->
+</html>

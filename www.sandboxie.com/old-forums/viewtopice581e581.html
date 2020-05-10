@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9857&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Application having Right Specific Rules</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Application having Right Specific Rules</h2>
+		<p><a href="viewtopic972a-2972a.html?f=4&amp;t=9857">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=9857</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Application having Right Specific Rules</h3>
+				<div class="date">Posted: <strong>Sat Feb 05, 2011 11:18 pm</strong></div>
+				<div class="author">by <strong>n8chavez</strong></div>
+				<div class="content">This, to me, is the one thing that SBIE seems to be lacking, which will correct and chink in its armor.  SBIE creates rules based on specific templates.  I, for example have one sandbox created for Opera, which uses the rules that were determined safe to use with it.  With the template I am able to keep an emails and bookmark charges (among other things) that I want to save.  As another part of my system security I also use Shadow Defender, which enables me to get a clean slate on my system by just rebooting.  The tricky thing is that I need to exclude certain directories from Shadow Defender so that my browser changes and email, is still there after the reboot.  I think this is a semi-common approach.  The fact that I have to exclude directories from Shadow Defender (or similar) and from SBIE means that both products have similar holes, ways that they are both vulnerable. <br>
+<br>
+What is SBIE had the ability to specify which types of file types can be written in directories that already have direct or full access?  That way, in my situation, I can specify that only Opera.exe can have the ability to write an *.mbs file to the mail directory.  That way I am sure that no rouge malware was transfered because no .exe, .com, .bat, etc. file type was written.  In that case, even though there is an exception made in my light virtualization application it is irrelevant because of SBIE's specific permissions.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 06, 2011 7:54 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">You can already do that, although it may not be apparent since there's no obvious way to do that in Sandboxie's GUI.<br>
+<br>
+If you select a folder for Opera to use as a Direct File Access folder, and want to limit it to files with a specific extension, just modify the setting to add that extension to the setting:<br>
+<br>
+Once you select the program (Opera.exe) and the folder (C:\Anyfolder) you will see in the GUI listing for opera.exe:<br>
+C:\Anyfolder\<br>
+<br>
+Just select that setting and use the "Edit/Add" button to edit the setting to:<br>
+C:\Anyfolder\*.mbs<br>
+and save your work.<br>
+<br>
+The configuration file will show:<br>
+OpenFilePath=opera.exe,C:\Anyfolder\*.mbs<br>
+Opera can save a file with any filename (*) and a .mbs extension, to the folder outside of the sandbox.<br>
+Any file that does not have a .mbs extension will be saved inside of the sandbox.<br>
+<br>
+Repeat the same process with another extension, if needed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 06, 2011 3:43 pm</strong></div>
+				<div class="author">by <strong>n8chavez</strong></div>
+				<div class="content">Oh, I didn't know that.  Thanks for letting me know.  I've been trying to tighten the template a little and only allow Opera to write specific file types where they need to be written.  I'm having a little bit of trouble with Opera.  There are areas in the profile that appear to be files with no file types, yet the change date is recent so I know they are being used.  How would I treat those.  Also the below template seems to be very open-ended.  Any ideas how I can close up the holes there?<br>
+
+<blockquote class="uncited"><div>[Template_Opera_Profile_DirectAccess]<br>
+Tmpl.Title=#4338,Opera<br>
+Tmpl.Class=WebBrowser<br>
+OpenFilePath=opera.exe,%Tmpl.Opera%\<br>
+OpenFilePath=opera.exe,%AppData%\Opera\*\Profile\<br>
+OpenFilePath=opera.exe,%Local AppData%\Opera\*\Profile\</div></blockquote></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9857&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:19 GMT -->
+</html>

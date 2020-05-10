@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25390&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Geforce Experience [Question]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Geforce Experience [Question]</h2>
+		<p><a href="viewtopic40f240f2.html?f=17&amp;t=25390">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25390</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Geforce Experience [Question]</h3>
+				<div class="date">Posted: <strong>Thu Feb 01, 2018 8:14 am</strong></div>
+				<div class="author">by <strong>A2Razor</strong></div>
+				<div class="content">Hello,<br>
+<br>
+Not sure what I should classify this as and what forum section it'd be most appropriate in.  Given it's something I've not managed to get working, yet also at the same time probably not working due to <span style="text-decoration: underline">my missing something</span>.  So let's say this is more a question for now rather than a problem-report.<br>
+<br>
+The Goal:  I wish to run games <em>which work just fine under Sandboxie</em>, and to use the Geforce Experience Overlay / Game Proxy (FPS counter, "Freestyle" post-processing, etc).  Long story short, I like to install Steam games in their own Sandbox where possible so that I can completely flush all traces of them when done with the game.  (Using Sandboxie as a clean-uninstall option)<br>
+<br>
+<br>
+Unfortunately, while the NVidia proxy DLL is being loaded by the game process, nothing I've done has managed to get GFE's Overlay showing.  (hotkeys don't work, nothing visible, initial popup instructing the hotkey to pull up the UI is not shown)<br>
+<br>
+--I've tried using SBIE's "Resource Access Monitor" and also Process Explorer to take a look at open handles trying to figure out just how GFE's proxy is communicating back to (or at least <span style="text-decoration: underline">trying</span> to) the controlling process (<em>outside of Sandboxie</em>).  I've additionally tried allowing access to 'everything' with OpenIpcPath (wildcard all, for the sake of testing), yet I still have no access to the overlay.<br>
+<br>
+When running a test game that's installed outside the Sandbox *without Sandboxie*, GFE's Overlay is accessible and working correctly.  When run under Sandboxie, it feels similar to RTSS without allowing communication to the outside.  (eg, overlay being loaded but just inactive without access to shared mem)<br>
+<br>
+<br>
+Is there any way to achieve what I'm trying to do here?<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Geforce Experience [Question]</h3>
+				<div class="date">Posted: <strong>Thu Feb 01, 2018 1:14 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello A2Razor, <br>
+<br>
+I found some related threads that show different results for different users:<br>
+<a href="search699d699d.html?keywords=shadowplay" class="postlink">search.php?keywords=shadowplay</a><br>
+<a href="viewtopic5c365c36.html?f=11&amp;t=23837&amp;p=125385&amp;hilit=geforce+experience#p125385" class="postlink">viewtopic.php?f=11&amp;t=23837&amp;p=125385&amp;hil ... ce#p125385</a><br>
+<br>
+I tested using a Forced Folder so that the game invoked via GeForce launched Sandboxed (GeForce Experience does not work inside Sandboxie).  After that, I used Alt+Z in game and got the GeForce Experience HUD  and although some features worked (like filters), others such as FPS counters were not picked up. I tried opening some paths, IPCs and classes, but I was still unable to get it to work.<br>
+<br>
+I don't think this is something we'll look into. But, If anything comes up, I'll update this thread.<br>
+ <br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Geforce Experience [Question]</h3>
+				<div class="date">Posted: <strong>Thu Feb 01, 2018 6:47 pm</strong></div>
+				<div class="author">by <strong>A2Razor</strong></div>
+				<div class="content"><blockquote class="uncited"><div>I tested using a Forced Folder so that the game invoked via GeForce launched Sandboxed (GeForce Experience does not work inside Sandboxie). After that, I used Alt+Z in game and got the GeForce Experience HUD and although some features worked (like filters), others such as FPS counters were not picked up. I tried opening some paths, IPCs and classes, but I was still unable to get it to work.</div></blockquote>
+
+Thanks for detailing how you're launching the game process (eg, through GFE).  That way is not one that I've tried so-far, and was relying on GFE catching the game launch on its own. (which I'd assumed it was as the proxy was being loaded ... yet perhaps I'd have better luck through NVidia's launcher instead)<br>
+<br>
+--I'll give it a shot the other way around and see if I can get anything more working, at least the ALT+Z hotkey and the overlay to come up (which I did not in my attempts).  I'll report back and edit the thread after doing that.<br>
+<br>
+<br>
+Per the forum guidelines (since I didn't fill that out in the first post):<br>
+Sandboxie 5.23.3<br>
+Windows 10 64bit "1607" (yes, the older release)<br>
+NVidia 390.77 drivers (GFE 3.12.0.84)<br>
+<br>
+
+<blockquote class="uncited"><div>I don't think this is something we'll look into. But, If anything comes up, I'll update this thread.</div></blockquote>
+
+--Understandable, appreciate it.<br>
+<br>
+Mainly am aiming for the post processing feature of the R390 branch anyway, which it sounds like you've gotten working on your end.  The FPS counter was more of a bonus to use instead of RTSS.  (which provides that and functions nicely with Sandboxie)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Geforce Experience [Question]</h3>
+				<div class="date">Posted: <strong>Fri Feb 02, 2018 9:58 pm</strong></div>
+				<div class="author">by <strong>A2Razor</strong></div>
+				<div class="content">Followup (<strong>working</strong>):<br>
+--Overlay (<em>including FPS counter</em>) working in Windowed mode, nothing shown in fullscreen for games (yet <strong>Freestyle still works</strong> despite the overlay not coming up).<br>
+<br>
+--Launching a game through GFE (installed outside a sandbox, and run within one) or just launching a game installed within a sandbox directly doesn't change anything. (behaves the same in both cases)<br>
+<br>
+--If I preconfigure (<span style="text-decoration: underline">via a Windowed game</span>) the Freestyle post-process settings for slot-1, and then hit "Alt-F3" within a fullscreen game .. the Freestyle settings are loaded and put in effect.  (<em>despite that there's no notification</em>)<br>
+<br>
+<br>
+<br>
+Hopefully that'll help some others.  eg, don't assume that GFE isn't working just because the overlay doesn't show.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25390&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:06 GMT -->
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24517&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:15:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; OpenWinClass=* - Bluescreens since Version 5.18 - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>OpenWinClass=* - Bluescreens since Version 5.18</h2>
+		<p><a href="viewtopic24c524c5.html?f=11&amp;t=24517">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24517</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>Re: OpenWinClass=* - Bluescreens since Version 5.18</h3>
+				<div class="date">Posted: <strong>Mon Jul 17, 2017 11:15 pm</strong></div>
+				<div class="author">by <strong>X-Gamer</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518">Syrinx</a> wrote: <a href="viewtopic9fb89fb8.html?p=129214#p129214" data-post-id="129214" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jul 17, 2017 8:38 pm</div></cite>
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist962f.html?mode=viewprofile&amp;u=30875">X-Gamer</a> wrote: <a href="viewtopic056a056a.html?p=129212#p129212" data-post-id="129212" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jul 17, 2017 8:14 pm</div></cite>
+But as said also without Aster Installed only 1 User  and Sandboxie get this BSOD with OpenWinClass *
+</div></blockquote>
+
+Ah I must have missed that when skimming over all the posts. I downloaded and tried it in a VM but it seems Aster has the same issue with the workspace in a VM as it does with stuff in Sandboxie and I can't even see when I move the mouse on an unsandboxed workspace started by aster after a reboot. Doesn't look like I'm gonna get very far testing or reproducing this in a simple VM so I doubt I end up being much help:-/<br>
+<br>
+I was able to keyboard test one program with the resource access monitor open and only saw two things to attempt opening instead of * but as my mouse wasn't working anyway I couldn't tell if it would change anything.<br>
+Instead of<br>
+OpenWinClass=*<br>
+<br>
+Would you be willing to see if adding these two instead changes anything and gets the mouse working? I'd be shocked if it actually did but no harm at least testing it I guess?<br>
+OpenWinClass=OLLYDBG<br>
+OpenWinClass=WinDbgFrameClass
+</div></blockquote>
+<strong><br>
+I see mouse in aster or sandboxie as said cannot control windows outside sandboxie when in tightvnc or steam inhome streaming  because openwinclass ' make BSOD.     <br>
+<br>
+Also have BSOD without Aster installed in sandboxie with Openwinclass *  <br>
+<br>
+<br>
+I think you must set in VM at Aster Workstation at the Monitor display right click and set Hardware Cursor think its a VM problem.<br>
+<br>
+Thanks tested with <br>
+OpenWinClass=OLLYDBG<br>
+OpenWinClass=WinDbgFrameClass  <br>
+<br>
+But still nothing is controllable only the seam window that is sandboxed.<br>
+<br>
+<br>
+Also think OpenWinClass * is needed because if user opens something from windows taskbar or startmenu that is not sandboxed then its or so <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+You also know no alternative then Sandboxie todo that what i do and worked always good since BSODs  or how do find why OpenWinClass * makes the BSODs with APC_INDEX_MISSMATCH ?<br>
+<br>
+Regards</strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: OpenWinClass=* - Bluescreens since Version 5.18</h3>
+				<div class="date">Posted: <strong>Mon Jul 17, 2017 11:27 pm</strong></div>
+				<div class="author">by <strong>X-Gamer</strong></div>
+				<div class="content">Also with Screen Reader Settings for Accessibility it sets OpenWinClass * i get no BSOD but also STeam not works right and hangs etc :/</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: OpenWinClass=* - Bluescreens since Version 5.18</h3>
+				<div class="date">Posted: <strong>Tue Jul 18, 2017 6:04 pm</strong></div>
+				<div class="author">by <strong>X-Gamer</strong></div>
+				<div class="content"><strong><strong>I tryed much things but nothing then OpenWinClass * works to get access outside of sandboxie to all apps and windows desktop etc.</strong><br>
+<br>
+And also found no other alternative to sandbxoie todo what i need <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: OpenWinClass=* - Bluescreens since Version 5.18</h3>
+				<div class="date">Posted: <strong>Wed Jul 19, 2017 10:52 pm</strong></div>
+				<div class="author">by <strong>X-Gamer</strong></div>
+				<div class="content">Are you still here ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: OpenWinClass=* - Bluescreens since Version 5.18</h3>
+				<div class="date">Posted: <strong>Thu Jul 20, 2017 1:34 am</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Sadly I'm currently out of ideas and my kid said you were a lost cause so I'm inclined to believe that. Who knows how things go later on but for now not all that promising.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: OpenWinClass=* - Bluescreens since Version 5.18</h3>
+				<div class="date">Posted: <strong>Thu Jul 20, 2017 8:56 pm</strong></div>
+				<div class="author">by <strong>X-Gamer</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518">Syrinx</a> wrote: <a href="viewtopic768e768e.html?p=129259#p129259" data-post-id="129259" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Jul 20, 2017 1:34 am</div></cite>
+Sadly I'm currently out of ideas and my kid said you were a lost cause so I'm inclined to believe that. Who knows how things go later on but for now not all that promising.
+</div></blockquote>
+
+LOL <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+There must be a way to find out why Sandboxie makes BSODS at OpenWinClass * only at Windows 10 CU . <br>
+<br>
+Or a way todo what i need without OpenWinClass * or not ?<br>
+<br>
+Otherwise i need find better software :/</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: OpenWinClass=* - Bluescreens since Version 5.18 also at 5.21.2</h3>
+				<div class="date">Posted: <strong>Fri Sep 01, 2017 4:23 pm</strong></div>
+				<div class="author">by <strong>X-Gamer</strong></div>
+				<div class="content"><strong>Hello<br>
+<br>
+The Problem with APC INDEX MISSMATCH still exists with OpenWInClass=*    how can i find why   because at friend he has now problems with it.<br>
+<br>
+Also now at 5.21.2 <br>
+<br>
+<br>
+Can anyone help or help how i can use all good withoput needing OpenWinClass=*<br>
+<br>
+<br>
+Thanks<br>
+<br>
+<br>
+<br>
+Regards</strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Ace Online in Sandboxie causes BSOD after Win 10 Creators Update</h3>
+				<div class="date">Posted: <strong>Thu Sep 21, 2017 4:36 pm</strong></div>
+				<div class="author">by <strong>Kevin87</strong></div>
+				<div class="content">Hello all, <br>
+<br>
+I wish to report an issue with the game "Ace Online", hosted by Subagames. It ran well in Sandboxie 5.20 in Windows 10 before the Creators Update. <br>
+<br>
+Suddenly, after upgrading to the Windows 10 Creators Update, Windows crashes with a bsod when Ace Online is started within Sandboxie. This happens on all pc's and laptops I own that run the Windows 10 Creators Update. It doesn't seem to matter if it's Windows 10 Home or Pro.<br>
+<br>
+What additional information do you require? Maybe it’s an idea to check out the game yourself on <a href="https://ace.subagames.com/index.aspx" class="postlink">https://ace.subagames.com/index.aspx</a><br>
+<br>
+In case you wish to try the game yourself to figure out what is causing this issue, some steps need to be performed when creating a sandbox to run the game. These settings are confirmed to work in Windows 7 and Windows 10 (before the Creators update): <br>
+<br>
+Create a new sandbox – Copy settings from “none”<br>
+Set the following sandbox settings:
+<ul><li>Restrictions- drop rights- checkbox has to be unchecked.</li></ul>
+<ul><li>Resource access – file access – full access – add – c:\Suba Games\ - apply. (or whatever location you install the game to)</li></ul>
+<ul><li>Resource access – window access – add - * - ok – apply</li></ul>
+
+<br>
+Note: Once you are logged in into the game, the game (whether in Sandboxie or not) can crash if admin rights are asked by another program. This is independent on the usage of Sandboxie or any version of Windows and does not happen all the time. I assume this is completely unrelated.<br>
+<br>
+If you require more information, I'm happy to provide this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: OpenWinClass=* - Bluescreens since Version 5.18</h3>
+				<div class="date">Posted: <strong>Thu Sep 21, 2017 4:42 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Kevin87,<br>
+<br>
+We are aware that using "OpenWinClass=* " triggers a Blue Screen when using Windows 10 CU .<br>
+Why do you need to use that option?<br>
+<br>
+Please re-try after removing:<br>
+Resource access – window access – add - * - ok – apply<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: OpenWinClass=* - Bluescreens since Version 5.18</h3>
+				<div class="date">Posted: <strong>Thu Dec 14, 2017 2:04 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">All,<br>
+<br>
+I have been trying to repro this issue on Windows 10 x 64 FCU without success. <br>
+Are you still seeing the problem with the latest Windows update + Sbie 5.23.1 ? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24517&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:15:39 GMT -->
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=22375&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:29:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; A really secure file encryption solution</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>A really secure file encryption solution</h2>
+		<p><a href="viewtopic7a4d-27a4d.html?f=5&amp;t=22375">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=22375</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>A really secure file encryption solution</h3>
+				<div class="date">Posted: <strong>Thu Jan 14, 2016 3:58 pm</strong></div>
+				<div class="author">by <strong>HikariWS</strong></div>
+				<div class="content">I, as many others, used TrueCrypt. It's not a good solution anymore because all encrypted files are stored in a single volume file.<br>
+<br>
+The problem is that, when creating the volume, we must already define its size. While few storage is being used on it, a lot is wasted on main HD. And when we fill the volume, it's not easy to increase its size. Also, when we wanna encrypt files before sending them to cloud storage, TrueCrypt's volume isn't WebDAV friendly.<br>
+<br>
+Because of those issues I started using BoxCryptor, its advantage is that it encrypts each file separately, this avoids the need of creating a big volume file and allows its use with WebDAV sharing services.<br>
+<br>
+But BoxCryptor is gone. It was changed for a "server-side encrypting" solution, as many services out there. I can't accept a service like that is secure, all of them claim to be able to share "encrypted" files without requiring my private key. So, if there is a way to decrypt files without my key, then the least thing these services are is secure.<br>
+<br>
+I tried now Cryptomator, it's a new FOSS solution that works similar to how BoxCryptor used to work, adding the feature of encrypting folders and files names. It seemed awesome, the best of TrueCrypt and BoxCryptor together! But it's VERY slow, to the point of hanging any process that tries even to list the contents of a folder inside its vault. Cryptomator will be great in some years, but it's too slow for now.<br>
+<br>
+Can somebody suggest me any solution, that's really secure and doesn't just claim to be, that works offline and doesn't require sending files to a remote server, that doesn't share anything that only I should be able to decrypt, and doesn't require big volume files?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: A really secure file encryption solution</h3>
+				<div class="date">Posted: <strong>Thu Jan 14, 2016 5:04 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">You might read here about AxCrypt. It only encrypts files though, not folders.<br>
+It adds itself as a right-click context menu in Windows Explorer.<br>
+<a href="http://www.axantum.com/axcrypt/Downloads.html" class="postlink">http://www.axantum.com/axcrypt/Downloads.html</a><br>
+<br>
+If you decide to install the program...<br>
+To keep from seeing any offers to install additional software, due to the OpenCandy plug-in that's in the installer program:<br>
+Create a shortcut to the .exe file that you downloaded.<br>
+In that shortcut's Target box, add a &lt;space&gt; and then /nocandy to the end of the line:<br>
+"C:\Downloads\AxCrypt-1.7.3156.0-Setup.exe" /nocandy<br>
+Use that shortcut to install the AxCrypt program.<br>
+<br>
+Personally, although I have AxCrypt installed, I generally use my OpenPgp software to encrypt/decrypt sensitive items that are stored in my Dropbox folders. I use the same key to encrypt/decrypt emails, in Thunderbird with the Enigmail add-on. These would be items that only I can decrypt, unless I also encrypt them to another person's key in addition to my own key.<br>
+With AxCrypt you could just give someone else the decrypt password, if they don't use OpenPgp.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: A really secure file encryption solution</h3>
+				<div class="date">Posted: <strong>Thu Jan 14, 2016 5:33 pm</strong></div>
+				<div class="author">by <strong>HikariWS</strong></div>
+				<div class="content">Thanks for the tip. AxCrypt is a bit close to what I look, but it's too manual and troubling that makes it not worth the trouble.<br>
+<br>
+I'd need to encrypt each file separately... and when decrypting what it does (seems to do) is just decrypt the file, execute it and keep track of changes to encrypt back. It's good for needs like yours, to quickly encrypt a file, with possibility of self-decrypting, and possibly send it to somebody else.<br>
+<br>
+BoxCryptor and Cryptomator are aimed to self use, not to send encrypted files to somebody else. They are on driver level and create a virtual drive and any software handles its files naturally as any other, this avoids a lot of issues that AxCrypt may face.<br>
+<br>
+I'll keep looking <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: A really secure file encryption solution</h3>
+				<div class="date">Posted: <strong>Thu Jan 14, 2016 9:35 pm</strong></div>
+				<div class="author">by <strong>HikariWS</strong></div>
+				<div class="content">I was reading Cryptomator's support forum and found ppl talking about other solutions!<br>
+<br>
+There's eCryptFS, GoCryptFS, and my chosen one EncFS!<br>
+<br>
+Surprisingly, BoxCryptor was all this time using EncFS as its backend! They took a FOSS and stripped its features (encrypt file names) and released as their own.<br>
+<br>
+Gonna do some tests before the move, but it's being used for at least 5 years and it seems all its issues are now fixed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: A really secure file encryption solution</h3>
+				<div class="date">Posted: <strong>Wed Jun 08, 2016 8:19 am</strong></div>
+				<div class="author">by <strong>sanbox man</strong></div>
+				<div class="content"><blockquote><div><cite>HikariWS wrote:</cite>I was reading Cryptomator's support forum and found ppl talking about other solutions!<br>
+<br>
+There's eCryptFS, GoCryptFS, and my chosen one EncFS!<br>
+<br>
+Surprisingly, BoxCryptor was all this time using EncFS as its backend! They took a FOSS and stripped its features (encrypt file names) and released as their own.<br>
+<br>
+Gonna do some tests before the move, but it's being used for at least 5 years and it seems all its issues are now fixed.</div></blockquote>
+So hows EncFS so far for you? My requirements are similar to yours.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=22375&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:29:23 GMT -->
+</html>

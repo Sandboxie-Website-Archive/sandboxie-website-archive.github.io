@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25348&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:04:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; WIN 10 1703/1709 SB v 5.22 and Beta 5.23.3 Forced Folder Behavior</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>WIN 10 1703/1709 SB v 5.22 and Beta 5.23.3 Forced Folder Behavior</h2>
+		<p><a href="viewtopicd4f6d4f6.html?f=11&amp;t=25348">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25348</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>WIN 10 1703/1709 SB v 5.22 and Beta 5.23.3 Forced Folder Behavior</h3>
+				<div class="date">Posted: <strong>Mon Jan 15, 2018 6:49 am</strong></div>
+				<div class="author">by <strong>Needaname</strong></div>
+				<div class="content">Hello everybody.<br>
+<br>
+There is a strange issue with the forced folders settings. If you open a forced folder on a networkshare (i.e. \\fileserver\newfolder) directly in windows explorer, the settings work as intended. Only the programs/files opened in the folder start sandboxed. If you open it with %systemroot%\explorer.exe \\fileserver\newfolder the whole folder opens sandboxed. This didn't happen before. Unfortunately i can't recall what causes this behavior or since when. Closest is before the start of december 2017 and i'm pretty sure its caused by a windows update. Reasons are Sandboxie wasn't updatet since october 2017 and it doesn't happen on windows 7.<br>
+<br>
+Best regards,<br>
+needaname<br>
+<br>
+Ressource-montior:<br>
+Clsid       -------------------------------<br>
+File/Key    -------------------------------<br>
+Image       -------------------------------<br>
+Ipc         -------------------------------<br>
+Ipc         \BaseNamedObjects\[CoreUI]-PID(4328)-TID(10628) 1de54a72-4601-44cc-9e6b-92db8b96e422<br>
+Pipe        -------------------------------<br>
+WinCls      -------------------------------</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: WIN 10 1703/1709 SB v 5.22 and Beta 5.23.3 Forced Folder Behavior</h3>
+				<div class="date">Posted: <strong>Tue Jan 16, 2018 3:51 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Needaname,<br>
+<br>
+I cannot reproduce this behavior with network shares nor with local drives. Can you please provide more information as well as a copy of your Sandboxie configuration file? <br>
+(Configure--&gt; Edit configuration. Copy/paste the contents here , highlight them and click on the "&lt;/&gt;" button for formatting purposes). <br>
+<br>
+Are you able to reproduce this in a new Sandbox with default settings? (you will need to disable the force folder setting from the previous one). <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: WIN 10 1703/1709 SB v 5.22 and Beta 5.23.3 Forced Folder Behavior</h3>
+				<div class="date">Posted: <strong>Thu Jan 25, 2018 3:08 am</strong></div>
+				<div class="author">by <strong>Needaname</strong></div>
+				<div class="content">Hello again.<br>
+<br>
+Sorry for the late response. Anyway here is the sandboxconfig. I had to remove the forcedfolder-paths due to company-restrictions. Same goes for usernames.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=WindowsRasMan
+Template=7zipShellEx
+Template=WindowsLive
+Template=OfficeLicensing
+ForceDisableSeconds=1800
+ActivationPrompt=n
+
+[DefaultBox]
+
+ConfigLevel=7
+BlockPort=22,137-139,445
+AutoRecover=y
+BlockNetworkFiles=n
+Template=Firefox_Session_DirectAccess
+Template=Firefox_Passwords_DirectAccess
+Template=Firefox_Cookies_DirectAccess
+Template=Firefox_Bookmarks_DirectAccess
+Template=Firefox_Force
+Template=qWave
+Template=WindowsFontCache
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=I:
+RecoverFolder=P:
+RecoverFolder=K:
+RecoverFolder=E:
+RecoverFolder=D:
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+ForceFolder=
+ForceFolder=
+ForceFolder=
+ForceFolder=
+ForceFolder=
+ForceFolder=
+ForceFolder=
+ForceFolder=
+ForceFolder=
+BoxNameTitle=n
+
+[UserSettings_0C02020A]
+
+SbieCtrl_UserName=
+SbieCtrl_BoxExpandedView=DefaultBox
+SbieCtrl_ShowWelcome=n
+SbieCtrl_NextUpdateCheck=1508138960
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_WindowCoords=197,163,660,450
+SbieCtrl_ActiveView=40021
+
+[UserSettings_25D403C9]
+
+SbieCtrl_UserName=
+SbieCtrl_ShowWelcome=n
+SbieCtrl_NextUpdateCheck=1510742353
+SbieCtrl_UpdateCheckNotify=y
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_WindowCoords=579,108,1237,670
+SbieCtrl_ActiveView=40021
+SbieCtrl_RecoverTarget=E:\
+SbieCtrl_SaveRecoverTargets=y
+SbieCtrl_BoxExpandedView=DefaultBox
+SbieCtrl_ShouldDeleteNotify=n
+SbieCtrl_HideWindowNotify=n</code></pre></div>
+
+Kind Regards,<br>
+Needaname<br>
+<br>
+edit: Now it happens with Windows 7 too. To be more specific about the exact problem: <br>
+If you open the forced folder "normally" by double clicking it everything works as intended. If you open it with a .bat-file like :<br>
+%systemroot%\eplorer.exe \\forcedfolderpath <br>
+or by typing this line into cmd/windows explorer, the whole folder opens sandboxed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: WIN 10 1703/1709 SB v 5.22 and Beta 5.23.3 Forced Folder Behavior</h3>
+				<div class="date">Posted: <strong>Fri Jan 26, 2018 11:06 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Needaname, <br>
+<br>
+I re-tested using cmd and a bat file, I did not see the behavior you are seeing.<br>
+<br>
+I cannot analyze your logs without the forced folder information. Can you re-upload it with fake names /letters/ ip addresses ? I  really need to understand what kind of setup you are using since I cannot reproduce this behavior. Be sure to keep whatever relation is involved between the folders (if they have similar names, or belong in the same path, etc... ).<br>
+<br>
+Maybe you are invoking a folder that resides inside a forced folder ?<br>
+Example:<br>
+Force folder---&gt; \\yourpath\Folder1 <br>
+Folder inside forced folder---&gt; \\yourpath\Folder1\Folder2 <br>
+<br>
+If you launch Folder1 it will not open Sandboxed, but if you invoke Folder2 via explorer/bat/cmd it wil open Sandboxed as it is inside Folder1 (which is forced). <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: WIN 10 1703/1709 SB v 5.22 and Beta 5.23.3 Forced Folder Behavior</h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2018 6:55 am</strong></div>
+				<div class="author">by <strong>Needaname</strong></div>
+				<div class="content">Hello Barb.<br>
+
+<blockquote class="uncited"><div>Folder inside forced folder---&gt; \\yourpath\Folder1\Folder2 </div></blockquote>
+
+Excatly this is the case.<br>
+
+<blockquote class="uncited"><div>If you launch Folder1 it will not open Sandboxed, but if you invoke Folder2 via explorer/bat/cmd it wil open Sandboxed as it is inside Folder1 (which is forced). </div></blockquote>
+
+I'm sure it wasn't like this before (~until december 2017) and there wasn't a sandboxie update in this time. <br>
+I used v5.22 the whole time and this changed "over night". So my prediction is, it changed because of an update for Windows. <br>
+<br>
+But if this is how the forced folders should behave now, like u say, then I'm really sorry for wasting your time.<br>
+<br>
+Best Regrads,<br>
+Needaname</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: WIN 10 1703/1709 SB v 5.22 and Beta 5.23.3 Forced Folder Behavior</h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2018 12:13 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Needaname,<br>
+<br>
+We do not push changes "overnight" to Sandboxie. Users will either receive a new release version, or manually download a beta from the beta section.  <br>
+I am not seeing how this Force Folder behavior is an issue, there were changes made on beta 5.21.6 that improved the Forced Folder functionality:<br>
+<a href="viewtopic95959595.html?f=62&amp;t=24741" class="postlink">viewtopic.php?f=62&amp;t=24741</a><br>
+<br>
+Here's the Force Folder entry:<br>
+<a href="../ForceFolder.html" class="postlink">https://www.sandboxie.com/ForceFolder</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: WIN 10 1703/1709 SB v 5.22 and Beta 5.23.3 Forced Folder Behavior</h3>
+				<div class="date">Posted: <strong>Tue Jan 30, 2018 5:49 am</strong></div>
+				<div class="author">by <strong>Needaname</strong></div>
+				<div class="content"><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>We do not push changes "overnight" to Sandboxie</code></pre></div>
+I know that. And thats why I wrote:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>So my prediction is, it changed because of an update for Windows.</code></pre></div>
+I'm just curious what caused this change of behavior. I can confirm that it wasn't the case "before"(until december 2017) and i would appreciate to have the old functionality back.<br>
+To explane this:<br>
+<br>
+We have a special email-attachment-solution at our company. If a user gets an email with attachment, the attachment is saved to a folder and the user recieves an email with a link to this folder. The link is %systemroot%\explorer.exe \\forcedfolder\%username% because every employee has its own personalised folder. All these personalised folders are within a forced folder.<br>
+If the user opens the recieved file it opens sandboxed because it is inside a forced folder. But if he/she wants to copy&amp;paste, drag&amp;drop or attach the file to the email again, he/she could do it without restrictions caused by the sandbox because the folder didn't open sandboxed. So you had a safe way to open the file but could also process it conveniently. <br>
+Now the whole folder opens sandboxed which causes trouble by processing files to unsandboxed programms or folders. Thats it. <br>
+<br>
+Regards,<br>
+Needaname</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: WIN 10 1703/1709 SB v 5.22 and Beta 5.23.3 Forced Folder Behavior</h3>
+				<div class="date">Posted: <strong>Wed Jan 31, 2018 10:07 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Needaname,<br>
+<br>
+At this point, the feature is working as intended (after the changes I provided above were applied). <br>
+However, I have made the devs aware of your request/situation. <br>
+<br>
+I'll update this thread if anything new comes up.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25348&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:04:14 GMT -->
+</html>

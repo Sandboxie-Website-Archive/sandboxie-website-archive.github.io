@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14987" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-03-21T13:27:02-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14987</id>
+
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-03-21T13:27:02-04:00</updated>
+
+		<published>2013-03-21T13:27:02-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14987&amp;p=88283#p88283</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14987&amp;p=88283#p88283"/>
+		<title type="html"><![CDATA[Windows Live mail cannot initialize RSS feeds when sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14987&amp;p=88283#p88283"><![CDATA[
+Did so. Thnx.  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><p>Statistics: Posted by Guest — Thu Mar 21, 2013 1:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-03-19T18:13:22-04:00</updated>
+
+		<published>2013-03-19T18:13:22-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14987&amp;p=88211#p88211</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14987&amp;p=88211#p88211"/>
+		<title type="html"><![CDATA[Windows Live mail cannot initialize RSS feeds when sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14987&amp;p=88211#p88211"><![CDATA[
+For now you can ignore the message about SetParent, unless there is any visible error.<br><br>I will probably remove this warning message at some point.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Tue Mar 19, 2013 6:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-03-19T06:58:12-04:00</updated>
+
+		<published>2013-03-19T06:58:12-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14987&amp;p=88163#p88163</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14987&amp;p=88163#p88163"/>
+		<title type="html"><![CDATA[Windows Live mail cannot initialize RSS feeds when sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14987&amp;p=88163#p88163"><![CDATA[
+With Sandboxie 401-04, the RSS feeds start as expected. <br>However, starting Windows Live Mail with this version on this computer, Sandboxie issues error 2205: Service not implemented: SetParent.<p>Statistics: Posted by Guest — Tue Mar 19, 2013 6:58 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-03-16T05:56:47-04:00</updated>
+
+		<published>2013-03-16T05:56:47-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14987&amp;p=88024#p88024</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14987&amp;p=88024#p88024"/>
+		<title type="html"><![CDATA[Windows Live mail cannot initialize RSS feeds when sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14987&amp;p=88024#p88024"><![CDATA[
+Last week, I installed IE 10 on my computers. <br>Since then, I think, WLmail (part of Windows Essentials 2012) does not initialize RSS feeds on one computer.<br>Reading and sending mail is not affected. Outside Sandboxie, RSS feeds initialize. Before last week, no problem.<br><br>I do run two computers with similar configuration. The other computer, running 64-bit, runs WLM fine.<br>This one, a 32-bit computer running Windows 7 (Enterprise, service pack 1), has the problem.<br>Configuration files are identical.<br><br>LIve mail version: Version 2012 (Build 16.4.3505.0912)<br><br>Resource logs of two computer show a few differences.<br>The first one = File/Key X  \Device\Mup which line is not included at all in the resource log of the 64-bit computer.<br><br>Tried:<br>Installed fresh copy of version 3.76 , registered.<br>Deleted contents of Sandbox (Sandbox IE_WLM, forced for IE and WLM)<br>Restarted the computer.<br>Run repair on Windows Essentials 2012.<br><br>Resource log of affected computer:<br><em>snipped. --tzuk</em><br><br>Sandboxie configuration file:<br><em>snipped. --tzuk</em><p>Statistics: Posted by Guest — Sat Mar 16, 2013 5:56 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

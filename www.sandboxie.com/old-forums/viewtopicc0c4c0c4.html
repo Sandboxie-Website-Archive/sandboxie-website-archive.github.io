@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25547&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:29:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Umatrix &quot;File Access&quot; locations in Firefox and Iron?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Umatrix &quot;File Access&quot; locations in Firefox and Iron?</h2>
+		<p><a href="viewtopicbfa5bfa5.html?f=17&amp;t=25547">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25547</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Umatrix &quot;File Access&quot; locations in Firefox and Iron?</h3>
+				<div class="date">Posted: <strong>Sat Mar 10, 2018 10:29 am</strong></div>
+				<div class="author">by <strong>HarryStottle</strong></div>
+				<div class="content">this site shows the path required to save ublock origin data while inside sandboxie<br>
+<br>
+<a href="https://www.wilderssecurity.com/threads/sandboxie-settings-for-ublock-in-chrome.380801/" class="postlink">https://www.wilderssecurity.com/threads ... me.380801/</a><br>
+<br>
+to be precise, this is what I found:<br>
+<br>
+You need this two paths in direct file access (uBlock Origin):<br>
+<br>
+%Local AppData%\Google\Chrome\User Data\Default\Extensions\cjpalhdlnbpafiamejdnhcphjbkeiagm\<br>
+%Local AppData%\Google\Chrome\User Data\Default\Local Extension Settings\cjpalhdlnbpafiamejdnhcphjbkeiagm\<br>
+ <br>
+<br>
+What I'm looking for is the equivalents for Umatrix in both SRWare Iron AND Firefox <br>
+<br>
+Anybody know the answer, or how to find it?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Umatrix &quot;File Access&quot; locations in Firefox and Iron?</h3>
+				<div class="date">Posted: <strong>Wed Mar 14, 2018 5:24 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello HarryStottle ,<br>
+<br>
+Start with this:<br>
+%AppData%\Mozilla\Firefox\Profiles\YourProfileName.default\extensions\uMatrix... <br>
+There are also other files inside the profile location that are related to extensions.<br>
+<br>
+Here's a contribution posted for uBlock that might help you:<br>
+<a href="viewtopic12411241.html?p=130235#p130235" class="postlink">viewtopic.php?p=130235#p130235</a><br>
+<br>
+I am not sure what you are trying to do exactly, or what is your setup, but that should help you start. You will then have to punch a whole in the Sandbox to allow direct access to that particular file/location :<br>
+<a href="../ResourceAccessSettings.html#file" class="postlink">https://www.sandboxie.com/ResourceAccessSettings#file</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25547&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:29:48 GMT -->
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&start=195&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:55:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Block Process Access - Page 14</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Block Process Access</h2>
+		<p><a href="viewtopic7fcb7fcb.html?f=22&amp;t=4885">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=4885</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>14</strong> of <strong>15</strong></div>
+					<div class="post">
+				<h3>Fake data</h3>
+				<div class="date">Posted: <strong>Mon Jan 13, 2014 6:06 am</strong></div>
+				<div class="author">by <strong>XspeedPL</strong></div>
+				<div class="content">I really find this plugin useful.<br>
+But, would it be possible to return fake data instead of no data at all to programs?<br>
+Some programs just crash when the access is denied, but fake data (like empty process lists) would work.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Block Process Access</h3>
+				<div class="date">Posted: <strong>Tue Feb 11, 2014 9:11 pm</strong></div>
+				<div class="author">by <strong>Domochevsky</strong></div>
+				<div class="content">So... what are the odds of this nifty little thing being updated to the current sandboxie version?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: CRT not initialized error.</h3>
+				<div class="date">Posted: <strong>Wed Feb 12, 2014 1:19 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Javapraca wrote:</cite>I have encountered "CRT not initialized" error while trying to run sbiextra v1.0.0.17 on Sandboxie 4.06 (Windows XP SP3).<br>
+<br>
+Wraithdu, could you please take a look on that.</div></blockquote>
+This is the InjectDll crash and has been fixed.  We're putting together a 4.8.1 release with several important fixes.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Block Process Access</h3>
+				<div class="date">Posted: <strong>Thu Apr 17, 2014 6:13 pm</strong></div>
+				<div class="author">by <strong>Binky</strong></div>
+				<div class="content">I successfully tested sbiextra v1.0.0.17 on Sandboxie 4.09.3 with Windows 7 SP1 x64.  Thank you Invincea!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Block Process Access</h3>
+				<div class="date">Posted: <strong>Sun Jul 03, 2016 4:54 am</strong></div>
+				<div class="author">by <strong>Ziru</strong></div>
+				<div class="content">Working on Sandboxie 5.12 (64-bit)<br>
+<br>
+Operating System: Windows 7 Professional 64-bit (6.1, Build 7601) Service Pack 1 (7601.win7sp1_gdr.151019-1254)<br>
+Language: Spanish (Regional Setting: Spanish)<br>
+System Manufacturer: Gigabyte Technology Co., Ltd.<br>
+System Model: GA-990FXA-UD3<br>
+BIOS: Award Modular BIOS v6.00PG<br>
+Processor: AMD FX-8320E Eight-Core Processor (8 CPUs), ~3.2GHz</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Block Process Access</h3>
+				<div class="date">Posted: <strong>Fri Jan 20, 2017 6:22 am</strong></div>
+				<div class="author">by <strong>flibustier</strong></div>
+				<div class="content">how to inject this dll only to custom processes?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Block Process Access</h3>
+				<div class="date">Posted: <strong>Fri Jan 20, 2017 10:44 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello  flibustier ,<br>
+<br>
+Here's the link to the DLL injection entry, it applies to all programs in the Sandbox.<br>
+<br>
+<a href="../indexa956.html?InjectDll" class="postlink">https://www.sandboxie.com/index.php?InjectDll</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Block Process Access</h3>
+				<div class="date">Posted: <strong>Fri Jan 20, 2017 11:08 am</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content"><blockquote><div><cite>flibustier wrote:</cite>how to inject this dll only to custom processes?</div></blockquote>
+There might be more than one way to go about it but I would use something like this.<br>
+<br>
+ProcessGroup=&lt;SBIExtra&gt;,ProcessName1.exe,ProcessName2.exe<br>
+InjectDll=&lt;SBIExtra&gt;,*InsertPathtoDllHere*<br>
+InjectDll64=&lt;SBIExtra&gt;,*InsertPathtoDllHere*<br>
+<br>
+I actually use something like this, but in reverse, to !exclude specific files (like the new origin) that don't work well with it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Block Process Access</h3>
+				<div class="date">Posted: <strong>Tue Oct 17, 2017 2:19 pm</strong></div>
+				<div class="author">by <strong>Favawo</strong></div>
+				<div class="content">Can't run injtest.exe inside Sandboxie, nothing happens when I start it. But it works outside. Can't test  <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Block Process Access</h3>
+				<div class="date">Posted: <strong>Tue Oct 17, 2017 2:54 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Favawo,<br>
+<br>
+Can you please provide more information about what are you trying to do, and how it relates to SBIExtra ? <br>
+<br>
+What are the repro steps and setup to repro the issue? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Block Process Access</h3>
+				<div class="date">Posted: <strong>Tue Oct 17, 2017 4:00 pm</strong></div>
+				<div class="author">by <strong>Favawo</strong></div>
+				<div class="content">Hey Barb@Invincea,<br>
+I inserted <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>InjectDll=c:\Program Files\Sandboxie\sbiextra.dll
+InjectDll64=c:\Program Files\Sandboxie\sbiextra_x64.dll</code></pre></div> in Sandboxie.ini in [DefaultBox] section. Copied sbiextra.ini sbiextra.dll sbiextra_x64.dll to c:\Program Files\Sandboxie\ <br>
+And now I'm trying to test wheather it works or not. I'm trying to run injtest.exe in the sandbox but nothing happens when I click "Run in the Sandboxie". In the same time when I start inject.exe outside of Sandboxie, it starts. I can see the window with processes. So may be injtest.exe is <br>
+incompatible with the latest Sanboxie version? Or I'm doing something wrong. I have all  Microsoft Visual C++ installed, 2008, 2010 etc till the latest one.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Block Process Access</h3>
+				<div class="date">Posted: <strong>Tue Oct 17, 2017 5:45 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Favawo,<br>
+<br>
+I tested this on Win 7 x64 + Sbie latest beta and I was able to run injtest inside Sandboxie, following the instructions from the first page.<br>
+<br>
+If you can provide more information regarding your environment, I'll set it up and test it. Here's what I need:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Also, please post the output of your Sandboxie configuration file (Configure --&gt; Edit configuration). Use the "&lt;/&gt; " button to format it in the forum. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Block Process Access</h3>
+				<div class="date">Posted: <strong>Tue Oct 17, 2017 6:11 pm</strong></div>
+				<div class="author">by <strong>Favawo</strong></div>
+				<div class="content"><strong>Barb@Invincea</strong>, thx for participating.<br>
+Windows 10 LTSB x64<br>
+SBIE v.5.20<br>
+injtest.exe<br>
+Kaspersky Internet Security but it was fully disabled
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=7zipShellEx
+Template=LogitechSetPoint
+Template=WindowsLive
+Template=Kaspersky
+Template=OfficeLicensing
+FileRootPath=J:\Sandbox\%USER%\%SANDBOX%
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+InjectDll=c:\Program Files\Sandboxie\sbiextra.dll
+InjectDll64=c:\Program Files\Sandboxie\sbiextra_x64.dll
+BorderColor=#00FFFF,ttl
+Enabled=y
+CopyLimitKb=1025145000
+BoxNameTitle=-
+
+[UserSettings_028A00D4]
+
+SbieCtrl_UserName=pc
+SbieCtrl_NextUpdateCheck=1508340291
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_EnableLogonStart=n
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=y
+SbieCtrl_AddQuickLaunchIcon=y
+SbieCtrl_AddContextMenu=y
+SbieCtrl_AddSendToMenu=y
+SbieCtrl_WindowCoords=209,250,1237,632
+SbieCtrl_ActiveView=40021
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_BoxExpandedView=DefaultBox
+SbieCtrl_AutoApplySettings=n
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Block Process Access</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 10:05 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Favawo,<br>
+<br>
+We do not test LTSB versions of Windows, but I am assuming it should work the same.<br>
+Do other applications work Sandboxed? <br>
+<br>
+Please give the latest beta a try:<br>
+<a href="viewtopic73f273f2.html?p=129389#p129389" class="postlink">viewtopic.php?p=129389#p129389</a><br>
+<br>
+Also, for Kaspersky, you may need to remove it, or see these posts for assistance. Disabling it may not work:<br>
+<a href="searchf500f500.html?keywords=kaspersky&amp;t=21539&amp;sf=msgonly" class="postlink">search.php?keywords=kaspersky&amp;t=21539&amp;sf=msgonly</a><br>
+<br>
+Can you please create a new Sandbox with default settings, then add the dll entries and see if that works?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Block Process Access</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 2:49 pm</strong></div>
+				<div class="author">by <strong>Favawo</strong></div>
+				<div class="content">Nothing helped, neither Kaspersky deletion, nor fresh Sandboxie installation. All other application works perfect inside Sandboxie. So to find out I made 3 new Virtual Machines, W7 x64, W10Pro x64 v.1703 (summer build) and W10LTSB x64 v.1607, installed all Microsoft Visual C++ Redistributable version 2005-2017, installed Sandboxie beta build.<br>
+I was able to launch injtest.exe <strong>inside</strong> Sandboxie only in W7, neither in the W10Pro nor the W10LTSB. But I can launch it <strong>outside</strong> Sandboxie in all windows versions. Strange things  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused">  I know it's just a test program and Block Process Access likely works but I have to be sure.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>14</strong> of <strong>15</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&start=195&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:55:03 GMT -->
+</html>

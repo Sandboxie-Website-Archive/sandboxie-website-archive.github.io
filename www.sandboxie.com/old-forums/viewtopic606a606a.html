@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=22426&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; steamwebhelper.exe running in a Sandbox</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>steamwebhelper.exe running in a Sandbox</h2>
+		<p><a href="viewtopic3a1d3a1d.html?f=22&amp;t=22426">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=22426</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>steamwebhelper.exe running in a Sandbox</h3>
+				<div class="date">Posted: <strong>Tue Jan 26, 2016 9:04 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Courtesy of @Rooj<br>
+In case its of use to anyone else, I recently began sandboxing steamwebhelper.exe (the only unsandboxed browser left on my system at the time) while avoiding the headache of a full steam sandbox. The benefit I guess is that you can download and run games without extra rules being needed, but the webbrowser side of steam should be sandboxed at all times.<br>
+<br>
+In order to do the same you need to add steamwebhelper.exe as a forced program... You then need to add IPC access otherwise steam locks up and runs terribly. To do this add the following in IPC Access -&gt; Direct Access:<br>
+<br>
+\Sessions\1\BaseNamedObjects\SteamChrome_*<br>
+<br>
+Once the above is in place Steam will happily run and all steamwebhelper processes will automatically run within the chosen sandbox. For those that hate steamwebhelper.exe (I personally don't have an issue with it) it means you can also deny the process internet access independently of steam which avoids unnecessary memory usage etc.<br>
+<br>
+Not suggesting you do the same but I also added steamerrorreporter.exe as a forced program, then only allowed webhelper to run in the sandbox. In this way steamerrorreporter is unable to start and so is unable to send random memory dumps to valve whenever it feels like it.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=22426&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:40 GMT -->
+</html>

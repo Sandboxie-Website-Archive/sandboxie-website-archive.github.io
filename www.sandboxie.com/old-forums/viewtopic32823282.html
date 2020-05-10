@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10253&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Just Some Ideas</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Just Some Ideas</h2>
+		<p><a href="viewtopic20a420a4.html?f=4&amp;t=10253">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=10253</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Just Some Ideas</h3>
+				<div class="date">Posted: <strong>Sun Apr 10, 2011 8:14 am</strong></div>
+				<div class="author">by <strong>Snehonja</strong></div>
+				<div class="content">Hey folks,<br>
+<br>
+I'm new to sandboxie, and I'm starting to really like it. When playing around a bit, some ideas how to make this awesome kind of software (IMHO) even a little better:<br>
+<br>
+- Currently, I CAN transfer files from a sandbox to the system - but I CANNOT do the same for individual registry entries (at least I did not find an option for that). Would it be possible to...? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+- Those colored borders Sandboxie can drwa around windows - the do not seem to work with Aero (as far as I can tell). But I relay would like to have something more "eye-catching" than those to sharps in the title... So an idea came into my mind: If it where possible, to change the Aero color for individual programms... THAT would be great. But I have far to little knowledge about the Aero engine, so I have no idea if this would be possible at all...<br>
+<br>
+Last but not least: in the "common feature requests" listed here: <a href="../index93ec.html?CommonFeatureRequests" class="postlink">http://www.sandboxie.com/index.php?Comm ... reRequests</a> I read about including verison number in installer filename. The reason you give for not doing this, is the existence of external links directly to the installer. There WOULD be away around this, which is not even complicated and widely used among the internet: redirections on the server side. You provide an andress, which always links to the current installer file - and the server dynamically resolves this URL accordingly. What about this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Just Some Ideas</h3>
+				<div class="date">Posted: <strong>Sun Apr 10, 2011 8:48 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>Snehonja wrote:</cite>- Currently, I CAN transfer files from a sandbox to the system - but I CANNOT do the same for individual registry entries (at least I did not find an option for that). Would it be possible to...</div></blockquote>You might want to read about Registry Access, here:<br>
+<a href="../indexbccb.html?ResourceAccessSettings" class="postlink">http://www.sandboxie.com/index.php?Reso ... ssSettings</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 10, 2011 9:02 am</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content"><blockquote><div><cite>Snehonja wrote:</cite>- Those colored borders Sandboxie can drwa around windows - the do not seem to work with Aero (as far as I can tell). But I relay would like to have something more "eye-catching" than those to sharps in the title... So an idea came into my mind: If it where possible, to change the Aero color for individual programms... THAT would be great. But I have far to little knowledge about the Aero engine, so I have no idea if this would be possible at all...</div></blockquote>
+Something similar was suggested by myself in another thread about a week ago, however you should know that it's not possible right now to tweak the color for just one program, you'll have to change the color of the Aero theme as a whole, which will affect every programs borders. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Just Some Ideas</h3>
+				<div class="date">Posted: <strong>Sun Apr 10, 2011 2:34 pm</strong></div>
+				<div class="author">by <strong>Snehonja</strong></div>
+				<div class="content"><blockquote><div><cite>Guest10 wrote:</cite><blockquote><div><cite>Snehonja wrote:</cite>- Currently, I CAN transfer files from a sandbox to the system - but I CANNOT do the same for individual registry entries (at least I did not find an option for that). Would it be possible to...</div></blockquote>You might want to read about Registry Access, here:<br>
+<a href="../indexbccb.html?ResourceAccessSettings" class="postlink">http://www.sandboxie.com/index.php?Reso ... ssSettings</a></div></blockquote>
+
+Thanks for your suggestion - but that's nnot what I indended. My point is not to GENERALLY allow a specific registry key to be set from inside a sandbox but to copy ANY (but not all) changed key from inside the sandbox to the real system.<br>
+<br>
+Example:<br>
+You have some suspicious file that promisis to tweak something. You do not wnat to execute the programm outside the sandbox, cause you do not trust the author. So you start it inside a sandbox.<br>
+You notice two things:<br>
+a) it DOES make the promisig tweak, but<br>
+b) it does also ruin your system by changing some other keys (to open backdoors, load hooks or whatever)<br>
+So NOW you want to transfer the tweaked settings into your real system - but you do not want to transfer the malicious changes, too.<br>
+<br>
+So there should be a possibility to pick individual keys (like you can do with files) and transfer them to your real system. List all changed keys in th content-view and have a context-menu-entry to transfer them (like there is for files) or whatever.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Just Some Ideas</h3>
+				<div class="date">Posted: <strong>Sun Apr 10, 2011 2:34 pm</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content"><blockquote><div><cite>Snehonja wrote:</cite>
+Last but not least: in the "common feature requests" listed here: <a href="../index93ec.html?CommonFeatureRequests" class="postlink">http://www.sandboxie.com/index.php?Comm ... reRequests</a> I read about including verison number in installer filename. The reason you give for not doing this, is the existence of external links directly to the installer. There WOULD be away around this, which is not even complicated and widely used among the internet: redirections on the server side. You provide an andress, which always links to the current installer file - and the server dynamically resolves this URL accordingly. What about this?</div></blockquote>
+
+Oh come on is it really that hard to right click and see the installer version in the properties dialogue?  <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> Should Tzuk have to spend some time to adjust this when it could take you 2 seconds to know ?<br>
+<br>
+Anyways welcome to the forums and enjoy using Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Just Some Ideas</h3>
+				<div class="date">Posted: <strong>Sun Apr 10, 2011 3:01 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>Snehonja wrote:</cite>You have some suspicious file that promises to tweak something. You do not want to execute the program outside the sandbox, cause you do not trust the author. So you start it inside a sandbox.</div></blockquote>It sounds like the Contributed Program BSA might provide part of what you want - a list of Registry changes, along with file changes, port accesses and more.<br>
+It doesn't provide a way to copy changes from the sandbox though.<br>
+<a href="../phpbb/viewtopicc4e9.php?t=6557" class="postlink">Buster Sandbox Analyzer</a> is started before installing a program inside of a sandbox, and then minimized while the install proceeds.<br>
+Then at the end of the install, you go back to it and request a report.<br>
+It's not a click and forget it type of thing though. Its capabilities are increasing, and can be complicated because of that.<br>
+Download it from the first post in that thread.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 10, 2011 4:12 pm</strong></div>
+				<div class="author">by <strong>Snehonja</strong></div>
+				<div class="content">@D1G1T@L: The filename is not an important issue, I totally agree with you. It doesn't even bother me. Just wanted to provide a possible solution for this "problem".<br>
+<br>
+@Guest10: Thank you very much, that indeed seems to help in my case. Even though it's kind of an overkill as I just want to find out what has chaged in the registry and do not need all the rest. And I still have to edit the registry manually afterwards (which is not a big thing of course).<br>
+Would still be nice to include that functionallity into sandboxie itself. As sandboxie have to catch any registry access anyway, it should not be a problem to log those, which are changes, and save them in some file which sandboxie parses and displays in its interface again when asked. And porting them to real registry is no big deal either, as sandboxie can just change them itself (and if sandboxie fails to do so, the program that was called would have faild, too, so that's nothing sandboxie has to worry about but the programs)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 10, 2011 5:31 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">This probably isn't much help either, but keep in mind that while a sandbox is in use its Reghive entries are mounted to a Key in the real Registry.<br>
+That is, if your Windows logon is Snehonja, and the sandbox is DefaultBox, then while any program is actively using DefaultBox the Registry entries made by the sandboxed programs can be viewed with the Windows Registry Editor program.<br>
+The Reghive would be mounted to the real Registry at:<br>
+HKEY_USERS\Sandbox_Snehonja_DefaultBox<br>
+<br>
+As soon as the last sandboxed program using that sandbox ends, then this Key is dismounted from the Registry - until a program uses that sandbox again, and also if the sandbox contents were not deleted.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10253&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:12 GMT -->
+</html>

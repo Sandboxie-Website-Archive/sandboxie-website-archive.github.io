@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=5604&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:53:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Using Sandboxie for installing applications</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Using Sandboxie for installing applications</h2>
+		<p><a href="viewtopic25bb-225bb.html?f=5&amp;t=5604">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=5604</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Using Sandboxie for installing applications</h3>
+				<div class="date">Posted: <strong>Sat May 16, 2009 1:52 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">I am just trying out Sandboxie and would like to use it to install applications of doubtful origin. I don't know if this would work.<br>
+<br>
+Also, when I save files to the hard disk, and close the application, of course the files saved are not on the final hard disk destination until it is saved there by sandboxie. This is not the problem, the problem is that I was only able to save the files one at a time. Is there a way to save all files?<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Using Sandboxie for installing applications</h3>
+				<div class="date">Posted: <strong>Sat May 16, 2009 7:21 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Many applications can be installed, and run, from inside of a sandbox folder. Not all, though. A program that would normally install a driver and require a reboot to work, will not be able to do so. Also, a program might try to access resources that are denied to it by Sandboxie, for security reasons. The nice thing, though, is that when you delete the contents of the sandbox, the program and all changes that it tried to make are gone. If you download an installer for a program, and that installer is still inside a sandbox that is not set to auto-delete, just running the installer from that location would install it inside the sandbox folder.<br>
+If the programs installer is stored outside of the sandbox folders: create a new sandbox for it, then right-click the installer and "Run Sandboxed" - choosing the sandbox you want to use, when asked. <span style="text-decoration: underline">Always watch</span> for the #...# in the installer's title bar, to make sure that the installer is running sandboxed.<br>
+<br>
+As far as saving downloaded files, since you mention that you are closing the application that downloaded the files, I assume that what you are referring to is the Quick Recovery window. The files should all be shown listed under the download folder, and the download folder will be 'selected'. So all you need do to recover them all at once is to click on the Recover button while the download folder is selected. Or you can individually click on a downloaded file to recover it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 16, 2009 7:47 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">I see what you mean about drivers being installed. This means that Snadboxie can't be used for installing unknown programs.<br>
+<br>
+Unfortunately, a lot of programs require administrative rights to be installed also. Since Sandboxie cannot be used for installing programs, there appears to be no way to stop a virus loaded program installer. This is disappointing.<br>
+<br>
+How does one safely install a  program of unknown or doubtful source?<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 16, 2009 8:46 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Anonymous wrote:</cite>I see what you mean about drivers being installed. This means that Snadboxie can't be used for installing unknown programs.</div></blockquote>
+
+I see you are a bit confused.<br>
+<br>
+There are not "unknown" programs.<br>
+<br>
+You can not install sandboxed those programs which require a driver, but most of the software don´t need them.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 16, 2009 9:06 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>Anonymous wrote:</cite>I see what you mean about drivers being installed. This means that Snadboxie can't be used for installing unknown programs.</div></blockquote>Why not? Not that many programs install drivers. Drivers that are already installed on your computer can be used.<br>
+It's just that a new driver can't be installed by the program being tested.<blockquote><div><cite>Anonymous wrote:</cite>Unfortunately, a lot of programs require administrative rights to be installed also. Since Sandboxie cannot be used for installing programs, there appears to be no way to stop a virus loaded program installer. This is disappointing.</div></blockquote>There are users who post in this forum, who try out virus infected programs all of the time, to see if anything can break out of the sandbox.<br>
+Not me, though. I don't have an interest in doing so.<br>
+(I see that Buster has replied to this thread. He is one of those who often tries out malware programs under Sandboxie)<br>
+<br>
+Plus, there are also programs that allow you to set up a virtual session for trying out programs that do not require a reboot after the install.<br>
+I often use Returnil to see how to configure Sandboxie, and see how to allow a program to work, that is being denied access to resources blocked by Sandboxie. If I can identify a resource that can be safety added to a user's configuration, and it allows a program to work while under Sandboxie's control, then a restart of my computer after my tests will insure that no remnants of the install will remain to clutter up my hard disk or Registry.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 16, 2009 6:10 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Buster,<br>
+When I say that a program is "Unknown" I mean that the program passes the virus check and comes from a suspect source so that it may still contain a virus. This happened to me recently and damaged the system so it couldn't boot.<br>
+<br>
+Now, with the Sandboxie. Assuming that the program can be installed in the Sandboxie environment, how do you copy all the files to the correct location. The files will not be located in the Recovery area since we don't know where the installer will save files to.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 16, 2009 7:56 pm</strong></div>
+				<div class="author">by <strong>bs1</strong></div>
+				<div class="content"><blockquote><div><cite>Anonymous wrote:</cite>  Now, with the Sandboxie. Assuming that the program can be installed in the Sandboxie environment, how do you copy all the files to the correct location. The files will not be located in the Recovery area since we don't know where the installer will save files to.</div></blockquote>
+I occasionally test audio and video programs in sandboxes.  As part of the installation process, the installer (which is sandboxed) typically shows the default location (usually C:\Program Files) where the files will be saved, and gives me the option to select an alternate location.  Now if I choose to recover a tested program, the associated files are automatically saved by Sandboxie to that same location (i.e., C:\Program Files or the alternate) on my "real" hard drive.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 16, 2009 9:22 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">That sounds simple. Unfortunately, most thisngs that sound simple are very complicated.<br>
+I assume that you include the C:\Program Files in the recovery are. Most programs I install also write to the windows directory and also somewhere in the Documents and Settings directory. I suppose I would also need to include these in the recovery area. Then, most programs I install, also write to the registry, what happens to these changes? If the installer writes somewhere else, those files need to be copied individually, I think.<br>
+<br>
+Am I correct with all this?<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 16, 2009 11:13 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Make it simple: if after testing a certain software you are satisfied with it then install it again in the real system.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 16, 2009 11:48 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Yes, simpler is better. Thanks.<br>
+<br>
+My original question hasn't been answered. Under View Files and Folders, is it possible to copy all files saved in a folder, to the real folder instead of copying files individually?<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 26, 2009 9:35 pm</strong></div>
+				<div class="author">by <strong>mikew</strong></div>
+				<div class="content">it looks like when you view files and folders, you can only recover individual files at a time. the right click menu is grayed out for full folders. so i guess what you would need to do is add program files directory to your quick recovery folders, then initiate a quick recovery, and recover to same folder.<br>
+
+<blockquote><div><cite>bs1 wrote:</cite> Now if I choose to recover a tested program, the associated files are automatically saved by Sandboxie to that same location (i.e., C:\Program Files or the alternate) on my "real" hard drive.</div></blockquote>
+
+how can you recover the entire program files directory, without adding it to quick recovery? i think this is what he is asking.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed May 27, 2009 4:46 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">I now think that installing programs in a sandbox should only be considered a test. If it works ok, then install again in the real world. Otherwise, easy copying of files installed in the Program Files, Documents and Settings, Windows directories and the registry copying needs to be solved.<br>
+<br>
+As it was stated before, simpler is better.<br>
+And this solution is only acceptable for small programs. I don't think that running large installers would be suitable to be run inside a sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed May 27, 2009 6:41 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">That depends on the installer.  Large is not necessarily complex.  Complex also usually works.<br>
+<br>
+In any case, you're not "supposed" to try to move a complete installation out of the sandbox.<br>
+<br>
+Use software in the sandbox for as long as you wish (even forever), but when you want it outside the sandbox, just reinstall it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed May 27, 2009 11:39 pm</strong></div>
+				<div class="author">by <strong>dynarx</strong></div>
+				<div class="content">...and one day, should you still want to copy multiple files (data files, say, not program files, tzuk has given the best answer for programs) from the sandbox to the real system, open Sandboxie Control, right mouse click the sandbox's name, select Explore Contents, browse to the sandboxed versions of the files and use drag and drop (or copy and paste) to recover them to a 'real' folder.<br>
+<br>
+Cheers, all,<br>
+D</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu May 28, 2009 12:04 am</strong></div>
+				<div class="author">by <strong>mikew</strong></div>
+				<div class="content">yeah, i'm starting to think that i should just leave all my programs installed inside the sandbox, and never bother to install them on the real system. "trust no program" indeed, but continue to use them!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=5604&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:53:12 GMT -->
+</html>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=19811&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:46:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SandBoxIE to harden SRP (software restriction policy)? - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SandBoxIE to harden SRP (software restriction policy)?</h2>
+		<p><a href="viewtopicd6a9d6a9.html?f=4&amp;t=19811">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=19811</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Wed May 06, 2015 6:16 pm</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content"><blockquote><div><cite>catBot wrote:</cite>Will this library work on winXP-SP3 and how to use it?</div></blockquote>
+SbieSRP4.dll is for 32-bit Windows, so I don't see why not, catBot, yes. I coded it with XP in mind, statically linking to system dll exports that will work as far back as 2000 (per deceptive MSDN docs, so for the APIs I suspect further back still, Sandboxie does not even ...) but I've only tested it on 8.1 core (sans AppLocker mind you). CreateRestrictedToken and SaferComputeTokenFromLevel are XP minimum.<br>
+<br>
+Create a SRP rule for that dll in the path you choose for it, that is if you have that level of protection enabled to need such a manual rule.<br>
+<br>
+But I am supposing that with SRP, no dlls are permitted outside of \Windows or \Program Files *<br>
+<br>
+So yeah, extract SbieSRP4.dll to where you think is appropriate and where ever is accessible to all Sandboxes, say, C:\Program Files\Common Files\ (suggesting not to use env variable that could change under process architecture, hard code the path where required).<br>
+<br>
+Latest release has debug text output via Win32 OutputDebugString which Sysinternals' DebugView will let you monitor (and optionally log to file in the background).<br>
+<br>
+Either build, your choice from, debug output only when (seldom) triggered by modification to flags we want to reject (just doing its job), or the full OutputDebug\ build for every hooked procedure when called. No calls are being blocked, only the flags are sanitized (both builds do same job, same efficiency except where programs spam those functions in a loop).<br>
+<br>
+This library has no options to configure.<br>
+To install the library, edit Sandboxie.ini<br>
+<br>
+[GlobalSettings]<br>
+<br>
+# for 32-bit Windows use<br>
+InjectDll=C:\Program Files\Common Files\SbieSRP4.dll<br>
+<br>
+# for 64-bit Windows use<br>
+InjectDll64=C:\Program Files\Common Files\SbieSRP8.dll<br>
+<br>
+# 64-bit Windows requires both InjectDll* settings.<br>
+# 4 and 8 designates the architecture and its pointer size in bytes as apposed to bits.<br>
+<br>
+And I would recommend that you give the file the Read-only attribute, so that the file cannot be overwritten while Sandboxed, not to say it cannot be overridden though, it can, dlls aren't the most secure things as we know. But the attacker would have to be SbieSRP-aware <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"> or just very imposing and strict, or subtle and unforgiving. <img class="smilies" src="images/smilies/icon_twisted.gif" width="15" height="15" alt=":twisted:" title="Twisted Evil"><br>
+<br>
+SbieSRP hooks can safely piggyback another, that is if you wanted to run both builds at the same time, silly may be but it works (two InjectDll setting for functionally the same dll with a different filename or in a different directory).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Tue May 12, 2015 2:52 pm</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content"><blockquote><div><cite>BUCKAROO wrote:</cite>.... No calls are being blocked, only the flags are sanitized...</div></blockquote>
+Thank you - this is exactly what I dreamt of. Hope it will get into the official version of SB.<br>
+<br>
+I'm testing the library and be reporting ASAP.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Tue May 12, 2015 10:26 pm</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">Cool, catBot. Your test will be the first true test.<br>
+<br>
+Try a PoC that is if you want to receive ANY relevant output from DebugView (unless you're using the verbose OutputDebug\ dll).<br>
+<br>
+Just don't visit this <a href="viewtopic2ecb2ecb.php?f=17&amp;t=21113" class="postlink">other thread</a>, else feelings of despair could engulf you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Fri May 22, 2015 12:27 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content"><span style="font-size: 85%; line-height: normal">What it does:<br>
+Sanitizes SRP-breaking flags from...<br>
+</span><ul>	<li>advapi32.CreateRestrictedToken<br>
+	advapi32.SaferComputeTokenFromLevel<br>
+	kernel32.LoadLibraryExW</li></ul>
+What is new...<br>
+kernel32.CreateProcessW
+<ul>	<li>(good idea or bad - I mean, wrt Jobs)</li></ul>
+What else, this version averts Sandboxie 4.x breach!
+<ul>	<li>By blocking an undocumented function.<br>
+	A function that XP does not export, so<br>
+	does Vista?/7/8.x really need it either?!</li></ul>
+Does not (will not) support:
+<ul>	<li>ntdll.LdrLoadDll<br>
+	kernelbase.LoadLibraryExW<br>
+	but XP hasn't kernelbase.dll</li></ul>[/size]<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/filece9ece9e.png?id=294" class="postimage" alt="SbieSRPx_20150522.png" onclick="viewableArea(this);" /></dt>
+						<dd>SbieSRPx_20150522.png (20.96 KiB) Viewed 1451 times</dd>
+		</dl>
+		
+		
+		
+			</div>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>; Toggle build architecture
+PtrSize fix 4 ; 32-bit
+;PtrSize fix 8 ; 64-bit
+
+; Toggle
+;OutputDebug equ 0
+OutputDebug equ 1
+
+PtrSizeAsc='0'+PtrSize
+SbieSRP_dll equ 'SbieSRP',PtrSizeAsc,'.dll'
+
+match =4,PtrSize{format PE GUI 4.0 DLL}
+match =8,PtrSize{format PE64 GUI 5.0 DLL}
+entry DllEntryPoint
+
+match =4,PtrSize{include 'WIN32WXP.INC'}
+match =8,PtrSize{include 'WIN64WXP.INC'}
+
+; BUCKAROO's trivial customization to fasmw17139\INCLUDE\MACRO\*
+; Macroinstructions for making import section (32-bit or 64-bit)
+
+macro import name,[label,string]
+{
+common
+	if PtrSize=4
+		rb (- rva $) and 3
+	else if PtrSize=8
+		rb (- rva $) and 7
+	end if
+	if defined name#.referred
+name#.lookup:
+forward
+		if used label
+			if string eqtype ''
+				local _label
+				if PtrSize=4
+					dd RVA _label
+				else if PtrSize=8
+					dq RVA _label
+				end if
+			else
+				if PtrSize=4
+					dd 80000000h + string
+				else if PtrSize=8
+					dq 8000000000000000h + string
+				end if
+			end if
+		end if
+common
+		if $ &gt; name#.lookup
+			name#.redundant = 0
+			if PtrSize=4
+				dd 0
+			else if PtrSize=8
+				dq 0
+			end if
+		else
+			name#.redundant = 1
+		end if
+name#.address:
+forward
+		if used label
+			if string eqtype ''
+				if PtrSize=4
+					label dd RVA _label
+				else if PtrSize=8
+					label dq RVA _label
+				end if
+			else
+				if PtrSize=4
+					label dd 80000000h + string
+				else if PtrSize=8
+					label dq 8000000000000000h + string
+				end if
+			end if
+		end if
+common
+		if ~ name#.redundant
+			if PtrSize=4
+				dd 0
+			else if PtrSize=8
+				dq 0
+			end if
+		end if
+forward
+		if used label &amp; string eqtype ''
+			_label dw 0
+label#.ansi:
+			db string,0
+			rb RVA $ and 1
+		end if
+common
+	end if
+}
+
+match =4,PtrSize
+{
+dbz equ dd
+tax equ eax
+tcx equ ecx
+tdx equ edx
+}
+match =8,PtrSize
+{
+dbz equ dq
+tax equ rax
+tcx equ rcx
+tdx equ rdx
+;
+;tcx equ r10
+;tdx equ r11
+}
+
+macro mioli op1*
+{
+	mov op1,tax
+}
+
+macro sioli op1*
+{
+	mov tax,op1
+}
+
+macro tioli
+{
+	test tax,tax
+}
+
+struc UNICODE_STRING
+{
+	.Length dw ?
+	.MaximumLength dw ?
+if PtrSize=8
+rb 4
+end if
+	.Buffer dbz ?
+}
+virtual at 0
+UNICODE_STRING UNICODE_STRING
+end virtual
+
+macro m_lp [m]
+{
+	m dbz ?
+}
+
+struc ntdll_
+{
+	m_lp .LdrLoadDll,.NtGetNextProcess
+}
+
+struc kernel32_
+{
+	m_lp .CreateProcessW,.LoadLibraryExW
+}
+
+struc kernelbase_
+{
+	m_lp .LoadLibraryExW
+}
+
+struc advapi32_
+{
+	m_lp .CreateRestrictedToken,.SaferComputeTokenFromLevel
+}
+
+struc SbieApi_
+{
+	m_lp .EnumProcessEx,.QueryProcess
+}
+
+struc SbieDll_
+{
+	m_lp .Hook
+}
+
+struc SbieDll_dll_
+{
+	.SbieApi_EnumProcessEx db 'SbieApi_EnumProcessEx',0
+	.SbieApi_QueryProcess db 'SbieApi_QueryProcess',0
+	.SbieDll_Hook db 'SbieDll_Hook',0
+}
+
+!LOAD_IGNORE_CODE_AUTHZ_LEVEL=not 0x10
+!SANDBOX_INERT=not 0x2
+!SAFER_TOKEN_MAKE_INERT=not 0x4
+
+!CREATE_BREAKAWAY_FROM_JOB=not 0x1000000
+
+section '.data' data readable writeable
+
+;[pid]
+; SbieSRPx: [session_id][box_name] "image_name" ProcName (flags was flags) "FileName" CommandLine
+
+szDbgInfoFmt du '%hs: %ls%hs',10,0
+szDbgHookFmt du '%hs: [%d][%ls] "%ls" %hs (0x%X was 0x%X) "%ls" %ls',10,0
+
+szSbieSRP db 'SbieSRP',PtrSizeAsc,0
+
+ntdll_dll db 'ntdll.dll',0
+NtGetNextProcess.ansi db 'NtGetNextProcess',0
+
+kernel32_dll db 'kernel32.dll',0
+kernelbase_dll db 'kernelbase.dll',0
+LoadLibraryExW.ansi db 'LoadLibraryExW',0
+
+align 16
+
+process_id dbz ?
+
+struc _ProcessQuery
+{
+	.box_name rw 34
+	.image_name rw 96
+	.sid_string rw 96
+	.session_id dd ?
+}
+HithertoProcess _ProcessQuery
+
+ntdll ntdll_
+kernel32 kernel32_
+kernelbase kernelbase_
+advapi32 advapi32_
+SbieApi SbieApi_
+SbieDll SbieDll_
+
+SbieDll_dll SbieDll_dll_
+
+section '.text' code executable readable
+
+proc DllEntryPoint hinstDLL,fdwReason,lpvReserved
+if PtrSize=8
+	mov [hinstDLL],rcx
+	mov [fdwReason],rdx
+end if
+	cmp [fdwReason],DLL_PROCESS_ATTACH
+	je DLL_PROCESS_ATTACH_DllEntryPoint
+	cmp [fdwReason],DLL_PROCESS_DETACH
+	je DLL_PROCESS_DETACH_DllEntryPoint
+	match =1,OutputDebug{stdcall OutputDebugText,'DllEntryPoint',NULL,NULL,NULL,NULL,NULL}
+	jmp @f
+DLL_PROCESS_ATTACH_DllEntryPoint:
+	match =1,OutputDebug{stdcall OutputDebugText,'DLL_PROCESS_ATTACH',NULL,NULL,NULL,NULL,NULL}
+	invoke DisableThreadLibraryCalls,[hinstDLL]
+	jmp @f
+DLL_PROCESS_DETACH_DllEntryPoint:
+	match =1,OutputDebug{stdcall OutputDebugText,'DLL_PROCESS_DETACH',NULL,NULL,NULL,NULL,NULL}
+	jmp @f
+@@:
+	sioli TRUE
+	ret
+endp
+
+proc detour_LoadLibraryExW lpFileName,hFile,dwFlags
+locals
+	match =4,PtrSize{dwFlagsOld dd ?}
+	match =8,PtrSize{dwFlagsOld dq ?}
+endl
+if PtrSize=8
+	mov [lpFileName],rcx
+	mov [hFile],rdx
+	mov [dwFlags],r8
+end if
+	mov tax,[dwFlags]
+	mov [dwFlagsOld],tax
+	and [dwFlags],!LOAD_IGNORE_CODE_AUTHZ_LEVEL
+match =0,OutputDebug
+{
+	cmp [dwFlags],tax
+	je @f
+}
+	stdcall OutputDebugText,NULL,LoadLibraryExW.ansi,[lpFileName],NULL,[dwFlags],[dwFlagsOld]
+@@:
+	invoke kernel32.LoadLibraryExW,[lpFileName],[hFile],[dwFlags]
+	;invoke kernelbase.LoadLibraryExW,[lpFileName],[hFile],[dwFlags]
+	ret
+endp
+
+proc detour_6_2_LdrLoadDll dwFlags,SearchPathForFile,lpFileNameUnicodeString,hModule
+locals
+	match =4,PtrSize{dwFlagsOld dd ?}
+	match =8,PtrSize{dwFlagsOld dq ?}
+endl
+if PtrSize=8
+	mov [dwFlags],rcx
+	mov [SearchPathForFile],rdx
+	mov [lpFileNameUnicodeString],r8
+	mov [hModule],r9
+end if
+	mov tax,[dwFlags]
+	mov [dwFlagsOld],tax
+	and [dwFlags],!LOAD_IGNORE_CODE_AUTHZ_LEVEL
+match =0,OutputDebug
+{
+	cmp [dwFlags],tax
+	je @f
+}
+	mov tdx,[lpFileNameUnicodeString]
+	cmp tdx,NULL
+	je @f
+	;xor tax,tax
+	xor tcx,tcx
+	mov ax,[tdx+UNICODE_STRING.MaximumLength]
+	mov cx,[tdx+UNICODE_STRING.Length]
+	sub ax,cx
+	cmp ax,2
+	jnae @f
+	mov tdx,[lpFileNameUnicodeString]
+	mov tdx,[tdx+UNICODE_STRING.Buffer]
+	cmp word [tdx+tcx],NULL
+	jne @f
+	stdcall OutputDebugText,NULL,LdrLoadDll.ansi,tdx,NULL,[dwFlags],[dwFlagsOld]
+@@:
+	invoke ntdll.LdrLoadDll,[dwFlags],[SearchPathForFile],[lpFileNameUnicodeString],[hModule]
+	ret
+endp
+
+; Incorrect prototype - Was a work-in-process, was...
+proc detour_5_0_LdrLoadDll SearchPathForFile,dwFlags,lpFileNameUnicodeString,hModule
+locals
+	match =4,PtrSize{dwFlagsOld dd ?}
+	match =8,PtrSize{dwFlagsOld dq ?}
+endl
+if PtrSize=8
+	mov [SearchPathForFile],rcx
+	mov [dwFlags],rdx
+	mov [lpFileNameUnicodeString],r8
+	mov [hModule],r9
+end if
+	mov tax,[dwFlags]
+	mov [dwFlagsOld],tax
+	and [dwFlags],!LOAD_IGNORE_CODE_AUTHZ_LEVEL
+match =0,OutputDebug
+{
+	cmp [dwFlags],tax
+	je @f
+}
+	;
+@@:
+	invoke ntdll.LdrLoadDll,[SearchPathForFile],[dwFlags],[lpFileNameUnicodeString],[hModule]
+	ret
+endp
+
+proc detour_CreateRestrictedToken ExistingTokenHandle,Flags,DisableSidCount,SidsToDisable,DeletePrivilegeCount,PrivilegesToDelete,RestrictedSidCount,SidsToRestrict,NewTokenHandle
+locals
+	match =4,PtrSize{FlagsOld dd ?}
+	match =8,PtrSize{FlagsOld dq ?}
+endl
+if PtrSize=8
+	mov [ExistingTokenHandle],rcx
+	mov [Flags],rdx
+	mov [DisableSidCount],r8
+	mov [SidsToDisable],r9
+end if
+	mov tax,[Flags]
+	mov [FlagsOld],tax
+	and [Flags],!SANDBOX_INERT
+match =0,OutputDebug
+{
+	cmp [Flags],tax
+	je @f
+}
+	stdcall OutputDebugText,NULL,CreateRestrictedToken.ansi,NULL,NULL,[Flags],[FlagsOld]
+@@:
+	invoke advapi32.CreateRestrictedToken,[ExistingTokenHandle],[Flags],[DisableSidCount],[SidsToDisable],[DeletePrivilegeCount],[PrivilegesToDelete],[RestrictedSidCount],[SidsToRestrict],[NewTokenHandle]
+	ret
+endp
+
+proc detour_SaferComputeTokenFromLevel LevelHandle,InAccessToken,OutAccessToken,dwFlags,lpReserved
+locals
+	match =4,PtrSize{dwFlagsOld dd ?}
+	match =8,PtrSize{dwFlagsOld dq ?}
+endl
+if PtrSize=8
+	mov [LevelHandle],rcx
+	mov [InAccessToken],rdx
+	mov [OutAccessToken],r8
+	mov [dwFlags],r9
+end if
+	mov tax,[dwFlags]
+	mov [dwFlagsOld],tax
+	and [dwFlags],!SAFER_TOKEN_MAKE_INERT
+match =0,OutputDebug
+{
+	cmp [dwFlags],tax
+	je @f
+}
+	stdcall OutputDebugText,NULL,SaferComputeTokenFromLevel.ansi,NULL,NULL,[dwFlags],[dwFlagsOld]
+@@:
+	invoke advapi32.SaferComputeTokenFromLevel,[LevelHandle],[InAccessToken],[OutAccessToken],[dwFlags],[lpReserved]
+	ret
+endp
+
+proc detour_CreateProcessW lpApplicationName,lpCommandLine,lpProcessAttributes,lpThreadAttributes,bInheritHandles,dwCreationFlags,lpEnvironment,lpCurrentDirectory,lpStartupInfo,lpProcessInformation
+locals
+	match =4,PtrSize{dwCreationFlagsOld dd ?}
+	match =8,PtrSize{dwCreationFlagsOld dq ?}
+endl
+if PtrSize=8
+	mov [lpApplicationName],rcx
+	mov [lpCommandLine],rdx
+	mov [lpProcessAttributes],r8
+	mov [lpThreadAttributes],r9
+end if
+	mov tax,[dwCreationFlags]
+	mov [dwCreationFlagsOld],tax
+	and [dwCreationFlags],!CREATE_BREAKAWAY_FROM_JOB
+match =0,OutputDebug
+{
+	cmp [dwCreationFlags],tax
+	je @f
+}
+	stdcall OutputDebugText,NULL,CreateProcessW.ansi,[lpApplicationName],[lpCommandLine],[dwCreationFlags],[dwCreationFlagsOld]
+@@:
+	invoke kernel32.CreateProcessW,[lpApplicationName],[lpCommandLine],[lpProcessAttributes],[lpThreadAttributes],[bInheritHandles],[dwCreationFlags],[lpEnvironment],[lpCurrentDirectory],[lpStartupInfo],[lpProcessInformation]
+	ret
+endp
+
+proc detour_NtGetNextProcess ProcessHandle,DesiredAccess,HandleAttributes,Flags,NewProcessHandle
+	stdcall OutputDebugText,'Dodged ',NtGetNextProcess.ansi,NULL,NULL,NULL,NULL
+	sioli 0x8000001A ; STATUS_NO_MORE_ENTRIES
+	ret
+endp
+
+proc OutputDebugText szInfo,lpProcName,sz1,sz2,dwFlagsNew,dwFlagsOld
+locals
+	match =4,PtrSize{lpOut dd ?}
+	match =8,PtrSize{lpOut dq ?}
+endl
+if PtrSize=8
+	mov [szInfo],rcx
+	mov [lpProcName],rdx
+	mov [sz1],r8
+	mov [sz2],r9
+end if
+	invoke VirtualAlloc,NULL,2050,MEM_COMMIT+MEM_RESERVE,PAGE_READWRITE
+	mioli [lpOut]
+	tioli
+	jz fail_OutputDebugText
+	cmp [szInfo],NULL
+	je @f
+	cinvoke wsprintfW,[lpOut],szDbgInfoFmt,szSbieSRP,[szInfo],[lpProcName]
+	jmp pass_OutputDebugText
+@@:
+	cinvoke wsprintfW,[lpOut],szDbgHookFmt,szSbieSRP,[HithertoProcess.session_id],HithertoProcess.box_name,HithertoProcess.image_name,[lpProcName],[dwFlagsNew],[dwFlagsOld],[sz1],[sz2]
+pass_OutputDebugText:
+	invoke OutputDebugStringW,[lpOut]
+	invoke VirtualFree,[lpOut],0,MEM_RELEASE
+fail_OutputDebugText:
+	ret
+endp
+
+proc InjectDllMain hSbieDll,UnusedParameter
+if PtrSize=8
+	mov [hSbieDll],rcx
+end if
+	match =1,OutputDebug{stdcall OutputDebugText,'InjectDllMain',NULL,NULL,NULL,NULL,NULL}
+	
+	invoke GetProcAddress,[hSbieDll],SbieDll_dll.SbieDll_Hook
+	mioli [SbieDll.Hook]
+	tioli
+	jz fail_InjectDllMain
+	invoke GetProcAddress,[hSbieDll],SbieDll_dll.SbieApi_QueryProcess
+	mioli [SbieApi.QueryProcess]
+	tioli
+	jz fail_InjectDllMain
+	invoke GetProcAddress,[hSbieDll],SbieDll_dll.SbieApi_EnumProcessEx
+	mioli [SbieApi.EnumProcessEx]
+	tioli
+	jz fail_InjectDllMain
+	invoke GetCurrentProcessId
+	mioli [process_id]
+	invoke SbieApi.QueryProcess,[process_id],HithertoProcess.box_name,HithertoProcess.image_name,HithertoProcess.sid_string,HithertoProcess.session_id
+	tioli
+	jnz fail_InjectDllMain
+	
+	; TODO workaround __COMPAT_LAYER
+;	invoke GetVersion
+	; IsWindows8OrGreater
+;	cmp al,6
+;	jnae @f
+;	cmp ah,2
+;	jnae @f
+;stdcall OutputDebugText,'6.2',NULL,NULL,NULL,NULL,NULL
+;	invoke SbieDll.Hook,LdrLoadDll.ansi,[LdrLoadDll],detour_6_2_LdrLoadDll
+;	mioli [ntdll.LdrLoadDll]
+;	jmp past_LdrLoadDll_InjectDllMain
+@@:
+;stdcall OutputDebugText,'5.0',NULL,NULL,NULL,NULL,NULL
+;	invoke SbieDll.Hook,LdrLoadDll.ansi,[LdrLoadDll],detour_5_0_LdrLoadDll
+;	mioli [ntdll.LdrLoadDll]
+	
+past_LdrLoadDll_InjectDllMain:
+
+	; advapi32.CreateRestrictedToken
+	invoke SbieDll.Hook,CreateRestrictedToken.ansi,[CreateRestrictedToken],detour_CreateRestrictedToken
+	mioli [advapi32.CreateRestrictedToken]
+	
+	; advapi32.SaferComputeTokenFromLevel
+	invoke SbieDll.Hook,SaferComputeTokenFromLevel.ansi,[SaferComputeTokenFromLevel],detour_SaferComputeTokenFromLevel
+	mioli [advapi32.SaferComputeTokenFromLevel]
+	
+	; kernel32.CreateProcessW
+	invoke SbieDll.Hook,CreateProcessW.ansi,[CreateProcessW],detour_CreateProcessW
+	mioli [kernel32.CreateProcessW]
+	
+@@:
+	; kernelbase.LoadLibraryExW
+	invoke GetModuleHandleA,kernelbase_dll
+	invoke GetProcAddress,tax,LoadLibraryExW.ansi
+	tioli
+	jz @f
+;	invoke SbieDll.Hook,LoadLibraryExW.ansi,tax,detour_LoadLibraryExW
+;	mioli [kernelbase.LoadLibraryExW]
+	
+@@:
+	; kernel32.LoadLibraryExW
+	invoke GetModuleHandleA,kernel32_dll
+	invoke GetProcAddress,tax,LoadLibraryExW.ansi
+	tioli
+	jz @f
+	invoke SbieDll.Hook,LoadLibraryExW.ansi,tax,detour_LoadLibraryExW
+	mioli [kernel32.LoadLibraryExW]
+	
+@@:
+	; ntdll.NtGetNextProcess
+	invoke GetModuleHandleA,ntdll_dll
+	invoke GetProcAddress,tax,NtGetNextProcess.ansi
+	tioli
+	jz @f
+	invoke SbieDll.Hook,NtGetNextProcess.ansi,tax,detour_NtGetNextProcess
+	mioli [ntdll.NtGetNextProcess]
+	
+@@:
+	match =1,OutputDebug{stdcall OutputDebugText,'Inject stage passed.',NULL,NULL,NULL,NULL,NULL}
+	ret
+fail_InjectDllMain:
+	stdcall OutputDebugText,'Inject stage failed.',NULL,NULL,NULL,NULL,NULL
+	ret
+endp
+
+section '.idata' data readable import
+library ntdll_dll,'ntdll.dll',kernel32_dll,'kernel32.dll',advapi32_dll,'advapi32.dll',user32_dll,'user32.dll'
+
+import ntdll_dll,\
+LdrLoadDll,'LdrLoadDll'
+
+import kernel32_dll,\
+CreateProcessW,'CreateProcessW',\
+DisableThreadLibraryCalls,'DisableThreadLibraryCalls',GetCurrentProcessId,'GetCurrentProcessId',\
+GetModuleHandleA,'GetModuleHandleA',GetProcAddress,'GetProcAddress',GetProcessId,'GetProcessId',\
+OutputDebugStringW,'OutputDebugStringW',\
+VirtualAlloc,'VirtualAlloc',VirtualFree,'VirtualFree'
+
+import advapi32_dll,\
+CreateRestrictedToken,'CreateRestrictedToken',SaferComputeTokenFromLevel,'SaferComputeTokenFromLevel'
+
+import user32_dll,\
+wsprintfW,'wsprintfW' ;,wvsprintfW,'wvsprintfW'
+
+section '.edata' data readable export
+export SbieSRP_dll,InjectDllMain,'InjectDllMain'
+
+section '.reloc' data discardable readable fixups
+
+postpone
+{
+display '@',10
+display ':: INSTALL FROM AN ELEVATED COMMAND PROMPT',10
+display 'COPY /B /Y "SbieSRP.dll" "%CommonProgramFiles%\',SbieSRP_dll,'"',10
+display '@',10
+display 'ATTRIB +R "%CommonProgramFiles%\',SbieSRP_dll,'"',10
+display '@',10
+display 'SET "Sbie=%ProgramFiles%\Sandboxie"',10
+display 'SET "SbieIni="%Sbie%\SbieIni.exe""',10
+display '%SbieIni% append GlobalSettings InjectDll "%CommonProgramFiles%\SbieSRP4.dll"',10
+display '%SbieIni% append GlobalSettings InjectDll64 "%CommonProgramFiles%\SbieSRP8.dll"',10
+display '@'
+}
+</code></pre></div>
+Am not providing support, consider the project abandoned.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Wed Jun 03, 2015 12:22 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">Sorry, catBot, I tested my dll and XP with SRP, for me this combination is not currently working. After SRP is taken off Unrestricted level, new Sandboxed processes quit pretty soon after they run.<br>
+<br>
+Interestingly and fortunately enough though...<br>
+Sandboxie 4.02+ does (all?) what you proposed.<br>
+Sandboxie 4.x mitigates this <a href="http://blog.didierstevens.com/2011/01/25/circumventing-srp-and-applocker-to-create-a-new-process-by-design/" class="postlink">Proof of Concept</a>;<br>
+"blocked by group policy" where 3.76 does not.<br>
+<br>
+Other cautions - It comes with a free frogurt!<br>
+The new 4.x hull breach is of great concern...<br>
+My dll hotfix may freeze an offending program,<br>
+an effective block, but yeah, infinite loop...<br>
+but at least it can catch the call, the call -<br>
+only - exploits could harbour the hooked code.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Sun Oct 18, 2015 4:18 am</strong></div>
+				<div class="author">by <strong>marzametal</strong></div>
+				<div class="content">Is this project still working, or active at all? I read it works for Vista x64... any chance it can be done for W7HP x64? The game might've changed a lot since v5 is now out...<br>
+<br>
+By the way, thanks for recommending setting the DLLs to read only... I am using Block Process Access, so their DLLs are now read only...<br>
+<br>
+Thanks for any replies to my query on this SRP topic...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Sun Oct 18, 2015 6:14 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">I can't recall what degree of success I had with my SbieSRP enforcement dll while actually supervised by SRP - I had no business working on it if I wasn't using SRP myself - it was just a code exercise to me.<br>
+<br>
+If you see debug output, it's functioning so much as it ever did.<br>
+<br>
+What you now face, "Software Restriction Policies (SRP) is Group Policy-based feature", and, Group Policy Editor is omitted from (7) Home Premium.<br>
+<br>
+Your best hope was PGS - Pretty Good Security, an alternative UI, but the hosting website was let go. If I had the time, I'd code something killer - never, never.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=19811&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:46:16 GMT -->
+</html>

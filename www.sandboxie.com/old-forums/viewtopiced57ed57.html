@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24831&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:52:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Compatibility Mode [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Compatibility Mode [SOLVED]</h2>
+		<p><a href="viewtopic5b7a5b7a.html?f=17&amp;t=24831">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24831</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Compatibility Mode [SOLVED]</h3>
+				<div class="date">Posted: <strong>Fri Sep 01, 2017 7:11 pm</strong></div>
+				<div class="author">by <strong>hello90909</strong></div>
+				<div class="content">Hi,<br>
+<br>
+I wish to run an application using different compatibility settings. <br>
+<br>
+Anyone know how to do this? To be specific I need to run an application through Windows 8.<br>
+<br>
+Thanks in advance<br>
+Harry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Compatibility Mode</h3>
+				<div class="date">Posted: <strong>Tue Sep 05, 2017 12:36 pm</strong></div>
+				<div class="author">by <strong>JimC@invincea</strong></div>
+				<div class="content">Can you elaborate please? I do not understand specifically what you are looking to do and how sandboxie fits in.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Compatibility Mode</h3>
+				<div class="date">Posted: <strong>Mon Sep 11, 2017 5:52 am</strong></div>
+				<div class="author">by <strong>hello90909</strong></div>
+				<div class="content">On an application I run I have to right click &gt; properties &gt; "Run this program in compatibility mode for Windows 8"<br>
+<br>
+If I don't run it using this compatibility option, the application won't run and crash.<br>
+<br>
+So I'm trying to use sandboxie to run the same application using the same compatibility options.<br>
+<br>
+I hope this makes more sense?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Compatibility Mode</h3>
+				<div class="date">Posted: <strong>Mon Sep 11, 2017 1:45 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">I can think of two things to try, one would be to right click the exe and apply the "Change settings for all users" option near the bottom.<br>
+The other would be to use Start.exe to run the program via a shortcut with the <a href="../StartCommandLine.html" class="postlink">/env:</a> option inserted.
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>/env:__COMPAT_LAYER=WIN8RTM</code></pre></div>
+I haven't tested either but maybe one will help?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Compatibility Mode</h3>
+				<div class="date">Posted: <strong>Tue Sep 12, 2017 5:22 am</strong></div>
+				<div class="author">by <strong>hello90909</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518">Syrinx</a> wrote: <a href="viewtopic424b424b.html?p=130151#p130151" data-post-id="130151" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Sep 11, 2017 1:45 pm</div></cite>
+I can think of two things to try, one would be to right click the exe and apply the "Change settings for all users" option near the bottom.<br>
+The other would be to use Start.exe to run the program via a shortcut with the <a href="../StartCommandLine.html" class="postlink">/env:</a> option inserted.
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>/env:__COMPAT_LAYER=WIN8RTM</code></pre></div>
+I haven't tested either but maybe one will help?
+</div></blockquote>
+
+Worked like a charm.<br>
+<br>
+Thanks mate <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24831&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:52:36 GMT -->
+</html>

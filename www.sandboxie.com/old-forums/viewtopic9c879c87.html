@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=12544&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SandboxieReflector - cross-sandbox execution</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SandboxieReflector - cross-sandbox execution</h2>
+		<p><a href="viewtopicbcf4bcf4.html?f=22&amp;t=12544">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=12544</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>SandboxieReflector - cross-sandbox execution</h3>
+				<div class="date">Posted: <strong>Mon Feb 27, 2012 4:42 am</strong></div>
+				<div class="author">by <strong>Carl Colijn</strong></div>
+				<div class="content">Hi all!<br>
+<br>
+{update: The current version is 12.3.19 (from March 19, 2012) }<br>
+<br>
+I've created my own contributed utility called SandboxieReflector.  SandboxieReflector allows you to define commands that force designated applications to always run in a certain sandbox, also when called from inside another one.  This can be useful in several ways; e.g.<br>
+
+<ul><li>when you want to force certain apps to run in their own sandbox, thus not polluting other sandboxes along the way (run FireFox in it's own sandbox even when started from another sandbox), or</li></ul>
+<ul><li>when you want to install apps in their own sandbox, and be able to run them from anywhere (also from inside other sandboxes).</li></ul>
+
+There are some restrictions, caveats, disclaimers etc.; they are all noted on the <a href="http://www.twologs.com/en/resources/sandboxiereflector.asp" class="postlink">SandboxieReflector page</a> at my web site - you can also download the zip file from there.<br>
+<br>
+I've briefly mailed with Tzuk about this functionality, and while it might be added to a future version it will probably not be in the near future.  I have therefore decided to still publish it as an interim solution, but I'm inclined not to develop/support it any further for the same reason.  It should still be a very useful utility for the ones who know how to use it though!<br>
+<br>
+Interested in your opinions, and happy reflecting! <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+Carl</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 27, 2012 5:54 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Looks good!  Thanks for posting it.  I hope some will find it useful.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 27, 2012 7:14 am</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content">This is great! I thought about <a href="../phpbb/viewtopic0099.php?t=12473" class="postlink">something similar</a>, but didn't get the time to work on it. I have read the SandboxieReflector page and I'm going to test it and put it at work today. I'm also an avid user of virtual computers, but as you and many others, I feel that Sandboxie's invaluable for getting the best out of your system for applications while still running them isolated, and this utility you have created should be of great help until Sandboxie reaches this milestone. Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 27, 2012 7:35 am</strong></div>
+				<div class="author">by <strong>Carl Colijn</strong></div>
+				<div class="content"><blockquote><div><cite>MichaelS wrote:</cite>This is great! I thought about <a href="../phpbb/viewtopic0099.php?t=12473" class="postlink">something similar</a>, but didn't get the time to work on it.</div></blockquote>
+
+Funny how this seems to work sometimes - first there is nothing and then all of a sudden a few people get the same idea all at the same time...  Maybe this is a hint to Tzuk the time is right for this feature? <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+<br>
+Anyway, please tell me what you think of it!  All feedback is appreciated, although I'm a bit reluctant to improve anything apart from bug fixing.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 27, 2012 10:26 pm</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content">Carl, this is excellent. Works just the way I imagined it would and how I would've made my own implementation, so I have to thank you for saving me some time.<br>
+Also, as a Sandboxie user, I appreciate you shared this utility, thus bringing more attention upon a much needed feature. I'd call this one of the most valuable contributed utilities.<br>
+Without wanting to sound arrogant, I believe a lot more users would emphasize the wish for such a feature if they'd be aware of the implications and benefits of it.<br>
+<br>
+If anyone's reluctant to using this utility, you should know that it doesn't have any impact on performance (i.e. file proxying doesn't affect execution time).<br>
+<br>
+Manual labor for creating correct registry entries may seem cumbersome to some, but it is the only way to make this work, and I personally view it as a means to better control the way you want things to work.<br>
+<br>
+I recommend <a href="http://defaultprogramseditor.com/" class="postlink">Default Programs Editor</a> as a great tool to aid the process for the faint-hearted.<br>
+<br>
+Another thing I would like to mention: having all preferred extensions pointing to Reflector.exe is very helpful in case you wish to change a sandbox's location, because then yo do not have to deal with the change in the registry (unless the file icon is .exe dependent), but in the INI file, so it is easier to manage multiple changes.<br>
+<br>
+Carl, thank you for creating this, and Tzuk- thanks for supporting the idea.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 29, 2012 5:59 am</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content">Carl, I know you said you do not wish to improve or further extend your application, unless it's a bug-fix or vulnerability issue, and I completely understand if you do not want to implement the following suggestion:<br>
+<br>
+Add an alternative version of the Reflector and/or Effectuator that allows the Reflector to pass raw command lines to the Effectuator, so it is not confined to the /file parameter.<br>
+<br>
+For example, this:<br>
+"C:\Program Files\SandboxieReflector\Reflector.exe" /exec &lt;profilename&gt; /I="$I" /R="$R" /L="$L"<br>
+<br>
+would execute whatever is in the CmdLine associated with &lt;profilename&gt; along with /I="$I" /R="$R" /L="$L"<br>
+<br>
+The reason I am asking this is because $I, $R, $L are actually dynamic arguments replaced with other data by the file-manager that I am using, so I can't just add them to the INI file. This means that when I am executing
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"C:\Program Files\SandboxieReflector\Reflector.exe" /exec &lt;profilename&gt; /I="$I" /R="$R" /L="$L"</code></pre></div>, the file manager is actually running:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"C:\Program Files\SandboxieReflector\Reflector.exe" /exec &lt;profilename&gt; /I="inactive_pane_path" /R="right_pane_path" /L="left_pane_path"</code></pre></div>
+
+Again, if you do not want to implement this for the already mentioned reasons or for any other reason, I completely understand and I already appreciate the application as it is.<br>
+I am aware that this is a niche suggestion so I already created an application that dynamically changes the INI command line before executing the Reflector.<br>
+<br>
+Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 29, 2012 10:31 am</strong></div>
+				<div class="author">by <strong>Carl Colijn</strong></div>
+				<div class="content"><blockquote><div><cite>MichaelS wrote:</cite>Carl, I know you said you do not wish to improve or further extend your application, unless it's a bug-fix or vulnerability issue, and I completely understand if you do not want to implement the following suggestion:<br>
+<br>
+Add an alternative version of the Reflector and/or Effectuator that allows the Reflector to pass raw command lines to the Effectuator, so it is not confined to the /file parameter.</div></blockquote>
+
+Hi MichaelS,<br>
+<br>
+A more generic method would be to pass all parameters along via a dedicated /p switch, with "/p file" a good replacement for the "/file" in use now.  Something like:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Reflector.exe /exec &lt;profile name&gt; [/p &lt;param name&gt; &lt;param value&gt; [&lt;param value&gt; ...]] </code></pre></div>
+and the profile code something like:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>CmdLine=MyApp.exe [$&lt;param name&gt; [$&lt;param name&gt; ...]] </code></pre></div>
+
+As an example:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Reflector.exe /exec MyProfile /p file "%1",
+CmdLine=MyApp /open $file</code></pre></div>
+and:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Reflector.exe /exec MyProfile /p I "$I" /p R "$R" /p L "$L"
+CmdLine=MyApp /left_path=$L /other=$R /and_even=$I</code></pre></div>
+
+Just like the Effectuator now looks for all %1's in the cmdlines and complains if there is an unmatch with any /file switch, it could just as easily compare all /p's in the same manner.<br>
+<br>
+I'm already breaking my own promise of not improving the code by looking if initial DDE proxying support is easy to add, so the above would be a quick addition as well <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">  No promise on a time frame, but the idea intrigues me!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 29, 2012 12:18 pm</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content">Hello! Thank you for considering the suggestion.<br>
+Your approach is good, but the command would still depend on the CmdLine from the INI file, while a raw interpretation wouldn't.<br>
+<br>
+An example. Let's say I run the following user command from my sandboxed file manager (which would replace $I, $R, $L with file paths or whatever):
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"C:\Program Files\SandboxieReflector\Reflector.exe" /exec &lt;profilename&gt; "D:\MyApp.exe" /I="$I" /R="$R" /L="$L" /Type=Mov /Notify="C:\Windows\Media\ding.wav"</code></pre></div>
+In this case, the CmdLine property in SandboxieReflector.ini for the invoked profile could be null, like CmdLine="" and Effectuator.exe would run
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"D:\MyApp.exe" /I="$I" /R="$R" /L="$L" /Type=Mov /Notify="C:\Windows\Media\ding.wav"</code></pre></div>
+
+or, if it is possible, introduce a /raw parameter whose value is concatenated to the ini CmdLine property (which can be null).
+<blockquote class="uncited"><div>"C:\Program Files\SandboxieReflector\Reflector.exe" /exec &lt;profilename&gt; <span style="color: red"><strong>/raw</strong></span> "D:\MyApp.exe" /I="$I" /R="$R" /L="$L" /Type=Mov /Notify="C:\Windows\Media\ding.wav"</div></blockquote>
+
+Of course, the call is yours, and as I said before, I'm already using your applications in conjunction with one of mine to get the desired functionality.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 01, 2012 6:02 am</strong></div>
+				<div class="author">by <strong>Carl Colijn</strong></div>
+				<div class="content"><blockquote><div><cite>MichaelS wrote:</cite>Hello! Thank you for considering the suggestion.<br>
+Your approach is good, but the command would still depend on the CmdLine from the INI file, while a raw interpretation wouldn't.</div></blockquote>
+
+Hi MichaelS,<br>
+<br>
+I get what you're after, but I do not want to add a "raw" interpretation to SandboxieReflector - if such an interpretation would be added, anyone could execute any command in a sandbox, as long as they know the name of the corresponding profile.  Since the SandboxieReflector.ini file is readable by anyone (even the baddies), this would mean a giant security breach.  (as if like it's worthwhile to build circumvention code for all 10+ people on Earth using SandboxieReflector <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">, but still...)<br>
+<br>
+But I still do think my solution will also help you;<br>
+
+<blockquote><div><cite>MichaelS wrote:</cite>An example. Let's say I run the following user command from my sandboxed file manager (which would replace $I, $R, $L with file paths or whatever):
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"C:\Program Files\SandboxieReflector\Reflector.exe" /exec &lt;profilename&gt; "D:\MyApp.exe" /I="$I" /R="$R" /L="$L" /Type=Mov /Notify="C:\Windows\Media\ding.wav"</code></pre></div>
+In this case, the CmdLine property in SandboxieReflector.ini for the invoked profile could be null, like CmdLine="" and Effectuator.exe would run
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"D:\MyApp.exe" /I="$I" /R="$R" /L="$L" /Type=Mov /Notify="C:\Windows\Media\ding.wav"</code></pre></div></div></blockquote>
+
+In this case the Reflector.exe call would be:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Reflector.exe /exec &lt;profilename&gt; /p I "$I" /p R "$R" /p L "$L" /p file "%1"</code></pre></div>
+
+which would expand to e.g.:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Reflector.exe /exec &lt;profilename&gt; /p I "inactive_pane_path" /p R "right_pane_path" /p L "left_pane_path" /p file "C:\Windows\Media\ding.wav"</code></pre></div>
+
+The CmdLine in the .ini would be (now with the .wav supplied via Reflector as well via the "file" parameter):
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>CmdLine="D:\MyApp.exe" /I="$I" /R="$R" /L="$L" /Type=Mov /Notify=$file</code></pre></div>
+
+which in this case would expand to:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>CmdLine="D:\MyApp.exe" /I="inactive_pane_path" /R="right_pane_path" /L="left_pane_path" /Type=Mov /Notify="C:\Windows\Media\ding.wav"</code></pre></div>
+
+Does this do what I think you meant?  It is a (potentially) useful and quick-to-add addition in it's own right, though, so I'd probably add it anyway.  Another use case would be to consolidate multiple almost-similar cmdlines into one profile (like some programs have when they have multiple shell verbs), with the differences triggered via alternate Reflector.exe calls.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 01, 2012 7:41 am</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content"><blockquote><div><cite>Carl Colijn wrote:</cite>I get what you're after, but I do not want to add a "raw" interpretation to SandboxieReflector - if such an interpretation would be added, anyone could execute any command in a sandbox, as long as they know the name of the corresponding profile.</div></blockquote>
+Yes, I realize this, that's why I initially suggested to <em>add an alternative version of the Reflector and/or Effectuator that allows the Reflector to pass raw command lines to the Effectuator</em>, so only those who are aware of the risks would use it, but I understand the concern for security breaches.<br>
+
+<blockquote><div><cite>Carl Colijn wrote:</cite>But I still do think my solution will also help you;<br>
+[...]<br>
+Does this do what I think you meant?  It is a (potentially) useful and quick-to-add addition in it's own right, though, so I'd probably add it anyway.  Another use case would be to consolidate multiple almost-similar cmdlines into one profile (like some programs have when they have multiple shell verbs), with the differences triggered via alternate Reflector.exe calls.</div></blockquote>
+No doubt, what you presented would be a welcomed addition.<br>
+<br>
+Thank you!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 02, 2012 5:47 am</strong></div>
+				<div class="author">by <strong>Carl Colijn</strong></div>
+				<div class="content"><blockquote><div><cite>MichaelS wrote:</cite><blockquote><div><cite>Carl Colijn wrote:</cite>But I still do think my solution will also help you;<br>
+[...]<br>
+Does this do what I think you meant?  It is a (potentially) useful and quick-to-add addition in it's own right, though, so I'd probably add it anyway.  Another use case would be to consolidate multiple almost-similar cmdlines into one profile (like some programs have when they have multiple shell verbs), with the differences triggered via alternate Reflector.exe calls.</div></blockquote>
+No doubt, what you presented would be a welcomed addition.<br>
+<br>
+Thank you!</div></blockquote>
+
+And thus came version 12.3.2; you can download it from the SandboxieReflector web page on my site (see the initial post).<br>
+<br>
+The previous version could only handle a single /file parameter (reflected in any %1 CmdLine tag), but now you can use a more general /p parameter passing method, which allows you to create as many parameters as you want.  Now on to investigating simple DDE proxying again...  Did I tell you I wanted to leave it at version 12.2.22? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 02, 2012 4:22 pm</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content">Thank you for the improvements! This surely broadens the use of SandboxieReflector.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Small command I would like</h3>
+				<div class="date">Posted: <strong>Sat Mar 10, 2012 4:16 pm</strong></div>
+				<div class="author">by <strong>Messmer</strong></div>
+				<div class="content">Can you add /min to the Effectuator so it go small on start.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Small command I would like</h3>
+				<div class="date">Posted: <strong>Sun Mar 11, 2012 7:40 am</strong></div>
+				<div class="author">by <strong>Carl Colijn</strong></div>
+				<div class="content"><blockquote><div><cite>Messmer wrote:</cite>Can you add /min to the Effectuator so it go small on start.</div></blockquote>
+
+Hi Messmer,<br>
+<br>
+It's already there <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">  It's the /s switch.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Small command I would like</h3>
+				<div class="date">Posted: <strong>Sun Mar 11, 2012 10:32 am</strong></div>
+				<div class="author">by <strong>Messmer</strong></div>
+				<div class="content"><blockquote><div><cite>Carl Colijn wrote:</cite><blockquote><div><cite>Messmer wrote:</cite>Can you add /min to the Effectuator so it go small on start.</div></blockquote>
+
+Hi Messmer,<br>
+<br>
+It's already there <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">  It's the /s switch.</div></blockquote>
+Great, it solved one my problem. Software I wan't to use but with highly restrictive right on install.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=12544&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:52 GMT -->
+</html>

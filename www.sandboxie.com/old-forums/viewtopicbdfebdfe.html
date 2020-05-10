@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25244&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:28:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Skype and CredReadA [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Skype and CredReadA [SOLVED]</h2>
+		<p><a href="viewtopicb434b434.html?f=17&amp;t=25244">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25244</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Skype and CredReadA [SOLVED]</h3>
+				<div class="date">Posted: <strong>Sat Dec 23, 2017 9:21 am</strong></div>
+				<div class="author">by <strong>Sam777</strong></div>
+				<div class="content">Yesterday, I was finally forced to update my skype to the newest version. It appears it now relies on protected storage to store the password information where the prior versions didn't. Now when I start Skype I get - <em>SBIE2205 Service not implemented</em>.<br>
+<br>
+I know there is a setting in <em>sandboxie.ini</em> to give programs inside a sandbox access to protected storage. I would like to avoid this if possible. I'm wondering, is there a way to grant access to Skype only without creating a global rule?<br>
+<br>
+<br>
+------------- MERGED POST ------------------<br>
+No one knows the answer to this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Skype and CredReadA</h3>
+				<div class="date">Posted: <strong>Wed Dec 27, 2017 11:58 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Sam777,<br>
+<br>
+Please have a look at this:<br>
+<a href="../SBIE2205.html" class="postlink">https://www.sandboxie.com/SBIE2205</a><br>
+Are you able to hide the message and continue using the app?<br>
+Here's a possibly related thread (although, old):<br>
+<a href="viewtopicb10ab10a.html?p=37852#p37852" class="postlink">viewtopic.php?p=37852#p37852</a><br>
+<br>
+If you are unable to use the application, try a new Sandbox with default settings. If the issue persists, please provide the required info so that I can test it:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Regarding your question for global rules, here's how direct access works:<br>
+<a href="../OpenFilePath.html" class="postlink">https://www.sandboxie.com/OpenFilePath</a><br>
+<a href="../ResourceAccessSettings.html#file" class="postlink">https://www.sandboxie.com/ResourceAccessSettings#file</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Skype and CredReadA</h3>
+				<div class="date">Posted: <strong>Sat Dec 30, 2017 10:00 am</strong></div>
+				<div class="author">by <strong>Sam777</strong></div>
+				<div class="content">Thanks for your reply, Barb. Unfortunately, I don't see a solution with the information you offered. I thought perhaps one could create a path but this is a service so it's not going to work (at least I don't see a way). It's likely the reason that tzuk originally created Sandboxie's own protected storage but it doesn't work or seem compatible with Skype. <br>
+<br>
+I hope the developers can find a solution because every time I start Skype it forces me to sign out and then sign in again. Then I have click on "skip" for the setup process and finally the app starts. It appears that the app's settings are stored in protected storage also, since it never remembers what I select.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Skype and CredReadA</h3>
+				<div class="date">Posted: <strong>Fri Feb 16, 2018 4:58 pm</strong></div>
+				<div class="author">by <strong>Peter 123</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlista82b.html?mode=viewprofile&amp;u=26670">Sam777</a> wrote: <a href="viewtopic9c559c55.html?p=131621#p131621" data-post-id="131621" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sat Dec 30, 2017 10:00 am</div></cite>
+every time I start Skype it forces me to sign out and then sign in again. Then I have click on "skip" for the setup process and finally the app starts. It appears that the app's settings are stored in protected storage also, since it never remembers what I select.
+</div></blockquote>
+
+Are you sure that this has to do with Sandboxie? I get also the message SBIE2205 but I do not have this problem.<br>
+<br>
+To my mind the new version of Skype is terrible concerning its usability for the user. It starts with the fact that until now I did not even find a possibility to see which is the number of the version I have installed. Nor did I really understand the user settings, especially the ones who have to do with the opening and closing of Skype.<br>
+<br>
+Indeed with the new Skype version I get two windows with messages by Sandboxie, the one with SBIE2205, and (first) another one with SBIE1308 (+ SBIE2222 and SBIE2314) (concerning the program reg.exe).<br>
+<br>
+But these messages (respectively their contents) do not cause problems in using Skype. I can close the two windows with the messages and continue to use Skype.<br>
+<br>
+And I am able to stay logged in, without the necessity to sign out and to sign in again. These are my settings in Skype for starting and closing it (of course I had to make these settings with Skype started <strong>outside</strong> of Sandboxie in order to keep them):<br>
+<br>
+<img src="../i.imgur.com/BwLuu0Z.jpg" class="postimage" alt="Image"><br>
+<br>
+- Skype starting automatically: Grey [obviously this means: not activated]<br>
+- Skype starting in the background: Grey<br>
+- Skype will continue to be executed after closing: Blue [= obviously: activated]<br>
+<br>
+Though I have no idea what the exact meaning and the difference of these three options is, for me it works with the above settings in the following way: <br>
+<br>
+(a) Skype starts (within the Sandbox) without the necessity to log in - the SBIE messages appear but I can close them and continue with Skype. <br>
+(b) When closing Skype (clicking the X in the upper right corner of the window) it is minimized to the tray. - When I right click on the Skype icon in the tray and I choose the option "Skype beenden" (= "Finish Skype" or however it is called in English) the icon disappears. - The next time I want to use Skype it works as described under (a).<br>
+<br>
+So, Sam777, perhaps you should take a look at your Skype settings to see if they are possibly responsible for the problem you describe with signing in/out.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Skype and CredReadA</h3>
+				<div class="date">Posted: <strong>Fri Apr 27, 2018 7:44 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">Skype 8.x portable:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2205 Service not implemented:  CredWriteA</code></pre></div>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2205 Service not implemented:  CredDeleteA</code></pre></div>
+
+RAM: <a href="https://pastebin.com/juUy8q7R" class="postlink">https://pastebin.com/juUy8q7R</a><br>
+<br>
+<br>
+Skype 8.x portable:<br>
+<a href="https://github.com/portapps/skype-portable" class="postlink">https://github.com/portapps/skype-portable</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Skype and CredReadA</h3>
+				<div class="date">Posted: <strong>Mon Apr 30, 2018 5:25 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Mr.X ,<br>
+<br>
+I downloaded and tested Skype 8.20.0.9.13 on Win 8.1 x64 + Sbie 5.25.2  I received the credentials message, I clicked on "hide" and was able to log in to Skype without further issues. <br>
+<br>
+If you do not want to hide the message, try the following (YMMV, as this has not been fully tested):<br>
+Configure --&gt; Edit configuration<br>
+Find your desired Sandbox and add this at the end:<br>
+OpenCredentials=y<br>
+<br>
+Save the changes<br>
+Configure --&gt; Reload configuration<br>
+Empty the contents of the Sandbox you just modified and launch Skype inside of it.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Skype and CredReadA</h3>
+				<div class="date">Posted: <strong>Mon Apr 30, 2018 6:00 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic95d995d9.html?p=133289#p133289" data-post-id="133289" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Apr 30, 2018 5:25 pm</div></cite>
+OpenCredentials=y
+</div></blockquote>
+Thank you. That did the trick.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25244&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:28:02 GMT -->
+</html>

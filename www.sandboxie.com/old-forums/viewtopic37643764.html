@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=20614&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:43:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie Detection</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie Detection</h2>
+		<p><a href="viewtopic21272127.html?f=5&amp;t=20614">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=20614</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie Detection</h3>
+				<div class="date">Posted: <strong>Sun Jan 25, 2015 3:04 pm</strong></div>
+				<div class="author">by <strong>sludge</strong></div>
+				<div class="content">Hello,<br>
+<br>
+I use Sandboxie for some light malware analysis, I have never run in to a piece of malware that had this functionality. However, I know it has been out for quite some time (the original snippet was around 2009) and it is still active today.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>bool IsInSandbox()
+{
+    char* sModule[] = { "SbieDll.dll" };   
+    for( int i = 0; i &lt; ( sizeof( sModule ) / sizeof( char* ) ); i++ )
+    {
+        if( GetModuleHandle( sModule[ i ] ) ) {
+            return true;
+        }
+    }
+    return false;
+}
+
+I know you can also it determine by the window text also.I know this is not a life or death detection as stated there are easy fixes for programs with this functionality, however I just thought I would write about it.
+
+Thanks for your time.</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Detection</h3>
+				<div class="date">Posted: <strong>Thu Mar 05, 2015 8:36 am</strong></div>
+				<div class="author">by <strong>menlo</strong></div>
+				<div class="content">Actually I was made aware of SandboxIE through a podcast years ago from Gibson - grc.com and have been showing people this technology ever since (IT Consultant). <br>
+I just found this quote in an Ars Technica article about the CrytoLocker 2.0 reverse engineering discoveries:<br>
+<br>
+<a href="http://bit.ly/1aKC5ya" class="postlink">http://bit.ly/1aKC5ya</a><br>
+
+<blockquote class="uncited"><div><em><strong>Cloaking enabled</strong><br>
+<br>
+The installation components of CryptoWall 2.0 are cloaked by multiple levels of encryption, with three distinct stages of installation each using a different encryption method to disguise the components installed. And like many modern pieces of malware, CryptoWall 2.0 has a virtual machine check in its code that disables the attack when the malware is installed within a virtual instance—in part to prevent security researchers from isolating and analyzing its behavior.<br>
+<br>
+The VM checker code, in the first stage of CryptoWall’s dropper sequence, checks the system for running processes, searching for VMware and VirtualBox services or the Sandboxie application partitioning library. If the coast is clear, the code does some best practices-based memory handling to release memory used in the initial drop mode, then launches another dropper disguised as a Windows Explorer process.</em></div></blockquote>
+
+with more information about the breakdown here:<br>
+<a href="https://blogs.cisco.com/security/talos/cryptowall-2" class="postlink">https://blogs.cisco.com/security/talos/cryptowall-2</a><br>
+<br>
+The comments are also insightful - one comment on the Cisco blog mentions the fact that they check snort.org for "Cryptolocker 2.0" , but I suppose you can also search for snort SID's are 32521 &amp; 31223 (this ID list will probably grow over time.)<br>
+<br>
+I know it sounds a little esoteric, but I supposed you can't develop without keeping informed of ways exploits are written against your application. So just in case you guys missed this I wanted to post it. It is probably a good idea to figure out the names of the current 'checker' code snippets and the phrasing the hacker community uses and set up google alerts? RSS stuff like this Cisco blog?<br>
+<br>
+Thanks for everything and keeping us safe!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=20614&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:43:09 GMT -->
+</html>

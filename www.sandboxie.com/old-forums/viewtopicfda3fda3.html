@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=24887&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 00:01:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; .NET 4.7 and AppLocker</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>.NET 4.7 and AppLocker</h2>
+		<p><a href="viewtopic28482848.html?f=5&amp;t=24887">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=24887</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>.NET 4.7 and AppLocker</h3>
+				<div class="date">Posted: <strong>Thu Sep 14, 2017 4:08 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">I've spent a fair amount of time tracing this issue over the last few days. I first noticed it (in a VM) well over a month ago but I hadn't buckled down to actually solve it until recently. My initial assumptions were that it was related to some recent changes in <a href="https://www.ntlite.com/" class="postlink">NTLite</a> and so i spent some time bugging Nuhi about it (a lot) but as it turns out it wasn't related to changes on his end at all! <a href="https://www.ntlite.com/discussions/#/discussion/1522/net-4-7-applocker" class="postlink">Sorry, sir</a>.<br>
+<br>
+There's now a report opened about it so we'll see (if) how long it takes MS to correct but as it's been reported elsewhere without (so far as I know) the cause being isolated (or a workaround being posted) I felt like sharing some place.<br>
+<br>
+Similar threads:<br>
+<a href="https://www.tenforums.com/general-support/78483-srpuxsnapin-dll-error-when-trying-add-new-applocker-rule-user.html" class="postlink">https://www.tenforums.com/general-suppo ... -user.html</a><br>
+<br>
+Steps to reproduce:<br>
+Tested on Windows 7 x64 Ultimate<br>
+1A) Install .NET Framework 4.7 or 1B) Set OnlyUseLatestCLR to 1<br>
+2) Use Windows Update and install the latest .NET roll-up available<br>
+3) Run gpedit.msc and navigate to Local Computer Policy &gt; Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Application Control Policies &gt; AppLocker &gt; Executable Rules<br>
+4) Right Click and 'Create New Rule' then on the Permissions page for User or group: choose 'Select...'<br>
+<br>
+Expected Result:<br>
+An interface for selecting a different user should open<br>
+<br>
+Actual Result:<br>
+SrpUxSnapIn.dll MMC error FX:{8A1A4AD2-7F9F-492C-9E1D-F725E3CBF2F0}<br>
+<br>
+Workaround:<br>
+Set OnlyUseLatestCLR to 0 and/or Uninstall .NET 4.7 and re-install 4.6.2 followed by updating it online.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=24887&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 00:01:05 GMT -->
+</html>

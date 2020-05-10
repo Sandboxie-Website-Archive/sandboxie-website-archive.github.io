@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/22399" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2016-01-19T14:15:00-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/22399</id>
+
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-01-19T14:15:00-04:00</updated>
+
+		<published>2016-01-19T14:15:00-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22399&amp;p=117649#p117649</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22399&amp;p=117649#p117649"/>
+		<title type="html"><![CDATA[Context menu -&gt; Run Unsandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22399&amp;p=117649#p117649"><![CDATA[
+Thanks to @BUCKAROO (ZIP &amp; OP is here <a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=21785#p114094" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 85#p114094</a><br><div class="inline-attachment"></div><div class="codebox"><p>CODE: </p><pre><code>REGEDIT4[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\sansbox]@="Run &amp;Unsandboxed""Icon"="\"C:\\Program Files\\Sandboxie\\Start.exe\",-104"[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\sansbox\command]@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /disable_force \"%1\" %*"</code></pre></div><div class="codebox"><p>CODE: </p><pre><code>REGEDIT4[-HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\sansbox]</code></pre></div>Bonus fun with File Association verbs<div class="codebox"><p>CODE: </p><pre><code>; *verb usage; AutoHotkey:IsSandboxed:=!!DllCall("GetModuleHandle","Str","SbieDll")if(A_IsCompiled)Target="%A_ScriptName%"elseTarget="%A_AhkPath%" "%A_ScriptName%"if(!IsSandboxed) ; Sandbox ourself{Run,*sandbox %Target%,%A_ScriptDir%;ExitApp}if(A_IsCompiled){MsgBox,fizzle...ExitApp}else{if(IsSandboxed)Target:=TargetAhk("MsgBox`,There's no such escape!")elseTarget:=TargetAhk("MsgBox`,Defeats* Force Process.")Run,*sansbox %Target%}TargetAhk(string){string="%ComSpec%" /C"ECHO %string%|"%A_AhkPath%" *"return string}</code></pre></div><dl class="file"><dt class="attach-image"><img src="./../../.https://forums.sandboxie.com/phpBB3/download/file.php?id=611" class="postimage" alt="sansbox (1).png" onclick="viewableArea(this);" /></dt></dl><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Tue Jan 19, 2016 1:15 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

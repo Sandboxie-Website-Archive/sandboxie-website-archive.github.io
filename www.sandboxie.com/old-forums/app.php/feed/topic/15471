@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15471" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-05-25T10:27:51-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15471</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-05-25T10:27:51-04:00</updated>
+
+		<published>2013-05-25T10:27:51-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=90081#p90081</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=90081#p90081"/>
+		<title type="html"><![CDATA[[.09] Adding software compatibility: how???]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=90081#p90081"><![CDATA[
+Thank you Guest10, I included the changes you propose in version 4.01.09.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sat May 25, 2013 10:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-05-15T12:49:19-04:00</updated>
+
+		<published>2013-05-15T12:49:19-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=89848#p89848</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=89848#p89848"/>
+		<title type="html"><![CDATA[[.09] Adding software compatibility: how???]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=89848#p89848"><![CDATA[
+In the meantime, I checked the program for myself.<br>It appears that they have changed the names of some of the program's resources.<br><br>I tested the program on XP (with Sandboxie 4.01.08 ) and had to <span style="color: red"><strong>change</strong></span> some of the resource names that are used in Sandboxie's template:<br>OpenIpcPath=*\BaseNamedObjects*\OpenText_ZWFilter_GlobaData<strong><span style="color: red">32</span></strong><br>OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_GlobaData<strong><span style="color: red">32</span></strong><br>OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_Mutex<strong><span style="color: red">32</span></strong><br><br>It seems likely that the <strong><span style="color: red">32</span></strong> that I added to the above settings are the result of using a 32-bit OS, so I would recommend using a wild card character there, instead:<br><br>OpenIpcPath=*\BaseNamedObjects*\OpenText_ZWFilter_GlobaData<span style="color: red"><strong>*</strong></span><br>OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_GlobaData<span style="color: red"><strong>*</strong></span><br>OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_Mutex<span style="color: red"><strong>*</strong></span><br>There's no guarantee that a 64-bit OS would have <strong><span style="color: red">64</span></strong> at the end of those settings, but using a wild card character there should be OK.<br><br>You have a couple of choices.<br>1) You can revise the Lingoes template settings in templates.ini to add the wild card (*) character to the end of those 3 lines. Be advised though, that any changes in the templates.ini file will be overwritten if you install or re-install any Sandboxie version - at least, until these changes are made in a future Sandboxie release.<br><br>2) You could copy/paste those 3 lines into the settings for the sandbox where you use Lingoes:<br><br>[(sandbox_name)]<br>...<br>... (&lt;- your existing settings, for the sandbox)<br>...<br>OpenIpcPath=*\BaseNamedObjects*\OpenText_ZWFilter_GlobaData*<br>OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_GlobaData*<br>OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_Mutex*<br><br>If the template in templates.ini gets updated, you can come back here and remove those 3 settings.<br><br>3) You could use the Sandbox Settings GUI to enter those settings for each sandbox:<br>Sandbox Settings &gt; Resource Access &gt; IPC Access &gt; Direct Access<br>Click the "<strong>Add</strong>" button and paste these settings into the window, one line at a time:<br><strong>*\BaseNamedObjects*\OpenText_ZWFilter_GlobaData*</strong><br><strong>*\BaseNamedObjects*\OpenText_GrabText_GlobaData*</strong><br><strong>*\BaseNamedObjects*\OpenText_GrabText_Mutex*</strong><br>OK your way out.<br><br>Please report back with your results if you try this.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Wed May 15, 2013 12:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-05-15T12:25:52-04:00</updated>
+
+		<published>2013-05-15T12:25:52-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=89846#p89846</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=89846#p89846"/>
+		<title type="html"><![CDATA[[.09] Adding software compatibility: how???]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=89846#p89846"><![CDATA[
+You can use Resource Access Monitor to log the system objects/resources that are accessed.<br><br>Instructions here:<br><a href="http://www.sandboxie.com/index.php?ResourceAccessMonitor" class="postlink">http://www.sandboxie.com/index.php?Reso ... essMonitor</a><br><br>Post your log data here in your reply and we'll see how we can ammend the compatibility settings for Lingoes.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed May 15, 2013 12:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Scoox]]></name></author>
+		<updated>2013-05-15T03:12:09-04:00</updated>
+
+		<published>2013-05-15T03:12:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=89826#p89826</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=89826#p89826"/>
+		<title type="html"><![CDATA[[.09] Adding software compatibility: how???]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=89826#p89826"><![CDATA[
+The file templates.ini contains the following code:<br><div class="codebox"><p>CODE: </p><pre><code>[Template_Lingoes]Tmpl.Title=Lingoes TranslatorTmpl.Class=DesktopTmpl.Url=http://www.lingoes.net/Tmpl.Scan=iOpenIpcPath=*\BaseNamedObjects*\OpenText_ZWFilter_GlobaDataOpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_GlobaDataOpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_MutexOpenWinClass=$:lingoes.exe</code></pre></div>Where did all that come from and how do I know what I need to type?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=5367">Scoox</a> — Wed May 15, 2013 3:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Scoox]]></name></author>
+		<updated>2013-05-15T02:27:31-04:00</updated>
+
+		<published>2013-05-15T02:27:31-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=89824#p89824</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=89824#p89824"/>
+		<title type="html"><![CDATA[[.09] Adding software compatibility: how???]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15471&amp;p=89824#p89824"><![CDATA[
+Sandboxie did a great job at detecting certain apps that needed software compatibility to work normally.<br><br>I use Lingoes, a dictionary that pops up a small window at the mouse pointer when placed over a word. Lingoes v2.8.1 worked fine but it was recently updated to v2.9.1 which Sandboxie fails to detect. By the way, Lingoes runs OUTSIDE Sandboxie. So I would like to know what I need to change to get this to work again. I realise that each app will be different so is there any documentation or in-depth tutorial explaining how one would go about adding software compatibility manually? And if not, can someone kindly give me some pointers here?<br><br>Any help will be greatly appreciated, thanks <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=5367">Scoox</a> — Wed May 15, 2013 2:27 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

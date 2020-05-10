@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=478&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:52:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; My Documents Protection</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>My Documents Protection</h2>
+		<p><a href="viewtopic38ae38ae.html?f=4&amp;t=478">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=478</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>My Documents Protection</h3>
+				<div class="date">Posted: <strong>Sat Aug 19, 2006 10:15 am</strong></div>
+				<div class="author">by <strong>TerryWood</strong></div>
+				<div class="content">As I understand it If you are running Sandboxed there is still nothing to stop access to Personal files. If this is correct why not include a protection feature to stop remote access to My Documents.<br>
+<br>
+Currently I am using True Crypt to stop access, but its time consuming mounting and demounting and apart from backing up.<br>
+<br>
+Just a thought?<br>
+<br>
+Terry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 21, 2006 10:45 am</strong></div>
+				<div class="author">by <strong>mizzmona</strong></div>
+				<div class="content"><img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<a href="http://sandboxie.com/phpbb/viewtopic.php?t=299" class="postlink">http://sandboxie.com/phpbb/viewtopic.php?t=299</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>My Documents Protection</h3>
+				<div class="date">Posted: <strong>Mon Aug 21, 2006 4:03 pm</strong></div>
+				<div class="author">by <strong>TerryWood</strong></div>
+				<div class="content">Many thanks for the post referral. I just want to be absolutely sure I am on the same wavelength. <br>
+<br>
+If I go on the web, say to "Shields Up" site or any other security test site that shows vulnerability of files. I want to be sure that My Documents is not hackable. So:<br>
+<br>
+<br>
+If I use: ClosedFilePath=C:\Documents &amp; Settings\User Name\My Documents<br>
+ I will be protected from ANY PRYING EYES to the contents of My Documents? In addition if I have three browsers then the additional code is<br>
+<br>
+ClosedFilePath=!iexplore.exe,%Favorites%<br>
+ClosedFilePath=Opera.exe,%Favorites%<br>
+ClosedFilePath=Firefox.exe,%Favorites%<br>
+<br>
+If this is correct where do I insert this code in the Sandboxie .ini file<br>
+<br>
+Thanks for your help<br>
+<br>
+To everyone<br>
+<br>
+Terry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 22, 2006 3:37 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>ClosedFilePath=!iexplore.exe,%Favorites% <br>
+ClosedFilePath=Opera.exe,%Favorites% <br>
+ClosedFilePath=Firefox.exe,%Favorites% <br>
+<br>
+If this is correct where do I insert this code in the Sandboxie .ini file </div></blockquote>
+
+It's not correct.  The example copied from the other post deals with <em>Favorites</em> and you want protection on <em>My Documents</em>.  Different folders -- so you need different configuration.<br>
+<br>
+But effecting this protection means that PRYING EYES <em>but also you</em> cannot open documents from or save them into the <em>My Documents</em> folder or anywhere below it, when running Internet Explorer sandboxed.<br>
+<br>
+Are you sure that's what you want?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 10, 2006 7:05 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite><blockquote class="uncited"><div>ClosedFilePath=!iexplore.exe,%Favorites% <br>
+ClosedFilePath=Opera.exe,%Favorites% <br>
+ClosedFilePath=Firefox.exe,%Favorites% <br>
+<br>
+If this is correct where do I insert this code in the Sandboxie .ini file </div></blockquote>
+
+It's not correct.  The example copied from the other post deals with <em>Favorites</em> and you want protection on <em>My Documents</em>.  Different folders -- so you need different configuration.<br>
+
+</div></blockquote>
+
+He wrote<br>
+<br>
+ "If I use: ClosedFilePath=C:\Documents &amp; Settings\User Name\My Documents <br>
+I will be protected from ANY PRYING EYES to the contents of My Documents?"</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 11, 2006 4:22 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Right, sorry, I missed that.  In this case the answer is yes.  Just one tiny note though:  It's probably better to say ClosedFilePath=%Personal%</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>My Documents Protection</h3>
+				<div class="date">Posted: <strong>Fri Oct 06, 2006 7:07 pm</strong></div>
+				<div class="author">by <strong>TerryWood</strong></div>
+				<div class="content">I have tried out the ClosedFilePath=%Personal% method of protecting My Documents as suggested by tzuk (for which I thank him). In Opera, IE6 and Firefox, My Documents is inaccessible IF ATTEMPTS TO OPEN MY DOCUMENTS ARE MADE THROUGH THE BROWSER INTERFACE ie File Open.<br>
+<br>
+ HOWEVER, IT IS POSSIBLE TO OPEN MY DOCUMENTS and all files through Windows Explorer, even when the browser is open and sandboxed with the ClosedFilePath command operational.<br>
+<br>
+I now have number of questions:<br>
+<br>
+1) Is it intended that one can open My Documents via Windows Explorer (When the ClosedFilePath command is operational)?<br>
+<br>
+2) Given 1) above, does being able to open My Documents via Windows Explorer expose a security risk ie "Prying Eyes" when the browser is open and Sandboxed with the ClosedFilePath command operational. Or does the OpenFilePath command block any attempt look into My Documents when on line, Even if My Documents is opened via Windows Explorer?<br>
+<br>
+3) Assuming the answers to the above represent a secure My Documents is it possible that you can incorporate a simple switch for this feature in a future version?<br>
+<br>
+<br>
+Thanks <br>
+<br>
+<br>
+Terry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 06, 2006 8:17 pm</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content">Terry,<br>
+<br>
+As I understand it, the ClosedFilePath= setting only blocks programs that are running in the sandbox from accessing the specified documents directory.  So, using that setting in Sandboxie's config file should (nothing is every certain) protect that documents directory from unauthorized prying eyes that might access your computer via the browsers or email programs you are running in sandboxed mode, but that will not protect you from other means of getting access to your documents directory.<br>
+<br>
+There is a new free Microsoft program that will allow you to password protect any directory under Windows XP.  That would protect your documents directory unless a keylogger or some other device were used to get your password.  (I didn't download it or save the link, because I don't normally associate Microsoft with security or privacy!)<br>
+<br>
+I can't remember where I saw that program, but if you're interested I'll see if I can find the link again.<br>
+<br>
+SBIE (Happy) User</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 06, 2006 8:21 pm</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content">Terry,<br>
+<br>
+Oops!  I found the link, and it is not a Microsoft product after all.<br>
+<br>
+You can view the free directory locking program at <a href="http://www.fspro.net/folder-lock-box/" class="postlink">http://www.fspro.net/folder-lock-box/</a> .<br>
+<br>
+I'm not sure this would be any less trouble than TrueCrypt, and that is heavily tested and well-respected security program.  I'd probably stick with TrueCrypt myself.<br>
+<br>
+Anyway, let us know what you do and if you find a solution to this.<br>
+<br>
+SBIE (Happy) User</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 06, 2006 8:29 pm</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content">Terry,<br>
+<br>
+Oops!  I was wrong again!  There [b}IS[/b] a new free Microsoft Program ("Microsoft Private Folder") that password-protects folders.<br>
+<br>
+You can see the reviews and links at <a href="http://fileforum.betanews.com/detail/Microsoft_Private_Folder/1152200243/1" class="postlink">http://fileforum.betanews.com/detail/Mi ... 52200243/1</a> .<br>
+<br>
+Some of the reviews are not very encouraging.<br>
+<br>
+SBIE (Happy) User'</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Protecting My Documents</h3>
+				<div class="date">Posted: <strong>Fri Oct 06, 2006 10:31 pm</strong></div>
+				<div class="author">by <strong>TerryWood</strong></div>
+				<div class="content">SBIE User<br>
+<br>
+I knew you would respond thanks.<br>
+<br>
+I was surprised at your reply because tzuk gave the impression that the CloseFilePath command would protect you from unauthorised prying eyes.<br>
+<br>
+Nonetheless, I have installed the Folder Lock and its quite straightforward. Its simpler than Truecrypt to operate although I am sure not as belt and braces.<br>
+<br>
+I had some problems with TrueCrypt, corruption ocurred along the line and some applications wanted to use the virtual drive letter TrueCrypt was set up for. Thats the reason I removed it. t Folder Lock ogether with ClosedFilePath command  should keep prying eyes away.<br>
+<br>
+Anyway many many thanks for you help.<br>
+<br>
+Terry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>My Documents Protection</h3>
+				<div class="date">Posted: <strong>Fri Oct 06, 2006 10:44 pm</strong></div>
+				<div class="author">by <strong>TerryWood</strong></div>
+				<div class="content">To SBIE Happy User<br>
+<br>
+ps I forgot to say you can't lock My Documents with Folder Lock it would not accept it. It has to be a sub folder it appears.<br>
+<br>
+I come back to what I said earlier. What about a Sandboxie built in protected folder security feature for a future wish list. The Idea surely is not incompatible with the concept of Sandboxie. If I recall GesWall has a protected folder.?<br>
+<br>
+Regards<br>
+<br>
+Terry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 07, 2006 6:44 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>What about a Sandboxie built in protected folder security feature for a future wish list. The Idea surely is not incompatible with the concept of Sandboxie.</div></blockquote>
+
+If you're asking to lock a folder so that sandboxed programs can't get to it:  I think ClosedFilePath should do the trick.<br>
+<br>
+If you're asking to lock a folder from any program, sandboxed or not:  That IS incompatible with Sandboxie.  One of the principles of Sandboxie is that it shouldn't interfere with non-sandboxed programs.<br>
+<br>
+But if you make it a point to run all untrusted programs in a sandboxed, then ClosedFilePath should be enough protection, no?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 07, 2006 7:20 am</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite><blockquote class="uncited"><div>One of the principles of Sandboxie is that it shouldn't interfere with non-sandboxed programs.<br>
+<br>
+But if you make it a point to run all untrusted programs in a sandboxed, then ClosedFilePath should be enough protection, no?</div></blockquote></div></blockquote>
+
+Tzuk and Terry,<br>
+<br>
+I think the basic concept of controlling selected (perhaps highly dangerous or vulnerable) programs by choice by limiting their access to the system via SandboxIE but allowing non-sandboxed programs to operate normally.   For general threats, solutions such as password-protected folders or TrueCrypt-type encrypted volumes or individually encrypted files make sense to me.<br>
+<br>
+In fact, I don't think Sandboxie is capable of sandboxing Windows Explorer, because it is an integral part of the operating system -- so it would not be possible to truly lock down all disk access with Sandboxie.<br>
+<br>
+Also, I would note that locking folders with passwords or encrypting volumes only protect those folders while they are locked or encrypted.  For example, after you open a TrueCrypt volume its contents are just as available as those of any other regular directory.  Those contents can be protected somewhat by limiting access from programs running in a sandbox, but not from non-sandboxed programs.<br>
+<br>
+My general position is that I don't think SandboxIE can or should be an all-encompassing solution.  If Tzuk tries to make it do everything, it will become bloated and probably buggy.  I'd rather use an ala carte approach to privacy and security, in which SandboxIE fills the needs it currently serves -- that is to limit and cordon off access to a system from programs running in a sandbox.  For other privacy and security needs, I use other solutions (e.g., firewall, anti-virus, anti-spyware (with keylogger protection), script blocking, etc.  For ultimate security I ghost my machines every night, so I can always get back to the previous day's system if some security problem does occur.  Of course, that does not protect my privacy, but I keep all sensitive data encrypted before ghosting my system.<br>
+<br>
+SBIE (Happy) User</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Create New Sandboxie Crypted</h3>
+				<div class="date">Posted: <strong>Sun Nov 24, 2013 6:52 am</strong></div>
+				<div class="author">by <strong>nezic</strong></div>
+				<div class="content">I was going to suggest this as a future request, but I do not have the rights.<br>
+e.g. Each file will be stored encrypted and unusable if is not opened by Sandboxie.<br>
+       If the file live the box (crash box) will be unrecognizable to Operating Systems, because it will be encrypted.<br>
+       If the file begins to spread through LAN connection, copy it self to other devices, it will be unrecognizable to receiver due encryption.<br>
+       Even someone spoofing your traffic, he will got encrypted contents.<br>
+cons: slow traffic, more resources...<br>
+ <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=478&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:52:50 GMT -->
+</html>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/forum/57" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2016-06-20T09:31:52-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/forum/57</id>
+
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-06-20T09:31:52-04:00</updated>
+
+		<published>2016-06-20T09:31:52-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121692#p121692</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121692#p121692"/>
+		<title type="html"><![CDATA[Beta Version 5.11 • Re: 5.11 Beta Available (latest version 5.12 RC)]]></title>
+
+					<category term="Beta Version 5.11" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=57" label="Beta Version 5.11"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121692#p121692"><![CDATA[
+Thanks for the feedback. It's been a while since we tested LINE. I know in the past it worked, then didn't. So It's good to know.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Mon Jun 20, 2016 9:31 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nomnom]]></name></author>
+		<updated>2016-06-19T22:19:24-04:00</updated>
+
+		<published>2016-06-19T22:19:24-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121681#p121681</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121681#p121681"/>
+		<title type="html"><![CDATA[Beta Version 5.11 • Re: 5.11 Beta Available (latest version 5.12 RC)]]></title>
+
+					<category term="Beta Version 5.11" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=57" label="Beta Version 5.11"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121681#p121681"><![CDATA[
+<blockquote><div><cite>b2297054 wrote:</cite><blockquote><div><cite>Craig@Invincea wrote:</cite><blockquote><div><cite>b2297054 wrote:</cite>Hi,<br><br>I can not use LINE messenger (<a href="http://cdn.line-apps.com/client/win/new/LineInst.exe" class="postlink">http://cdn.line-apps.com/client/win/new/LineInst.exe</a>).<br>The latest version (4.5.0.873) can not login, the program is just shut down.</div></blockquote>How are you installing this Program? In the sandbox? If so, install the program on your host and run as sandboxed. <br><br>This program has not been tested with SBIE.<br><br>Do you have any antivirus or antimalware installed?</div></blockquote>I installed it in the sandboxie, I can use LINE messenger to login before 4.5.0.873.<br>Unfortunately they force users to use latest version.<br>I use Avast 2016.<br>I don't want to install in host. Could you help to debug?</div></blockquote><blockquote><div><cite>Craig@Invincea wrote:</cite>Unfortunately, that program Has shown it not to be able to be installed in the sandbox. You can try v5.12, but beta 5.11.11 is the same.<br><br>Line is a trust worthy program from what I can tell. Your best to install it on your host, and run as sandboxed. Most types of theses clients require they be installed and have access to resources that SBIE most likely blocks.</div></blockquote>Actually I'm running LINE in a sandbox without problem and just recently updated into 4.7.0.1027 about two or three days ago if I remember it correctly. And I just updated my sandboxie installation from 5.11.7 (beta) into 5.12 stable in less than 30 minutes ago and it's still works just fine which means that I've been using LINE 4.7 that is installed in a sandbox since I'm on 5.11.7.<br><br>Also just to make sure, I redownloaded the line installer again and installed it again into a sandbox just now, and it still works fine here. I'm on Win7 x64 in case you're running on other windows version.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=24503">nomnom</a> — Sun Jun 19, 2016 10:19 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-06-18T17:02:38-04:00</updated>
+
+		<published>2016-06-18T17:02:38-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121650#p121650</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121650#p121650"/>
+		<title type="html"><![CDATA[Beta Version 5.11 • Re: 5.11 Beta Available (latest version 5.12 RC)]]></title>
+
+					<category term="Beta Version 5.11" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=57" label="Beta Version 5.11"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121650#p121650"><![CDATA[
+Unfortunately, that program Has shown it not to be able to be installed in the sandbox. You can try v5.12, but beta 5.11.11 is the same.<br><br>Line is a trust worthy program from what I can tell. Your best to install it on your host, and run as sandboxed. Most types of theses clients require they be installed and have access to resources that SBIE most likely blocks.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Sat Jun 18, 2016 5:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[b2297054]]></name></author>
+		<updated>2016-06-18T01:47:55-04:00</updated>
+
+		<published>2016-06-18T01:47:55-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121636#p121636</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121636#p121636"/>
+		<title type="html"><![CDATA[Beta Version 5.11 • Re: 5.11 Beta Available (latest version 5.11.1)]]></title>
+
+					<category term="Beta Version 5.11" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=57" label="Beta Version 5.11"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121636#p121636"><![CDATA[
+<blockquote><div><cite>Craig@Invincea wrote:</cite><blockquote><div><cite>b2297054 wrote:</cite>Hi,<br><br>I can not use LINE messenger (<a href="http://cdn.line-apps.com/client/win/new/LineInst.exe" class="postlink">http://cdn.line-apps.com/client/win/new/LineInst.exe</a>).<br>The latest version (4.5.0.873) can not login, the program is just shut down.</div></blockquote>How are you installing this Program? In the sandbox? If so, install the program on your host and run as sandboxed. <br><br>This program has not been tested with SBIE.<br><br>Do you have any antivirus or antimalware installed?</div></blockquote>I installed it in the sandboxie, I can use LINE messenger to login before 4.5.0.873.<br>Unfortunately they force users to use latest version.<br>I use Avast 2016.<br>I don't want to install in host. Could you help to debug?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=30637">b2297054</a> — Sat Jun 18, 2016 1:47 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[rpljhun]]></name></author>
+		<updated>2016-06-17T19:39:57-04:00</updated>
+
+		<published>2016-06-17T19:39:57-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121634#p121634</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121634#p121634"/>
+		<title type="html"><![CDATA[Beta Version 5.11 • Re: 5.11 Beta Available (latest version 5.12 RC)]]></title>
+
+					<category term="Beta Version 5.11" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=57" label="Beta Version 5.11"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121634#p121634"><![CDATA[
+<blockquote><div><cite>DS78 wrote:</cite>Everything seems fine with version .12 so far. Only slightly odd thing I've noticed is the "Automatically delete contents" setting now takes longer to invoke when closing the browser for example. Previously it would clear in about 2-3 seconds of closing. After version .12 installed I've seen it take as long as 30+ seconds. Not always, but it did not do this with the previous versions. Nothing serious but I thought I would mention.</div></blockquote>I think it's a coincidence probably some background applications  or scheduled maintenance that contributed to disk activity. Sandboxie uses "rmdir" which is a MS-DOS command to delete these contents and will invoke when there is no running program in the sandbox. So, basically sandboxie is not causing that delay.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=13192">rpljhun</a> — Fri Jun 17, 2016 7:39 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Mr.X]]></name></author>
+		<updated>2016-06-17T15:01:41-04:00</updated>
+
+		<published>2016-06-17T15:01:41-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121631#p121631</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121631#p121631"/>
+		<title type="html"><![CDATA[Beta Version 5.11 • Re: 5.11 Beta Available (latest version 5.12 RC)]]></title>
+
+					<category term="Beta Version 5.11" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=57" label="Beta Version 5.11"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121631#p121631"><![CDATA[
+<blockquote><div><cite>DS78 wrote:</cite>Everything seems fine with version .12 so far. Only slightly odd thing I've noticed is the "Automatically delete contents" setting now takes longer to invoke when closing the browser for example. Previously it would clear in about 2-3 seconds of closing. After version .12 installed I've seen it take as long as 30+ seconds. Not always, but it did not do this with the previous versions. Nothing serious but I thought I would mention.</div></blockquote>Which browser and its version, may I ask?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16759">Mr.X</a> — Fri Jun 17, 2016 3:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DS78]]></name></author>
+		<updated>2016-06-17T14:58:16-04:00</updated>
+
+		<published>2016-06-17T14:58:16-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121630#p121630</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121630#p121630"/>
+		<title type="html"><![CDATA[Beta Version 5.11 • Re: 5.11 Beta Available (latest version 5.12 RC)]]></title>
+
+					<category term="Beta Version 5.11" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=57" label="Beta Version 5.11"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121630#p121630"><![CDATA[
+Everything seems fine with version .12 so far. Only slightly odd thing I've noticed is the "Automatically delete contents" setting now takes longer to invoke when closing the browser for example. Previously it would clear in about 2-3 seconds of closing. After version .12 installed I've seen it take as long as 30+ seconds. Not always, but it did not do this with the previous versions. Nothing serious but I thought I would mention.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=24258">DS78</a> — Fri Jun 17, 2016 2:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2016-06-17T13:59:29-04:00</updated>
+
+		<published>2016-06-17T13:59:29-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121629#p121629</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121629#p121629"/>
+		<title type="html"><![CDATA[Beta Version 5.11 • Re: 5.11 Beta Available (latest version 5.12 RC)]]></title>
+
+					<category term="Beta Version 5.11" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=57" label="Beta Version 5.11"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121629#p121629"><![CDATA[
+<blockquote><div><cite>beekn wrote:</cite>I receive an error <a href="http://www.sandboxie.com/index.php?SBIE1408" class="postlink">SBIE1408</a> after installation. In 5.10 did not have this error.<br><br>5.12 final, win10 x32 (420).</div></blockquote>This usually means SbieSvc is not running. You can look in the Windows system event log for a possible error msg, but if it works fine after a reboot, then don't worry about it.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Fri Jun 17, 2016 1:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-06-17T12:47:34-04:00</updated>
+
+		<published>2016-06-17T12:47:34-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121626#p121626</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121626#p121626"/>
+		<title type="html"><![CDATA[Beta Version 5.11 • Re: 5.11 Beta Available (latest version 5.12 RC)]]></title>
+
+					<category term="Beta Version 5.11" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=57" label="Beta Version 5.11"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121626#p121626"><![CDATA[
+<blockquote class="uncited"><div>I'm happy to report all of the issues are gone in the 5.12 final.</div></blockquote>Very glad to hear that!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Fri Jun 17, 2016 12:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[famadeus]]></name></author>
+		<updated>2016-06-17T12:32:28-04:00</updated>
+
+		<published>2016-06-17T12:32:28-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121624#p121624</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121624#p121624"/>
+		<title type="html"><![CDATA[Beta Version 5.11 • Re: 5.11 Beta Available (latest version 5.11.10)]]></title>
+
+					<category term="Beta Version 5.11" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=57" label="Beta Version 5.11"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121624#p121624"><![CDATA[
+<blockquote><div><cite>Craig@Invincea wrote:</cite><blockquote class="uncited"><div>The latest version of Direct X available on Windows 7 - Direct X 11.1 (KB2670838)<br><br>Realtek HD Audio Manager, which comes bundled with audio drivers/codecs. Again the latest version 2.79.<br><br>Just fyi I did a quick test with 5.11.10 and also have the issues on that version.</div></blockquote>Direct X 11 is standard. as for that KB, it was addressed long ago..... but there are MS posts about this KB causing sound issues, But then again, it was released in early 2013. We're a long since past that w/ SBIE.<br>I currently have the standard Windows audio device.High Def Audio device [v6.1.7601.17514]<br>Twitch works fine in switching, in FF, Cyberfox, etc. <br>Same applies to Youtube in both.<br><br>Maybe totally uninstall SBIE, not not safe the config .ini file, reboot and reinstall? <br><br>Could it be Realtek? Unsure. But I'm willing to bet others in our 4 million user base have it installed as well. <br><br>Otherwise, no other ideas. I overwrite SBIE many times during the day in testing various browsers/audio players, and with the Standards Direct 11+ and above &amp; Standard Windows High Def Audio Driver, not problems here.</div></blockquote>I'm happy to report all of the issues are gone in the 5.12 final.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=30134">famadeus</a> — Fri Jun 17, 2016 12:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-06-17T12:07:44-04:00</updated>
+
+		<published>2016-06-17T12:07:44-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121622#p121622</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121622#p121622"/>
+		<title type="html"><![CDATA[Beta Version 5.11 • Re: 5.11 Beta Available (latest version 5.12 RC)]]></title>
+
+					<category term="Beta Version 5.11" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=57" label="Beta Version 5.11"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22660&amp;p=121622#p121622"><![CDATA[
+What are these scripts? I'm assuming SBIE works just fine until these are run..and why are they run?<br><br>You also have 3rd party security. It's unknown what impact those may have. They have not been tested recently. So, They would need to be considered as well.<br><br>Are you running a portable version of SBIE?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Fri Jun 17, 2016 12:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-06-17T08:45:22-04:00</updated>
+
+		<published>2016-06-17T08:45:22-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22936&amp;p=121610#p121610</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22936&amp;p=121610#p121610"/>
+		<title type="html"><![CDATA[Beta Version 5.11 • Re: Beta List &amp; Change Logs [5.01-Current]]]></title>
+
+					<category term="Beta Version 5.11" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=57" label="Beta Version 5.11"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22936&amp;p=121610#p121610"><![CDATA[
+<blockquote><div><cite>TeslaSoldier wrote:</cite>Please, add download links.</div></blockquote>It's on the main page, which leads you back to the forum. The beta links do change, so you have to link to the forum, then to the beta thread you want.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Fri Jun 17, 2016 8:45 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

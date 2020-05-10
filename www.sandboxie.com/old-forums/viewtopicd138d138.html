@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25472&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:59:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Unusual behavior when opening Word doc in Sandboxie [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Unusual behavior when opening Word doc in Sandboxie [SOLVED]</h2>
+		<p><a href="viewtopic9e2a9e2a.html?f=11&amp;t=25472">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25472</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Unusual behavior when opening Word doc in Sandboxie [SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Feb 21, 2018 3:20 pm</strong></div>
+				<div class="author">by <strong>SoraNezumi</strong></div>
+				<div class="content">Apologies up front if my question has been answered in any way previously. I was unable to find a similar case via google search.<br>
+<br>
+Situation:<br>
+I opened a potentially dangerous (from China) word Document I had to view for work in a sandbox (v5.22 default) using MS Word 2010.<br>
+As soon as I opened the document, the 2010 office installer fired itself up and started trying to install stuff or some sort of update. Anyways, problem was that it tried to run or install Endnote (which I removed ages ago), and the <span style="text-decoration: underline"><strong>Endnote application or installer was actually running OUTSIDE the sandbox</strong>, throwing up window after window after windows of errors</span>.<br>
+<br>
+I thought that any application ran in a sandbox stays inside the sandbox? How did the office installer launch a program outside the sandbox without my permission?<br>
+<br>
+If this behavior is not intended, I may be able to send a truncated copy of the word doc (with sensitive info removed) for the devs of Sandboxie to investigate (only if required).<br>
+<br>
+On a side note: I assumed opening a word doc in a (default settings) sandbox should work, but for some odd reason it keeps firing up the installer no matter what document I open.<br>
+Is there a workaround, or has my computer been compromised already?  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"><br>
+<br>
+Software information:<br>
+OS: Windows 7 x64 (OS updates applied until Nov 2017)<br>
+Sandboxie: x64 v5.22<br>
+Office: 2010 (some updates applied in late 2017)<br>
+Word doc:  .DOCX<br>
+Sandbox settings: DefaultBox (drop rights option not enabled)<br>
+<br>
+Thanks in advance for any replies to my questions and situation.<br>
+<br>
+<br>
+-----------MERGED POST -----------------<br>
+Following up on my post after more testing:<br>
+<br>
+Turns out I did not uninstall EndNote.<br>
+Maybe the EndNote prompts that were generated came from word itself instead of the EndNote application?<br>
+<br>
+I will delete my original post (if this forum supports it) if I can prove that EndNote was throwing messages using word instead of it's own exe.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Unusual behavior when opening Word doc in Sandboxie</h3>
+				<div class="date">Posted: <strong>Wed Feb 21, 2018 3:45 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello SoraNezumi,<br>
+<br>
+Does Word work fine outside Sandboxie?<br>
+Does this happen with only 1 document? <br>
+<br>
+Is the installer running outside Sandboxie? If you cannot tell if the yellow border or "#" symbol are present, you can check Task Manager to see what's the user that's triggering the action (Sandboxie uses ANONYMOUS LOGON for user).<br>
+Another option is to repro the issue, go to Sbie Control and click on File --&gt; "Is Window Sandboxed?"<br>
+Drag the Finder to the installer Window and let us know the result. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Unusual behavior when opening Word doc in Sandboxie</h3>
+				<div class="date">Posted: <strong>Wed Feb 21, 2018 3:57 pm</strong></div>
+				<div class="author">by <strong>SoraNezumi</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+Thank-you for the fast reply.<br>
+<br>
+The "Is Window Sandboxed?" tool identified that the EndNote prompts are running as part of Word.<br>
+Thank-you for pointing me to the tool, that solved my dilemma.<br>
+<br>
+In the end, EndNote was running as part of WinWord as opposed to running as a standalone executable.<br>
+<br>
+Turns out the cause of the office installer / prompts were caused by myself, having turned off the software compatibility fix "Windows and Office Licensing Services" last month while I was tinkering around with Sandboxie for fun ...<br>
+<br>
+Sorry for the trouble. Feel free to delete this thread <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25472&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:59:40 GMT -->
+</html>

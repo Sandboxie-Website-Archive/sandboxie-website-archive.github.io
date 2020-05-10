@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/16281" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-09-26T23:18:40-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/16281</id>
+
+		<entry>
+		<author><name><![CDATA[Blackbeat]]></name></author>
+		<updated>2013-09-26T23:18:40-04:00</updated>
+
+		<published>2013-09-26T23:18:40-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=94211#p94211</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=94211#p94211"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=94211#p94211"><![CDATA[
+I think he means that he had none-default settings and that was the cause, not default settings as you do (which is why you wouldn't have the error).<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=4128">Blackbeat</a> — Thu Sep 26, 2013 11:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-09-13T04:30:50-04:00</updated>
+
+		<published>2013-09-13T04:30:50-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93883#p93883</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93883#p93883"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93883#p93883"><![CDATA[
+I am not sure this can explain it.<br>I haven't made any changes to group policy settings on my test systems,<br>so I should have the default group policy.<br>Why don't I see this problem?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Sep 13, 2013 4:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Tomwa]]></name></author>
+		<updated>2013-09-12T11:27:42-04:00</updated>
+
+		<published>2013-09-12T11:27:42-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93873#p93873</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93873#p93873"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93873#p93873"><![CDATA[
+Just an FYI the problem occurs after restoring my group policy settings from a backup, evidently they were the cause. Simply resetting to defaults is enough to fix the problem and it is easily reproduced.  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=17182">Tomwa</a> — Thu Sep 12, 2013 11:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-09-08T04:01:40-04:00</updated>
+
+		<published>2013-09-08T04:01:40-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93748#p93748</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93748#p93748"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93748#p93748"><![CDATA[
+<blockquote><div><cite>lwc wrote:</cite>I doubt it'll hide it just for "one" sandbox. Besides, there's no easy way to "unhide" it later.<br>There's only a global and general "unhide" command.</div></blockquote>It should hide the message for the specific detail shown in the message, i.e. *GUIPROXY_00000000 - MSOSYNC.EXE [FF000005].<br><blockquote><div><cite>bo.elam wrote:</cite>Is easy to test to see that if you hide a message, its only hidden in the particular sandbox that you are using when you clicked Hide.</div></blockquote>Some messages have the sandbox name in the detail, so that effectively hides the message for a particular sandbox.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun Sep 08, 2013 4:01 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2013-09-06T14:13:56-04:00</updated>
+
+		<published>2013-09-06T14:13:56-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93735#p93735</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93735#p93735"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93735#p93735"><![CDATA[
+Is easy to test to see that if you hide a  message, its only hidden in the particular sandbox that you are using when you clicked Hide.<br><br>For testing, hide SBIE message 1308 in one sandbox and you ll see that you still get the message  in other sandboxes when a program that's not allowed to run attempts to Start and Run.<br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Fri Sep 06, 2013 2:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[lwc]]></name></author>
+		<updated>2013-09-06T13:59:18-04:00</updated>
+
+		<published>2013-09-06T13:59:18-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93734#p93734</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93734#p93734"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93734#p93734"><![CDATA[
+I doubt it'll hide it just for "one" sandbox. Besides, there's no easy way to "unhide" it later.<br>There's only a global and general "unhide" command.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=554">lwc</a> — Fri Sep 06, 2013 1:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2013-09-06T13:44:49-04:00</updated>
+
+		<published>2013-09-06T13:44:49-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93732#p93732</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93732#p93732"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93732#p93732"><![CDATA[
+<blockquote><div><cite>lwc wrote:</cite>The problem with hiding is that it'll hide it for legitimate occurrences as well.<br>If it's a third party software, how come it still (thankfully!) saves the files anyway?</div></blockquote>lwc, like you, I prefer not to hide messages but I think in this particular case is OK to do it since it is a extremely  rare message, you are still able to do what you want and you would only be hiding the message in "one" sandbox. I think, I would hide it if I was experiencing the same situation.<img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Fri Sep 06, 2013 1:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[lwc]]></name></author>
+		<updated>2013-09-06T04:15:17-04:00</updated>
+
+		<published>2013-09-06T04:15:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93722#p93722</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93722#p93722"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93722#p93722"><![CDATA[
+The problem with hiding is that it'll hide it for legitimate occurrences as well.<br>If it's a third party software, how come it still (thankfully!) saves the files anyway?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=554">lwc</a> — Fri Sep 06, 2013 4:15 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-09-05T14:30:18-04:00</updated>
+
+		<published>2013-09-05T14:30:18-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93699#p93699</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93699#p93699"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93699#p93699"><![CDATA[
+The 5 at the end of FF000005 means access denied, so I can only repeat what I said earlier:<br><blockquote><div><cite>tzuk wrote:</cite>If you're still getting those error codes 00000005 and FF000005 in the messages, <br>then you might have some third party software that is blocking the process in the <br>sandbox from connecting to the Sandboxie service.</div></blockquote>If you say everything seems to work then I suggest hiding this message.  You can click HIDE<br>the next time the error message appears.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Sep 05, 2013 2:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[lwc]]></name></author>
+		<updated>2013-09-04T12:55:14-04:00</updated>
+
+		<published>2013-09-04T12:55:14-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93676#p93676</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93676#p93676"/>
+		<title type="html"><![CDATA[SBIE2203 Failed to communicate with Microsoft Skydrive]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93676#p93676"><![CDATA[
+Whenever I edit (in Microsoft Office 2010) files from Skydrive and then try to save them I get:<br><blockquote class="uncited"><div>SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000000 - MSOSYNC.EXE [FF000005]</div></blockquote>The saving still works though! What a relief...<br><br>It happened to me with Sandboxie 4.05.08 (originally 4.0.4) in Windows XP SP3 32-bit.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=554">lwc</a> — Wed Sep 04, 2013 12:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-09-01T03:33:40-04:00</updated>
+
+		<published>2013-09-01T03:33:40-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93575#p93575</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93575#p93575"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93575#p93575"><![CDATA[
+I agree, if it works then that is the important thing.  Thanks for the update!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun Sep 01, 2013 3:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Tomwa]]></name></author>
+		<updated>2013-08-31T23:08:52-04:00</updated>
+
+		<published>2013-08-31T23:08:52-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93572#p93572</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93572#p93572"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93572#p93572"><![CDATA[
+I've been unable to repeat the issue with any product I had installed, I really don't know what the problem was but the important this it works.<br><br>I suppose when in doubt reinstall windows  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=17182">Tomwa</a> — Sat Aug 31, 2013 11:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-08-21T04:15:34-04:00</updated>
+
+		<published>2013-08-21T04:15:34-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93232#p93232</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93232#p93232"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93232#p93232"><![CDATA[
+Thanks  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">   Glad you understand.  Let me know what you find out.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Aug 21, 2013 4:15 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Tomwa]]></name></author>
+		<updated>2013-08-20T16:58:03-04:00</updated>
+
+		<published>2013-08-20T16:58:03-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93220#p93220</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93220#p93220"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93220#p93220"><![CDATA[
+<blockquote><div><cite>tzuk wrote:</cite>I'm afraid my only suggestion is to keep uninstalling stuff until you no longer see this program.  At this point let me know which recent program you uninstalled so I can install it and check if I get the same error.  I'm sorry that I don't have a better idea for you.</div></blockquote>I'll do that this weekend (I might even just re-do windows again and check as I install each program) don't sweat not being able to find the issue sometimes tech will do that <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=17182">Tomwa</a> — Tue Aug 20, 2013 4:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nanana1]]></name></author>
+		<updated>2013-08-20T06:36:47-04:00</updated>
+
+		<published>2013-08-20T06:36:47-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93203#p93203</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93203#p93203"/>
+		<title type="html"><![CDATA[Sandboxie SBIE2203/SBIE2205 Errors]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16281&amp;p=93203#p93203"><![CDATA[
+I have seen many SBIE2203 error messages on my notebook with version 4. I was using 4.05.05 and when I opened a pdf link in my browser, many SBIE2203 error messages would show up, I closed the box and they would pop out again.<br><br>Uninstalled and installed version 3.76 and on the same pdf link in the browser, no SBIE2203 error message. Perfect....and also surprised why version 4 did not perform as well.  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=8321">nanana1</a> — Tue Aug 20, 2013 6:36 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

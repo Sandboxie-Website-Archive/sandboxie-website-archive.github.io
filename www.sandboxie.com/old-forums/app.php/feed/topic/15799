@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15799" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-06-25T05:54:28-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15799</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-06-25T05:54:28-04:00</updated>
+
+		<published>2013-06-25T05:54:28-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15799&amp;p=91090#p91090</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15799&amp;p=91090#p91090"/>
+		<title type="html"><![CDATA[[.01] VS2012 - Canceling process MSBuild.exe]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15799&amp;p=91090#p91090"><![CDATA[
+In Version 4.03.01:<br><br>- Should fix the error with canceling MSBuild.exe.<br><br>- ImpersonateNamedPipe still issues a warning message, because the implementation is not correct but is good enough for MSBuild and probably most other cases.  You can  HIDE the message if it annoys you, but I want to keep it there so it can give a hint in case something else doesn't work because of it.<br><br>- Regarding mouse capture issues, perhaps an OpenWinClass=* setting will fix that.  See also:<br><br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=15837" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15837</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Tue Jun 25, 2013 5:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[lopezimg]]></name></author>
+		<updated>2013-06-24T10:18:31-04:00</updated>
+
+		<published>2013-06-24T10:18:31-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15799&amp;p=91044#p91044</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15799&amp;p=91044#p91044"/>
+		<title type="html"><![CDATA[[4.02][64 bit] Problem with MSBuild.exe in VisualStudio 2012]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15799&amp;p=91044#p91044"><![CDATA[
+Hello guys!<br><br>I have a problem with a new version of Sandboxie. Whenever I try to build any project ( C#, C++, VB ) in Visual studio 2012 it gives mi a following error:<br><div class="codebox"><p>CODE: </p><pre><code>Error1The build stopped unexpectedly because of an internal failure.Microsoft.Build.Exceptions.BuildAbortedException: Build was canceled. Failed to successfully launch or connect to a child MSBuild.exe process. Verify that the MSBuild.exe "C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe" launches successfully, and that it is loading the same microsoft.build.dll that the launching process loaded. If the location seems incorrect, try specifying the correct location in the BuildParameters object, or with the MSBUILD_EXE_PATH environment variable.   at Microsoft.Build.BackEnd.NodeProviderOutOfProc.CreateNode(Int32 nodeId, INodePacketFactory factory, NodeConfiguration configuration)   at Microsoft.Build.BackEnd.NodeManager.AttemptCreateNode(INodeProvider nodeProvider, NodeConfiguration nodeConfiguration)   at Microsoft.Build.BackEnd.NodeManager.CreateNode(NodeConfiguration configuration, NodeAffinity nodeAffinity)   at Microsoft.Build.Execution.BuildManager.PerformSchedulingActions(IEnumerable`1 responses)   at Microsoft.Build.Execution.BuildManager.HandleNewRequest(Int32 node, BuildRequestBlocker blocker)   at Microsoft.Build.Execution.BuildManager.IssueRequestToScheduler(BuildSubmission submission, Boolean allowMainThreadBuild, BuildRequestBlocker blocker)C:\Users\Lucas\Documents\Visual Studio 2012\Projects\WpfApplication1\WpfApplication1\WpfApplication1.csprojWpfApplication1</code></pre></div>I don't want to rollback to an older version of sandboxie just bacause I've noticed that the form designer in Visual studio 2012 is finally working.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16453">lopezimg</a> — Mon Jun 24, 2013 10:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-06-21T06:27:08-04:00</updated>
+
+		<published>2013-06-21T06:27:08-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15799&amp;p=90920#p90920</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15799&amp;p=90920#p90920"/>
+		<title type="html"><![CDATA[[.01] VS2012 - Canceling process MSBuild.exe]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15799&amp;p=90920#p90920"><![CDATA[
+I expirienced 2 Problems in Version 4.02, now i downgraded to 3.7.6 and it works again:<br><br>1. MSbuild (Visual Studio 2012's Platform toolset v110_xp) does not work any more inside a sandbox. It can't connect to a subprocess. Sandboxie displays an error message that ImpersonateNamedPipe is not implemented.<br>2. Sandboxed Programs can't catch the mouse cursor properly any more. This prevents some games from working.<br><br>I am using Windows 7 64bit<p>Statistics: Posted by Guest — Fri Jun 21, 2013 6:27 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

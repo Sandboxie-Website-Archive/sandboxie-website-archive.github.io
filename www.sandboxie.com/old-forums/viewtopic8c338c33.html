@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25012&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:26:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Webroot 9 + Windows 10 FCU - Unable to delete contents</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Webroot 9 + Windows 10 FCU - Unable to delete contents</h2>
+		<p><a href="viewtopicb628b628.html?f=11&amp;t=25012">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25012</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Webroot 9 + Windows 10 FCU - Unable to delete contents</h3>
+				<div class="date">Posted: <strong>Thu Oct 19, 2017 11:32 am</strong></div>
+				<div class="author">by <strong>northch</strong></div>
+				<div class="content">Upgraded to Windows 10 Pro Creators v 1709.  Sandboxie 5.20 cannot delete contents for Chrome.  This did not occur before the Windows 10 update to v 1709.  I read through these posts, and so updated Sandboxie to 5.21.4 Beta.  Same problem.  It is associated with Webroot SecureAnywhere 9.0.18.38.  When I shutdown Webroot, the problem goes away.  I tried adjusting pretty much all of the Webroot settings to see if I could find the conflict.  I could not....the problem manifested no matter what Webroot settings I tried (heuristics, Realtime Shield, Web Shield, Firewall,...).   I tried this with both my customized Sandboxie settings and a new sandbox with the default Sandboxie settings....same problem.<br>
+<br>
+* Windows 10 Pro 64-bit, v 1709, build 16299.19<br>
+* Sandboxie 5.21.4 64-bit Beta<br>
+* Chrome 62.0.3202.62, 64-bit<br>
+* Webroot SecureAnywhere 9.0.18.38<br>
+<br>
+Error Message: Delete sandbox DefaultBox.  Could not move the sandbox folder out of the way.  The object (file or folder) may be in use by another program.  Close any applications or windows that may prevent the access.  System Error Code [no number given].  Access is denied (5).<br>
+<br>
+Would appreciate any help to make Webroot and Sandboxie work together.  Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Thu Oct 19, 2017 11:37 pm</strong></div>
+				<div class="author">by <strong>secret365</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist0566.html?mode=viewprofile&amp;u=32186">northch</a> wrote: <a href="viewtopic4517-24517.html?p=130722#p130722" data-post-id="130722" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Oct 19, 2017 11:32 am</div></cite>
+Upgraded to Windows 10 Pro Creators v 1709.  Sandboxie 5.20 cannot delete contents for Chrome.  This did not occur before the Windows 10 update to v 1709.  I read through these posts, and so updated Sandboxie to 5.21.4 Beta.  Same problem.  It is associated with Webroot SecureAnywhere 9.0.18.38.  When I shutdown Webroot, the problem goes away.  I tried adjusting pretty much all of the Webroot settings to see if I could find the conflict.  I could not....the problem manifested no matter what Webroot settings I tried (heuristics, Realtime Shield, Web Shield, Firewall,...).   I tried this with both my customized Sandboxie settings and a new sandbox with the default Sandboxie settings....same problem.<br>
+<br>
+* Windows 10 Pro 64-bit, v 1709, build 16299.19<br>
+* Sandboxie 5.21.4 64-bit Beta<br>
+* Chrome 62.0.3202.62, 64-bit<br>
+* Webroot SecureAnywhere 9.0.18.38<br>
+<br>
+Error Message: Delete sandbox DefaultBox.  Could not move the sandbox folder out of the way.  The object (file or folder) may be in use by another program.  Close any applications or windows that may prevent the access.  System Error Code [no number given].  Access is denied (5).<br>
+<br>
+Would appreciate any help to make Webroot and Sandboxie work together.  Thank you.
+</div></blockquote>
+
+Having the same issue deleting firefox &amp; opera, beta 5.21.6 doesn't solve this issue. <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> <br>
+<br>
+Only way to delete is to shut down webroot secureanywhere completely.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Fri Oct 20, 2017 12:24 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistc6b7.html?mode=viewprofile&amp;u=3176">secret365</a> wrote: <a href="viewtopicec53ec53.html?p=130741#p130741" data-post-id="130741" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Oct 19, 2017 11:37 pm</div></cite>
+Having the same issue deleting firefox &amp; opera, beta 5.21.6 doesn't solve this issue. <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> <br>
+<br>
+Only way to delete is to shut down webroot secureanywhere completely.</div></blockquote>
+When you get a Sandboxie message that says, "Could not move the sandbox folder out of the way. The object (file or folder) may be in use by another program....", usually is your antivirus locking files inside the sandbox while doing its thing as you close the sandboxd program and delete the sandbox.<br>
+<br>
+Since you the know the problem goes away if you shut down Webroot, perhaps for now you can workaround the issue by excluding the Sandbox folder in C in Webroot Exclusions. You can also try adding to exclusions all of Sandboxies process that you find in the Sandboxie folder in Program files. Another thing you can do is at least temporarily uninstall Webroot and use Windows defender. I dont use an AV but I tested WD for about 36 hours after updating to FCU. I found no issue whatsoever with Sandboxie. I don't use Opera but Firefox is my browser. WD, Sandboxie and Firefox get along very well right now, as usual.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Webroot 9 + Windows 10 FCU - Unable to delete contents</h3>
+				<div class="date">Posted: <strong>Fri Oct 20, 2017 10:43 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Starting a new thread for a specific AV [Webroot] and Windows 10 FCU <br>
+<br>
+Users are reporting they are unable to delete Sandbox contents while Webroot is running.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Fri Oct 20, 2017 11:36 am</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistef77.html?mode=viewprofile&amp;u=2542">bo.elam</a> wrote: <a href="viewtopice4d1e4d1.html?p=130742#p130742" data-post-id="130742" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Oct 20, 2017 12:24 am</div></cite> Since you the know the problem goes away if you shut down Webroot, perhaps for now you can workaround the issue by excluding the Sandbox folder in C in Webroot Exclusions. You can also try adding to exclusions all of Sandboxies process that you find in the Sandboxie folder in Program files. Bo</div></blockquote>
+FWIW ~ WebrootSA does not offer exclude by folder (only file).   Sandboxie processes are allowed.   SbieCtrl was Monitor for a short time with 5.21.6.  Now, my Sandboxie active processes are all Allow.   Note: I'm still AU so, no help re FCU.
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file86618661.png?id=1278" class="postimage" alt="1597.png" onclick="viewableArea(this);" /></dt>
+						<dd>1597.png (106.07 KiB) Viewed 1489 times</dd>
+		</dl>
+		
+		
+		
+			</div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Webroot 9 + Windows 10 FCU - Unable to delete contents</h3>
+				<div class="date">Posted: <strong>Fri Oct 20, 2017 8:24 pm</strong></div>
+				<div class="author">by <strong>secret365</strong></div>
+				<div class="content">@bo.elam &amp; @Barb@Invincea<br>
+<br>
+I am a Webroot Beta Tester, I will report this issue in webroot's beta group.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Webroot 9 + Windows 10 FCU - Unable to delete contents</h3>
+				<div class="date">Posted: <strong>Fri Oct 20, 2017 8:35 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistc6b7.html?mode=viewprofile&amp;u=3176">secret365</a> wrote: <a href="viewtopic594f594f.html?p=130758#p130758" data-post-id="130758" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Oct 20, 2017 8:24 pm</div></cite>
+@bo.elam &amp; @Barb@Invincea<br>
+I am a Webroot Beta Tester, I will report this issue in webroot's beta group.
+</div></blockquote>
+FWIW ~ WebrootSA Beta and non-Beta are same version....at this time.  9.0.18.38. <br>
+WebrootSA offers three flavors.  Antivirus, Plus, Complete.  <br>
+Beta testers run Complete. <br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Webroot 9 + Windows 10 FCU - Unable to delete contents</h3>
+				<div class="date">Posted: <strong>Fri Oct 20, 2017 8:41 pm</strong></div>
+				<div class="author">by <strong>secret365</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist30ec.html?mode=viewprofile&amp;u=1604">bjm</a> wrote: <a href="viewtopic5749-25749.html?p=130759#p130759" data-post-id="130759" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Oct 20, 2017 8:35 pm</div></cite>
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistc6b7.html?mode=viewprofile&amp;u=3176">secret365</a> wrote: <a href="viewtopic594f594f.html?p=130758#p130758" data-post-id="130758" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Oct 20, 2017 8:24 pm</div></cite>
+@bo.elam &amp; @Barb@Invincea<br>
+I am a Webroot Beta Tester, I will report this issue in webroot's beta group.
+</div></blockquote>
+FWIW ~ WebrootSA Beta and non-Beta are same version....at this time.  9.0.18.38. <br>
+WebrootSA offers three flavors.  Antivirus, Plus, Complete.  <br>
+Beta testers run Complete. <br>
+Thanks
+</div></blockquote>
+
+Got it, never keep track the non-beta version.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Webroot 9 + Windows 10 FCU - Unable to delete contents</h3>
+				<div class="date">Posted: <strong>Tue Oct 24, 2017 3:08 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">All,<br>
+<br>
+I was finally able to get Weboroot SecureAnywhere and tested it on a Win 10 x64 FCU + Sbie Beta 5.21.7. <br>
+I encountered no issues deleting the contents of the Sandbox. I tested with different sandboxes creating files, using browsers (Chrome 62), etc...<br>
+<br>
+Can I get exact repro steps? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Webroot 9 + Windows 10 FCU - Unable to delete contents</h3>
+				<div class="date">Posted: <strong>Tue Oct 24, 2017 9:04 pm</strong></div>
+				<div class="author">by <strong>secret365</strong></div>
+				<div class="content">Barb@Invincea<br>
+<br>
+I am using Eraser to delete the contents here.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Webroot 9 + Windows 10 FCU - Unable to delete contents</h3>
+				<div class="date">Posted: <strong>Sat Oct 28, 2017 8:35 pm</strong></div>
+				<div class="author">by <strong>northch</strong></div>
+				<div class="content">Updated Sandboxie to 5.21.7.  Still cannot delete contents of sandbox while Webroot is running.  Same as before: If I "shut down protection" from Webroot using its menu, I can delete the sandbox contents.  I have tried removing Chrome from Webroots "Application Protection", and I have tried whitelisting all of Sandboxie's exe and dll files.  Those steps did not work.  I have also tried turning off various shields and reducing heuristics; nothing worked.<br>
+<br>
+Any guidance from Sandboxie or others who have a solution would be appreciated.  Thank you<br>
+<br>
+* Windows 10 Pro 64-bit, v 1709, build 16299.19<br>
+* Sandboxie 5.21.7 64-bit Beta (Changed)<br>
+* Chrome 62.0.3202.75, 64-bit (Changed)<br>
+* Webroot SecureAnywhere 9.0.18.38<br>
+<br>
+FWIW, Creators Exploit, Network, and Controlled Folders are enabled via GPO.  I believe Exploit Protection continues when a 3rd party antivirus is installed.<br>
+<br>
+Error Message: Delete sandbox DefaultBox. Could not move the sandbox folder out of the way. The object (file or folder) may be in use by another program. Close any applications or windows that may prevent the access. System Error Code [no number given]. Access is denied (5).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Webroot 9 + Windows 10 FCU - Unable to delete contents</h3>
+				<div class="date">Posted: <strong>Sat Oct 28, 2017 11:34 pm</strong></div>
+				<div class="author">by <strong>secret365</strong></div>
+				<div class="content">Northch<br>
+<br>
+Perhaps you want to write to Webroot support &amp; ask for their advice on this issue (<a href="https://detail.webrootanywhere.com/servicewelcome.asp" class="postlink">https://detail.webrootanywhere.com/servicewelcome.asp</a>)? <br>
+<br>
+It could be nothing wrong at Sandboxie's end?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Webroot 9 + Windows 10 FCU - Unable to delete contents</h3>
+				<div class="date">Posted: <strong>Sun Oct 29, 2017 7:42 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">@northch,<br>
+and or you can add your voice at the end of this thread "Problem deleting contents of sandboxie after Windows 10 Fall Creators Update" <a href="https://community.webroot.com/t5/PC-Beta/Problem-deleting-contents-of-sandboxie-after-Windows-10-Fall/gpm-p/304356/highlight/true#M3484" class="postlink">https://community.webroot.com/t5/PC-Bet ... true#M3484</a> over on Webroot Community. <br>
+Or, you can start a new Topic over on Webroot Community. <a href="https://community.webroot.com/t5/Product-Discussions/ct-p/Products" class="postlink">https://community.webroot.com/t5/Produc ... p/Products</a><br>
+<br>
+Regards</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Webroot 9 + Windows 10 FCU - Unable to delete contents</h3>
+				<div class="date">Posted: <strong>Thu Nov 02, 2017 2:03 am</strong></div>
+				<div class="author">by <strong>greenebola</strong></div>
+				<div class="content">Hello!<br>
+<br>
+The problem solved after updating  the latest Webroot  9.0.18.44 ßeta.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25012&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:26:15 GMT -->
+</html>

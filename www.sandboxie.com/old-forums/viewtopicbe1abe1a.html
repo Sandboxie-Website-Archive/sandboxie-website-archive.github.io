@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=23933&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:04:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Lingering SbieSvc? [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Lingering SbieSvc? [SOLVED]</h2>
+		<p><a href="viewtopicd26bd26b.html?f=17&amp;t=23933">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=23933</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Lingering SbieSvc? [SOLVED]</h3>
+				<div class="date">Posted: <strong>Mon Jan 23, 2017 8:01 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">So far I've had a hard time reproducing this in a VM, I <em>suspect</em> it may be due to the VMs being unable to run multiple programs in separate boxes at the same time.<br>
+<br>
+Starting from the beginning...on my system I find several SbieSvc.exe instances remain even when no longer used. These aren't the normal [original] service or the primary GuiProxy instances running as \SYSTEM. Instead they seem to be 'box' specific instances. I say that because the cmd line parameters seem to reflect this. They have the user sid they were run under along with the boxname in it and are running with the integrity level of that user. However they never exit. They <span style="text-decoration: underline">aren't</span> wasting cpu, the ram is low, &lt;100 handles- so not a real problem to speak of so I decided to ask under questions instead.<br>
+<br>
+The oldest instance I noticed when finally deciding to look at this was from about 30 hours before [minecraft if it matters] around when I was playing with my kid. I'm confused as to why they are hanging around though!<br>
+<br>
+At first I thought this could be another case of sandboxie not behaving 'normally' similar to the auto-delete function which fails when runas is used because SbieCtrl passes the user name <strong>it</strong> runs under in the path instead of the user the program was running as (which is what the sandbox path includes by default so it just passes the wrong path when the user variable is used in the sandbox path). That doesn't seem to be it though as even when runas is used some instances of these box specific SbieSvc.exe's will close down as expected.<br>
+<br>
+Terminating the lingering SbieSvc.exes manually and re-launching the app in the same box doesn't seem to cause any problems either.<br>
+<br>
+Looking a tad closer I did notice a different path and pid upon launch/exit.<br>
+Example:<br>
+Launched Minecraft.exe (forced) and the cmd line shows something like this:<br>
+"C:\Program Files\Sandboxie\SbieSvc.exe" Sandboxie_GuiProxy_Console,Sandboxie_ConsoleReadyEvent_05AE1542<br>
+In this case the PID of said service was 1716<br>
+<br>
+When the program [minecraft and in turn java] is closed and the box becomes inactive I then find an entry like this. The xxx's are my edits, not what was actually there:<br>
+"C:\Program Files\Sandboxie\SbieSvc.exe" Sandboxie_ComProxy_S-1-5-21-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxx-1000_MineCraft_1_0_:<br>
+This PID was 2376 so obviously not the same one that was used while it was 'active'<br>
+<br>
+So it seems to be created as part of a cleanup-phase (guessing) or is otherwise created some time after the initial launch still but never exits itself?<br>
+What's more is something like Skype, which is also ran using runas under the same user account [separate box] doesn't result in such a 'mystery' SbieSvc instance remaining afterward.<br>
+<br>
+Then I thought maybe it's related to what you have set to auto-delete? That doesn't track though because my primary browser box (palemoon) is set to delete and so is the chrome box. Yet of these two only the chrome box reflects the above behavior with a lingering SbieSvc instance.<br>
+<br>
+<strong>Does the format of: SbieSvc.exe Sandboxie_ComProxy_*SID*_*BoxName*_#_#_ ring any bells on what this might be a part of and in turn what I might look at so that they all end normally?</strong><br>
+Or perhaps this might be more familiar? Sandboxie_ComProxy_%s_%s_%d_%d_%s<br>
+<br>
+Windows 7 x64<br>
+No 3rd party AV installed atm (or previously with this image) Defender was removed via <a href="https://www.ntlite.com/" class="postlink">NTLite</a> among other components prior to install<br>
+No 3rd party FireWall installed atm (or previously with this image) just Windows Firewall<br>
+No HIPS installed atm (or previously with this image)<br>
+No Anti-Exploit installed atm (or previously with this image)<br>
+AppLocker<br>
+FBWF<br>
+Group Policy<br>
+Sandboxie 5.16<br>
+<br>
+Other system related apps that 'might' be relevant and are installed<br>
+Actual Window Manager 8.10<br>
+VMWare Workstation 11.1.4 (12.x has a certain network issue that has plagued me and hasn't been resolved yet)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lingering SbieSvc?</h3>
+				<div class="date">Posted: <strong>Tue Jan 24, 2017 1:48 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi Syrinx, <br>
+<br>
+I did some digging (after reproducing this using internet explorer (Win 10 + SBIE 5.17)) and found the following:<br>
+<a href="viewtopic02cd02cd.php?f=48&amp;t=19151&amp;p=103561&amp;hilit=comproxy#p103561" class="postlink">http://forums.sandboxie.com/phpBB3/view ... xy#p103561</a><br>
+<br>
+So, definitely not something new. Is it causing any problems for you?  <br>
+I tried reproducing this in WIn 7 but was unable to. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lingering SbieSvc?</h3>
+				<div class="date">Posted: <strong>Thu Jan 26, 2017 2:53 am</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>Is it causing any problems for you? </div></blockquote>
+
+Nope, the lingering SbieSvc's are basically inert but it's the fact they stick around with some boxes/programs and not others that has me wondering why. It's not a new thing for sure, I've seen it for quite a few revisions, months...it just never bothered me enough to investigate before. I suppose that tells you how boring optimizing my PC has gotten when I start nitpicking on leftover isntances that aren't doing anything except remaining idle when no longer needed and after they should have exited.<br>
+<br>
+I do like a clean system though and they are just barely qualifying as annoying! Likely just because I haven't a clue yet as to why some remain and others don't.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lingering SbieSvc?</h3>
+				<div class="date">Posted: <strong>Thu Jan 26, 2017 1:01 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Just a minor, likely useless update:<br>
+<br>
+I took procmon logs of two programs, one that results in a lingering SbieSvc and one that doesn't.<br>
+It's still early on in my look-through but so far the only thing that really stands out is a divergence after RegOpenKey HKU\*SID*_CLASSES<br>
+Both return SUCCESS results and move on to this registry entry HKLM\System\CurrentControlSet\Control\Lsa\EveryoneIncludesAnonymous<br>
+<br>
+However only the one that closes as expected then does another RegOpenKey HKU\*SID*_CLASSES followed by a RegSetInfoKey
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>12:42:45.4256338 PM	SbieSvc.exe	2060	RegSetInfoKey	HKU\S-1-5-21-xxxxxxxxxx-xxxxxxxxx-xxxxxxxxxx-1000_CLASSES	SUCCESS	KeySetInformationClass: KeySetHandleTagsInformation, Length: 0</code></pre></div>
+
+After it does this it then continues on to do quite a bit of other stuff while the one that lingers does nothing else.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lingering SbieSvc?</h3>
+				<div class="date">Posted: <strong>Mon Jul 03, 2017 9:41 am</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Got it down to one lingering SbieSvc on accident yesterday. It turns out the minecraft shortcut I had created was slightly malformed with a single " at the end, likely from a copy and paste over or something. Once that was removed, no more lingering SbieSvc for that one. The other one from chrome is still lingering though. I triple checked the shortcut after that and it's correct.<br>
+Upon further testing I managed to prevent the lingering SbieSvc for this one as well simply by removing all the extra cmd line switches such as --user-data-dir= <br>
+After that I tried them one by one but they all seemed to cause the SbieSvc to linger. I don't understand why as the children all use them internally but removing them all isn't an acceptable solution for me. =(<br>
+<br>
+Update: Well, the minecraft one is now lingering again, I guess it wasn't the leftover " at all! but guess what it also involves one of the double dash commands! --workDir for this one. So it looks like we might have a commonality after all... <strong>--</strong> in the command lines for the parent process.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lingering SbieSvc?</h3>
+				<div class="date">Posted: <strong>Mon Jul 03, 2017 3:33 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hey Syrinx,<br>
+<br>
+Can you provide the exact steps to repro the behavior so that I can have a look? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lingering SbieSvc?</h3>
+				<div class="date">Posted: <strong>Mon Jul 03, 2017 7:17 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">It seems all I have to do with both programs to cause this is add internal command line switches that uses the double dashes --<br>
+for instance if I copy chrome over to a Win7 x64 VM and then create this shortcut (after installing SBIE) :<br>
+"C:\Program Files\Sandboxie\Start.exe" /box:DefaultBox C:\Chrome\chrome.exe --user-data-dir=C:\Chrome\UserData<br>
+the SbieSvc lingers after exit. If I kill it and remove --user-data-dir=C:\Chrome\UserData then the SbieSvc no longer lingers (forever) on exit.<br>
+<br>
+It's pretty much the same thing for MineCraft though that's a tad different as only starting the launcher with --workDir C:\Minecraft\.minecraft appended doesn't cause a lingering SbieSvc <em>until</em> I actually launch the game (javaw) from the launcher then exit. Starting just the launcher then exiting doesn't usually result in the linger...<br>
+"C:\Program Files\Sandboxie\Start.exe" /box:Test C:\MineCraft\Minecraft.exe --workDir C:\MineCraft\.minecraft"<br>
+<br>
+So I guess that's three commonalities (four if you count internet access)<br>
+1) Double dashes -- used for switches<br>
+2) Switches tested are internal for each program and used to point to where the user data should be found<br>
+3) Both programs spawn several child processes (Seems as if it may be relevant seeing how minecraft doesn't trigger the linger until the game itself is started)<br>
+<br>
+They've both been involved with this for a while but just now reproduced in the VM with:<br>
+Sandboxie 5.20<br>
+Chrome 58.0.3029.110<br>
+MineCraft Launcher 2.0.934 (Launching build 1.12 though I doubt it matters)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lingering SbieSvc?</h3>
+				<div class="date">Posted: <strong>Wed Jul 05, 2017 10:46 am</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Just tried re-creating this in a VM again and looks like I missed a hugely relevant step. You'll also need to add an OpenFilePath or something to get the 'extra box specific' SbieSvc to start. For instance if you set --user-data-dir=C:\Chrome\UserData then OpenFilePath=chrome.exe,C:\Chrome\UserData you get the service started.<br>
+<br>
+So it appears to only crop up when using path related ones (which happen to be the main ones I use/tested before) eg,<br>
+--user-data-dir=<br>
+--disk-cache-dir=<br>
+Combined with an open path for a file or directory inside either path<br>
+<br>
+It isn't *just* these two things however as my Skype uses /datapath: and an OpenFilePath and no lingering SbieSvc on that one!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lingering SbieSvc?</h3>
+				<div class="date">Posted: <strong>Fri Jul 07, 2017 3:39 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi Syrinx,<br>
+<br>
+I re tested this using the steps you provided (thanks again) but I am still unable to reproduce the behavior.<br>
+Are you using any specific settings in your Sandbox? Can you test it on a new Sandbox with default settings, to see if the behavior continues there? <br>
+<br>
+I will continue testing and update this thread if I come up with anything new.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lingering SbieSvc?</h3>
+				<div class="date">Posted: <strong>Thu Jul 13, 2017 1:11 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Syrinx,<br>
+<br>
+Thanks again for taking the time to provide detailed steps/examples via PM.  I was able to repro the behavior and got the devs involved.<br>
+This is what they explained: <br>
+
+<blockquote class="uncited"><div>Those additional SbieSvc processes are "helper" processes.<br>
+One is a GUI Proxy to aid with DDE. There can be another as well for COM.<br>
+The reason they don't exit is because they are waiting for the parent process to exit.  The parent being the main Sandboxie Service so they hang around and appear to be reused.</div></blockquote>
+
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lingering SbieSvc?</h3>
+				<div class="date">Posted: <strong>Sun Jul 16, 2017 11:18 am</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">That still doesn't add up though. Just about every other SbieSvc instance also spawned by the 'always existing' (primary or actual), SbieSvc DO EXIT when the app does. I've checked this and re-checked this and even though other instances are created by the same parent pid instance of SbieSvc they properly shut down when the box is no longer in use.<br>
+<br>
+I open Chrome in its own box and it spawns a COMProxy instance of SbieSvc.<br>
+I open Firefox in its own box and it spawns a COMProxy instance of SbieSvc.<br>
+<br>
+I close chrome and the COMProxy instance lingers.<br>
+I close firefox and the COMProxy instance ends properly.<br>
+<br>
+There has to be a reason (which I can't seem to figure out and it's driving me insane) but it's certainly not:
+<blockquote class="uncited"><div>The reason they don't exit is because they are waiting for the parent process to exit. The parent being the main Sandboxie Service so they hang around and appear to be reused.</div></blockquote>
+Most do close!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lingering SbieSvc?</h3>
+				<div class="date">Posted: <strong>Mon Jul 17, 2017 11:38 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">UPDATE:<br>
+<br>
+Hey Syrinx, <br>
+<br>
+Last update from the devs:<br>
+
+<blockquote class="uncited"><div>Yes, sometimes the COM proxy instances do stick around even when all sandboxed apps close.<br>
+Essentially they are idle in a simple wait state, and will be reused if/when new sandbox apps start up again.<br>
+<br>
+Firefox always seems to close out any instances, while IE always seem to keep one running. <br>
+<br>
+Further research showed that they will exit only if they have created internal objects for its own use.<br>
+Changing this behavior caused these COM proxies to be continually created and exited, all in the lifespan of a single sandboxed process. This is actually much less ideal than keeping one around in a nice wait state.</div></blockquote>
+
+Regards,<br>
+Barb.-<br>
+------------------------------------------------------ X --------------------------------------------------------------------<br>
+<br>
+Hello Syrinx,<br>
+<br>
+I have made the devs aware. <br>
+We will update this thread whenever new info becomes available. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Lingering SbieSvc?</h3>
+				<div class="date">Posted: <strong>Thu Jul 20, 2017 2:52 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Further research showed that they will exit only if they have created internal objects for its own use.<br>
+Changing this behavior caused these COM proxies to be continually created and exited, all in the lifespan of a single sandboxed process. This is actually much less ideal than keeping one around in a nice wait state.</div></blockquote>
+
+Please pass on my thanks to the dev(s) that looked into this, I can finally stop driving myself insane trying to figure that one out! Thanks to you as well for putting up with my random messages!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=23933&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:04:01 GMT -->
+</html>

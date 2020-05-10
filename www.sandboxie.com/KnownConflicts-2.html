@@ -1,0 +1,566 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<link rel="canonical" href="KnownConflicts.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="robots" content="index,follow">
+	<meta name="language" content="en">
+	<meta name="google-translate-customization" content="e0b0918ac010f34-ee72acc87a31fea6-gc7951f1948fb9449-11">
+	<meta name="description" content="Sandboxie - Sandbox security software for Windows. Install and run programs in a virtual sandbox environment without writing to the hard drive.">
+	<link rel="stylesheet" type="text/css" href="includes/style.css">
+	<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="includes/js/mobile-menu.js">
+	</script>
+	<script type="text/javascript">
+var onload_reposition_ie = 0;
+	</script>
+
+<!--[if IE]>
+<script type="text/javascript">
+onload_reposition_ie = 1;
+</script>
+<![endif]-->
+
+	<script type="text/javascript">
+function onload_reposition()
+{
+}
+	</script>
+
+	<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15566261-2', 'auto');
+ga('send', 'pageview');
+	</script>
+
+<title>Sandboxie - Known Conflicts</title>
+<meta name="description" content="Known Conflicts - Sandboxie, sandbox security and secure web browsing software for Windows">
+</head>
+<body onload="onload_reposition()">
+<a name="top"></a> 
+<div id="masthead">
+	<table class="masthead" width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td width="312" style="vertical-align:top;"><a href="index.html" title="Sandboxie.com"><img src="images/MastheadLogo.jpg" alt="" height="92" width="312"></a></td>
+			<td><span id="motto"><i>Trust&nbsp;No&nbsp;Program</i></span></td>
+		</tr>
+	</table>
+	<div id="submasthead">
+		<div id="drop-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="HelpTopics.html">Help &amp; FAQ</a></li>
+				<li><a href="https://forums.sandboxie.com/">Forum</a></li>
+				<li><a href="DownloadSandboxie.html">Download</a></li>
+				<li><a href="RegisterSandboxie.html">Buy</a>
+				<ul>
+					<li><a href="HomeUse.html">Home Use</a></li>
+				</ul>
+				</li>
+				<li><a href="SiteSearch.html">Search</a></li>
+				<li><a href="HowItWorks.html">How It Works</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container-menus">
+	<div class="one-menus">
+		<div id="google_translate_element">
+		</div>
+
+		<script type="text/javascript">
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,bg,cs,da,de,el,en,es,et,fi,fr,hr,hu,id,it,iw,jv,ko,mk,nl,pl,pt,ru,sk,sq,sv,tr,uk,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, gaTrack: true, gaId: 'UA-53196810-1'}, 'google_translate_element');
+}
+		</script>
+
+	</div>
+	<div class="two-menus">
+		<div id="nav-trigger">
+			<span>Menu</span>
+		</div>
+		<div id="nav-mobile"> 
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="HelpTopics.html">Help &amp; FAQ</a></li>
+			<li><a href="https://forums.sandboxie.com/">Forum</a></li>
+			<li><a href="DownloadSandboxie.html">Download</a></li>
+			<li><a href="RegisterSandboxie.html">Buy</a></li>
+			<li><a href="SiteSearch.html">Search</a></li>
+			<li><a href="HowItWorks.html">How It Works</a></li>
+		</ul>
+		</div> 
+	</div>
+</div><div id="wrapper">
+	<h1 style="margin:0;padding-top:.5em">
+		Known Conflicts 
+	</h1>
+	<p>
+	<a name="top" id="top"></a> 
+	</p>
+	<table style="border: 1px solid #bba; background-color: #f7f8ff; padding: 0px; font-size: 95%; text-align: left; width: 90%;">
+		<tr>
+			<td> 
+			<p>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#overview">Overview</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Windows 10 v1809">Upgrading to Win 10 v1809 may require removing Sandboxie</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Installing programs">Not all programs can be installed inside Sandboxie</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Sandbox name length">SBIE2327 Error in COM server when using 32 chars Sandbox names</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Windows 10">Windows 10 Metro (tile) apps and Edge Web browser</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Anti-virus Related">Anti-virus &amp; Anti-malware programs</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Anti-virus tool-bars">Anti-virus Installed &amp; related browser tool bars</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Microsoft Office &amp; Office 365">Office 2013 on up &amp; Office 365</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Norton Antivirus Products">Norton Antivirus and Security Products (Norton 360, etc)</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Antivirus">Kaspersky Products (2015, 2016, 2017)</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#AVG Security">AVG Security Suite 2015 &amp; 2016</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Comodo">Comodo Antivirus &amp; Security Suite</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Dr.Web Katana Products">Dr. Web Katana / Security Space</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#appguard">AppGuard</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Bitdefender">BitDefender Total Security&amp;Antivirus 2015/16</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#TOR">TOR Web Browser</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Pidgin">Pidgin IM Client</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#GOG">GOG Games and Galaxy Beta</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Steam">Steam Online Games</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#omnipage">Nuance OmniPage</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Nuance">Nuance Advanced PDF Pro</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#punkbuster">PunkBuster</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#stickypassword">Sticky Password</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#rapport">Trusteer Rapport</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#webrootcorporate">Webroot AntiSpyware Corporate Edition</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#zonealarm8">ZoneAlarm Internet Security Suite Version 8</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#canoneasywebprint">Canon Printers, Canon Easy-WebPrint</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#edocprinter">HP Universal Print Driver</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Apple iTunes">iTunes for Windows</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="KnownConflicts.html#Flash Plugin on Chrome">Chrome and Flash Plug in</a><br>
+			<br>
+			</p>
+			</td>
+		</tr>
+	</table>
+	<h3>
+		<a name="overview" id="overview"></a>Overview 
+	</h3>
+	<p>
+		This sections names some third-party programs which are known to be incompatible to some degree with Sandboxie. Not all incompatible software is known, and some software may not be compatible. In some cases, either Sandboxie or the conflicting program can be configured in some way to resolve the incompatibility. For current update list &amp; to post information regarding problems with Sandboxie and 3rd party programs, please go to our forum here <a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21539">http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21539</a> 
+	</p>
+	<hr>
+	<p>
+		Many known conflicts can be easily resolved by activating application configurations in Sandboxie Control. For more information on activating configurations, please see <a href="ApplicationsSettings.html">Sandbox&nbsp;Settings&nbsp;&gt;&nbsp;Applications</a>. The Software Compatibility tool, reachable from the Configure menu in Sandboxie Control, can detect some third-party software, and recommend configurations to activate.
+	</p>
+	<hr>
+	<h3>
+		<a name="Windows 10" id="Windows 10 v1809"></a> Upgrading to Win 10 v1809 may require removing Sandboxie
+	</h3>
+	<p>
+		Problem: When upgrading to Windows 10 Insider - Fast Ring- 17755.1 or higher - Including Release Windows 10 1809 Oct Update -, you may be presented with a message stating Sandboxie needs to be deleted if old versions of Sandboxie (prior to 5.27.1) are present.  
+	</p>
+	<p>
+		Solution: Delete the old Sandboxie versions and its installers before proceeding with the upgrade, then reinstall Sandboxie normally.   
+	</p>
+
+	<h3>
+		<a name="Windows 10" id="Installing programs"></a> Not all programs can be installed inside Sandboxie 
+	</h3>
+	<p>
+		Problem: Some applications (such as Chrome, MSI Installers/ other apps that invoke services) may no install inside Sandboxie + Windows 10 .  
+	</p>
+	<p>
+		Solution: Install the application on your host and then run it sandboxed.  
+	</p>
+
+	<h3>
+		<a name="Windows 10" id="Sandbox name length"></a> SBIE2327 Error in COM server when using 32 chars Sandbox names 
+	</h3>
+	<p>
+		Problem: 32 char Sandbox names return SBIE2327 Error in COM server: [81 / 0] / SBIE2327 Error in COM server: [31 / 0] / SBIE2308 Could not create object directory: [22 / C0000004] . 
+	</p>
+	<p>
+		Solution: Remove 1 character from your Sandbox's name (31 characters should work as expected). 
+	</p>
+
+	<h3>
+		<a name="Windows 10" id="Windows 10"></a> Windows 10 Metro (tile) apps and Edge Web browser 
+	</h3>
+	<p>
+		Problem: Edge browser or metro apps will not work in sandboxie v5+. 
+	</p>
+	<p>
+		Solution: None at this time. Otherwise, Windows 10 and Sandboxie v5+ is compatible with each other. Older versions of Sandboxie are not compatible at all with Windows 10. 
+	</p>
+	<p>
+		Solution:If you fail to change your Windows 10 default web browser (Edge) and you click on "run browser sandboxed" Sandboxie will automatically load IE 11 (which is included in Windows 10.) (You must use SBIE Version 5+ with Windows 10, any version before v5 will NOT work with Windows 10.) 
+	</p>
+	<p>
+		Please visit the forum for current updates in regards to Windows 10. <a href="http://forums.sandboxie.com/phpBB3/">http://forums.sandboxie.com/phpBB3/</a> 
+	</p>
+	<hr>
+	<h3>
+		<a name="Anti-virus Related" id="Anti-virus Related"></a>Anti-virus &amp; Anti-malware programs 
+	</h3>
+	<p>
+		Website: Updated supported suites-Sandboxie Forum: <a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21539">http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21539</a> 
+	</p>
+	<p>
+		Problem: Issues with "x" AV and anti-malware programs. 
+	</p>
+	<p>
+		Solution: There may be work arounds to adjust Sandboxie and/or the product so that they may be compatible with each other. Recommend posting information in our user forum so it may be investigated. <a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=19746">http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=19746</a> 
+	</p>
+	<h3>
+		<a name="Anti-virus tool-bars" id="Anti-virus tool-bars"></a> Anti-virus Installed &amp; related browser tool bars 
+	</h3>
+	<p>
+		Problem: Unexpected problems with web browsers when running sandboxed when Anti-virus and related tool bars are installed. 
+	</p>
+	<p>
+		Solution: Attempt to remove / or disable any installed tool-bars and relaunch your sandboxed browser. 
+	</p>
+	<p>
+		Solution: Some tool bars may not be compatible with Sandboxie when a browser is run sandboxed. However, may do work without any issue or with minor adjustment. Please visit our forum for more information and resources. <a href="http://forums.sandboxie.com/phpBB3/">http://forums.sandboxie.com/phpBB3/</a> 
+	</p>
+	<hr>
+	<h3>
+		<a name="Microsoft Office &amp; Office 365" id="Microsoft Office &amp; Office 365"></a>Office 2013 on up &amp; Office 365 
+	</h3>
+	<p>
+		Problem: MS Office 2013, 2016 and Office 365 will crash when sandboxed. This includes Outlook 2013 and up. (Click to run Versions only) 
+	</p>
+	<p>
+		__Solution: Office is supported in Beta version 5.11.4 of Sandboxie. It is a Paid feature, so you must be using a registered and paid copy for it to work in SBIE. Click here for more information... <a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=22645">http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=22645</a> 
+	</p>
+	<p>
+		Solution #2. Use a non-Click-To-Run version of Office (2013 and older) or Google Docs, Libre Office, OpenOffice, MS Office 2010 or older. All support MS document formats. 
+	</p>
+	<hr>
+	<h3>
+		<a name="Norton Antivirus Products" id="Norton Antivirus Products"></a>Norton Antivirus and Security Products (Norton 360, etc) 
+	</h3>
+	<p>
+		Problem: Firefox may not load, or load after a significant delay when sandboxed with Norton installed 
+	</p>
+	<p>
+		Solution: In Norton, under Administrative Settings, disable both options under "Firefox Cleanup" 
+	</p>
+	<ul>
+		<li>However, some users have reported continued issues w/ Firefox/Norton &amp; Sandboxie. Therefore, 100% compatibility is not guaranteed. Norton 360 may work, but is also not guaranteed. 
+	</ul>
+	<p>
+		Problem: Users may get CONATST.EXE Error w/ SBIE 2235 error "Failed process" Solution: This is part of the Norton Suite, most likely the Identity section. This would have to be disabled in the program and in all web browser addons. However, this may not fully solve the errors. Thus, Norton would have to be removed. 
+	</p>
+	<p>
+		Conclusion: Should the above tip not work, Norton should be removed so that Sandboxie may function correctly as your primary online protection. 
+	</p>
+	<hr>
+	<h3>
+		<a name="Antivirus" id="Antivirus"></a>Kaspersky Products (2015, 2016, 2017) 
+	</h3>
+	<p>
+		Home Page: <a href="http://www.kaspersky.com/">http://www.kaspersky.com</a> 
+	</p>
+	<p>
+		Problem: "Service not implemented" error when running Sandboxie and / or Sandboxie will crash with KS 2015/16/17 installed (Win 10, 8 &amp; 8.1) 
+	</p>
+	<p>
+		Solution: For Windows 7, you must add Sandboxie Folder to Kaspersky's 'Threats and Exclusions' section for KIS 2015/2016 in Windows 7. 
+	</p>
+	<p>
+		For Windows 8/8.1 &amp; Win 10 -KS 2015 and 2016/2017 is not compatible with Sandboxie. Kaspersky must NOT be installed, otherwise Sandboxie will not work. 
+	</p>
+	<p>
+		IT'S BEST TO NOT HAVE ANY KASPERSKY PRODUCTS INSTALLED. DISABLING WILL NOT WORK. We've instructed KIS what they need to change in their code, at this time, they have not. Thus, their code disrupts Sandboxie. 
+	</p>
+	<hr>
+	<h3>
+		<a name="AVG Security" id="AVG Security"></a> AVG Security Suite 2015 &amp; 2016 
+	</h3>
+	<p>
+		Home Page: <a href="https://www.avg.com/">https://www.avg.com/</a> 
+	</p>
+	<p>
+		Problem: Sandboxie may not function correctly with AVG installed 
+	</p>
+	<p>
+		Solution: Add the sandboxie folder to AVGs "Exclusions" option inside of AVG. More info here in our forum <a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21539">http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21539</a> 
+	</p>
+	<ul>
+		<li>AVG Free (with/without ZEN) does not need the exclusion added, but you should to ensure compatibility. 
+	</ul>
+	<hr>
+	<h3>
+		<a name="Comodo" id="Comodo"></a>Comodo Antivirus &amp; Security Suite 
+	</h3>
+	<p>
+		Home Page: <a href="https://www.comodo.com/">https://www.comodo.com</a> 
+	</p>
+	<p>
+		Problem: Sandboxie may not function with comodo installed. 
+	</p>
+	<p>
+		Solution: Following Sandboxie files must be added to Comodo's Exclusion list 
+	</p>
+	<p>
+		Start.exe""License.exe""SandboxieBITS.exe""SandboxieCrypto.exe""SandboxieDcomLaunch.exe""SandboxieRpcSs.exe""SandboxieWUAU.exe""SbieCtrl.exe""SbieIni.exe""SbieSvc.exe" 
+	</p>
+	<hr>
+	<h3>
+		<a name="Dr.Web Katana Products" id="Dr.Web Katana Products"></a> Dr. Web Katana / Security Space 
+	</h3>
+	<p>
+		Problem: Sandboxie may not function with Dr. Web Products installed. 
+	</p>
+	<p>
+		Solution: Remove offending A/V product so that Sandboxie will function 
+	</p>
+	<hr>
+	<h3>
+		<a name="appguard" id="appguard"></a>AppGuard 
+	</h3>
+	<p>
+		Home Page: <a href="http://www.blueridge.com/index.php/products/appguard/consumer">http://www.blueridge.com/index.php/products/appguard/consumer</a> 
+	</p>
+	<p>
+		Problem: Web browser fails to start under the supervision of Sandboxie or sandboxie may crash. 
+	</p>
+	<p>
+		Solution: c:\sandbox an exception folder (on the Guarded Apps tab) and NOT to add c:\sandbox to user-space policy. 
+	</p>
+	<p>
+		Solution: Please see this <a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?p=74164#74164">forum topic</a>. 
+	</p>
+	<p>
+		Solution: Please see this forum post as well.. <a href="https://www.wilderssecurity.com/threads/appguard-4-x-32-64-bit.355206/page-136#post-2505627">https://www.wilderssecurity.com/threads/appguard-4-x-32-64-bit.355206/page-136#post-2505627</a> 
+	</p>
+	<hr>
+	<h3>
+		<a name="Bitdefender" id="Bitdefender"></a>BitDefender Total Security&amp;Antivirus 2015/16 
+	</h3>
+	<p>
+		Home Page: <a href="http://www.bitdefender.com/">http://www.bitdefender.com</a> 
+	</p>
+	<p>
+		Problem: Sandboxie version 4+ and version 5+ is incompatible with BitDefender Antivirus to some small extent. 
+	</p>
+	<p>
+		Solution: Adjust shield settings in BitDefender. Modules &gt; Antivirus &gt; click on the gear "icon" &gt;GO to Active Threat Control &gt; and move the slider to "Off" - Delete SBIE Sandbox Contents &amp; relaunch the browser. 
+	</p>
+	<hr>
+	<h3>
+		<a name="TOR" id="TOR"></a>TOR Web Browser 
+	</h3>
+	<p>
+		Problem: TOR is very slow in a sandbox, crashes or crashes after a certain time. 
+	</p>
+	<p>
+		Solution: The TOR browser is not supported by Sandboxie. Thus, it's use in a sandbox is not guaranteed to work. 
+	</p>
+	<hr>
+	<h3>
+		<a name="Pidgin" id="Pidgin"></a>Pidgin IM Client 
+	</h3>
+	<p>
+		Problem: Cut and paste in the Pidgin chat window while sandboxed will cause Pidgin to crash. 
+	</p>
+	<p>
+		Solution: None at this time. 
+	</p>
+	<hr>
+	<h3>
+		<a name="GOG" id="GOG"></a>GOG Games and Galaxy Beta 
+	</h3>
+	<p>
+		website <a href="https://www.gog.com/">http://www.gog.com</a> 
+	</p>
+	<p>
+		Problem: Games from GOG Galaxy may not run while sandboxed. 
+	</p>
+	<p>
+		Solution: Current version of GOG Galaxy *does* work (Non Beta). You have to "force" GOG Program folder so that it works correctly within a SB. Thus, you will need a paid version of SBIE. Better solution, install GOG / GOG games on your host computer. Refer to this post as well <a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=23233&amp;p=122627&amp;hilit=gog#p122627">http://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=23233&amp;p=122627&amp;hilit=gog#p122627</a> 
+	</p>
+	<hr>
+	<h3>
+		<a name="Steam" id="Steam"></a>Steam Online Games 
+	</h3>
+	<p>
+		Website: <a href="https://store.steampowered.com/">https://store.steampowered.com</a> 
+	</p>
+	<p>
+		Problem: Not all Steam games will function while Sandboxed. 
+	</p>
+	<p>
+		Solution: Install the Games on your computer, not in a sandbox. Most games can work. However, there are reports that some simply may not. If you run into a problem with a Steam Game, you should make sure Steam client is update on your host machine. Run Steam not sandboxed, download and install the game on your host computer and then "right click" on the game shortcut and select "run as sandboxed" as a work around. If problems persist, please let us know by posting the details in our forum here: <a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=19746">http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=19746</a> 
+	</p>
+	<hr>
+	<h3>
+		<a name="omnipage" id="omnipage"></a>Nuance OmniPage 
+	</h3>
+	<p>
+		Home Page: <a href="http://www.nuance.com/">http://www.nuance.com</a> 
+	</p>
+	<p>
+		Problem: Internet Explorer performs very slowly when run sandboxed. 
+	</p>
+	<p>
+		Solution: Use the Startup tab of the System Configuration Utility (msconfig.exe) to disable the automatic start of OpwareSE4.exe. 
+	</p>
+	<hr>
+	<h3>
+		<a name="Nuance" id="Nuance"></a>Nuance Advanced PDF Pro 
+	</h3>
+	<p>
+		Problem: SBIE2224 error 
+	</p>
+	<p>
+		Solution: By default, Windows 10 uses Edge to open PDFs. Edge is not supported. Please use another PDF viewer. Nuance is not supported at this time 
+	</p>
+	<hr>
+	<h3>
+		<a name="punkbuster" id="punkbuster"></a>PunkBuster 
+	</h3>
+	<p>
+		Home Page: <a href="http://www.evenbalance.com/index.php?page=pbsvcfaq.php">http://www.evenbalance.com/index.php?page=pbsvcfaq.php</a> 
+	</p>
+	<p>
+		Problem: PunkBuster-enabled games are aborted with the message "Unknown Windows API Function" or "Service Communication Failure". 
+	</p>
+	<p>
+		Note: Applies to PunkBuster client version 1.500 or higher. 
+	</p>
+	<p>
+		Solution: 
+	</p>
+	<ul>
+		<li> Make sure PunkBuster components (PnkBstrA.exe, PnkBstrB.exe and PnkBstrK.sys) are installed outside the sandbox. 
+		<li> Open <a href="ResourceAccessSettings.html#window">Sandbox Settings &gt; Resource Access &gt; Window Access</a>, click Add, then enter this resource name: <br>
+		* (a single star) 
+	</ul>
+	<hr>
+	<h3>
+		<a name="stickypassword" id="stickypassword"></a>Sticky Password 
+	</h3>
+	<p>
+		Home Page: <a href="https://www.stickypassword.com/">https://www.stickypassword.com/</a> 
+	</p>
+	<p>
+		Problem: Login/password information is not pasted into a web browser running under Sandboxie. 
+	</p>
+	<p>
+		Solution: Turn off the Sandboxie [#] marks in the window title. See <a href="AppearanceSettings.html">Sandbox&nbsp;Settings&nbsp;&gt;&nbsp;Appearance</a> settings page.
+	</p>
+	<p>
+		More info here: <a href="https://www.stickypassword.com/forum/viewtopic.php?f=79&amp;t=87028">https://www.stickypassword.com/forum/viewtopic.php?f=79&amp;t=87028</a> 
+	</p>
+	<hr>
+	<h3>
+		<a name="rapport" id="rapport"></a>Trusteer Rapport 
+	</h3>
+	<p>
+		Home Page: <a href="http://www-03.ibm.com/software/products/en/category/advanced-fraud-protection">http://www-03.ibm.com/software/products/en/category/advanced-fraud-protection</a> 
+	</p>
+	<p>
+		Problem: Trusteer Rapport software will not install or run under Sandboxie. 
+	</p>
+	<p>
+		Solution: None (as of Sept 2015) To use Trusteer Rapport, run the web browser outside the sandbox. 
+	</p>
+	<hr>
+	<h3>
+		<a name="webrootcorporate" id="webrootcorporate"></a>Webroot AntiSpyware Corporate Edition 
+	</h3>
+	<p>
+		Home Page: <a href="http://www.webroot.com/En_US/business-antispyware-ce">http://www.webroot.com/En_US/business-antispyware-ce.html</a>
+	</p>
+	<p>
+		Problem: Sandboxie does not start with Webroot installed. 
+	</p>
+	<p>
+		Solution: None. Webroot must not be installed for Sandboxie to work. An updated list of support AV programs can be found here: <a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21539">http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21539</a> 
+	</p>
+	<hr>
+	<h3>
+		<a name="zonealarm8" id="zonealarm8"></a>ZoneAlarm Internet Security Suite Version 8 
+	</h3>
+	<p>
+		Home Page: <a href="http://www.zonealarm.com/">http://www.zonealarm.com</a> 
+	</p>
+	<p>
+		Problem: Computer becomes unresponsive after closing the last sandboxed program. 
+	</p>
+	<p>
+		Solution: 
+	</p>
+	<ul>
+		<li> Make sure you are using the latest version of Sandboxie. 
+		<li> Or, turn off the ZoneAlarm On-Access Scanning component that interferes with Sandboxie: Open Zone Alarm Control Center &gt; Go to Anti-virus/spyware on the main screen &gt; Click Advanced Options button &gt; Select On-Access Scanning &gt; Clear checkbox for On-Access Scanning 
+	</ul>
+	<hr>
+	<h3>
+		<a name="canoneasywebprint" id="canoneasywebprint"></a>Canon Printers, Canon Easy-WebPrint 
+	</h3>
+	<p>
+		Home Page: <a href="http://www.canoneasywebprint.com/en/index.htm">http://www.canoneasywebprint.com/en/index.htm</a> 
+	</p>
+	<p>
+		Problem: Popup error window: Direct OCR Error: An error with Direct OCR caused a memory conflict in your open applications. Please restart Windows. 
+	</p>
+	<p>
+		Note: Although the Canon Easy-WebPrint toolbar attaches to Internet Explorer, this error reportedly occurs when running Firefox sandboxed. 
+	</p>
+	<p>
+		Solution: Remove the Canon Easy-WebPrint toolbar software. 
+	</p>
+	<hr>
+	<h3>
+		<a name="edocprinter" id="edocprinter"></a>HP Universal Print Driver 
+	</h3>
+	<p>
+		Problem: The HP Universal Printer Status Monitor pop-up component is failing when printing from a sandboxed Web browser. 
+	</p>
+	<p>
+		Solution: Open <a href="ResourceAccessSettings.html#com">Sandbox Settings &gt; Resource Access &gt; COM Access</a>, click Add and enter this resource name: <br>
+	<strong>{D713F357-7920-4B91-9EB6-49054709EC7A}</strong> 
+	</p>
+	<hr>
+	<h3>
+		<a name="Apple iTunes" id="Apple iTunes"></a>iTunes for Windows 
+	</h3>
+	<p>
+		Home Page: <a href="https://www.apple.com/">https://www.apple.com</a> 
+	</p>
+	<p>
+		Problem: Running iTunes for Windows "as sandboxed" OR installing iTunes within a sandbox 
+	</p>
+	<p>
+		Solution: None at this time. Installing iTunes within a sandbox is not possible and it will fail as drivers are not permitted to be installed within a sandbox. Running iTunes "as sandboxed" will work somewhat, but you will constantly receive "trusted installer" errors and any sync between iPhone or iPad is not possible. 
+	</p>
+	<hr>
+	<h3>
+		<a name="Flash Plugin on Chrome" id="Flash Plugin on Chrome"></a> Chrome and Flash Plug in 
+	</h3>
+	<p>
+		Info: <a href="https://support.google.com/chrome/answer/6258784?p=ib_outdated_plugin&amp;rd=2&amp;visit_id=0-636385974142748562-4174731262">https://support.google.com/chrome/answer/6258784?p=ib_outdated_plugin&rd=2&visit_id=0-636385974142748562-4174731262</a> 
+	</p>
+	<p>
+		Problem: Plugins that use NPAPI, including Silverlight, Java, and Unity, wont work 
+	</p>
+	<p>
+		Solution: NPAPI plugins can't be enabled, so if you want to use a website that uses an NPAPI plugin, youll need to use a different web browser. <a href="https://support.google.com/chrome/answer/6213033?p=ib_outdated_plugin&amp;rd=1">https://support.google.com/chrome/answer/6213033?p=ib_outdated_plugin&amp;rd=1</a> 
+	</p>
+	<hr>
+	<p>
+		Go to <a href="HelpTopics.html">Help&nbsp;Topics</a>, <a href="FrequentlyAskedQuestions.html">Frequently&nbsp;Asked&nbsp;Questions</a>.
+	</p>
+</div>
+
+<p align="center" style="font-size:8pt; line-height:1.4em;">
+	<b>Sandboxie</b> is Copyright &copy; 2004-2019 by Sandboxie Holdings, LLC.&nbsp; All rights reserved. <br>
+	<b><a href="index.html">Sandboxie.com</a> | <a href="ContactAuthor.html">Contact Author</a></b> <br>
+</p>
+
+<script type="text/javascript" src="../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
+</body>
+</html>

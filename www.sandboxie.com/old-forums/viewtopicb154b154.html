@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=48&t=19151&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:51:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 4.13 Beta Available (Latest Version 4.13.7)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>4.13 Beta Available (Latest Version 4.13.7)</h2>
+		<p><a href="viewtopice800e800.html?f=48&amp;t=19151">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=48&amp;t=19151</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>16</strong></div>
+					<div class="post">
+				<h3>4.13 Beta Available (Latest Version 4.13.7)</h3>
+				<div class="date">Posted: <strong>Thu Jun 19, 2014 4:56 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Combined 32/64 installer:<br>
+<a href="../SandboxieInstall-413-7.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall-413-7.exe</a><br>
+<br>
+Separate:<br>
+<a href="../SandboxieInstall32-413-7.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall32-413-7.exe</a><br>
+<a href="../SandboxieInstall64-413-7.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall64-413-7.exe</a><br>
+<br>
+<strong>Fixes in 4.13.7</strong><br>
+<br>
+1) Flash standalone crashes in FFX.<br>
+<br>
+2) Error messages:<br>
+SBIE2303 Could not hook SetSecurityInfo (1)<br>
+SBIE2318 DLL initialization failed for 'ntmarta.dll'<br>
+<br>
+<br>
+<strong>Fixes in 4.13.6</strong><br>
+<br>
+1) Chrome 37/38 crash error C0000008 (invalid handle).<br>
+<br>
+2) Chrome 38-64 hang (web page unresponsive).<br>
+<br>
+3) Chrome hangs when printing to PDF.<br>
+<br>
+4) Browsers cannot access Internet when using McAfee SaaS<br>
+<br>
+5) Silverlight crashing in Win 8.1 (<a href="viewtopic34c634c6.php?t=18513" class="postlink">http://forums.sandboxie.com/phpBB3/view ... hp?t=18513</a>)<br>
+<br>
+6) Excel sometimes crashes when copying large amounts of data.<br>
+<br>
+7) Sandboxie now has language support for Farsi (Persian).<br>
+<br>
+<br>
+<strong>Fixes in 4.13.5</strong><br>
+<br>
+1) Several incompatibilities with Chrome 37 &amp; 38 have been fixed.<br>
+<br>
+2) The problem with multiple Sandboxie update dialogs introduced in 4.13.4 has been fixed.<br>
+<br>
+<br>
+<strong>Fixes in 4.13.4</strong><br>
+<br>
+1) The auto-update feature only checked the next update time (SbieCtrl_NextUpdateCheck) 1 time when SbieCtrl.exe was started.  If SbieCtrl.exe was kept running, it would never check the update time again.  This has been fixed.<br>
+<br>
+2) Several large memory leaks (reported by Dr. Larry Pepper et al.) have been fixed.  In particular: <a href="viewtopic92909290.php?f=11&amp;t=18412" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=18412</a><br>
+<br>
+3) ASLR is now enabled for SbieDll.dll 32 bit (64 bit will come later).<br>
+<br>
+4) OpenIpcPath=\BaseNamedObjects\FontCachePort is now in templates.ini as a default.  Until now, this was a suggested work-around for some Chrome 37 problems.<br>
+  NOTE: the default only applies to new installs.  For existing installs, you need to go into Sandbox settings-&gt;Applications-&gt;Miscellaneous, and check the option "Allow direct access to Windows Font Cache"<br>
+  <br>
+5) NtQueryInformationProcess was not working correctly for 32 bit apps running in 64 bit Windows.  The sandbox path was returned instead of the host path.  This is mainly for Buster and BSA.<br>
+<br>
+6) There is a new EULA (license.txt)<br>
+<br>
+The Chrome 37/38 permissions problem with drop rights is still being worked.<br>
+<br>
+<br>
+<strong>Fixes in 4.13.3</strong><br>
+<br>
+1) Support for Chrome 37-64.<br>
+<br>
+2) Added hook for GetProcessImageFileName/NtQueryInformationProcess so it now returns the faked, sandboxed path.<br>
+<br>
+3) Improvements to the Dutch language text.<br>
+<br>
+<br>
+<strong>Fixes in 4.13.2</strong><br>
+<br>
+1) If SandboxieInstall.exe tries to download the VC Redistributables and fails, there is now a retry option.<br>
+<br>
+2) The SbieSvc startup time has been increased from 5 seconds to 15 seconds. Hopefully, this will eliminate the following sequence of startup errors:<br>
+   SBIE2335 Initialization failed for process %2<br>
+   SBIE2336 Error in GUI server:  %2<br>
+   SBIE2337 Failed to start program:  %2<br>
+<br>
+3) Malware DarkComet is using a quirk in Windows to put up a MessageBox that does not have the sandboxed yellow window border.  This poses no security risk, but to prevent user anxiety, this has been fixed (reported by a Sbie user).<br>
+<br>
+4) Security has been tightened in other areas as well.<br>
+<br>
+<strong>Fixes in 4.13.1</strong><br>
+<br>
+1) Special flag added to OpenWinClass to restore Buster Sandbox Analyzer (BSA) message logging.   /IgnoreUIPI allows low integrity sandboxed processes to send WM_COPYDATA msgs to windows in higher integrity processes.<br>
+    Example Sandboxie.ini entries (both lines required):<br>
+<br>
+    OpenWinClass=TFormBSA<br>
+    OpenWinClass=TFormBSA/IgnoreUIPI<br>
+<br>
+(This does not fix all the problems with BSA, but it is a start)<br>
+<br>
+2) Sandboxed cmd.exe will crash if window title &gt; 256 chars. (<a href="viewtopice16fe16f.php?f=11&amp;t=19089" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=19089</a>)<br>
+<br>
+3) Fixed rare BSOD <a href="viewtopic5a5d5a5d.php?f=11&amp;t=19076&amp;p=101687" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 6&amp;p=101687</a><br>
+<br>
+4) Fixed kernel memory leak in SandboxieCrypto <a href="viewtopic7db47db4.php?f=11&amp;t=15820" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=15820</a><br>
+<br>
+5) The combined installer SandboxieInstall.exe now checks for the VC Redistributables DLLs we require.  If they are not up to date (10.0.40219.325), the installer will download and install the VC Redist. from sandboxie.com.<br>
+    To clarify:<br>
+    SandboxieInstall.exe does not contain MS VC DLLs.  If they are already installed, we are good to go.  If they are not installed or are not up to date, we download the VC Redist. installer package and execute it.<br>
+    SandboxieInstall32.exe &amp; SandboxieInstall64.exe contain the DLLs we require.  If they are not installed or are not up to date, we just copy the ones we require into system32.  The VC Redist. installer is never downloaded or executed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Thu Jun 19, 2014 7:44 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>1) Special flag added to OpenWinClass to restore Buster Sandbox Analyzer (BSA) message logging.   /IgnoreUIPI allows low integrity sandboxed processes to send WM_COPYDATA msgs to windows in higher integrity processes.<br>
+    Example Sandboxie.ini entries (both lines required):<br>
+<br>
+    OpenWinClass=TFormBSA<br>
+    OpenWinClass=TFormBSA/IgnoreUIPI<br>
+<br>
+(This does not fix all the problems with BSA, but it is a start)</div></blockquote>
+
+I confirm message logging works fine again with the "/IgnoreUIPI" setting. Thanks!<br>
+<br>
+Actually the only noticeable problem I can see is when a dialog to open/save files is opened, like it does Notepad. Sometimes works, sometimes application crashes when you try to navigate folders or save to file i.e.<br>
+<br>
+I ran FireFox in BSA and did not notice any problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Fri Jun 20, 2014 1:54 am</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">@Curt<br>
+<br>
+With this next update will the compatibility issue with MBAE be resolved?!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Fri Jun 20, 2014 3:26 am</strong></div>
+				<div class="author">by <strong>superkryo</strong></div>
+				<div class="content">@curt<br>
+Is there a plan to fix sbie2235 as reported earlier <a href="viewtopic1cf01cf0.php?f=11&amp;t=18845&amp;p=100746&amp;hilit=matlab#p100746" class="postlink">http://forums.sandboxie.com/phpBB3/view ... ab#p100746</a>? Still present in this beta, it's a stopper for me to move beyond 3.76. Would be much appreciated.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Fri Jun 20, 2014 7:25 am</strong></div>
+				<div class="author">by <strong>az1ac</strong></div>
+				<div class="content">Norton Toolbar 2014<br>
+Please support in Version Version 4.13</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Fri Jun 20, 2014 10:41 am</strong></div>
+				<div class="author">by <strong>Nurple</strong></div>
+				<div class="content">Hi, the problem I reported about theming still exists with v4.13.1 beta. Problem also shows up on Windows 8, not just Windows 8.1.<br>
+
+<blockquote class="uncited"><div>Heya, I just tried v4.10 RC, and there seems to be a theming issue on the "Run Sandboxed" dialog.<br>
+<br>
+This is on Windows 8.1 with Update 1 (x64).<br>
+<br>
+Here are two screenshots, one with, and one without the issue.<br>
+<br>
+Sandboxie v4.10 RC:<br>
+<br>
+<a href="http://imgur.com/7vmsMsk" class="postlink">http://imgur.com/7vmsMsk</a><br>
+<br>
+Sandboxie v4.9.4:<br>
+<br>
+<a href="http://imgur.com/ZulElNA" class="postlink">http://imgur.com/ZulElNA</a></div></blockquote>
+
+Another user also reported the same problem here <a href="viewtopic9be19be1.php?f=11&amp;t=19111" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=19111</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Fri Jun 20, 2014 11:59 am</strong></div>
+				<div class="author">by <strong>nihil95</strong></div>
+				<div class="content">Chrome 64-bit v37.0.2054.3 Dev issues, Sandboxie 4.13.1 (Win8.1.1 Pro x64) <a href="../i.imgur.com/lZZZcqe.jpg" class="postlink">https://i.imgur.com/lZZZcqe.jpg</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Fri Jun 20, 2014 12:27 pm</strong></div>
+				<div class="author">by <strong>ptrein</strong></div>
+				<div class="content"><blockquote><div><cite>nihil95 wrote:</cite>Chrome 64-bit v37.0.2054.3 Dev issues, Sandboxie 4.13.1 (Win8.1.1 Pro x64) <a href="../i.imgur.com/lZZZcqe.jpg" class="postlink">https://i.imgur.com/lZZZcqe.jpg</a></div></blockquote>
++1 same issue here.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Fri Jun 20, 2014 1:02 pm</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">LOL... why did it require a restart <img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question">  That was a first...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Fri Jun 20, 2014 3:24 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Nix, after installing this beta, the installer asked for a reboot for me as well. This is the second time that I had that this happen. Both times its been in my W7 32 bits. I always reboot after upgrading SBIE so it doesn't really bother me. <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Fri Jun 20, 2014 3:42 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Occasionally for me, Sbie will require a reboot after an upgrade.  This is because the driver is sometimes unable to stop completely and restart itself.  This is nothing new and has been that way at least since Sbie 4.X.  It all depends on exactly what the driver is doing at the time of the upgrade.  Often I will ignore the reboot request, and Sbie will still work just fine, because the driver has had time to fix itself.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Fri Jun 20, 2014 3:52 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>nihil95 wrote:</cite>Chrome 64-bit v37.0.2054.3 Dev issues, Sandboxie 4.13.1 (Win8.1.1 Pro x64) <a href="../i.imgur.com/lZZZcqe.jpg" class="postlink">https://i.imgur.com/lZZZcqe.jpg</a></div></blockquote>
+Invincea QA tests with the Chrome Betas.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Fri Jun 20, 2014 4:10 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Often I will ignore the reboot request, and Sbie will still work just fine, because the driver has had time to fix itself.</div></blockquote>
+A few betas ago, when I saw a request for reboot for the first time ever, I was testing another beta under Shadow defender and didn't reboot. And as you say, all worked well. Next day, when I upgraded SBIE in my real system using the same installer, there was no request to reboot. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Fri Jun 20, 2014 5:43 pm</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">OK, as I said it was my first for SBIE asking for a reboot.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.13 Beta Available (Latest Version 4.13.1)</h3>
+				<div class="date">Posted: <strong>Fri Jun 20, 2014 10:00 pm</strong></div>
+				<div class="author">by <strong>Boxed In</strong></div>
+				<div class="content">Are you going to add the new Iron browser settings?  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+<br>
+<br>
+<a href="viewtopic0bf40bf4.html?f=5&amp;t=19093" class="postlink">http://forums.sandboxie.com/phpBB3/view ... =5&amp;t=19093</a><br>
+<br>
+<a href="viewtopice6cbe6cb.php?f=11&amp;t=19071" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=19071</a></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>16</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=48&t=19151&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:51:33 GMT -->
+</html>

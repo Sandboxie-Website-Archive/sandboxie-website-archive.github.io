@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=7000&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; NOT logic in file blocking?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>NOT logic in file blocking?</h2>
+		<p><a href="viewtopic4366-24366.html?f=4&amp;t=7000">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=7000</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>NOT logic in file blocking?</h3>
+				<div class="date">Posted: <strong>Sat Jan 02, 2010 10:54 am</strong></div>
+				<div class="author">by <strong>est</strong></div>
+				<div class="content">Hi all,<br>
+<br>
+I want to block certain programs from visiting all directories except only one, how can I do that?<br>
+<br>
+I hope there's a NOT logic in file blocking in sandboxie</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jan 02, 2010 11:01 am</strong></div>
+				<div class="author">by <strong>MitchE323</strong></div>
+				<div class="content">You can have a read here;<br>
+<a href="../phpbb/viewtopicc34e.php?t=6879" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=6879</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jan 02, 2010 11:33 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Also read about the "!" operator, in the description for <a href="../index810a.html?ClosedFilePath" class="postlink">Closed File Path</a>.<br>
+(Blocks all sandboxed .exe's from accessing a folder, except the one that's specified in the line)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 03, 2010 8:08 am</strong></div>
+				<div class="author">by <strong>est</strong></div>
+				<div class="content"><blockquote><div><cite>MitchE323 wrote:</cite>You can have a read here;<br>
+<a href="../phpbb/viewtopicc34e.php?t=6879" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=6879</a></div></blockquote>
+
+Thanks, I tried the ! mark<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>ClosedFilePath=!cmd.exe,D:\Win\Sandboxie\*
+ClosedFilePath=!start.exe,C:\
+ClosedFilePath=C:\
+ClosedFilePath=C:\
+ClosedFilePath=E:\
+</code></pre></div>
+
+But I can not get CMD started, what can I do?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 03, 2010 9:47 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">I think that I misunderstood what you want to do.<br>
+Do you want a sandboxed program to be able to access only one directory, and no other directories anywhere?<br>
+Or do you want only one sandboxed program to be able to access a certain directory, and no other sandboxed programs can access that same directory?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 03, 2010 9:55 am</strong></div>
+				<div class="author">by <strong>est</strong></div>
+				<div class="content"><blockquote><div><cite>Guest10 wrote:</cite>I think that I misunderstood what you want to do.<br>
+Do you want a sandboxed program to be able to access only one directory, and no other directories anywhere?<br>
+Or do you want only one sandboxed program to be able to access a certain directory, and no other sandboxed programs can access that same directory?</div></blockquote>
+
+Thanks for replying,<br>
+<br>
+I want to block access to ALL directories, except needed system dll's and its own directory of a executable.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 04, 2010 11:50 pm</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content">In case anyone missed the other recent threads on this:
+<ul><li><a href="../phpbb/viewtopicc34e.php?t=6879" class="postlink">Is there a way to use "ClosedFilePath" with an exception</a> (posted above by MitchE323)<br>
+<a href="../phpbb/viewtopic950f.php?t=6936" class="postlink">False sense of security when online</a><br>
+<a href="../phpbb/viewtopicc913.php?t=6639" class="postlink">Blocking access/ClosedFilePath - can we "Block X, except Y"?</a></li></ul></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 05, 2010 11:05 am</strong></div>
+				<div class="author">by <strong>est</strong></div>
+				<div class="content"><blockquote><div><cite>Mike wrote:</cite>In case anyone missed the other recent threads on this:
+<ul><li><a href="../phpbb/viewtopicc34e.php?t=6879" class="postlink">Is there a way to use "ClosedFilePath" with an exception</a> (posted above by MitchE323)<br>
+<a href="../phpbb/viewtopic950f.php?t=6936" class="postlink">False sense of security when online</a><br>
+<a href="../phpbb/viewtopicc913.php?t=6639" class="postlink">Blocking access/ClosedFilePath - can we "Block X, except Y"?</a></li></ul></div></blockquote>
+
+&gt; So this will not be possible and will not be in the future, correct?<br>
+<br>
+<br>
+&gt; Let's instead say that at this time, I have no plans to add this feature.<br>
+<br>
+<br>
+That's pretty sad <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 05, 2010 11:54 am</strong></div>
+				<div class="author">by <strong>Username</strong></div>
+				<div class="content"><strong>0)</strong> DropMyRights feature also restricts many folders<br>
+<strong>1)</strong> you can use NTFS permissions<br>
+<strong>2</strong>) you can use a separate SUBST or RAM drive<br>
+<strong>3</strong>) you shouldn't worry because SBIE works with a *<strong>COPY</strong>* of modified files and registry</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 05, 2010 10:46 pm</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content">@Username: The main concern in the related threads has been privacy, rather than protection of the system from permanent infection. It seems that your points wouldn't really apply, or would be impractical, in scenarios like <a href="../phpbb/viewtopic4be5.php?p=45319#45319" class="postlink">SandboxieFan's example</a>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 06, 2010 9:28 am</strong></div>
+				<div class="author">by <strong>Username</strong></div>
+				<div class="content">Hi Mike,<br>
+<br>
+You're right that all this is but a lame workaround, yet it *does* work when used properly (at least - for me). Frankly speaking I don't often make use of such restricted software, but should Ronen find it worth doing we shall have a feature like this.<br>
+<br>
+Happy 2010 and Xmas)<br>
+Cheers</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 27, 2011 3:25 pm</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content">Looking back at this old thread, just wanted to clarify some things to save people time.<br>
+
+<blockquote><div><cite>Username wrote:</cite>0) DropMyRights feature also restricts many folders</div></blockquote>
+Don't think so. Folders that normally require Admin privileges for write access, such as <em>C:\Windows</em>, can be freely written to in the sandbox, even with Drop Rights enabled.<br>
+
+<blockquote><div><cite>Username wrote:</cite>1) you can use NTFS permissions</div></blockquote>
+Might be hard. You would have to deny yourself access to those files, or else run sandboxed programs under a different user account, right?<br>
+
+<blockquote><div><cite>Username wrote:</cite>2) you can use a separate SUBST or RAM drive</div></blockquote>
+Not to solve the problem we're talking about. If you block <em>D:\</em> and try to mount <em>D:\Subfolder</em> as a subst drive, the subst drive will also be blocked. There aren't any tricks to get around this (see <a href="../phpbb/viewtopice560.php?p=45325#45325" class="postlink">here</a>) because it's the final target path that matters (see <a href="../phpbb/viewtopic6f1e.php?t=8965" class="postlink">here</a>).</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=7000&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:20 GMT -->
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24815&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:53:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxing Windows Explorer</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxing Windows Explorer</h2>
+		<p><a href="viewtopic7d337d33.html?f=17&amp;t=24815">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24815</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxing Windows Explorer</h3>
+				<div class="date">Posted: <strong>Wed Aug 30, 2017 2:59 pm</strong></div>
+				<div class="author">by <strong>shmu26</strong></div>
+				<div class="content">This is one of the things that SBIE can do, could someone explain what we gain by doing that?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxing Windows Explorer</h3>
+				<div class="date">Posted: <strong>Wed Aug 30, 2017 4:18 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello shmu26,<br>
+<br>
+When you Sandbox Windows Explorer, anything you open via it (programs or files) will be Sandboxed as well.<br>
+It allows you to examine files and launch applications inside the container without having to worry about them modifying your host.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxing Windows Explorer</h3>
+				<div class="date">Posted: <strong>Wed Aug 30, 2017 8:04 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistb417.html?mode=viewprofile&amp;u=30718">shmu26</a> wrote: <a href="viewtopic22082208.html?p=129917#p129917" data-post-id="129917" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Aug 30, 2017 2:59 pm</div></cite>
+This is one of the things that SBIE can do, could someone explain what we gain by doing that?</div></blockquote>
+There are many uses for sandboxing Windows Explorer. What to do with it, really depends on you. Myself, I use it specifically for navigating to files I download than I am not 100% sure what they are, by navigating to this files via the sandboxed explorer I know for sure they ll run sandboxed. And also for running pictures I download from the internet. My image viewer is Windows photo viewer, which is a program that cant be forced via Forced programs. So, by navigating to images using the sandboxed explorer, they ll run sandboxed automatically when I click them.<br>
+<br>
+I have also used the sandboxed explorer for testing changes in the system, and seeing the effect of this changes in programs. For example, the first time I disabled Protected mode in Flash, I made the changes in a sandbox where I ran Windows explorer, added ProtectedMode=0 to the mms file inside the Macromedia folder in Sytem32, closed the sandbox without deleting contents. And then I ran Firefox in the same same sandbox and I was able to see how Firefox played Flash videos with PM disabled. All done in a sandbox without affecting the real system.  Later, I deleted the sandbox and did the changes in the real system.<br>
+<br>
+Regardless of what you do with the sandboxed explorer, you should create a dedicated sandbox for explorer and create a shortcut to make it easier to run it. I place the shortcut in my taskbar. So, when I want to run one, I just lick the shortcut and explorer runs sandboxed in its dedicated sandbox. You can set the sandbox according to your personal case use of the sandboxed explorer.<br>
+<br>
+In your case, you might also like to use one for navigating to your Download folder or USB drives, external drives, etc.<br>
+<br>
+What you dont want to do with it is force it. If you force windows explorer, you ll get a Sandboxie message warning you not to do it and if you ignore the warning, you ll get errors. Another thing, keep in mind that the option to run explorer via the Sandboxie icon (and other places), runs explorer in your DefaultBox. So, if your default box is restricted, windows explorer wont run. This is another reason why you should have a dedicated sandbox for Windows Explorer.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxing Windows Explorer</h3>
+				<div class="date">Posted: <strong>Thu Aug 31, 2017 2:23 am</strong></div>
+				<div class="author">by <strong>shmu26</strong></div>
+				<div class="content">Thanks, Bo!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxing Windows Explorer</h3>
+				<div class="date">Posted: <strong>Thu Aug 31, 2017 2:33 am</strong></div>
+				<div class="author">by <strong>shmu26</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistef77.html?mode=viewprofile&amp;u=2542">bo.elam</a> wrote: <a href="viewtopic5f075f07.html?p=129924#p129924" data-post-id="129924" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Aug 30, 2017 8:04 pm</div></cite>
+ and create a shortcut to make it easier to run it. 
+</div></blockquote>
+
+How do you make a shortcut to windows explorer, in order to open it in dedicated sandbox?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxing Windows Explorer</h3>
+				<div class="date">Posted: <strong>Thu Aug 31, 2017 10:40 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello shmu26,<br>
+<br>
+Here's an example of a shortcut that will open the Downloads Folder in a specific Sandbox:<br>
+<br>
+Right click on your Desktop --&gt; New --&gt; Shortcut<br>
+Paste this:<br>
+"C:\Program Files\Sandboxie\Start.exe" /box:DefaultBox C:\Users\&lt;username&gt;\Downloads<br>
+If needed, modify the location for Start.exe . Replace &lt;username&gt; with your username and the "/box:DefaultBox" with your desired Sandbox.<br>
+<br>
+For more info, have a look at this entry:<br>
+<a href="../StartCommandLine.html" class="postlink">https://www.sandboxie.com/StartCommandLine</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxing Windows Explorer</h3>
+				<div class="date">Posted: <strong>Thu Aug 31, 2017 10:47 am</strong></div>
+				<div class="author">by <strong>shmu26</strong></div>
+				<div class="content">thanks, will try it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxing Windows Explorer</h3>
+				<div class="date">Posted: <strong>Thu Aug 31, 2017 1:41 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistb417.html?mode=viewprofile&amp;u=30718">shmu26</a> wrote: <a href="viewtopic77d077d0.html?p=129928#p129928" data-post-id="129928" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Aug 31, 2017 2:33 am</div></cite>How do you make a shortcut to windows explorer, in order to open it in dedicated sandbox?</div></blockquote>
+After creating a new sandbox for Windows explorer, Click: Configure&gt;Windows shell integration, Click Add shortcut icons, select your dedicated Windows explorer sandbox, look for Windows explorer/File explorer in one of the menus, and click it. After the click, you ll find the shortcut in your Desktop.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxing Windows Explorer</h3>
+				<div class="date">Posted: <strong>Thu Aug 31, 2017 1:55 pm</strong></div>
+				<div class="author">by <strong>shmu26</strong></div>
+				<div class="content">Cool.<br>
+This also answered my other question, which I just asked over here:<br>
+<a href="viewtopic61656165.html?f=11&amp;t=24819" class="postlink">viewtopic.php?f=11&amp;t=24819</a></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24815&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:53:14 GMT -->
+</html>

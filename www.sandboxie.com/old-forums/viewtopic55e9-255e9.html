@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24567&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:27:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie not saving passwords on Opera closure [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie not saving passwords on Opera closure [SOLVED]</h2>
+		<p><a href="viewtopicf752f752.html?f=11&amp;t=24567">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24567</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie not saving passwords on Opera closure [SOLVED]</h3>
+				<div class="date">Posted: <strong>Sun Jun 18, 2017 12:28 pm</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content">I have just  had solved SBxie not saving bookmarks on Opera browser closure, now I have discovered that new passwords are not being saved on closure of a sandboxed Opera.<br>
+<br>
+Bearing in mind the simple settings fix applied in File Direct Access for bookmarks, which works fine, would somebody kindly advise a similar fix for saving new passwords.<br>
+<br>
+Do you think that the following would fix it ?<br>
+<br>
+opera.exe,%AppData%\Opera Software\*\Passwords*<br>
+<br>
+Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie not saving passwords on Opera closure</h3>
+				<div class="date">Posted: <strong>Mon Jun 19, 2017 12:46 pm</strong></div>
+				<div class="author">by <strong>Bertus</strong></div>
+				<div class="content">I do not use the opera browser. After a quick search, it seems that opera stores the passwords in the  "login data" file (similar to chrome).<br>
+Check if you can find the "Login Date" file the appdata directory.<br>
+<br>
+So you could use:<br>
+OpenFilePath=opera.exe,%AppData%\Opera Software\*\Login Data*<br>
+<br>
+greets</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie not saving passwords on Opera closure</h3>
+				<div class="date">Posted: <strong>Mon Jun 19, 2017 1:09 pm</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist2183.html?mode=viewprofile&amp;u=2039">Bertus</a> wrote: <a href="viewtopic764c-3764c.html?p=128741#p128741" data-post-id="128741" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jun 19, 2017 12:46 pm</div></cite>
+I do not use the opera browser. After a quick search, it seems that opera stores the passwords in the  "login data" file (similar to chrome).<br>
+Check if you can find the "Login Date" file the appdata directory.<br>
+<br>
+So you could use:<br>
+OpenFilePath=opera.exe,%AppData%\Opera Software\*\Login Data*<br>
+<br>
+greets
+</div></blockquote>
+The problem is not Opera. With an unsandboxed Opera, the new passwords stay. With a sandboxed Opera, on browser closure the new passwords are lost. The problem is with Sandboxie.<br>
+<br>
+Opera is fine, no problems. Using Sandboxie/Opera, new passwords created are not shown in Opera when the Sandboxie/Opera session has been shut down. That means the problem is with Sandboxie not Opera. This problem is identical to the same trouble I had with lost bookmarks, recently solved in an  earlier  thread on this Forum.<br>
+<br>
+All data in the sandbox is deleted on closure, so if Sandboxie is not configured to allow session changes like new bookmarks or passwords to leave  the sandbox on closure, they are deleted and Opera does not get them.<br>
+<br>
+The fix I  have  shown is identical to the successful bookmarks fix that solved missing new boomarks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie not saving passwords on Opera closure</h3>
+				<div class="date">Posted: <strong>Mon Jun 19, 2017 1:54 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello yabbadoo,<br>
+<br>
+I tested the solution proposed by Bertus and it worked fine. It doesn't work for you?<br>
+Just add (like you added before):<br>
+opera.exe,%AppData%\Opera Software\*\Login Data*<br>
+<br>
+If you want full access to Opera's profile, so that everything you do in Opera is saved directly to your host (not recommended), try adding this instead:<br>
+opera.exe,%AppData%\Opera Software\*<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie not saving passwords on Opera closure</h3>
+				<div class="date">Posted: <strong>Mon Jun 19, 2017 2:29 pm</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic21fd-221fd.html?p=128749#p128749" data-post-id="128749" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jun 19, 2017 1:54 pm</div></cite>
+Hello yabbadoo,<br>
+<br>
+I tested the solution proposed by Bertus and it worked fine. It doesn't work for you?<br>
+Just add (like you added before):<br>
+opera.exe,%AppData%\Opera Software\*\Login Data*<br>
+<br>
+If you want full access to Opera's profile, so that everything you do in Opera is saved directly to your host (not recommended), try adding this instead:<br>
+opera.exe,%AppData%\Opera Software\*<br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+Thank you Barb, you are so helpful. I have done what you said and no doubt it will no work. I will register on a new Forum  and see if the password data gets stored in the unsandboxed Opera on Sandboxie/opera closure.<br>
+I am really grateful for your time and help.<br>
+<br>
+I accidentally entered <strong>both</strong> those fixes in your post - will this be OK ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie not saving passwords on Opera closure</h3>
+				<div class="date">Posted: <strong>Mon Jun 19, 2017 2:39 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello yabbadoo ,<br>
+<br>
+The first tweak, provided by Bertus, only allows passwords to be stored (which is what you asked for).<br>
+<br>
+However, since this is the second thread you create regarding Opera, it seems that you are trying to give it full access to your host. My suggestion should allow you to achieve that.  <br>
+If you do not want to use it, you can go back to the File Restriction section , use the dropdown to select opera.exe and highlight and remove the ones you do not want to use . <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie not saving passwords on Opera closure</h3>
+				<div class="date">Posted: <strong>Tue Jun 20, 2017 5:46 am</strong></div>
+				<div class="author">by <strong>yabbadoo</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic0ded-20ded.html?p=128753#p128753" data-post-id="128753" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jun 19, 2017 2:39 pm</div></cite>
+Hello yabbadoo ,<br>
+<br>
+The first tweak, provided by Bertus, only allows passwords to be stored (which is what you asked for).<br>
+<br>
+However, since this is the second thread you create regarding Opera, it seems that you are trying to give it full access to your host. My suggestion should allow you to achieve that.  <br>
+If you do not want to use it, you can go back to the File Restriction section , use the dropdown to select opera.exe and highlight and remove the ones you do not want to use . <br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+Barb,<br>
+It is quite simple.<br>
+Sandboxie was deleting new bookmarks so that Opera never received them. Problem solved in other thread, all is now OK.<br>
+<strong>All</strong> my Forums and sites are stored as bookmarks - the Sandboxie Forum is a bookmark.<br>
+It is no use having a Forum when the login data is missing, hence my question about missing login data/passwords, which are being deleted by Sandboxie as were the bookmarks.<br>
+<br>
+Beyond  loss of bookmarks and  login/password data I have no intention of interfering with anything else of Opera's.<br>
+<br>
+Latest - I entered the two fixes opera.exe,%AppData%\Opera Software\*\Login Data* and opera.exe,%AppData%\Opera Software\* , joined a new Forum and closed the session. The new Forum showed in Opera (bookmarks) and also the login/password data had come through OK. So your latest fixes for login data/passwords as shown in the above posts has worked OK just like the bookmarks issue did.<br>
+<br>
+Everything now OK and I must thank you again Barb for your very constructive help and also the others who contributed.<br>
+Problems now all  solved.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24567&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:27:51 GMT -->
+</html>

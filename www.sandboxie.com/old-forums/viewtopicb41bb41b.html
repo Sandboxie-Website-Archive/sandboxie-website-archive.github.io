@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=46&t=18360&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:50:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [2] InjectDll Dll failed initialization</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[2] InjectDll Dll failed initialization</h2>
+		<p><a href="viewtopicf5fcf5fc.html?f=46&amp;t=18360">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=46&amp;t=18360</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>[2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Thu Feb 20, 2014 12:03 am</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content">Unfortunately this DLL load issue still exists with version 4.09.1:<br>
+<a href="viewtopic05ad05ad.php?t=15797" class="postlink">http://forums.sandboxie.com/phpBB3/view ... hp?t=15797</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.09 Beta Available (Latest Version 4.09.1)</h3>
+				<div class="date">Posted: <strong>Thu Feb 20, 2014 12:46 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>ssj100 wrote:</cite>Unfortunately this DLL load issue still exists with version 4.09.1:<br>
+<a href="viewtopic05ad05ad.php?t=15797" class="postlink">http://forums.sandboxie.com/phpBB3/view ... hp?t=15797</a></div></blockquote>
+We have gotten a few reports that this problem still exists.  But, it seems to be intermittent.  This is a high priority item now.<br>
+<br>
+Please run the resource access monitor and see if something is being blocked when you try to inject your DLL.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Mon Feb 24, 2014 1:36 am</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content">PM sent.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Mon Feb 24, 2014 2:08 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">I don't see anything interesting in your access monitor logs.  If someone has a way to reproduce this every time, that would be very helpful.  It appears to have something to do with sandboxing Windows "stations" and desktops.  Resources are being depleted somehow.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Tue Feb 25, 2014 5:58 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">There are 2 different "Dll Initialization" problems. <br>
+<br>
+1) The InjectDll setting was not working correctly.  The Dll entry point (DllMain) was not being executed first, which caused many injected dll's to fail (even SbieDll.dll in some cases).  Sometimes you would get a "CRT not initialized" error.  This has been fixed in 4.09.01.<br>
+2) Intermittently, a sandboxed app will fail to initialize and return 0xC0000142 (STATUS_DLL_INIT_FAILED).  This is an entirely different problem and is being researched now.  It seems to be caused by a memory (or other resource) shortage.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Wed Feb 26, 2014 3:18 am</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content">Thanks for the update.  Hope it can be fixed soon.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Fri Feb 28, 2014 10:46 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Curt:<br>
+<br>
+1) So IS InjectDll a general injection mechanism (like 3.x I think) or not, as tzuk told me? The InjectDll help page makes it sound like it is... And it still also includes this sentence fragment that doesn't make sense:<br>
+<br>
+"Inject" means the DLL is<br>
+<br>
+<br>
+2) Does that have anything to do with why I (or others) have NEVER been able to run Explorer sandboxed in 4.x (Win 7 at least) with SRP (AppLocker?) DLL enforcement enabled? See here: <a href="viewtopic34563456.php?p=90286#p90286" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 286#p90286</a><br>
+<br>
+I just upgraded the Win 7 system where Sandboxie is never used to the latest beta (from 4.05.05!) and it's still the same. Yet another thing on the list that it sure would be nice to see fixed someday!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Fri Feb 28, 2014 12:57 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">1) Yes, InjectDll is a general mechanism for 3rd party Sandboxie add-ons.  And we'll get rid of that sentence fragment.<br>
+2) Are you getting the same C0000142 error?  We are still working on that one.  I don't think it is related to AppLocker.<br>
+<br>
+Also, the latest beta is 4.09.01</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Fri Feb 28, 2014 1:21 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">1) OK, cool. Thanks for clarifying. :-)<br>
+<br>
+2) Yeah, when trying to "Run Windows Explorer" while SRP's DLL enforcement is applied. See other user's post 2 above mine that I linked to and that's what I get, forever. I saw you're still still trying to figure things out, just wondered if any change may fix that error code in my case too!<br>
+<br>
+<br>
+Of course ;^) -- I've installed almost every version since 4.01.01 (usually on XP). I was just stating that 4.05.05 was the last version I had tried on that system (HTPC).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Fri Feb 28, 2014 3:32 pm</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content">That's interesting, because I use SRP with DLL enforcement too in a Limited User Account.  However, I use SuRun to elevate privilege of the loaded DLL while loading it sandboxed.  Perhaps since Sandboxie versions 4+ has the "lower rights can't access higher rights" thing, it blocks SuRun's job?  But then I shouldn't be able to run the loader executable (which loads the DLL) either.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Fri Apr 04, 2014 5:18 pm</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content">Still unresolved with 4.09.02.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Fri Apr 04, 2014 5:43 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>ssj100 wrote:</cite>Still unresolved with 4.09.02.</div></blockquote>
+Can you PM me a link to your files so I can repro this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Fri Apr 04, 2014 7:53 pm</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite><blockquote><div><cite>ssj100 wrote:</cite>Still unresolved with 4.09.02.</div></blockquote>
+Can you PM me a link to your files so I can repro this?</div></blockquote>
+
+I can e-mail you?  I tried the support e-mail about 6 weeks ago, but got no reply.  I basically forwarded the e-mail correspondence I had with tzuk.  To be honest, from what tzuk said, I don't think it's fixable unless you re-write half the code in version 4 - tzuk really changed the internal mechanisms from version 3 to 4 big time.  I'm pretty sure it's related to the lower/higher rights hierarchy mechanism that was introduced.  It's basically sacrificing usability for more security.  And I'm really over "security" now - I can't get infected even if I try haha.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Thu May 08, 2014 1:15 am</strong></div>
+				<div class="author">by <strong>jmonge</strong></div>
+				<div class="content">isit fixed?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [2] InjectDll Dll failed initialization</h3>
+				<div class="date">Posted: <strong>Fri May 09, 2014 8:35 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Please try 4.9.5.  We have not had any reports of this problem in a while.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=46&t=18360&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:50:34 GMT -->
+</html>

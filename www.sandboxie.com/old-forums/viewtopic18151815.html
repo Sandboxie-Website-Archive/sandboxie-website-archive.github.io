@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=18465&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [Q] Buster Sandbox Analyzer - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[Q] Buster Sandbox Analyzer</h2>
+		<p><a href="viewtopic2cfa2cfa.html?f=22&amp;t=18465">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=18465</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Re: [Q] Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Fri Mar 28, 2014 12:24 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>operat0r2 wrote:</cite>* maybe you could send your entire BSA setup with Sandboxie ini maybe im missing something some how ?</div></blockquote>
+
+There is no relation between BSA and Sandboxie when it comes to retrieve results from VirusTotal. And the code which BSA uses to retrieve results from VirusTotal is pretty simple, so I can not imagine what the problem could be.  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"><br>
+<br>
+This is the first time I receive a bug report like this. I will try to reproduce the problem on a Windows 7 64 but I am afraid I will be unable.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [Q] Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Tue Apr 22, 2014 7:43 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I finally was able to reproduce the problem.<br>
+<br>
+The issue is not really in BSA. VirusTotal changed the way it works: some time ago you could check a virus report using directly the MD5 hash of the file, but not anymore.<br>
+<br>
+I will make a change in BSA and will release a new update.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [Q] Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Wed Nov 26, 2014 9:46 am</strong></div>
+				<div class="author">by <strong>Sahand</strong></div>
+				<div class="content">Thanks for this great BSA tool. I'm studying on malware detection rules. I studied on this software and found about 200 different behavioral rules in it. All of them are based on API calls? checking Security softwares is based on checking their Running proccesses? Is their any public and classified source for gathering them?  and if its possible introduce me some sources to study in this field. Thank U!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [Q] Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Wed Nov 26, 2014 6:54 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Sahand wrote:</cite>Thanks for this great BSA tool. I'm studying on malware detection rules. I studied on this software and found about 200 different behavioral rules in it. All of them are based on API calls? checking Security softwares is based on checking their Running proccesses? Is their any public and classified source for gathering them?  and if its possible introduce me some sources to study in this field. Thank U!</div></blockquote>
+
+Not all are API based. They can be related to the creation of specific files/file types/file creation on certain locations, related to specific registry keys in certain locations, stuff related to processes, internet connections on specific ports, ...<br>
+<br>
+There is not any public source for gathering them. There are articles published here and there but there is not a good and serious compilation as far as I know. Many of the malware behaviors I included in BSA I found them while developing the tool and doing malware analyses.<br>
+<br>
+To find for sources I used "malware behaviors" in Google but as I told, there is not anything really good out there.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=18465&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:51 GMT -->
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=51&t=21235&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:01:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 4.19 Beta Available (Latest Version 4.20 RC) - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>4.19 Beta Available (Latest Version 4.20 RC)</h2>
+		<p><a href="viewtopic472d472d.html?f=51&amp;t=21235">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=51&amp;t=21235</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>4</strong></div>
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.2)</h3>
+				<div class="date">Posted: <strong>Thu Jun 11, 2015 3:14 am</strong></div>
+				<div class="author">by <strong>kaijosta</strong></div>
+				<div class="content"><blockquote class="uncited"><div>NtGetNextProcess can be used to alter processes outside the sandbox and will now be blocked.
+</div></blockquote>
+Windows XP SP3 x86, Sbie 4.19.2.<br>
+After upgrading from 4.19.1 to 4.19.2 the error occurred after the installation.<br>
+<img src="../savepic.ru/7281934.jpg" class="postimage" alt="Image">
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE1102 Sandboxie driver (SbieDrv) unloading
+SBIE9234 Service startup error level 9153 status=C0000001 error=-1073741823
+SBIE1113 Cannot find Nt system service, reason GetNextProcess
+SBIE1103 Sandboxie driver (SbieDrv) version 4.19.2 failed to start
+SBIE1102 Sandboxie driver (SbieDrv) unloading
+SBIE9234 Service startup error level 9153 status=C0000001 error=-1073741823
+SBIE9234 Service startup error level 9153 status=C0000001 error=-1073741823
+SBIE9234 Service startup error level 9153 status=C0000034 error=-1073741772
+SBIE1113 Cannot find Nt system service, reason GetNextProcess
+SBIE1103 Sandboxie driver (SbieDrv) version 4.19.2 failed to start
+SBIE1102 Sandboxie driver (SbieDrv) unloading
+SBIE1101 Sandboxie driver (SbieDrv) version 4.19.1 initialized
+SBIE1102 Sandboxie driver (SbieDrv) unloading
+SBIE1113 Cannot find Nt system service, reason GetNextProcess
+SBIE1103 Sandboxie driver (SbieDrv) version 4.19.2 failed to start
+SBIE9234 Service startup error level 9153 status=C0000001 error=-1073741823
+SBIE1102 Sandboxie driver (SbieDrv) unloading
+SBIE1113 Cannot find Nt system service, reason GetNextProcess
+SBIE1103 Sandboxie driver (SbieDrv) version 4.19.2 failed to start
+SBIE1102 Sandboxie driver (SbieDrv) unloading
+SBIE9234 Service startup error level 9153 status=C0000001 error=-1073741823</code></pre></div>
+Back to 4.19.1.<br>
+Update: On Windows 7 x64 Sbie 4.19.2 works fine.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.2)</h3>
+				<div class="date">Posted: <strong>Thu Jun 11, 2015 4:39 am</strong></div>
+				<div class="author">by <strong>dylstew</strong></div>
+				<div class="content">For some reason, it is remembering my browsing history. Does that mean my session was not sandboxed? :/</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.2)</h3>
+				<div class="date">Posted: <strong>Thu Jun 11, 2015 10:49 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>kaijosta wrote:</cite>Windows XP SP3 x86, Sbie 4.19.2.<br>
+After upgrading from 4.19.1 to 4.19.2 the error occurred after the installation.</div></blockquote>Problem duplicated on XP SP3:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE1101 Sandboxie driver (SbieDrv) version 4.19.1 initialized
+SBIE1102 Sandboxie driver (SbieDrv) unloading
+SBIE1113 Cannot find Nt system service, reason GetNextProcess
+SBIE1103 Sandboxie driver (SbieDrv) version 4.19.2 failed to start
+SBIE9234 Service startup error level 9153 status=C0000001 error=-1073741823
+SBIE1102 Sandboxie driver (SbieDrv) unloading
+</code></pre></div>Prior version 4.19.1 works OK on XP.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.2)</h3>
+				<div class="date">Posted: <strong>Thu Jun 11, 2015 10:58 am</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Looks like 4.19.2 is not working in XP.  Wait for 4.19.3.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.3)</h3>
+				<div class="date">Posted: <strong>Thu Jun 11, 2015 12:38 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Ok, 4.19.3 has been released to fix driver loading problem in XP.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.3)</h3>
+				<div class="date">Posted: <strong>Thu Jun 11, 2015 3:10 pm</strong></div>
+				<div class="author">by <strong>kaijosta</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Ok, 4.19.3 has been released to fix driver loading problem in XP.</div></blockquote>
+Thank you. In Win XP problem is solved.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.3)</h3>
+				<div class="date">Posted: <strong>Thu Jun 11, 2015 7:55 pm</strong></div>
+				<div class="author">by <strong>Oblivion</strong></div>
+				<div class="content">Hi Curt, <br>
+<br>
+Thanks for fixing previous clipboard issues. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+<br>
+I've experienced a sandbox explorer crash when using the right-click context menu to copy a text file in a sandbox folder and pasting to another sandbox folder. Here is the <a href="http://www10.zippyshare.com/v/DTHzvtX9/file.html" class="postlink">crash dump</a> for diagnosis. (Can't attached the .dmp to this post due to file size)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.3)</h3>
+				<div class="date">Posted: <strong>Thu Jun 11, 2015 8:29 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Ok, 4.19.3 has been released to fix driver loading problem in XP.</div></blockquote>
+Nice fix. Thanks.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.3)</h3>
+				<div class="date">Posted: <strong>Fri Jun 12, 2015 4:57 am</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">4.19.3  Windows Shell Integration rt click action "Run Sandboxed" to file and folder is missing.  <br>
+"Run Sandboxed" is not in program / file / etc Context Menu<br>
+<br>
+Back to 4.19.1 still missing.  I had Run Sandboxed in 4.19.1.  Then I over install 4.19.3 and lost Run Sandboxed.  Back to 4.19.1 and Run Sandboxed still missing.   <br>
+<br>
+ [[ Not the SBIE Context Menu Run Sandboxed ]]<br>
+<br>
+Update:  After numerous iterations.  Run Sandboxed is back.  4.19.3</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.3)</h3>
+				<div class="date">Posted: <strong>Mon Jun 15, 2015 5:36 pm</strong></div>
+				<div class="author">by <strong>Solution-Design</strong></div>
+				<div class="content">The yellow border is missing, if Opera in window. The yellow border is available in full screen. Opera 12.17 x86 Windows 8.1 x64.<br>
+<br>
+IE has the yellow border.<br>
+<br>
+Edit: I've multiple resize the browser-window. Now, it is yellow. Strange.  <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.3)</h3>
+				<div class="date">Posted: <strong>Thu Jun 18, 2015 3:16 am</strong></div>
+				<div class="author">by <strong>nanana1</strong></div>
+				<div class="content">@Curt,<br>
+<br>
+It's about time we have a Windows 10 enabled SBIE beta version to test ?  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> <br>
+<br>
+A number of users are asking for it although I do not have Windows 10 myself.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.3)  Flash excep</h3>
+				<div class="date">Posted: <strong>Sat Jun 20, 2015 12:06 am</strong></div>
+				<div class="author">by <strong>sidewinder46</strong></div>
+				<div class="content">Using Windows 8.1 64 fully updated, Firefox 38.0.5, Flash 18,0,0,160, and Sandboxie 64 beta 14.9.3.  While full screening some flash videos from different sites I receive (SBIE2224 Sandboxed program has crashed: FlashPlayerPlugin_18_0_0_160.exe).  The flash exception is (0x40000015).  This does not happen to unsandboxed browser.  Thanks for the hard work.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.3)</h3>
+				<div class="date">Posted: <strong>Sun Jun 21, 2015 3:09 am</strong></div>
+				<div class="author">by <strong>otyg</strong></div>
+				<div class="content">SBIE1105 Unknown operating system version:  10.0 (10130)<br>
+SBIE1103 Sandboxie driver (SbieDrv) version 4.19.3 failed to start<br>
+SBIE9234 Service startup error level 9153 status=C0000001 error=-1073741823<br>
+SBIE1102 Sandboxie driver (SbieDrv) unloading<br>
+I am getting this error on windows 10 - remember windows 10 is out July 29th...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.3)  Flash excep</h3>
+				<div class="date">Posted: <strong>Sun Jun 21, 2015 8:28 pm</strong></div>
+				<div class="author">by <strong>btm</strong></div>
+				<div class="content"><blockquote><div><cite>sidewinder46 wrote:</cite>Using Windows 8.1 64 fully updated, Firefox 38.0.5, Flash 18,0,0,160, and Sandboxie 64 beta 14.9.3.  While full screening some flash videos from different sites I receive (SBIE2224 Sandboxed program has crashed: FlashPlayerPlugin_18_0_0_160.exe).  The flash exception is (0x40000015).  This does not happen to unsandboxed browser.  Thanks for the hard work.</div></blockquote>
+
+I can sort of confirm this issue using Windows 7 x64. For me, it only did this the first time I attempted to watch a youtube video full screen. All have worked after that first though. (so far) From the crash it seems Flash is to blame somehow though.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.19 Beta Available (Latest Version 4.19.4)</h3>
+				<div class="date">Posted: <strong>Mon Jun 22, 2015 6:48 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">4.19.4 has been released.  This release will become the 4.20 Release Candidate, if all goes well, mainly to fix the SBIE2205 "Service not implemented: CloseClipboard" error.  There are several SbieDrv.sys changes for Windows 10 that we would like to verify have no impact in any earlier Win versions.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>4</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=51&t=21235&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:01:17 GMT -->
+</html>

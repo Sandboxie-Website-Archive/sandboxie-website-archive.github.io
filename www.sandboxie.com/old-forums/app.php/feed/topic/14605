@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14605" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-02-25T15:25:22-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14605</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-02-25T15:25:22-04:00</updated>
+
+		<published>2013-02-25T15:25:22-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=87505#p87505</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=87505#p87505"/>
+		<title type="html"><![CDATA[[.02] Sandboxed Right click&gt; sendTo&gt; CustomBatchScript]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=87505#p87505"><![CDATA[
+This problem should be fixed in version 4.01.02.<br><br>Related topic:<br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=14388" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=14388</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Feb 25, 2013 2:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[PiwPi]]></name></author>
+		<updated>2013-01-29T06:27:53-04:00</updated>
+
+		<published>2013-01-29T06:27:53-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86966#p86966</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86966#p86966"/>
+		<title type="html"><![CDATA[[.02] Sandboxed Right click&gt; sendTo&gt; CustomBatchScript]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86966#p86966"><![CDATA[
+And default settings must be what you advise. Thanks! <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>Also thanks for checking into the issue.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=5871">PiwPi</a> — Tue Jan 29, 2013 5:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-01-29T06:06:49-04:00</updated>
+
+		<published>2013-01-29T06:06:49-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86964#p86964</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86964#p86964"/>
+		<title type="html"><![CDATA[[.02] Sandboxed Right click&gt; sendTo&gt; CustomBatchScript]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86964#p86964"><![CDATA[
+I can see the problem for a filename with a space.  I'll check into it.<br><br>As for Drop Rights:  Just to be clear.  On 64-bit systems without experimental protection, Drop Rights is enabled by default because some other security mechanisms are missing.  When experimental protection is enabled, and those security mechanisms are in effect, then Drop Rights is no longer a default setting when creating a new sandbox.  In version 4, there is no experimental protection, and Drop Rights is not a default setting.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Tue Jan 29, 2013 5:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[PiwPi]]></name></author>
+		<updated>2013-01-28T14:21:56-04:00</updated>
+
+		<published>2013-01-28T14:21:56-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86940#p86940</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86940#p86940"/>
+		<title type="html"><![CDATA[[.02] Sandboxed Right click&gt; sendTo&gt; CustomBatchScript]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86940#p86940"><![CDATA[
+I tried it again and that's right.<br><br>Then I tried it on a file with a space in its name, and that reproduced my issue properly. Even if I do<div class="codebox"><p>CODE: </p><pre><code>echo "%1"pause</code></pre></div>Maybe Sandboxie internals strip the "" or something ? Unless I'm doing something wrong, but that would be odd... <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br><br>PS: I bet you answered this question a billion times, but what I found here and there on the topic didn't fully address my interrogations. So instead of going into detail I'll just ask it this way: With all your knowledge on Sandboxie internals, configuration and trusted programs exceptions, do you advise to untick the "drop rights" box in Windows 7 64 bit when Experimental protection is on ? You can just go yes/no if you want, that would be helpful already. Thanks a ton <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=5871">PiwPi</a> — Mon Jan 28, 2013 1:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-01-28T13:11:15-04:00</updated>
+
+		<published>2013-01-28T13:11:15-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86936#p86936</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86936#p86936"/>
+		<title type="html"><![CDATA[[.02] Sandboxed Right click&gt; sendTo&gt; CustomBatchScript]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86936#p86936"><![CDATA[
+I might not understand the problem description but it seems to work correctly for me.<br><br>I created this batch file xx.bat in the SendTo folder:<br><div class="codebox"><p>CODE: </p><pre><code>echo %1pause</code></pre></div>Then I started Windows Explorer under Sandboxie, went to the desktop folder, right-clicked on some file and selected SendTo &gt; xx and it everything worked as expected.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Jan 28, 2013 12:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[PiwPi]]></name></author>
+		<updated>2013-01-27T18:58:15-04:00</updated>
+
+		<published>2013-01-27T18:58:15-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86909#p86909</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86909#p86909"/>
+		<title type="html"><![CDATA[[.02] Sandboxed Right click&gt; sendTo&gt; CustomBatchScript]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14605&amp;p=86909#p86909"><![CDATA[
+Hi,<br><br>I'm using Sandboxie 3.76 on Windows 7 64 bit, with experimental protection turned on. Admin rights are not dropped. (By the way is it really safe not to drop them on 64-bit with experimental protection ?)<br><br><br>When called from a sandboxed explorer right click &gt; sendTo &gt; shortcutToBatch, a custom batch script created in the real system doesn't get its arguments. Only when the batch has an actual copy inside the sandbox does it work as expected.<br><br>If the batch is "echo %1", the cmd.exe window says the syntax is incorrect for the file or folder or volume name.<br>If the batch is "echo yay", the command window echoes yay properly.<br><br>It works outside of a Sandbox.<br>To make a custom sendTo I just dropped a shortcut in C:\Users\[UserName]\AppData\Roaming\Microsoft\Windows\SendTo. The batch file itself is located in D, Sandboxie is installed in D: and its sandboxes are in a D:\Sandboxes folder.<br><br><br>See <a href="http://www.sandboxie.com/phpbb/viewtopic.php?p=86907" class="postlink">this thread</a> for more information.<br><br><br>Thanks if you can help!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=5871">PiwPi</a> — Sun Jan 27, 2013 5:58 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?p=132637 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Slow Performance with WPAD and Internet Explorer 11 - Sandboxie Support</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - Sandboxie Support" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="app.php/feed/topics_active">			
+	<link rel="canonical" href="viewtopic44654465.html?t=25105">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="assets/css/font-awesome.mince91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/en/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/sbie_prosilver/theme/tweaks.css?assets_version=7" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="../index.html" title="Home"><span class="site_logo"></span></a>
+				<h1>Sandboxie Support</h1>
+				<p>Support Forum for Sandboxie</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									<div id="search-box" class="search-box search-header" role="search">
+				<form action="https://forums.sandboxie.com/phpBB3/search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+					<button class="button button-search" type="submit" title="Search">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+					</button>
+					<a href="search.html" class="button button-search-end" title="Advanced search">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+					</a>
+					
+				</fieldset>
+				</form>
+			</div>
+						
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a733a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+																			<li>
+								<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp26c326c3.html?mode=login" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp83198319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs">
+							<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="../index.html" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">Home</span></a></span>
+										<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="index-2.html" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Board index</span></a></span>
+
+											<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="43"><a href="viewforum107e107e.html?f=43" itemprop="url"><span itemprop="title">Problems and Questions</span></a></span>
+															<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="11"><a href="viewforum8a838a83.html?f=11" itemprop="url"><span itemprop="title">Problem Reports</span></a></span>
+												</li>
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="viewtopic73717371.html?f=11&amp;t=25105">Slow Performance with WPAD and Internet Explorer 11</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Please post your problem description here<br /></div>
+<p>
+	<strong>Moderator:</strong> <a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>
+</p>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="https://www.sandboxie.com/old-forums/posting76a2.html?mode=reply&amp;f=11&amp;t=25105" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic1ca71ca7.html?f=11&amp;t=25105&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://forums.sandboxie.com/phpBB3/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="25105" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			13 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p131129" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131129">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist2f79.html?mode=viewprofile&amp;u=34856" class="username">MichaBl</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4f514f51.html?author_id=34856&amp;sr=posts">6</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Nov 15, 2017 1:42 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131129">
+
+						<h3 class="first"><a href="#p131129">Slow Performance with WPAD and Internet Explorer 11</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting75b5.html?mode=quote&amp;f=11&amp;p=131129" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic904b-2904b.html?p=131129#p131129" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist2f79.html?mode=viewprofile&amp;u=34856" class="username">MichaBl</a></strong> &raquo; </span>Wed Nov 15, 2017 1:50 pm
+			</p>
+			
+			
+			
+			<div class="content">Good evening.<br>
+We use wpad in our network environment. This works well for all our browsers as Firefox, Internet Explorer and also Chrome.<br>
+Now we installed Sandboxie 5.22 and we have very low performance with Internet Explorer 11.<br>
+Our environment is Windows 7, Internet Explorer 11 and an actual release of Sandboxie (5.22).<br>
+If I disable Sandboxie everything works well again. If I put the values for our proxy manual into the settings menu, the Internet Explorer is fast again.<br>
+If I use Internet Explorer with automatic detection or I enter the configuration url of wpad server the performance is poor.<br>
+I googled a lot for some solution but did not found anything.<br>
+Btw.: Firefox with wpad and sandboxie runs smoothly. No problems.<br>
+<br>
+Maybe anyone has a suggestion for me, what I could change?<br>
+<br>
+Thanks and kind regards<br>
+Micha Blankenburg</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131133" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131133">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Support<br /><img src="images/ranks/gloss/yellow/yellow-supportteam.png" alt="Sandboxie Support" title="Sandboxie Support" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchdf5ddf5d.html?author_id=32296&amp;sr=posts">2337</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 07, 2016 3:10 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131133">
+
+						<h3 ><a href="#p131133">Re: Slow Performance with WPAD and Internet Explorer 11</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingdfe3.html?mode=quote&amp;f=11&amp;p=131133" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicef08ef08.html?p=131133#p131133" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a></strong> &raquo; </span>Wed Nov 15, 2017 5:29 pm
+			</p>
+			
+			
+			
+			<div class="content">Hello MichaBl ,<br>
+<br>
+Are you using any security software or settings? <br>
+Does the issue occur inside a new sandbox with default settings (do not copy from other sandboxes) ? <br>
+If you revert back to 5.20, does the issue go away? <br>
+<br>
+Also, if possible, please provide the results of running the Resource Access Monitor while reproducing the issue:<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p132382" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile132382">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist2f79.html?mode=viewprofile&amp;u=34856" class="username">MichaBl</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4f514f51.html?author_id=34856&amp;sr=posts">6</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Nov 15, 2017 1:42 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content132382">
+
+						<h3 ><a href="#p132382">Re: Slow Performance with WPAD and Internet Explorer 11</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting30ad.html?mode=quote&amp;f=11&amp;p=132382" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc739c739.html?p=132382#p132382" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist2f79.html?mode=viewprofile&amp;u=34856" class="username">MichaBl</a></strong> &raquo; </span>Thu Feb 15, 2018 7:19 am
+			</p>
+			
+			
+			
+			<div class="content">Hi and sorry for late answer.<br>
+Yes, we use Symantec Endpoint Protection.<br>
+I could uninstall and test again.<br>
+The "error" occurs in default sandboxes. IE is very slow.<br>
+If I disable the sandbox with next start IE is fast again.<br>
+The error exists on all versions, I tested.<br>
+<br>
+Regards,<br>
+Micha</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p132385" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile132385">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Support<br /><img src="images/ranks/gloss/yellow/yellow-supportteam.png" alt="Sandboxie Support" title="Sandboxie Support" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchdf5ddf5d.html?author_id=32296&amp;sr=posts">2337</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 07, 2016 3:10 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content132385">
+
+						<h3 ><a href="#p132385">Re: Slow Performance with WPAD and Internet Explorer 11</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingbb81.html?mode=quote&amp;f=11&amp;p=132385" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic67506750.html?p=132385#p132385" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a></strong> &raquo; </span>Thu Feb 15, 2018 10:36 am
+			</p>
+			
+			
+			
+			<div class="content">Hello MichaBl,<br>
+<br>
+Symantec is currently not supported due to causing issues with web browsers in Sandboxie, please see:<br>
+<a href="viewtopice151e151.html?f=11&amp;t=24879&amp;hilit=symantec" class="postlink">viewtopic.php?f=11&amp;t=24879&amp;hilit=symantec</a><br>
+<br>
+See if disabling the Symantec equivalent for Norton exploit protection helps (as covered in that thread).  Otherwise, try removing Symantec for testing purposes (let us know how that worked, be sure to test inside a new Sandbox with default settings). <br>
+<br>
+Otherwise if the issue persists even without Symantec, please provide the rest of the info we requested so that we can review it. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p132507" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile132507">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist2f79.html?mode=viewprofile&amp;u=34856" class="username">MichaBl</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4f514f51.html?author_id=34856&amp;sr=posts">6</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Nov 15, 2017 1:42 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content132507">
+
+						<h3 ><a href="#p132507">Re: Slow Performance with WPAD and Internet Explorer 11</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingac8b.html?mode=quote&amp;f=11&amp;p=132507" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd108d108.html?p=132507#p132507" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist2f79.html?mode=viewprofile&amp;u=34856" class="username">MichaBl</a></strong> &raquo; </span>Mon Feb 26, 2018 12:04 pm
+			</p>
+			
+			
+			
+			<div class="content">Hi.<br>
+I uninstalled Symantec and tried again.<br>
+Same result. The connection works but it is very slow and takes lots of time till I get an connection.<br>
+I also tried a new sandbox with default settings. Same result.<br>
+Also I can not go back to version 5.20 because of Microsoft Patches.<br>
+If I go back Sandboxie crashes.<br>
+<br>
+If I disable Sandboxie (next start) and start IE everything is fast and smooth.<br>
+This happens only with enable wpad. If I setup IE with hard proxy settings everything is fine and smooth again.<br>
+I think this has something to do with wpad.<br>
+<br>
+I looked at the resource monitor but have no idea how to use it. I will read your information about it.<br>
+But any idea which switch could be used to optimize proxy settings?<br>
+<br>
+Thanks<br>
+Micha</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p132515" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile132515">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Support<br /><img src="images/ranks/gloss/yellow/yellow-supportteam.png" alt="Sandboxie Support" title="Sandboxie Support" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchdf5ddf5d.html?author_id=32296&amp;sr=posts">2337</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 07, 2016 3:10 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content132515">
+
+						<h3 ><a href="#p132515">Re: Slow Performance with WPAD and Internet Explorer 11</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingf60f.html?mode=quote&amp;f=11&amp;p=132515" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic246e246e.html?p=132515#p132515" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a></strong> &raquo; </span>Mon Feb 26, 2018 5:07 pm
+			</p>
+			
+			
+			
+			<div class="content">Hello MichaBl,<br>
+<br>
+Do you have a proxy script that we can review?<br>
+Are there any addons installed? <br>
+Are all websites presenting issues? <br>
+Please provide repro steps. <br>
+<br>
+As for Resource Access Monitor, you need to run it while reproducing the issue, then copy the output and paste it in the forums. Highlight the output once pasted, and click on the "&lt;/&gt;" to format it. <br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p132516" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile132516">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Lead Developer<br /><img src="images/ranks/gloss/yellow/yellow-developer.png" alt="Sandboxie Lead Developer" title="Sandboxie Lead Developer" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search70b370b3.html?author_id=20645&amp;sr=posts">1638</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jan 17, 2014 5:21 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Curt@invincea">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Curt@invincea</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.invincea.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content132516">
+
+						<h3 ><a href="#p132516">Re: Slow Performance with WPAD and Internet Explorer 11</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingaa97.html?mode=quote&amp;f=11&amp;p=132516" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic26032603.html?p=132516#p132516" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a></strong> &raquo; </span>Mon Feb 26, 2018 5:11 pm
+			</p>
+			
+			
+			
+			<div class="content">Are you making repeated calls to myIpAddress()  in your PAC file? This function has a lot of overhead. Replace it as in the example below.<br>
+<br>
+myIp = myIpAddress(); // save IP address<br>
+<br>
+if ( isInNet (myIp, "172.20.242.0", "255.255.255.0" ) ||<br>
+      isInNet (myIp, "172.20.243.0", "255.255.255.0" ))<br>
+...</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p132522" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile132522">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist2f79.html?mode=viewprofile&amp;u=34856" class="username">MichaBl</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4f514f51.html?author_id=34856&amp;sr=posts">6</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Nov 15, 2017 1:42 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content132522">
+
+						<h3 ><a href="#p132522">Re: Slow Performance with WPAD and Internet Explorer 11</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting56ed.html?mode=quote&amp;f=11&amp;p=132522" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicb68e-2b68e.html?p=132522#p132522" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist2f79.html?mode=viewprofile&amp;u=34856" class="username">MichaBl</a></strong> &raquo; </span>Tue Feb 27, 2018 2:43 am
+			</p>
+			
+			
+			
+			<div class="content">Hi and good morning.<br>
+<br>
+Here is the wpad script (some things are changed to x).<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>function FindProxyForURL(url, host)
+{
+        var resolved_ip = dnsResolve(host);
+        if (
+                isPlainHostName(host) ||
+                dnsDomainIs(host, ".ourdomain.local") ||
+                dnsDomainIs(host, "localhost")||
+                shExpMatch(url,"https://specialserver.ourdomain.local:8443*") ||
+                shExpMatch(url,"http://specialserver.ourdomain.local:8530*") ||
+
+                // ignoriere RFC 1918 konforme interne Adressen
+                isInNet(host, "10.0.0.0", "255.0.0.0") ||
+                isInNet(host, "172.16.0.0", "255.240.0.0") ||
+                isInNet(host, "192.168.0.0", "255.255.0.0") ||
+
+                // More Subnets...
+                isInNet(host, "xx.xx.xx.xx", "255.255.255.0") ||
+
+                // localhost
+                localHostOrDomainIs(host, "127.0.0.1") ||
+                shExpMatch(url, "http://127.0.0.1*")
+        )
+        return "DIRECT";
+        else
+        return "PROXY xx.xx.xx.xx:xxxx; DIRECT";
+}</code></pre></div>
+
+I checked the script because I thought that there may be some exhaustive use of DNS but I think it is not.<br>
+No, there are no addons installed. It is the default IE 11.<br>
+Nearly all websites react slowly when the browser (Only IE) starts in sandbox.<br>
+Firefox has no problems.<br>
+If I disable the sandbox IE is also fast again.<br>
+<br>
+Here is the output of the Resource Monitor when IE is started.<br>
+Sorry. I had to use x on some information again.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\CdRom0
+(Drive)     \Device\CdRom1
+(Drive)     \Device\HarddiskVolume2
+(Drive)     \Device\HarddiskVolume3
+(Drive)     \Device\HarddiskVolume4
+(Drive)     \Device\HarddiskVolume5
+(Drive)     \Device\HarddiskVolume6
+(Drive)     \Device\HarddiskVolume7
+(Drive)     \Device\Mup\;LanmanRedirector\;B:000000000055ccf5\files\xxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;H:000000000055ccf5\xxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;J:000000000055ccf5\xxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;K:000000000055ccf5\xxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;N:000000000055ccf5\xxxxxx\***********
+(Drive)     \Device\Mup\;LanmanRedirector\;O:000000000055ccf5\xxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;R:000000000055ccf5\xxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;S:000000000055ccf5\xxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;T:000000000055ccf5\xxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;V:000000000055ccf5\xxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;W:000000000055ccf5\xxxxxxxxxx
+Clsid       -------------------------------
+Clsid       {25336920-03F9-11CF-8FD0-00AA00686F13} HTML Document
+Clsid       {88D96A05-F192-11D4-A65F-0040963251E5} XML DOM Document 6.0
+Clsid       {9BA05972-F6A8-11CF-A442-00A0C90A8F39} ShellWindows
+Clsid       {DCB00C01-570F-4A9B-8D69-199FDBA5723B} NetworkListManager
+File/Key    -------------------------------
+File/Key X  \Device\Mup\;LanmanRedirector\;N:000000000055ccf5\files\user$\***********\
+Image       -------------------------------
+Image       *:\program files\internet explorer\iexplore.exe
+Image       c:\program files (x86)\java\jre1.8.0_151\bin\deploy.dll
+Image       c:\program files (x86)\nvidia corporation\3d vision\nvscpapi.dll
+Image       c:\program files\internet explorer\ieshims.dll
+Image       c:\program files\sandboxie\sbiedll.dll
+Image       c:\programdata\symantec\symantec endpoint protection\14.0.3876.1100.105\data\definitions\ipsdefs\20180226.040\ipseng64.dll
+Image       c:\windows\system32\advapi32.dll
+Image       c:\windows\system32\api-ms-win-core-synch-l1-2-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-advapi32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-advapi32-l2-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-normaliz-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-ole32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-shell32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-shlwapi-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-shlwapi-l2-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-user32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-version-l1-1-0.dll
+Image       c:\windows\system32\atl.dll
+Image       c:\windows\system32\avrt.dll
+Image       c:\windows\system32\comdlg32.dll
+Image       c:\windows\system32\cryptbase.dll
+Image       c:\windows\system32\d3d10level9.dll
+Image       c:\windows\system32\elshyph.dll
+Image       c:\windows\system32\gdi32.dll
+Image       c:\windows\system32\ieframe.dll
+Image       c:\windows\system32\iertutil.dll
+Image       c:\windows\system32\imm32.dll
+Image       c:\windows\system32\kernel32.dll
+Image       c:\windows\system32\kernelbase.dll
+Image       c:\windows\system32\ksuser.dll
+Image       c:\windows\system32\lpk.dll
+Image       c:\windows\system32\mf.dll
+Image       c:\windows\system32\mfplat.dll
+Image       c:\windows\system32\msctf.dll
+Image       c:\windows\system32\mshtmlmedia.dll
+Image       c:\windows\system32\msvcrt.dll
+Image       c:\windows\system32\netprofm.dll
+Image       c:\windows\system32\nlaapi.dll
+Image       c:\windows\system32\nlsdata0007.dll
+Image       c:\windows\system32\nlslexicons0007.dll
+Image       c:\windows\system32\normaliz.dll
+Image       c:\windows\system32\ntdll.dll
+Image       c:\windows\system32\nvd3dum.dll
+Image       c:\windows\system32\ole32.dll
+Image       c:\windows\system32\oleaut32.dll
+Image       c:\windows\system32\powrprof.dll
+Image       c:\windows\system32\profapi.dll
+Image       c:\windows\system32\psapi.dll
+Image       c:\windows\system32\rpcrt4.dll
+Image       c:\windows\system32\sechost.dll
+Image       c:\windows\system32\shell32.dll
+Image       c:\windows\system32\shlwapi.dll
+Image       c:\windows\system32\sysfer.dll
+Image       c:\windows\system32\urlmon.dll
+Image       c:\windows\system32\user32.dll
+Image       c:\windows\system32\userenv.dll
+Image       c:\windows\system32\usp10.dll
+Image       c:\windows\system32\uxtheme.dll
+Image       c:\windows\system32\version.dll
+Image       c:\windows\system32\wininet.dll
+Image       c:\windows\system32\winmm.dll
+Image       c:\windows\syswow64\schannel.dll
+Image       c:\windows\winsxs\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\comctl32.dll
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\C__ProgramData_Symantec_Symantec Endpoint Protection_14.0.3876.1100.105_Data_Definitions_IPSDefs_20180226.040
+Ipc         \BaseNamedObjects\CGSCE
+Ipc         \BaseNamedObjects\CINJR
+Ipc         \BaseNamedObjects\CNDIE
+Ipc         \BaseNamedObjects\CSECE
+Ipc         \BaseNamedObjects\IDS_STORAGE_MUTEX
+Ipc         \RPC Control\epmapper
+Ipc         \RPC Control\keysvc
+Ipc         \RPC Control\LSMApi
+Ipc         \Sessions\2\BaseNamedObjects\{5312EE61-79E3-4A24-BFE1-132B85B23C3A}
+Ipc         \Sessions\2\BaseNamedObjects\{66D0969A-1E86-44CF-B4EC-3806DDDA3B5D}
+Ipc         \Sessions\2\BaseNamedObjects\C__ProgramData_Symantec_Symantec Endpoint Protection_14.0.3876.1100.105_Data_Definitions_IPSDefs_20180226.040
+Ipc         \Sessions\2\BaseNamedObjects\CGSCE
+Ipc         \Sessions\2\BaseNamedObjects\CINJR
+Ipc         \Sessions\2\BaseNamedObjects\CNDIE
+Ipc         \Sessions\2\BaseNamedObjects\CSECE
+Ipc         \Sessions\2\BaseNamedObjects\https://secure-ds.serving-sys.com/
+Ipc         \Sessions\2\BaseNamedObjects\https://www.heise.de/
+Ipc         \Sessions\2\BaseNamedObjects\IDS_STORAGE_MUTEX
+Ipc         \Sessions\2\BaseNamedObjects\ie_ias_00001D38-0000-0000-0000-000000000000
+Ipc         \Sessions\2\BaseNamedObjects\IEFrame.EventCheckDefaultBrowser
+Ipc         \Sessions\2\BaseNamedObjects\IEFrame.EventCheckEuppFirstRun.Desktop
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IESQMMUTEX_9944_252
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IESQMMUTEX_9944_506
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IESQMMUTEX_9944_519
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IESQMMUTEX_9944_57
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IESQMMUTEX_9944_580
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_iso_sm_e_26d8_11401_7d
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_iso_sm_e_26d8_1401_7d
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_iso_sm_e_26d8_21401_7d
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_iso_sm_e_26d8_31403_7d
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:0_b
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:1_a
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:2_c
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_10
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_11
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_12
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_13
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_14
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_15
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_16
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_17
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_3
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_4
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_5
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_7
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_8
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:3_f
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:6_2
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:6_6
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:6_d
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:7_1
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:7_9
+Ipc         \Sessions\2\BaseNamedObjects\IsoScope_26d8_IsoSpaceV2_ScopeTrusted_0:7_e
+Ipc         \Sessions\2\BaseNamedObjects\IsoSpaceV2_LogonHighx64
+Ipc         \Sessions\2\BaseNamedObjects\OleDfRoot7F80DE3F3CD788AF
+Ipc         \Sessions\2\BaseNamedObjects\OleDfRootB519216776FA968F
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_7480
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_cryptsvc
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_DcomLaunch
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\2\BaseNamedObjects\SboxSession
+Ipc         \Sessions\2\BaseNamedObjects\SmartScreen_ClientId_Mutex
+Ipc         \Sessions\2\BaseNamedObjects\SmartScreen_UrsCache_4A72F430-B40C-4D36-A068-CE33ADA5ADF9Low_STWKAUFM_***********
+Ipc         \Sessions\2\BaseNamedObjects\SmartScreen_UrsCacheMutex_4A72F430-B40C-4D36-A068-CE33ADA5ADF9Low_STWKAUFM_***********
+Ipc         \Sessions\2\BaseNamedObjects\UpdatingNewTabPageData
+Ipc      O  \...\!PrivacIE!SharedMem!Settings
+Ipc      O  \BaseNamedObjects\msctf.serverDefault2
+Ipc      O  \BaseNamedObjects\TabletHardwarePresent
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-advapi32-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-normaliz-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-ole32-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-shlwapi-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-user32-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-version-l1-1-0.dll
+Ipc      O  \KnownDlls\COMDLG32.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\IERTUTIL.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\kernelbase.dll
+Ipc      O  \KnownDlls\LPK.dll
+Ipc      O  \KnownDlls\MSCTF.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\NORMALIZ.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\profapi.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\URLMON.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\USERENV.dll
+Ipc      O  \KnownDlls\USP10.dll
+Ipc      O  \KnownDlls\WININET.dll
+Ipc      O  \RPC Control\dhcpcsvc
+Ipc      O  \RPC Control\dhcpcsvc6
+Ipc      O  \RPC Control\DNSResolver
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\protected_storage
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \RPC Control\umpo
+Ipc      O  \Sessions\2\BaseNamedObjects\CTF.AsmListCache.FMPDefault2
+Ipc      O  \Sessions\2\BaseNamedObjects\MSCTF.AsmCacheReady.Default2
+Ipc      O  \Sessions\2\BaseNamedObjects\MSCTF.CtfActivated.Default2
+Ipc      O  \Sessions\2\BaseNamedObjects\windows_webcache_bloom_section_{AF4300EF-3523-46AB-8F4A-AA315689DC6F}
+Ipc      O  \Sessions\2\Windows\ApiPort
+Ipc      O  \Sessions\2\Windows\SharedSection
+Ipc      O  \ThemeApiPort
+Pipe        -------------------------------
+Pipe        \Device\HarddiskVolume2
+Pipe        \Device\HarddiskVolume2\Sandbox\***********\DefaultBox
+Pipe        \Device\HarddiskVolume2\Sandbox\***********\DefaultBox\user
+Pipe        \Device\KsecDD
+Pipe     O  \Device\Afd
+Pipe     O  \Device\NetBT_Tcpip_{555BB1E9-0A48-407D-97C8-728BBE7C90D1}
+Pipe     O  \Device\NetBT_Tcpip_{89202570-6D08-49BA-99E9-2CB3222D77B7}
+Pipe     O  \Device\NetBT_Tcpip_{D5689127-39A2-4848-B4DF-FEF9751EAD3A}
+Pipe     O  \Device\NetBT_Tcpip_{FCBDCE38-DB35-4C43-89B2-19C8284CB28B}
+WinCls      -------------------------------
+WinCls   O  MS_WebCheckMonitor
+WinCls   O  Shell_TrayWnd
+WinCls   X  MS_AutodialMonitor
+WinCls   X  Progman</code></pre></div>
+
+<br>
+No, I do not use myIpAddress() in my scripts.<br>
+I tried to minimize the use of DNS and all the things that make the script slow.<br>
+But maybe I missed something.  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> <br>
+<br>
+Thanks and have a good day.<br>
+Micha</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p132528" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile132528">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Support<br /><img src="images/ranks/gloss/yellow/yellow-supportteam.png" alt="Sandboxie Support" title="Sandboxie Support" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchdf5ddf5d.html?author_id=32296&amp;sr=posts">2337</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 07, 2016 3:10 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content132528">
+
+						<h3 ><a href="#p132528">Re: Slow Performance with WPAD and Internet Explorer 11</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingc162.html?mode=quote&amp;f=11&amp;p=132528" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic705e705e.html?p=132528#p132528" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a></strong> &raquo; </span>Tue Feb 27, 2018 10:39 am
+			</p>
+			
+			
+			
+			<div class="content">Hello MichaBl,<br>
+<br>
+Can you please re-post the output of Res. Acc. Mon, without Symantec? <br>
+As explained before, it is currently not supported, as it causes issues with web browsers (YMMV, some users were able to find workarounds as provided before, but we need to see the results without it) .<br>
+<br>
+I am also seeing references to a network drive. If needed, you may want to enable access to it <br>
+Right-click on your Sandbox--&gt; Sandbox settings --&gt; Restrictions --&gt; Network files <br>
+Un-check the block and re-test. <br>
+<br>
+If you need to open a path to the drive (for read / write access) :<br>
+Sandbox Settings -&gt; Resource Access -&gt; File Access<br>
+Choose the level of access you want to provide, apply it and okay your way out.<br>
+<br>
+Is the slowness issue present without using WPAD but running IE Sandboxed? <br>
+<br>
+I also noticed this nvidia entry:<br>
+c:\program files (x86)\nvidia corporation\3d vision\nvscpapi.dll<br>
+I understand you are using IE, however, please have a look at this Firefox thread regarding slowness and nvidia drivers:<br>
+<a href="viewtopic93a393a3.html?p=127330#p127330" class="postlink">viewtopic.php?p=127330#p127330</a><br>
+<br>
+Regards,<br>
+Barb.-<br>
+<br>
+PS: Regarding your script, I am waiting for the devs to review that part.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p132584" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile132584">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist2f79.html?mode=viewprofile&amp;u=34856" class="username">MichaBl</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4f514f51.html?author_id=34856&amp;sr=posts">6</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Nov 15, 2017 1:42 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content132584">
+
+						<h3 ><a href="#p132584">Re: Slow Performance with WPAD and Internet Explorer 11</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingc49e.html?mode=quote&amp;f=11&amp;p=132584" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc10e-2c10e.html?p=132584#p132584" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist2f79.html?mode=viewprofile&amp;u=34856" class="username">MichaBl</a></strong> &raquo; </span>Fri Mar 02, 2018 6:46 am
+			</p>
+			
+			
+			
+			<div class="content">Hi Barb.<br>
+Okay. Here is the output without symantec.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\CdRom0
+(Drive)     \Device\CdRom1
+(Drive)     \Device\HarddiskVolume2
+(Drive)     \Device\HarddiskVolume3
+(Drive)     \Device\HarddiskVolume4
+(Drive)     \Device\HarddiskVolume5
+(Drive)     \Device\HarddiskVolume6
+(Drive)     \Device\HarddiskVolume7
+(Drive)     \Device\Mup\;LanmanRedirector\;B:0000000000138651\xxxxxxxxxxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;H:0000000000138651\xxxxxxxxxxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;J:0000000000138651\xxxxxxxxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;K:0000000000138651\xxxxxxxxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;N:0000000000138651\xxxxxxxxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;O:0000000000138651\xxxxxxxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;R:0000000000138651\xxxxxxxxxxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;S:0000000000138651\xxxxxxxxxxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;T:0000000000138651\xxxxxxxxxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;V:0000000000138651\xxxxxxxxxxxxxxxxxx
+(Drive)     \Device\Mup\;LanmanRedirector\;W:0000000000138651\xxxxxxxxxxxxxxxxxxx
+Clsid       -------------------------------
+Clsid       {00000341-0000-0000-C000-000000000046} ?
+Clsid       {25336920-03F9-11CF-8FD0-00AA00686F13} HTML Document
+Clsid       {30766BD2-EA1C-4F28-BF27-0B44E2F68DB7} Windows Search Root
+Clsid       {88D96A05-F192-11D4-A65F-0040963251E5} XML DOM Document 6.0
+Clsid       {9BA05972-F6A8-11CF-A442-00A0C90A8F39} ShellWindows
+Clsid       {C39EE728-D419-4BD4-A3EF-EDA059DBD935} WinInetBroker Class
+Clsid       {DCB00C01-570F-4A9B-8D69-199FDBA5723B} NetworkListManager
+Clsid    O  {7D096C5F-AC08-4F1F-BEB7-5C22C517CE39} Windows Search Manager
+Clsid    O  {A47979D2-C419-11D9-A5B4-001185AD2B89} Network List Manager
+File/Key    -------------------------------
+File/Key X  \Device\Mup\;LanmanRedirector\;N:0000000000138651\files\user$\***********\
+Image       -------------------------------
+Image       *:\program files (x86)\internet explorer\iexplore.exe
+Image       *:\program files\internet explorer\iexplore.exe
+Image       *:\program files\sandboxie\sandboxiecrypto.exe
+Image       *:\program files\sandboxie\sandboxiedcomlaunch.exe
+Image       *:\program files\sandboxie\sandboxierpcss.exe
+Image       *:\windows\system32\dllhost.exe
+Image       c:\progra~2\micros~1\office15\msohev.dll
+Image       c:\progra~2\micros~1\office15\urlredir.dll
+Image       c:\program files (x86)\adobe\acrobat 11.0\acrobat\locale\de_de\acroiefavclient.deu
+Image       c:\program files (x86)\bonjour\mdnsnsp.dll
+Image       c:\program files (x86)\common files\adobe\acrobat\wcieactivex\acroiefavclient.dll
+Image       c:\program files (x86)\internet explorer\ieproxy.dll
+Image       c:\program files (x86)\internet explorer\ieshims.dll
+Image       c:\program files (x86)\internet explorer\sqmapi.dll
+Image       c:\program files (x86)\java\jre1.8.0_151\bin\deploy.dll
+Image       c:\program files (x86)\java\jre1.8.0_151\bin\jp2ssv.dll
+Image       c:\program files (x86)\java\jre1.8.0_151\bin\msvcr100.dll
+Image       c:\program files (x86)\java\jre1.8.0_151\bin\ssv.dll
+Image       c:\program files (x86)\nvidia corporation\3d vision\nvscpapi.dll
+Image       c:\program files\bonjour\mdnsnsp.dll
+Image       c:\program files\internet explorer\ieproxy.dll
+Image       c:\program files\internet explorer\ieshims.dll
+Image       c:\program files\internet explorer\sqmapi.dll
+Image       c:\program files\sandboxie\32\sbiedll.dll
+Image       c:\program files\sandboxie\sbiedll.dll
+Image       c:\windows\system32\advapi32.dll
+Image       c:\windows\system32\api-ms-win-core-synch-l1-2-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-advapi32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-advapi32-l2-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-normaliz-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-ole32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-shell32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-shlwapi-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-shlwapi-l2-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-user32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-version-l1-1-0.dll
+Image       c:\windows\system32\apphelp.dll
+Image       c:\windows\system32\atl.dll
+Image       c:\windows\system32\avrt.dll
+Image       c:\windows\system32\bcrypt.dll
+Image       c:\windows\system32\bcryptprimitives.dll
+Image       c:\windows\system32\cfgmgr32.dll
+Image       c:\windows\system32\clbcatq.dll
+Image       c:\windows\system32\comdlg32.dll
+Image       c:\windows\system32\credssp.dll
+Image       c:\windows\system32\crypt32.dll
+Image       c:\windows\system32\cryptbase.dll
+Image       c:\windows\system32\cryptnet.dll
+Image       c:\windows\system32\cryptsp.dll
+Image       c:\windows\system32\cryptsvc.dll
+Image       c:\windows\system32\d2d1.dll
+Image       c:\windows\system32\d3d10level9.dll
+Image       c:\windows\system32\d3d11.dll
+Image       c:\windows\system32\devobj.dll
+Image       c:\windows\system32\dhcpcsvc.dll
+Image       c:\windows\system32\dhcpcsvc6.dll
+Image       c:\windows\system32\dnsapi.dll
+Image       c:\windows\system32\dui70.dll
+Image       c:\windows\system32\duser.dll
+Image       c:\windows\system32\dwmapi.dll
+Image       c:\windows\system32\dwrite.dll
+Image       c:\windows\system32\dxgi.dll
+Image       c:\windows\system32\elshyph.dll
+Image       c:\windows\system32\esent.dll
+Image       c:\windows\system32\explorerframe.dll
+Image       c:\windows\system32\fwpuclnt.dll
+Image       c:\windows\system32\gdi32.dll
+Image       c:\windows\system32\ieframe.dll
+Image       c:\windows\system32\iertutil.dll
+Image       c:\windows\system32\ieui.dll
+Image       c:\windows\system32\imm32.dll
+Image       c:\windows\system32\iphlpapi.dll
+Image       c:\windows\system32\jscript.dll
+Image       c:\windows\system32\jsproxy.dll
+Image       c:\windows\system32\kernel32.dll
+Image       c:\windows\system32\kernelbase.dll
+Image       c:\windows\system32\ksuser.dll
+Image       c:\windows\system32\lpk.dll
+Image       c:\windows\system32\mf.dll
+Image       c:\windows\system32\mfplat.dll
+Image       c:\windows\system32\mlang.dll
+Image       c:\windows\system32\msasn1.dll
+Image       c:\windows\system32\msctf.dll
+Image       c:\windows\system32\mshtml.dll
+Image       c:\windows\system32\mshtmlmedia.dll
+Image       c:\windows\system32\msimg32.dll
+Image       c:\windows\system32\msimtf.dll
+Image       c:\windows\system32\mssprxy.dll
+Image       c:\windows\system32\msvcp100.dll
+Image       c:\windows\system32\msvcr100.dll
+Image       c:\windows\system32\msvcrt.dll
+Image       c:\windows\system32\mswsock.dll
+Image       c:\windows\system32\msxml6.dll
+Image       c:\windows\system32\naturallanguage6.dll
+Image       c:\windows\system32\ncrypt.dll
+Image       c:\windows\system32\netapi32.dll
+Image       c:\windows\system32\netprofm.dll
+Image       c:\windows\system32\netutils.dll
+Image       c:\windows\system32\nlaapi.dll
+Image       c:\windows\system32\nlsdata0007.dll
+Image       c:\windows\system32\nlslexicons0007.dll
+Image       c:\windows\system32\normaliz.dll
+Image       c:\windows\system32\npmproxy.dll
+Image       c:\windows\system32\nsi.dll
+Image       c:\windows\system32\ntdll.dll
+Image       c:\windows\system32\ntmarta.dll
+Image       c:\windows\system32\nvapi.dll
+Image       c:\windows\system32\nvd3dum.dll
+Image       c:\windows\system32\nvspcap.dll
+Image       c:\windows\system32\nvwgf2um.dll
+Image       c:\windows\system32\ole32.dll
+Image       c:\windows\system32\oleacc.dll
+Image       c:\windows\system32\oleaut32.dll
+Image       c:\windows\system32\powrprof.dll
+Image       c:\windows\system32\profapi.dll
+Image       c:\windows\system32\propsys.dll
+Image       c:\windows\system32\psapi.dll
+Image       c:\windows\system32\rasadhlp.dll
+Image       c:\windows\system32\rpcepmap.dll
+Image       c:\windows\system32\rpcrt4.dll
+Image       c:\windows\system32\rpcrtremote.dll
+Image       c:\windows\system32\rpcss.dll
+Image       c:\windows\system32\rsaenh.dll
+Image       c:\windows\system32\samcli.dll
+Image       c:\windows\system32\samlib.dll
+Image       c:\windows\system32\sechost.dll
+Image       c:\windows\system32\secur32.dll
+Image       c:\windows\system32\sensapi.dll
+Image       c:\windows\system32\setupapi.dll
+Image       c:\windows\system32\shdocvw.dll
+Image       c:\windows\system32\shell32.dll
+Image       c:\windows\system32\shlwapi.dll
+Image       c:\windows\system32\srvcli.dll
+Image       c:\windows\system32\sspicli.dll
+Image       c:\windows\system32\sxs.dll
+Image       c:\windows\system32\t2embed.dll
+Image       c:\windows\system32\uianimation.dll
+Image       c:\windows\system32\urlmon.dll
+Image       c:\windows\system32\user32.dll
+Image       c:\windows\system32\userenv.dll
+Image       c:\windows\system32\usp10.dll
+Image       c:\windows\system32\uxtheme.dll
+Image       c:\windows\system32\version.dll
+Image       c:\windows\system32\vssapi.dll
+Image       c:\windows\system32\vsstrace.dll
+Image       c:\windows\system32\webio.dll
+Image       c:\windows\system32\windowscodecs.dll
+Image       c:\windows\system32\windowscodecsext.dll
+Image       c:\windows\system32\winhttp.dll
+Image       c:\windows\system32\wininet.dll
+Image       c:\windows\system32\winmm.dll
+Image       c:\windows\system32\winnsi.dll
+Image       c:\windows\system32\wintrust.dll
+Image       c:\windows\system32\wkscli.dll
+Image       c:\windows\system32\wldap32.dll
+Image       c:\windows\system32\ws2_32.dll
+Image       c:\windows\system32\wship6.dll
+Image       c:\windows\system32\wshtcpip.dll
+Image       c:\windows\system32\wtsapi32.dll
+Image       c:\windows\system32\xmllite.dll
+Image       c:\windows\syswow64\advapi32.dll
+Image       c:\windows\syswow64\api-ms-win-downlevel-advapi32-l1-1-0.dll
+Image       c:\windows\syswow64\api-ms-win-downlevel-normaliz-l1-1-0.dll
+Image       c:\windows\syswow64\api-ms-win-downlevel-ole32-l1-1-0.dll
+Image       c:\windows\syswow64\api-ms-win-downlevel-shlwapi-l1-1-0.dll
+Image       c:\windows\syswow64\api-ms-win-downlevel-user32-l1-1-0.dll
+Image       c:\windows\syswow64\api-ms-win-downlevel-version-l1-1-0.dll
+Image       c:\windows\syswow64\bcryptprimitives.dll
+Image       c:\windows\syswow64\cfgmgr32.dll
+Image       c:\windows\syswow64\clbcatq.dll
+Image       c:\windows\syswow64\comdlg32.dll
+Image       c:\windows\syswow64\crypt32.dll
+Image       c:\windows\syswow64\cryptbase.dll
+Image       c:\windows\syswow64\devobj.dll
+Image       c:\windows\syswow64\gdi32.dll
+Image       c:\windows\syswow64\ieapfltr.dll
+Image       c:\windows\syswow64\iertutil.dll
+Image       c:\windows\syswow64\imagehlp.dll
+Image       c:\windows\syswow64\jscript9.dll
+Image       c:\windows\syswow64\kernel32.dll
+Image       c:\windows\syswow64\kernelbase.dll
+Image       c:\windows\syswow64\lpk.dll
+Image       c:\windows\syswow64\msasn1.dll
+Image       c:\windows\syswow64\msctf.dll
+Image       c:\windows\syswow64\msvcrt.dll
+Image       c:\windows\syswow64\normaliz.dll
+Image       c:\windows\syswow64\nsi.dll
+Image       c:\windows\syswow64\ntdll.dll
+Image       c:\windows\syswow64\ole32.dll
+Image       c:\windows\syswow64\oleacc.dll
+Image       c:\windows\syswow64\oleaut32.dll
+Image       c:\windows\syswow64\profapi.dll
+Image       c:\windows\syswow64\psapi.dll
+Image       c:\windows\syswow64\rpcrt4.dll
+Image       c:\windows\syswow64\schannel.dll
+Image       c:\windows\syswow64\sechost.dll
+Image       c:\windows\syswow64\setupapi.dll
+Image       c:\windows\syswow64\shell32.dll
+Image       c:\windows\syswow64\shlwapi.dll
+Image       c:\windows\syswow64\sspicli.dll
+Image       c:\windows\syswow64\uiautomationcore.dll
+Image       c:\windows\syswow64\urlmon.dll
+Image       c:\windows\syswow64\user32.dll
+Image       c:\windows\syswow64\userenv.dll
+Image       c:\windows\syswow64\usp10.dll
+Image       c:\windows\syswow64\wininet.dll
+Image       c:\windows\syswow64\wintrust.dll
+Image       c:\windows\syswow64\wldap32.dll
+Image       c:\windows\syswow64\ws2_32.dll
+Image       c:\windows\winsxs\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\comctl32.dll
+Image       c:\windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18837_none_ec86b8d6858ec0bc\comctl32.dll
+Image       c:\windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\comctl32.dll
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\__ComCatalogCache__
+Ipc         \BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{1018FCBD-8AD0-44FD-89DB-06EC7DA3EF20}.2.ver0x0000000000000001.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000041.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000002.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \BaseNamedObjects\RotHintTable
+Ipc         \BaseNamedObjects\windows_shell_global_counters
+Ipc         \RPC Control\actkernel
+Ipc         \RPC Control\epmapper
+Ipc         \RPC Control\keysvc
+Ipc         \RPC Control\keysvc2
+Ipc         \RPC Control\OLE51B23070612E4B79A46A6B02AA9B
+Ipc         \RPC Control\OLE54600F914A7343BAA2A42942B4A7
+Ipc         \RPC Control\OLEAD33B1C6609441399A32E5022EB8
+Ipc         \RPC Control\OLEF56B0BD24FDA4B2FA81ECBDF190F
+Ipc         \RPC Control\plugplay
+Ipc         \Sessions\1\BaseNamedObjects\!BrowserEmulation!SharedMemory!Mutex
+Ipc         \Sessions\1\BaseNamedObjects\_!SHMSFTHISTORY!_
+Ipc         \Sessions\1\BaseNamedObjects\__ComCatalogCache__
+Ipc         \Sessions\1\BaseNamedObjects\{5312EE61-79E3-4A24-BFE1-132B85B23C3A}
+Ipc         \Sessions\1\BaseNamedObjects\{66D0969A-1E86-44CF-B4EC-3806DDDA3B5D}
+Ipc         \Sessions\1\BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \Sessions\1\BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{1018FCBD-8AD0-44FD-89DB-06EC7DA3EF20}.2.ver0x0000000000000001.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000041.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000002.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users*Blankenburg*AppData*Local*Microsoft*Windows*Caches*{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x000000000000021e.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users*Blankenburg*AppData*Local*Microsoft*Windows*Caches*cversions.1.ro
+Ipc         \Sessions\1\BaseNamedObjects\CommunicationManager_Mutex
+Ipc         \Sessions\1\BaseNamedObjects\ComPlusCOMRegTable
+Ipc         \Sessions\1\BaseNamedObjects\https://secure-ds.serving-sys.com/
+Ipc         \Sessions\1\BaseNamedObjects\https://www.heise.de/
+Ipc         \Sessions\1\BaseNamedObjects\ie_ias_00001658-0000-0000-0000-000000000000
+Ipc         \Sessions\1\BaseNamedObjects\IEFrame.EventCheckDefaultBrowser
+Ipc         \Sessions\1\BaseNamedObjects\IEFrame.EventCheckEuppFirstRun.Desktop
+Ipc         \Sessions\1\BaseNamedObjects\IESQM-5720_S-1-5-21-2071489870-871181738-1609722162-3432
+Ipc         \Sessions\1\BaseNamedObjects\IExplore.Sqm.psenr
+Ipc         \Sessions\1\BaseNamedObjects\InternetExplorerDOMStoreQuota
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_ConnHashTable&lt;5720&gt;_HashTable_Mutex
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IE_EarlyTabStart_0x1294
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IE_EarlyTabStart_0x1294_Mutex
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IEFrame!GetAsyncKeyStateQuery
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IEFrame!GetAsyncKeyStateReply
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IEFrame!GetAsyncKeyStateSharedMem
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IESQMMUTEX_5720_252
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IESQMMUTEX_5720_274
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IESQMMUTEX_5720_303
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IESQMMUTEX_5720_331
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IESQMMUTEX_5720_506
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IESQMMUTEX_5720_519
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IESQMMUTEX_5720_57
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IESQMMUTEX_5720_580
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_iso_sm_e_1658_11401_7d
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_iso_sm_e_1658_1401_7d
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IsoSpaceV2_ScopeTrusted
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IsoSpaceV2_ScopeTrusted_0:3_3
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IsoSpaceV2_ScopeTrusted_0:3_4
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IsoSpaceV2_ScopeTrusted_0:3_5
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IsoSpaceV2_ScopeTrusted_0:6_2
+Ipc         \Sessions\1\BaseNamedObjects\IsoScope_1658_IsoSpaceV2_ScopeTrusted_0:7_1
+Ipc         \Sessions\1\BaseNamedObjects\IsoSpaceV2_ConnHashTable&lt;5720&gt;
+Ipc         \Sessions\1\BaseNamedObjects\IsoSpaceV2_LogonHighx64
+Ipc         \Sessions\1\BaseNamedObjects\IsoSpaceV2_LogonMediumx64
+Ipc         \Sessions\1\BaseNamedObjects\MSIMGSIZECacheMap
+Ipc         \Sessions\1\BaseNamedObjects\MSIMGSIZECacheMutex
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRoot2E48C97EF0AC0F6D
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRoot446BB3B75381BA5B
+Ipc         \Sessions\1\BaseNamedObjects\RotHintTable
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_3536
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_3780
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_5684
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_5720
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_7476
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_7924
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_RPCSS_SXS_READY
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceCrypto_Mutex1
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_cryptsvc
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_DcomLaunch
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_Mutex1
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcEptMapper
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\1\BaseNamedObjects\SboxSession
+Ipc         \Sessions\1\BaseNamedObjects\ScmCreatedEvent
+Ipc         \Sessions\1\BaseNamedObjects\SmartScreen_AppRepSettings_Mutex
+Ipc         \Sessions\1\BaseNamedObjects\SmartScreen_ClientId_Mutex
+Ipc         \Sessions\1\BaseNamedObjects\SmartScreen_UrsCache_4A72F430-B40C-4D36-A068-CE33ADA5ADF9Low_STWKAUFM_***********
+Ipc         \Sessions\1\BaseNamedObjects\SmartScreen_UrsCacheMutex_4A72F430-B40C-4D36-A068-CE33ADA5ADF9Low_STWKAUFM_***********
+Ipc         \Sessions\1\BaseNamedObjects\SqmData_IESQM-5720_S-1-5-21-2071489870-871181738-1609722162-3432
+Ipc         \Sessions\1\BaseNamedObjects\URLBLOCK_DOWNLOAD_MUTEX
+Ipc         \Sessions\1\BaseNamedObjects\URLBLOCK_FILEMAPSWITCH_MUTEX_5720
+Ipc         \Sessions\1\BaseNamedObjects\URLBLOCK_HASHFILESWITCH_MUTEX
+Ipc         \Sessions\1\BaseNamedObjects\URLBlockSharedMemory_5720
+Ipc         \Sessions\1\BaseNamedObjects\URLBlockUpdateEvent_1_5720
+Ipc         \Sessions\1\BaseNamedObjects\UrlZonesSM_***********
+Ipc         \Sessions\1\BaseNamedObjects\VERMGMTBlockListFileMutex
+Ipc         \Sessions\1\BaseNamedObjects\VERMGMTSharedMemory
+Ipc         \Sessions\1\BaseNamedObjects\windows_ie_global_counters
+Ipc         \Sessions\1\BaseNamedObjects\windows_shell_global_counters
+Ipc         \Sessions\1\BaseNamedObjects\ZonesCacheCounterMutex
+Ipc         \Sessions\1\BaseNamedObjects\ZonesLockedCacheCounterMutex
+Ipc      O  \...\!IECompat!Mutex
+Ipc      O  \...\!PrivacIE!SharedMem!Counter
+Ipc      O  \...\!PrivacIE!SharedMem!Mutex
+Ipc      O  \...\!PrivacIE!SharedMem!Settings
+Ipc      O  \BaseNamedObjects\FontCachePort
+Ipc      O  \BaseNamedObjects\msctf.serverDefault1
+Ipc      O  \KernelObjects\MaximumCommitCondition
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-advapi32-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-normaliz-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-ole32-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-shlwapi-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-user32-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-version-l1-1-0.dll
+Ipc      O  \KnownDlls\CFGMGR32.dll
+Ipc      O  \KnownDlls\clbcatq.dll
+Ipc      O  \KnownDlls\COMDLG32.dll
+Ipc      O  \KnownDlls\CRYPT32.dll
+Ipc      O  \KnownDlls\DEVOBJ.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\IERTUTIL.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\KERNELBASE.dll
+Ipc      O  \KnownDlls\LPK.dll
+Ipc      O  \KnownDlls\MSASN1.dll
+Ipc      O  \KnownDlls\MSCTF.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\NORMALIZ.dll
+Ipc      O  \KnownDlls\NSI.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\profapi.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\Setupapi.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\URLMON.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\USERENV.dll
+Ipc      O  \KnownDlls\USP10.dll
+Ipc      O  \KnownDlls\WININET.dll
+Ipc      O  \KnownDlls\WINTRUST.dll
+Ipc      O  \KnownDlls\WLDAP32.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \KnownDlls32\advapi32.dll
+Ipc      O  \KnownDlls32\api-ms-win-downlevel-advapi32-l1-1-0.dll
+Ipc      O  \KnownDlls32\api-ms-win-downlevel-normaliz-l1-1-0.dll
+Ipc      O  \KnownDlls32\api-ms-win-downlevel-ole32-l1-1-0.dll
+Ipc      O  \KnownDlls32\api-ms-win-downlevel-shlwapi-l1-1-0.dll
+Ipc      O  \KnownDlls32\api-ms-win-downlevel-user32-l1-1-0.dll
+Ipc      O  \KnownDlls32\api-ms-win-downlevel-version-l1-1-0.dll
+Ipc      O  \KnownDlls32\CFGMGR32.dll
+Ipc      O  \KnownDlls32\clbcatq.dll
+Ipc      O  \KnownDlls32\COMDLG32.dll
+Ipc      O  \KnownDlls32\CRYPT32.dll
+Ipc      O  \KnownDlls32\CRYPTBASE.dll
+Ipc      O  \KnownDlls32\DEVOBJ.dll
+Ipc      O  \KnownDlls32\gdi32.dll
+Ipc      O  \KnownDlls32\IERTUTIL.dll
+Ipc      O  \KnownDlls32\IMAGEHLP.dll
+Ipc      O  \KnownDlls32\kernel32.dll
+Ipc      O  \KnownDlls32\KERNELBASE.dll
+Ipc      O  \KnownDlls32\LPK.dll
+Ipc      O  \KnownDlls32\MSASN1.dll
+Ipc      O  \KnownDlls32\MSCTF.dll
+Ipc      O  \KnownDlls32\MSVCRT.dll
+Ipc      O  \KnownDlls32\NORMALIZ.dll
+Ipc      O  \KnownDlls32\NSI.dll
+Ipc      O  \KnownDlls32\ole32.dll
+Ipc      O  \KnownDlls32\OLEAUT32.dll
+Ipc      O  \KnownDlls32\profapi.dll
+Ipc      O  \KnownDlls32\PSAPI.DLL
+Ipc      O  \KnownDlls32\rpcrt4.dll
+Ipc      O  \KnownDlls32\Setupapi.dll
+Ipc      O  \KnownDlls32\SHELL32.dll
+Ipc      O  \KnownDlls32\SHLWAPI.dll
+Ipc      O  \KnownDlls32\SspiCli.dll
+Ipc      O  \KnownDlls32\URLMON.dll
+Ipc      O  \KnownDlls32\user32.dll
+Ipc      O  \KnownDlls32\USERENV.dll
+Ipc      O  \KnownDlls32\USP10.dll
+Ipc      O  \KnownDlls32\WININET.dll
+Ipc      O  \KnownDlls32\WINTRUST.dll
+Ipc      O  \KnownDlls32\WLDAP32.dll
+Ipc      O  \KnownDlls32\WS2_32.dll
+Ipc      O  \RPC Control\dhcpcsvc
+Ipc      O  \RPC Control\dhcpcsvc6
+Ipc      O  \RPC Control\DNSResolver
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\LSARPC_ENDPOINT
+Ipc      O  \RPC Control\lsasspirpc
+Ipc      O  \RPC Control\protected_storage
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \RPC Control\senssvc
+Ipc      O  \RPC Control\umpo
+Ipc      O  \RPC Control\webcache_{031b98cf-4a69-4c31-ab42-fd9b3c199407}_S-1-5-21-2071489870-871181738-1609722162-3432
+Ipc      O  \Security\LSA_AUTHENTICATION_INITIALIZED
+Ipc      O  \Sessions\1\BaseNamedObjects\CTF.AsmListCache.FMPDefault1
+Ipc      O  \Sessions\1\BaseNamedObjects\Dwm-07C2-ApiPort-3A65
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.Asm.MutexDefault1
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.AsmCacheReady.Default1
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.CtfActivated.Default1
+Ipc      O  \Sessions\1\BaseNamedObjects\windows_webcache_bloom_section_{5FE83850-C495-418A-BE2A-57D5BB47C51E}
+Ipc      O  \Sessions\1\BaseNamedObjects\windows_webcache_bloom_section_{898C19F3-1324-4E91-B603-DE41653249D7}
+Ipc      O  \Sessions\1\BaseNamedObjects\windows_webcache_bloom_section_{B51FD731-6394-457C-AA81-BB6C18C41065}
+Ipc      O  \Sessions\1\BaseNamedObjects\windows_webcache_bloom_section_{E8574763-6FCE-47E1-8FD9-C20CA9C1049F}
+Ipc      O  \Sessions\1\Windows\ApiPort
+Ipc      O  \Sessions\1\Windows\SharedSection
+Ipc      O  \ThemeApiPort
+Ipc      O  \UxSmsApiPort
+Pipe        -------------------------------
+Pipe        \Device\HarddiskVolume1
+Pipe        \Device\HarddiskVolume2
+Pipe        \Device\HarddiskVolume3
+Pipe        \Device\HarddiskVolume4
+Pipe        \Device\HarddiskVolume5
+Pipe        \Device\HarddiskVolume6
+Pipe        \Device\HarddiskVolume7
+Pipe        \Device\Ide\IAAStorageDevice-0
+Pipe        \Device\Ide\IAAStorageDevice-1
+Pipe        \Device\KsecDD
+Pipe        \Device\MountPointManager
+Pipe        \device\namedpipe\keysvc
+Pipe        \Device\NamedPipe\keysvc
+Pipe        \device\namedpipe\keysvc
+Pipe        \device\namedpipe\samr
+Pipe        \device\namedpipe\wkssvc
+Pipe        \Device\Ndis
+Pipe        \Device\NDMP17
+Pipe        \Device\NDMP18
+Pipe     O  \Device\Afd
+Pipe     O  \Device\NetBT_Tcpip_{555BB1E9-0A48-407D-97C8-728BBE7C90D1}
+Pipe     O  \Device\NetBT_Tcpip_{89202570-6D08-49BA-99E9-2CB3222D77B7}
+Pipe     O  \Device\NetBT_Tcpip_{D5689127-39A2-4848-B4DF-FEF9751EAD3A}
+Pipe     O  \Device\NetBT_Tcpip_{FCBDCE38-DB35-4C43-89B2-19C8284CB28B}
+Pipe     O  \Device\Nsi
+WinCls      -------------------------------
+WinCls   O  MS_WebCheckMonitor
+WinCls   O  Shell_TrayWnd
+WinCls   X  MS_AutodialMonitor
+WinCls   X  Progman
+</code></pre></div>
+
+Yes, I saw this too in the output. But we do not want the browser to be able to access the network drives. It is a wished behavior.<br>
+No, if I use hard coded proxy settings all is fast again.<br>
+The problem is that we need wpad here because we have a lot of notebooks and wpad is very good for auto configuration here.<br>
+<br>
+I'll check the link you attached.<br>
+<br>
+Regards,<br>
+Micha</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p132637" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile132637">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Lead Developer<br /><img src="images/ranks/gloss/yellow/yellow-developer.png" alt="Sandboxie Lead Developer" title="Sandboxie Lead Developer" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search70b370b3.html?author_id=20645&amp;sr=posts">1638</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jan 17, 2014 5:21 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Curt@invincea">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Curt@invincea</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.invincea.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content132637">
+
+						<h3 ><a href="#p132637">Re: Slow Performance with WPAD and Internet Explorer 11</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting4f1c.html?mode=quote&amp;f=11&amp;p=132637" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopice228e228.html?p=132637#p132637" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a></strong> &raquo; </span>Tue Mar 06, 2018 6:52 pm
+			</p>
+			
+			
+			
+			<div class="content">I tested your PAC file with our internal test proxy server. I don't see any performance problem at all. It is just as fast in Sbie as in the host. How long is it taking before a page begins to display in Sbie?<br>
+<br>
+Is your PAC file stored locally inside your network on an HTTP server?<br>
+<br>
+Win 7-64, IE 11.<br>
+<br>
+Is this a typo? It doesn't seem to affect anything, but I don't know why would add DIRECT to the end of the string.<br>
+return "PROXY xx.xx.xx.xx:xxxx; DIRECT";</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p132638" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile132638">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist2f79.html?mode=viewprofile&amp;u=34856" class="username">MichaBl</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4f514f51.html?author_id=34856&amp;sr=posts">6</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Nov 15, 2017 1:42 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content132638">
+
+						<h3 ><a href="#p132638">Re: Slow Performance with WPAD and Internet Explorer 11</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting315e.html?mode=quote&amp;f=11&amp;p=132638" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic3b5e-23b5e.html?p=132638#p132638" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist2f79.html?mode=viewprofile&amp;u=34856" class="username">MichaBl</a></strong> &raquo; </span>Wed Mar 07, 2018 2:36 am
+			</p>
+			
+			
+			
+			<div class="content">Hi and good morning.<br>
+It depends and differs. Sometimes I only get a white screen and it takes 10 till 15 seconds till the startpage (intranet) ist displayed.<br>
+If I disable the sandbox it takes only one second or maybe even faster.<br>
+If I enter an url it also takes some time till the page is loaded.<br>
+Only IE and enabled sandboxie shows this behaviour.<br>
+Very strange.<br>
+<br>
+Yes, the pac file is hosted on an internal webserver.<br>
+<br>
+Yes, the typo is correct. If our proxy is not available the browser switches to direct connection.<br>
+But you are right. It does not affect out situation.<br>
+<br>
+Maybe I'm on the wrong way and it has nothing to do with wpad. But it seems so.<br>
+I'll keep trying.<br>
+<br>
+Best wishes<br>
+Micha</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p132643" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile132643">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Support<br /><img src="images/ranks/gloss/yellow/yellow-supportteam.png" alt="Sandboxie Support" title="Sandboxie Support" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchdf5ddf5d.html?author_id=32296&amp;sr=posts">2337</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 07, 2016 3:10 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content132643">
+
+						<h3 ><a href="#p132643">Re: Slow Performance with WPAD and Internet Explorer 11</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingd1db.html?mode=quote&amp;f=11&amp;p=132643" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd5cd-2d5cd.html?p=132643#p132643" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a></strong> &raquo; </span>Wed Mar 07, 2018 12:10 pm
+			</p>
+			
+			
+			
+			<div class="content">Hello MichaBl,<br>
+<br>
+If you disable your script (or test off-network) and run IE in the Sandbox (using a new Sandbox with default settings), do you still see slowness? <br>
+<br>
+Also, can we please get a PML while you repro the issue? <br>
+Download procmon.exe from  <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procmon" class="postlink">https://docs.microsoft.com/en-us/sysint ... ds/procmon</a><br>
+Start procmon and reproduce the issue, then save the log and provide us the link (you will have to upload it to a file hosting website as they tend to be big files).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="https://www.sandboxie.com/old-forums/posting76a2.html?mode=reply&amp;f=11&amp;t=25105" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic1ca71ca7.html?f=11&amp;t=25105&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25105">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			13 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum8a838a83.html?f=11" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Problem Reports”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum907f907f.html?f=42" class="jumpbox-cat-link"> <span> Sandboxie Forums</span></a></li>
+																<li><a href="viewforum12a312a3.html?f=2" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Announcements</span></a></li>
+																<li><a href="viewforumcf19cf19.html?f=6" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Positive Reviews</span></a></li>
+																<li><a href="viewforum107e107e.html?f=43" class="jumpbox-cat-link"> <span> Problems and Questions</span></a></li>
+																<li><a href="viewforum8a838a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Problem Reports</span></a></li>
+																<li><a href="viewforum48ab48ab.html?f=17" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Quick Questions</span></a></li>
+																<li><a href="viewforumbcb4bcb4.html?f=65" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.25</span></a></li>
+																<li><a href="viewforumab78ab78.html?f=44" class="jumpbox-cat-link"> <span> More Forums</span></a></li>
+																<li><a href="viewforum31e631e6.html?f=4" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Feature Requests</span></a></li>
+																<li><a href="viewforume774e774.html?f=5" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Anything Else</span></a></li>
+																<li><a href="viewforum89418941.html?f=22" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Contributed Utilities &amp; Templates</span></a></li>
+																<li><a href="viewforum97809780.html?f=14" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; International Translations</span></a></li>
+																<li><a href="viewforum2b892b89.html?f=38" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.01</span></a></li>
+																<li><a href="viewforumdfa4dfa4.html?f=39" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.03</span></a></li>
+																<li><a href="viewforuma3f5a3f5.html?f=40" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.05</span></a></li>
+																<li><a href="viewforum51ee51ee.html?f=41" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.07</span></a></li>
+																<li><a href="viewforum590b590b.html?f=46" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.09</span></a></li>
+																<li><a href="viewforumcdbacdba.html?f=48" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.13</span></a></li>
+																<li><a href="viewforum30ac30ac.html?f=49" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.15</span></a></li>
+																<li><a href="viewforum91409140.html?f=50" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.17</span></a></li>
+																<li><a href="viewforum208f208f.html?f=51" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.19</span></a></li>
+																<li><a href="viewforum26492649.html?f=53" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.01</span></a></li>
+																<li><a href="viewforum9e0d9e0d.html?f=54" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.05</span></a></li>
+																<li><a href="viewforumfac0fac0.html?f=55" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.07</span></a></li>
+																<li><a href="viewforuma05ca05c.html?f=56" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.09</span></a></li>
+																<li><a href="viewforum6ac36ac3.html?f=57" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.11</span></a></li>
+																<li><a href="viewforume57de57d.html?f=58" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.13</span></a></li>
+																<li><a href="viewforum07560756.html?f=59" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.15</span></a></li>
+																<li><a href="viewforumb8c1b8c1.html?f=60" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.17</span></a></li>
+																<li><a href="viewforumdbf5dbf5.html?f=61" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.19</span></a></li>
+																<li><a href="viewforum75c275c2.html?f=62" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.21</span></a></li>
+																<li><a href="viewforume5f3e5f3.html?f=64" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.23</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="stat-block online-list">
+		<h3>Who is online</h3>
+		<p>Users browsing this forum: No registered users and 0 guests</p>
+	</div>
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="../index.html" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Home</span></a></span>									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="America/New York">UTC-04:00</span></li>
+							<li class="rightside">
+				<a href="ucp033a033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete all board cookies</span>
+				</a>
+			</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+									</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="cron78d278d2.gif?cron_type=cron.task.core.tidy_sessions" width="1" height="1" alt="cron" /></div>
+
+<script type="text/javascript" src="assets/javascript/jquery.mince91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="assets/javascript/corece91ce91.js?assets_version=7"></script>
+
+
+
+<script type="text/javascript" src="styles/sbie_prosilver/template/forum_fnce91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="styles/sbie_prosilver/template/ajaxce91ce91.js?assets_version=7"></script>
+
+
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?p=132637 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:31 GMT -->
+</html>

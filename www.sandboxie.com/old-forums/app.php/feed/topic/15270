@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15270" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-04-22T05:02:42-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15270</id>
+
+		<entry>
+		<author><name><![CDATA[mikeruss]]></name></author>
+		<updated>2013-04-22T05:02:42-04:00</updated>
+
+		<published>2013-04-22T05:02:42-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15270&amp;p=89115#p89115</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15270&amp;p=89115#p89115"/>
+		<title type="html"><![CDATA[[.06] Listary compatibility]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15270&amp;p=89115#p89115"><![CDATA[
+yes that works - thank you<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2066">mikeruss</a> — Mon Apr 22, 2013 5:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-04-22T04:18:56-04:00</updated>
+
+		<published>2013-04-22T04:18:56-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15270&amp;p=89110#p89110</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15270&amp;p=89110#p89110"/>
+		<title type="html"><![CDATA[[.06] Listary compatibility]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15270&amp;p=89110#p89110"><![CDATA[
+I looked into this briefly and it seems to me just one more resource is needed:<br><br>*\BaseNamedObjects*\Listary_MainSharedMemory<br><br>You can add this to the template as<br><br>OpenIpcPath=*\BaseNamedObjects*\Listary_MainSharedMemory<br><br>Or go into Sandbox Settings &gt; Resource Access &gt; IPC Access &gt; Direct Access and paste<br><br>*\BaseNamedObjects*\Listary_MainSharedMemory<br><br>I already updated the template for version 4 (beta) with this,change, but would appreciate your confirmation.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Apr 22, 2013 4:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[mikeruss]]></name></author>
+		<updated>2013-04-21T06:01:23-04:00</updated>
+
+		<published>2013-04-21T06:01:23-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15270&amp;p=89088#p89088</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15270&amp;p=89088#p89088"/>
+		<title type="html"><![CDATA[[.06] Listary compatibility]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15270&amp;p=89088#p89088"><![CDATA[
+Sandboxie 3.76 Windows 7 64 Listary.com <br><br>Listary has been updated to version 4 which seems to have broken compatibility with Sandboxie<br><br>any chance of fixing this ?<br><br>the current Template is ...<br><br><br>[Template_Listary]<br>Tmpl.Title=Listary<br>Tmpl.Class=Desktop<br>Tmpl.Url=<a href="http://www.listary.com/" class="postlink">http://www.listary.com/</a><br>Tmpl.Scan=s<br>Tmpl.ScanProduct=Listary_is1<br>OpenIpcPath=*\BaseNamedObjects*\ListarySharedData<br>OpenWinClass=ListaryToolbarCls<br>OpenWinClass=$:listary.exe<br><br>thanks .. Mike<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2066">mikeruss</a> — Sun Apr 21, 2013 6:01 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

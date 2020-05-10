@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/24329" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2017-07-07T09:56:52-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/24329</id>
+
+		<entry>
+		<author><name><![CDATA[Barb@Invincea]]></name></author>
+		<updated>2017-07-07T09:56:52-04:00</updated>
+
+		<published>2017-07-07T09:56:52-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=129027#p129027</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=129027#p129027"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.20 RC)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=129027#p129027"><![CDATA[
+Hello Dun,<br><br>Thanks for the update. I will add it to the Antivirus thread so that everybody is aware. <br><br>Regarding the Firefox thread, if you read my response in it, I posted that drag-drop in Firefox x64 is not working (devs have already implemented a fix that is being tested, hopefully we can get it out soon). You can use FF x86 as an alternative, or use a Sandboxed Windows explorer.<br><br>Regards,<br>Barb.-<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> — Fri Jul 07, 2017 9:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Dun]]></name></author>
+		<updated>2017-07-06T18:27:52-04:00</updated>
+
+		<published>2017-07-06T18:27:52-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=129021#p129021</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=129021#p129021"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.19.4)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=129021#p129021"><![CDATA[
+<blockquote><div><cite>Dun wrote:</cite>Please fix FF error appearing randomly which makes the browser completely unusable (blank pages)<div class="codebox"><p>CODE: </p><pre><code>SBIE2101 Object name not found: \Device\NamedPipe\nod_scriptmon_pipe, error OpenFile (C0000022) access=0012019F initialized=1</code></pre></div></div></blockquote>This issue has stopped occurring once I added ekrn.exe and egui.exe from %programfiles%\ESET\ESET Smart Security to AppGuard power apps.<br><blockquote><div><cite><a href="./../../../memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="./../../../viewtopic.php?p=128299#p128299" data-post-id="128299" >↑</a><div class="responsive-hide">Tue May 30, 2017 11:04 am</div></cite>Hey Dun,<br><br>See this thread for the Firefox drag-drop issue:<br><a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24469" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=24469</a><br><br>Regards,<br>Barb.-</div></blockquote>Not sure how the linked thread is related to drag and drop FF issue<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=23338">Dun</a> — Thu Jul 06, 2017 6:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[stonerd]]></name></author>
+		<updated>2017-06-29T18:30:45-04:00</updated>
+
+		<published>2017-06-29T18:30:45-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128891#p128891</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128891#p128891"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.20 RC)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128891#p128891"><![CDATA[
+glad to see "SBIE2101 Object name not found -(C0000022)" has finally been addressed.<br><br>it actually affected many various applications. (but theres almost always an alternate application which provides similar functionality and doesnt throw up that error)<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=25462">stonerd</a> — Thu Jun 29, 2017 6:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Barb@Invincea]]></name></author>
+		<updated>2017-06-07T10:51:45-04:00</updated>
+
+		<published>2017-06-07T10:51:45-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128485#p128485</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128485#p128485"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.20 RC)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128485#p128485"><![CDATA[
+<strong>RedBonnet ,</strong><br><blockquote class="uncited"><div>Was this issue supposed to be fixed with this release?</div></blockquote>No, that issue is still pending a fix.<br><br><strong>MCHAL,</strong><br><br>Please reply to an existing topic (if the issue is the same) or start a new thread.<br>Make sure to provide all the info required:<br><a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br><br>Regards,<br>Barb.-<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> — Wed Jun 07, 2017 10:51 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MCHAL]]></name></author>
+		<updated>2017-06-07T07:04:46-04:00</updated>
+
+		<published>2017-06-07T07:04:46-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128481#p128481</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128481#p128481"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.20 RC)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128481#p128481"><![CDATA[
+<blockquote><div><cite><a href="./../../../memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="./../../../viewtopic.php?p=128464#p128464" data-post-id="128464" >↑</a><div class="responsive-hide">Tue Jun 06, 2017 11:54 am</div></cite>Hello MCHAL ,<br><br>Have a look at these:<br><a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=18422&amp;hilit=BIE2205+Service+not+implemented%3A+DDE+DATA" class="postlink">viewtopic.php?f=11&amp;t=18422&amp;hilit=BIE220 ... A+DDE+DATA</a><br><a href="https://forums.sandboxie.com/phpBB3/search.php?keywords=SBIE2205+Service+not+implemented%3A+DDE+DATA" class="postlink">search.php?keywords=SBIE2205+Service+no ... A+DDE+DATA</a><br><br>If needed, reply to an existing thread and we can go from there. Sounds like this issue is not beta related (since you stated it has happened in the past).<br><br>Regards,<br>Barb.-</div></blockquote>Hi, Barb:<br><br>Thanks for your support.<br><br>Unfortunately, I am afraid to report that, even with SB 5.20 release installed and running (Win10x64 up to date, 8GB RAM, NVidia GeForce GT 730), the problem persists when running Firefox 53.0.3 sandboxed.<br><br>Regards.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=8201">MCHAL</a> — Wed Jun 07, 2017 7:04 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[RedBonnet]]></name></author>
+		<updated>2017-06-06T23:47:59-04:00</updated>
+
+		<published>2017-06-06T23:47:59-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128477#p128477</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128477#p128477"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.20 RC)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128477#p128477"><![CDATA[
+Just installed 5.20.  In Firefox 53.0.3 (Win 7 64bit), printing to PDF file still does not work unless I use the workaround <a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?p=127787#p127787" class="postlink">Barb mentioned elsewhere</a>:<br><div class="codebox"><p>CODE: </p><pre><code>OpenFilePath=C:\Users\&lt;username&gt;\AppData\LocalLow\Mozilla\temp-*</code></pre></div>Was this issue supposed to be fixed with this release?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=29816">RedBonnet</a> — Tue Jun 06, 2017 11:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2017-06-06T13:58:59-04:00</updated>
+
+		<published>2017-06-06T13:58:59-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128468#p128468</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128468#p128468"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.20 RC)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128468#p128468"><![CDATA[
+5.20 has been released.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Tue Jun 06, 2017 1:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Barb@Invincea]]></name></author>
+		<updated>2017-06-06T11:54:28-04:00</updated>
+
+		<published>2017-06-06T11:54:28-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128464#p128464</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128464#p128464"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.20 RC)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128464#p128464"><![CDATA[
+Hello MCHAL ,<br><br>Have a look at these:<br><a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=18422&amp;hilit=BIE2205+Service+not+implemented%3A+DDE+DATA" class="postlink">viewtopic.php?f=11&amp;t=18422&amp;hilit=BIE220 ... A+DDE+DATA</a><br><a href="https://forums.sandboxie.com/phpBB3/search.php?keywords=SBIE2205+Service+not+implemented%3A+DDE+DATA" class="postlink">search.php?keywords=SBIE2205+Service+no ... A+DDE+DATA</a><br><br>If needed, reply to an existing thread and we can go from there. Sounds like this issue is not beta related (since you stated it has happened in the past).<br><br>Regards,<br>Barb.-<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> — Tue Jun 06, 2017 11:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MCHAL]]></name></author>
+		<updated>2017-06-06T09:48:40-04:00</updated>
+
+		<published>2017-06-06T09:48:40-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128460#p128460</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128460#p128460"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.20 RC)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128460#p128460"><![CDATA[
+Hi,<br><br>Thanks for your dev efforts.<br><br>I have an "issue" to report. Why is it that I keep getting the error message "SBIE2205 Service not implemented: DDE DATA" when using firefox 53.0.3 sandboxed (under Sandboxie 5.19.5) when copying text into Windows clipboard, by selecting and pressing Ctrl+C? This "problem" has persisted in previous versions of Sandboxie since long past. <br><br>Regards.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=8201">MCHAL</a> — Tue Jun 06, 2017 9:48 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2017-06-05T15:48:48-04:00</updated>
+
+		<published>2017-06-05T15:48:48-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128452#p128452</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128452#p128452"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.20 RC)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128452#p128452"><![CDATA[
+5.20 Release Candidate has been released.<br><br>It is the same code as 5.19.5. Just different version #'s.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Mon Jun 05, 2017 3:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2017-06-04T23:01:53-04:00</updated>
+
+		<published>2017-06-04T23:01:53-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128429#p128429</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128429#p128429"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.19.5)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128429#p128429"><![CDATA[
+Curt, Beta 5.19.5 feels great in W7 32 bits.<br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Sun Jun 04, 2017 11:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2017-06-02T21:49:26-04:00</updated>
+
+		<published>2017-06-02T21:49:26-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128416#p128416</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128416#p128416"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.19.5)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128416#p128416"><![CDATA[
+5.19.5 is now available.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Fri Jun 02, 2017 9:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Barb@Invincea]]></name></author>
+		<updated>2017-05-30T11:04:33-04:00</updated>
+
+		<published>2017-05-30T11:04:33-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128299#p128299</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128299#p128299"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.19.4)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128299#p128299"><![CDATA[
+Hey Dun,<br><br>See this thread for the Firefox drag-drop issue:<br><a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24469" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=24469</a><br><br>Regards,<br>Barb.-<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> — Tue May 30, 2017 11:04 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Dun]]></name></author>
+		<updated>2017-05-28T11:11:02-04:00</updated>
+
+		<published>2017-05-28T11:11:02-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128281#p128281</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128281#p128281"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.19.4)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128281#p128281"><![CDATA[
+Ok, thanks I will check those suggestions out.<br>No, I'm not using flash.<br><br>It is impossible to drag and drop pdf file on sandboxed Firefox. The browser will not open a file.<br>Works fine outsite of SBIE<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=23338">Dun</a> — Sun May 28, 2017 11:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Brummelchen]]></name></author>
+		<updated>2017-05-26T13:47:32-04:00</updated>
+
+		<published>2017-05-26T13:47:32-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128259#p128259</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128259#p128259"/>
+		<title type="html"><![CDATA[Re: 5.19 Beta Available (latest version 5.19.4)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=128259#p128259"><![CDATA[
+no firefox problem, for sure.<br><br>you need to determine the source for "nod_scriptmon_pipe" then you have your culprit.<br>have you ESET installed? it is so called "nod" in older versions and "scriptmon" could be the web protection.<br><br>ah, there you go with "ESET SS 10+ x64"<br><br>PS are you using flash with firefox x64? there are known problems and i dont think they are solved in sandboxie <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>have yo tried to reproduce with firefox x86?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1766">Brummelchen</a> — Fri May 26, 2017 1:47 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

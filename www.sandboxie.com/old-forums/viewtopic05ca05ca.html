@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10772&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Jump Lists on the Windows 7 Taskbar</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Jump Lists on the Windows 7 Taskbar</h2>
+		<p><a href="viewtopic3f4c3f4c.html?f=4&amp;t=10772">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=10772</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Jump Lists on the Windows 7 Taskbar</h3>
+				<div class="date">Posted: <strong>Sun Jun 26, 2011 7:00 pm</strong></div>
+				<div class="author">by <strong>FunkTrooper</strong></div>
+				<div class="content">I've just bought Sandboxie, and it's truly brilliant. Thank you, Ronen. (Btw, you have Steve Gibson from Security Now to thank for introducing me to this program.)<br>
+<br>
+I've found a little thing that doesn't work properly though — jump lists. These appear to work ok for programs that are installed normally but run inside the sandbox. However, they don't seem to work for programs that are installed in a sandbox and then run in that sandbox.<br>
+<br>
+For example, I'm running Steam, which is installed in a sandbox. Steam is supposed to have a jumplist like the one pictured here: <a href="http://www.addictivetips.com/windows-tips/steam-gets-windows-7-jumplist-support/" class="postlink">http://www.addictivetips.com/windows-ti ... t-support/</a><br>
+<br>
+However, when I right click the sandboxed Steam in my taskbar, I don't see the jump list; I only see the three options that you get for programs that don't support jump lists.<br>
+<br>
+I know this isn't a very big deal really. But... it'd be a nice feature to have! Do you reckon it's possible, Ronen? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jun 27, 2011 3:26 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks for getting a license.  As for your feature request, I am not sure this can work, but I might look into it at some point.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 28, 2011 5:45 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I did look into this and it seems programs update the jump list by creating some temporary file somewhere below your "user profile" folder, and then Windows Explorer gets the new jump list configuration from this file and refreshes the task bar menu.<br>
+<br>
+Programs in the sandbox (those installed in the sandbox and also those just running in the sandbox) will put the temporary file in the sandbox so Windows Explorer will never notice it.<br>
+<br>
+It is possible to add a File Access exclusions in Sandboxie to permit the program to write that temporary file in the real folder:<br>
+<br>
+%AppData%\Microsoft\Windows\Recent\CustomDestinations\<br>
+<br>
+However, each entry in the jump list has to point to some file (usually a program or a document).  And if the program is installed in the sandbox, the paths on the jump list won't be correct.  For example in the case of Steam, it will point jump list at C:\Program Files\Steam\Steam.exe but really the Steam.exe file is somewhere in the sandbox.<br>
+<br>
+In principle I could take over the jump list APIs and make sure the paths are correct but that would be quite a bit of work for what I consider a relatively minor gain.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 28, 2011 7:06 am</strong></div>
+				<div class="author">by <strong>FunkTrooper</strong></div>
+				<div class="content">That's interesting, thanks for looking into this. You're right though, it's not an especially important issue.<br>
+<br>
+The only potential problem with leaving things as they are might be as follows....<br>
+<br>
+Say you've installed a program outside of the sandbox, but are running it sandboxed. If you then use the jump list to select an option, the thing you click on will be run outside the sandbox, as it was invoked from Windows Explorer, which runs outside the sandbox. A new window of that sandboxed application will probabaly open, but that new window will not be sandboxed. The user may not notice this, and they could have a false sense of security, believing that what they are doing is in fact sandboxed.<br>
+<br>
+I know the lack of [#] in the window's titlebar should be a giveaway about whether or not it's sandboxed. But this may not be noticed, or it may be a program (like *all* modern web browsers) that don't have titles on their windows. In this case, there'd be no way of knowing that the window isn't sandboxed.<br>
+<br>
+Perhaps, it would be better to try to disable jump lists altogether.<br>
+<br>
+...or perhaps I've misunderstood this entirely and this isn't an issue at all. I'm not at my Windows PC right now, so I haven't actually been able to test this.[/i]</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 28, 2011 7:42 am</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content"><blockquote><div><cite>FunkTrooper wrote:</cite>Say you've installed a program outside of the sandbox, but are running it sandboxed. If you then use the jump list to select an option, the thing you click on will be run outside the sandbox, as it was invoked from Windows Explorer, which runs outside the sandbox. A new window of that sandboxed application will probabaly open, but that new window will not be sandboxed. The user may not notice this, and they could have a false sense of security, believing that what they are doing is in fact sandboxed.</div></blockquote>
+That's correct, I just tried it myself and anything launched from a jumplist executes unsandboxed.<br>
+
+<blockquote><div><cite>FunkTrooper wrote:</cite>I know the lack of [#] in the window's titlebar should be a giveaway about whether or not it's sandboxed. But this may not be noticed, or it may be a program (like *all* modern web browsers) that don't have titles on their windows. In this case, there'd be no way of knowing that the window isn't sandboxed.</div></blockquote>
+Well you could use the "Is Window Sandboxed?" tool in that case, but yeah I see your point. <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 28, 2011 10:16 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The point you raise here is not even tied to jump lists, if you click the middle mouse button on a taskbar icon then Windows Explorer will run the program again.  And if it isn't a forced program then it will start outside the sandbox.<br>
+<br>
+It's not a major problem because if the program is located in the sandbox (say a downloaded malware) then it will restart sandboxed because Sandboxie always auto-forces programs that reside within the sandbox.<br>
+<br>
+In a way these two issues are connected, and perhaps the only proper way to address them would be for Sandboxie to implement the APIs that let programs deal with the taskbar.  But again I view this as a low priority issue so I'm not sure when I will get to this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 28, 2011 5:07 pm</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content">Well just for the record, I am not concerned about this. I only posted to confirm the Funk's suspicion. <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Jump Lists on the Windows 7 Taskbar</h3>
+				<div class="date">Posted: <strong>Fri Dec 28, 2012 5:01 am</strong></div>
+				<div class="author">by <strong>slbox</strong></div>
+				<div class="content"><blockquote><div><cite>FunkTrooper wrote:</cite>I've found a little thing that doesn't work properly though — jump lists. These appear to work ok for programs that are installed normally but run inside the sandbox.</div></blockquote>
+
+The jump lists aren't working for me for programs that I have installed normally outside the sandbox.  For example, when I right-click on the normal Firefox taskbar icon, I see the following items in the jump list:<br>
+- A list of my frequently visited pages<br>
+- Open new tab<br>
+- Open new window<br>
+- Enable private browsing<br>
+- Mozilla Firefox<br>
+- Unpin this program from taskbar<br>
+<br>
+But when I right-click on the taskbar icon for my Firefox running inside Sandboxie, I only see the following in the jump list:<br>
+- [DefaultBox] Firefox<br>
+- Pin this program to taskbar<br>
+- Close window<br>
+<br>
+So then I tried tzuk's suggestion of adding the %APPDATA%\Microsoft\Windows\Recent\AutomaticDestinations\ and %APPDATA%\Microsoft\Windows\Recent\CustomDestinations\ folders to the File Access &gt; Direct Access list in the settings.  That changed the icon behavior in the taskbar - when I started up Firefox in the sandbox, the taskbar no longer showed 2 Firefox icons (a normal one and a sandboxed one).  It only showed one Firefox icon for the sandboxed one.  When I right-clicked on it, it showed everything in the jump list, which was good.  But then when I clicked on "Open new tab" or "Open new window", it launched a new Firefox window OUTSIDE of the sandbox - that's bad.  So the jump lists aren't working for me for normally installed programs, even though FunkTrooper says they should work?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Dec 28, 2012 5:13 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I re-read this topic but I don't see where FunkTrooper says that what you're trying to do should work.<br>
+<br>
+If you set Firefox as a forced program, Sandboxie will not have to mess around with the taskbar button for the program, and "Open new tab" or "Open new window" will work as expected.<br>
+<br>
+I don't mean this as a sales pitch, I'm just saying there is already a way for things to work as you want.<br>
+<br>
+But I do agree that Sandboxie should do better emulation of the taskbar button, and I may be able to do this at some point.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Dec 28, 2012 5:37 am</strong></div>
+				<div class="author">by <strong>slbox</strong></div>
+				<div class="content">I thought that's what he meant when he said "These appear to work ok for programs that are installed normally but run inside the sandbox."?<br>
+<br>
+Hmm, I'm not sure I would set Firefox to be a forced program if I could, because there might be times I'd want to run it outside the sandbox to make settings changes that wouldn't get applied to the system if I ran it inside the sandbox.  Unless I decided to install it inside the sandbox.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10772&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:25 GMT -->
+</html>

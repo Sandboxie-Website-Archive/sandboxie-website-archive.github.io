@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15022&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:37:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.05] Things that don't work in 4.01 - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.05] Things that don't work in 4.01</h2>
+		<p><a href="viewtopic22be22be.html?f=38&amp;t=15022">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15022</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu May 09, 2013 2:35 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I still can't reproduce on Windows 7, focus seems to work as I expect.<br>
+On Windows XP it does seem to behave as you describe.<br>
+That secondary clean laptop system on which you've tested this, is that XP also?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu May 09, 2013 4:24 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Yes, that's XP as well, sorry if I wasn't clear and you thought I meant a different Windows also. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I haven't checked on anything other than XP for this...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>User Anonymous</h3>
+				<div class="date">Posted: <strong>Fri May 10, 2013 5:22 am</strong></div>
+				<div class="author">by <strong>crocidile65</strong></div>
+				<div class="content">Just received windows update and Sandboxie now showing as user is anonymous. Using Beta 4 on windows 7</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun May 12, 2013 2:31 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Version 4.01.08 should fix the problem with minimizing Firefox as discussed in the last few posts here.<br>
+<br>
+Also, the Recent Documents behavior should be like in version 3.76, I think.  Sandboxed Windows Explorer itself will not record Recent Documents, but you can get other sandboxed programs to record files in that recent list, using the settings from your other post:<br>
+<br>
+<a href="../phpbb/viewtopic1b5a.php?p=83771#83771" class="postlink">http://www.sandboxie.com/phpbb/viewtopi ... 3771#83771</a><br>
+<br>
+Also the Administrator/Drop Rights problem should be fixed in version 4.01.08.<br>
+<br>
+Thanks for the problem reports!  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 18, 2013 10:44 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">I was a couple days late checking out this release and it's taken me longer to reply. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Anyway, yeah, Recent Documents seems to be working again now! (Of course, regular unsandboxed Explorer logs them after being "signaled" by programs...) That's good, but I disabled my settings again, since as I mentioned in the <a href="../phpbb/viewtopice62e.php?p=88861#88861" class="postlink">slowness topic</a>, it's a big performance impact! <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+Yep, Drop Rights seems to be protecting Administrator-only files/reg. keys again! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I'm getting "Access denied," etc. where I'd expect and did with 3.76.<br>
+<br>
+As a reminder: the links from outside the sandbox still don't work, as I referenced in the other <a href="../phpbb/viewtopic4378.php?t=15478" class="postlink">topic about opening MHT files</a>.<br>
+<br>
+<br>
+Firefox is mostly fixed, and seemed good for awhile, but found another scenario where it's not refocusing. <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> Focus: unsandboxed; sandboxed Firefox; and another unsandboxed. Minimize that last unsandboxed window, and then Firefox -- the next unsandboxed window is there, but not focused. (That's what would happen before if any other sandboxed windows were already minimized.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 25, 2013 10:43 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I think the performance impact due to OpenWinClass=* is probably due to every windowing-related API call has to go through SbieSvc (the GuiProxy instance).  That is a call over a communication channel across process boudaries, so is considerably slower than a direct GUI call.<br>
+<br>
+Usually a process only has to go through SbieSvc (GuiProxy) for few windows as most of the windowing stuff it does is for objects it created itself, so the performance impact is much smaller.<br>
+<br>
+I don't think there is anything I can do about it, I'm sorry to say.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 25, 2013 11:22 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Sounds like that reply would be better in the performance topic than here. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> But, quick reply before I have to leave... I'll see if the small remaining focus problem with Firefox and/or opening links from outside the sandbox has changed later.<br>
+<br>
+About what you just said about speed, no, as I detailed in the other topic:<br>
+<br>
+OpenWinClass=* (VERY FAST, like 3.76, I assume since it completely bypasses sandboxing for windowing calls)<br>
+OpenWinClass=$:explorer.exe (with or without prefix, IIRC, SLOW; some/every thing (not sure) seems to be slowed down, totally unrelated to Explorer)<br>
+OpenWinClass=&lt;prefix&gt;,* (VERY SLOW, which also doesn't make sense... why isn't <em>prefix</em> program(s) bypassing sandboxing code or whatever like global *?)<br>
+<br>
+<br>
+I don't understand why opening $:explorer.exe is different than $:any_prog.exe? I mean, Explorer is "special," so maybe you're doing something different/weird for/with it... <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> But, like I say, opening $:any_prog.exe doesn't cause "every windowing-related API call ... to go through SbieSvc," at least nowhere close (slowness-wise) to what it's like for $:explorer.exe!<br>
+<br>
+<br>
+I figured it would hopefully be fixable, since those instances ($:explorer.exe, and * <em>with a prefix</em>) are the only ones that seem to differ from 3.76... But if not, there's no way I can have that slowdown. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> In that case, I'd just try to intercept the Recent Docs message in the sandbox, send it to a (my) program outside the sandbox, and have it make the call as a proxy (I think, can't remember if that was going to work right last summer or not). Of course I'd rather not! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 25, 2013 11:50 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I agree it doesn't make sense that per-process OpenWinClass should be slower than the global * exception.  Let me take another look at it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 28, 2013 7:06 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">You're using caps to say VERY SLOW and VERY FAST which makes me think the performance difference would be obvious.<br>
+But I'm trying all these OpenWinClass combinations in Windows XP and I can't discern any difference in performance.<br>
+Any ideas for a performance test that I can use to see a difference?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 28, 2013 8:48 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">I just finally got to installing .11 shortly before your reply and happened to check again if launch times had changed at all -- not really. The numbers I saw weren't quite as bad as I measured with .05 (but I checked it again, and .05 also better now). I've only done a few Windows updates and updated the NVIDIA driver since then, so I think the difference might be that I had more windows and stuff open back then...? I didn't notice a difference just now opening several UNsandboxed browsers, but opening just 8 more sandboxed IE 6 processes/windows then creates a big (disproportionate) launch slowdown... (and just a small amount with the fastest global Open=*).<br>
+<br>
+Anyway, just some info and not important for what I was going to reply to your post/question... I just got the latest numbers off the clean laptop XP install again with .11 after seeing your post. On both systems I had something running in the sandbox first (IE or OE; but Notepad or anything) to remove the extra sandbox startup overhead. Like I said previously, I'm measuring with AppTimer -- forced IE 6; Cmd Line and Window Name in AppTimer: <strong>about:blank</strong><br>
+<br>
+I can easily feel like a 0.2s delay, so launch times of even 0.5 with Open=* in 4.01 (&lt;= 0.4 in 3.76) is about the maximum I'd like to see, since UNsandboxed is &lt; 0.2.<br>
+<br>
+<br>
+On the laptop, default sandbox with forced IE:<br>
+0.66 - Default settings<br>
+0.8 - Open=$:explorer.exe<br>
+1.23 - Open=iexplore.exe,*<br>
+0.59 - Open=*<br>
+<br>
+On main system, usual sandbox:<br>
+0.65 - Just some regular OpenWinClass that are unrelated<br>
+0.95 - Open=$:explorer.exe<br>
+2.33 - Open=iexplore.exe,*<br>
+0.5 - Open=*<br>
+<br>
+
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>I'll see if the small remaining focus problem with Firefox and/or opening links from outside the sandbox has changed later.</div></blockquote>
+
+BTW, no, these still remain. Is the external links problem DDE-related like <a href="../phpbb/viewtopic5251.php?p=90205#90205" class="postlink">opening MHT files</a>?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 28, 2013 9:51 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Nice utility.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+For me <span style="text-decoration: underline">OpenWinClass=*</span> and <span style="text-decoration: underline">OpenWinClass=iexplore.exe,*</span> both behave in a consistent fashion<br>
+and take twice as long the case without any OpenWinClass settings.<br>
+I.e. roughly ~1.0 with OpenWinClass compared to 0.5 without.<br>
+<br>
+This is what I expected and what makes sense to me, and that was the basis for what I wrote earlier,<br>
+that every windowing-related API call has to go through SbieSvc (the GuiProxy instance).<br>
+<br>
+Can you double check your results with OpenWinClass=* ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 28, 2013 10:06 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Yeah, AppTimer is neat, although sometimes it acts weird/inconsistent for me (timing). Especially if it tries to do multiple runs or close windows -- I just use single runs, multiple times. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+<br>
+Not really anything to double check, since I've been getting generally the same consistent results since I've been testing -- especially since I discovered that simply removing Open=&lt;group or not&gt;,$:explorer.exe speeds things up nearly to the point of global Open=*<br>
+<br>
+<br>
+Your results are interesting in that a global Open=* slows things down compared to defaults! *shrug* That's the opposite of what I'd expect. I <em>expected</em> that Open=* would be a bit faster (as it is slightly in 3.76 also, otherwise no differences), as a result of completely skipping any windowing sandboxing (presumably). So my 2 extremes speed-wise behave the same for you... <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> What about comparing with 3.76? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+I'm starting to wonder about checking the Win 7 system again (or others in VirtualBox) to see how things are there (never used AppTimer before). <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 28, 2013 10:22 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>Your results are interesting in that a global Open=* slows things down compared to defaults! *shrug* That's the opposite of what I'd expect. I expected that Open=* would be a bit faster (as it is slightly in 3.76 also, otherwise no differences), as a result of completely skipping any windowing sandboxing (presumably). So my 2 extremes speed-wise behave the same for you...</div></blockquote>
+
+Well... You expect wrong.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+In version 3, windowing objects inside and outside the sandbox live in the same space, so what OpenWinClass=* does is inhibit the filtering checks, and thus increases performance a bit.<br>
+In version 4, windowing objects inside the sandbox live in a separate space, and the process only has access to that space.  Any request to windowing object outside the sandbox has to go through the SbieSvc middle man.  And OpenWinClass=* means everything has to go through the SbieSvc middle man.<br>
+<br>
+Having said that I should also say that I am fairly satisfied with this aspect of Sandboxie and probably will not spend time trying to optimize stuff further before the official release.  I want to go to release relatively soon and all changes involve risks that I am not sure I want to take just now.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 28, 2013 11:16 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content"><img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> OK, regardless, it would seem logical that in any case (3 or 4's method), additional checks of SOME sort would be skipped with global Open=* (and possibly likewise with a program prefix), right? No need to check anything if letting everything through -- whether that's through a middle man or not. So would you (not) agree that something is strange when your Open=* slows stuff down? Why, what additional stuff is happening then when, if anything, <em>less</em> should happen?<br>
+<br>
+But really, except for the small amount of windowing stuff that tries to go outside the sandbox, there shouldn't be much, if any, difference, with OpenWinClass settings, right? Like I said in the other topic, I feel some slowness on stuff that should only be within the sandboxed program -- Save As dialog appearing in programs, New Message window in OE (or OE toolbar redrawing - visible evidence) are places where it's discernible that, for me, Open=* is faster than "defaults." (And even with fastest-for-me Open=*, it's not <em>quite</em> as fast-feeling as 3.76 -- fine, understandable, and Open=* is good enough for me -- I'm just saying that the tiniest amount of difference I notice. <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed">)<br>
+<br>
+<br>
+Yeah, again I understand about releasing (final, cool <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool">) and risk of changes! Hopefully you agree that these results (yours and mine) don't make sense and can investigate more in betas for the next releases, etc...<br>
+<br>
+Hmm, to get an identical setup, maybe we can try VirtualBox XP installs?? I haven't installed XP that way to see how Sandboxie behaves, but I wonder if things would work the same with "identical VirtualBoxes?" <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed May 29, 2013 4:02 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">It's not the check, it's the going through SbieSvc.<br>
+<br>
+Now, of course having OpenWinClass=* doesn't change the way the program behaves,<br>
+it doesn't suddenly make it access more windowing objects outside the sandbox...<br>
+<br>
+But the check for a match against OpenWinClass is always the first thing that happens,<br>
+and a match means going through SbieSvc.  So effectively, everything goes through SbieSvc.<br>
+<br>
+This way of doing things in not set in stone of course, but like I said, I wouldn't want<br>
+to touch that right now.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15022&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:37:30 GMT -->
+</html>

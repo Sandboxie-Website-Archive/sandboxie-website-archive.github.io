@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24895&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:59:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Mouse pointer position jumps in TeamViewer</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Mouse pointer position jumps in TeamViewer</h2>
+		<p><a href="viewtopic5ba15ba1.html?f=11&amp;t=24895">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24895</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Mouse pointer position jumps in TeamViewer</h3>
+				<div class="date">Posted: <strong>Sat Sep 16, 2017 9:51 pm</strong></div>
+				<div class="author">by <strong>Scoox</strong></div>
+				<div class="content"><em>Windows 10 Professional x64 Creators Update <br>
+Sandboxie v5.21<br>
+TeamViewer v12.0.86369<br>
+Not running any antivirus or firewall software (thank you Sandboxie <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">)<br>
+Computer: Surface Pro 4<br>
+Display resolution: 2736x1824 @ 200% display scaling</em><br>
+<br>
+I'm experiencing a problem where the mouse pointer "jumps" to a different position on the screen when hovering the remote computer display area in TeamViewer. Obviously this doesn't happen if TeamViewer is run outside the sandbox. As soon as the mouse pointer is positioned over the "hot" area (the area that controls the remote computer), the mouse pointer gets thrown to the bottom-right corner of my display (not the remote display).<br>
+<br>
+I take this opportunity to mention that I've had similar problems with "jumping mouse pointers" with other less popular applications (FL Studio, NI Traktor, Bitwig, Studio One, to name a few). All these applications have one thing in common: they hide the mouse pointer. The difference between those applications and TeamViewer is that TeamViewer hides the pointer on mouse hover, whereas the other applications do so on mouse click, but the problem seems to be related.<br>
+<br>
+I started experiencing this issue since I got the Surface Pro 4 so I think it may be related to high-dpi display. Setting DPI scaling to 100% in Windows Settings app didn't solve the problem.<br>
+<br>
+If I remember correctly, in some applications the problem only happens when DPI scaling values <em>not</em> a multiple of 100% e.g. 150% or 175%.<br>
+<br>
+In some applications enabling the following compatibility setting on the sandboxed .exe file solved the problem (e.g. Traktor):<br>
+
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file547a547a.png?id=1226" class="postimage" alt="2017-09-17 Compatibilitty DPI scaling.png" onclick="viewableArea(this);" /></dt>
+						<dd>2017-09-17 Compatibilitty DPI scaling.png (48.79 KiB) Viewed 615 times</dd>
+		</dl>
+		
+		
+		
+			</div>
+
+Interestingly, I am able to operate these applications normally if I use the Surface Pro 4 touchscreen, both touch and surface pen.<br>
+<br>
+It looks like these problem in all these different applications may share a common cause, and it might be worth investigating.<br>
+<br>
+Thank you guys!  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Mouse pointer position jumps in TeamViewer</h3>
+				<div class="date">Posted: <strong>Mon Sep 18, 2017 1:31 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Scoox, <br>
+<br>
+I'll pass the info to the devs.  <br>
+<br>
+Here are some related threads regarding mouse issues with scaling other than 100%:<br>
+<a href="viewtopic7df07df0.html?f=4&amp;t=22782#p120103" class="postlink">viewtopic.php?f=4&amp;t=22782#p120103</a><br>
+<a href="viewtopicbfaabfaa.html?f=11&amp;t=22271" class="postlink">viewtopic.php?f=11&amp;t=22271</a><br>
+<a href="viewtopic4e1c4e1c.html?p=129475#p129475" class="postlink">viewtopic.php?p=129475#p129475</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Mouse pointer position jumps in TeamViewer</h3>
+				<div class="date">Posted: <strong>Mon Sep 18, 2017 11:16 pm</strong></div>
+				<div class="author">by <strong>Scoox</strong></div>
+				<div class="content">Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Mouse pointer position jumps in TeamViewer</h3>
+				<div class="date">Posted: <strong>Tue Feb 27, 2018 2:42 pm</strong></div>
+				<div class="author">by <strong>Suffected1988</strong></div>
+				<div class="content">I'm having the same problem with Teamviewer. I wasn't sure if this was a Sandboxie issue or Teamviewer issue.  Whenever I try to move my mouse into the remote control, it prevents it from entering the window. When i do manage to get the mouse in, it returns outside after a few seconds.  It makes Teamviewer unusable .</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24895&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:59:25 GMT -->
+</html>

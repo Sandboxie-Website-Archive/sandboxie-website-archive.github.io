@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25205&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:05:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Failed to communicate with Sandboxie Service:  *GUIPROXY</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Failed to communicate with Sandboxie Service:  *GUIPROXY</h2>
+		<p><a href="viewtopic45654565.html?f=11&amp;t=25205">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25205</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Failed to communicate with Sandboxie Service:  *GUIPROXY</h3>
+				<div class="date">Posted: <strong>Wed Dec 06, 2017 2:37 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">It is now one year later and I am still seeing these notices. My old post is <a href="viewtopic2b59-22b59.html?f=11&amp;t=23829" class="postlink">viewtopic.php?f=11&amp;t=23829</a>. This time it's on a Windows 7 computer running Sandboxie 5.20 and Chrome Beta, all 64-bit. Recently though I'm seeing it about once every day or two, after the computer resumes from hibernation. It has a bad side effect which is that one or more of the Chrome windows will lose their theme so to speak, and the minimize maximize and close buttons will no longer work. Also the tabs become transparent. To fix this I can select the tabs and drag them to a new window which restores the proper look. It's pretty weird.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Failed to communicate with Sandboxie Service:  *GUIPROXY</h3>
+				<div class="date">Posted: <strong>Wed Dec 06, 2017 4:17 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello cornflake,<br>
+<br>
+Have a look at this thread regarding Chrome dev edition:<br>
+<a href="viewtopicf7acf7ac.html?p=130933#p130933" class="postlink">viewtopic.php?p=130933#p130933</a><br>
+<br>
+Did you try hiding the message as recommended before? <br>
+Is there any security software installed?<br>
+What is the full message that you receive? <br>
+Are there any extensions installed? <br>
+What version of Chrome are you using? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Failed to communicate with Sandboxie Service:  *GUIPROXY</h3>
+				<div class="date">Posted: <strong>Fri Dec 08, 2017 3:05 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">The actual error message this time is:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [00000102]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [00000102]</code></pre></div>
+
+I'm not hiding it because I want to know when it happens. Also it has a bad effect as I described where it messes up the windows theme on the chrome windows.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Failed to communicate with Sandboxie Service:  *GUIPROXY</h3>
+				<div class="date">Posted: <strong>Fri Dec 08, 2017 4:54 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello cornflake,<br>
+<br>
+I cannot reproduce the GUIPROXY issue using the latest Sandboxie beta. <br>
+Did you try the steps I provided? <br>
+Does the issue follow you to a new Sandbox with default settings?<br>
+<br>
+Regarding hibernation, I tried testing it on a VM but the whole thing (UI) crashes when I try to resume windows (even without Chrome). I'll try on the host (diff OS) to see if I can replicate.  <br>
+Does Chrome work fine if you open it outside Sandboxie, then put your computer to hibernate and wake it up after a few minutes? <br>
+What's your AV software?<br>
+Are there any Chrome extensions added to the mix? I am assuming you are using the latest Dev Edition.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Failed to communicate with Sandboxie Service:  *GUIPROXY</h3>
+				<div class="date">Posted: <strong>Fri Dec 08, 2017 5:22 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">Thank you for trying. I am using a Chrome Beta 63.0.3239.52. I am going to update to the latest Chrome release build and I will also update Sandboxie to 5.23.1, and I will let you know in a few days or less whether or not I still have the same problem.<br>
+<br>
+As far as the steps provided if you're asking if I added --no-sandbox to Chrome, no I did not. I do not have any AV software except Windows Defender on this computer, and no extensions. Yes Chrome appears to work fine without Sandboxie and does not have the problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Failed to communicate with Sandboxie Service:  *GUIPROXY</h3>
+				<div class="date">Posted: <strong>Fri Dec 22, 2017 10:08 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">I have been using Sandboxie 5.23.1 and the latest Chrome 63.0.3239.108 for about a week. Only one resume from the last week have I noticed a GUIPROXY message. There has not been any window theme corruption. If I have any more window theme issues I'll post again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Failed to communicate with Sandboxie Service:  *GUIPROXY</h3>
+				<div class="date">Posted: <strong>Thu Jan 25, 2018 2:07 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">For the last few days I've received the gui proxy messages every time I resume the computer and it's resulted in some window theme corruption (minimize/maximize/restore don't work). Windows 7, Sandboxie 5.23.3 x64, Chrome  63.0.3239.132 x64</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Failed to communicate with Sandboxie Service:  *GUIPROXY</h3>
+				<div class="date">Posted: <strong>Thu Jan 25, 2018 5:20 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello cornflake ,<br>
+<br>
+I'll re-test this tomorrow and let you know the outcome.<br>
+Can you please provide your sandboxie configuration file , so that I can re-create the scenario? <br>
+Configure--&gt; Edit Configuration <br>
+Cop/Paste contents here<br>
+Highlight contents and hit the "&lt;/&gt;" button to format them.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Failed to communicate with Sandboxie Service:  *GUIPROXY</h3>
+				<div class="date">Posted: <strong>Thu Jan 25, 2018 6:46 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">My entire Sandboxie.ini is huge and contains confidential information. I can give you the GlobalSettings and Chrome sandbox sections. It is the same in Windows 8.1 as well.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+TemplateReject=WindowsRasMan
+TemplateReject=nVidia_Stereoscopic3D
+TemplateReject=WindowsLive
+TemplateReject=OfficeLicensing
+ActivationPrompt=n
+Template=SystemAudioStream
+Template=BitVise
+Template=7zipShellEx
+Template=AdobeAcrobatReader
+Template=nVidia_nView
+ClosedFilePath=\Device\QWAVEdrv
+
+[Chrome]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+NeverDelete=y
+Template=Chrome_Force
+Template=BlockPorts
+Template=LingerPrograms
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,off
+BoxNameTitle=n
+ProcessGroup=&lt;ChromePrograms&gt;,chrome.exe
+ForceProcess=&lt;ChromePrograms&gt;
+DropAdminRights=y
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Failed to communicate with Sandboxie Service:  *GUIPROXY</h3>
+				<div class="date">Posted: <strong>Fri Jan 26, 2018 10:43 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello cornflake,<br>
+<br>
+I cannot repro these behaviors. <br>
+<br>
+I know you have been reporting this for a while, <a href="viewtopicde25de25.html?p=125328#p125328" class="postlink">viewtopic.php?p=125328#p125328</a> and the suggestion to hide the message might be the best way to go, if no functionality is affected.  If you can also think about what are the common things between your 2 OS (installed AV,  graphics drivers, settings....) that may help finding out a possible trigger. <br>
+<br>
+As for the other issue, have you tried updating your video drivers (and/or reverting to a prior driver) to see if that helps? <br>
+Does it work fine outside Sandboxie? <br>
+Try removing the nvidia templates and see if that makes a difference. <br>
+Try a new Sandbox with default settings as well. <br>
+<br>
+If you can reproduce the issue, please run Resource Access Monitor so that we can review it: (not sure we'll be able to find much, but worth a shot)<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Failed to communicate with Sandboxie Service:  *GUIPROXY</h3>
+				<div class="date">Posted: <strong>Fri Jan 26, 2018 4:32 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">Thanks for your help. I think since I am the only one with this problem recurring it is probably something on my computers but I don't know what. I can't think of any more information that can be used to reproduce except that on both I usually have many tabs open. The two computers are very different. One is a Windows 7 HP desktop and the other is a Windows 8.1 Dell laptop. Both have Intel graphics and Intel CPU chips. Everything works fine outside of Sandboxie as far as I can see. Normally I run Chrome in Sandboxie though.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25205&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:05:25 GMT -->
+</html>

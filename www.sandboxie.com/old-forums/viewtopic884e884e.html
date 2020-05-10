@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=55&t=22151&start=225&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:08:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 5.07 Beta Available (latest version 5.08 RC) - Page 16</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>5.07 Beta Available (latest version 5.08 RC)</h2>
+		<p><a href="viewtopica3a2a3a2.html?f=55&amp;t=22151">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=55&amp;t=22151</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>16</strong> of <strong>19</strong></div>
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.8)</h3>
+				<div class="date">Posted: <strong>Fri Feb 12, 2016 11:28 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>eternalbeta wrote:</cite>For your information, forcing Outlook 2016 to run in the sandbox (v.5.07.6) under Win10 64bit, unfortunately resulted in the following errors:<br>
+<br>
+SBIE2303 Could not hook WSANSPIoctl (888)<br>
+SBIE2318 DLL initialization failed for 'ws2_32.dll'<br>
+SBIE2303 Could not hook NetUseAdd (999)<br>
+SBIE2318 DLL initialization failed for 'wkscli.dll'<br>
+SBIE2303 Could not hook SxsInstallW (999)<br>
+SBIE2318 DLL initialization failed for 'sxs.dll'<br>
+SBIE2303 Could not hook IcmpCreateFile (999)<br>
+SBIE2318 DLL initialization failed for 'iphlpapi.dll'<br>
+SBIE2303 Could not hook NsiRpcRegisterChangeNotification (999)<br>
+SBIE2318 DLL initialization failed for 'winnsi.dll'</div></blockquote>
+
+Office 2016 - Outlook 2016 is not supported in Sandboxie at this time <a href="../indexa186.html?KnownConflicts#Microsoft" class="postlink">http://www.sandboxie.com/index.php?Know ... #Microsoft</a> Office &amp; Office 365<br>
+The 999/888 errors have been addressed in 5.07.8, You would need to remove Outlook 2016 (SBIE should have flagged it under compatibility..)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.8)</h3>
+				<div class="date">Posted: <strong>Fri Feb 12, 2016 11:30 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>mart wrote:</cite>Updated to 5.07.8. Getting the errors shown below when starting Chrome in Windows 10 Pro. Running HitmanPro.Alert3 as well looks to be the reason for this. Stop Hitman running in Windows Services and the problem goes away. HitmanPro.Alert is showing in Sandboxie's Software Compatibility list.<br>
+<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000002 - chrome.exe [FF000000]<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000002 - chrome.exe [FF000000]<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000002 - chrome.exe [FF000000]<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000002 - chrome.exe [FF000000]<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000002 - chrome.exe [FF000000]<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000002 - chrome.exe [FF000000]<br>
+<br>
+<strong>Edit:</strong> A couple of words missing.</div></blockquote>
+
+If that is the case, HitMan Pro must be the issue. Hitman Pro is not listed here <a href="viewtopica726a726.html?f=11&amp;t=21539" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=21539</a> however the "old" template in SBIE most likely does not apply any longer. It has not been updated.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.8)</h3>
+				<div class="date">Posted: <strong>Fri Feb 12, 2016 11:38 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Pelone wrote:</cite><blockquote><div><cite>Craig@Invincea wrote:</cite><blockquote><div><cite>Pelone wrote:</cite>Hi. Chrome 48 (32 bit, no extension installed) sandboxed with all 5.07.x versions sometime don't load correctly HTTPS pages (https icon striked out in red, connection not private) even on incognito mode. However, the https connections launched out of the sandbox works perfectly. Thus, i'v come back to the 5.06 version with which this problem does not exist.<br>
+Regards</div></blockquote>
+
+Not seeing it. Delete the contents of your Sandbox. I am having no problems in Chrome 48 or Beta 49 using SBIE 507.8...Win 10 64 (FR builds)</div></blockquote>
+My sandboxes have always active the setting for automatic removal of contents on close.</div></blockquote>
+
+Doesn't hurt to manually do it to make certain in fact they have been cleared.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.8)</h3>
+				<div class="date">Posted: <strong>Fri Feb 12, 2016 11:44 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite><blockquote><div><cite>mart wrote:</cite>Updated to 5.07.8. Getting the errors shown below when starting Chrome in Windows 10 Pro. Running HitmanPro.Alert3 as well looks to be the reason for this. Stop Hitman running in Windows Services and the problem goes away. HitmanPro.Alert is showing in Sandboxie's Software Compatibility list.<br>
+<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000002 - chrome.exe [FF000000]<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000002 - chrome.exe [FF000000]<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000002 - chrome.exe [FF000000]<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000002 - chrome.exe [FF000000]<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000002 - chrome.exe [FF000000]<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000002 - chrome.exe [FF000000]<br>
+<br>
+<strong>Edit:</strong> A couple of words missing.</div></blockquote>
+
+If that is the case, HitMan Pro must be the issue. Hitman Pro is not listed here <a href="viewtopica726a726.html?f=11&amp;t=21539" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=21539</a> however the "old" template in SBIE most likely does not apply any longer. It has not been updated.</div></blockquote>
+
+Just tested Hitman Pro Alert, v3.1.7 Build 357 on Google Chrome v48.0.2564.109m (64) running SBIE Beta 5.07.8 (Win 10x64) with no issues thus far.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.8)</h3>
+				<div class="date">Posted: <strong>Fri Feb 12, 2016 3:29 pm</strong></div>
+				<div class="author">by <strong>mart</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite>Just tested Hitman Pro Alert, v3.1.7 Build 357 on Google Chrome v48.0.2564.109m (64) running SBIE Beta 5.07.8 (Win 10x64) with no issues thus far.</div></blockquote>
+
+Hard to know what can be different. This is a fairly new and clean installation of W.10, so <em>should</em> be OK. I can only say that I get the messages when starting Chrome 48.0.2564.109 and that they don't arise if HitmanPro.Alert 3.1.7 Build 357 is stopped from running.<br>
+<br>
+I'll keep looking for a reason and thanks for the reply. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.8)</h3>
+				<div class="date">Posted: <strong>Fri Feb 12, 2016 6:43 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>mart wrote:</cite><blockquote><div><cite>Craig@Invincea wrote:</cite>Just tested Hitman Pro Alert, v3.1.7 Build 357 on Google Chrome v48.0.2564.109m (64) running SBIE Beta 5.07.8 (Win 10x64) with no issues thus far.</div></blockquote>
+
+Hard to know what can be different. This is a fairly new and clean installation of W.10, so <em>should</em> be OK. I can only say that I get the messages when starting Chrome 48.0.2564.109 and that they don't arise if HitmanPro.Alert 3.1.7 Build 357 is stopped from running.<br>
+<br>
+I'll keep looking for a reason and thanks for the reply. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div></blockquote>
+
+Did Hitman Pro install a Google extension? If so, try disabling that.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.8)</h3>
+				<div class="date">Posted: <strong>Sat Feb 13, 2016 4:30 am</strong></div>
+				<div class="author">by <strong>mart</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite>Did Hitman Pro install a Google extension? If so, try disabling that.</div></blockquote>
+No, it didn't install an extension. I have tried the following:<br>
+<br>
+Disabled the few extensions installed.<br>
+Created a 'New Person' profile.<br>
+Thoroughly uninstalled Chrome and then reinstalled it.<br>
+Disabled all protections in Avira Pro (right click on System Tray icon)<br>
+Exited Nvidia GeForce Experience<br>
+Stopped 'AdGuard' (a program under trial) running in both Startup and Windows Services.<br>
+<br>
+The only action that removes the error is stopping HitmanPro.Alert.<br>
+<br>
+It must be something to do with me since nobody else has reported the problem, although I have checked for system errors (sfc /scannow and Dism) and none show.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Chrome and HMPA Conflict</h3>
+				<div class="date">Posted: <strong>Sat Feb 13, 2016 7:43 am</strong></div>
+				<div class="author">by <strong>coolheaded</strong></div>
+				<div class="content">I am also getting a similar error like mart when using Chrome with HitmanPro.Alert 3.1.7 build 57 in Windows 10 x64.If i disable mitigations in HitmanPro.Alert for Chrome 64-bit Browser,it runs sandboxed without any issue.<br>
+<br>
+Windows 10 x64 - Version 1511 (OS Build 10586.104)<br>
+<br>
+Chrome x64 - v48.0.2564.109<br>
+<br>
+Sandboxie - v5.07.8<br>
+<br>
+HitmanPro.Alert - v3.1.7.357<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.8)</h3>
+				<div class="date">Posted: <strong>Sat Feb 13, 2016 8:52 am</strong></div>
+				<div class="author">by <strong>mart</strong></div>
+				<div class="content">I hadn't thought to only disable Chrome's protection in HitmanPro.Alert (easier/better way to go) but it looks to amount to the same thing. I'll stop looking for something strange on my computer now. Thanks. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.8)</h3>
+				<div class="date">Posted: <strong>Sat Feb 13, 2016 2:17 pm</strong></div>
+				<div class="author">by <strong>RonR</strong></div>
+				<div class="content">Windows 8.1 x64 / IE 11<br>
+<br>
+This just started with the 5.07.8 update when opening IE:<br>
+<br>
+SBIE2303 Could not hook WSANSPIoctl (888)<br>
+SBIE2318 DLL initialization failed for 'ws2_32.dll'<br>
+SBIE2303 Could not hook IcmpCreateFile (999)<br>
+SBIE2318 DLL initialization failed for 'iphlpapi.dll'<br>
+SBIE2303 Could not hook NsiRpcRegisterChangeNotification (999)<br>
+SBIE2318 DLL initialization failed for 'winnsi.dll'<br>
+SBIE2303 Could not hook NetUseAdd (999)<br>
+SBIE2318 DLL initialization failed for 'wkscli.dll'</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome and HMPA Conflict</h3>
+				<div class="date">Posted: <strong>Sat Feb 13, 2016 3:11 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content"><blockquote><div><cite>coolheaded wrote:</cite>I am also getting a similar error like mart when using Chrome with HitmanPro.Alert 3.1.7 build 57 in Windows 10 x64.If i disable mitigations in HitmanPro.Alert for Chrome 64-bit Browser,it runs sandboxed without any issue.<br>
+<br>
+Windows 10 x64 - Version 1511 (OS Build 10586.104)<br>
+<br>
+Chrome x64 - v48.0.2564.109<br>
+<br>
+Sandboxie - v5.07.8<br>
+<br>
+HitmanPro.Alert - v3.1.7.357<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]</code></pre></div></div></blockquote>
+Thanks for posting.....similar observe W8.1 x64. Disable mitigations in HitmanPro.Alert for Chrome 32-bit, runs sandbox'd without 2203.   <br>
+Wonder, can HitmanPro.Alert compatibility be tweaked....</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.8)</h3>
+				<div class="date">Posted: <strong>Sun Feb 14, 2016 2:34 pm</strong></div>
+				<div class="author">by <strong>1eyedjack</strong></div>
+				<div class="content">Hello.<br>
+I am having a conflict problem with uTorrent client version 3.4.5 build 41712 (32 bit) (the latest version I think)<br>
+I am running Windows 8.1 pro, with Avast Premier antivirus, ExpressVPN, and PeerBlock 1.2.<br>
+<br>
+Until just now I was running the beta version 5.07.5.  I noticed that 5.07.8 was out and tried that but it has no effect on this problem.<br>
+<br>
+uTorrent recently released the upgrade to build 41712 and I foolishly clicked on upgrade.  I do not know what the previous build number was and do not know how (or even whether it is possible) to go back to a previous version.  I do not know whether I should even be posting this here rather than in a forum dedicated to uTorrent.  I would just say that the latest build of uTorrent works ok outside the sandbox, and that the previous build of uTorrent worked perfectly in the sandbox (version 5.07.5 beta)<br>
+<br>
+Basically, I open my browser (IE 11) in a sandbox, and click on a magnet link to a torrent file.  It hesitates a bit, then attempts to load uTorrent in the sandbox, but the GUI only half loads and it periodically says "not responding".  If I leave it long enough I find that it has in fact downloaded the selected file, but with the GUI misbehaving I cannot monitor the file download process.<br>
+<br>
+Just letting you know.  Now off to find a uTorrent forum to say the same thing.<br>
+<br>
+Thanks, guys, love Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.07.8)</h3>
+				<div class="date">Posted: <strong>Sun Feb 14, 2016 9:54 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>1eyedjack wrote:</cite>Hello.<br>
+I am having a conflict problem with uTorrent client version 3.4.5 build 41712 (32 bit) (the latest version I think)<br>
+I am running Windows 8.1 pro, with Avast Premier antivirus, ExpressVPN, and PeerBlock 1.2.<br>
+<br>
+Until just now I was running the beta version 5.07.5.  I noticed that 5.07.8 was out and tried that but it has no effect on this problem.<br>
+<br>
+uTorrent recently released the upgrade to build 41712 and I foolishly clicked on upgrade.  I do not know what the previous build number was and do not know how (or even whether it is possible) to go back to a previous version.  I do not know whether I should even be posting this here rather than in a forum dedicated to uTorrent.  I would just say that the latest build of uTorrent works ok outside the sandbox, and that the previous build of uTorrent worked perfectly in the sandbox (version 5.07.5 beta)<br>
+<br>
+Basically, I open my browser (IE 11) in a sandbox, and click on a magnet link to a torrent file.  It hesitates a bit, then attempts to load uTorrent in the sandbox, but the GUI only half loads and it periodically says "not responding".  If I leave it long enough I find that it has in fact downloaded the selected file, but with the GUI misbehaving I cannot monitor the file download process.<br>
+<br>
+Just letting you know.  Now off to find a uTorrent forum to say the same thing.<br>
+<br>
+Thanks, guys, love Sandboxie.</div></blockquote>
+
+We haven't tested torrent clients with SBIE. So the Beta's would not directly related to any known issues. <br>
+<br>
+What happens when you are not using Peer Block or VPN? Either one or both? And just uTorrent? (If you can...)<br>
+<br>
+Any one of those 2 could be the issue...or uTorrent itself..<br>
+<br>
+ When you're in a SB, some resources are blocked by default, and well, others will be much slower depending on how the program responds to being in that sb environment.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.08 RC)</h3>
+				<div class="date">Posted: <strong>Mon Feb 15, 2016 1:23 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">5.08 RC has been released. No changes except for version #.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.07 Beta Available (latest version 5.08 RC)</h3>
+				<div class="date">Posted: <strong>Mon Feb 15, 2016 2:00 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">FWIW, beta 5.07.8 feels solid in my XP and W7 32 bits. All programs that I run in an everyday basis run fine sandboxed. Making this beta the next stable looks good. <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>16</strong> of <strong>19</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=55&t=22151&start=225&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:08:35 GMT -->
+</html>

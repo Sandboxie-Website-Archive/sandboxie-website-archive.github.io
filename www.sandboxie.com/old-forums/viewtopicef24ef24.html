@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25450&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:00:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SBIE2205 Service not implemented:  Clipboard MetaFile (fmt 0003 sz 24)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SBIE2205 Service not implemented:  Clipboard MetaFile (fmt 0003 sz 24)</h2>
+		<p><a href="viewtopiccdeecdee.html?f=11&amp;t=25450">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25450</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>SBIE2205 Service not implemented:  Clipboard MetaFile (fmt 0003 sz 24)</h3>
+				<div class="date">Posted: <strong>Wed Feb 14, 2018 5:41 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">Word 2016 x86 on Windows 8.1 x64<br>
+<br>
+While doing copy paste operations, SBIE throws this error:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2205 Service not implemented:  Clipboard MetaFile (fmt 0003 sz 24)</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2205 Service not implemented:  Clipboard MetaFile (fmt 0003 sz 24)</h3>
+				<div class="date">Posted: <strong>Thu Feb 15, 2018 10:45 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Mr.X ,<br>
+<br>
+Office 365? <br>
+Are you copying within sandboxed apps, or outside/inside Sandboxie? <br>
+Are you copying text, images...large amounts of data... ?<br>
+Are there any addons involved?<br>
+Any security Software? <br>
+What's your Sandboxie version?   <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2205 Service not implemented:  Clipboard MetaFile (fmt 0003 sz 24)</h3>
+				<div class="date">Posted: <strong>Thu Feb 15, 2018 11:24 am</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">Hello Barb,<br>
+<br>
+No Office 365 but Office Pro Plus (Volume) x86.<br>
+Yes.<br>
+Yes.<br>
+No addons.<br>
+AppGuard, AppCheck<br>
+As my sig. states: latest beta.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2205 Service not implemented:  Clipboard MetaFile (fmt 0003 sz 24)</h3>
+				<div class="date">Posted: <strong>Thu Feb 15, 2018 1:05 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Mr. X,<br>
+<br>
+So far, I haven't been able to repro this. I am using Word 2016 MSO 16.0.4266.1003 32 bit + Win 8.1 x64 + Sbie 5.23.5.<br>
+Can you please provide the following?:<br>
+<br>
+Office 2016 version (you should be able to see if via File--&gt; Account)<br>
+Repro steps to trigger the issue <br>
+Resource Access Monitor output : <a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+Copy/paste the output here, highlight it and then click on the "&lt;/&gt;" button to format it. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2205 Service not implemented:  Clipboard MetaFile (fmt 0003 sz 24)</h3>
+				<div class="date">Posted: <strong>Fri Feb 16, 2018 3:35 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">Word 2016 MSO (16.0.4549.1000) 32 bits<br>
+<strong>Add-on: MathType 6.9 </strong><br>
+<br>
+Steps to reproduce the failure:<br>
+1. Open Word.<br>
+2. Blank document.<br>
+3. Type anything short.<br>
+4. Select it and right-click copy<br>
+5. Paste anywhere in the same document.<br>
+6. Save the document<br>
+7. Msg SBIE2205 Service not implemented: Clipboard MetaFile (fmt 0003 sz 24) should pop up.<br>
+<br>
+RAM log:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\0000002e
+(Drive)     \Device\CdRom0
+(Drive)     \Device\HarddiskVolume1
+(Drive)     \Device\HarddiskVolume2
+(Drive)     \Device\HarddiskVolume3
+(Drive)     \Device\HarddiskVolume4
+(Drive)     \Device\HarddiskVolume5
+Clsid       -------------------------------
+Clsid       {00021401-0000-0000-C000-000000000046} Shortcut
+Clsid       {275C23E2-3747-11D0-9FEA-00AA003F8646} Multi Language Support
+Clsid       {4590F811-1D3A-11D0-891F-00AA004B2E24} WBEM Locator
+Clsid       {88D96A0C-F192-11D4-A65F-0040963251E5} SAX XML Reader 6.0
+Clsid       {88D96A0F-F192-11D4-A65F-0040963251E5} MXXMLWriter 6.0
+Clsid    O  {8BC3F05E-D86B-11D0-A075-00C04FB68820} Windows Management and Instrumentation
+Clsid    O  {A47979D2-C419-11D9-A5B4-001185AD2B89} Network List Manager
+Clsid    X  {9E175B6D-F52A-11D8-B9A5-505054503030} Search Gatherer Notification
+File/Key    -------------------------------
+Image       -------------------------------
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\__ComCatalogCache__
+Ipc         \BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000005.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000002.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \BaseNamedObjects\FontCachePort
+Ipc         \BaseNamedObjects\RestartMSIDLLv327680.629164133
+Ipc         \BaseNamedObjects\RotHintTable
+Ipc         \BaseNamedObjects\SC_AutoStartComplete
+Ipc         \BaseNamedObjects\ShutdownMSIDLLv327680.629164133
+Ipc         \BaseNamedObjects\windows_shell_global_counters
+Ipc         \RPC Control\actkernel
+Ipc         \RPC Control\epmapper
+Ipc         \RPC Control\keysvc
+Ipc         \RPC Control\OLE508B470438C87F2C094E88855842
+Ipc         \RPC Control\OLE55A6E118F6838EDE18E9F8E0AB00
+Ipc         \RPC Control\OLEF3CB8B383E56BC4C548DDEBACC55
+Ipc         \Sessions\1\BaseNamedObjects\__ComCatalogCache__
+Ipc         \Sessions\1\BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \Sessions\1\BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \Sessions\1\BaseNamedObjects\{D2E68709-534D-4786-A9B7-D2364CACDA8F}16.0
+Ipc         \Sessions\1\BaseNamedObjects\10ACB_GETTING_DATA10_S-1-5-5-0-91898
+Ipc         \Sessions\1\BaseNamedObjects\10FM_ACB_S-1-5-5-0-91898
+Ipc         \Sessions\1\BaseNamedObjects\10FM_ACBBD_S-1-5-5-0-91898
+Ipc         \Sessions\1\BaseNamedObjects\10MU_ACB10_S-1-5-5-0-91898
+Ipc         \Sessions\1\BaseNamedObjects\10MU_ACBPIDS_S-1-5-5-0-91898
+Ipc         \Sessions\1\BaseNamedObjects\552FFA80-3393-423d-8671-7BA046BB5906
+Ipc         \Sessions\1\BaseNamedObjects\5CAC3FAB-87F0-4750-984D-D50144543427Office-VER16
+Ipc         \Sessions\1\BaseNamedObjects\69545831-0931-4328-8676-335423887A86-Office1604549_S-1-5-21-3966546320-3903878953-3086762924-1001
+Ipc         \Sessions\1\BaseNamedObjects\A1D62C73-3712-4bf7-A524-ACE967A8C7D7_Office16
+Ipc         \Sessions\1\BaseNamedObjects\AirDrop::6064
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000005.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000002.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users*****AppData*Local*Microsoft*Windows*Caches*{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000155.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users*****AppData*Local*Microsoft*Windows*Caches*cversions.1.ro
+Ipc         \Sessions\1\BaseNamedObjects\ComPlusCOMRegTable
+Ipc         \Sessions\1\BaseNamedObjects\EF46F207-682E-44D0-B511-33F2BD9D52DB-VER16
+Ipc         \Sessions\1\BaseNamedObjects\F99C425F-9135-43ed-BD7D-396DE488DC53_Office16
+Ipc         \Sessions\1\BaseNamedObjects\FM_IMDS01_S-1-5-5-0-91898
+Ipc         \Sessions\1\BaseNamedObjects\MSO_AdHoc11604549_S-1-5-21-3966546320-3903878953-3086762924-1001
+Ipc         \Sessions\1\BaseNamedObjects\MSO_Formal11604549_S-1-5-21-3966546320-3903878953-3086762924-1001
+Ipc         \Sessions\1\BaseNamedObjects\MTX_MSO_AdHoc1_S-1-5-21-3966546320-3903878953-3086762924-1001
+Ipc         \Sessions\1\BaseNamedObjects\MTX_MSO_Formal1_S-1-5-21-3966546320-3903878953-3086762924-1001
+Ipc         \Sessions\1\BaseNamedObjects\MU_IMDS10_S-1-5-5-0-91898
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRoot10ADCD80ADEDDD0F
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRoot2F2CEF79B43291F1
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRoot3F15847CF165FC6F
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRoot483E321F19708B13
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRoot4996E4C29FA242F7
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRoot5440F769BEA33320
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRoot68EF6525273FABF0
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRoot7D8D822B1E4D2FB7
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRoot93A583E69777EF53
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRootCA7AF816822F0F12
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRootDD21776F91571071
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRootE30E79B6B478F312
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRootEFA68E9895CEEC59
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRootF04613E129784D18
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRootF0F9A78098229A3F
+Ipc         \Sessions\1\BaseNamedObjects\OleDfRootF8DE110D93AE98A6
+Ipc         \Sessions\1\BaseNamedObjects\PrimaryWord16Mutex_S-1-5-21-3966546320-3903878953-3086762924-10013
+Ipc         \Sessions\1\BaseNamedObjects\PrimaryWord16SharedMemoryArea_S-1-5-21-3966546320-3903878953-3086762924-10013
+Ipc         \Sessions\1\BaseNamedObjects\RestartMSIDLLv327680.629164133
+Ipc         \Sessions\1\BaseNamedObjects\RotHintTable
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_5088
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_5856
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_5892
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_6064
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_6552
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_RPCSS_SXS_READY
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceCrypto_Mutex1
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_cryptsvc
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_DcomLaunch
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_Mutex1
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcEptMapper
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_ProtectedStorage_Mutex
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_ProtectedStorage_Section
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_WindowsInstallerInUse
+Ipc         \Sessions\1\BaseNamedObjects\SboxSession
+Ipc         \Sessions\1\BaseNamedObjects\SC_AutoStartComplete
+Ipc         \Sessions\1\BaseNamedObjects\ScmCreatedEvent
+Ipc         \Sessions\1\BaseNamedObjects\ShutdownMSIDLLv327680.629164133
+Ipc         \Sessions\1\BaseNamedObjects\UrlZonesSM_***
+Ipc         \Sessions\1\BaseNamedObjects\WatsonDataAccess
+Ipc         \Sessions\1\BaseNamedObjects\windows_shell_global_counters
+Ipc         \Sessions\1\BaseNamedObjects\ZonesCacheCounterMutex
+Ipc         \Sessions\1\BaseNamedObjects\ZonesLockedCacheCounterMutex
+Ipc      O  \BaseNamedObjects\msctf.serverDefault1
+Ipc      O  \KernelObjects\HighMemoryCondition
+Ipc      O  \KernelObjects\LowMemoryCondition
+Ipc      O  \KernelObjects\MaximumCommitCondition
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\CRYPT32.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\KERNELBASE.dll
+Ipc      O  \KnownDlls\MSASN1.dll
+Ipc      O  \KnownDlls\MSCTF.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\NSI.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\WLDAP32.dll
+Ipc      O  \KnownDlls\Wow64cpu.dll
+Ipc      O  \KnownDlls\Wow64win.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \KnownDlls32\advapi32.dll
+Ipc      O  \KnownDlls32\bcryptPrimitives.dll
+Ipc      O  \KnownDlls32\CFGMGR32.dll
+Ipc      O  \KnownDlls32\COMDLG32.dll
+Ipc      O  \KnownDlls32\CRYPT32.dll
+Ipc      O  \KnownDlls32\CRYPTBASE.dll
+Ipc      O  \KnownDlls32\gdi32.dll
+Ipc      O  \KnownDlls32\kernel32.dll
+Ipc      O  \KnownDlls32\KERNELBASE.dll
+Ipc      O  \KnownDlls32\MSASN1.dll
+Ipc      O  \KnownDlls32\MSCTF.dll
+Ipc      O  \KnownDlls32\MSVCRT.dll
+Ipc      O  \KnownDlls32\NORMALIZ.dll
+Ipc      O  \KnownDlls32\NSI.dll
+Ipc      O  \KnownDlls32\ole32.dll
+Ipc      O  \KnownDlls32\OLEAUT32.dll
+Ipc      O  \KnownDlls32\PSAPI.DLL
+Ipc      O  \KnownDlls32\rpcrt4.dll
+Ipc      O  \KnownDlls32\Setupapi.dll
+Ipc      O  \KnownDlls32\SHELL32.dll
+Ipc      O  \KnownDlls32\SHLWAPI.dll
+Ipc      O  \KnownDlls32\SspiCli.dll
+Ipc      O  \KnownDlls32\user32.dll
+Ipc      O  \KnownDlls32\WINTRUST.dll
+Ipc      O  \KnownDlls32\WLDAP32.dll
+Ipc      O  \KnownDlls32\WS2_32.dll
+Ipc      O  \RPC Control\dhcpcsvc
+Ipc      O  \RPC Control\dhcpcsvc6
+Ipc      O  \RPC Control\DNSResolver
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\LSARPC_ENDPOINT
+Ipc      O  \RPC Control\lsasspirpc
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \RPC Control\splwow64_1_3e6_0_2000
+Ipc      O  \RPC Control\SPPCTransportEndpoint-00001
+Ipc      O  \RPC Control\UmpdProxy_1_3e6_0_2000
+Ipc      O  \Security\LSA_AUTHENTICATION_INITIALIZED
+Ipc      O  \Sessions\1\BaseNamedObjects\CicLoadWinStaWinSta0
+Ipc      O  \Sessions\1\BaseNamedObjects\CTF.AsmListCache.FMPDefault1
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.Asm.MutexDefault1
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.CtfMonitorInstMutexDefault1
+Ipc      O  \Sessions\1\BaseNamedObjects\WinSpl64To32Mutex_3e6_0_2000
+Ipc      O  \Sessions\1\Windows\ApiPort
+Ipc      O  \Sessions\1\Windows\DwmApiPort
+Ipc      O  \Sessions\1\Windows\SharedSection
+Ipc      O  \Sessions\1\Windows\Theme1084945000
+Ipc      O  \Sessions\1\Windows\ThemeSection
+Ipc      O  \ThemeApiPort
+Ipc      O  \Windows\Theme3867419026
+Pipe        -------------------------------
+Pipe        ?
+Pipe        \Device\00000029
+Pipe        \Device\CNG
+Pipe        \Device\Harddisk1\DR1
+Pipe        \Device\HarddiskVolume1
+Pipe        \Device\HarddiskVolume2
+Pipe        \Device\HarddiskVolume3
+Pipe        \Device\HarddiskVolume4
+Pipe        \Device\HarddiskVolume5
+Pipe        \Device\KsecDD
+Pipe        \Device\MountPointManager
+Pipe        \device\namedpipe\samr
+Pipe        \device\namedpipe\srvsvc
+Pipe        \Device\Ndis
+Pipe        \Device\NDMP13
+Pipe        \Device\NDMP15
+Pipe        \Device\NDMP16
+Pipe        \Device\NDMP3
+Pipe        \Device\NDMP8
+Pipe     O  \Device\Afd
+Pipe     O  \Device\NetBT_Tcpip_{7338F731-CCA3-4121-B588-5B661882B6EF}
+Pipe     O  \Device\NetBT_Tcpip_{81051858-9355-4582-A850-0382F0F9502A}
+Pipe     O  \Device\NetBT_Tcpip_{816F10CE-AC44-46F1-A420-FB36E5396943}
+Pipe     O  \Device\Nsi
+WinCls      -------------------------------
+WinCls      NetUICtrlNotifySink
+WinCls   O  REListbox20W
+WinCls   O  Shell_TrayWnd
+WinCls   X  AgentAnim
+WinCls   X  MSOBALLOON
+WinCls   X  MsoCommandBarPopup
+WinCls   X  MsoHelp10
+WinCls   X  mspim_wnd32
+WinCls   X  OfficeTooltip
+WinCls   X  Progman
+</code></pre></div>
+
+-----------MERGED POST------------------<br>
+Quick update: I uninstalled MathType 6.9 error stills coming out though.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2205 Service not implemented:  Clipboard MetaFile (fmt 0003 sz 24)</h3>
+				<div class="date">Posted: <strong>Fri Feb 16, 2018 4:00 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Mr.X,<br>
+<br>
+I can repro on  both Win 8.1 as well as 10 FCU, addon not required.<br>
+<br>
+However, this is not a new issue:<br>
+<a href="viewtopicc7a3c7a3.html?f=11&amp;t=20626" class="postlink">viewtopic.php?f=11&amp;t=20626</a><br>
+<a href="viewtopic9a319a31.html?p=113382#p113382" class="postlink">viewtopic.php?p=113382#p113382</a><br>
+<a href="viewtopic848d848d.html?p=109883#p109883" class="postlink">viewtopic.php?p=109883#p109883</a><br>
+<br>
+I have made the devs aware, and I will update this thread if anything new comes up. In the meantime, if functionality is not affected (doesn't seem like it on my end), you can hide the message so it doesn't bother you.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBIE2205 Service not implemented:  Clipboard MetaFile (fmt 0003 sz 24)</h3>
+				<div class="date">Posted: <strong>Fri Feb 16, 2018 5:21 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">Thanks for your attention.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25450&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:00:13 GMT -->
+</html>

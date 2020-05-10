@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10665&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:57:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; sandbox autostart</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>sandbox autostart</h2>
+		<p><a href="viewtopicd0d4d0d4.html?f=4&amp;t=10665">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=10665</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>sandbox autostart</h3>
+				<div class="date">Posted: <strong>Sun Jun 05, 2011 6:21 pm</strong></div>
+				<div class="author">by <strong>badgranny</strong></div>
+				<div class="content">Hello.<br>
+<br>
+Would it be possible to add an option that allows a sandbox to autostart when windows boots? Which in turn would force a program that's installed only in said sandbox to run... sand-boxed.<br>
+If this is already implemented i can't find it.<br>
+<br>
+Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jun 06, 2011 7:14 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">You could try creating a shortcut that runs the program sandboxed, and then move that shortcut into the Startup list on the Windows Start Menu.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jun 06, 2011 2:06 pm</strong></div>
+				<div class="author">by <strong>badgranny</strong></div>
+				<div class="content">The problem is, that program only exists inside the sandbox i want to autostart... How do i solve that?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jun 06, 2011 6:40 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">When you install a program in a sandbox, it can think that it is adding a shortcut to the Start Menu or to the user's Desktop.<br>
+Those shortcuts will actually be saved in the sandbox.<br>
+<br>
+See if there's a shortcut to the program there:<br>
+By right-clicking the Sandboxie Control tray icon, hovering the mouse over the sandbox name, and then click on 'Run From Start Menu'.<br>
+On the menu that opens, just look to see if there is a shortcut to the program - either on the Start Menu or on the Desktop.<br>
+<br>
+If there is, then just close that menu and use the Sandboxie tray icon's menu:<br>
+Configure &gt; Windows Shell Integration<br>
+Click the "Add Shortcut Icons" button<br>
+<a href="../indexa72b.html?ConfigureMenu#shell" class="postlink">http://www.sandboxie.com/index.php?ConfigureMenu#shell</a><br>
+<br>
+Pick the sandbox containing the program and then pick the program's shortcut from the menu you looked at before.<br>
+A shortcut will then be created on your real Desktop.<br>
+Try it, to see that it works, and then move it to the Startup list.<br>
+<br>
+If the program did not add a shortcut to the Start Menu or Desktop in the sandbox, a shortcut can still be created manually.<br>
+Let us know if you need help with that.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 07, 2011 1:11 am</strong></div>
+				<div class="author">by <strong>badgranny</strong></div>
+				<div class="content">Brilliant!<br>
+That solved my problem. I'm just starting to use sandboxie and i can see that i still have a few tricks to learn.<br>
+Thank you for your help on this.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10665&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:57:55 GMT -->
+</html>

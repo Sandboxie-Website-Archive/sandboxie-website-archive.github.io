@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=5769&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; delete to Recycle bin</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>delete to Recycle bin</h2>
+		<p><a href="viewtopicf3f0f3f0.html?f=4&amp;t=5769">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=5769</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>delete to Recycle bin</h3>
+				<div class="date">Posted: <strong>Sat Jun 13, 2009 12:42 pm</strong></div>
+				<div class="author">by <strong>user</strong></div>
+				<div class="content">Could a sandbox contents be moved to the system Recycle Bin when deleted?<br>
+<br>
+A couple of times I thought about recovering mis-deleted files but installing any Undelete utility (with 35%+ of success) was too much.
+<blockquote class="uncited"><div>Any chance having an option like this?</div></blockquote>
+Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jun 13, 2009 6:33 pm</strong></div>
+				<div class="author">by <strong>surfer</strong></div>
+				<div class="content">Yep! Yesterday I also ran a boxed Opera 10, surfed for awhile and downloaded about 400MB and then... No links, no trails, no hope<br>
+Blast it   <img class="smilies" src="images/smilies/icon_mad.gif" width="15" height="15" alt=":x" title="Mad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 14, 2009 7:52 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I have a couple of other suggestions.<br>
+<br>
+1.  You don't have to automatically delete the sandbox, if this is giving you a hard time.  You might do better with manually deleting the sandbox once every couple of days after you're sure you got everything out.<br>
+<br>
+But you should not use the same sandbox for months or even weeks without deleting it.<br>
+<br>
+2.  Or, keep the automatic deletion, but change the delete command (in Sandbox Settings &gt; Delete &gt; Command) to<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>ECHO "%SANDBOX%"</code></pre></div>
+
+Which will just rename your sandbox folder to something like __Delete_DefaultBox_01234567890 but will not delete it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 14, 2009 11:20 am</strong></div>
+				<div class="author">by <strong>user</strong></div>
+				<div class="content">Hi Tzuk.<br>
+As always you're in time and with no empty hands))<br>
+<br>
+How can one modify the command to delete (<span style="text-decoration: underline"><strong>correctly</strong> move</span>) contents right into the system Recycle Bin? Quite possibly that many other users prefer recovering something useful after an accident via the traditional routine.<br>
+<br>
+The only thing to bear in mind is that the system will manually try recovering the deleted file(s) to the initial destination and I don't know for sure how SBIE will take it.<br>
+ATM prompt command as <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>move /Y c:\dosbox\localhost\*.* c:\Recycler\</code></pre></div> is not working properly. So I move it to %temp% instead.<br>
+<br>
+@surfer<br>
+1/2GB??? What a waste. Hope you're going unlimited.<br>
+For presumably useful downloads you'd rather <strong>direct-access</strong> or <strong>immediate-recover</strong> IMO</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 14, 2009 3:53 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>user wrote:</cite>How can one modify the command to delete (correctly move) contents right into the system Recycle Bin?</div></blockquote>
+
+I don't know.  I think the recycle bin is managed by Windows Explorer, so you might have to find a utility (built in or third party) that might make it possible to tell Windows Explorer to delete a folder.<br>
+<br>
+On a more general note, if I delete a folder tree, causing it to move to the recycle bin, I can only restore the complete folder, not on a per-file basis.  Do you know how to restore only specific files?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jun 17, 2009 5:00 am</strong></div>
+				<div class="author">by <strong>user</strong></div>
+				<div class="content">Oops! I was pretty sure I've seen my friend using <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>DEL /R *.*</code></pre></div> to move to the Recycle Bin, but it was <a href="http://jpsoft.com/help/del.htm" class="postlink">http://jpsoft.com/help/del.htm</a><br>
+<br>
+Third party only?  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri May 07, 2010 5:08 pm</strong></div>
+				<div class="author">by <strong>notice</strong></div>
+				<div class="content">Hi, has there been any change to this so files can be moved into the recycle bin? <br>
+<br>
+My problem is that while allowing one program 'direct access' to a folder outside its Sandbox, using the open/save dialog built in from that program allows me only to straight delete any files instead of the behavior I am used to. Why isn't there a sandboxed recycle bin if we can't use the real one?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 08, 2010 3:02 pm</strong></div>
+				<div class="author">by <strong>MitchE323</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Which will just rename your sandbox folder to something like __Delete_DefaultBox_01234567890 but will not delete it.</div></blockquote>
+This is the way to go imo. Somewhere in here Peter2150 reported  a malware that used the Recycle Bin as a means to access other partitions on your drive. Maybe Pete can chime in with a reminder on the details.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 08, 2010 6:23 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content"><blockquote><div><cite>MitchE323 wrote:</cite><blockquote><div><cite>tzuk wrote:</cite>Which will just rename your sandbox folder to something like __Delete_DefaultBox_01234567890 but will not delete it.</div></blockquote>
+This is the way to go imo. Somewhere in here Peter2150 reported  a malware that used the Recycle Bin as a means to access other partitions on your drive. Maybe Pete can chime in with a reminder on the details.</div></blockquote>
+
+Hi Mitch<br>
+<br>
+I think it was a virus that infected all drives on the system.   I don't think it had anything to do with the recyle bin,  as the first thing I do on any new install is disable the recycle bin and system restore.<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 08, 2010 6:49 pm</strong></div>
+				<div class="author">by <strong>MitchE323</strong></div>
+				<div class="content">I think I was thinking of here; <a href="http://www.wilderssecurity.com/showpost.php?p=1127357&amp;postcount=1" class="postlink">http://www.wilderssecurity.com/showpost ... ostcount=1</a><br>
+
+<blockquote class="uncited"><div>I was curious to monitor exactly what the installer of this virus was doing so I was clicking my way thru. Couple of interesting things caught my eye. First it disabled both taskmanager, and any registry editing tools. It create an autorun.inf, and system.exe. It put autorun.inf in both c:\ and e:\ The system.exe was created in c:\recycler and e:\recycler. An Auto run was created from c:\windows\recycler\.</div></blockquote>
+
+I thought that was the reason you disabled the Recycle Bin.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 08, 2010 10:41 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content">Okay,  I remember.  It was indeed hiding stuff there.    No, I disable the recycle bin, as when I want to delete something, I want it gone.   Anything crucial I have protected by AJC's Active backup, so I don't need the recycle bin.<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 13, 2010 1:13 pm</strong></div>
+				<div class="author">by <strong>notice</strong></div>
+				<div class="content">Should I make a new thread for my feature request because it looks like we are talking about two different aspects.<br>
+<br>
+My only problem is the accidental deletions that could happen because Sandboxie does not <strong>move</strong> files to the recycle bin.<br>
+<br>
+<br>
+Could Sandboxie instead allow to only write new files, modify but not delete them? This would be ok as well.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon May 21, 2012 12:20 pm</strong></div>
+				<div class="author">by <strong>Kashrlyyk</strong></div>
+				<div class="content">Wouldn't it be just possible to create a link to the sandbox folder and name it "Sandbox Paperbin" and than do what is said in tzuk's first post? Or would that compromise security? <br>
+<br>
+PS: Yes, I am necromancing this topic.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=5769&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:43 GMT -->
+</html>

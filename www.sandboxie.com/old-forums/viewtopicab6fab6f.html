@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24524&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:08:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Unable to open PDF files from Outlook 2016 + SumatraPDF [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Unable to open PDF files from Outlook 2016 + SumatraPDF [SOLVED]</h2>
+		<p><a href="viewtopic579d579d.html?f=17&amp;t=24524">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24524</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Unable to open PDF files from Outlook 2016 + SumatraPDF [SOLVED]</h3>
+				<div class="date">Posted: <strong>Mon Jun 05, 2017 4:07 pm</strong></div>
+				<div class="author">by <strong>Inbox</strong></div>
+				<div class="content">Hello,<br>
+<br>
+I want to use Outlook 2016 in a restricted sandbox (already works fine) and open my attachments inside the sandbox with my default PDF viewer.<br>
+This is not working, nothing happens when I open an attachment.<br>
+<br>
+That's my setup:<br>
+- Installed Office 2016 (including Outlook) on my system<br>
+- Installed SumatraPDF on my system and set it to the standard PDF viewer within my system<br>
+- Created a Sandbox "Outlook", which is forcing to start Outlook.exe in the specified sandbox. This works well<br>
+- Forced the sumatrapdf.exe to start in the same sandbox named "Outlook"<br>
+- If I start the programs by myself, both are getting started in the sandbox "Outlook"<br>
+<br>
+How can I tell Outlook to use my standard PDF viewer for opening the files?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Open attachments with Outlook 2016 inside sandbox</h3>
+				<div class="date">Posted: <strong>Mon Jun 05, 2017 6:42 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist1ca7.html?mode=viewprofile&amp;u=27399">Inbox</a> wrote: <a href="viewtopic12a1-212a1.html?p=128454#p128454" data-post-id="128454" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jun 05, 2017 4:07 pm</div></cite>How can I tell Outlook to use my standard PDF viewer for opening the files?</div></blockquote>
+I am not familiar with Outlook but I believe all you need to do is set Sumatra as the default PDF viewer. I think you said you done that already.<br>
+<br>
+What happens out of the sandbox when you run a PDF attachment in a mail? Does it use Sumatra, or what? If there is a PDF viewer that comes with Outlook, try disabling it.<br>
+<br>
+Note: For what you want to do, you don't need to Force Sumatra.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Open attachments with Outlook 2016 inside sandbox</h3>
+				<div class="date">Posted: <strong>Tue Jun 06, 2017 12:46 pm</strong></div>
+				<div class="author">by <strong>Inbox</strong></div>
+				<div class="content">Hello Bo,<br>
+<br>
+when I start Outlook normally, without a sandbox, I can double click the attachement and it gets opened automatically by my default pdf viewer (which is SumatraPDF). This isn't working when I start Outlook inside the sandbox, just nothing happens.<br>
+<br>
+Can we try to troubleshoot this? I'd really like to run Outlook in a sandbox.<br>
+<br>
+Best regards</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Open attachments with Outlook 2016 inside sandbox</h3>
+				<div class="date">Posted: <strong>Tue Jun 06, 2017 1:54 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Inbox,<br>
+<br>
+I tested the behavior in Windows 10 + Sumatra as my default pdf viewer. <br>
+If I launch Outlook Sandboxed then right-click on a pdf and select "Open", it successfully opens in Sumatra.<br>
+<br>
+Since this is a problem, not a quick question, let's get you to provide the required info so we can better assist you:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Also, please post the output of Resource Access Monitor:<br>
+<a href="../index9970.html?ResourceAccessMonitor" class="postlink">https://www.sandboxie.com/index.php?Res ... essMonitor</a><br>
+<br>
+Regards,<br>
+Barb.-<br>
+<br>
+PS: If you are using Windows 10, you may need to type "default' in the search bar and go to 'Choose Default Apps by file type', find .pdf and select Sumatra .</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Open attachments with Outlook 2016 inside sandbox</h3>
+				<div class="date">Posted: <strong>Tue Jun 06, 2017 2:50 pm</strong></div>
+				<div class="author">by <strong>Inbox</strong></div>
+				<div class="content">Hello Barb,<br>
+<br>
+thanks for your great support. I'm using following setup:<br>
+- Windows 10 with latest Creator's Update and Windows Updates<br>
+- Sandboxie 5.20 64-bit<br>
+- Used Software: Outlook 2016 with latest Updates (May 2017) with SumatraPDF and X-Change PDF Viewer<br>
+- No Antivirus is installed<br>
+<br>
+SumatraPDF is used set to default for .pdf Files:<br>
+<img src="../abload.de/img/2017-06-0620_44_48-eiaqqy8.png" class="postimage" alt="Image"><br>
+<br>
+Output of the Resource Access Monitor (Opened everything before starting it, started the monitor and tried to open an attachment):
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\HarddiskVolume4
+(Drive)     \Device\HarddiskVolume5
+Clsid       -------------------------------
+Clsid       {4991D34B-80A1-4291-83B6-3328366B9097} Background Intelligent Transfer Control Class 1.0
+Clsid       {7E5FE3D9-985F-4908-91F9-EE19F9FD1514} ?
+Clsid       {C2F03A33-21F5-47FA-B4BB-156362A2F239} Immersive Shell
+Clsid       {DCB00C01-570F-4A9B-8D69-199FDBA5723B} NetworkListManager
+Clsid       {E44E9428-BDBC-4987-A099-40DC8FD255E7} Execute Unknown
+Clsid    O  {A47979D2-C419-11D9-A5B4-001185AD2B89} Network List Manager
+File/Key    -------------------------------
+Image       -------------------------------
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\[CoreUI]-PID(3872)-TID(4068) 40b73cfb-8aff-49c9-9ffa-ebbeae4ca435
+Ipc         \BaseNamedObjects\__ComCatalogCache__
+Ipc         \BaseNamedObjects\{5E5C36C0-5E7C-471f-84D7-110FDC1AFD0D}
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000001.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000001.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \BaseNamedObjects\GDA:  ESENT Performance Data Schema Version 276
+Ipc         \BaseNamedObjects\Go0:  ESENT Performance Data Schema Version 276
+Ipc         \BaseNamedObjects\IDA0:  ESENT Performance Data Schema Version 276
+Ipc         \BaseNamedObjects\Instance0:  ESENT Performance Data Schema Version 276
+Ipc         \BaseNamedObjects\Ready0:  ESENT Performance Data Schema Version 276
+Ipc         \BaseNamedObjects\windows_shell_global_counters
+Ipc         \RPC Control\epmapper
+Ipc         \RPC Control\OLE3629F8D0D23F3271CC3377E2DCF0
+Ipc         \RPC Control\OLE78B83B84B93612B46774DE4AD355
+Ipc         \RPC Control\OLE9A57BDB8099E3338FE10AFE544FF
+Ipc         \RPC Control\OLEB8D85A70FAE7C404DEBECDC31545
+Ipc         \RPC Control\OLEBFE16F31964999DAE652B819D2C4
+Ipc         \Sessions\1\BaseNamedObjects\__ComCatalogCache__
+Ipc         \Sessions\1\BaseNamedObjects\{5E5C36C0-5E7C-471f-84D7-110FDC1AFD0D}
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000001.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000001.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users*******AppData*Local*Microsoft*Windows*Caches*{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000020.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users*******AppData*Local*Microsoft*Windows*Caches*cversions.1.ro
+Ipc         \Sessions\1\BaseNamedObjects\ComTaskPool:1608
+Ipc         \Sessions\1\BaseNamedObjects\ComTaskPool:5296
+Ipc         \Sessions\1\BaseNamedObjects\ComTaskPool:5544
+Ipc         \Sessions\1\BaseNamedObjects\GDA:  ESENT Performance Data Schema Version 276
+Ipc         \Sessions\1\BaseNamedObjects\Go0:  ESENT Performance Data Schema Version 276
+Ipc         \Sessions\1\BaseNamedObjects\IDA0:  ESENT Performance Data Schema Version 276
+Ipc         \Sessions\1\BaseNamedObjects\Instance0:  ESENT Performance Data Schema Version 276
+Ipc         \Sessions\1\BaseNamedObjects\MMF_BITS799564c3-02bb-493b-a593-f04ed5382295
+Ipc         \Sessions\1\BaseNamedObjects\MS EXCHANGE FORMSREGISTRY MUTEX
+Ipc         \Sessions\1\BaseNamedObjects\MSSPHTB_Alive16
+Ipc         \Sessions\1\BaseNamedObjects\Ready0:  ESENT Performance Data Schema Version 276
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_1608
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_2196
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_5296
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_5544
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_cryptsvc
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_DcomLaunch
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\1\BaseNamedObjects\SboxSession
+Ipc         \Sessions\1\BaseNamedObjects\SC_AutoStartComplete
+Ipc         \Sessions\1\BaseNamedObjects\SM0:1608:120:WilError_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:1608:120:WilError_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:1608:120:WilError_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:2196:120:WilError_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:2196:120:WilError_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:2196:120:WilError_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:2196:232:WilStaging_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:2196:232:WilStaging_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:2196:232:WilStaging_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:5296:120:WilError_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:5296:120:WilError_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:5296:120:WilError_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:5296:232:WilStaging_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:5296:232:WilStaging_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:5296:232:WilStaging_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:5544:120:WilError_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:5544:120:WilError_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:5544:120:WilError_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:5544:232:WilStaging_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:5544:232:WilStaging_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:5544:232:WilStaging_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SyncRootManager
+Ipc         \Sessions\1\BaseNamedObjects\windows_shell_global_counters
+Ipc      O  \KernelObjects\LowMemoryCondition
+Ipc      O  \KernelObjects\MaximumCommitCondition
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\bcryptPrimitives.dll
+Ipc      O  \KnownDlls\cfgmgr32.dll
+Ipc      O  \KnownDlls\clbcatq.dll
+Ipc      O  \KnownDlls\combase.dll
+Ipc      O  \KnownDlls\COMDLG32.dll
+Ipc      O  \KnownDlls\CRYPT32.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\gdi32full.dll
+Ipc      O  \KnownDlls\IMM32.dll
+Ipc      O  \KnownDlls\kernel.appcore.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\kernelbase.dll
+Ipc      O  \KnownDlls\MSASN1.dll
+Ipc      O  \KnownDlls\msvcp_win.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\powrprof.dll
+Ipc      O  \KnownDlls\profapi.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\sechost.dll
+Ipc      O  \KnownDlls\SHCORE.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\ucrtbase.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\win32u.dll
+Ipc      O  \KnownDlls\windows.storage.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \RPC Control\dhcpcsvc
+Ipc      O  \RPC Control\dhcpcsvc6
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\lsasspirpc
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \Security\LSA_AUTHENTICATION_INITIALIZED
+Ipc      O  \Sessions\1\Windows\ApiPort
+Ipc      O  \Sessions\1\Windows\SharedSection
+Ipc      O  \Sessions\1\Windows\ThemeSection
+Ipc      O  \ThemeApiPort
+Pipe        -------------------------------
+Pipe        ?
+Pipe        \Device\CNG
+Pipe        \Device\Harddisk0\DR0
+Pipe        \Device\HarddiskVolume1
+Pipe        \Device\HarddiskVolume4
+Pipe        \Device\HarddiskVolume5
+Pipe        \Device\KsecDD
+Pipe        \Device\MountPointManager
+Pipe        \device\namedpipe\MsFteWds
+Pipe        \device\namedpipe\msftewds
+Pipe        \device\namedpipe\MsFteWds
+Pipe        \device\namedpipe\msftewds
+Pipe     O  \Device\Afd
+Pipe     O  \Device\NamedPipe
+Pipe     O  \Device\NamedPipe\
+Pipe     O  \Device\NetBT_Tcpip_{295CDDCC-994A-41B2-8410-64304B99707B}
+WinCls      -------------------------------
+WinCls      NetUICtrlNotifySink
+WinCls   O  REListbox20W
+WinCls   O  Shell_TrayWnd
+WinCls   X  AgentAnim
+WinCls   X  MSOBALLOON
+WinCls   X  MsoCommandBarPopup
+WinCls   X  MsoHelp10
+</code></pre></div>
+
+Did you sandbox SumatraPDF in any way? Or was it just installed normally?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Open attachments with Outlook 2016 inside sandbox</h3>
+				<div class="date">Posted: <strong>Tue Jun 06, 2017 4:16 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi Inbox,<br>
+<br>
+Do you know where this may come from?<br>
+"ESENT Performance Data Schema"<br>
+<br>
+Can you open Sumatra directly in the Sandbox? <br>
+<br>
+Also, you could try adding (one at a time) these 2 COM classes, see if that works: (if it doesn't, remove them afterward)<br>
+{E44E9428-BDBC-4987-A099-40DC8FD255E7}<br>
+{7E5FE3D9-985F-4908-91F9-EE19F9FD1514}<br>
+<a href="../indexc216.html?OpenClsid" class="postlink">https://www.sandboxie.com/index.php?OpenClsid</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Open attachments with Outlook 2016 inside sandbox</h3>
+				<div class="date">Posted: <strong>Tue Jun 06, 2017 4:44 pm</strong></div>
+				<div class="author">by <strong>Inbox</strong></div>
+				<div class="content">Hi Barb,<br>
+I can't tell you what "ESENT Performance Data Schema" means and where it is coming from.<br>
+Also, I can open Sumatra PDF directly in the sandbox. Opening the sumatrapdf.exe only is no problem.<br>
+I added both 2 COM classes, one at a time, to a file called Sandboxie.ini and placed it in my installation folder.<br>
+There is no change in behavior, still not working.<br>
+Hope we can fix this, thank you so far.<br>
+Regards<br>
+<br>
+<strong>Edit: Fixed the problem!</strong><br>
+I saved one of the pdf files, navigated to it via windows explorer (sandbox path) and opened it with double click.<br>
+Afterwards, the attachments open directly when clicking them from outlook.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24524&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:08:02 GMT -->
+</html>

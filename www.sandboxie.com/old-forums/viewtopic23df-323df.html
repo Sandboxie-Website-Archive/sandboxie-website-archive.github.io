@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24611&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:27:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Multiple Error Popups Every Time Sandbox Deleted</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Multiple Error Popups Every Time Sandbox Deleted</h2>
+		<p><a href="viewtopicf144f144.html?f=11&amp;t=24611">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24611</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Multiple Error Popups Every Time Sandbox Deleted</h3>
+				<div class="date">Posted: <strong>Tue Jul 04, 2017 6:51 am</strong></div>
+				<div class="author">by <strong>mloveless1227</strong></div>
+				<div class="content">Good morning,<br>
+<br>
+I have been having an issue with the current and previous version of Sandboxie that I did not experience prior. Every time I terminate a sandbox and delete it's contents, I get multiple popup error notifications for each Sandbox. Here is a screenshot of the errors happening on 1 sandbox: <a href="http://imgur.com/SiTCO1H" class="postlink">http://imgur.com/SiTCO1H</a><br>
+<br>
+This happens every single time I terminate a sandbox. Most of the time I'm running multiple sandboxes at once, and terminating them at once, which creates a dozen or more total popups that begin showing about 5-10 seconds after terminating. Here is some of my setup info if it helps anything:<br>
+<br>
+- Windows 10 64 Bit<br>
+- Happens on both 5.18 and 5.20<br>
+- Installed to C:/program files/sandboxie<br>
+- Main sandbox is located at C:/sandbox<br>
+- Delete invocation is set (auto delete upon termination)<br>
+<br>
+This has been happening for quite some time now. During this period of time my PC has gone through a couple of formats, so I know it's happening on a clean Windows install as well. I'm wondering if there is any fix for this, if others are experiencing it, and/or if it is something that can be fixed in a future version. It's really annoying because it forces these Windows on top and it also plays a 'ding' sound for each one that pops up, though I know the sound is Windows related. Thanks for any help.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Multiple Error Popups Every Time Sandbox Deleted</h3>
+				<div class="date">Posted: <strong>Wed Jul 05, 2017 1:09 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello mloveless1227,<br>
+<br>
+We are not seeing other reports of this behavior<br>
+<br>
+Are you running any specific programs when the issue is triggered? <br>
+Do you have any antivirus software installed? <br>
+What else is open when the issue occurs?<br>
+Does it occur in a new Sandbox with default settings?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Multiple Error Popups Every Time Sandbox Deleted</h3>
+				<div class="date">Posted: <strong>Sat Jul 08, 2017 3:11 pm</strong></div>
+				<div class="author">by <strong>mloveless1227</strong></div>
+				<div class="content">Happens to anything I sandbox. No anti virus. Doesn't matter what else is open, that has no bearing on what the sandbox is deleting, but for the sake of it I'll say it happens whether I have other stuff running or if I attempt to recreate the issue on a fresh Windows boot. Occurs in any sandbox with any settings including default.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Multiple Error Popups Every Time Sandbox Deleted</h3>
+				<div class="date">Posted: <strong>Mon Jul 10, 2017 1:48 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi mloveless1227,<br>
+<br>
+If you manually delete the contents of the Sandbox, does the issue re-appear? <br>
+<br>
+Without other users reports, and being unable to reproduce the issue, I will need more information from you to see what may be going on. <br>
+If you could please provide repro steps including the exact setup that you are using and programs involved (including any windows policies that may be setup (if any)), I will test it. If you are using web-browsers, let me know which ones and if there are any toolbars/extensions added. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Multiple Error Popups Every Time Sandbox Deleted</h3>
+				<div class="date">Posted: <strong>Mon Jul 10, 2017 3:19 pm</strong></div>
+				<div class="author">by <strong>Bertus</strong></div>
+				<div class="content">You can try to use the SDelete command instead of RMDIR and see if the errors remain.<br>
+<br>
+On the other hand the error message you have provided, says :"The system cannot find the file specified"<br>
+<br>
+It seems that the RMDIR command is unable to find the file to delete. I do not know for sure but It may have something to do with the 8dot3 naming in windows 10. I believe the 8dot3 file naming is not enabled by default in windows 10. You can query the setting in a cmd window (with admin rights) and the command: <strong>fsutil behavior query disable8dot3 c:</strong><br>
+when I execute this command, I get:<br>
+<br>
+The volume state is: 0 (8dot3 name creation is enabled).<br>
+The registry state is: 2 (Per volume setting - the default).<br>
+<br>
+Based on the above two settings, 8dot3 name creation is enabled on c:<br>
+<br>
+If it turn out that 8dot3 is disabled, you can try to enable 8dot3 and see if this fixes your error.<br>
+Please read up on the subject. I do not know for sure If this is the issue. Please backup your system before making any changes.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24611&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:27:45 GMT -->
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=14934&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.06] Could not execute SandboxieRpcSs.exe - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.06] Could not execute SandboxieRpcSs.exe</h2>
+		<p><a href="viewtopicd1e5d1e5.html?f=38&amp;t=14934">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=14934</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 7:06 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">fanish, as I said, I also wondered about the patch like you. But look at the description of SANDBOX_INERT on the <a href="http://msdn.microsoft.com/en-us/library/aa446583(v=vs.85).aspx" class="postlink">CreateRestrictedToken</a> page. "On systems with KB2532445 installed," it says the system ignores SANDBOX_INERT <em>unless</em> the process is running as SYSTEM (LocalSystem).<br>
+<br>
+I said how SRP, without any patch, already was not supposed to apply to SYSTEM processes, but I guess the same is not true for AppLocker...<br>
+<br>
+Yes, I may be trying Didier's code soon (against my own fix, below)... or maybe NOT: to determine exactly what restrictions may not apply for sandboxed processes. I guess I'll have to run one of those 7 Enterprise VM images to play with AppLocker.<br>
+<br>
+<br>
+I don't quite get how tzuk says the flag is enabled by kernel-mode code (meaning SYSTEM SbieSvc I assume), but yet it's also "enabled for all processes in the sandbox," which would seem to suggest that normal, user-mode sandboxed processes could bypass restrictions, yet I don't see that with simple SRP -- that page suggests SANDBOX_INERT also applies to SRP and not only AppLocker. *shrug* Although IF AppLocker/SRP could be bypassed, having that fix installed should correct it for "normal, user-mode" processes.<br>
+<br>
+BTW, I will hopefully soon create a DLL that should fix the "SRP bypass hole" on XP/Vista (8??) as well. I just need to check which lowest level functions to hook... It may be only for within Sandboxie first (if it works and is simpler), but hopefully system wide as well (or for folks without Sandboxie). Hopefully these Sandboxie changes don't screw each other up. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> A simple SBIE DLL I tried awhile ago to fix the <a href="http://blog.didierstevens.com/2011/01/24/circumventing-srp-and-applocker-by-design/" class="postlink">LoadLibraryEx hole</a> still works fine.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 7:13 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>I don't quite get how tzuk says the flag is enabled by kernel-mode code (meaning SYSTEM SbieSvc I assume)</div></blockquote>
+
+I mean the driver component of Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 7:16 am</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content">Yes, I missed that part. It does mention LocalSystem/TrustedInstaller.<br>
+<br>
+I tried another PoC (hxxp://<a href="http://www.mountknowledge.nl/2011/01/28/bypassing-windows-applocker-using-vb-script-in-word-and-excel/" class="postlink">www.mountknowledge.nl/2011/01/28/bypass ... and-excel/</a>), based on Didider's one, and AppLocker did block it. So, the hotfix is working... for processes not running as LocalSystem/TrustedInstaller.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 7:24 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">You tried it in a sandbox I assume? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I'm actually curious what happens <em>without</em> the hotfix now. Is it hard to uninstall/reinstall? I guess it requires a restart? Oh well, if nothing else I'll wait and check myself!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 7:49 am</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>You tried it in a sandbox I assume? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I'm actually curious what happens <em>without</em> the hotfix now. Is it hard to uninstall/reinstall? I guess it requires a restart? Oh well, if nothing else I'll wait and check myself!</div></blockquote>
+
+I was going to test both outside and inside of the sandbox, to see the results. But, when I ran Word.exe in the sandbox, AppLocker blocked something related to office in the user profile, and then I got BSOD. <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"><br>
+<br>
+Will have to create temp rules and see what happens.<br>
+<br>
+So, the result I provided is for when I ran the PoC outside of the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 7:54 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Wow BSOD, oops! <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> And BTW, yeah, these Sandboxie changes should not affect AppLocker/SRP outside of the sandbox -- that would be extreme if it somehow affected everything. <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 9:32 am</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>Wow BSOD, oops! <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> And BTW, yeah, these Sandboxie changes should not affect AppLocker/SRP outside of the sandbox -- that would be extreme if it somehow affected everything. <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"></div></blockquote>
+
+No, I didn't test outside the sandbox to verify whether or not Sandboxie did something outside. <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"><br>
+<br>
+According to Tzuk, he mistakenly believed the hotfix was installed already in all Windows 7 versions with AppLocker. He updated his previous post. His second assumption is correct. AppLocker's hotfix does break the fix he implemented. And, the reason I say this, comes in the line of his first assumption, that the flag SANDBOX_INERT would apply to all sandboxed processes. With this in mind, it made sense to execute of one of the apps I have in a sandbox, which does call another app. I removed the AppLocker rule for this other app, and called it from the main app. It's blocked.<br>
+<br>
+Those not having the hotfix already installed, could easily test Sandboxie's fix this way. I hope that's accurate way of testing it. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 10:04 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content"><blockquote><div><cite>fanish wrote:</cite>No, I didn't test outside the sandbox to verify whether or not Sandboxie did something outside. <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div></blockquote>
+
+You didn't?
+<blockquote><div><cite>fanish wrote:</cite>So, the result I provided is for when I ran the PoC outside of the sandbox.</div></blockquote>
+
+<br>
+But anyway, other than that, I'm not sure I follow 100% without testing myself... I'll have to get that VM image downloaded. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+So I guess you did NOT try by temporarily removing the hotfix? (Since "those not having" could test...)<br>
+<br>
+<br>
+And you say he's right that it breaks the Sandboxie fix, yet you said previously that Sandboxie's errors are gone, even though you have the fix installed. That would suggest that it IS working still, just that perhaps the ONLY thing that needs it is either the kernel driver/SbieSvc SYSTEM process, which CAN still use SANDBOX_INERT.<br>
+<br>
+Since if I understood right, you ARE still seeing something blocked as it should be in the sandbox? Of course, you have the fix installed, right, but just verifying. If so, yet Sandboxie is still working without errors in other parts that you had before, it would be nice if tzuk could ONLY use SANDBOX_INERT in the places where it's actually still having an effect, presumably (SYSTEM level), instead of on "all processes in the sandbox."<br>
+<br>
+That way, people that do NOT have the AppLocker hotfix installed would still have AppLocker working in the sandbox, for the most part (short of an exploit using SANDBOX_INERT). Again, that's IF it really is disabling AppLocker, without the hotfix, for regular programs, since I don't see that happening with SRP (which SANDBOX_INERT supposedly also affects).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>error rpcss</h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 1:02 pm</strong></div>
+				<div class="author">by <strong>Alex1992</strong></div>
+				<div class="content">Good afternoon. When upgrading from a previous version 3.6 to 4. 06 there is an error starting rpcss. Used in conjunction with the BSA, and the configuration file inject_dll prescribing error occurs in the case of removal of these parameters is run without error on windows xp sp3. In what could be the problem?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 2:12 pm</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite><blockquote><div><cite>fanish wrote:</cite>No, I didn't test outside the sandbox to verify whether or not Sandboxie did something outside. <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div></blockquote>
+
+You didn't?
+<blockquote><div><cite>fanish wrote:</cite>So, the result I provided is for when I ran the PoC outside of the sandbox.</div></blockquote>
+</div></blockquote>
+
+There's some misunderstanding here. Yes, I did test it outside of Sandboxie, but not to verify if Sandboxie did something to the outside system. Hope this clears it up. <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"><br>
+
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>
+But anyway, other than that, I'm not sure I follow 100% without testing myself... I'll have to get that VM image downloaded. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+So I guess you did NOT try by temporarily removing the hotfix? (Since "those not having" could test...)
+</div></blockquote>
+
+No, I didn't remove the hotfix, as the system running Windows 7 is a production system, actually. <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"><br>
+
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>
+And you say he's right that it breaks the Sandboxie fix, yet you said previously that Sandboxie's errors are gone, even though you have the fix installed. That would suggest that it IS working still, just that perhaps the ONLY thing that needs it is either the kernel driver/SbieSvc SYSTEM process, which CAN still use SANDBOX_INERT.
+</div></blockquote>
+
+Well, it's working for SandboxieRpcSs.exe, which runs as SYSTEM. Maybe the use of the flag SANDBOX_INERT made things work as they should with version 4. I'm not a developer per se, so just throwing it out loud. But, it's what makes most sense to me.<br>
+<br>
+So, it makes sense that SandboxieRpcSs.exe, and other Sandboxie processes that run as SYSTEM ???, have no issues now.<br>
+
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>
+Since if I understood right, you ARE still seeing something blocked as it should be in the sandbox? Of course, you have the fix installed, right, but just verifying. If so, yet Sandboxie is still working without errors in other parts that you had before, it would be nice if tzuk could ONLY use SANDBOX_INERT in the places where it's actually still having an effect, presumably (SYSTEM level), instead of on "all processes in the sandbox."
+</div></blockquote>
+
+Yes, AppLocker is still blocking things in the sandboxes. Short version: Calling program B from program A will fail. AppLocker rule must be created.<br>
+<br>
+I agree that it would be nice for SANDBOX_INERT to only work for processes related to Sandboxie running as SYSTEM.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 2:25 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content"><blockquote><div><cite>fanish wrote:</cite>There's some misunderstanding here. Yes, I did test it outside of Sandboxie, but not to verify if Sandboxie did something to the outside system. Hope this clears it up. <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div></blockquote>
+
+Ooops! <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"> I totally misread that!! Sorry, got it now. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+
+<blockquote class="uncited"><div>Well, it's working for SandboxieRpcSs.exe, which runs as SYSTEM. Maybe the use of the flag SANDBOX_INERT made things work as they should with version 4. I'm not a developer per se, so just throwing it out loud. But, it's what makes most sense to me.<br>
+<br>
+So, it makes sense that SandboxieRpcSs.exe, and other Sandboxie processes that run as SYSTEM ???, have no issues now.</div></blockquote>
+
+RpcSs shouldn't be running as SYSTEM... I'm not seeing that -- it should be in its sandbox. However, it is now started <em>by</em> SbieSvc (since .05 I think), which is SYSTEM of course, so I think that's where the SANDBOX_INERT would still work (with hotfix), when SbieSvs is launching RpcSs.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 2:53 pm</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>
+RpcSs shouldn't be running as SYSTEM... I'm not seeing that -- it should be in its sandbox. However, it is now started <em>by</em> SbieSvc (since .05 I think), which is SYSTEM of course, so I think that's where the SANDBOX_INERT would still work (with hotfix), when SbieSvs is launching RpcSs.</div></blockquote>
+
+You're right! I mistakenly believed it was running as SYSTEM, because it's a spawned process, and I just assumed it inherited the same rights, for some reason. It runs as UNTRUSTED.  I don't know how I missed that, as I have Process Explorer configured to show the Integrity Levels column. <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed">  But, because SbieSvc.exe runs as SYSTEM, then AppLocker will ignore SandboxieRpcSs.exe. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>[0.7]</h3>
+				<div class="date">Posted: <strong>Wed May 01, 2013 6:05 am</strong></div>
+				<div class="author">by <strong>Sadeghi85</strong></div>
+				<div class="content">v4.0.1.07 works correctly. Thank you.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=14934&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:07 GMT -->
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=53&t=21354&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:01:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 5.01 Beta Available (latest version 5.04 RC)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>5.01 Beta Available (latest version 5.04 RC)</h2>
+		<p><a href="viewtopicb6bdb6bd.html?f=53&amp;t=21354">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=53&amp;t=21354</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>54</strong></div>
+					<div class="post">
+				<h3>5.01 Beta Available (latest version 5.04 RC)</h3>
+				<div class="date">Posted: <strong>Wed Jul 01, 2015 7:02 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><strong><span style="text-decoration: underline"><span style="color: #FF4000">Edge browser and Metro apps are not supported. You need to change your default browser to other than Edge.</span></span></strong><br>
+<br>
+Combined 32/64 installer:<br>
+<a href="../SandboxieInstall.html" class="postlink">http://www.sandboxie.com/SandboxieInstall.exe</a><br>
+<br>
+Separate:<br>
+<a href="../SandboxieInstall32.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall32.exe</a><br>
+<a href="../SandboxieInstall64.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall64.exe</a><br>
+<br>
+<strong>Fixes in 5.04 RC</strong><br>
+1) Minor code cleanup.  No visible changes.<br>
+<br>
+<strong>Fixes in 5.03.3</strong><br>
+1) Fixed another case of SBIE1406 Missing or invalid expansion for temp: [C0000034] introduced in 5.03.1.<br>
+<br>
+<strong>Fixes in 5.03.2</strong><br>
+1) Fixed SBIE1406 Missing or invalid expansion for temp: [C0000034] introduced in 5.03.1.<br>
+<br>
+<strong>Fixes in 5.03.1</strong><br>
+1) Win 10 KB3081455 and Win 8.1 KB3087039 on 9/8/2015 that broke Explorer, Skype, Quicktime, and possibly other apps has been fixed.<br>
+2) The print spooler (spoolsv.exe) is now permitted to write files to the system temp folder (windows\temp) and the user temp folder (\Users\&lt;username&gt;\AppData\Local\Temp)<br>
+<br>
+<strong>Fixes in 5.01.13</strong><br>
+1) A bug where some users in Win 8.1+ would not see any printers installed has been fixed.<br>
+2) Windows 10 build 10532 is now supported.<br>
+3) In Win 10, if your default browser is set to Edge, and you tell Sandboxie to start your default browser, Sandboxie will start IE instead.<br>
+<br>
+<strong>Fixes in 5.01.12</strong><br>
+1) More fine tuning of service start to fix rare race condition that leads to <em>SBIE2303 Could not hook PowerSettingRegisterNotification (1). SBIE 2204 Cannot start sandboxed service RpcSs (-1)</em> cycling every 30 seconds.<br>
+<br>
+<strong>Fixes in 5.01.11</strong><br>
+1) Service start timing changes to fix rare race condition that leads to <em>SBIE2303 Could not hook PowerSettingRegisterNotification (1). SBIE 2204 Cannot start sandboxed service RpcSs (-1)</em> cycling every 30 seconds. <strong><span style="color: #FF0040"> This bug is machine dependent.</span></strong><br>
+<br>
+<strong>Fixes in 5.01.10</strong><br>
+1) Windows 10-10525 now works.<br>
+2) Windows 10 Font issue has been fixed<br>
+3) Sound problem with MPC-HC, Potplayer, et. al. is fixed.  MPC-HC still puts up an initialization error dialog when starting.  Just ignore this for now.  The player works fine after that.<br>
+<br>
+<strong>Fixes in 5.01.9</strong><br>
+1) Windows 10 token handling has been fixed.  IE-&gt;View Downloads now works.  This may fix other applications as well.<br>
+<br>
+<strong>Fixes in 5.01.8</strong><br>
+1) DeleteVolumeMountPoint vulnerability has been blocked.<br>
+<br>
+<strong>Fixes in 5.01.7</strong><br>
+1) Flash plugin container crash has been fixed.<br>
+2) IE printing crash has been fixed.<br>
+<br>
+<strong>Fixes in 5.01.6</strong><br>
+1) Hook code changes for 32 bit apps in 64 bit Windows (Wow64) that should improve compatibility with Win 10.<br>
+<br>
+<strong>Fixes in 5.01.5</strong><br>
+1) Fixed an issue that may prevent some apps from successfully elevating.<br>
+<br>
+<strong>Fixes in 5.01.4</strong><br>
+1) Printing now works in Windows 10. <br>
+<br>
+<strong>Fixes in 5.01.3</strong><br>
+1) Fixed rare application startup/termination race condition that could cause a BSOD.<br>
+2) Adobe snapshot copy/paste now supported.<br>
+3) Code was updated to use newer Microsoft SDK/DDK.<br>
+<br>
+<strong>Fixes in 5.01.2</strong><br>
+1) Fixed several issues with SandboxieRpcSs.exe that could lead to a crash or failure to start.<br>
+<br>
+<strong>Fixes in 5.01.1</strong><br>
+1) Windows 10 support</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Wed Jul 01, 2015 7:23 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">Thank you!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Wed Jul 01, 2015 10:44 pm</strong></div>
+				<div class="author">by <strong>Bellzemos</strong></div>
+				<div class="content">Were there any big changes done "under the hood" of Sandboxie to make it work with Windows 10? There were when Sandboxie went from v3 to v4 in order for it to be compatible with Windows 8. Or is Windows 10 more similar to Windows 8 than Windows 8 was to Windows 7 - and so there was no need for many changes? I hope I'm making sense and not asking too much. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Thu Jul 02, 2015 4:15 am</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">Upgrade from 4.20 using combined installer was possible but I had to install 5.01 twice to get rid of issues. No Firefox errors at startup.<br>
+<br>
+Without Sandboxie it's like without a hand.  <img class="smilies" src="images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green">  Thank you!<br>
+<br>
+<br>
+There is a bug. If you force MS Edge C:\Windows\SystemApps\Microsoft.MicrosoftEdge_* the MicrosoftEdgeCP.exe and try to execute it then empty sandbox is created, Edge closes before it loads and Windows Store app opens instead. Everything out of the box. Forcing both MicrosoftEdgeCP.exe and MicrosoftEdge.exe does not change anything</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Thu Jul 02, 2015 5:00 am</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">That's really good news, although I'll now wait for the official release. Good job!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Thu Jul 02, 2015 8:38 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Dun wrote:</cite>Upgrade from 4.20 using combined installer was possible but I had to install 5.01 twice to get rid of issues. No Firefox errors at startup.<br>
+<br>
+Without Sandboxie it's like without a hand.  <img class="smilies" src="images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green">  Thank you!<br>
+<br>
+<br>
+There is a bug. If you force MS Edge C:\Windows\SystemApps\Microsoft.MicrosoftEdge_* the MicrosoftEdgeCP.exe and try to execute it then empty sandbox is created, Edge closes before it loads and Windows Store app opens instead. Everything out of the box. Forcing both MicrosoftEdgeCP.exe and MicrosoftEdge.exe does not change anything</div></blockquote>
+
+Yes, Running edge...In Metro mode at least...isn't fully supported as of yet.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Thu Jul 02, 2015 11:47 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">This version is all working pretty in XP and W7 32 bits. <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Thu Jul 02, 2015 11:58 am</strong></div>
+				<div class="author">by <strong>paulderdash</strong></div>
+				<div class="content">I am running (unregistered) SBIE 4.20 on Win 8.1 Pro 64-bit and am unable to install this beta. I have also tried running as admin ...<br>
+It seems to get stuck around the 'LICENSE.TXT' process ... is this beta working only for registered users?<br>
+<br>
+Edit: I also tried uninstalling 4.20 first ...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Thu Jul 02, 2015 12:23 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>paulderdash wrote:</cite>I am running (unregistered) SBIE 4.20 on Win 8.1 Pro 64-bit and am unable to install this beta. I have also tried running as admin ...<br>
+It seems to get stuck around the 'LICENSE.TXT' process ... is this beta working only for registered users?</div></blockquote>
+
+Let me give it a go.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Thu Jul 02, 2015 12:35 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>paulderdash wrote:</cite>I am running (unregistered) SBIE 4.20 on Win 8.1 Pro 64-bit and am unable to install this beta. I have also tried running as admin ...<br>
+It seems to get stuck around the 'LICENSE.TXT' process ... is this beta working only for registered users?<br>
+<br>
+Edit: I also tried uninstalling 4.20 first ...</div></blockquote>
+
+Nope, the Beta is open to everyone... <br>
+<br>
+Okay..a question.. Were you trying to do an <strong>upgrade</strong> from 4.20? We've seen a very similar problem in Win10 regarding a .sys file that Win10 does not allow to be changed while in use (A change in Win10.) Curt has fixed that issue in v5, and we've not seen it in Win 8,1.<br>
+<br>
+I'd suggest you uninstall SBIE 4.20 &gt; Reboot and attempt to install 5.01 Beta. <br>
+<br>
+Please let me know if that succeeds.<br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Thu Jul 02, 2015 1:12 pm</strong></div>
+				<div class="author">by <strong>paulderdash</strong></div>
+				<div class="content">Hi - I had already tried that (see edit above) - an uninstall of SBIE 4.20 &gt; Reboot and install of 5.01 Beta has same result.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Thu Jul 02, 2015 5:05 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">paulderdash, if you havent, temporarily disable your antivirus and rest of security programs, then try reinstalling SBIE afterward. Good luck.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Thu Jul 02, 2015 5:11 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>paulderdash wrote:</cite>I am running (unregistered) SBIE 4.20 on Win 8.1 Pro 64-bit and am unable to install this beta. I have also tried running as admin ...<br>
+It seems to get stuck around the 'LICENSE.TXT' process ... is this beta working only for registered users?<br>
+<br>
+Edit: I also tried uninstalling 4.20 first ...</div></blockquote>
+Are you saying the installer just hangs?  If it can't replace files because they are in use, it will retry several times and then popup a dialog box that says files are in use and the install can't continue.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Thu Jul 02, 2015 6:37 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">5.01 works on Win 10 build 10162 too</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.01 Beta Available (latest version 5.01)</h3>
+				<div class="date">Posted: <strong>Fri Jul 03, 2015 7:11 am</strong></div>
+				<div class="author">by <strong>paulderdash</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite><blockquote><div><cite>paulderdash wrote:</cite>I am running (unregistered) SBIE 4.20 on Win 8.1 Pro 64-bit and am unable to install this beta. I have also tried running as admin ...<br>
+It seems to get stuck around the 'LICENSE.TXT' process ... is this beta working only for registered users?<br>
+<br>
+Edit: I also tried uninstalling 4.20 first ...</div></blockquote>
+Are you saying the installer just hangs?  If it can't replace files because they are in use, it will retry several times and then popup a dialog box that says files are in use and the install can't continue.</div></blockquote>
+
+I kept getting the attached messages, with installer hanging at that point ...  I tried disabling all security software but same issue recurred.<br>
+<br>
+I eventually succeeded by uninstalling SBIE 4.20 AND removing config / .ini file ? (which I hadn't done before - it asks yes or no). With that removed, install worked.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>54</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=53&t=21354&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:01:25 GMT -->
+</html>

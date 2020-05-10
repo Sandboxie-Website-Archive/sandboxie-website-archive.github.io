@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25432&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:01:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; explorer.exe crashed (SBIE 2224)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>explorer.exe crashed (SBIE 2224)</h2>
+		<p><a href="viewtopicf03cf03c.html?f=11&amp;t=25432">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25432</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>explorer.exe crashed (SBIE 2224)</h3>
+				<div class="date">Posted: <strong>Sat Feb 10, 2018 10:18 am</strong></div>
+				<div class="author">by <strong>erickfung</strong></div>
+				<div class="content">Explorer.exe cannot be opened in Sandboxie (both 5.22 and 5.23) after the installation of a few software and recent windows updates on my Windows 10 64bit desktop.<br>
+I suspect that "dghmpg64.dll" causes explorer.exe to crash. The code has been attached below and I'm looking for help. Thank you.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Microsoft (R) Windows Debugger Version 10.0.16299.15 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+CommandLine: C:\Windows\explorer.exe
+Symbol search path is: srv*
+Executable search path is: 
+ModLoad: 00007ff7`b3140000 00007ff7`b34f7000   explorer.exe
+ModLoad: 00007ffa`562c0000 00007ffa`564a0000   ntdll.dll
+ModLoad: 00007ffa`54d40000 00007ffa`54dee000   C:\Windows\System32\kernel32.dll
+ModLoad: 00007ffa`52ec0000 00007ffa`53126000   C:\Windows\System32\KERNELBASE.dll
+ModLoad: 00000000`69510000 00000000`695a8000   C:\Program Files\Sandboxie\SbieDll.dll
+ModLoad: 00007ffa`53f80000 00007ffa`53f88000   C:\Windows\System32\PSAPI.DLL
+ModLoad: 00007ffa`53fe0000 00007ffa`5407d000   C:\Windows\System32\msvcrt.dll
+ModLoad: 00007ffa`54a30000 00007ffa`54d38000   C:\Windows\System32\combase.dll
+ModLoad: 00007ffa`523d0000 00007ffa`524c6000   C:\Windows\System32\ucrtbase.dll
+ModLoad: 00007ffa`53e50000 00007ffa`53f6f000   C:\Windows\System32\RPCRT4.dll
+ModLoad: 00007ffa`53150000 00007ffa`531c2000   C:\Windows\System32\bcryptPrimitives.dll
+ModLoad: 00007ffa`54080000 00007ffa`54145000   C:\Windows\System32\OLEAUT32.dll
+ModLoad: 00007ffa`53320000 00007ffa`533bb000   C:\Windows\System32\msvcp_win.dll
+ModLoad: 00007ffa`535e0000 00007ffa`53686000   C:\Windows\System32\shcore.dll
+ModLoad: 00007ffa`54980000 00007ffa`54a21000   C:\Windows\System32\advapi32.dll
+ModLoad: 00007ffa`53760000 00007ffa`537bb000   C:\Windows\System32\sechost.dll
+ModLoad: 00007ffa`52e70000 00007ffa`52ebc000   C:\Windows\System32\powrprof.dll
+ModLoad: 00007ffa`547f0000 00007ffa`5497f000   C:\Windows\System32\user32.dll
+ModLoad: 00007ffa`53130000 00007ffa`53150000   C:\Windows\System32\win32u.dll
+ModLoad: 00007ffa`542c0000 00007ffa`542e8000   C:\Windows\System32\GDI32.dll
+ModLoad: 00007ffa`52cd0000 00007ffa`52e63000   C:\Windows\System32\gdi32full.dll
+ModLoad: 00007ffa`53700000 00007ffa`53751000   C:\Windows\System32\shlwapi.dll
+ModLoad: 00007ffa`524d0000 00007ffa`52c17000   C:\Windows\System32\windows.storage.dll
+ModLoad: 00007ffa`523b0000 00007ffa`523c1000   C:\Windows\System32\kernel.appcore.dll
+ModLoad: 00007ffa`52340000 00007ffa`5235b000   C:\Windows\System32\profapi.dll
+ModLoad: 00007ffa`531d0000 00007ffa`531f3000   C:\Windows\System32\winmm.dll
+ModLoad: 00007ffa`52360000 00007ffa`5238a000   C:\Windows\System32\WINMMBASE.dll
+ModLoad: 00007ffa`53590000 00007ffa`535da000   C:\Windows\System32\cfgmgr32.dll
+ModLoad: 00007ffa`54e50000 00007ffa`56286000   C:\Windows\System32\SHELL32.dll
+ModLoad: 00007ffa`34b30000 00007ffa`34bb1000   C:\Windows\SYSTEM32\TWINAPI.dll
+ModLoad: 00007ffa`34a10000 00007ffa`34b29000   C:\Windows\SYSTEM32\settingsynccore.dll
+ModLoad: 00007ffa`4d1e0000 00007ffa`4d391000   C:\Windows\SYSTEM32\PROPSYS.dll
+ModLoad: 00007ffa`41c20000 00007ffa`41f54000   C:\Windows\SYSTEM32\WININET.dll
+ModLoad: 00007ffa`50a00000 00007ffa`50a95000   C:\Windows\SYSTEM32\UxTheme.dll
+ModLoad: 00007ffa`50c70000 00007ffa`50c9a000   C:\Windows\SYSTEM32\dwmapi.dll
+ModLoad: 00007ffa`52240000 00007ffa`52270000   C:\Windows\SYSTEM32\SspiCli.dll
+ModLoad: 00007ffa`52270000 00007ffa`52299000   C:\Windows\SYSTEM32\USERENV.dll
+ModLoad: 00007ffa`50cc0000 00007ffa`50e3b000   C:\Windows\SYSTEM32\twinapi.appcore.dll
+ModLoad: 00007ffa`4ed10000 00007ffa`4ed23000   C:\Windows\SYSTEM32\WTSAPI32.dll
+ModLoad: 00007ffa`3c710000 00007ffa`3c7a8000   C:\Windows\SYSTEM32\TextInputFramework.dll
+ModLoad: 00007ffa`51e70000 00007ffa`51e95000   C:\Windows\SYSTEM32\bcrypt.dll
+ModLoad: 00007ffa`51d60000 00007ffa`51d77000   C:\Windows\SYSTEM32\cryptsp.dll
+ModLoad: 00007ffa`50ca0000 00007ffa`50cc0000   C:\Windows\SYSTEM32\RMCLIENT.dll
+ModLoad: 00007ffa`3c2f0000 00007ffa`3c5de000   C:\Windows\SYSTEM32\CoreUIComponents.dll
+ModLoad: 00007ffa`4f870000 00007ffa`4f94c000   C:\Windows\SYSTEM32\CoreMessaging.dll
+ModLoad: 00007ffa`51450000 00007ffa`51481000   C:\Windows\SYSTEM32\ntmarta.dll
+ModLoad: 00007ffa`4f1f0000 00007ffa`4f326000   C:\Windows\SYSTEM32\wintypes.dll
+(cb8.36e0): Break instruction exception - code 80000003 (first chance)
+ntdll!LdrpDoDebuggerBreak+0x30:
+00007ffa`56392ebc cc              int     3
+0:000&gt; g
+ModLoad: 00007ffa`53fb0000 00007ffa`53fdd000   C:\Windows\System32\IMM32.DLL
+ModLoad: 00000000`68fc0000 00000000`68fc9000   C:\Program Files (x86)\360\360Safe\safemon\SafeWrapper.dll
+ModLoad: 00000000`68e20000 00000000`68fc0000   C:\Program Files (x86)\360\360Safe\safemon\safemon64.dll
+ModLoad: 00007ffa`54490000 00007ffa`545d9000   C:\Windows\System32\ole32.dll
+ModLoad: 00007ffa`53690000 00007ffa`536fc000   C:\Windows\System32\WS2_32.dll
+ModLoad: 00007ffa`538f0000 00007ffa`5390d000   C:\Windows\System32\imagehlp.dll
+ModLoad: 00007ffa`4cff0000 00007ffa`4cffa000   C:\Windows\SYSTEM32\VERSION.dll
+ModLoad: 00007ffa`4c610000 00007ffa`4c627000   C:\Windows\SYSTEM32\NETAPI32.dll
+ModLoad: 00007ffa`51a30000 00007ffa`51a3e000   C:\Windows\SYSTEM32\NETUTILS.DLL
+ModLoad: 00007ffa`4e760000 00007ffa`4e777000   C:\Windows\SYSTEM32\WKSCLI.DLL
+ModLoad: 00007ffa`348c0000 00007ffa`3496f000   C:\Program Files (x86)\360\360Safe\safemon\Safehmpg64.dll
+ModLoad: 00007ffa`34850000 00007ffa`34872000   C:\Program Files (x86)\360\360Safe\safemon\wdexhelperx64.dll
+ModLoad: 00000001`80000000 00000001`8001d000   C:\Users\Admin\AppData\Roaming\360se6\Application\9.1.0.406\smartpreheat64.dll
+ModLoad: 00007ffa`34760000 00007ffa`347c5000   C:\Windows\SYSTEM32\NInput.dll
+ModLoad: 00007ffa`54150000 00007ffa`542b7000   C:\Windows\System32\MSCTF.dll
+ModLoad: 00007ffa`4b680000 00007ffa`4b8e9000   C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.16299.192_none_15c8cdae9364c23b\comctl32.dll
+ModLoad: 00000000`05140000 00000000`051de000   C:\Windows\System32\clbcatq.dll
+ModLoad: 00007ffa`35a80000 00007ffa`35b0d000   C:\Windows\System32\appresolver.dll
+ModLoad: 00007ffa`3d610000 00007ffa`3d67a000   C:\Windows\System32\Bcp47Langs.dll
+ModLoad: 00007ffa`3d730000 00007ffa`3d748000   C:\Windows\System32\elscore.dll
+ModLoad: 00007ffa`418c0000 00007ffa`418e7000   C:\Windows\System32\SLC.dll
+ModLoad: 00007ffa`4ae90000 00007ffa`4b05c000   C:\Windows\System32\urlmon.dll
+ModLoad: 00007ffa`41890000 00007ffa`418b6000   C:\Windows\System32\sppc.dll
+ModLoad: 00007ffa`4abf0000 00007ffa`4ae89000   C:\Windows\System32\iertutil.dll
+ModLoad: 00007ffa`51d80000 00007ffa`51d8b000   C:\Windows\System32\CRYPTBASE.DLL
+ModLoad: 00007ffa`33260000 00007ffa`33805000   C:\Windows\System32\StartTileData.dll
+ModLoad: 00007ffa`4cfb0000 00007ffa`4cfe5000   C:\Windows\System32\XmlLite.dll
+pcshell\shell\appresolver\unifiedtilemodelreconciler\sharedfactoryhelper.cpp(26)\appresolver.dll!00007FFA35AC0275: (caller: 00007FFA35AC86CA) ReturnHr(1) tid(4078) 80070424 The specified service does not exist as an installed service.
+    CallContext:[\AppLifecycleReconcilerInitialize] 
+pcshell\shell\appresolver\unifiedtilemodelreconciler\applifecyclereconciler.cpp(74)\appresolver.dll!00007FFA35AC85D3: (caller: 00007FFA35A94292) ReturnHr(2) tid(4078) 80070424 The specified service does not exist as an installed service.
+    CallContext:[\AppLifecycleReconcilerInitialize] 
+shell\lib\logontasks\logontasks.cpp(5169)\explorer.exe!00007FF7B3234491: (caller: 00007FF7B315EB82) LogHr(1) tid(36e0) 80070005 Access is denied.
+    CallContext:[\ExplorerBoot] 
+ModLoad: 00007ffa`48a10000 00007ffa`48abd000   C:\Windows\SYSTEM32\dsreg.dll
+ModLoad: 00007ffa`4d0d0000 00007ffa`4d160000   C:\Windows\SYSTEM32\msvcp110_win.dll
+ModLoad: 00007ffa`533c0000 00007ffa`5358e000   C:\Windows\System32\CRYPT32.dll
+ModLoad: 00007ffa`52390000 00007ffa`523a2000   C:\Windows\System32\MSASN1.dll
+shell\lib\logontasks\logontasks.cpp(5169)\explorer.exe!00007FF7B3234491: (caller: 00007FF7B31C1AD4) LogHr(2) tid(36e0) 80070005 Access is denied.
+    CallContext:[\ExplorerBoot\AllLogonTasks] 
+ModLoad: 00007ffa`47030000 00007ffa`4704c000   C:\Windows\SYSTEM32\settingsyncpolicy.dll
+shell\lib\logontasks\logontasks.cpp(4205)\explorer.exe!00007FF7B31EE909: (caller: 00007FF7B3160D38) LogHr(3) tid(1b28) 80070002 The system cannot find the file specified.
+ModLoad: 00007ffa`4d160000 00007ffa`4d1db000   C:\Windows\SYSTEM32\policymanager.dll
+ModLoad: 00007ffa`3c180000 00007ffa`3c233000   C:\Windows\SYSTEM32\SndVolSSO.DLL
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(407)\settingsynccore.dll!00007FFA34A717AA: (caller: 00007FFA34A54F13) ReturnHr(1) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(421)\settingsynccore.dll!00007FFA34A7178C: (caller: 00007FFA34A23E72) ReturnHr(2) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(554)\settingsynccore.dll!00007FFA34A653B2: (caller: 00007FFA34A23BA0) ReturnHr(3) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(407)\settingsynccore.dll!00007FFA34A717AA: (caller: 00007FFA34A54F13) ReturnHr(4) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(421)\settingsynccore.dll!00007FFA34A7178C: (caller: 00007FFA34A5F90F) ReturnHr(5) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(692)\settingsynccore.dll!00007FFA34A5F93F: (caller: 00007FFA34A21B17) ReturnHr(6) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\settingsynccore\settingsyncinfo\connectedaccountservices.cpp(268)\settingsynccore.dll!00007FFA34A5F5A2: (caller: 00007FFA34A2157C) ReturnHr(7) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\settingsynccore\settingsyncinfo\connectedaccountservices.cpp(317)\settingsynccore.dll!00007FFA34A646D1: (caller: 00007FFA34A48FD2) ReturnHr(8) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\settingsynccore\settingsyncinfo\connectedaccountservices.cpp(136)\settingsynccore.dll!00007FFA34A64719: (caller: 00007FFA34A48FD2) ReturnHr(9) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(407)\settingsynccore.dll!00007FFA34A717AA: (caller: 00007FFA34A54F13) ReturnHr(10) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(421)\settingsynccore.dll!00007FFA34A7178C: (caller: 00007FFA34A23E72) ReturnHr(11) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(554)\settingsynccore.dll!00007FFA34A653B2: (caller: 00007FFA34A23BA0) ReturnHr(12) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(407)\settingsynccore.dll!00007FFA34A717AA: (caller: 00007FFA34A54F13) ReturnHr(13) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(421)\settingsynccore.dll!00007FFA34A7178C: (caller: 00007FFA34A5F90F) ReturnHr(14) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(692)\settingsynccore.dll!00007FFA34A5F93F: (caller: 00007FFA34A21B17) ReturnHr(15) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\settingsynccore\settingsyncinfo\connectedaccountservices.cpp(268)\settingsynccore.dll!00007FFA34A5F5A2: (caller: 00007FFA34A44B0C) ReturnHr(16) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\settingsynccore\settingsyncinfo\connectedaccountservices.cpp(317)\settingsynccore.dll!00007FFA34A64786: (caller: 00007FFA34A21CF2) ReturnHr(17) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\settingsynccore\settingsyncinfo\connectedaccountservices.cpp(151)\settingsynccore.dll!00007FFA34A647A5: (caller: 00007FFA34A16006) ReturnHr(18) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(407)\settingsynccore.dll!00007FFA34A717AA: (caller: 00007FFA34A54F13) ReturnHr(19) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(421)\settingsynccore.dll!00007FFA34A7178C: (caller: 00007FFA34A23E72) ReturnHr(20) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(554)\settingsynccore.dll!00007FFA34A653B2: (caller: 00007FFA34A23BA0) ReturnHr(21) tid(2c34) 80070424 The specified service does not exist as an installed service.
+ModLoad: 00007ffa`4d3a0000 00007ffa`4d40f000   C:\Windows\SYSTEM32\MMDevAPI.DLL
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(407)\settingsynccore.dll!00007FFA34A717AA: (caller: 00007FFA34A54F13) ReturnHr(22) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(421)\settingsynccore.dll!00007FFA34A7178C: (caller: 00007FFA34A5F90F) ReturnHr(23) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\common\tokenbrokerutils.cpp(692)\settingsynccore.dll!00007FFA34A5F93F: (caller: 00007FFA34A21B17) ReturnHr(24) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\settingsynccore\settingsyncinfo\connectedaccountservices.cpp(268)\settingsynccore.dll!00007FFA34A5F5A2: (caller: 00007FFA34A44B0C) ReturnHr(25) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\settingsynccore\settingsyncinfo\connectedaccountservices.cpp(317)\settingsynccore.dll!00007FFA34A64786: (caller: 00007FFA34A21CF2) ReturnHr(26) tid(2c34) 80070424 The specified service does not exist as an installed service.
+onecoreuap\shell\roaming\settingsynccore\settingsyncinfo\connectedaccountservices.cpp(151)\settingsynccore.dll!00007FFA34A647A5: (caller: 00007FFA34A16006) ReturnHr(27) tid(2c34) 80070424 The specified service does not exist as an installed service.
+ModLoad: 00007ffa`52130000 00007ffa`52157000   C:\Windows\SYSTEM32\DEVOBJ.dll
+ModLoad: 00007ffa`49360000 00007ffa`493ce000   C:\Windows\SYSTEM32\OLEACC.dll
+ModLoad: 00007ffa`3ce30000 00007ffa`3cfdb000   C:\Windows\system32\windowscodecs.dll
+ModLoad: 00007ffa`34ec0000 00007ffa`353e0000   C:\Windows\System32\Speech_OneCore\Common\sapi_onecore.dll
+ModLoad: 00007ffa`4dee0000 00007ffa`4dfbe000   C:\Windows\SYSTEM32\WINHTTP.dll
+pcshell\shell\explorer\traychevron.cpp(98)\explorer.exe!00007FF7B32357C3: (caller: 00007FF7B31C3976) LogHr(4) tid(2328) 80070005 Access is denied.
+    CallContext:[\TrayInit\SystemTrayInit] 
+pcshell\shell\explorer\traynot.cpp(3387)\explorer.exe!00007FF7B320B7B9: (caller: 00007FF7B3181168) ReturnHr(1) tid(2328) 80004005 Unspecified error
+    CallContext:[\TrayInit\SystemTrayInit] 
+pcshell\shell\explorer\trayitem.cpp(60)\explorer.exe!00007FF7B3242E9C: (caller: 00007FF7B31E1DC0) ReturnHr(2) tid(2328) 80070057 The parameter is incorrect.
+    CallContext:[\TrayInit] 
+pcshell\shell\explorer\trayitem.cpp(60)\explorer.exe!00007FF7B3242E9C: (caller: 00007FF7B31E1DC0) ReturnHr(3) tid(2328) 80070057 The parameter is incorrect.
+    CallContext:[\TrayInit] 
+pcshell\shell\explorer\trayitem.cpp(60)\explorer.exe!00007FF7B3242E9C: (caller: 00007FF7B31E1DC0) ReturnHr(4) tid(2328) 80070057 The parameter is incorrect.
+    CallContext:[\TrayInit] 
+ModLoad: 00007ffa`32b60000 00007ffa`32b8d000   C:\Windows\SYSTEM32\tabbtn.dll
+pcshell\shell\explorer\traysearchhelper.h(20)\explorer.exe!00007FF7B323AF3E: (caller: 00007FF7B31E8FB7) ReturnHr(5) tid(1b28) 80040154 Class not registered
+ModLoad: 00007ffa`50770000 00007ffa`50788000   C:\Windows\System32\TabBtnEx.dll
+ModLoad: 00000001`80000000 00000001`80048000   C:\Program Files (x86)\MyDrivers\DriverGenius\dghmpg64.dll
+ModLoad: 00000000`07dd0000 00000000`09206000   SHELL32.dll
+(cb8.1308): Access violation - code c0000005 (first chance)
+First chance exceptions are reported before any exception handling.
+This exception may be expected and handled.
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for C:\Program Files (x86)\MyDrivers\DriverGenius\dghmpg64.dll - 
+dghmpg64!ParseCmd+0xbd0e:
+00000001`8000e94e 4a8b4c0006      mov     rcx,qword ptr [rax+r8+6] ds:00007ffb`362e0278=????????????????
+0:011&gt; .sympath srv*C:\Windows\Symbols*http://msdl.microsoft.com/download/symbols
+Symbol search path is: srv*C:\Windows\Symbols*http://msdl.microsoft.com/download/symbols
+Expanded Symbol search path is: srv*c:\windows\symbols*http://msdl.microsoft.com/download/symbols
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+Deferred                                       srv*C:\Windows\Symbols*http://msdl.microsoft.com/download/symbols
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for C:\Program Files (x86)\MyDrivers\DriverGenius\dghmpg64.dll - 
+0:011&gt; .reload
+Reloading current modules
+................................................................
+.........................
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for C:\Program Files (x86)\MyDrivers\DriverGenius\dghmpg64.dll - 
+
+************* Symbol Loading Error Summary **************
+Module name            Error
+dghmpg64               0x80190194 - Not found (404). : srv*c:\windows\symbols*http://msdl.microsoft.com/download/symbols
+
+You can troubleshoot most symbol related issues by turning on symbol loading diagnostics (!sym noisy) and repeating the command that caused symbols to be loaded.
+You should also verify that your symbol search path (.sympath) is correct.
+0:011&gt; ~* k 99
+
+   0  Id: cb8.36e0 Suspend: 1 Teb: 00000000`00ea7000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`00d9f098 00000000`00da0a96 0xda0cb3
+01 00000000`00d9f0a0 00000000`00000068 0xda0a96
+02 00000000`00d9f0a8 00000000`00d9f0f0 0x68
+03 00000000`00d9f0b0 00000000`00b4008c 0xd9f0f0
+04 00000000`00d9f0b8 00000000`00000000 0xb4008c
+
+   1  Id: cb8.3980 Suspend: 1 Teb: 00000000`00ea9000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`032cfd58 00007ffa`52f18dba ntdll!NtDeviceIoControlFile+0xf
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for C:\Program Files\Sandboxie\SbieDll.dll - 
+01 00000000`032cfd60 00000000`69571cf0 KERNELBASE!SleepEx+0x9a
+02 00000000`032cfe00 00007ffa`54d51fe4 SbieDll!SbieDll_GetUserPathEx+0x60304
+03 00000000`032cfe30 00007ffa`5632efb1 kernel32!BaseThreadInitThunk+0x14
+04 00000000`032cfe60 00000000`00000000 ntdll!RtlUserThreadStart+0x21
+
+   2  Id: cb8.4078 Suspend: 1 Teb: 00000000`00eb7000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`055ef588 00007ffa`54811b2d win32u!NtUserMsgWaitForMultipleObjectsEx+0x14
+01 00000000`055ef590 00007ffa`35a93f69 user32!RealMsgWaitForMultipleObjectsEx+0x1d
+02 00000000`055ef5d0 00007ffa`35a94453 appresolver!Windows::Internal::ComTaskPool::CThread::_WaitForThreadUpdate+0x2d
+03 00000000`055ef640 00007ffa`35a93e01 appresolver!Windows::Internal::ComTaskPool::CThread::_ThreadProc+0x397
+04 00000000`055ef710 00007ffa`35a93f29 appresolver!Windows::Internal::ComTaskPool::CThread::s_ExecuteThreadProc+0x21
+05 00000000`055ef750 00007ffa`54d51fe4 appresolver!Windows::Internal::ComTaskPool::CThread::s_ThreadProc+0x9
+06 00000000`055ef780 00007ffa`5632efb1 kernel32!BaseThreadInitThunk+0x14
+07 00000000`055ef7b0 00000000`00000000 ntdll!RtlUserThreadStart+0x21
+
+   3  Id: cb8.2c34 Suspend: 1 Teb: 00000000`00eb1000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`0546f5c8 00007ffa`562f49dd ntdll!NtDeviceIoControlFile+0xf
+01 00000000`0546f5d0 00007ffa`54d51fe4 ntdll!TppWorkerThread+0x71d
+02 00000000`0546f960 00007ffa`5632efb1 kernel32!BaseThreadInitThunk+0x14
+03 00000000`0546f990 00000000`00000000 ntdll!RtlUserThreadStart+0x21
+
+   4  Id: cb8.3e94 Suspend: 1 Teb: 00000000`00eb3000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`054eee38 00007ffa`52ed3b2f ntdll!NtDeviceIoControlFile+0xf
+01 00000000`054eee40 00007ff7`b3154b12 KERNELBASE!WaitForSingleObjectEx+0x9f
+02 00000000`054eeee0 00007ff7`b3160d38 explorer!&lt;lambda_2fbfc176326eec339e2555b6bf41d9ce&gt;::operator()+0x126
+03 00000000`054ef230 00007ff7`b3160923 explorer!Windows::Internal::ComTaskPool::CThread::_ThreadProc+0x338
+04 00000000`054ef360 00007ffa`5633eb79 explorer!Windows::Internal::ComTaskPool::CThread::s_ThreadPoolCallback+0x33
+05 00000000`054ef3a0 00007ffa`562f473c ntdll!TppSimplepExecuteCallback+0x99
+06 00000000`054ef3f0 00007ffa`54d51fe4 ntdll!TppWorkerThread+0x47c
+07 00000000`054ef780 00007ffa`5632efb1 kernel32!BaseThreadInitThunk+0x14
+08 00000000`054ef7b0 00000000`00000000 ntdll!RtlUserThreadStart+0x21
+
+   5  Id: cb8.1730 Suspend: 1 Teb: 00000000`00eb5000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`0556f198 00007ffa`52f1a966 ntdll!NtDeviceIoControlFile+0xf
+01 00000000`0556f1a0 00007ffa`54acaa73 KERNELBASE!WaitForMultipleObjectsEx+0x106
+02 00000000`0556f4a0 00007ffa`54acce00 combase!WaitCoalesced+0xb3 [onecore\com\published\comutils\coalescedwait.cxx @ 72] 
+03 00000000`0556f730 00007ffa`54aca931 combase!CROIDTable::WorkerThreadLoop+0x50 [onecore\com\combase\dcomrem\refcache.cxx @ 1642] 
+04 00000000`0556f780 00007ffa`54b0157c combase!CRpcThread::WorkerLoop+0x15d [onecore\com\combase\dcomrem\threads.cxx @ 269] 
+05 00000000`0556f7e0 00007ffa`54d51fe4 combase!CRpcThreadCache::RpcWorkerThreadEntry+0x7c [onecore\com\combase\dcomrem\threads.cxx @ 76] 
+06 00000000`0556f810 00007ffa`5632efb1 kernel32!BaseThreadInitThunk+0x14
+07 00000000`0556f840 00000000`00000000 ntdll!RtlUserThreadStart+0x21
+
+   6  Id: cb8.1b28 Suspend: 1 Teb: 00000000`00eb9000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`057af698 00007ffa`54811b2d win32u!NtUserMsgWaitForMultipleObjectsEx+0x14
+01 00000000`057af6a0 00007ff7`b3160e5e user32!RealMsgWaitForMultipleObjectsEx+0x1d
+02 00000000`057af6e0 00007ff7`b31cec59 explorer!Windows::Internal::ComTaskPool::CThread::_ThreadProc+0x45e
+03 00000000`057af810 00007ff7`b31cec29 explorer!Windows::Internal::ComTaskPool::CThread::s_ExecuteThreadProc+0x21
+04 00000000`057af850 00007ffa`54d51fe4 explorer!Windows::Internal::ComTaskPool::CThread::s_ThreadProc+0x9
+05 00000000`057af880 00007ffa`5632efb1 kernel32!BaseThreadInitThunk+0x14
+06 00000000`057af8b0 00000000`00000000 ntdll!RtlUserThreadStart+0x21
+
+   7  Id: cb8.3e90 Suspend: 1 Teb: 00000000`00ebb000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`0582f758 00007ffa`562f49dd ntdll!NtDeviceIoControlFile+0xf
+01 00000000`0582f760 00007ffa`54d51fe4 ntdll!TppWorkerThread+0x71d
+02 00000000`0582faf0 00007ffa`5632efb1 kernel32!BaseThreadInitThunk+0x14
+03 00000000`0582fb20 00000000`00000000 ntdll!RtlUserThreadStart+0x21
+
+   8  Id: cb8.1ef8 Suspend: 1 Teb: 00000000`00ec3000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`05a8f608 00007ffa`562f49dd ntdll!NtDeviceIoControlFile+0xf
+01 00000000`05a8f610 00007ffa`54d51fe4 ntdll!TppWorkerThread+0x71d
+02 00000000`05a8f9a0 00007ffa`5632efb1 kernel32!BaseThreadInitThunk+0x14
+03 00000000`05a8f9d0 00000000`00000000 ntdll!RtlUserThreadStart+0x21
+
+   9  Id: cb8.1f50 Suspend: 1 Teb: 00000000`00ebf000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`0598f7e8 00007ffa`54811b2d win32u!NtUserMsgWaitForMultipleObjectsEx+0x14
+01 00000000`0598f7f0 00007ff7`b3160e5e user32!RealMsgWaitForMultipleObjectsEx+0x1d
+02 00000000`0598f830 00007ff7`b31cec59 explorer!Windows::Internal::ComTaskPool::CThread::_ThreadProc+0x45e
+03 00000000`0598f960 00007ff7`b31cec29 explorer!Windows::Internal::ComTaskPool::CThread::s_ExecuteThreadProc+0x21
+04 00000000`0598f9a0 00007ffa`54d51fe4 explorer!Windows::Internal::ComTaskPool::CThread::s_ThreadProc+0x9
+05 00000000`0598f9d0 00007ffa`5632efb1 kernel32!BaseThreadInitThunk+0x14
+06 00000000`0598fa00 00000000`00000000 ntdll!RtlUserThreadStart+0x21
+
+  10  Id: cb8.2328 Suspend: 1 Teb: 00000000`00ec1000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`05a0f5c8 00007ffa`52ed3b2f ntdll!NtDeviceIoControlFile+0xf
+01 00000000`05a0f5d0 00007ffa`53614287 KERNELBASE!WaitForSingleObjectEx+0x9f
+02 00000000`05a0f670 00007ffa`5361412f shcore!_CreateThreadWorker+0x153
+03 00000000`05a0f740 00007ffa`54f1e76a shcore!SHCreateThread+0xf
+04 00000000`05a0f780 00007ffa`54eb0ddd SHELL32!SCNInitialize+0x6a
+05 00000000`05a0f7b0 00007ffa`54eb0424 SHELL32!SCNGetWindow+0x61
+06 00000000`05a0f7e0 00007ffa`54eaff29 SHELL32!CChangeRouterProxy::_Validate+0x34
+07 00000000`05a0f820 00007ffa`54f183f9 SHELL32!CChangeRouterProxy::GetProxy+0x55
+08 00000000`05a0f850 00007ff7`b31d5d8f SHELL32!SHChangeNotifyRegisterThread+0x19
+09 00000000`05a0f880 00007ffa`535ed575 explorer!CTray::MainThreadProc+0x1f
+0a 00000000`05a0f8b0 00007ffa`54d51fe4 shcore!_WrapperThreadProc+0xf5
+0b 00000000`05a0f990 00007ffa`5632efb1 kernel32!BaseThreadInitThunk+0x14
+0c 00000000`05a0f9c0 00000000`00000000 ntdll!RtlUserThreadStart+0x21
+
+# 11  Id: cb8.1308 Suspend: 1 Teb: 00000000`00ec5000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`07bdeaa0 00000001`8000e36c dghmpg64!ParseCmd+0xbd0e
+01 00000000`07bdead0 00000001`8000dac5 dghmpg64!ParseCmd+0xb72c
+02 00000000`07bdeb50 00000001`80009cf6 dghmpg64!ParseCmd+0xae85
+03 00000000`07bdec00 00000001`80002e21 dghmpg64!ParseCmd+0x70b6
+04 00000000`07bdec30 00000001`80003018 dghmpg64!ParseCmd+0x1e1
+05 00000000`07bdec70 00000001`8001fb5c dghmpg64!ParseCmd+0x3d8
+06 00000000`07bdecc0 00007ffa`562d1493 dghmpg64!ParseCmd+0x1cf1c
+07 00000000`07bded00 00007ffa`56326642 ntdll!LdrpCallInitRoutine+0x6f
+08 00000000`07bded70 00007ffa`5632648b ntdll!LdrpInitializeNode+0x15a
+09 00000000`07bdee90 00007ffa`562f9e31 ntdll!LdrpInitializeGraphRecurse+0x73
+0a 00000000`07bdeed0 00007ffa`562ce3b9 ntdll!LdrpPrepareModuleForExecution+0xc5
+0b 00000000`07bdef10 00007ffa`562d1a87 ntdll!LdrpLoadDllInternal+0x19d
+0c 00000000`07bdef90 00007ffa`562d5b7c ntdll!LdrpLoadDll+0x107
+0d 00000000`07bdf130 00000000`6955c62c ntdll!LdrLoadDll+0x8c
+0e 00000000`07bdf230 00007ffa`52f02b6a SbieDll!SbieDll_GetUserPathEx+0x4ac40
+0f 00000000`07bdf260 00007ffa`5480e896 KERNELBASE!LoadLibraryExW+0x14a
+10 00000000`07bdf2d0 00007ffa`56363b44 user32!_ClientLoadLibrary+0xa6
+11 00000000`07bdf470 00007ffa`53131144 ntdll!KiUserCallbackDispatcherContinue
+12 00000000`07bdf5a8 00007ffa`54813f76 win32u!NtUserGetMessage+0x14
+13 00000000`07bdf5b0 00007ff7`b31d407d user32!GetMessageW+0x26
+14 00000000`07bdf5e0 00007ffa`535ed575 explorer!&lt;lambda_fea99cca97e63ba9c563d40720a1aafc&gt;::operator()+0xe5
+15 00000000`07bdf6d0 00007ffa`54d51fe4 shcore!_WrapperThreadProc+0xf5
+16 00000000`07bdf7b0 00007ffa`5632efb1 kernel32!BaseThreadInitThunk+0x14
+17 00000000`07bdf7e0 00000000`00000000 ntdll!RtlUserThreadStart+0x21
+
+  12  Id: cb8.2a58 Suspend: 1 Teb: 00000000`00ec7000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`07c5f458 00007ffa`562ff941 ntdll!NtDeviceIoControlFile+0xf
+01 00000000`07c5f460 00007ffa`562cee7f ntdll!LdrpDrainWorkQueue+0x15d
+02 00000000`07c5f4a0 00007ffa`563392c1 ntdll!LdrpInitializeThread+0x8b
+03 00000000`07c5f580 00007ffa`5633922b ntdll!_LdrpInitialize+0x81
+04 00000000`07c5f600 00007ffa`563391de ntdll!LdrpInitialize+0x3b
+05 00000000`07c5f630 00007ffa`562c0000 ntdll!LdrInitializeThunk+0xe
+06 00000000`07c5f660 00000000`00000000 ntdll!RtlFindClearBits &lt;PERF&gt; (ntdll+0x0)
+
+  13  Id: cb8.1498 Suspend: 1 Teb: 00000000`00ec9000 Unfrozen
+ # Child-SP          RetAddr           Call Site
+00 00000000`07d1f7d8 00007ffa`562ff941 ntdll!NtDeviceIoControlFile+0xf
+01 00000000`07d1f7e0 00007ffa`562cee7f ntdll!LdrpDrainWorkQueue+0x15d
+02 00000000`07d1f820 00007ffa`563392c1 ntdll!LdrpInitializeThread+0x8b
+03 00000000`07d1f900 00007ffa`5633922b ntdll!_LdrpInitialize+0x81
+04 00000000`07d1f980 00007ffa`563391de ntdll!LdrpInitialize+0x3b
+05 00000000`07d1f9b0 00007ffa`562c0000 ntdll!LdrInitializeThunk+0xe
+06 00000000`07d1f9e0 00000000`00000000 ntdll!RtlFindClearBits &lt;PERF&gt; (ntdll+0x0)
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: explorer.exe crashed (SBIE 2224)</h3>
+				<div class="date">Posted: <strong>Mon Feb 12, 2018 10:05 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello erickfung,<br>
+<br>
+Please provide the required information so that we can assist you:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Also please let us know if explorer works fine outside Sandboxie. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25432&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:01:20 GMT -->
+</html>

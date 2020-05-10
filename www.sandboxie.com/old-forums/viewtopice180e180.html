@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25362&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Limit Access to system fonts</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Limit Access to system fonts</h2>
+		<p><a href="viewtopicf9f8f9f8.html?f=17&amp;t=25362">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25362</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Limit Access to system fonts</h3>
+				<div class="date">Posted: <strong>Tue Jan 23, 2018 3:38 pm</strong></div>
+				<div class="author">by <strong>sandyXXX</strong></div>
+				<div class="content">Hi, I'm using unregistered version 5.22<br>
+<br>
+Quick- Can we control which fonts can be access by program(chrome) running under Sandboxie?<br>
+Why- To have different fonts fingerprint other than system installed chrome.<br>
+<br>
+What I want to do-<br>
+Browser (running under Sandboxie) access direct registry to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts and few more to access system fonts in  order to work and if block its access to that registry browser show some random symbols insteat of text.<br>
+<br>
+so i exported above registry hive in Sandboxie RegHive and block direct access to it particulary in .ini file, but of no use<br>
+<br>
+I want to force programs to use fonts loaded in RegHive of that sandbox (if its possible what I am thinking) and not the system defaults.<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Limit Access to system fonts</h3>
+				<div class="date">Posted: <strong>Tue Jan 23, 2018 4:07 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello sandyXXX,<br>
+<br>
+Please have a look at the restriction settings below:<br>
+<a href="../ResourceAccessSettings.html#key" class="postlink">https://www.sandboxie.com/ResourceAccessSettings#key</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Limit Access to system fonts</h3>
+				<div class="date">Posted: <strong>Tue Jan 23, 2018 4:49 pm</strong></div>
+				<div class="author">by <strong>sandyXXX</strong></div>
+				<div class="content">well instrunction to force programs(chrome) to access specific registry(fonts loading) through sandbox RegHive instead of system is not provided.<br>
+<br>
+Is there any way to do that?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Limit Access to system fonts</h3>
+				<div class="date">Posted: <strong>Wed Jan 24, 2018 9:49 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello sandyXXX,<br>
+<br>
+Sandboxie is an isolation tool that allows you to run applications without letting them modify your host. <br>
+We do offer some ways to block access to registry keys, paths and files (as listed on my previous response).  You can try blocking the key you mentioned on your post and see if that works at all. Or try blocking access to the folder where the fonts are located.  <br>
+<br>
+Here's an example of how to block a registry key:<br>
+<a href="../ClosedKeyPath.html" class="postlink">https://www.sandboxie.com/ClosedKeyPath</a><br>
+<br>
+So, for your case you want to do something like:<br>
+ClosedKeyPath=chrome.exe,HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Limit Access to system fonts</h3>
+				<div class="date">Posted: <strong>Thu Jan 25, 2018 8:47 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">If you are using a persistent box, eg one that doesn't auto-delete, this would be easier to pull off. In such a case you can add any registry entries or files to the sandbox. The sandboxed entries are ALWAYS checked first. As such, if the reg entries or files already exist inside these will be used. It can be a bit more complex if you want to auto-delete the box on close but so long as you can 'backup' the desired defaults and restore them with a script in the 'delete phase' of the box it is actually still possible. In addition a mesh of specific Write*Path=rules (Instead of Closed) might be able to aid you in your endeavor here.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Limit Access to system fonts</h3>
+				<div class="date">Posted: <strong>Sat Jan 27, 2018 2:47 am</strong></div>
+				<div class="author">by <strong>sandyXXX</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518">Syrinx</a> wrote: <a href="viewtopic29332933.html?p=132040#p132040" data-post-id="132040" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Jan 25, 2018 8:47 pm</div></cite>
+If you are using a persistent box, eg one that doesn't auto-delete, this would be easier to pull off. In such a case you can add any registry entries or files to the sandbox. The sandboxed entries are ALWAYS checked first. As such, if the reg entries or files already exist inside these will be used. It can be a bit more complex if you want to auto-delete the box on close but so long as you can 'backup' the desired defaults and restore them with a script in the 'delete phase' of the box it is actually still possible. In addition a mesh of specific Write*Path=rules (Instead of Closed) might be able to aid you in your endeavor here.
+</div></blockquote>
+
+Yes! Thanks you<br>
+This is what I want to do, I have a "persistent box" and want some specific registries that  program running in sandboxie are using from host system directly (I see their resource access using "Process monitor" tool) not to be blocked but access it from sanbox registry<br>
+<br>
+Can you expain with example as I'm learning so didn't get all of it<br>
+Like if I want the control what fonts sandboxed program can use <br>
+then where to duplicate host registries into sandbox and also if in case of files/folder (for fonts we might have some folder of fonts that have all system fonts) that registry use where it should be copied in sandbox.<br>
+<br>
+As i tried copying host system Registry Hive into sandbox RegHive but it didn't work.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25362&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:41 GMT -->
+</html>

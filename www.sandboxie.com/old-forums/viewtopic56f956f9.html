@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13579&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:31:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; delete folder after closed</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>delete folder after closed</h2>
+		<p><a href="viewtopic65826582.html?f=17&amp;t=13579">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=13579</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>delete folder after closed</h3>
+				<div class="date">Posted: <strong>Sun Sep 02, 2012 4:18 am</strong></div>
+				<div class="author">by <strong>sandboxietester</strong></div>
+				<div class="content">Hi,<br>
+<br>
+i'm trying out sandboxie and i like it so far<br>
+But i don't understand the settings clearly<br>
+<br>
+I'm using spotify in a sandbox and it uses a lot of space in user\current\AppData\Local\Spotify\Storage<br>
+i would like it to delete this folder on closing spotify, but i do not want it deleting my whole sandbox (which includes spotify installation)<br>
+<br>
+i found the recovery settings, but i cannot use them, because i have to choose a folder on my real system<br>
+and this folder does not exist (only in sandboxie)<br>
+<br>
+thank you in advance</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 02, 2012 7:06 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">I'm not aware of any setting within the Sandboxie program that will delete contents of the folder, but you can use an unsandboxed program to delete the contents after you exit the sandboxed programs.<br>
+<br>
+For example, CCleaner can be run with that sandbox folder listed under its Options &gt; Include.<br>
+Or a .cmd file could be run to delete the contents of the folder in the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 02, 2012 2:49 pm</strong></div>
+				<div class="author">by <strong>sandboxietester</strong></div>
+				<div class="content">of course i could write a batch file<br>
+but starting an extra program or script after using a sandbox is not an confortable way<br>
+<br>
+anyone any ideas?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 02, 2012 3:43 pm</strong></div>
+				<div class="author">by <strong>daabraham270</strong></div>
+				<div class="content">this is very necessary to delete the folder<br>
+<br>
+&lt;a href="<a href="http://www.oakfurniturefdf.co.uk/%22%3Echeap" class="postlink">http://www.oakfurniturefdf.co.uk/"&gt;cheap</a> oak beds&lt;/a&gt;<br>
+&lt;a href="<a href="http://www.oakfurniturefdf.co.uk/%22%3Eoak" class="postlink">http://www.oakfurniturefdf.co.uk/"&gt;oak</a> furniture&lt;/a&gt;<br>
+&lt;a href="<a href="http://www.oakfurniturefdf.co.uk/%22%3Eoak" class="postlink">http://www.oakfurniturefdf.co.uk/"&gt;oak</a> bed&lt;/a&gt;</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 02, 2012 4:20 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">I don't know what method you are using to start the program, but it might not be hard to write a .cmd file that runs it and also deletes the folder contents on exit.<br>
+<br>
+@echo off<br>
+"C:\Sandbox\Paul\Notepad\drive\C\Program Files\notepad.exe"<br>
+del "C:\Sandbox\Paul\Notepad\user\current\Application Data\My Data\*.*" /s /f /q<br>
+<br>
+Then run the .cmd file from a shortcut, and choose a Minimized Window for it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 02, 2012 4:29 pm</strong></div>
+				<div class="author">by <strong>sandboxietester</strong></div>
+				<div class="content">the problem is not a single batch file<br>
+it is the amount of batch files after all the different boxes which includes an installation<br>
+everytime i want to keep the installation but delete the settings/cache/temp files<br>
+<br>
+i don't want to install the programmes on my computer, i want to install them in a sandbox<br>
+and if i delete the whole box i will have to install it again<br>
+or start a specific batch files after running</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 02, 2012 4:37 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Maybe you could have a single batch file that you run as part of system startup (for example in the "Startup" group in Start menu) and it deletes the various folders that you don't want to keep, in all of your sandboxes.<br>
+<br>
+If once per start up is not enough, you can even use schedule a tasks to run the script several times a day.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13579&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:31:48 GMT -->
+</html>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/22909" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2017-02-21T12:02:17-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/22909</id>
+
+		<entry>
+		<author><name><![CDATA[Syrinx]]></name></author>
+		<updated>2017-02-21T12:02:17-04:00</updated>
+
+		<published>2017-02-21T12:02:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=126550#p126550</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=126550#p126550"/>
+		<title type="html"><![CDATA[Malwarebytes 3]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=126550#p126550"><![CDATA[
+This is just a minor tweak to the old MBAE template [found above] to work with the new build of Malwarebytes 3 which now includes the Anti-Exploit module.<br>The only real difference is a path change to point at the new location of the dll with this program.<br><br><em>If you didn't</em> install MB3 with the <span style="text-decoration: underline">default directory</span> selected you'll still need to <strong>manually alter the path of the InjectDll= lines to reflect the mbae*.dlls real locations</strong>.<div class="codebox"><p>CODE: </p><pre><code>[Template_MB3]Tmpl.Title=Malwarebytes 3 Anti Exploit Component (Vista,7,8,10)Tmpl.Class=SecurityTmpl.Scan=sTmpl.ScanService=MBAMServiceInjectDll64=C:\Program Files\Malwarebytes\Anti-Malware\mbae64.dllInjectDll=C:\Program Files\Malwarebytes\Anti-Malware\mbae.dllOpenIpcPath=*\BaseNamedObjects*\NamedBuffer*Process*API*OpenIpcPath=*\BaseNamedObjects*\MBAE_IPC_PROTECTION*OpenIpcPath=*\BaseNamedObjects*\Mutex*Process*API*OpenIpcPath=*\RPC Control*\*MBAE_IPC_PROTECTION*OpenIpcPath=*\BaseNamedObjects*\AutoUnhookMap*OpenIpcPath=*\BaseNamedObjects*\mchMixCache*OpenIpcPath=*\BaseNamedObjects*\Ipc2Cnt*OpenIpcPath=*\BaseNamedObjects*\mchLLEW*</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=29518">Syrinx</a> — Tue Feb 21, 2017 11:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-05-13T08:56:51-04:00</updated>
+
+		<published>2016-05-13T08:56:51-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120889#p120889</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120889#p120889"/>
+		<title type="html"><![CDATA[Comodo Internet Security(CIS)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120889#p120889"><![CDATA[
+Courtesy of @rpljhun<br><br><strong>Comodo Internet Security(CIS)</strong> Compatibility Setting.<br>Enable CIS compatibily settings in sandboxie.<br>Add this under global settings:<br><div class="codebox"><p>CODE: </p><pre><code>ClosedFilePath=*\guard64.dll</code></pre></div><strong>For CIS Enabled HIPS:</strong><br>Add HIPS Rules for SbieSvc.exe set to Installer or Updater<br><strong><br>For CIS Enabled Autosandbox:<br></strong>You need to add ignore sandbox rules for any unrecognized applications by CIS<br>By default any unrecognized applications will be auto sandbox by CIS<br>To avoid inconvenience disable autosandbox.<br><br>If everything goes well, you may update the template.<div class="codebox"><p>CODE: </p><pre><code>[Template_ComodoInternetSecurity]Tmpl.Title=Comodo Internet Security / Antivirus / FirewallTmpl.Class=SecurityTmp.Url=http://www.comodo.com/home/internet-security/free-internet-security.phpTmpl.Scan=sTmpl.ScanService=cmdGuardClosedFilePath=*\Guard32.dllClosedFilePath=*\guard64.dll</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Fri May 13, 2016 8:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-05-13T08:55:53-04:00</updated>
+
+		<published>2016-05-13T08:55:53-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120888#p120888</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120888#p120888"/>
+		<title type="html"><![CDATA[MBAE Template]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120888#p120888"><![CDATA[
+Courtesy of @BTM aka @Syrinx<br><br>Windows Vista/7/8/10 32 bit &amp; SBIE 4.x/5.x<div class="codebox"><p>CODE: </p><pre><code>[Template_MBAE]Tmpl.Title=Malwarebytes Anti-ExploitTmpl.Class=SecurityTmpl.Scan=sTmpl.ScanKey=\REGISTRY\MACHINE\SOFTWARE\Malwarebytes Anti-ExploitOpenIpcPath=*\BaseNamedObjects*\NamedBuffer*Process*API*OpenIpcPath=*\BaseNamedObjects*\MBAE_IPC_PROTECTION*OpenIpcPath=*\BaseNamedObjects*\Mutex*Process*API*OpenIpcPath=*\RPC Control*\*MBAE_IPC_PROTECTION*OpenIpcPath=*\BaseNamedObjects*\AutoUnhookMap*OpenIpcPath=*\BaseNamedObjects*\mchMixCache*OpenIpcPath=*\BaseNamedObjects*\Ipc2Cnt*OpenIpcPath=*\BaseNamedObjects*\mchLLEW*InjectDll=C:\Program Files\Malwarebytes Anti-Exploit\mbae.dll</code></pre></div>Windows Vista/7/8/10 64 bit &amp; SBIE 4.x/5.x<div class="codebox"><p>CODE: </p><pre><code>[Template_MBAE]Tmpl.Title=Malwarebytes Anti-ExploitTmpl.Class=SecurityTmpl.Scan=sTmpl.ScanKey=\REGISTRY\MACHINE\SOFTWARE\Wow6432Node\Malwarebytes Anti-ExploitOpenIpcPath=*\BaseNamedObjects*\NamedBuffer*Process*API*OpenIpcPath=*\BaseNamedObjects*\MBAE_IPC_PROTECTION*OpenIpcPath=*\BaseNamedObjects*\Mutex*Process*API*OpenIpcPath=*\RPC Control*\*MBAE_IPC_PROTECTION*OpenIpcPath=*\BaseNamedObjects*\AutoUnhookMap*OpenIpcPath=*\BaseNamedObjects*\mchMixCache*OpenIpcPath=*\BaseNamedObjects*\Ipc2Cnt*OpenIpcPath=*\BaseNamedObjects*\mchLLEW*InjectDll=C:\Program Files (x86)\Malwarebytes Anti-Exploit\mbae.dllInjectDll64=C:\Program Files (x86)\Malwarebytes Anti-Exploit\mbae64.dll</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Fri May 13, 2016 8:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-05-13T08:54:54-04:00</updated>
+
+		<published>2016-05-13T08:54:54-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120887#p120887</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120887#p120887"/>
+		<title type="html"><![CDATA[Mirillis Action]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120887#p120887"><![CDATA[
+@Syrinx<br>Here's another template in case anyone needs to use this program with sandboxed software. It can be used with <a href="https://mirillis.com/en/products/action.html" class="postlink">Mirillis Action!</a>. Action!, created some issues after injecting sandboxed programs (in <a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=16996" class="postlink">this case</a> Mumble) and causing them to crash when it couldn't communicate as (it) expected in some instances. The template <span style="text-decoration: underline">doesn't</span> allow <em>Mirillis Action to be sandboxed</em>, but rather just gets Action! to 'work correctly' with sandboxed programs. eg Action! must still be installed on the host [it uses a service] and no template will change that.<br><div class="codebox"><p>CODE: </p><pre><code>[Template_MAction]Tmpl.Title=Mirillis ActionTmpl.Class=MiscTmpl.Scan=sTmpl.ScanKey=\REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Mirillis Action!Tmpl.ScanKey=\REGISTRY\MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Mirillis Action!OpenWinClass=*ACTION_X*OpenIpcPath=*\BaseNamedObjects*\ActionIpc*</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Fri May 13, 2016 8:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-05-13T08:53:50-04:00</updated>
+
+		<published>2016-05-13T08:53:50-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120886#p120886</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120886#p120886"/>
+		<title type="html"><![CDATA[HomeGuard]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120886#p120886"><![CDATA[
+@Syrinx<br>In light of the positive response from 'yoavpol' found <a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=22302" class="postlink">here</a> about the added line solving his problem with the web filter in <a href="http://veridium.net/homeguard-activity-monitor/" class="postlink">HomeGuard Activity Monitor</a> I'd like to submit the solution for review and potentially have it added/updated within the existing templates.ini for the HomeGuard template if it isn't deemed abnormally dangerous.<br><br>Even if it isn't updated in the templates, I'll repost it here in case any other HomeGuard Activity Monitor users also need to use the website filter within a program protected by Sandboxie.<br>The solution was to open a named pipe under [Global Setings] of the Sandboxie.ini, much like the default sandboxie templates are applied globally:<div class="codebox"><p>CODE: </p><pre><code>OpenPipePath=\device\namedpipe\vg145erxiii*</code></pre></div>Current Template as of 5.07.2<div class="codebox"><p>CODE: </p><pre><code>[Template_HomeGuard]Tmpl.Title=HomeGuard Activity MonitorTmpl.Class=SecurityTmpl.Url=http://veridium.net/Tmpl.Scan=sTmpl.ScanService=HomeGuard AMCOpenIpcPath=*\BaseNamedObjects*\*Ipc2Map*OpenIpcPath=*\BaseNamedObjects*\*Ipc2Mutex*OpenIpcPath=*\BaseNamedObjects*\mc2SWDIJ*OpenIpcPath=*\BaseNamedObjects*\NamedBuffer*Process*API*OpenIpcPath=*\BaseNamedObjects*\Mutex*Process*API*OpenIpcPath=*\BaseNamedObjects*\AutoUnhookMap*OpenIpcPath=*\BaseNamedObjects*\mchLLEW2*OpenIpcPath=*\BaseNamedObjects*\mchMixCache*OpenIpcPath=*\BaseNamedObjects*\*AnswerBuf*Event*OpenIpcPath=*\BaseNamedObjects*\*AnswerBuf*Map*OpenIpcPath=$:vglset.exe</code></pre></div>As a side note, there were a couple more numbers (sorry don't recall them) where I placed the * but I wasn't sure if they would change between pcs or versions of HomeGuard so I opted to add the * there but it may not have been needed~I only tested in one VM.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Fri May 13, 2016 8:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-05-13T08:50:59-04:00</updated>
+
+		<published>2016-05-13T08:50:59-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120885#p120885</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120885#p120885"/>
+		<title type="html"><![CDATA[Antivirus/Anti-malware templates for SBIE]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22909&amp;p=120885#p120885"><![CDATA[
+This is where we will collate templates for 3rd party security products, etc.  be used with SBIE to enable certain compatibility with programs running under the authority of SBIE... <br><br>If you have templates, please feel free to add them in this thread. I will search the forum and add ones I find as well. I'll edit the title as needed to ensure consistency if needed. Thanks!<br><br>Also, templates that are baked into SBIE already, many are showing their age and have not been updated and are stale. So, if anyone has edits to them that you'd like to post, please do that. We'll also review those submissions to possibly be included in future SBIE releases. <br><br> <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_exclaim.gif" width="15" height="15" alt=":!:" title="Exclamation"> <span style="font-size: 85%; line-height: normal"><em><span style="color: #FF0000">The use of any such templates in this thread (or otherwise in this forum) will be at the discretion of the end user and shall not guarantee any level of support and the end user shall hold harmless the creator of said template as well as Sandboxie Holdings (Invincea, inc.) with that understanding. You also accept the knowledge that using such templates may open up security hole(s) within Sandboxie and may expose the user to unknown threats while online and/or cause SBIE not function correctly.</span></em></span><br><br><strong>Sandboxie Holdings / Invincea recommends Windows Defender with SBIE.</strong><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Fri May 13, 2016 8:50 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13514&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:32:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; _Delete_Sandbox_01CD822B8691803B</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>_Delete_Sandbox_01CD822B8691803B</h2>
+		<p><a href="viewtopicb29db29d.html?f=17&amp;t=13514">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=13514</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>_Delete_Sandbox_01CD822B8691803B</h3>
+				<div class="date">Posted: <strong>Sat Aug 25, 2012 11:42 am</strong></div>
+				<div class="author">by <strong>ADayOlder</strong></div>
+				<div class="content">Hi,<br>
+<br>
+These don't appear to be causing any problems but I have noticed on a number of occasions on different PCs and users that folders are generated named something like in the title with a different code each time alongside the sandboxes.<br>
+<br>
+There is only one of each sandbox generated and appears to be quite random.<br>
+<br>
+Very often they are 0KB and can usually be deleted (Have to be because they just sit there otherwise). Sometimes though they do have data in them and I have one user account where they cannot be deleted even as an administrator, I have not tried from safe mode.<br>
+<br>
+Why are they generated?<br>
+<br>
+Why are they not deleted especially when some of the original sandboxes are set to auto-delete?<br>
+<br>
+Why when a sandbox is set to delete is this folder generated, doesn't this then leave the data I wanted deleted on my PC and unless I was to specifically look I would not know they were there?<br>
+<br>
+Regards<br>
+<br>
+ADayOlder</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Aug 25, 2012 12:49 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Sandboxes are renamed before the command is sent to delete their contents.<br>
+This makes the sandbox by that name available for re-use almost immediately, while the previous contents of that sandbox are being deleted.<br>
+<br>
+If some process still has a lock on something in the sandbox that's being deleted, then the sandbox cannot be completely deleted, and leaves those file(s) and the renamed sandbox folder behind.<br>
+If Delete Contents was run manually, then a message will be generated that the sandbox contents could not be deleted.<br>
+If auto-delete is used for the sandbox, then Delete Contents will fail quietly - without notice.<br>
+<br>
+Regardless of which method of Delete Contents is used, each time that a sandbox is deleted Sandboxie Control looks to see if there are any sandboxes that previously failed to delete, and it tries again. Hopefully, by that time the lock that was on a file has been removed.<br>
+In rare cases people have had to reboot their computer before a renamed sandbox could be deleted.<br>
+<br>
+<a href="../indexfb58-2.html?StartCommandLine#delete" class="postlink">http://www.sandboxie.com/index.php?Star ... ine#delete</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Thanks for the Prompt Reply</h3>
+				<div class="date">Posted: <strong>Sat Aug 25, 2012 2:26 pm</strong></div>
+				<div class="author">by <strong>ADayOlder</strong></div>
+				<div class="content">Hi,<br>
+<br>
+Thank you for the comprehensive reply.<br>
+<br>
+I have just tested this on another users login that had an outstanding _Delete folder. This did indeed auto delete 'Stage 2' this time along with the current sandbox.<br>
+<br>
+This still leaves the folders I have on a different PC that for some reason cannot be accessed or deleted. Very unusual. Possibly some oddity of the OS. I will delete them from within Linux and see if this occurs again.<br>
+<br>
+Sorry, XP Pro by the way.<br>
+<br>
+Regards<br>
+<br>
+ADayOlder</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Aug 25, 2012 2:47 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">One other thing I forgot to mention.<br>
+If you are using the SDelete program to secure delete sandboxes, be advised that version 1.6 doesn't work correctly.<br>
+It will leave behind an undeleted folder. SDelete v1.51 works correctly.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13514&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:32:11 GMT -->
+</html>

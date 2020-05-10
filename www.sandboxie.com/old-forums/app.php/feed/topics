@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topics" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2018-04-17T16:17:40-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topics</id>
+
+		<entry>
+		<author><name><![CDATA[Barb@Invincea]]></name></author>
+		<updated>2018-04-17T16:17:40-04:00</updated>
+
+		<published>2018-04-17T16:17:40-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=25684&amp;p=133187#p133187</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=25684&amp;p=133187#p133187"/>
+		<title type="html"><![CDATA[Beta Version 5.25 • 5.25 Beta Available (Latest version 5.25.2)]]></title>
+
+					<category term="Beta Version 5.25" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=65" label="Beta Version 5.25"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=25684&amp;p=133187#p133187"><![CDATA[
+Combined 32/64 installer:<br><a href="http://www.sandboxie.com/SandboxieInstall-525-2.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall-525-2.exe</a><br><br>Separate:<br><a href="http://www.sandboxie.com/SandboxieInstall32-525-2.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall32-525-2.exe</a><br><a href="http://www.sandboxie.com/SandboxieInstall64-525-2.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall64-525-2.exe</a><br><br><strong>Changes in 5.25.2</strong><br>Fixed Opera upload dialog crash issue [<a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?p=132886#p132886" class="postlink">viewtopic.php?p=132886#p132886</a>]<br>Fixed crashes (and lack of functionality) of start command lines options  [<a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?p=133022#p133022" class="postlink">viewtopic.php?p=133022#p133022</a>]<br><br><strong>Changes in 5.25.1</strong><br>1) Fixed  "SBIE2335 Initialization failed for process Start.exe [11 / 87]" tiggered after creating a new Sandbox and launching applications right away.<br>2) Fixed Win 8.1 x86 issue "SBIE2331 Service start failed: [22/5] Access is denied."triggered if KB4093114  was installed. <br>[<a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?p=133145#p133145" class="postlink">viewtopic.php?p=133145#p133145</a>]<br>3) Fixed Registry Hive issues in Windows 10 FR (Insider)  "SBIE1241 Cannot mount registry hive: [C000003A / 22]<br>SBIE2314 Canceling process Start.exe" when changing container folder to different drives. [<a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?p=133029#p133029" class="postlink">viewtopic.php?p=133029#p133029</a>]<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> — Tue Apr 17, 2018 4:17 pm — Replies 26 — Views 6467</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Barb@Invincea]]></name></author>
+		<updated>2018-02-20T16:23:10-04:00 </updated>
+
+		<published>2017-11-17T15:41:55-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=25114&amp;p=131159#p131159</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=25114&amp;p=131159#p131159"/>
+		<title type="html"><![CDATA[Beta Version 5.23 • 5.23 Beta Available (latest version 5.24 Release Version)]]></title>
+
+					<category term="Beta Version 5.23" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=64" label="Beta Version 5.23"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=25114&amp;p=131159#p131159"><![CDATA[
+Combined 32/64 installer:<br><a href="http://www.sandboxie.com/SandboxieInstall.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall.exe</a><br><br>Separate:<br><a href="http://www.sandboxie.com/SandboxieInstall32.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall32.exe</a><br><a href="http://www.sandboxie.com/SandboxieInstall64.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall64.exe</a><br><br><strong>Sandboxie 5.24 has been released </strong><br>Change log: <a href="https://www.sandboxie.com/VersionChanges#v_5.24" class="postlink"> https://www.sandboxie.com/VersionChanges#v_5.24</a><br><div class="codebox"><p>CODE: </p><pre><code> [b]All beta 5.23 changes [/b][b]Changes in 5.24 [/b]This is the Release Candidate version.  [b]Changes in 5.23.7 [/b]Added support for Secure Boot. See changes in 5.23.6 for more details. [b]Changes in 5.23.6  ---&gt; Not signed for Secure Boot - If you have Secure Boot enabled, please do not download this build. Use 5.23.7 instead)[/b]1) Fixed BSOD with  Print2Flash install.2) Fixed BSOD in Win 10-32 CU with KB4074592.3) Fixed Win 10-32 FCU dllhost.exe / sbiedll.dll initialization fail.4) Fixed crash in Windows 10 FR Build 17035 and added support for FR up to 17101 .5) For x86 systems --&gt; If you encounter "SBIE2335 Initialization failed for process Start.exe [11 / 87]" after creating a new Sandbox/installing this beta, please allow 30 seconds to go by, then re-try the action. This is being investigated. [b]Changes in 5.23.5  ---&gt; Secure Boot Support added [/b]Fixed certificate issues affecting build 5.23.4 See changes in 5.23.4 for more information.Combined 32/64 installer:http://www.sandboxie.com/attic/SandboxieInstall-523-5.exeSeparate:http://www.sandboxie.com/attic/SandboxieInstall32-523-5.exehttp://www.sandboxie.com/attic/SandboxieInstall64-523-5.exe[b]Changes in 5.23.4 (reverted until certificate issues are fixed)[/b]Fixed unable to change Windows 10 desktop background (https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25291)Fixed Office 2013-C2R failure to start.[b]Changes in 5.23.3[/b]Fixed Win 7-64 Sbie driver load failure with KB4056897 /KB4056894 [b]Changes in 5.23.2[/b]Source code updated to Visual Studio 2015.[b]Changes in 5.23.1[/b]1) Added support for Firefox Favicons (Right-click on your Sandbox --&gt; Sandbox Settings--&gt; Applications ---&gt; Web Browser ---&gt; Firefox --&gt; Allow direct access to Firefox bookmark and history database).2) Addressed an issue in which Chrome v64 dev/Canary were crashing when Sandboxed [https://forums.sandboxie.com/phpBB3/viewtopic.php?p=130933#p130933]</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> — Fri Nov 17, 2017 2:41 pm — Replies 102 — Views 108308</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Barb@Invincea]]></name></author>
+		<updated>2017-07-26T17:02:24-04:00</updated>
+
+		<published>2017-07-26T17:02:24-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24741&amp;p=129389#p129389</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24741&amp;p=129389#p129389"/>
+		<title type="html"><![CDATA[Beta Version 5.21 • 5.21 Beta Available (5.22 Release version)]]></title>
+
+					<category term="Beta Version 5.21" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=62" label="Beta Version 5.21"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24741&amp;p=129389#p129389"><![CDATA[
+Combined 32/64 installer:<br><a href="http://www.sandboxie.com/SandboxieInstall.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall.exe</a><br><br>Separate:<br><a href="http://www.sandboxie.com/SandboxieInstall32.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall32.exe</a><br><a href="http://www.sandboxie.com/SandboxieInstall64.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall64.exe</a><br><br><br><strong>Full list of changes added to 5.22</strong><br><a href="https://www.sandboxie.com/VersionChanges#v_5.22" class="postlink">https://www.sandboxie.com/VersionChanges#v_5.22</a><br><br>------------------------------------------------------------------------------------------------------------------------------------------------------------<br>Changes in 5.21.7 -- Release Candidate<br>1) Added full Support for Windows 10 Creator's Fall Update (and Windows 10 Fast Ring 17017). <br>2) Fixed an issue causing Windows Explorer to become non-responsive for 5+ minutes in Windows Fall Creator's update<br>3) Created a template to address "SBIE2101" issues caused by Windows Defender "App &amp; Browser Control" in Windows 8.1 and 10. This needs to be added manually by right-clicking on your Sandbox ---&gt; Sandbox Settings --&gt; Applications ---&gt; Miscellaneous ---&gt; Windows SmartScreen    [The template will be added automatically in future versions of Sandboxie].<br>------------------------------------------------------------------------------------------------------------------------------------------------------------<br>Changes in 5.21.6 (5.21.5 was skipped). <br>1)Fixed a leak introduced in Fast Ring 1709 / Windows 10 Creator's Fall Update (1709)<br>2) Improved ForceFolder functionality to allow Registry files to run in Sandboxie [<a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?p=130420#p130420" class="postlink">viewtopic.php?p=130420#p130420</a>]<br>3) Made further improvements to ForceFolder including adding support for "Open With" .<br>4) Improved proxy fixes previously addressed in beta 5.21.4 <br>------------------------------------------------------------------------------------------------------------------------------------------------------------<br>Changes in 5.21.4 (5.21.3 was skipped). <br>1) Fixed an issue in which Sandboxed Internet Explorer proxy settings would modify the registry on the host [<a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?p=129638#p129638" class="postlink">viewtopic.php?p=129638#p129638</a>] <br>2) Fixed Save/Recovery issues for Adobe/MS Office [<a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?p=129386#p129386" class="postlink">viewtopic.php?p=129386#p129386</a>]<br>3) Added support and templates for AVG and BitDefender <br>4) Updated Babylon's template to improve functionality<br><br>------------------------------------------------------------------------------------------------------------------------------------------------------------<br>Changes in 5.21.2  (Yes, we skipped 5.21.1 [It was created, tested internally, then updated to 5.21.2]). <br>1) Fixed licensing issues causing MS Office applications to crash after 5 minutes [<a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24350" class="postlink">viewtopic.php?f=11&amp;t=24350</a>]<br>2) Fixed Powerpoint issue preventing it from opening files [<a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24286" class="postlink">viewtopic.php?f=11&amp;t=24286</a>]<br>3) Fixed Firefox Drag-Drop issues [<a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24469" class="postlink">viewtopic.php?f=11&amp;t=24469</a>]<br>4) Added support for Windows 10 Fast Ring v16241<br>5) Updated Opera templates for direct access to bookmarks and profile.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32296">Barb@Invincea</a> — Wed Jul 26, 2017 5:02 pm — Replies 53 — Views 46444</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TimRude]]></name></author>
+		<updated>2017-07-21T17:25:37-04:00</updated>
+
+		<published>2017-07-21T17:25:37-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24673&amp;p=129302#p129302</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24673&amp;p=129302#p129302"/>
+		<title type="html"><![CDATA[Contributed Utilities &amp; Templates • IE context menu: Open Link Sandboxed]]></title>
+
+					<category term="Contributed Utilities &amp; Templates" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=22" label="Contributed Utilities &amp; Templates"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24673&amp;p=129302#p129302"><![CDATA[
+Sometimes I'm viewing a trusted website open in IE (not sandboxed) and I see a link on a page to another site that I'd like to check out, but I want to check out the link in a sandbox. Presently I have to copy the link to the clipboard, open up IE in a sandbox, and then paste the link into the address bar. Would be much easier if there was a right-click context menu entry in IE to 'Open Link Sandboxed' that would automatically open a new instance of IE in the sandbox and go to the link.<br><br>Has anybody already created a nifty registry tweak (presumably to HKCU\Software\Microsoft\Internet Explorer\MenuExt) to do this?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=23350">TimRude</a> — Fri Jul 21, 2017 5:25 pm — Replies 4 — Views 2748</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2017-06-06T13:58:34-04:00 </updated>
+
+		<published>2017-04-21T18:37:44-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=127601#p127601</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=127601#p127601"/>
+		<title type="html"><![CDATA[Beta Version 5.19 • 5.19 Beta Available (latest version 5.20 RC)]]></title>
+
+					<category term="Beta Version 5.19" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=61" label="Beta Version 5.19"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24329&amp;p=127601#p127601"><![CDATA[
+Combined 32/64 installer:<br><a href="https://www.sandboxie.com/SandboxieInstall.exe" class="postlink">https://www.sandboxie.com/SandboxieInstall.exe</a><br><br>Separate:<br><a href="https://www.sandboxie.com/SandboxieInstall32exe" class="postlink">https://www.sandboxie.com/SandboxieInstall32exe</a><br><a href="https://www.sandboxie.com/SandboxieInstall64.exe" class="postlink">https://www.sandboxie.com/SandboxieInstall64.exe</a><br><br><br>Changes in 5.19.5<br>1) Fixed Chrome - SBIE2101 Object name not found -(C0000022)<br><br>Changes in 5.19.4<br>1) Fixed error caused by MS update: SBIE2205 Service not implemented: CoUnmarshalInterface (W8)<br><br>Changes in 5.19.3<br>1) Fixed Chrome crash in Win 10.<br><br>Changes in 5.19.2<br>1) Fixed auto-recovery dialog failure to popup.<br><br>Changes in 5.19.1<br>1) Fixed problem with Firefox H264 video decoder.<br>2) Creation of IE embedded application objects are no longer blocked by default (which began in 5.18). See <a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24311" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=24311</a><br>If IE is your default browser, it is being forced, and hyperlinks in MS Office are not working, you can use new option BlockIEEmbedding=y.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Fri Apr 21, 2017 6:37 pm — Replies 47 — Views 64615</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[henryg]]></name></author>
+		<updated>2017-03-13T12:39:17-04:00</updated>
+
+		<published>2017-03-13T12:39:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126937#p126937</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126937#p126937"/>
+		<title type="html"><![CDATA[Beta Version 5.17 • Excel2016(365version) SERIOUS PROBLEM![RESOLVED Beta 5.17.6]]]></title>
+
+					<category term="Beta Version 5.17" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=60" label="Beta Version 5.17"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24137&amp;p=126937#p126937"><![CDATA[
+Sandboxie 5.17 is causing Excel 2016 to crash every time when using the data query editor (formerly Power Query) when I try to create a table query. I have lost so much time over this as it never occurred to me that Sandboxie c/would affect a program that was not being sandboxed! Ironically perhaps, often if I have a problem with a program crashing I try to see if it does the same when sandboxed. <br><br>I can tell you that with 5.17.1 it is ok, but I cannot spend any more time on this, eg going through the beta iterations. But this problem must not be allowed to escape into the next release issue; or my goose is cooked!!  <img class="smilies" src="./../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"><br><br>Thank you Aomei for your imaging program!!!!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=534">henryg</a> — Mon Mar 13, 2017 12:39 pm — Replies 10 — Views 7472</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[RooJ]]></name></author>
+		<updated>2017-02-21T16:21:25-04:00</updated>
+
+		<published>2017-02-21T16:21:25-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24059&amp;p=126562#p126562</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24059&amp;p=126562#p126562"/>
+		<title type="html"><![CDATA[Contributed Utilities &amp; Templates • Linking sandboxes]]></title>
+
+					<category term="Contributed Utilities &amp; Templates" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=22" label="Contributed Utilities &amp; Templates"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24059&amp;p=126562#p126562"><![CDATA[
+Thought it may be of interest to others who want to do something similar. I had an issue today, I wanted to install adobe reader into a sandbox so it didn't install files across my system, but I also wanted to maintain a fresh install of reader so didn't want it writing inside the sandbox after the install. Usually I choose one or the other, which always put me off installing browsers directly into a sandbox, but I've since found a solution. <br><br>Possibly common knowledge but I've not seen it mentioned before; A workaround is to create 2 sandboxes, the first one is the master install (eg AdobeReaderMaster) and will always contain the unchanging master install. The second will run the software (eg AdobeReader), it will contain any changes made during use, and can be deleted to revert back to the fresh installed/configured state. The second box reads the program files directly from the master sandbox (so is small in size) and all changes made during use will be isolated from the master install.<br><br>So far I've successfully used this with Adobe Reader, YTD (YouTube downloader), Opera and Open Office (surprised this one worked) <br><br>If anyone is interested I can add more details on the setup. There was a little tweaking needed to get PDF files to automatically open in the correct sandbox.<br><br>Hope this gives people some interesting ideas on custom setups. I will be setting up all compatible software this way from now on  <img class="smilies" src="./../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=25472">RooJ</a> — Tue Feb 21, 2017 3:21 pm — Replies 0 — Views 10659</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Iggiz]]></name></author>
+		<updated>2017-10-09T14:29:52-04:00 </updated>
+
+		<published>2017-02-17T12:46:44-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126474#p126474</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126474#p126474"/>
+		<title type="html"><![CDATA[Contributed Utilities &amp; Templates • SboxieUtil - Sandboxie enhancement dll - Run w/o AdminRights]]></title>
+
+					<category term="Contributed Utilities &amp; Templates" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=22" label="Contributed Utilities &amp; Templates"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24038&amp;p=126474#p126474"><![CDATA[
+Often installers ask for admin rights but they actually don't need them to install. <br>Mostly, this happens because programs try to install themselves into the program files folder by default.<br><br>Here's the compiled version of <strong>SboxieUtil</strong> and its features:<br><strong>SboxieUtil Features</strong><br><br>1. Install programs without Administrator Rights (no UAC prompts, no SBIE2217 errors).<br>   -Tested with Inno Setup and NSIS installers, but it should work with other installers/programs too.<br><br>2. Clipboard access control for sandboxed programs (ReadWrite, Read, Write, Block, BlockAll).<br><br><strong>New Feature:</strong><br><br>3. Start/Run restrictions for programs installed <strong>inside</strong> of a sandbox.<br><br>Note: It will not show any error messages when a process start was blocked but you can view the debug output with Dbgview from microsoft. (Apply a filter named SboxieUtil)<br><br>Each feature supports exceptions "ProcessExceptions=" "SandboxExceptions=", configurable via SboxieUtil.ini<br>More features will be added later, please check the readme file for the full feature list and installation instructions.<br><a href="https://drive.google.com/file/d/0B5by5H1Q2PxEaTFxanhpSU9GbEk/view" class="postlink">https://drive.google.com/file/d/0B5by5H ... 9GbEk/view</a><br><br><strong>Download (Source code included):<br><a href="https://drive.google.com/drive/folders/0B5by5H1Q2PxERFI0WEJXaHVvV1U" class="postlink">https://drive.google.com/drive/folders/ ... EJXaHVvV1U</a></strong><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32992">Iggiz</a> — Fri Feb 17, 2017 11:46 am — Replies 5 — Views 9489</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2017-04-13T17:00:44-04:00 </updated>
+
+		<published>2017-01-13T16:03:33-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23888&amp;p=125732#p125732</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23888&amp;p=125732#p125732"/>
+		<title type="html"><![CDATA[Beta Version 5.17 • 5.17 Beta Available (latest version 5.18)]]></title>
+
+					<category term="Beta Version 5.17" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=60" label="Beta Version 5.17"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23888&amp;p=125732#p125732"><![CDATA[
+Combined 32/64 installer:<br><a href="https://www.sandboxie.com/SandboxieInstall.exe" class="postlink">https://www.sandboxie.com/SandboxieInstall.exe</a><br><br>Separate:<br><a href="https://www.sandboxie.com/SandboxieInstall32.exe" class="postlink">https://www.sandboxie.com/SandboxieInstall32.exe</a><br><a href="https://www.sandboxie.com/SandboxieInstall64.exe" class="postlink">https://www.sandboxie.com/SandboxieInstall64.exe</a><br><br>Changes in 5.17.7<br>1) Fixed problem with clicking Office hyperlinks failing to start forced IE.<br>This replaces the fix in 5.17.3 that caused a problem with Excel Data Query.<br><br>Changes in 5.17.6<br>1) TLS error when loading google sites in IE has been fixed.<br>2) Excel crash when using data query editor introduced in 5.17.3 has been fixed.<br>3) Firefox multi-process (Electrolysis) is now supported in Win 7 and later.<br><br>There is a FF print to file issue that is still being worked. To workaround this issue, add OpenFilePath=C:\Users\&lt;username&gt;\AppData\LocalLow\Mozilla\temp-*<br><br>Changes in 5.17.5<br>1) Fixed Win 10 FRs up through 15048.<br><br>Changes in 5.17.4<br>1) Fixed Win 10 FR 15031.<br>2) Fixed small kernel memory leak introduced in 5.17.3<br><br>Changes in 5.17.3<br>1) Fixed Win 10 FR 15019.<br>2) Fixed problem with clicking Office hyperlinks failing to start forced IE.<br>3) Fixed crash when starting IE while using Microsoft User Experience Virtualization (UEV)<br><br>Changes in 5.17.2<br>1) Fixed Win 10 FR 15007/15014. However, there are still several issues in FR 15014.<br><span style="margin-left: 35px;"></span>a. Right-click in sandboxed Explorer will crash Explorer.exe.<br><span style="margin-left: 35px;"></span>b. Google websites report a security error and will not load in IE.<br>2) Added support for Opera Neon<br>3) Fixed template for Roboform<br><br>Changes in 5.17.1<br>1) Fixed Win 10 FR 15002<br>2) Fixed Chrome 56 lingering child process<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Fri Jan 13, 2017 3:03 pm — Replies 130 — Views 95436</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[sweetxdestiny]]></name></author>
+		<updated>2016-11-11T14:43:17-04:00</updated>
+
+		<published>2016-11-11T14:43:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23623&amp;p=124239#p124239</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23623&amp;p=124239#p124239"/>
+		<title type="html"><![CDATA[Beta Version 5.15 • new beta]]></title>
+
+					<category term="Beta Version 5.15" scheme="https://forums.sandboxie.com/phpBB3/viewforum.php?f=59" label="Beta Version 5.15"/>
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23623&amp;p=124239#p124239"><![CDATA[
+the beta 5.15.4 I tried installed but would not run when I try get sandboxie to run programs from start menu, takes me to second screen then wont load the menu for start menu in sandboxie mode.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32166">sweetxdestiny</a> — Fri Nov 11, 2016 1:43 pm — Replies 6 — Views 6324</p><hr />
+]]></content>
+	</entry>
+	</feed>

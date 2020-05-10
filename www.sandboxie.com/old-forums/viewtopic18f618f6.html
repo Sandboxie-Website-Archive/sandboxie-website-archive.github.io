@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=15839&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.03] Opera 15</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.03] Opera 15</h2>
+		<p><a href="viewtopic77577757.html?f=40&amp;t=15839">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=15839</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.03] Opera 15</h3>
+				<div class="date">Posted: <strong>Tue Jun 25, 2013 8:30 am</strong></div>
+				<div class="author">by <strong>zyx</strong></div>
+				<div class="content">Running <a href="http://www.opera.com/developer/next" class="postlink">Opera 15</a> sandboxed doesn't work. For example, trying to go to sandboxie.com just loads forever. Using Win 7 x64.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jun 27, 2013 3:28 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I tried to reproduce the problem but Opera Next seems to install and run correctly in the sandbox.<br>
+Tested version 4.02 and 4.03.02.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jun 27, 2013 10:26 am</strong></div>
+				<div class="author">by <strong>zyx</strong></div>
+				<div class="content">Strange, when I ran it in Virtualbox it worked fine, but on my real system it doesn't work.<br>
+I also tried with fresh sandboxie.ini but no success. Also removed exiting Opera settings in appdata.<br>
+<br>
+It seems that Opera won't spawn any child processes when sandboxed for some reason.<br>
+I used Process Monitor to track Opera when ran sandboxed, and it showed many buffer overflows from Opera.<br>
+Resource access:<br>
+<br>
+<em>snipped. --tzuk</em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jun 27, 2013 1:37 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">This problem may have something to do with all these lines in your log<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>\Sessions\1\BaseNamedObjects\Mutex, mAH, Process $00000f14, API $75dee743 </code></pre></div>
+
+This indicates some security software or other "supervisory" type of program, for which Sandboxie has no compatibility settings.<br>
+<br>
+Do you use any software that might fit this description?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 26, 2013 11:27 am</strong></div>
+				<div class="author">by <strong>zyx</strong></div>
+				<div class="content">It seems that there is some conflict with Sandboxie and <a href="http://download.comodo.com/cis/download/installs/2000/standalone/cfw_installer.exe?key5sk1=94429a3ae9fe6a9ceabfef6f79d81f8474a15571&amp;key5sk2=2720&amp;key5sk3=1374852381000&amp;key5sk4=&amp;key5sk5=1374852381000&amp;key6sk1=&amp;key6sk2=CH30015770&amp;key6sk3=7&amp;key6sk4=en-us&amp;key6sk5=FI&amp;key6sk6=0&amp;key6sk7=http%3A%2F%2Fwww.comodo.com%2Fproducts%2Ffree-products.php&amp;key6sk8=118800&amp;key6sk9=19201080&amp;key6sk10=true&amp;key6sk11=7aa25a8cd67974fa19fabfa6325057c4a7b8a81f&amp;key6sk12=2034&amp;key7sk1=19&amp;key1sk1=dt&amp;key1sk2=http%3A%2F%2Fwww.comodo.com%2Fproducts%2Ffree-products.php" class="postlink">Comodo Firewall</a> when trying to open Opera. Uninstalling Comodo solved the problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 01, 2013 8:48 am</strong></div>
+				<div class="author">by <strong>zyx</strong></div>
+				<div class="content">Fixed with 4.05.03</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 02, 2013 3:07 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks for the update.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=15839&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:52 GMT -->
+</html>

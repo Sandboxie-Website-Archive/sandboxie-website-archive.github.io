@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?p=105326 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:46:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>SandBoxIE to harden SRP (software restriction policy)? - Sandboxie Support</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - Sandboxie Support" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="app.php/feed/topics_active">			
+	<link rel="canonical" href="viewtopiccab5cab5.html?t=19811">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="assets/css/font-awesome.mince91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/en/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/sbie_prosilver/theme/tweaks.css?assets_version=7" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="../index.html" title="Home"><span class="site_logo"></span></a>
+				<h1>Sandboxie Support</h1>
+				<p>Support Forum for Sandboxie</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									<div id="search-box" class="search-box search-header" role="search">
+				<form action="https://forums.sandboxie.com/phpBB3/search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+					<button class="button button-search" type="submit" title="Search">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+					</button>
+					<a href="search.html" class="button button-search-end" title="Advanced search">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+					</a>
+					
+				</fieldset>
+				</form>
+			</div>
+						
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a733a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+																			<li>
+								<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp26c326c3.html?mode=login" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp83198319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs">
+							<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="../index.html" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">Home</span></a></span>
+										<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="index-2.html" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Board index</span></a></span>
+
+											<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="44"><a href="viewforumab78ab78.html?f=44" itemprop="url"><span itemprop="title">More Forums</span></a></span>
+															<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="4"><a href="viewforum31e631e6.html?f=4" itemprop="url"><span itemprop="title">Feature Requests</span></a></span>
+												</li>
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="viewtopicd6a9d6a9.html?f=4&amp;t=19811">SandBoxIE to harden SRP (software restriction policy)?</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Ideas for enhancements to the software<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="https://www.sandboxie.com/old-forums/posting2758.html?mode=reply&amp;f=4&amp;t=19811" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic660d660d.html?f=4&amp;t=19811&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://forums.sandboxie.com/phpBB3/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="19811" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			37 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic88a588a5.html?f=4&amp;t=19811&amp;start=15" role="button">2</a></li>
+				<li><a class="button" href="viewtopic4c544c54.html?f=4&amp;t=19811&amp;start=30" role="button">3</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic88a588a5.html?f=4&amp;t=19811&amp;start=15" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p104453" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile104453">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb719b719.html?author_id=24942&amp;sr=posts">22</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 03, 2014 8:40 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content104453">
+
+						<h3 class="first"><a href="#p104453">SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting3a91.html?mode=quote&amp;f=4&amp;p=104453" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic682f682f.html?p=104453#p104453" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a></strong> &raquo; </span>Mon Nov 03, 2014 9:08 am
+			</p>
+			
+			
+			
+			<div class="content">Dear Tzur!<br>
+Thank you for your great utility!<br>
+<br>
+For quite some time I believed that (among other measures) the Software Restriction Policies would be a serious barrier against an exploit. (I'm talking about the <a href="http://www.mechbgon.com/srp/" class="postlink">"disallowed by default" SRP</a> settings)<br>
+<br>
+To my horrorzz MS has sabotaged its implementation of SRP - a series of posts by <a href="http://blog.didierstevens.com/?s=srp" class="postlink">Didier Stevens</a> proves that bypassing SRP is rather easy.<br>
+<br>
+It involves (among other things) the SANDBOX_INERT flag in the <em>CreateRestrictedToken</em> function, the SAFER_TOKEN_MAKE_INERT flag in the <em>SaferComputeTokenFromLevel</em> function, the LOAD_IGNORE_CODE_AUTHZ_LEVEL argument to the <em>LoadLibraryEx</em> call.<br>
+<br>
+My question is:
+<ul><li>is SandBoxIE able to disable or remove those flags and arguments, replace the <em>LoadLibraryEx</em> call with the SRP-compliant <em>LoadLibrary</em> one?</li></ul>
+
+My goal is to restore the protecting power of the "disallowed by default" SRP as a proper preventive measure.<br>
+<br>
+Thank you in advance!</div>
+
+			
+									
+									<div id="sig104453" class="signature">winXP-SP3 hacked into POSReady2009.</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p104581" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile104581">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Lead Developer<br /><img src="images/ranks/gloss/yellow/yellow-developer.png" alt="Sandboxie Lead Developer" title="Sandboxie Lead Developer" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search70b370b3.html?author_id=20645&amp;sr=posts">1638</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jan 17, 2014 5:21 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Curt@invincea">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Curt@invincea</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.invincea.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content104581">
+
+						<h3 ><a href="#p104581">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingea82.html?mode=quote&amp;f=4&amp;p=104581" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic1ada1ada.html?p=104581#p104581" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a></strong> &raquo; </span>Mon Nov 10, 2014 12:56 pm
+			</p>
+			
+			
+			
+			<div class="content">The goal of Sbie is not to restrict, but to contain.  These SRP settings were added by MS and fully documented.  I expect they had a reason to add these (e.g. a lot of applications won't work without them).</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p104593" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile104593">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb719b719.html?author_id=24942&amp;sr=posts">22</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 03, 2014 8:40 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content104593">
+
+						<h3 ><a href="#p104593">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingca42.html?mode=quote&amp;f=4&amp;p=104593" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopice53ce53c.html?p=104593#p104593" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a></strong> &raquo; </span>Tue Nov 11, 2014 4:57 am
+			</p>
+			
+			
+			
+			<div class="content">As I understand those MS's descriptions - SRP bypass is there only for software installers, not for everyday use.<br>
+<br>
+And since sandboxing a particular program is already a deviation from what MS has expected - adding the SRP/Applocker-hardening feature would be greatly beneficial security-wise. If someone does not need them - these hardening features could be optional - just like the current "Drop rights" check-box.<br>
+<br>
+I kindly ask you to consider adding SRP/Applocker-hardening to SandBoxIE:
+<ol style="list-style-type: decimal">
+<li>it will apply only to sandboxed program(s) (will not interfere with normal installation procedure to the outside of a sandbox)</li>
+<li>as an additional protection layer it will improve security (not only an exploit would be contained but also made nearly impossible)</li>
+<li>the SandBoxIE is the only place where this SRP/Applockler-hardening could be implemented cleanly</li></ol>
+
+I hope other SandBoxIE users could join the discussion regarding this topic.<br>
+<br>
+Thank you in advance!</div>
+
+			
+									
+									<div id="sig104593" class="signature">winXP-SP3 hacked into POSReady2009.</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p104971" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile104971">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb719b719.html?author_id=24942&amp;sr=posts">22</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 03, 2014 8:40 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content104971">
+
+						<h3 ><a href="#p104971">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingb45d-2.html?mode=quote&amp;f=4&amp;p=104971" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd4f0d4f0.html?p=104971#p104971" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a></strong> &raquo; </span>Mon Nov 24, 2014 4:44 am
+			</p>
+			
+			
+			
+			<div class="content">Please excuse my insistence, but I find this topic very serious.<br>
+<br>
+Curt says SandBoxIE's goal is to contain - indeed, containing things is good.<br>
+May I ask - why do we want to contain things from spreading into our OSes?<br>
+<br>
+As I see it - the answer is: for security reasons.<br>
+<br>
+The additional features I ask for are intended to lessen the harm that a sandboxied program could inflict even within its' sandbox.<br>
+Any harm-preventing measures are welcome in a multi-layered security approach.<br>
+<br>
+Please comment.<br>
+Thank you in advance.</div>
+
+			
+									
+									<div id="sig104971" class="signature">winXP-SP3 hacked into POSReady2009.</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p104975" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile104975">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlista247.html?mode=viewprofile&amp;u=2236" class="username">deugniet</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8c148c14.html?author_id=2236&amp;sr=posts">334</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jan 29, 2009 12:16 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content104975">
+
+						<h3 ><a href="#p104975">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingcf29.html?mode=quote&amp;f=4&amp;p=104975" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicea65ea65.html?p=104975#p104975" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlista247.html?mode=viewprofile&amp;u=2236" class="username">deugniet</a></strong> &raquo; </span>Mon Nov 24, 2014 8:09 am
+			</p>
+			
+			
+			
+			<div class="content">Like Simple Software-restriction Policy?<br>
+<br>
+<a href="http://sourceforge.net/projects/softwarepolicy/" class="postlink">http://sourceforge.net/projects/softwarepolicy/</a></div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p104977" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile104977">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist1acb.html?mode=viewprofile&amp;u=16759" class="username">Mr.X</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search785c785c.html?author_id=16759&amp;sr=posts">583</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Jul 13, 2013 9:34 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Mexico</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content104977">
+
+						<h3 ><a href="#p104977">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting1a27.html?mode=quote&amp;f=4&amp;p=104977" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc26a-2c26a.html?p=104977#p104977" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist1acb.html?mode=viewprofile&amp;u=16759" class="username">Mr.X</a></strong> &raquo; </span>Mon Nov 24, 2014 10:42 am
+			</p>
+			
+			
+			
+			<div class="content">@catBot<br>
+Want a layered security? Look at the combo in my signature, and in here you will find everything about it: <a href="http://www.wilderssecurity.com/threads/appguard-4-x-32-64-bit.355206/#post-2298875" class="postlink">http://www.wilderssecurity.com/threads/ ... st-2298875</a></div>
+
+			
+									
+									<div id="sig104977" class="signature"><span style="color: #0000BF"><span style="font-size: 85%; line-height: normal">Windows 8.1 x64/x86 EN | Sandboxie latest beta or stable | All software latest versions unless stated otherwise</span></span></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p104980" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile104980">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb719b719.html?author_id=24942&amp;sr=posts">22</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 03, 2014 8:40 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content104980">
+
+						<h3 ><a href="#p104980">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingb741.html?mode=quote&amp;f=4&amp;p=104980" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicbb29-2bb29.html?p=104980#p104980" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a></strong> &raquo; </span>Mon Nov 24, 2014 1:42 pm
+			</p>
+			
+			
+			
+			<div class="content">Thanks for the suggestion but I want to use as little of 3rd-party software as possible. If an OS has its' built-in policies - I'd prefer to use them instead to some external code.<br>
+<br>
+My multi-layered approach consists of the following:
+<ol style="list-style-type: decimal">
+<li>a non-administrative account for everyday jobs;</li>
+<li>the "disallowed by default" SRP setting; (only the administrator-preapproved/preinstalled programs are allowed to run by a user, no code from user-writable areas is runnable)</li>
+<li>all available OS-hardening measures are enabled (DEP == "always ON", ASLR, etc)</li>
+<li>users are prevented from installing printer drivers;</li>
+<li>unsigned drivers are not installable even by an administrator;</li>
+<li>if I were on vista or above - I'd disable UAC; (there should be no way for a mortal user to mess with OS's settings, any code requiring administrative rights should silently fail)</li>
+<li>the Enhanced Write Filter is used to protect the system disk from all unwanted alterations; (after a reboot OS returns to a known-to-be-clean state)</li>
+<li>all security fixes and patches are installed;</li>
+<li>all non-essential system services are turned off; (like remote registry edit, DNS cache, etc);</li>
+<li>auto-run is disabled on all drives;</li>
+<li>all internet-facing programs are run SandBoxIEd.</li></ol>
+
+So far this works for me since ~2002 when I've moved to winXP-SP1.<br>
+<br>
+Until I've read Didier Stevens' articles I thought I was [s]completely[/s]reasonably safe.<br>
+As I've said, I was horror-ed to learn that SRP is trivial to bypass.<br>
+<br>
+I ask SandBoxIE developers to have a look if masking off/disabling those flags/parameters of the certain system calls could be implemented in the SandBoxIE - the only clean and easy place to properly enforce the SRP discipline, since all the potentially-vulnerable/exploitable programs are running SandBoxIEd.<br>
+<br>
+I'd like to accept no compromises security-wise if technically possible.<br>
+<br>
+Thank you in advance.</div>
+
+			
+									
+									<div id="sig104980" class="signature">winXP-SP3 hacked into POSReady2009.</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p105174" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile105174">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb719b719.html?author_id=24942&amp;sr=posts">22</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 03, 2014 8:40 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content105174">
+
+						<h3 ><a href="#p105174">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingf33e.html?mode=quote&amp;f=4&amp;p=105174" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic59e159e1.html?p=105174#p105174" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a></strong> &raquo; </span>Wed Dec 03, 2014 11:26 am
+			</p>
+			
+			
+			
+			<div class="content">I attempted to contact Tzur with PM, but seems he left the forum - last visit was 2014-January.<br>
+<br>
+Are there other ways to contact the development team to have their comments on the topic?</div>
+
+			
+									
+									<div id="sig105174" class="signature">winXP-SP3 hacked into POSReady2009.</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p105326" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile105326">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb719b719.html?author_id=24942&amp;sr=posts">22</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 03, 2014 8:40 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content105326">
+
+						<h3 ><a href="#p105326">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingf3ec.html?mode=quote&amp;f=4&amp;p=105326" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicfd91fd91.html?p=105326#p105326" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a></strong> &raquo; </span>Wed Dec 10, 2014 12:56 pm
+			</p>
+			
+			
+			
+			<div class="content">I've PMed Tzur two weeks ago - PM is not delivered yet...<br>
+<br>
+Is Tzur still in this business?</div>
+
+			
+									
+									<div id="sig105326" class="signature">winXP-SP3 hacked into POSReady2009.</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p105327" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile105327">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Lead Developer<br /><img src="images/ranks/gloss/yellow/yellow-developer.png" alt="Sandboxie Lead Developer" title="Sandboxie Lead Developer" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search70b370b3.html?author_id=20645&amp;sr=posts">1638</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jan 17, 2014 5:21 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Curt@invincea">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Curt@invincea</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.invincea.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content105327">
+
+						<h3 ><a href="#p105327">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting80a3.html?mode=quote&amp;f=4&amp;p=105327" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopice7efe7ef.html?p=105327#p105327" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a></strong> &raquo; </span>Wed Dec 10, 2014 1:04 pm
+			</p>
+			
+			
+			
+			<div class="content">See this thread <a href="viewtopic74ed74ed.html?f=17&amp;t=17514" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 17&amp;t=17514</a></div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p105333" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile105333">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Lead Developer<br /><img src="images/ranks/gloss/yellow/yellow-developer.png" alt="Sandboxie Lead Developer" title="Sandboxie Lead Developer" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search70b370b3.html?author_id=20645&amp;sr=posts">1638</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jan 17, 2014 5:21 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Curt@invincea">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Curt@invincea</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.invincea.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content105333">
+
+						<h3 ><a href="#p105333">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingcf23.html?mode=quote&amp;f=4&amp;p=105333" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic4d4d-24d4d.html?p=105333#p105333" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645" class="username">Curt@invincea</a></strong> &raquo; </span>Wed Dec 10, 2014 2:27 pm
+			</p>
+			
+			
+			
+			<div class="content">To respond to your original point, I don't think this is something we want to add to Sandboxie.  The design of Sandboxie is to allow applications in the sandbox to run freely, but to contain them within the sandbox.  Adding restrictions will just cause more compatibility issues.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p105360" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile105360">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb719b719.html?author_id=24942&amp;sr=posts">22</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 03, 2014 8:40 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content105360">
+
+						<h3 ><a href="#p105360">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postinga264.html?mode=quote&amp;f=4&amp;p=105360" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic5454-25454.html?p=105360#p105360" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a></strong> &raquo; </span>Thu Dec 11, 2014 4:18 am
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>To respond to your original point, I don't think this is something we want to add to Sandboxie.  The design of Sandboxie is to allow applications in the sandbox to run freely, but to contain them within the sandbox.  Adding restrictions will just cause more compatibility issues.</div></blockquote>
+Dear Curt,<br>
+<br>
+I kindly ask you to reconsider this again.<br>
+<br>
+Hardening the Applocker/SRP by means of SandBoxIE's handling of said flags and parameters is perfectly in-line with the already existing SandBoxIE's measures like the "Drop Rights" and all the features managing the inter-process communications (Resource Access-&gt;IPC/Window/COM). Just like those measures - this could be also optional.<br>
+<br>
+I strongly believe that applying those SRP-hardening measures would provide more robustness to SandBoxIE's containment capabilities.<br>
+<br>
+It is clearly stated in MS's documentation that the only valid reason for Applocker/SRP bypass is the software installation process. No compatibility issues would arise from it for <span style="text-decoration: underline">running</span> <strong>the already installed</strong> programs under SandBoxIE - I'm talking about the non-malevolent/exploit sort of programs.<br>
+Any "compatibility issue" would therefore constitute a successful exploit prevention.<br>
+<br>
+In my scenario I install the software I use to the outside of a sandbox, I almost never install things within a sandbox.<br>
+My scenario is about further hardening the every-day usage security of the already installed software running under the SandBoxIE's supervision, as an additional defense measure against any 0-day threat.<br>
+<br>
+<br>
+Please have a look into this again.<br>
+<br>
+Thank you in advance.</div>
+
+			
+									
+									<div id="sig105360" class="signature">winXP-SP3 hacked into POSReady2009.</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p105580" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile105580">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist2de9.html?mode=viewprofile&amp;u=22339" class="username">JoeHood</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search47034703.html?author_id=22339&amp;sr=posts">178</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Apr 12, 2014 12:51 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content105580">
+
+						<h3 ><a href="#p105580">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting0be2.html?mode=quote&amp;f=4&amp;p=105580" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica85da85d.html?p=105580#p105580" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist2de9.html?mode=viewprofile&amp;u=22339" class="username">JoeHood</a></strong> &raquo; </span>Sun Dec 21, 2014 3:29 pm
+			</p>
+			
+			
+			
+			<div class="content">Have you looked at the Restrictions tab in Sandboxie Control? You can limit which programs can access the internet and limit what programs can even run at all.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p105604" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile105604">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb719b719.html?author_id=24942&amp;sr=posts">22</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 03, 2014 8:40 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content105604">
+
+						<h3 ><a href="#p105604">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postinga03a-2.html?mode=quote&amp;f=4&amp;p=105604" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicb4feb4fe.html?p=105604#p105604" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlista01f.html?mode=viewprofile&amp;u=24942" class="username">catBot</a></strong> &raquo; </span>Mon Dec 22, 2014 3:56 am
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>JoeHood wrote:</cite>Have you looked at the Restrictions tab in Sandboxie Control?</div></blockquote>
+Thank you for the advise.<br>
+<br>
+I do not have any programs that I do not want to run - only the pre-approved programs are there to be used by a non-administrative user.<br>
+Therefore I have nothing to include in the Restrictions tab.<br>
+<br>
+My goal is to combine the strengths of SRP/Applocker with SandBoxIE <span style="text-decoration: underline">to prevent attacker's ability to bring in his own code <strong>and run it</strong></span>.<br>
+As of now it is possible to make a browser to download an attack tool to a user-writable folder and to make it (this same tool) to run - because it is possible to circumvent SRP/Applocker rules.<br>
+This is exactly what I want to stop.</div>
+
+			
+									
+									<div id="sig105604" class="signature">winXP-SP3 hacked into POSReady2009.</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p105608" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile105608">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist2de9.html?mode=viewprofile&amp;u=22339" class="username">JoeHood</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search47034703.html?author_id=22339&amp;sr=posts">178</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Apr 12, 2014 12:51 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content105608">
+
+						<h3 ><a href="#p105608">Re: SandBoxIE to harden SRP (software restriction policy)?</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingacb9-3.html?mode=quote&amp;f=4&amp;p=105608" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic94f494f4.html?p=105608#p105608" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist2de9.html?mode=viewprofile&amp;u=22339" class="username">JoeHood</a></strong> &raquo; </span>Mon Dec 22, 2014 6:41 am
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>catBot wrote:</cite>Therefore I have nothing to include in the Restrictions tab.</div></blockquote>
+
+It works the opposite - whitelisting. You include only those preapproved programs.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="https://www.sandboxie.com/old-forums/posting2758.html?mode=reply&amp;f=4&amp;t=19811" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic660d660d.html?f=4&amp;t=19811&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=19811">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			37 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic88a588a5.html?f=4&amp;t=19811&amp;start=15" role="button">2</a></li>
+				<li><a class="button" href="viewtopic4c544c54.html?f=4&amp;t=19811&amp;start=30" role="button">3</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic88a588a5.html?f=4&amp;t=19811&amp;start=15" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum31e631e6.html?f=4" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Feature Requests”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum907f907f.html?f=42" class="jumpbox-cat-link"> <span> Sandboxie Forums</span></a></li>
+																<li><a href="viewforum12a312a3.html?f=2" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Announcements</span></a></li>
+																<li><a href="viewforumcf19cf19.html?f=6" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Positive Reviews</span></a></li>
+																<li><a href="viewforum107e107e.html?f=43" class="jumpbox-cat-link"> <span> Problems and Questions</span></a></li>
+																<li><a href="viewforum8a838a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Problem Reports</span></a></li>
+																<li><a href="viewforum48ab48ab.html?f=17" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Quick Questions</span></a></li>
+																<li><a href="viewforumbcb4bcb4.html?f=65" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.25</span></a></li>
+																<li><a href="viewforumab78ab78.html?f=44" class="jumpbox-cat-link"> <span> More Forums</span></a></li>
+																<li><a href="viewforum31e631e6.html?f=4" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Feature Requests</span></a></li>
+																<li><a href="viewforume774e774.html?f=5" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Anything Else</span></a></li>
+																<li><a href="viewforum89418941.html?f=22" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Contributed Utilities &amp; Templates</span></a></li>
+																<li><a href="viewforum97809780.html?f=14" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; International Translations</span></a></li>
+																<li><a href="viewforum2b892b89.html?f=38" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.01</span></a></li>
+																<li><a href="viewforumdfa4dfa4.html?f=39" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.03</span></a></li>
+																<li><a href="viewforuma3f5a3f5.html?f=40" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.05</span></a></li>
+																<li><a href="viewforum51ee51ee.html?f=41" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.07</span></a></li>
+																<li><a href="viewforum590b590b.html?f=46" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.09</span></a></li>
+																<li><a href="viewforumcdbacdba.html?f=48" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.13</span></a></li>
+																<li><a href="viewforum30ac30ac.html?f=49" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.15</span></a></li>
+																<li><a href="viewforum91409140.html?f=50" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.17</span></a></li>
+																<li><a href="viewforum208f208f.html?f=51" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.19</span></a></li>
+																<li><a href="viewforum26492649.html?f=53" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.01</span></a></li>
+																<li><a href="viewforum9e0d9e0d.html?f=54" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.05</span></a></li>
+																<li><a href="viewforumfac0fac0.html?f=55" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.07</span></a></li>
+																<li><a href="viewforuma05ca05c.html?f=56" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.09</span></a></li>
+																<li><a href="viewforum6ac36ac3.html?f=57" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.11</span></a></li>
+																<li><a href="viewforume57de57d.html?f=58" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.13</span></a></li>
+																<li><a href="viewforum07560756.html?f=59" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.15</span></a></li>
+																<li><a href="viewforumb8c1b8c1.html?f=60" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.17</span></a></li>
+																<li><a href="viewforumdbf5dbf5.html?f=61" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.19</span></a></li>
+																<li><a href="viewforum75c275c2.html?f=62" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.21</span></a></li>
+																<li><a href="viewforume5f3e5f3.html?f=64" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.23</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="stat-block online-list">
+		<h3>Who is online</h3>
+		<p>Users browsing this forum: No registered users and 0 guests</p>
+	</div>
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="../index.html" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Home</span></a></span>									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="America/New York">UTC-04:00</span></li>
+							<li class="rightside">
+				<a href="ucp033a033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete all board cookies</span>
+				</a>
+			</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+									</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="cron78d278d2.gif?cron_type=cron.task.core.tidy_sessions" width="1" height="1" alt="cron" /></div>
+
+<script type="text/javascript" src="assets/javascript/jquery.mince91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="assets/javascript/corece91ce91.js?assets_version=7"></script>
+
+
+
+<script type="text/javascript" src="styles/sbie_prosilver/template/forum_fnce91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="styles/sbie_prosilver/template/ajaxce91ce91.js?assets_version=7"></script>
+
+
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?p=105326 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:46:15 GMT -->
+</html>

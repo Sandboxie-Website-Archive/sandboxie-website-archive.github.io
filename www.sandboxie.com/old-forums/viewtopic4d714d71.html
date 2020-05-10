@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16103&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:46:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.02] SBIE 2203 with Crome after upgrade to 4.04</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.02] SBIE 2203 with Crome after upgrade to 4.04</h2>
+		<p><a href="viewtopic373c373c.html?f=40&amp;t=16103">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=16103</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>[.02] SBIE 2203 with Crome after upgrade to 4.04</h3>
+				<div class="date">Posted: <strong>Sun Jul 21, 2013 3:47 am</strong></div>
+				<div class="author">by <strong>tomazyk</strong></div>
+				<div class="content">OS: Windows 7 Ultimate 64 bit<br>
+SBIE: upgraded from 3.76 to 4.04 (64 bit)<br>
+Other security programs: ESET Nod32 6.0.316 and EMET 3.0 (software compatibility for both programs is enabled)<br>
+<br>
+The problem started to happen after upgrading from 3.76 to 4.04. I used built-in option to update SBIE.<br>
+When I try to download file from internet using sandboxed Chrome I sometimes get mesage: SBIE2203 - Failed to communicate with sandboxie driver. Chrome opens blank "save as" window - I don't see folders to save into - and then the message appears. Sometimes if I wait, "save as" window becomes active again, I can close the message and save the file. Other times I have to close Chrome and try again. <br>
+<br>
+Thank you for help.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jul 21, 2013 4:34 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Can you please quote the exact message that you are seeing, including the detail?  This may help to diagnose the problem.<br>
+There is a COPY MESSAGES TO CLIPBOARD button when Sandboxie displays message so you can copy and paste them here.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jul 21, 2013 5:18 am</strong></div>
+				<div class="author">by <strong>tomazyk</strong></div>
+				<div class="content">The exact message is as follows:<br>
+<br>
+"SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [00000102]"<br>
+<br>
+Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jul 21, 2013 7:46 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I've had some reports of this error with Chrome before, and I fixed a few cases that were triggering this error.<br>
+And I know a few people are still seeing this error but so far I haven't been able to figure out how to trigger these remaining cases on my end.<br>
+<br>
+Perhaps you can post a Resource Access Monitor log from Sandboxie for Chrome, and that might offer some hint.<br>
+The instructions for that are explained here:<br>
+<a href="../index9970.html?ResourceAccessMonitor" class="postlink">http://www.sandboxie.com/index.php?Reso ... essMonitor</a><br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jul 21, 2013 8:48 am</strong></div>
+				<div class="author">by <strong>tomazyk</strong></div>
+				<div class="content">Here is a log from Resource Access Monitor taken during the problem:<br>
+<br>
+<em>snipped. --tzuk</em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jul 21, 2013 1:41 pm</strong></div>
+				<div class="author">by <strong>tomazyk</strong></div>
+				<div class="content">Here are my settings to help you out:<br>
+<br>
+<em>snipped. --tzuk</em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 22, 2013 7:53 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks.  Unfortunately I don't see anything that looks useful in your log, all the DLLs that your log shows are just standard Chrom and Windows DLLs.<br>
+<br>
+A couple of follow up questions:<br>
+<br>
+1.  Please create a new sandbox with default settings and try to run Chrome in this new sandbox.  Does it show the same problem?<br>
+<br>
+2.  Can you create a precise and very detailed step-by-step of things to do and/or click to show the problem on your end?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 22, 2013 11:34 am</strong></div>
+				<div class="author">by <strong>tomazyk</strong></div>
+				<div class="content">I have created new sandbox with default settings and have tested it. The problem can be reproduced in new sandbox. I think that the frequency of problem happening in new sandbox is lower than in old one, but I can't be sure.<br>
+<br>
+Here is how I can recreate an error:<br>
+1. I start with empty sandbox and run Chrome in it<br>
+2. I go to <a href="../index.html" class="postlink">www.sandboxie.com</a> and click on Download link at the top menu.<br>
+3. I choose Download from Brothersoft link (other links work too)<br>
+4. Brothersoft page loads and when Save As window opens I get the window blank<br>
+5. After few seconds I get a message from SBIE<br>
+<br>
+<img src="../img826.imageshack.us/img826/9489/3e6x.jpg" class="postimage" alt="Image"><br>
+<br>
+6. When I close the message the Save as window is not responsive. I try to close it and get Windows message:<br>
+<br>
+<img src="../img4.imageshack.us/img4/9076/75pz.jpg" class="postimage" alt="Image"><br>
+<br>
+7. After I close it I get auto-delete confirmation from sandbox for .tmp file:<br>
+<br>
+<img src="../img543.imageshack.us/img543/9696/6b9e.jpg" class="postimage" alt="Image"><br>
+<br>
+Sometimes after 4), before 5) explorer window becomes responsive and shows my disk locations and I can save a file (although later I still get SBIE messsage). Twice it happened right after I moved my mouse cursor - but that doesn't always help.<br>
+<br>
+I hope this can help you find the reason for a problem. I can help you with additional testing if needed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 23, 2013 12:44 am</strong></div>
+				<div class="author">by <strong>tomazyk</strong></div>
+				<div class="content">I did a liitle more testing and I think I found a reason. It all depends on whether Favorites in Explorer are collapsed or expanded.<br>
+<br>
+I get no errors if I have Favorites folder expanded and get those error as soon as I collapse it. Strange, but I could repeat it many times.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 23, 2013 3:07 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I'll play with this a bit more but in initial testing it looks like it doesn't matter if I expand/collapse the Favorites folder.<br>
+<br>
+I thought that unchecking the option "Ask where to save each file before downloading" in Chrome could be a workaround for you, right?  You can download everything to your Downloads folder and let the Sandboxie Immediate Recovery move the file to the final folder.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 23, 2013 3:20 am</strong></div>
+				<div class="author">by <strong>tomazyk</strong></div>
+				<div class="content">Yes I have that option turned on. When I come home from work, I will try disabling it and will see if it removes the problem.<br>
+<br>
+BTW my default folder to save downloads and for quick recovery is set to "D:\Prenosi" and not to default Downloads folder. Could this be a problem?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 23, 2013 3:32 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">No, I don't think the choice of folder would make any difference here, but if you say the expanded/collapsed state of the favorites folder makes a difference ... Well then anything is possible!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 23, 2013 2:36 pm</strong></div>
+				<div class="author">by <strong>tomazyk</strong></div>
+				<div class="content">I disabled an option "Ask where to save each file before downloading" in Chrome and problem doesn't occur any more. So problem is solved for me. Thank you for your help.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 24, 2013 3:09 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I finally found a way to reproduce the problem by turning on "Ask where to save each file before downloading" and then using right-click "Save as" on the web page.  This should be fixed in the next beta build I release.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 25, 2013 1:24 am</strong></div>
+				<div class="author">by <strong>Greg</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I finally found a way to reproduce the problem by turning on "Ask where to save each file before downloading" and then using right-click "Save as" on the web page.  This should be fixed in the next beta build I release.</div></blockquote>
+
+I am getting the same error and when I go into settings, the "Ask where to save each file before downloading" is <strong><span style="text-decoration: underline"></span></strong><span style="text-decoration: underline">not</span> checked. This problem started for me after my computer restarted following a Constant Guard Protection updated. Constant Guard Version 1.13.506.2 Database 723 (from Xfinity). I need to find a way to reverse the update.<br>
+<br>
+Greg</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16103&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:46:20 GMT -->
+</html>

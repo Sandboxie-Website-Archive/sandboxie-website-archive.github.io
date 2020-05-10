@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/24059" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2017-02-21T16:21:25-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/24059</id>
+
+		<entry>
+		<author><name><![CDATA[RooJ]]></name></author>
+		<updated>2017-02-21T16:21:25-04:00</updated>
+
+		<published>2017-02-21T16:21:25-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24059&amp;p=126562#p126562</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24059&amp;p=126562#p126562"/>
+		<title type="html"><![CDATA[Linking sandboxes]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=24059&amp;p=126562#p126562"><![CDATA[
+Thought it may be of interest to others who want to do something similar. I had an issue today, I wanted to install adobe reader into a sandbox so it didn't install files across my system, but I also wanted to maintain a fresh install of reader so didn't want it writing inside the sandbox after the install. Usually I choose one or the other, which always put me off installing browsers directly into a sandbox, but I've since found a solution. <br><br>Possibly common knowledge but I've not seen it mentioned before; A workaround is to create 2 sandboxes, the first one is the master install (eg AdobeReaderMaster) and will always contain the unchanging master install. The second will run the software (eg AdobeReader), it will contain any changes made during use, and can be deleted to revert back to the fresh installed/configured state. The second box reads the program files directly from the master sandbox (so is small in size) and all changes made during use will be isolated from the master install.<br><br>So far I've successfully used this with Adobe Reader, YTD (YouTube downloader), Opera and Open Office (surprised this one worked) <br><br>If anyone is interested I can add more details on the setup. There was a little tweaking needed to get PDF files to automatically open in the correct sandbox.<br><br>Hope this gives people some interesting ideas on custom setups. I will be setting up all compatible software this way from now on  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=25472">RooJ</a> — Tue Feb 21, 2017 3:21 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

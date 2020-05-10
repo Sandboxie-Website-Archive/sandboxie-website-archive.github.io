@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=3208&start=60&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Border sandboxed indicator - Page 5</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Border sandboxed indicator</h2>
+		<p><a href="viewtopic015e015e.html?f=22&amp;t=3208">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=3208</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>5</strong> of <strong>8</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Dec 29, 2008 8:56 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Version 3.33.14 includes this functionality, which you can enable from Sandbox Settings &gt; Appearance.<br>
+<br>
+It's a bit less configurable than your utility, Micahs, in that you can only configure colors but not border thickness or the level of transparency/opacity.<br>
+<br>
+I really like how you implemented this using an overlaying window, very clever.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 30, 2008 12:08 am</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content">Awesome! Thanks for creating this excellent program. Can't wait to download it when it's available!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 30, 2008 8:42 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">You can already download it from the "Beta Version 3.33" forum.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 31, 2008 4:17 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>It's a bit less configurable than your utility, Micahs, in that you can only configure colors but not border thickness or the level of transparency/opacity.</div></blockquote>
+Are you planning to eventually support those things?  Right now, I find the default border way too thick and somewhat too transparent.<br>
+<br>
+Just FYI, a minor bug was introduced with this.  If I enable the "Display a border around the window" option, I can no longer disable it via the settings GUI panel.  In fact, if I just unselect that box and click Apply, the check mark immediately reappears again.  The only way I could disable it was to manually delete the "BorderColor=#00FFFF,n" line in Sandboxie.ini.<br>
+<br>
+<strong><span style="text-decoration: underline">@Micahs:</span></strong> Any progress on getting all windows to stay highlighted even when not in focus?  tzuk's current implementation doesn't do that either, and I'd really find that extremely useful.  Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 31, 2008 5:44 pm</strong></div>
+				<div class="author">by <strong>soccerfan</strong></div>
+				<div class="content"><blockquote><div><cite>Guest wrote:</cite>Just FYI, a minor bug was introduced with this.  If I enable the "Display a border around the window" option, I can no longer disable it via the settings GUI panel. </div></blockquote>
+Already fixed in v3.33.15. Works like a charm. Go grab it <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 31, 2008 11:56 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content"><blockquote><div><cite>soccerfan wrote:</cite>Already fixed in v3.33.15. Works like a charm. Go grab it <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div></blockquote>
+
+That it is.  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">  Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>BorderGuard Redux</h3>
+				<div class="date">Posted: <strong>Thu Jan 01, 2009 8:42 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Hi there.<br>
+I downloaded the beta version and the AutoHotkey script a few days ago. Even when I found the script much more versatile than the built in solution, I still felt it lacked a couple of features. So I coded up my modifications taking Micahs' script as a base; I called the resulting abomination I'm happy to present to you "BorderGuard Redux".<br>
+<br>
+<strong>Screenshots:</strong><br>
+None at the moment, but it's sort of pointless, since it looks pretty much like plain BorderGuard.<br>
+<br>
+<strong>Features:</strong>
+<ul>
+<li>The script will get sandbox names directly from Sandboxie's ini file.</li>
+<li>The script can be configured to terminate itself when SbieCtrl finishes.</li>
+<li>Enable or disable border highlighting by default for new sandboxes.</li>
+<li>"Hide on drag"'s default now depends on whether the user selected "Drag Full Windows" or not.</li>
+<li>The corner's style can be specified for all four corners individually (that is, you can have 2 of them rounded whilst the other 2 are straight).</li>
+<li>Support for taking "interior radius" into account (in some visual styles the window's corners are rounded, this setting allows for that fact to be taken into account, thus not overlaying the actual window with the border).</li>
+<li>The amount by which borders are offset towards the middle while the window is maximized can be specified for the four sides independently.</li>
+<li>Support for taking "size corrections" into account (in some visual themes the window looks smaller/bigger than the size it actually reports).</li>
+<li>When the icon is hidden it can be shown back by pressing Win-G (this will not be saved into the configuration file, its just to access the icon's menu, it can be hidden again by reloading the configuration).</li></ul>
+
+<strong>Modifications:</strong>
+<ul>
+<li>New option to simply reload the configuration.</li>
+<li>After editing the configuration file, the settings are automatically reloaded.</li>
+<li>The code to draw round borders has been rewritten (not sure if it looks/performs better/worse, feedback regarding this is appreciated).</li></ul>
+
+<strong>Drawbacks:</strong>
+<ul>
+<li>You need to adapt your existing ini file (this shouldn't be too difficult).</li>
+<li>There are a couple of dependencies:
+<ul>
+<li>The <em>stringconverter tool</em> program (you can get it here: <a href="http://www.gbordier.com/gbtools/stringconverter.htm" class="postlink">http://www.gbordier.com/gbtools/stringconverter.htm</a>). This can be copied anywhere, if the script can't find it in the "res" directory it will prompt for it. (This program is used to turn a temporal copy of Sandboxie.ini fron Unicode to ANSI, since AutoHotkey doesn't do Unicode yet).</li>
+<li>The <em>CmnDlg 4.1 --- Common Dialogs</em> AutooHotkey script (you can get it here: <a href="http://www.autohotkey.com/forum/topic17230.html" class="postlink">http://www.autohotkey.com/forum/topic17230.html</a>). This should be placed in the "res" directory. (This script is included by mine, so the script won't even start if you don't have it, it's used to display slightly more configurable open dialogues).</li></ul></li>
+<li>I just arrogantly killed the "[Localization]" section of the ini (don't have a very good reason for this one, it should be fairly easy to bring back though).</li></ul>
+
+<strong>Known bugs:</strong>
+<ul>
+<li>For some reason, when there are only two visible windows, one sandboxed and one unsandboxed, and the unsandboxed window has focus, clicking on the taskbar to minimize the unsandboxed window and, thus, give focus to the sandboxed one, produces a nasty flickering of the sandboxed window border (ideas regarding this weird bug are most appreciated)</li></ul>
+
+<strong>To-Dos (in <em>slight</em> order of "doability"):</strong>
+<ul>
+<li>Bring back localization (most doable, I'm just too lazy to do it right now).</li>
+<li>Make the cornerRadius setting take the four corners into account independently (maybe).</li>
+<li>Remove <em>CmnDlg</em> dependence (doable, yes).</li>
+<li>Make it so that an image instead of a plain color can be selected as border (this opens up a couple of problems, tiling vs stretching for instance, but I think it could be done and greatly improve the effect. Ideas and/or help regarding this are very much appreciated).</li>
+<li>Make a configuration interface (not likely to happen, since I can't do GUIs in AutoHotkey to save my own life).</li></ul>
+
+<br>
+<strong>Download</strong><br>
+You can get the latest version (0.1) here: <a href="http://rapidshare.com/files/178880927/BorderGuard_Redux.zip" class="postlink">http://rapidshare.com/files/178880927/B ... _Redux.zip</a><br>
+<br>
+<strong>Please note:</strong> First and foremost, I never intended to "hijack" Micahs' script or anything, just trying to make it cope with what I (whimsically) expected it to do, so, Micahs, if you'd like me to unlink the file, start another topic, whatever, just say so, there's no problem there (BTW, great script indeed!). Secondly, I took Micahs' script as a base to make this one, that means that if you like it you should be thanking him, and if you find any bugs you should be blaming me. Last but certainly not least, huge kudos go out to tzuk for making this incredible app!<br>
+<br>
+<br>
+Regards.<br>
+<br>
+<strong>PS:</strong> needless to say, comments are most welcome.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BorderGuard Redux</h3>
+				<div class="date">Posted: <strong>Thu Jan 01, 2009 8:44 pm</strong></div>
+				<div class="author">by <strong>Ausonius</strong></div>
+				<div class="content">Sorry, I was the one who wrote the previous (BorderGuard Redux) post, I just timed out.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 07, 2009 12:01 am</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content">I have most of multiple-sandboxed-window-highlighting done. I just have to work out some small issues and incorporate it into the main borderGuard program.<br>
+<br>
+Sneak peak:<br>
+<img src="../www.autohotkey.net/_Micahs/borderguard/screenshots/borderguard%20multi.gif" class="postimage" alt="Image"><br>
+I need to make it pretty and there's some problem with windows that are sandboxed but do not have the sandbox class tag (Open/Save dialogs, etc.) Also, the new method displays the border window behind the sandboxed window, so maximized windows have to be handled differently. I have some stuff to do yet, but it's coming along!<br>
+<br>
+<br>
+"I never intended to "hijack" Micahs' script or anything" - No worries!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 12, 2009 5:10 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content"><blockquote><div><cite>Micahs wrote:</cite>I have most of multiple-sandboxed-window-highlighting done.</div></blockquote>
+Yay!<br>
+
+<blockquote><div><cite>Micahs wrote:</cite>...there's some problem with windows that are sandboxed but do not have the sandbox class tag (Open/Save dialogs, etc.)</div></blockquote>
+Hasn't this always been a problem though - regardless of whether or not there is multiple highlighting?  I've often seen windows like that not handled properly.  Didn't seem to be the program's fault though since even the taskbar entry didn't show the "[#]" tags.  Obviously Sandboxie still knows they are sandboxed though since the Sandboxie tray icon changes anyway.  Maybe you can queue off whatever Sandboxie queues off to tell that icon to change?<br>
+
+<blockquote><div><cite>Micahs wrote:</cite>Also, the new method displays the border window behind the sandboxed window...</div></blockquote>
+That should look much better than the current method. Plus it may be more friendly with various non-default desktop themes.<br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 15, 2009 1:29 am</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content">The problem is not detecting the sandboxing because I keep a list of sandboxed processes and compare the process of the window to that list. The problem is that the border of the owned window will, in certain circumstances, fall behind the parent window. I'm not exactly sure why this is.<br>
+<br>
+It is still coming along well. I'll upload it soon.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 15, 2009 12:02 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">How do you detect sandboxed processes?  I'm curious, because I have, I think, a foolproof way.  But I want to hear your solution first.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 16, 2009 3:06 am</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content">Well, I don't actually loop through all processes and determine which are sandboxed. What I do is loop through all visible windows and check the class name for the "Sandbox:XXXX:" telltale. If found, I get the PID of the window and add it to a list for later. If not, I check if the process of that window is in the "sandboxed process" list. Either way, if sandboxed, I display the border.<br>
+<br>
+This way, I can tell if the window is sandboxed or if it is owned by a sandboxed window. As far as I can tell, this way is foolproof. I have not noticed any slipping through, anyway!<br>
+<br>
+If you have a better way, I'd love to hear it. Any way to simplify or speed up the thing is always good. Regardless, what is your method?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 16, 2009 10:33 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">If you're talking about using 'Start.exe /listpids' then that is probably the best and fastest way.  My other idea was using EnumProcessModules from PSAPI to look at each process and see if SbieDll.dll had been loaded.  While that's probably better than looking at window titles or classnames as far as reliability, using /listpids would certainly be faster.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jan 17, 2009 3:45 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Micahs, not completely foolproof.  If Sandbox Settings &gt; Resource Access &gt; Window Access has a setting for * (a single star) then there is no Sandbox: prefix for the class names.<br>
+<br>
+wraithdu, you would probably need to run Start.exe /listpids fairly frequently, probably every few seconds, I'm not sure it's a good idea.<br>
+<br>
+If you guys know how to call a function exported by a DLL, then you can load SbieDll dynamically and call one of its API functions to enumerate sandboxed processes.  I can elaborate if you wish.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>5</strong> of <strong>8</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=3208&start=60&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:21 GMT -->
+</html>

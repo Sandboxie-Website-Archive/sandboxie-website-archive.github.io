@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25340&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [SECURITY] Sandboxes leaking information to each other?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[SECURITY] Sandboxes leaking information to each other?</h2>
+		<p><a href="viewtopicec26ec26.html?f=17&amp;t=25340">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25340</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[SECURITY] Sandboxes leaking information to each other?</h3>
+				<div class="date">Posted: <strong>Sun Jan 14, 2018 11:33 am</strong></div>
+				<div class="author">by <strong>coarse</strong></div>
+				<div class="content">SETUP:<br>
+I'm connected to the Internet via a VPN.<br>
+I have Firefox running in one sandbox; all history and cookies cleared.<br>
+I have MEGASync (a download manager for mega.nz) running in a separate sandbox, logged in.<br>
+<br>
+PROBLEM:<br>
+In Firefox, I go to mega.nz (not logged in) and try to download a file via the browser.<br>
+The site says 'download added to MEGASync'.<br>
+MEGASync starts downloading the file.<br>
+<br>
+DISCUSSION:<br>
+How does the browser know that I have MEGASync installed?<br>
+How does MEGASync capture the link from my browser?<br>
+As they are in separate sandboxes, shouldn't these programs be isolated from each other? Do I need to activate a specific setting to make this so?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [SECURITY] Sandboxes leaking information to each other?</h3>
+				<div class="date">Posted: <strong>Mon Jan 15, 2018 3:39 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello coarse,<br>
+<br>
+What are your Sandboxie settings? (Configure --&gt; Edit configuration. Copy/paste the output here, highlight it and click on the "&lt;/&gt;" button to format it). <br>
+<br>
+Are you using any templates at all for your Sandbox? <br>
+Is Firefox (outside Sandboxie) holding a session for this particular application? (Not sure how that app works).<br>
+<br>
+How are you running the application, and is it an extension or a full application? Is there anything running in the system tray, that may be outside Sandboxie? <br>
+<br>
+Please provide this info so that I can test the behavior:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [SECURITY] Sandboxes leaking information to each other?</h3>
+				<div class="date">Posted: <strong>Tue Jan 23, 2018 2:27 pm</strong></div>
+				<div class="author">by <strong>coarse</strong></div>
+				<div class="content">Thank you for your reply, Barb. My Sandboxie settings are as follows:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[Firefox]
+
+Enabled=y
+ConfigLevel=7
+BlockNetworkFiles=y
+Template=PaleMoon_Force
+Template=Waterfox_Force
+Template=Firefox_Force
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+BorderColor=#00FFFF,off
+NeverDelete=n
+BoxNameTitle=n
+AutoRecover=y
+
+[Mega]
+
+Enabled=y
+ConfigLevel=7
+BlockNetworkFiles=y
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+BorderColor=#00FFFF,off
+NeverDelete=n
+BoxNameTitle=n
+WriteFilePath=C:\Users\coarse\</code></pre></div>
+
+I'm running Sandboxie v5.22 (64-bit) on Windows 10.<br>
+<br>
+Firefox v57.0.4 is installed outside the Sandbox, but is forced to always run inside sandbox [Firefox].<br>
+<br>
+Megasync is installed inside sandbox [Mega]. It is a standalone application, not a browser extension.<br>
+<br>
+Looking at Task Manager, or Sandboxie Control, both applications appear to be running within their own sandboxes. Please let me know if you need any more information to diagnose this issue.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [SECURITY] Sandboxes leaking information to each other?</h3>
+				<div class="date">Posted: <strong>Wed Jan 24, 2018 11:09 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello coarse,<br>
+<br>
+I was able to test it and the application (MegaSync) always started Sandboxed, even when the links were accessed from a non-Sandboxed browser. This is not an issue with your sandboxes, there is no information leaking.  <br>
+Applications installed inside a Sandbox are not allowed to modify your host (unless explicitly set to do so), however, they are visible to other programs on your host (sandboxed or non-sandboxed). <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25340&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:42 GMT -->
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/12014" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-07-08T20:02:12-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/12014</id>
+
+		<entry>
+		<author><name><![CDATA[smallhagrid]]></name></author>
+		<updated>2013-07-08T20:02:12-04:00</updated>
+
+		<published>2013-07-08T20:02:12-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12014&amp;p=91647#p91647</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12014&amp;p=91647#p91647"/>
+		<title type="html"><![CDATA[Wow.]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12014&amp;p=91647#p91647"><![CDATA[
+Just seeing what is here about a portable version and found this old thread...offering a 47.1MB file !!!<br>(And NOD32 refused it <a href="http://tools.safezone.cc/gjf/Sandboxie-portable.zip" class="postlink">http://tools.safezone.cc/gjf/Sandboxie-portable.zip</a>probably a variant of Win32/Agent.MAANYNY trojanconnection terminated.)<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=12041">smallhagrid</a> — Mon Jul 08, 2013 8:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gjf]]></name></author>
+		<updated>2011-12-05T11:48:50-04:00</updated>
+
+		<published>2011-12-05T11:48:50-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12014&amp;p=75060#p75060</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12014&amp;p=75060#p75060"/>
+		<title type="html"><![CDATA[Yet Another Sandboxie Portable]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12014&amp;p=75060#p75060"><![CDATA[
+Hi All!<br><br>Just want to share my own way to make sandboxie portable.<br><br>This version supports plugins and settings storing from one run to another as well as configuring Sandbox folder place.<br><br><a href="http://tools.safezone.cc/gjf/Sandboxie-portable.zip" class="postlink">So here it is</a>.<br><br>To start Sandboxie simply run start.cmd. No need to reboot after that. When your work is done please run stop.cmd - in this case all services will be stooped, but driver will remains in memory until next reboot (so please keep it in mind).<br><br>All initial settings are stored in Sandboxie.ini.template file. Please look thru it. As you can see it is simple sandboxie.ini file but with possibility to include in the path $(InstallDrive) template which means the drive where start.cmd started. Syou can simply change paths in the way you see fit including plugin paths, sandbox paths etc.<br><br>If you will change something during your work Sandboxie.ini.template will be updated in according to your changes.<br><br>It would be good to see some comments / suggestions here.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3972">gjf</a> — Mon Dec 05, 2011 10:48 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

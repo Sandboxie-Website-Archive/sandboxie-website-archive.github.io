@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=15965&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:44:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie 4.02/4.04 not fully compatible with EMET 4.0</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie 4.02/4.04 not fully compatible with EMET 4.0</h2>
+		<p><a href="viewtopicf212f212.html?f=40&amp;t=15965">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=15965</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Sandboxie 4.02/4.04 not fully compatible with EMET 4.0</h3>
+				<div class="date">Posted: <strong>Mon Jul 08, 2013 10:40 am</strong></div>
+				<div class="author">by <strong>dismaze</strong></div>
+				<div class="content">OS:Windows 7 32 bit<br>
+<br>
+Sandboxie Version:4.02/4.04<br>
+<br>
+Problem:When use Sandboxie's right click button to start any program, even the program is under EMET list, EMET.dll still won't be loaded, but if let Sandboxie open Windows Explorer first, than open the program, EMET.dll will be loaded properly. The problem is the same as <a href="../phpbb/viewtopic9a1f.php?t=15260" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15260</a><br>
+<br>
+Also even add SandboxieDcomLaunch.exe, SandboxieRpcSs.exe to EMET list, EMET.dll won't be loaded, they will not be protected by EMET; but SbieCtrl.exe, SbieSvc.exe is ok, will show they are protected by EMET, that make me confuse.<br>
+<br>
+Please take a look of this problem, thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 08, 2013 10:49 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">In that topic that you linked I did fix (at the time) the same problem that you are describing here.<br>
+But I can check again specifically on 32-bit Windows 7.<br>
+Can you quote a specific version number for EMET ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 08, 2013 11:22 am</strong></div>
+				<div class="author">by <strong>dismaze</strong></div>
+				<div class="content">OK, EMET version number is 4.0.4913.26122.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 11, 2013 5:29 am</strong></div>
+				<div class="author">by <strong>nsb</strong></div>
+				<div class="content">regarding google chrome, sandboxie prevents the injection of emet.dll within the memory space of the parent process.<br>
+The injection of the dll is instead allowed correctly for its child processes.<br>
+<br>
+<br>
+<br>
+EMET 4.0.4913.26122<br>
+Sbxie 4.04<br>
+OS: 8x64</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 11, 2013 10:03 am</strong></div>
+				<div class="author">by <strong>nsb</strong></div>
+				<div class="content">Hi, tzuk:<br>
+i observ the same behaviour even in the case of IE 10 where infact the dll is injected only within the slave (child) process..  <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 11, 2013 10:14 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Of course the child processes get it OK. Start.exe is not involved in starting them, which seems to be the problem!<br>
+<br>
+Hasn't this been the case each time there's an issue...?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 18, 2013 7:38 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I looked into this and I can see the problem, but I don't know if I am going to fix it.<br>
+<br>
+The thing is that I want to prevent the "application compatibility layer" DLL (AppHelp.dll) from loading into Sandboxie programs like Start.exe because if one mistakenly sets the option "run this program in compatibility mode for another versions of Windows" then it introduces strange problems in  Sandboxie.  This has happened in the past.<br>
+<br>
+On the other hand, EMET is relying on that DLL to inject itself into programs, and therein lies the problem, because Start.exe does not load the AppHelp.dll.<br>
+<br>
+Now one kind of fix is to run your browser as a forced program and then Start.exe is not involved and EMET DLLs are injected correctly, but I understand not everyone uses the forced program feature.<br>
+<br>
+So a possible workaround is to create a special shortcut that uses an intermediate program.  Right-click New &gt; Shortcut on the desktop, then paste:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"C:\Program Files\Sandboxie\Start.exe" explorer "C:\Program Files\Internet Explorer\iexplore.exe"</code></pre></div>
+
+So you're getting Explorer.exe to launch Internet Explorer (or whatever browser) and Explorer.exe will load AppHelp.dll and will inject EMET into the new process it is starting.<br>
+<br>
+Hope this helps.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jul 21, 2013 9:07 am</strong></div>
+				<div class="author">by <strong>blasev</strong></div>
+				<div class="content">thx for the fix, confirmed to be working on chrome + emet 4.0</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 22, 2013 4:44 pm</strong></div>
+				<div class="author">by <strong>nsb</strong></div>
+				<div class="content">Following your hint, everything works as expected.<br>
+<br>
+I was wondering though if it is an expected behaviour that explorer.exe is terminated automatically after a short time frame...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 23, 2013 2:58 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Yes, sandboxed Explorer.exe will do that.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 23, 2013 6:26 am</strong></div>
+				<div class="author">by <strong>nsb</strong></div>
+				<div class="content">txs a lot, Tzuk! <br>
+<br>
+Although applying the workaround it fixes the problem related to the browser, the problem remains in the case of downloading a pdf file.<br>
+Even if the player is emetized, Sandboxie prevents the loading of the dll inside the memory space of the reader...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 23, 2013 6:42 am</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I looked into this and I can see the problem, but I don't know if I am going to fix it.<br>
+<br>
+The thing is that I want to prevent the "application compatibility layer" DLL (AppHelp.dll) from loading into Sandboxie programs like Start.exe because if one mistakenly sets the option "run this program in compatibility mode for another versions of Windows" then it introduces strange problems in  Sandboxie.  This has happened in the past.<br>
+<br>
+On the other hand, EMET is relying on that DLL to inject itself into programs, and therein lies the problem, because Start.exe does not load the AppHelp.dll.<br>
+<br>
+Now one kind of fix is to run your browser as a forced program and then Start.exe is not involved and EMET DLLs are injected correctly, but I understand not everyone uses the forced program feature.<br>
+<br>
+So a possible workaround is to create a special shortcut that uses an intermediate program.  Right-click New &gt; Shortcut on the desktop, then paste:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"C:\Program Files\Sandboxie\Start.exe" explorer "C:\Program Files\Internet Explorer\iexplore.exe"</code></pre></div>
+
+So you're getting Explorer.exe to launch Internet Explorer (or whatever browser) and Explorer.exe will load AppHelp.dll and will inject EMET into the new process it is starting.<br>
+<br>
+Hope this helps.</div></blockquote>
+
+Sorry for potentially hijacking this thread, but I was wondering whether this workaround would also fix this issue?:<br>
+<a href="../phpbb/viewtopic05ad.php?t=15797" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15797</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 23, 2013 7:30 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">No, you're talking about injecting using Win32 hooks, EMET is injecting using the Windows compatibility layer.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 23, 2013 10:17 am</strong></div>
+				<div class="author">by <strong>dismaze</strong></div>
+				<div class="content">Thanks for the workaround. But, I know it is difficult, I still hope one day there is a normal way to use EMET 4 with Sandboxie 4 without using other workaround.<br>
+<br>
+Also can you please take a look of Malwarebytes Anti-Exploit？It has a similar problem, too.<br>
+<br>
+The three products both have ability to protect user from zero day exploit, if user can combine these together, I think it will very effective to defend bad things from web.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 13, 2013 1:09 am</strong></div>
+				<div class="author">by <strong>dismaze</strong></div>
+				<div class="content">Run a browser under Sandboxie directly(without open Windows Explorer), HitmanPro.Alert can inject it's hmpalert.dll to the browser or any other process, that's really a surprise.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=15965&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:44:27 GMT -->
+</html>

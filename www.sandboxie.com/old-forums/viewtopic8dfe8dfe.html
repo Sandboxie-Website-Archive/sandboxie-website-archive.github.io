@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25669&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:55:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; IME problem in StarCraft II (DirectX game)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>IME problem in StarCraft II (DirectX game)</h2>
+		<p><a href="viewtopic27d527d5.html?f=11&amp;t=25669">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25669</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>IME problem in StarCraft II (DirectX game)</h3>
+				<div class="date">Posted: <strong>Sun Apr 08, 2018 8:54 am</strong></div>
+				<div class="author">by <strong>KomeijiKuroko</strong></div>
+				<div class="content">Hello, I have problem with IME in StarCraft II.<br>
+<br>
+<img src="../i.imgur.com/PXR5G09.png" class="postimage" alt="Image"><br>
+<br>
+When you switch to IME at any textbox, IME candidate box is shown. But when you try to press any number key to apply any candidate word, for example 1 for "hello", then nothing happend and it doesn't apply to textbox.<br>
+<br>
+My IME is Windows 10 Microsoft Chinese Pinyin.<br>
+<br>
+<img src="../i.imgur.com/XAI8WuH.jpg" class="postimage" alt="Image"><br>
+<br>
+also Microsoft Windows 10 Japanese IME faces to same problem.<br>
+<br>
+All above IME work well in normal WIndows application, and I think it failed because it is DirectX game and hooked IME Handles.<br>
+<br>
+<br>
+This is Windows DirectX Game IME Dev Manual from MSDN:<br>
+<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ee419002(v=vs.85).aspx" class="postlink">https://msdn.microsoft.com/en-us/librar ... s.85).aspx</a><br>
+<br>
+I tried to add * to OpenIpcPath, OpenWinClass or OpenClsid, but all failed.<br>
+<br>
+Attachment is my Resource Access Monitor log.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: IME problem in StarCraft II (DirectX game)</h3>
+				<div class="date">Posted: <strong>Mon Apr 09, 2018 10:51 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello KomeijiKuroko ,<br>
+<br>
+I haven't tested the game yet (not sure if there's a free demo out there, I'll have to search) , but I suggest you try the following: <br>
+<br>
+Create a new Sandbox with default settings.<br>
+Right-click on your Sandbox --&gt; Sandbox settings ---&gt; Resource Access --&gt; COM Access <br>
+Hit Add<br>
+Copy paste:<br>
+{A38F3677-32FC-4DAC-99B3-D804B193D2C4}<br>
+Apply and Ok your way out<br>
+Configure --&gt; Reload configuration<br>
+Try the game<br>
+ <br>
+There also a few more COM classes listed that may be relevant, you want to test adding one a time per the steps above and see if it makes a difference:<br>
+<br>
+{41445657-4118-4689-B300-E7F1EB61FF7B}<br>
+{6FFA842B-FD90-4A0E-9315-21C52B2457AA}<br>
+{88C524CA-551B-4C01-9A42-CDB16B745291}<br>
+{DA7E4657-8FA8-4B76-9A14-9BF380FA3738<br>
+{FFE8C349-2BB1-411F-93CE-0364C5F9FD9F}<br>
+<br>
+Keep in mind you are punching holes in the Sandbox, so proceed with caution. If adding a particular COM Class does not fix the problem, remove it, then add another one and so on. <br>
+<br>
+I'll update this thread if new info becomes available.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25669&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:55:26 GMT -->
+</html>

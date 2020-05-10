@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6557&start=900&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Buster Sandbox Analyzer - Page 61</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Buster Sandbox Analyzer</h2>
+		<p><a href="viewtopica7d3a7d3.html?f=22&amp;t=6557">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=6557</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>61</strong> of <strong>64</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 03, 2013 3:52 pm</strong></div>
+				<div class="author">by <strong>jumper1</strong></div>
+				<div class="content">Thanks for your work. I find BSA and Sandboxie the best possible combination for viruses analysis and I have written a lot about this. I'm waiting to update BSA to work with Sandboxie 4.0.4.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 03, 2013 5:12 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>jumper1 wrote:</cite>Thanks for your work. I find BSA and Sandboxie the best possible combination for viruses analysis and I have written a lot about this. I'm waiting to update BSA to work with Sandboxie 4.0.4.</div></blockquote>
+
+I discontinued BSA because I consider Sandboxie 4.x is not suitable for malware analysis anymore. I suggest you use BSA + Sandboxie 3.76.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Win x64 Sandboxie + Buster</h3>
+				<div class="date">Posted: <strong>Mon Sep 09, 2013 6:17 pm</strong></div>
+				<div class="author">by <strong>JohnJohn</strong></div>
+				<div class="content">What (if there is any at all) SB and Buster versions I can currently use to analyze both x32 and x64 applications on a windows 7 x64?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 10, 2013 5:41 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Sandboxie 3.76 and BSA 1.88 should work fine.<br>
+<br>
+The 64-bit version of LOG_API works fine in the systems I have tested. If in your system is not working fine try to uninstall software until it works. If it does not work even uninstalling everything then I guess there is some kind of incompatibility. In this case there is nothing to do because BSA has been discontinued and I will not do more fixes to LOG_API.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Thanks</h3>
+				<div class="date">Posted: <strong>Tue Sep 10, 2013 1:50 pm</strong></div>
+				<div class="author">by <strong>JohnJohn</strong></div>
+				<div class="content">Thanks a lot Buster. <br>
+I am just starting to use BAS and I think it is really useful.<br>
+I also noted that analysis of windows apps like calc or notepad, will still generate behaviour flags (looks for debugger,..etc). Is that normal?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Thanks</h3>
+				<div class="date">Posted: <strong>Tue Sep 10, 2013 2:07 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>JohnJohn wrote:</cite>Thanks a lot Buster. <br>
+I am just starting to use BAS and I think it is really useful.<br>
+I also noted that analysis of windows apps like calc or notepad, will still generate behaviour flags (looks for debugger,..etc). Is that normal?</div></blockquote>
+
+Yes, it is.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Nov 27, 2013 7:48 am</strong></div>
+				<div class="author">by <strong>taltamir</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite><blockquote><div><cite>Max100 wrote:</cite>I'm trying last bsa program release, but I'm forced to copy wpcap.dll and packet.dll from PCAP folder to bsa folder. <br>
+<br>
+Only in this way I can open the executable (BSA.EXE) without dialog errors (packet.dll / wpcap.dll not present).<br>
+<br>
+I have this bug with Windows XP x86 and Windows 7 x64.</div></blockquote>
+
+It´s not a bug, that´s the way how it works.<br>
+<br>
+If you read the manual (BSA.PDF) you will see that BSA uses WinPCap to capture network traffic. It´s recommended to install <a href="http://www.winpcap.org/" class="postlink">WinPCap</a> because it´s very necessary for analysis.<br>
+<br>
+As explained in the readme (README.TXT) if for any reason (I don´t see any valid reason to don´t do it) you don´t want to install WinPCap then you must copy WPCAP.DLL and PACKET.DLL from PCAP folder to Windows\System32 folder.<br>
+<br>
+Don´t know if copying the files to BSA folder you override the errors too. If it works, that´s ok.</div></blockquote>
+
+This post took me a while to track, had to use google to search this thread for wpcap.dll (the built in search only found the thread but didn't specify which of the 60+ pages it is).<br>
+<br>
+Anyways, I check on<br>
+<a href="http://bsa.isoftware.nl/" class="postlink">http://bsa.isoftware.nl/</a><br>
+in the section titled installation and it most certainly DOES NOT state you need to install WinPCap. You should really add this to the instructions, and while at it, edit it into the instructions on the first page in this thread.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Thu Feb 27, 2014 11:51 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I made two small changes to BSA 1.88:<br>
+<br>
+The first change consists that at Windows Shell if you right-click a file and select "Analyze in BSA", only that file will be analyzed. If you want to analyze a folder, then select the folder, right-click it and select "Analyze in BSA".<br>
+<br>
+The second change consists that from command line you can analyze just one file using the modifier "-i" or "-file". Example:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>bsa.exe -s 30 -i c:\test\notepad.exe</code></pre></div>
+
+You can get the updated release from <a href="http://www.woodmann.com/virusbuster/bsa_188_update_1.rar" class="postlink">here</a>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2014 3:33 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I found the malware that made my decission to discontinue BSA after the change in Sandboxie from 3.x to 4.x line.<br>
+<br>
+Here you have the analysis report made with Sandboxie 3.76:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Report generated with Buster Sandbox Analyzer 1.88 at 21:23:28 on 04/03/2014
+
+Detailed report of suspicious malware actions:
+
+Changed wallpaper
+Checked for Avira security software presence
+Checked for debuggers
+Checked for Task Manager software presence
+Checked for The Hacker security software presence
+Code injection in process: C:\Windows\SysWOW64\cmd.exe
+Code injection in process: C:\Windows\SysWOW64\ctfmon.exe
+Created a mutex named: AMResourceMutex3
+Created a mutex named: eed3bd3a-a1ad-4e99-987b-d7cb3fcfa7f0 - S-1-5-21-2078868383-453426656-4049437542-1000
+Created a mutex named: Local\!PrivacIE!SharedMemory!Mutex
+Created process: C:\Windows\system32\cmd.exe, "C:\Windows\system32\cmd.exe" /q /c for /l %i in (1, 1, 4000000000) do if not exist "C:\Documents and Settings\User\Ðàáî÷èé ñòîë\1.dll" (exit) else (del /f "C:\Documents and Settings\User\Ðàáî÷èé ñòîë\1.dll"), c:\m\test
+Created process: C:\Windows\system32\ctfmon.exe, ctfmon.exe, null
+Defined registry AutoStart location created or modified: machine\software\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\Update = C:\Users\Buster\AppData\Roaming\1.dll
+Defined registry AutoStart location created or modified: machine\System\CurrentControlSet\Control\SESSION MANAGER\PendingFileRenameOperations = \??\C:\Documents and Settings\User\ \1.dll
+Defined registry AutoStart location created or modified: user\current\software\Microsoft\Windows\CurrentVersion\Run\Update = C:\Users\Buster\AppData\Roaming\1.dll
+Detected Anti-Malware Analyzer routine: Disk information query
+Detected Anti-Malware Analyzer routine: Sandboxie detection
+Detected desktop switch attempt
+Enumerated running processes
+Got input locale identifiers
+Got system default language ID
+Got user name information
+Internet connection: Connects to "192.162.136.67" on port 80
+Internet connection: Connects to "78.46.86.137" on port 80
+Listed all entry names in a remote access phone book
+Looked up the external IP address
+Monitorized screen
+Opened a service named: rasman
+Opened a service named: Sens
+Traces of Max++
+</code></pre></div>
+
+And here you have the report made with Sandboxie 4.09.01:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Report generated with Buster Sandbox Analyzer 1.88 at 21:25:13 on 04/03/2014
+
+Detailed report of suspicious malware actions:
+
+Checked for Avira security software presence
+Checked for debuggers
+Checked for Task Manager software presence
+Checked for The Hacker security software presence
+Code injection in process: C:\Windows\SysWOW64\cmd.exe
+Created a mutex named: AMResourceMutex3
+Created a mutex named: eed3bd3a-a1ad-4e99-987b-d7cb3fcfa7f0 - S-1-5-21-2078868383-453426656-4049437542-1000
+Created a mutex named: Local\!PrivacIE!SharedMemory!Mutex
+Created process: C:\Windows\system32\cmd.exe, "C:\Windows\system32\cmd.exe" /q /c for /l %i in (1, 1, 4000000000) do if not exist "C:\Documents and Settings\User\Ðàáî÷èé ñòîë\1.dll" (exit) else (del /f "C:\Documents and Settings\User\Ðàáî÷èé ñòîë\1.dll"), c:\m\test
+Defined registry AutoStart location created or modified: machine\software\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\Update = C:\Users\Buster\AppData\Roaming\1.dll
+Defined registry AutoStart location created or modified: machine\System\CurrentControlSet\Control\SESSION MANAGER\PendingFileRenameOperations = \??\C:\Documents and Settings\User\ \1.dll
+Defined registry AutoStart location created or modified: user\current\software\Microsoft\Windows\CurrentVersion\Run\Update = C:\Users\Buster\AppData\Roaming\1.dll
+Detected Anti-Malware Analyzer routine: Disk information query
+Detected Anti-Malware Analyzer routine: Sandboxie detection
+Detected desktop switch attempt
+Enumerated running processes
+Got input locale identifiers
+Got system default language ID
+Got user name information
+Internet connection: Connects to "192.162.136.67" on port 80
+Internet connection: Connects to "78.46.86.137" on port 80
+Listed all entry names in a remote access phone book
+Looked up the external IP address
+Monitorized screen
+Opened a service named: rasman
+Opened a service named: Sens
+Traces of Max++
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2014 4:07 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Comparing analysis reports from Sandboxie 3.76 and 4.09.01 we can see there are only 2 differences: wallpaper change and ctfmon.exe process creation. The rest is the same.<br>
+<br>
+So I would say Sandboxie 4.09.01 seems to be good enough to work with BSA.<br>
+<br>
+Anyway BSA development will continue stopped as TO-DO list is empty.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Tue Apr 22, 2014 8:08 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Released update 2 for version 1.88.<br>
+<br>
+The new update is available <a href="http://www.woodmann.com/virusbuster/bsa_188_update_2.rar" class="postlink">here</a>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Wed Apr 23, 2014 7:00 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Released update 3 for version 1.88.<br>
+<br>
+The new update is available <a href="http://www.woodmann.com/virusbuster/bsa_188_update_3.rar" class="postlink">here</a>.<br>
+<br>
+Changes:<br>
+<br>
++ Fixed a bug.<br>
+<br>
++ Fixed FileVersion information.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Thu Apr 24, 2014 4:31 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Released update 4 for version 1.88.<br>
+<br>
+The new update is available <a href="http://www.woodmann.com/virusbuster/bsa_188_update_4.rar" class="postlink">here</a>.<br>
+<br>
+Changes:<br>
+<br>
++ Fixed a bug related to "Take Screenshots" feature.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Fri May 02, 2014 2:20 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">After the fix made by Invincea team to injection mechanism I reconsidered my decission of discontinuing Buster Sandbox Analyzer development and decided to continue with the project, but I have been just fixing bugs because the TO-DO list was empty... until now.<br>
+<br>
+Reviewing Joe Security´s blog (<a href="http://joe4security.blogspot.com/" class="postlink">http://joe4security.blogspot.com</a>) I found two interesting articles:<br>
+<br>
+"Detect generically ransomware" (<a href="http://joe4security.blogspot.com.es/2013/04/generically-detecting-ransomware-with.html" class="postlink">http://joe4security.blogspot.com.es/201 ... -with.html</a>) and "Detecting malware by using the application icon" (<a href="http://joe4security.blogspot.com.es/2014/04/detecting-malware-by-using-application.html" class="postlink">http://joe4security.blogspot.com.es/201 ... ation.html</a>).<br>
+<br>
+The idea behind "Detect generically ransomware" is to extract keywords like "police", "ukash" or "paysafecard" from images (screenshots) using OCR technology and if keywords are found, make a generic malware detection.<br>
+<br>
+With this idea on mind I added a feature which works like that. Obviously the user must enable the feature which allows to take screenshots. Then you can enable the feature processing screenshots, extracting words using OCR technology and looking for keywords stored in database (OCR.DAT).<br>
+<br>
+The OCR technology is provided by Transym Computer Services through their software named TOCR. I decided to use it because it works better than other solutions and it provides a ready to use interface for Delphi.<br>
+<br>
+Pros of this approach: Feeding detection keywords is pretty simple. You just need to open a text editor and write keywords, one per line.<br>
+<br>
+Contras of this approach: OCR technology is not 100% accurate and depending of the screenshot more or less information can be retrieved.<br>
+<br>
+The idea behind "Detecting malware by using the application icon" is that some malware try to fool the user giving to executable files the icon of known applications like Word, Acrobat Reader, etc. You can take a look to an example here:<br>
+<br>
+<img src="../4.bp.blogspot.com/-giG276ZPYrQ/U0QTXz97GZI/AAAAAAAAAA8/4xQTV4bFrw0/s1600/Untitled.png" class="postimage" alt="Image"><br>
+<br>
+For this malware detection approach a special type of hash is required because a traditional hash like MD5 could be fooled very easily just changing the icon slightly. 1 different byte would mean a totally differente hash. Therefore the algorithm must be able to detect similar images.<br>
+<br>
+I decided to use pHash (perceptual hash) (<a href="http://phash.org/" class="postlink">http://phash.org/</a>) created by Evan Klinger, but I did not stop at Joe Security´s idea. I thought I could detect malwares not just comparing similar file icons, but also similar GUIs. So my idea was to implement pHash comparision for file icon but also for screenshots.<br>
+<br>
+Pros of this approach: Malwares showing same or similar GUIs will be detected. Also malwares having a misleading file icon will be detected too.<br>
+<br>
+Contras of this approach: The feature must be feeded with misleading file icons and known malware GUI screenshots, which represents a research work.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Sat May 03, 2014 10:56 am</strong></div>
+				<div class="author">by <strong>Bellzemos</strong></div>
+				<div class="content">I'm glad that you are continuing with the BSA project, thank you!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>61</strong> of <strong>64</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6557&start=900&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:25 GMT -->
+</html>

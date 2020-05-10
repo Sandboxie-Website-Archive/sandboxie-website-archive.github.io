@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25071&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:25:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; slow finish to downloading mp3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>slow finish to downloading mp3</h2>
+		<p><a href="viewtopic3da4-23da4.html?f=11&amp;t=25071">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25071</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>slow finish to downloading mp3</h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2017 5:52 pm</strong></div>
+				<div class="author">by <strong>yodar444</strong></div>
+				<div class="content">when i download an mp3 file it gets almost done and then sits there for minute or more before it finishes and i can open it. this started recently. this happens with both chrome and opera when i am running them in sbie. if i run them outside there is no delay.<br>
+<br>
+what would cause this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: slow finish to downloading mp3</h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2017 7:33 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist2b7d.html?mode=viewprofile&amp;u=1938">yodar444</a> wrote: <a href="viewtopic375d375d.html?p=130987#p130987" data-post-id="130987" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sat Nov 04, 2017 5:52 pm</div></cite>what would cause this?</div></blockquote>
+Your antivirus or another scanner, It could be the scanner scanning as the download ends. You might be able to confirm this by disabling the scanners and doing a few downloads. Why it doesnt happen outside the sandbox and only happens while using Sandboxie? Perhaps, an update by the AV, Sandboxie or Windows broke compatibility of the mix of security programs you are using with SBIE. This things can happen.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: slow finish to downloading mp3</h3>
+				<div class="date">Posted: <strong>Sun Nov 05, 2017 9:26 am</strong></div>
+				<div class="author">by <strong>yodar444</strong></div>
+				<div class="content">the only security sw i'm running is microsoft security essentials and it should affect both in and out of sandbox the same. it seems that sbie takes a long time to offer recovery now. since i am downloading podcasts that i just listen to once and discard, i never want recovery. is there some way to tell sbie to not offer recovery?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: slow finish to downloading mp3</h3>
+				<div class="date">Posted: <strong>Sun Nov 05, 2017 4:24 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist2b7d.html?mode=viewprofile&amp;u=1938">yodar444</a> wrote: <a href="viewtopicf964f964.html?p=130993#p130993" data-post-id="130993" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sun Nov 05, 2017 9:26 am</div></cite>
+the only security sw i'm running is microsoft security essentials and it should affect both in and out of sandbox the same. it seems that sbie takes a long time to offer recovery now. since i am downloading podcasts that i just listen to once and discard, i never want recovery. is there some way to tell sbie to not offer recovery?</div></blockquote>
+Microsoft security essential has a solid record working with Sandboxie, so thats not whats causing your problem. Other antiviruses could cause your issue though. They could take longer scanning when you running a program sandboxed than when is not running sandboxed. <br>
+<br>
+If you like to disable Immediate recovery (prompts by  Sandboxie that offer to recover after downloading a file), you can. Go to Sandbox settings&gt;Recovery&gt;Immediate recovery, uncheck "Enable Immediate Recovery". Hopefully it helps.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: slow finish to downloading mp3</h3>
+				<div class="date">Posted: <strong>Mon Nov 06, 2017 11:34 am</strong></div>
+				<div class="author">by <strong>yodar444</strong></div>
+				<div class="content">that was it. once i disabled recovery everything went back to normal, but i wonder what changed in sbie that caused this problem. i have been using it for years and never had the problem before the last few months. when it was stalled there was no significant increase in cpu or ram usage.<br>
+<br>
+tnx for the help.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: slow finish to downloading mp3</h3>
+				<div class="date">Posted: <strong>Mon Nov 06, 2017 12:17 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello yodar444  and Bo,<br>
+<br>
+I wonder if this is related to the SmartScreen changes... <br>
+<a href="../VersionChanges.html#v_5.22" class="postlink">https://www.sandboxie.com/VersionChanges#v_5.22</a><br>
+Implemented code fixes to address "SBIE2101" issues caused by Windows Defender "App &amp; Browser Control" in Windows 8.1 and 10 [If you are using the "Windows SmartScreen Template from Beta 5.21.7, you will need to remove it after installing Sandboxie 5.22].<br>
+<br>
+If you can provide the required information, I will test it:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Also, please be sure to test in a new Sandbox with default settings and let us know the outcome. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25071&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:25:02 GMT -->
+</html>

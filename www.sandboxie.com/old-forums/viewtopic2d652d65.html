@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=716&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:15:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Specify a folder not to sandbox?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Specify a folder not to sandbox?</h2>
+		<p><a href="viewtopic5d365d36.html?f=4&amp;t=716">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=716</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Specify a folder not to sandbox?</h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2006 2:42 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Hello,<br>
+<br>
+Maybe I'm and idiot and havenâ€™t seen this feature... But I am wondering if itâ€™s possible or if it could be implemented to have an option for internet explorer, FireFox...etc... To be able to save files to a custom folder say C:\Downloads and not have it automatically sandboxed? In other words when I erase the sandbox the files in "downloads" would still remain and be accessible as any other file (not sandboxed).<br>
+<br>
+Iâ€™ve had on a few occasions that I downloaded a file for later use (forgot) and than closed the sandbox erasing the contents only to realize I hadnâ€™t used the recover feature. I figure if a program were to be trying to "exploit" your computer it wouldnâ€™t really know of a non-standard folder (nor would it really care). <br>
+<br>
+Also now that I write this, what about the ability to right click and open file in an external application not sandboxed? Same type of idea as the above I suppose just an app not a folder.<br>
+<br>
+Anyway love the program,<br>
+<br>
+Thanks for all the hard work.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Specify a folder not to sandbox?</h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2006 5:09 am</strong></div>
+				<div class="author">by <strong>mizzmona</strong></div>
+				<div class="content"><blockquote><div><cite>Anonymous wrote:</cite>I am wondering if it’s possible... To be able to save files to a custom folder say C:\Downloads and not have it automatically sandboxed?</div></blockquote>
+<a href="../index413b.html?OpenFilePath" class="postlink">OpenFilePath</a> is what you want.<br>
+<br>
+-M</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2006 3:44 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Hello,<br>
+<br>
+Thanks for the reply. That helps a lot. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+I have one problem still however. <br>
+<br>
+I was able to get the "C:\Downloads" example to work fine. However I am unable to get a program to start outside the sandbox. <br>
+<br>
+I tried:<br>
+OpenFilePath=program.exe, pathtoprogram<br>
+as well as<br>
+OpenFilePath=program.exe<br>
+<br>
+Neither seemed to effect program.exe when loaded. <br>
+<br>
+I assume I'm just doing this wrong. <br>
+<br>
+The reason I am trying to do this is for programs such as external download managers or whatever that require direct access. So when the program is activated from my browser (which is sandboxed) I would like the spawned process not to be sandboxed.<br>
+<br>
+Please let me know,<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2006 3:50 pm</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content"><blockquote><div><cite>Anonymous wrote:</cite>However I am unable to get a program to start outside the sandbox. </div></blockquote>
+
+Unless you have set the program as a "forced" program in SandboxIE's config file or have started the program with "Run Sandboxed," the program will automatically run outside the sandbox.  SandboxIE only sandboxes programs which are specifically designated to run inside a sandbox.<br>
+<br>
+The OpenFilePath setting is a way of allowing programs which have been specifically designated to run in the sandbox to access (directly write to) directories or files outside the sandbox.<br>
+<br>
+Does that help? If I've missed you point, please give us some more information about what you want to do and we'll try to help further.<br>
+<br>
+SBIE (Happy) User</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2006 4:00 pm</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content"><blockquote><div><cite>Anonymous wrote:</cite>However I am unable to get a program to start outside the sandbox. <br>
+<br>
+I tried:<br>
+OpenFilePath=program.exe, pathtoprogram<br>
+as well as<br>
+OpenFilePath=program.exe<br>
+<br>
+Neither seemed to effect program.exe when loaded. </div></blockquote>
+
+Perhaps I misunderstood what you want to do.  If want you want to do is to allow a specific sandboxed program access to any folder or file on your hard drive, then you could use the following examples that allow Notepad to access any folder on drives C or E.  (This would only be necessary if Notepad is executed in a sandbox.  Otherwise, it has direct access to those drives anyway.)<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=notepad.exe,C:\
+OpenFilePath=notepad.exe,D:\
+</code></pre></div>
+
+Generally speaking, it is not a good idea to allow any sandboxed program to have such total access, as it defeats the purpose of SandboxIE.  In some cases, however, a user may choose to allow such access.  In any event, I would urge you not to grant such access to any web-based programs (browsers, email clients, etc.), as they pose the greatest risks when allowed complete access to write directly to your system.<br>
+<br>
+SBIE (Happy) User</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2006 4:03 pm</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content">Oops!  Wow, did I screw up.<br>
+<br>
+You should NOT use trailing slashes with OpenFilePath settings.<br>
+<br>
+The correct code in my message above should be<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=notepad.exe,C:
+OPenFilePath=notepad.exe,D:
+</code></pre></div>
+
+If you were to include the trailing slashes, the code would not work.<br>
+<br>
+Sorry for the confusion.<br>
+<br>
+SBIE (Happy) User</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2006 4:05 pm</strong></div>
+				<div class="author">by <strong>mizzmona</strong></div>
+				<div class="content"><blockquote><div><cite>Anonymous wrote:</cite>So when the program is activated from my browser (which is sandboxed) I would like the spawned process not to be sandboxed.</div></blockquote>
+Programs and associated files launched from <em>within</em> the sandbox environment will open sandboxed.  There is no setting or trick that will make it do otherwise, currently.<br>
+<br>
+You can give a sandboxed program direct access to all unsandboxed folders, but it defeats the purpose of the sandbox... as SBIE mentioned.<br>
+<br>
+-M</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2006 4:25 pm</strong></div>
+				<div class="author">by <strong>mizzmona</strong></div>
+				<div class="content"><blockquote><div><cite>mizzmona wrote:</cite><blockquote><div><cite>Anonymous wrote:</cite>So when the program is activated from my browser (which is sandboxed) I would like the spawned process not to be sandboxed.</div></blockquote>
+Programs and associated files launched from <em>within</em> the sandbox environment will open sandboxed.  There is no setting or trick that will make it do otherwise, currently.</div></blockquote>
+I should add, however, that something like IceSword <em>can</em> "bypass" the sandbox when run sandboxed, but only because it has kernel level drivers which were already running from outside the sandbox.  Not that I really recommend sandboxing programs that do that either, this is just for info purposes.  (See <a href="http://sandboxie.com/phpbb/viewtopic.php?t=590&amp;highlight=icesword" class="postlink">this thread</a>.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2006 7:17 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">hmm.. so from all this I grasp that it is not possible to unsandbox a spawned process. <br>
+<br>
+In my case, clicking a link on the web that utilizes an external program. I dont want this program sandboxed as it doesnt work properly (probably because of firewall restrictions). <br>
+<br>
+Ok well thank you all for your help and advice. If you have anything more to add please let me know. <br>
+<br>
+I shall just suggest as a feature in the future to be able to do this.  I know in the UNIx world "sandboxes" can use what are called 'symbolic links' to access external programs/files. Maybe there is something simular in Windows?<br>
+ <br>
+Thanks again for the help. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2006 7:46 pm</strong></div>
+				<div class="author">by <strong>SBIE User</strong></div>
+				<div class="content"><blockquote><div><cite>Anonymous wrote:</cite>hmm.. so from all this I grasp that it is not possible to unsandbox a spawned process. <br>
+<br>
+In my case, clicking a link on the web that utilizes an external program. I dont want this program sandboxed as it doesnt work properly (probably because of firewall restrictions). </div></blockquote>
+
+Correct, as mizzmona said, what you want to do is not currently possible under SandboxIE.<br>
+<br>
+There is a kind of work-around, but it's not very pretty.   <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> <br>
+<br>
+If you know you're planning to go to a web site that will spawn a program you don't want to run under the Sandbox, then open the browser outside the sandbox.  Assuming your browser is set as a forced program, you would right-click on the SandboxIE control icon in the Windows tray (looks like a slice of pizza with freckles) and select "Temporarily Disable Forced Programs" immediately before you launch your browser.  That way, your browser will launch outside the sandbox, and I think any program it spawns will also open outside the sandbox -- but you'll need to try that to see if it works for you.<br>
+<br>
+That's not a pretty work-around and means you won't have the protection of SandboxIE for your browser during that session, but it might work for occassional purposes.<br>
+<br>
+The biggest problem I have along the lines of your issue is when I try to run Windows updates from IE each week.  I have found that temporarily disabling IE using the method I described above does not work for the Windows update process -- so I have to edit my SandboxIE config file to comment out (#) the "ForceProcess=iexplore.exe" setting and reload the configuration.  Then I run Windows update from IE and after its done I go back and remove the # in front of the ForceProcess=iexplore.exe line and reload the config file.  That's a real pain, but I have not figureed out a better way to do it.<br>
+<br>
+Perhaps Tzuk will tell us there is an easy solution that we don't know about.  I'd love to be wrong about this!<br>
+<br>
+SBIE (Happy) User</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2006 10:47 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Haha I hope something can be resolved in the future as well. <br>
+<br>
+In the meantime I'll probably just copy the spawning links into a non sandboxed browser or something. <br>
+<br>
+Thanks again for your input. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=716&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:15:59 GMT -->
+</html>

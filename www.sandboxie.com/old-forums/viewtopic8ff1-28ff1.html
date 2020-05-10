@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25403&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:01:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Office 2007 - Unable to open documents directly [DUPLICATE]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Office 2007 - Unable to open documents directly [DUPLICATE]</h2>
+		<p><a href="viewtopic63dd63dd.html?f=11&amp;t=25403">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25403</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Office 2007 - Unable to open documents directly [DUPLICATE]</h3>
+				<div class="date">Posted: <strong>Mon Feb 05, 2018 2:44 am</strong></div>
+				<div class="author">by <strong>rinrin</strong></div>
+				<div class="content">Hi.<br>
+<br>
+I'm having some issues with Excel ever since I updated Windows and Sandboxie.<br>
+<br>
+OS: Windows 7 64-bit<br>
+Sandboxie 5.23.3 64-bit<br>
+MS Excel 2007<br>
+Issue: When I try to open an *.csv or *.xlsx file, nothing shows up. <br>
+<br>
+When it happens: This is where it gets tricky. It happens in certain conditions.<br>
+1. When I try to open the file through My Computer and right-click "Run Sandboxed".<br>
+2. When I download the file through an internet browser that is a forced program and open it from the browser's sandbox.<br>
+<br>
+When it doesn't happen:<br>
+1. When I open the file from a forced folder. Strangely enough, when I run Windows Explorer outside the sandbox but open a file from a forced folder, the file will open fine in the sandbox.<br>
+2. When I have MS Excel as a forced program and open the file from an unsandboxed Windows Explorer.<br>
+<br>
+This is an inconvenience really but it can be annoying. Hope you guys can look into this.<br>
+<br>
+<br>
+-------MERGED POST-------<br>
+I just checked with MS Word 2007, same issues. Haven't tried yet with other versions of MS Office applications.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2007 - Unable to open documents directly</h3>
+				<div class="date">Posted: <strong>Mon Feb 05, 2018 11:54 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello rinrin,<br>
+
+<blockquote class="uncited"><div>Issue: When I try to open an *.csv or *.xlsx file, nothing shows up. </div></blockquote>
+Meaning Excel doesn't start, or no file is shown inside Excel? <br>
+<br>
+If no file is shown inside Excel, this may be related to an existing issue with DDE:<br>
+<a href="viewtopic549a549a.html?f=11&amp;t=24845" class="postlink">viewtopic.php?f=11&amp;t=24845</a><br>
+<br>
+We do not test Office 2007, so I won't be able to replicate the issue. But here are some things to test:<br>
+Try a new Sandbox with default settings, try disabling any Antivirus software (if present). If you have any addons in Office 2007, try launching it without them and see if the problem persists. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2007 - Unable to open documents directly</h3>
+				<div class="date">Posted: <strong>Tue Feb 06, 2018 1:17 am</strong></div>
+				<div class="author">by <strong>rinrin</strong></div>
+				<div class="content">Hello Barb,<br>
+<br>
+Excel starts, but no file is shown inside Excel.<br>
+<br>
+Thanks for the link. I will look into the DDE issue. But this just started after I patched Windows and updated to the beta version.<br>
+<br>
+-rinrin</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2007 - Unable to open documents directly [DUPLICATE]</h3>
+				<div class="date">Posted: <strong>Sat Feb 10, 2018 2:03 am</strong></div>
+				<div class="author">by <strong>rinrin</strong></div>
+				<div class="content">I've tried the DDE workaround, but since it's not for MS Office 2007, had to do a little editing. Didn't work though or I didn't edit it right.<br>
+<br>
+Anyways, the problem persists only on MS Excel and Word when doing Click to Run or when opening from a browser. But it doesn't happen to MS Powerpoint or Publisher.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2007 - Unable to open documents directly [DUPLICATE]</h3>
+				<div class="date">Posted: <strong>Sat Feb 10, 2018 11:34 pm</strong></div>
+				<div class="author">by <strong>markhweiss</strong></div>
+				<div class="content">As someone tells all his customers to buy and use Sandboxie, I think Sandboxie should work with all currently supported Microsoft products because of macros.  It's a selling point I use to sell Sandboxie.  I have already had two customers with Word and Excel 2007 not work in Sandboxie.  Not protecting Word and Excel is a big deal and would make me look for something else because macro viruses are back.  Please, please, please don't blow this off.<br>
+<br>
+Bye the way, I'm automating PC installs.  Who do I talk to about silent installing Sandboxie including licensing and configurations and Sandboxie.ini changes I make for my customers.<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Office 2007 - Unable to open documents directly [DUPLICATE]</h3>
+				<div class="date">Posted: <strong>Mon Feb 12, 2018 11:16 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello markhweiss,<br>
+<br>
+Regarding Office 2007, please see:<br>
+<a href="https://support.microsoft.com/en-us/help/3198497/office-2007-approaching-end-of-extended-support" class="postlink">https://support.microsoft.com/en-us/hel ... ed-support</a><br>
+<br>
+The post is related to the fact that documents will not open directly in Sandboxed Office applications (so you have to run the Office app in the sandbox, and then use File--&gt; Open to access the desired files). That's a DDE issue, other than that, you should be able to use it in the Sandbox (ymmv). <br>
+<br>
+Regarding your other question:<br>
+<a href="../CorporateInstallation.html" class="postlink">https://www.sandboxie.com/CorporateInstallation</a><br>
+<a href="../CommercialUse" class="postlink">https://www.sandboxie.com/CommercialUse</a><br>
+<br>
+Regards,<br>
+Barb.-<br>
+<br>
+PS: Closing this thread as it is a duplicate.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25403&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:01:10 GMT -->
+</html>

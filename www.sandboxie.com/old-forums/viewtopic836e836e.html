@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=2959&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 10:04:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Multiprocessor and VT-x support?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Multiprocessor and VT-x support?</h2>
+		<p><a href="viewtopic36a336a3.html?f=4&amp;t=2959">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=2959</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Multiprocessor and VT-x support?</h3>
+				<div class="date">Posted: <strong>Fri Feb 29, 2008 8:39 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Something else (I don't remember what) got me thinking if either of these technologies are possible and or beneficial to Sandboxie.  What do you think tzuk?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Multiprocessor and VT-x support?</h3>
+				<div class="date">Posted: <strong>Fri Feb 29, 2008 8:49 pm</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content"><blockquote><div><cite>wraithdu wrote:</cite>Something else (I don't remember what) got me thinking if either of these technologies are possible and or beneficial to Sandboxie.  What do you think tzuk?</div></blockquote>
+Something else? It was probably either something you read about Vista, or it is Rash's post about that stupid idea by those Wilders morons about making a hypervisor based hips. <img class="smilies" src="images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 01, 2008 1:07 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Actually it was a BSOD crash I was having with VirtualBox.  I had VT-x enabled in the program, and my computer supports VT-x, but it hadn't enabled it in the BIOS yet.  I enabled it, and the crashes stopped <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+But yeah, that other stuff happened around the same time.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 01, 2008 4:09 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>wraithdu wrote:</cite>What do you think tzuk?</div></blockquote>
+
+I think it's very useful for platform virtualization, but pretty much useless for application virtualization a-la Sandboxie.  The point of the virtualization technology is to enable "the hardware virtualizing software" (e.g. VMware) to present a better "fake" CPU to the guest OS that it runs.  It matters to the guest OS because as an OS, it needs to manage hardware, including the CPU.  Sandboxie, on the other hand, manages the OS (or perhaps more correctly, the OS API interface) and has nothing to do with the hardware directly.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 01, 2008 4:24 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">That makes sense.<br>
+<br>
+What about multiprocessor (core2duo, etc) support?  Any advantage there?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 01, 2008 4:27 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question">  <img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 01, 2008 4:44 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">CPU's with more than one core, like the Intel Core2Duo's.  Apps without multiprocessor support can only use one core at a time.  Apps with support can use both at the same time (I think referrred to as multithreaded as well).  There are CPUs with 4 cores now as well (Intel QuadCore).  I was wondering if Sandboxie's performance could benefit from such support.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 02, 2008 5:45 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The answer is no, but this question is irrelevant.  A sandboxed application spends 2% of CPU time running Sandboxie code, and 98% of CPU time running application code.<br>
+<br>
+In any case multi-processing is useful where a large task can be broken into multiple execution units.  Sandboxie works in short bursts whenever it needs to do something on behalf of the application.  No sense breaking that up into multiple threads of execution.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 02, 2008 7:38 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">That's what I thought, so thanks for taking a minute to confirm <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Mar 03, 2008 1:07 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Glad to.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2008 10:20 pm</strong></div>
+				<div class="author">by <strong>Rasheed187</strong></div>
+				<div class="content"><blockquote class="uncited"><div>about that stupid idea by those Wilders morons about making a hypervisor based hips</div></blockquote>
+
+Can you perhaps tell me why you think that it´s a stupid idea? And FYI, a lot of those morons are fan of SBIE. <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz">  <br>
+
+<blockquote class="uncited"><div>Glad to. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div></blockquote>  <br>
+<br>
+@ Tzuk, can you perhaps reply to the questions in this thread? TIA  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> <br>
+<br>
+<a href="../phpbb/viewtopicd5f6.php?t=2901" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=2901</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2008 11:59 pm</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content"><blockquote><div><cite>Rasheed187 wrote:</cite>Can you perhaps tell me why you think that it´s a stupid idea? And FYI, a lot of those morons are fan of SBIE. <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> </div></blockquote>
+I don't think it is stupid idea, it just <em>is</em> a stupid idea...<br>
+<br>
+I mean, it is like flying cars, sounds like a cool idea, but in reality it would suck, be dangerous, complicated, impractical, etc..<br>
+<br>
+Also, it's true that many morons use Sandboxie, however those Wilders fanboys are so moronic they don't even have the right idea about sandboxie, or how it works, or how to use a certain function, or how to set x up, or how well sandboxie could defend against this or that, etc..<br>
+I constantly have to step in and correct them, and then ofcourse, they shut up after I straighten them out. <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 05, 2008 6:18 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>Rasheed187 wrote:</cite>@ Tzuk, can you perhaps reply to the questions in this thread? TIA  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"><br>
+<a href="../phpbb/viewtopicd5f6.php?t=2901" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=2901</a></div></blockquote>
+
+No.  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 05, 2008 9:02 am</strong></div>
+				<div class="author">by <strong>Rasheed187</strong></div>
+				<div class="content"><blockquote class="uncited"><div>No</div></blockquote>
+
+I already had a feeling that you might say this, but can you perhaps explain why? Is this top secret stuff or something? I mean, I´m just an amateur, but I´m sure that hackers already have the answer to the first 2 questions, so I don´t see why you can´t answer them. And what about my third question, about the hypervisor HIPS?  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+
+<blockquote class="uncited"><div>I don't think it is stupid idea, it just is a stupid idea... </div></blockquote>
+
+Well, personally I don´t have the technical knowledge to be so sure if it´s really such a bad idea, or if it´s even possible in the first place. But if folks can make the Blue Pill rootkit, you would think that such tech can also be used by HIPS. Actually, HyperSight already acts like a HIPS. Of course, the tech still needs to be improved. <br>
+<br>
+The problem right now is that, if you allow certain stuff (or if HIPS is bypassed) malware can take complete control, and kill all security tools, including Sandboxie. But if there is always some security tool running in the lowest layer (acting as hypervisor), this ain´t (or shouldn´t be) possible. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Mar 05, 2008 9:52 am</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content"><blockquote><div><cite>Rasheed187 wrote:</cite>Well, personally I don´t have the technical knowledge to be so sure if it´s really such a bad idea, or if it´s even possible in the first place. But if folks can make the Blue Pill rootkit, you would think that such tech can also be used by HIPS. Actually, HyperSight already acts like a HIPS. Of course, the tech still needs to be improved. <br>
+<br>
+The problem right now is that, if you allow certain stuff (or if HIPS is bypassed) malware can take complete control, and kill all security tools, including Sandboxie. But if there is always some security tool running in the lowest layer (acting as hypervisor), this ain´t (or shouldn´t be) possible. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div></blockquote>
+Here, let me tell you what it is that is really grinding my nerves.<br>
+The fact that it is not a "true" hardware hips...<br>
+<br>
+It would be like developing a program that uses your eth0 as a firewall, thats dumb, just use a software firewall, or a real hardware firewall instead.<br>
+<br>
+Another thing I don't like about Hypersight (think thats what it's called) is that although it is using a part of your hardware (hypervisor) to act as an hips, in the end, hypersight itself is still software though, not hardware...<br>
+<br>
+If it was a true hardware hips, then it would be virtually imprenatatable, but since hypersight is software, a piece of code could exploit hypersight, disable it, and now you are unsecured, something that would be nearly impossible if you were using a hardware hips instead, see what I mean?</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=2959&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 10:04:51 GMT -->
+</html>

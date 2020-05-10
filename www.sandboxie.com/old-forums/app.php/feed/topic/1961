@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/1961" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2007-08-25T13:12:17-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/1961</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2007-08-25T13:12:17-04:00</updated>
+
+		<published>2007-08-25T13:12:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=1961&amp;p=10986#p10986</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=1961&amp;p=10986#p10986"/>
+		<title type="html"><![CDATA[Read Me First]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=1961&amp;p=10986#p10986"><![CDATA[
+Sandboxie can and should be translated to languages other than English.<br><br>Any help with translations must be <em>contributed</em> to me, and contributers must <em>waive their copyright</em> to the strings they contribute.  If you don't like these terms, please don't help.<br><br>* * * <br><br>If you just want to translate one or a few messages, please see the Translation Status topic for the specific language, and post your changes.  Thanks!<br><br>* * *<br><br>Before you can a complete translation, you will need the English messages as a base of translation.  Download it here:<br><br><a href="http://www.sandboxie.com/i18n/SbieText.zip" class="postlink">http://www.sandboxie.com/i18n/SbieText.zip</a><br><br>What to do:<br><br>1.  Right-click "Save as" on the link above and extract the file Text-English-1033.txt.<br><br>2.  Once extracted, make a second copy of the file, named with the appropriate language.  For example, Text-Latin-7777.txt.  You can use made up numbers like 7777 if you don't know the language number in Windows.  I will take care of that later on.<br><br>3.  The new file Text-Latin-7777.txt is composed of these kinds of stuff:<br><br>Comment lines that begin with #.  These are there just to make the file look more organized.  You should probably keep them in the copied file.<br><br>Message identification lines begin with a number followed by a semicolon.  For example, 1101;evt;inf;01.  These lines must not changed at all!<br><br>Finally, the text to translate, which begins immediately following a message identification line and ends with a line containing a single dot.<br><br>* * *<br><br>Now suppose you just copied Text-English-1033.txt to Text-Latin-7777.txt and you are about to translate Sandboxie to latin.  Open the new Text-Latin-7777.txt in Notepad and you should see something like this.<br><div class="codebox"><p>CODE: </p><pre><code>#----------------------------------------------------------------------------# SbieDrv## Initialization errors issued to to the System event Log#----------------------------------------------------------------------------1101;evt;inf;01SBIE1101 Sandboxie driver (SbieDrv) version %2 initialized.1102;evt;inf;01SBIE1102 Sandboxie driver (SbieDrv) unloading.</code></pre></div>As suggested above, ignore lines that begin with #, and the message identification lines.  This means you translate just the text, in this case that is lines 8 and 12.<br><br>When you are done translating, please send me the translated file.<br><br>* * * <br><br>Once you have created a translation for some language, I will open a topic in this forum that will reflect the status of your translation compared to the base English text.  As the base English text gets revisions from time to time, the status of the non-English translation will be updated in the related topic.<br><br>* * *<br><br>After I have built a version of Sandboxie that integrates the new language translation, you can build your own SbieMsg.dll file to test additions to or corrections for the translation.  Instructions for setting up the build environment are detailed in the following page.<br><br><a href="http://www.sandboxie.com/index.php?BuildingSbieMsgDll" class="postlink">http://www.sandboxie.com/index.php?BuildingSbieMsgDll</a><br><br>* * *<br><br>Thanks.  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sat Aug 25, 2007 1:12 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

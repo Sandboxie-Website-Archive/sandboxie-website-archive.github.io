@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?p=131099 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:47:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Firefox 57/58 Crashes Immediately When Run inside Sandboxie - Sandboxie Support</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - Sandboxie Support" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="app.php/feed/topics_active">			
+	<link rel="canonical" href="viewtopicc453c453.html?t=25095">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="assets/css/font-awesome.mince91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/en/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/sbie_prosilver/theme/tweaks.css?assets_version=7" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="../index.html" title="Home"><span class="site_logo"></span></a>
+				<h1>Sandboxie Support</h1>
+				<p>Support Forum for Sandboxie</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									<div id="search-box" class="search-box search-header" role="search">
+				<form action="https://forums.sandboxie.com/phpBB3/search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+					<button class="button button-search" type="submit" title="Search">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+					</button>
+					<a href="search.html" class="button button-search-end" title="Advanced search">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+					</a>
+					
+				</fieldset>
+				</form>
+			</div>
+						
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a733a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+																			<li>
+								<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp26c326c3.html?mode=login" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp83198319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs">
+							<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="../index.html" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">Home</span></a></span>
+										<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="index-2.html" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Board index</span></a></span>
+
+											<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="43"><a href="viewforum107e107e.html?f=43" itemprop="url"><span itemprop="title">Problems and Questions</span></a></span>
+															<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="11"><a href="viewforum8a838a83.html?f=11" itemprop="url"><span itemprop="title">Problem Reports</span></a></span>
+												</li>
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="viewtopicc8bbc8bb.html?f=11&amp;t=25095">Firefox 57/58 Crashes Immediately When Run inside Sandboxie</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Please post your problem description here<br /></div>
+<p>
+	<strong>Moderator:</strong> <a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>
+</p>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="https://www.sandboxie.com/old-forums/postingcca6.html?mode=reply&amp;f=11&amp;t=25095" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic63086308.html?f=11&amp;t=25095&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://forums.sandboxie.com/phpBB3/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="25095" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			51 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic6c206c20.html?f=11&amp;t=25095&amp;start=15" role="button">2</a></li>
+				<li><a class="button" href="viewtopic20bd20bd.html?f=11&amp;t=25095&amp;start=30" role="button">3</a></li>
+				<li><a class="button" href="viewtopicc243c243.html?f=11&amp;t=25095&amp;start=45" role="button">4</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic6c206c20.html?f=11&amp;t=25095&amp;start=15" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p131074" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131074">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistd93d.html?mode=viewprofile&amp;u=14883" class="username">peternm22</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb61cb61c.html?author_id=14883&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Apr 10, 2013 10:50 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131074">
+
+						<h3 class="first"><a href="#p131074">Firefox 57/58 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting4f91.html?mode=quote&amp;f=11&amp;p=131074" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic891e891e.html?p=131074#p131074" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistd93d.html?mode=viewprofile&amp;u=14883" class="username">peternm22</a></strong> &raquo; </span>Mon Nov 13, 2017 9:13 pm
+			</p>
+			
+			
+			
+			<div class="content">Firefox has put up the binaries for Firefox 57 already (due for official release tomorrow), so I decided to give it whirl since it's suppose to be a really big upgrade.<br>
+<br>
+As soon as I launch Firefox inside Sandboxie, I get a message saying my Firefox tab just crashed, and an error from Sandboxie (it looks like Firefox is trying to run a debug app on the crash, but I don't have that .exe whitelisted). It's impossible to navigate anywhere, I just get a new crash message whenever I try a new site.<br>
+<br>
+Anyone else seeing this? I'm running the latest version of Sandboxie (5.22) on Windows 10 64 bit (fully patched, including Fall Creators Update).<br>
+<br>
+Firefox runs without a single issue outside of Sandboxie (it's what I'm using to post this right now).<br>
+<br>
+See the attached image from a screenshot of the error(s).</div>
+
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file1a5c1a5c.png?id=1284" class="postimage" alt="Image1.png" onclick="viewableArea(this);" /></dt>
+						<dd>Image1.png (55.48 KiB) Viewed 7717 times</dd>
+		</dl>
+		
+		
+		
+			</dd>
+									</dl>
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131076" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131076">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistd93d.html?mode=viewprofile&amp;u=14883" class="username">peternm22</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb61cb61c.html?author_id=14883&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Apr 10, 2013 10:50 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131076">
+
+						<h3 ><a href="#p131076">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting7856.html?mode=quote&amp;f=11&amp;p=131076" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica592a592.html?p=131076#p131076" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistd93d.html?mode=viewprofile&amp;u=14883" class="username">peternm22</a></strong> &raquo; </span>Mon Nov 13, 2017 9:23 pm
+			</p>
+			
+			
+			
+			<div class="content">I thought it may have been one of the restrictions I had applied on that Sandbox, so I created a new Sandbox and left all of the settings at the defaults. Running Firefox within the new Sandbox still results in the same tab crashes.<br>
+<br>
+----------------MERGED POST------------------------------<br>
+New Firefox profile doesn't fix this either.</div>
+
+			
+													<div class="notice">
+					Last edited by <a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a> on Tue Nov 14, 2017 11:26 am, edited 1 time in total.
+					<br /><strong>Reason:</strong> <em>Double posting</em>				</div>
+			
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131080" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131080">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistef77.html?mode=viewprofile&amp;u=2542" class="username">bo.elam</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Guru<br /><img src="images/ranks/gradient/blue/blue-guru.png" alt="Sandboxie Guru" title="Sandboxie Guru" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search73c073c0.html?author_id=2542&amp;sr=posts">2809</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Apr 22, 2009 9:17 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131080">
+
+						<h3 ><a href="#p131080">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postinge51d.html?mode=quote&amp;f=11&amp;p=131080" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopice059e059.html?p=131080#p131080" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistef77.html?mode=viewprofile&amp;u=2542" class="username">bo.elam</a></strong> &raquo; </span>Mon Nov 13, 2017 11:18 pm
+			</p>
+			
+			
+			
+			<div class="content">Hi Peter, I dont know, maybe your antivirus is causing the issue or an addon you are using is conflicting. But I can tell you, I tested Firefox 57 and 58 a few times this past few weeks in W10 1709 64 bits, and every time the browser worked very well with Sandboxie. Earlier today I tested 57 and all was well, including watching videos in YouTube.<br>
+<br>
+Bo</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131081" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131081">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistd93d.html?mode=viewprofile&amp;u=14883" class="username">peternm22</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb61cb61c.html?author_id=14883&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Apr 10, 2013 10:50 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131081">
+
+						<h3 ><a href="#p131081">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting4815.html?mode=quote&amp;f=11&amp;p=131081" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd452d452.html?p=131081#p131081" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistd93d.html?mode=viewprofile&amp;u=14883" class="username">peternm22</a></strong> &raquo; </span>Mon Nov 13, 2017 11:49 pm
+			</p>
+			
+			
+			
+			<div class="content">So it sounds like it must be something with my configuration then. I only use the built in Windows Defender antivirus (nothing 3rd party). Also, the new Firefox profile I created didn't have any addons since it was a fresh profile.<br>
+<br>
+Are you just using the default Sandboxie settings? Or have you tweaked anything?<br>
+<br>
+Thanks.<br>
+<br>
+-----------MERGED POST-----<br>
+I did some more playing around, and it will load sites about every 1/10 times. If I keep trying to load the same page, it will eventually load. If I then try to refresh it, I get the tab crashed message again.<br>
+<br>
+I uninstalled Flash on the off chance that was causing a problem, no change.<br>
+<br>
+I also whitelisted a bunch of .exe files in the Firefox folder under start/run and internet restrictions in Sandboxie, still no change.</div>
+
+			
+													<div class="notice">
+					Last edited by <a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a> on Tue Nov 14, 2017 11:26 am, edited 1 time in total.
+					<br /><strong>Reason:</strong> <em>Double posting</em>				</div>
+			
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131085" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131085">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistef77.html?mode=viewprofile&amp;u=2542" class="username">bo.elam</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Guru<br /><img src="images/ranks/gradient/blue/blue-guru.png" alt="Sandboxie Guru" title="Sandboxie Guru" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search73c073c0.html?author_id=2542&amp;sr=posts">2809</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Apr 22, 2009 9:17 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131085">
+
+						<h3 ><a href="#p131085">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting1317.html?mode=quote&amp;f=11&amp;p=131085" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicfc33fc33.html?p=131085#p131085" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistef77.html?mode=viewprofile&amp;u=2542" class="username">bo.elam</a></strong> &raquo; </span>Tue Nov 14, 2017 2:00 am
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistd93d.html?mode=viewprofile&amp;u=14883">peternm22</a> wrote: <a href="viewtopicd452d452.html?p=131081#p131081" data-post-id="131081" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Nov 13, 2017 11:49 pm</div></cite>
+So it sounds like it must be something with my configuration then. I only use the built in Windows Defender antivirus (nothing 3rd party). Also, the new Firefox profile I created didn't have any addons since it was a fresh profile.<br>
+<br>
+Are you just using the default Sandboxie settings? Or have you tweaked anything?<br>
+<br>
+Thanks.
+</div></blockquote>
+Windows defender should be fine. I tested running an installer in a sandbox, so always used a default settings sandbox. <br>
+<br>
+Bo</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131091" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131091">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist09b7.html?mode=viewprofile&amp;u=24478" class="username">Aya_Tachibana</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc836c836.html?author_id=24478&amp;sr=posts">9</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Sep 24, 2014 1:15 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131091">
+
+						<h3 ><a href="#p131091">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postinga160.html?mode=quote&amp;f=11&amp;p=131091" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd0ced0ce.html?p=131091#p131091" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist09b7.html?mode=viewprofile&amp;u=24478" class="username">Aya_Tachibana</a></strong> &raquo; </span>Tue Nov 14, 2017 10:58 am
+			</p>
+			
+			
+			
+			<div class="content">Just tested today, with the oficial release of the Firefox 57, and it still crashes the tab (can't open any tab).<br>
+<br>
+Using Windows 10 Fully updated (including FCU), and updated Sandboxie.<br>
+I tried deleting the extensions, but it still doesn't work.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131093" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131093">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Support<br /><img src="images/ranks/gloss/yellow/yellow-supportteam.png" alt="Sandboxie Support" title="Sandboxie Support" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchdf5ddf5d.html?author_id=32296&amp;sr=posts">2337</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 07, 2016 3:10 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131093">
+
+						<h3 ><a href="#p131093">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting8a19.html?mode=quote&amp;f=11&amp;p=131093" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic9c199c19.html?p=131093#p131093" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a></strong> &raquo; </span>Tue Nov 14, 2017 11:24 am
+			</p>
+			
+			
+			
+			<div class="content">All,<br>
+<br>
+I am unable to reproduce the issue on Windows 10 x64 + FF 57. <br>
+Have you deleted the contents of your Sandbox prior to launching the new version of Firefox?<br>
+<br>
+Can you please try the following:<br>
+Create a new Sandbox with default settings (do not copy settings from another box) <br>
+Try launching Firefox <br>
+<br>
+If that fails, launch Firefox outside Sandboxie <br>
+Type about:config<br>
+Search sandbox<br>
+Change security.sandbox.content.level to 2 or less<br>
+Re-try launching Firefox in Sandboxie  (if the behavior continues, revert the changes).<br>
+<br>
+Can I also get a copy of your Sandboxie configuration? <br>
+Configure--&gt; Edit Configuration<br>
+Copy/paste the contents in the forum<br>
+Highlight the output and click the "&lt;/&gt;" button to format them. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131094" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131094">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist09b7.html?mode=viewprofile&amp;u=24478" class="username">Aya_Tachibana</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc836c836.html?author_id=24478&amp;sr=posts">9</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Sep 24, 2014 1:15 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131094">
+
+						<h3 ><a href="#p131094">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting9b43.html?mode=quote&amp;f=11&amp;p=131094" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicfcfcfcfc.html?p=131094#p131094" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist09b7.html?mode=viewprofile&amp;u=24478" class="username">Aya_Tachibana</a></strong> &raquo; </span>Tue Nov 14, 2017 11:45 am
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic9c199c19.html?p=131093#p131093" data-post-id="131093" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Nov 14, 2017 11:24 am</div></cite>
+All,<br>
+<br>
+I am unable to reproduce the issue on Windows 10 x64 + FF 57. <br>
+Have you deleted the contents of your Sandbox prior to launching the new version of Firefox?<br>
+<br>
+Can you please try the following:<br>
+Create a new Sandbox with default settings (do not copy settings from another box) <br>
+Try launching Firefox <br>
+<br>
+If that fails, launch Firefox outside Sandboxie <br>
+Type about:config<br>
+Search sandbox<br>
+Change security.sandbox.content.level to 2 or less<br>
+Re-try launching Firefox in Sandboxie  (if the behavior continues, revert the changes).<br>
+<br>
+Can I also get a copy of your Sandboxie configuration? <br>
+Configure--&gt; Edit Configuration<br>
+Copy/paste the contents in the forum<br>
+Highlight the output and click the "&lt;/&gt;" button to format them. <br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+<br>
+Yes, I already tried to delete the sandbox contentes before opening the program, but no sucess.<br>
+<br>
+I tried creating a new sandbox, but still doesn't work.<br>
+<br>
+Changing the values of security.sandbox.content.level to 2 or 1 actually worked! Nice!<br>
+Is changing that value to something less than 3 a security risk?<br>
+<br>
+Here is my Sandboxie Configuration:<br>
+<br>
+I use Firefox with the NormalBox.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=OfficeClickToRun
+Template=WindowsRasMan
+Template=7zipShellEx
+Template=Avast_Antivirus
+Template=WindowsLive
+Template=OfficeLicensing
+
+[UserSettings_086401B3]
+
+SbieCtrl_UserName=hiro
+SbieCtrl_NextUpdateCheck=1511277694
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_WindowCoords=200,140,1068,417
+SbieCtrl_ActiveView=40021
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_SettingChangeNotify=n
+SbieCtrl_EnableLogonStart=n
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=n
+SbieCtrl_AddQuickLaunchIcon=n
+SbieCtrl_AddContextMenu=y
+SbieCtrl_AddSendToMenu=y
+SbieCtrl_BoxExpandedView=NormalBox,TorrentBox
+
+[TorrentBox]
+
+ConfigLevel=7
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+BorderColor=#FF8000
+Enabled=y
+AutoDelete=y
+NeverDelete=n
+CopyLimitKb=491520
+CopyLimitSilent=y
+BoxNameTitle=n
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+ForceProcess=opera_autoupdate.exe
+ForceProcess=opera.exe
+ForceProcess=qbittorrent.exe
+ForceProcess=qbitto~1.exe
+ForceFolder=C:\Users\Hiro\Secure Testing
+ForceFolder=C:\Users\Hiro\AppData\Local\Programs\Opera
+
+[NormalBox]
+
+ConfigLevel=7
+Template=Chrome_Profile_DirectAccess
+Template=Chrome_Sync_DirectAccess
+Template=Chrome_Preferences_DirectAccess
+Template=Chrome_Passwords_DirectAccess
+Template=Chrome_Cookies_DirectAccess
+Template=Chrome_History_DirectAccess
+Template=Chrome_Bookmarks_DirectAccess
+Template=Chrome_Force
+Template=Firefox_Profile_DirectAccess
+Template=Firefox_Session_DirectAccess
+Template=Firefox_Passwords_DirectAccess
+Template=Firefox_Cookies_DirectAccess
+Template=Firefox_Bookmarks_DirectAccess
+Template=Firefox_Force
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+BorderColor=#FFFF00,off
+Enabled=y
+NeverDelete=n
+CopyLimitKb=49152
+CopyLimitSilent=y
+BoxNameTitle=-
+RecoverFolder=%My Video%
+RecoverFolder=%My Music%
+RecoverFolder=%My Pictures%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%</code></pre></div></div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131095" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131095">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Support<br /><img src="images/ranks/gloss/yellow/yellow-supportteam.png" alt="Sandboxie Support" title="Sandboxie Support" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchdf5ddf5d.html?author_id=32296&amp;sr=posts">2337</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 07, 2016 3:10 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131095">
+
+						<h3 ><a href="#p131095">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting3ba4.html?mode=quote&amp;f=11&amp;p=131095" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8fd08fd0.html?p=131095#p131095" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a></strong> &raquo; </span>Tue Nov 14, 2017 12:16 pm
+			</p>
+			
+			
+			
+			<div class="content"><blockquote class="uncited"><div>Changing the values of security.sandbox.content.level to 2 or 1 actually worked! Nice!</div></blockquote>
+
+Please see these threads for related issues involving sandbox.content.level:<br>
+<a href="search860d860d.html?keywords=security.sandbox.content.level" class="postlink">search.php?keywords=security.sandbox.content.level</a><br>
+<br>
+There are some issues that come up if security.sandbox.content.level is set to 3. However, for me on Win 10 x64, it works fine with level 3. Seems to be "random" ...Still investigating.<br>
+<br>
+For the time being, the workaround should do the trick. Here's more info:<br>
+<a href="viewtopica1b7a1b7.html?p=130611#p130611" class="postlink">viewtopic.php?p=130611#p130611</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131096" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131096">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistbc1d.html?mode=viewprofile&amp;u=34842" class="username">d1312r32f1r3211</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchef7fef7f.html?author_id=34842&amp;sr=posts">2</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Nov 14, 2017 12:07 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131096">
+
+						<h3 ><a href="#p131096">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingb7d3.html?mode=quote&amp;f=11&amp;p=131096" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica7f2a7f2.html?p=131096#p131096" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistbc1d.html?mode=viewprofile&amp;u=34842" class="username">d1312r32f1r3211</a></strong> &raquo; </span>Tue Nov 14, 2017 12:23 pm
+			</p>
+			
+			
+			
+			<div class="content">Exactly same situation here. There seems to be multiple Firefox processes that pop up (and dissappear as soon a tab crashes) when I open a new tab. I'm not sure if they have anything to do with the problem, but I haven't seen similiar behavior before.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131097" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131097">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Support<br /><img src="images/ranks/gloss/yellow/yellow-supportteam.png" alt="Sandboxie Support" title="Sandboxie Support" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchdf5ddf5d.html?author_id=32296&amp;sr=posts">2337</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 07, 2016 3:10 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131097">
+
+						<h3 ><a href="#p131097">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting4f54.html?mode=quote&amp;f=11&amp;p=131097" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica75ba75b.html?p=131097#p131097" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a></strong> &raquo; </span>Tue Nov 14, 2017 12:25 pm
+			</p>
+			
+			
+			
+			<div class="content">d1312r32f1r3211 ,<br>
+<br>
+Did you try the steps and the workaround I provided above? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131098" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131098">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistccd7.html?mode=viewprofile&amp;u=408" class="username">howiem</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb449b449.html?author_id=408&amp;sr=posts">112</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jul 25, 2006 4:41 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Thailand</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131098">
+
+						<h3 ><a href="#p131098">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingaa80.html?mode=quote&amp;f=11&amp;p=131098" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic57ce57ce.html?p=131098#p131098" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistccd7.html?mode=viewprofile&amp;u=408" class="username">howiem</a></strong> &raquo; </span>Tue Nov 14, 2017 12:30 pm
+			</p>
+			
+			
+			
+			<div class="content">This worked for me using <br>
+Windows 7  Ultimate 32bit, <br>
+Sandboxie 5.22, <br>
+Firefox 57 (Quantum), <br>
+Microsoft  Security Essentials Antimalware Client Version: 4.10.209.0<br>
+Engine Version: 1.1.14306.0<br>
+Antivirus definition: 1.257.459.0<br>
+Antispyware definition: 1.257.459.0<br>
+Network Inspection System Engine Version: 2.1.14202.0<br>
+Network Inspection System Definition Version: 118.1.0.0<br>
+<br>
+Found these in the Mozilla forum : <br>
+<a href="http://www.ghacks.net/2016/07/22/multi-process-firefox/" class="postlink">http://www.ghacks.net/2016/07/22/multi-process-firefox/</a><br>
+<a href="https://support.mozilla.org/en-US/questions/1175046" class="postlink">https://support.mozilla.org/en-US/questions/1175046</a><br>
+<a href="https://support.mozilla.org/en-US/questions/1159697" class="postlink">https://support.mozilla.org/en-US/questions/1159697</a><br>
+So I <br>
+1. Typed about:config&lt;enter&gt; in the FF 57 address bar. When the<br>
+warning screen came up, press the 'I will  Be Careful' button.<br>
+At the top of the about:config page is a search bar.<br>
+2. Type in browser.tabs.remote.autostart and make sure it says false, and if not toggle it to false by double clicking the item.<br>
+3. Type in browser.tabs.remote.autostart.2 and make sure it says false, and if not toggle it to false by double clicking the item.<br>
+See the attachment<br>
+<strong><em><span style="color: #FF0000">Restart Firefox 57</span></em></strong><br>
+I have not  had any performance issues since I did the above actions, although it is possible that FF would work even faster with multiprocessing enabled, but apparently not on my computer.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131099" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131099">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist09b7.html?mode=viewprofile&amp;u=24478" class="username">Aya_Tachibana</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc836c836.html?author_id=24478&amp;sr=posts">9</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Sep 24, 2014 1:15 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131099">
+
+						<h3 ><a href="#p131099">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postinga31a-2.html?mode=quote&amp;f=11&amp;p=131099" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd9ded9de.html?p=131099#p131099" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist09b7.html?mode=viewprofile&amp;u=24478" class="username">Aya_Tachibana</a></strong> &raquo; </span>Tue Nov 14, 2017 12:34 pm
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic8fd08fd0.html?p=131095#p131095" data-post-id="131095" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Nov 14, 2017 12:16 pm</div></cite>
+<blockquote class="uncited"><div>Changing the values of security.sandbox.content.level to 2 or 1 actually worked! Nice!</div></blockquote>
+
+Please see these threads for related issues involving sandbox.content.level:<br>
+<a href="search860d860d.html?keywords=security.sandbox.content.level" class="postlink">search.php?keywords=security.sandbox.content.level</a><br>
+<br>
+There are some issues that come up if security.sandbox.content.level is set to 3. However, for me on Win 10 x64, it works fine with level 3. Seems to be "random" ...Still investigating.<br>
+<br>
+For the time being, the workaround should do the trick. Here's more info:<br>
+<a href="viewtopica1b7a1b7.html?p=130611#p130611" class="postlink">viewtopic.php?p=130611#p130611</a><br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+Thank you for the information.<br>
+<br>
+Since we still don't know the reason for the malfunction, I will post here some info about my computer (maybe it have something to do with it):<br>
+<br>
+OS: Windows 10 - 64 Bits (16299.19)<br>
+CPU: Intel Core i5-4200U<br>
+RAM: 8GB<br>
+SSD: 128GB<br>
+GPU: Nvidia Geforce 740M - 2GB<br>
+AV: Avast Internet Security<br>
+
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistccd7.html?mode=viewprofile&amp;u=408">howiem</a> wrote: <a href="viewtopic57ce57ce.html?p=131098#p131098" data-post-id="131098" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Nov 14, 2017 12:30 pm</div></cite>
+This worked for me using <br>
+Windows 7  Ultimate 32bit, <br>
+Sandboxie 5.22, <br>
+Firefox 57 (Quantum), <br>
+Microsoft  Security Essentials Antimalware Client Version: 4.10.209.0<br>
+Engine Version: 1.1.14306.0<br>
+Antivirus definition: 1.257.459.0<br>
+Antispyware definition: 1.257.459.0<br>
+Network Inspection System Engine Version: 2.1.14202.0<br>
+Network Inspection System Definition Version: 118.1.0.0<br>
+<br>
+Found these in the Mozilla forum : <br>
+<a href="http://www.ghacks.net/2016/07/22/multi-process-firefox/" class="postlink">http://www.ghacks.net/2016/07/22/multi-process-firefox/</a><br>
+<a href="https://support.mozilla.org/en-US/questions/1175046" class="postlink">https://support.mozilla.org/en-US/questions/1175046</a><br>
+<a href="https://support.mozilla.org/en-US/questions/1159697" class="postlink">https://support.mozilla.org/en-US/questions/1159697</a><br>
+So I <br>
+1. Typed about:config&lt;enter&gt; in the FF 57 address bar. When the<br>
+warning screen came up, press the 'I will  Be Careful' button.<br>
+At the top of the about:config page is a search bar.<br>
+2. Type in browser.tabs.remote.autostart and make sure it says false, and if not toggle it to false by double clicking the item.<br>
+3. Type in browser.tabs.remote.autostart.2 and make sure it says false, and if not toggle it to false by double clicking the item.<br>
+See the attachment<br>
+<strong><em><span style="color: #FF0000">Restart Firefox 57</span></em></strong><br>
+I have not  had any performance issues since I did the above actions, although it is possible that FF would work even faster with multiprocessing enabled, but apparently not on my computer.
+</div></blockquote>
+
+Thsi actually worked here too. Nice.<br>
+For me, the browser.tabs.remote.autostart was set to false and  browser.tabs.remote.autostart.2 was set to true. Now both of them are false and Firefox works.<br>
+<br>
+EDIT: After checking that it worked, I changed to the default values, and look, even if browser.tabs.remote.autostart.2 is true and security.sandbox.content.level is set to 3, now Firefox Works in the sandbox. The only strange thins is that browser.tabs.remote.autostart.2 is set as a string, and not as a boolean, and I don't know if that will make any difference.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131100" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131100">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistbc1d.html?mode=viewprofile&amp;u=34842" class="username">d1312r32f1r3211</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchef7fef7f.html?author_id=34842&amp;sr=posts">2</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Nov 14, 2017 12:07 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131100">
+
+						<h3 ><a href="#p131100">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingdaae.html?mode=quote&amp;f=11&amp;p=131100" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicfd31fd31.html?p=131100#p131100" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistbc1d.html?mode=viewprofile&amp;u=34842" class="username">d1312r32f1r3211</a></strong> &raquo; </span>Tue Nov 14, 2017 1:08 pm
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopica75ba75b.html?p=131097#p131097" data-post-id="131097" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Nov 14, 2017 12:25 pm</div></cite>
+d1312r32f1r3211 ,<br>
+<br>
+Did you try the steps and the workaround I provided above? <br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+Yes, with similiar results as Aya_Tachibana had.<br>
+<br>
+In my Sandboxie Control I have 5 firefox.exe processes running at the same time. The first one is regular Firefox process and the rest are without icons or tittles. These blank Firefox processes seem to increase (by 2 at max) when opening new tabs.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p131111" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile131111">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistf795.html?mode=viewprofile&amp;u=16451" class="username">sphinx8911</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searche8b3e8b3.html?author_id=16451&amp;sr=posts">13</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Jun 24, 2013 8:18 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content131111">
+
+						<h3 ><a href="#p131111">Re: Firefox 57 Crashes Immediately When Run inside Sandboxie</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingdb1f.html?mode=quote&amp;f=11&amp;p=131111" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicecc4ecc4.html?p=131111#p131111" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistf795.html?mode=viewprofile&amp;u=16451" class="username">sphinx8911</a></strong> &raquo; </span>Tue Nov 14, 2017 3:27 pm
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopica75ba75b.html?p=131097#p131097" data-post-id="131097" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Nov 14, 2017 12:25 pm</div></cite>
+d1312r32f1r3211 ,<br>
+<br>
+Did you try the steps and the workaround I provided above? <br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+Hello,<br>
+I am facing this issue too: this is the crash report of the tab:<br>
+<a href="https://crash-stats.mozilla.com/report/index/8621bc45-c859-455d-92b8-403c30171114" class="postlink">https://crash-stats.mozilla.com/report/ ... 3c30171114</a><br>
+<br>
+It seems related to Intel Graphics driver. I am running on Intel HD 4000 (Ivy Bridge), Windows 10 64-bit Intel driver version: 10.18.10.4653<br>
+Could you ask the devs to try reproducing this on an intel graphics machine ? No AV or antimalware of any kind. Only built-in defender (default settings untouched) and Sandboxie.<br>
+<br>
+EDIT: Is everyone else crashing having the same crash report info ? You can get it by getting to crash, then run unsandboxed, and go to about:crashes, and check the ones at the very top... click on them will open a site... copy that url and paste them url.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="https://www.sandboxie.com/old-forums/postingcca6.html?mode=reply&amp;f=11&amp;t=25095" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic63086308.html?f=11&amp;t=25095&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25095">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			51 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic6c206c20.html?f=11&amp;t=25095&amp;start=15" role="button">2</a></li>
+				<li><a class="button" href="viewtopic20bd20bd.html?f=11&amp;t=25095&amp;start=30" role="button">3</a></li>
+				<li><a class="button" href="viewtopicc243c243.html?f=11&amp;t=25095&amp;start=45" role="button">4</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic6c206c20.html?f=11&amp;t=25095&amp;start=15" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum8a838a83.html?f=11" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Problem Reports”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum907f907f.html?f=42" class="jumpbox-cat-link"> <span> Sandboxie Forums</span></a></li>
+																<li><a href="viewforum12a312a3.html?f=2" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Announcements</span></a></li>
+																<li><a href="viewforumcf19cf19.html?f=6" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Positive Reviews</span></a></li>
+																<li><a href="viewforum107e107e.html?f=43" class="jumpbox-cat-link"> <span> Problems and Questions</span></a></li>
+																<li><a href="viewforum8a838a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Problem Reports</span></a></li>
+																<li><a href="viewforum48ab48ab.html?f=17" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Quick Questions</span></a></li>
+																<li><a href="viewforumbcb4bcb4.html?f=65" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.25</span></a></li>
+																<li><a href="viewforumab78ab78.html?f=44" class="jumpbox-cat-link"> <span> More Forums</span></a></li>
+																<li><a href="viewforum31e631e6.html?f=4" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Feature Requests</span></a></li>
+																<li><a href="viewforume774e774.html?f=5" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Anything Else</span></a></li>
+																<li><a href="viewforum89418941.html?f=22" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Contributed Utilities &amp; Templates</span></a></li>
+																<li><a href="viewforum97809780.html?f=14" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; International Translations</span></a></li>
+																<li><a href="viewforum2b892b89.html?f=38" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.01</span></a></li>
+																<li><a href="viewforumdfa4dfa4.html?f=39" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.03</span></a></li>
+																<li><a href="viewforuma3f5a3f5.html?f=40" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.05</span></a></li>
+																<li><a href="viewforum51ee51ee.html?f=41" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.07</span></a></li>
+																<li><a href="viewforum590b590b.html?f=46" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.09</span></a></li>
+																<li><a href="viewforumcdbacdba.html?f=48" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.13</span></a></li>
+																<li><a href="viewforum30ac30ac.html?f=49" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.15</span></a></li>
+																<li><a href="viewforum91409140.html?f=50" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.17</span></a></li>
+																<li><a href="viewforum208f208f.html?f=51" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.19</span></a></li>
+																<li><a href="viewforum26492649.html?f=53" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.01</span></a></li>
+																<li><a href="viewforum9e0d9e0d.html?f=54" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.05</span></a></li>
+																<li><a href="viewforumfac0fac0.html?f=55" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.07</span></a></li>
+																<li><a href="viewforuma05ca05c.html?f=56" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.09</span></a></li>
+																<li><a href="viewforum6ac36ac3.html?f=57" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.11</span></a></li>
+																<li><a href="viewforume57de57d.html?f=58" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.13</span></a></li>
+																<li><a href="viewforum07560756.html?f=59" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.15</span></a></li>
+																<li><a href="viewforumb8c1b8c1.html?f=60" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.17</span></a></li>
+																<li><a href="viewforumdbf5dbf5.html?f=61" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.19</span></a></li>
+																<li><a href="viewforum75c275c2.html?f=62" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.21</span></a></li>
+																<li><a href="viewforume5f3e5f3.html?f=64" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.23</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="stat-block online-list">
+		<h3>Who is online</h3>
+		<p>Users browsing this forum: No registered users and 0 guests</p>
+	</div>
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="../index.html" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Home</span></a></span>									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="America/New York">UTC-04:00</span></li>
+							<li class="rightside">
+				<a href="ucp033a033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete all board cookies</span>
+				</a>
+			</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+									</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="cronc6bfc6bf.gif?cron_type=cron.task.text_reparser.user_signature" width="1" height="1" alt="cron" /></div>
+
+<script type="text/javascript" src="assets/javascript/jquery.mince91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="assets/javascript/corece91ce91.js?assets_version=7"></script>
+
+
+
+<script type="text/javascript" src="styles/sbie_prosilver/template/forum_fnce91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="styles/sbie_prosilver/template/ajaxce91ce91.js?assets_version=7"></script>
+
+
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?p=131099 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:47:38 GMT -->
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=22861&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:10:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Reset function ?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Reset function ?</h2>
+		<p><a href="viewtopicf5a0f5a0.html?f=4&amp;t=22861">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=22861</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Reset function ?</h3>
+				<div class="date">Posted: <strong>Sun May 01, 2016 2:15 pm</strong></div>
+				<div class="author">by <strong>ludovicrouy</strong></div>
+				<div class="content">Any news about this helpfull function since 2009 request ?<br>
+<br>
+I use Cinema 4D in a sandbox but it become very huge and now have no choice to delete it and reinstall the software but its time consuming, could you have a better option than the copy paste trick (lot of small files are long to copy) to reinstall software ?<br>
+<br>
+My suggestion : a snapshot of files and only changed one could be restored is it doable ?<br>
+<br>
+Thanks and like others, i like to claim that sandboxie is a great tool !</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Reset function ?</h3>
+				<div class="date">Posted: <strong>Sun May 01, 2016 2:43 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Thanks for the comments!<br>
+<br>
+Invincea, inc purchased Sandboxie in 2013...<br>
+<br>
+as for a "reset"..No, that's something we're not considering.  <br>
+<br>
+You're looking more into a VM environment, which SBIE is not.<br>
+<br>
+SBIE sandboxes are temporary storage and should not be used for long term. If you like a program that's running in the sb, and it works well, it should be then installed on your host machine.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Reset function</h3>
+				<div class="date">Posted: <strong>Wed Oct 12, 2016 8:52 am</strong></div>
+				<div class="author">by <strong>mihzaha</strong></div>
+				<div class="content">I registered specially for this topic (original question: <a href="viewtopic607d607d.php?f=6&amp;t=22861" class="postlink">http://forums.sandboxie.com/phpBB3/view ... =6&amp;t=22861</a>).<br>
+I have been using something like a reset function for over 2 years now and it works flawlessly:<br>
+<br>
+Let's say you want a reset function for a sandbox called "web" located in "D:\Sandboxie\web". Sandboxie is installed in "C:\Program Files\Sandboxie"<br>
+<br>
+Create an empty directory "web_backup" in "D:\Sandboxie\", so now you have tow directories in "D:\Sandboxie":<br>
+"D:\Sandboxie\web" and<br>
+"D:\Sandboxie\web_backup"<br>
+<br>
+Create a bat file (ex: "save_web.bat") and place it anywhere.<br>
+inside save_web.bat place the contents:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>rmdir D:\Sandboxie\web_backup  /s /q
+robocopy /e /copyall D:\Sandboxie\web D:\Sandboxie\web_backup </code></pre></div>
+
+Also create a .bat file "restore_web.bat" with the contents:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"C:\Program Files\Sandboxie\start.exe" /box:web /terminate
+"C:\Program Files\Sandboxie\start.exe" /box:web delete_sandbox
+robocopy /e /copyall D:\Sandboxie\web_backup D:\Sandboxie\web </code></pre></div>
+
+Install everything you need inside the web sandbox.<br>
+When you are happy with the state of the sandbox right click "save_web.bat" and run as administrator. A cmd window should pop and display some copying files (about a minute or so). When done it closes.<br>
+<br>
+When you want to revert to the original state, just right click "restore_web.bat" and run as administrator. In a minute the sandbox should be back to the state when it had the new programs installed.<br>
+<br>
+You can even make modifications: restore -&gt; install additional software -&gt; save.<br>
+<br>
+I haven't restored a sandbox in more that 100 days and worked perfectly. I just received a message that I should delete the contents as it has been active for more than 30 days. Also, I haven't deleted a sandbox from two years ago, just restored it, and works like new <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Reset function ?</h3>
+				<div class="date">Posted: <strong>Fri Oct 14, 2016 2:19 pm</strong></div>
+				<div class="author">by <strong>ludovicrouy</strong></div>
+				<div class="content">Thanks a lot for your answer, I think that would be helpfull,<br>
+<br>
+I've bought sanboxie because i don't want to take time to reinstal softwares on host even if they work correctly in sandboxie because its time consuming.<br>
+<br>
+In the case of C4D, there is another reason,  its my personnal licence and i don't want to share it with other people in my workplace so when i disconnect my USB Key, I know that none could use it anymore.<br>
+<br>
+So thanks again mihzaha <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=22861&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:10:17 GMT -->
+</html>

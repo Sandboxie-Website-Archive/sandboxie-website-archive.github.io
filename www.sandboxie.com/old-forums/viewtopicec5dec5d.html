@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24486&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:08:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; New bug in Windows  #MFT</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>New bug in Windows  #MFT</h2>
+		<p><a href="viewtopic252f252f.html?f=17&amp;t=24486">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24486</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>New bug in Windows  #MFT</h3>
+				<div class="date">Posted: <strong>Sat May 27, 2017 6:31 pm</strong></div>
+				<div class="author">by <strong>howiem</strong></div>
+				<div class="content"><a href="https://arstechnica.co.uk/information-technology/2017/05/in-a-throwback-to-the-90s-ntfs-bug-lets-anyone-hang-or-crash-windows-7-8-1" class="postlink">https://arstechnica.co.uk/information-t ... dows-7-8-1</a><br>
+and<br>
+<a href="https://www.theverge.com/2017/5/26/15696704/microsoft-windows-7-windows-8-pc-crash-bug-ntfs" class="postlink">https://www.theverge.com/2017/5/26/1569 ... h-bug-ntfs</a><br>
+<br>
+Above site claims that a bug in Windows (but not Win10) will cause computers running Win 7 and 8.1(as well as the no longer supported Vista)  to crash when accessing a web site with $MFT in a path name in an image.<br>
+<br>
+My question is whether anyone at Invincea has tested this in a sandbox to see if using Samdboxie will prevent the bug from functioning</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: New bug in Windows  #MFT</h3>
+				<div class="date">Posted: <strong>Wed May 31, 2017 3:57 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello howiem,<br>
+<br>
+Sandboxie will not stop this out of the box. However, you can tweak it by adding:<br>
+WriteFilePath=*$MFT* to your Sandboxie configuration file (Configure--&gt;Edit Configuration )<br>
+Explorer may stay open in the Sandbox if you try to access the path, but it will not crash your computer.   [At least it didn't during our  tests (used Windows 8.1 x64 and Win 7 x86).]<br>
+If you decide to try it, please consider using a VM. <br>
+<br>
+This tweak does not seem to block functionality so far,  but we have not tested every combination. Keep that in mind when using it. <br>
+The devs are looking into this . We will also have to see if Microsoft decides to put a patch out there.<br>
+<br>
+I'll post any updates here.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: New bug in Windows  #MFT</h3>
+				<div class="date">Posted: <strong>Wed May 31, 2017 4:48 pm</strong></div>
+				<div class="author">by <strong>howiem</strong></div>
+				<div class="content">Barb, Thank you.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24486&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:08:53 GMT -->
+</html>

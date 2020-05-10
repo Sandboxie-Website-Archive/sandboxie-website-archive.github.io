@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=56&t=22545&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:09:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 5.09 Beta Available (latest version 5.10 RC) - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>5.09 Beta Available (latest version 5.10 RC)</h2>
+		<p><a href="viewtopic533e533e.html?f=56&amp;t=22545">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=56&amp;t=22545</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Mon Feb 29, 2016 12:05 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">I spoke with Tom about this issue this morning, he's the one working on the rcpss issue for sometime now....<br>
+<br>
+As for the programs lingering...that may happen. rcpss is the parent to dcom and others in the SB. However, they are all should close within a reasonable time frame...from a instantly to upwards of 30 seconds. It depends on various things. IE seems to take a lot longer for example. But some programs will vary. Browsers will vary given extensions, etc. But <em>some</em> delay is acceptable and expected.<br>
+<br>
+The Leader/Linger process as a whole may be something we need to look at. Given all the code changes/tweaks and timing...it may not even be <em>needed</em> any longer. <br>
+<br>
+Tom stated that Ronen had that code for various reasons..maybe to overcome issues in the past that are no longer issues at this time.<br>
+<br>
+So, for testing and just being curious about it:<br>
+Do these programs that  "hang around" are they are a part of a Linger / Leader process you've set up?<br>
+If so, if these programs are removed from that, does it improve=Do they exit in a timely manner? Get worse=take much longer?<br>
+No difference?<br>
+<br>
+If may be better/worse in Win 10. It may be better/worse in Win 7, etc. But Win 10 has gotten better about managing this, but this was present to some extent in Win 7, so whatever is targeted in Win 10 will very likely impact Win 7, 8.1 in some way.<br>
+<br>
+No if something simply doesn't exit/quit in the SB...well...that's not acceptable. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Mon Feb 29, 2016 12:58 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Tried it with the existing leader/lingering rules first. Upon exit of the leader process, they seem to last for at least two minutes without getting stopped at which point I terminated them.<br>
+Upon removing the leader/lingering process rules and trying again there was no change.<br>
+<br>
+Once again this seems to occur more often when a program is launched then exited almost immediately. If it's used for a few minutes then closed, it seems to close the lingering processes correctly in most cases. However the one program box that I have which is one of my persistent ones tends to do it all the time now. I tried a clean box, eg renamed the original one and let it create a new one in its place when launched but it didn't seem to help any. =( Other boxes like my browser seem to do this once in a blue moon but otherwise work a good chunk of the time. I'll try to keep testing and see if I can figure out any reason why the one box does it more than the others though.<br>
+<br>
+Update:<br>
+While looking around for a bad rule I let the processes hang around on their own. I didn't get exact times but them seemed to finally close on their own after about ten minutes.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Mon Feb 29, 2016 1:26 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Once again this seems to occur more often when a program is launched then exited almost immediately. If it's used for a few minutes then closed, it seems to close the lingering processes correctly in most cases. </div></blockquote>
+
+Yes, this is what we do to test rcpss... launch and then quickly exit programs...and then relaunch them again, and if the program is launched, then exits..it can cause problems, add to it...try and start the program right up rapidly after exiting.<br>
+<br>
+If you're exiting a program before it registers with the OS (which RCPSS monitors) then that can cause a problem.  As RCPSS and it's children will wait. And wait. As RCPSS looks for event IDs registered with the OS.  <br>
+<br>
+A good test would be to run a program.....exit it right away...and then bring up another program...let that program load and then exit normally. You should see everything exit the sandbox and those event ID's register...and when they do, and then you exit that program, RCPSS notices the event in the OS has exited. It will then start shutting down as well. <br>
+<br>
+You should see less problems with "forced" applications. As they "load" in a different way, and that timing is changed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Mon Feb 29, 2016 1:30 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">There is legacy logic in SBIE from Ronen along with new logic from Tom to address this issue. Merging the 2 is a complicated process and has to be done in steps. It has been done over many, many beta's know. But there so many variables we have to tread lightly.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Mon Feb 29, 2016 2:44 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">OK, I recreated my issue in a VM and it seems to be due to the odd way I set up and use templates. I'll try to explain below but it might not make sense at first.<br>
+<br>
+Basically, I have a lot of boxes that shared the exact same rules so I created Templates for these shared rules. Here are some fake examples:<br>
+<br>
+[Template_RuleSet1]<br>
+<br>
+Tmpl.Title=RuleSet1<br>
+Tmpl.Class=Security<br>
+ClosedFilePath=C:\Folder\Folder<br>
+ClosedFilePath=C:\Folder2\Folder2<br>
+<br>
+[Template_RuleSet2]<br>
+<br>
+Tmpl.Title=RuleSet2<br>
+Tmpl.Class=Security<br>
+ClosedFilePath=C:\Folder3\Folder3<br>
+ClosedFilePath=C:\Folder4\Folder4<br>
+ClosedFilePath=InternetAccessDevices<br>
+<br>
+Then on an app I can add them as templates rather then adding each path again<br>
+[AppBox]<br>
+<br>
+Enabled=y<br>
+Template=RuleSet1<br>
+Template=RuleSet2<br>
+<br>
+There's actually a ton of paths in my real INI but this seems to now cause the lingering issue somehow where before it did not but ONLY when more than one such template is in use for a single box. It's far easier to change one template than many boxes when a change is needed and even better when a new box is created as all I need to do is add the template and the paths are protected. It's weird that this would cause them to linger and I suppose I could just create a new Template that merges multiple templates into one for those boxes that make use of the paths in both as a workaround. Hopefully I didn't confuse you even more.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Tue Mar 01, 2016 10:26 am</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">5.10 has been released.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Tue Mar 01, 2016 1:08 pm</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>5.10 has been released.</div></blockquote>
+
+Good stuff.  Will you make a post in the announcement section?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Tue Mar 01, 2016 1:22 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">It's on the Sandboxie website. It's the new Stable that replaced v5.06, it does not differ from the RC.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Wed Mar 02, 2016 10:11 am</strong></div>
+				<div class="author">by <strong>osbron</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Sandboxie version 5.10 ... Released on 16 February 2016</div></blockquote>
+
+Minor issue, but I guess you forgot to change the release date.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Wed Mar 02, 2016 10:35 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">well.. the 5.10RC was 2/22. The Stable v5.10 was 3/1. But they're identical.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Wed Mar 02, 2016 10:46 am</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite>well.. the 5.10RC was 2/22. The Stable v5.10 was 3/1. But they're identical.</div></blockquote>
+I'm with osbron. Binaries might be the same, but 5.10 Final/Stable was released on 1 March 2016.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Wed Mar 02, 2016 10:51 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Obviously, that as posted on the site for a reason. So, I'm deferring to the OP that handles that part of the site.. The list changes reflects the date however. I will see if they want to edit.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Wed Mar 02, 2016 11:10 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>osbron wrote:</cite>Minor issue, but I guess you forgot to change the release date.</div></blockquote>
+Good eye, Osbron. <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Wed Mar 02, 2016 6:33 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite><blockquote><div><cite>osbron wrote:</cite>Minor issue, but I guess you forgot to change the release date.</div></blockquote>
+Good eye, Osbron. <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"> <br>
+<br>
+Bo</div></blockquote>
+
+That's been corrected.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.09 Beta Available (latest version 5.10 RC)</h3>
+				<div class="date">Posted: <strong>Sun Mar 06, 2016 3:17 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">5.10 works fine here on Win10 x64. I <strong>haven't</strong> seen any rpc -1 and similar errors since I went back to win10 again about two weeks ago</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=56&t=22545&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:09:36 GMT -->
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24217&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:06:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Chrome - SBIE2101 Object name not found -(C0000022)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Chrome - SBIE2101 Object name not found -(C0000022)</h2>
+		<p><a href="viewtopic43514351.html?f=11&amp;t=24217">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24217</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>5</strong></div>
+					<div class="post">
+				<h3>Chrome - SBIE2101 Object name not found -(C0000022)</h3>
+				<div class="date">Posted: <strong>Fri Mar 31, 2017 8:01 am</strong></div>
+				<div class="author">by <strong>HarryStottle</strong></div>
+				<div class="content">This has to be machine specific rather than a Sandboxie problem but I'm hoping shared experience might point to a clue. <br>
+<br>
+I have a number of workstations and laptops and Sandboxie performs brilliantly on all - even including the one I've got a problem with, up till yesterday. On that one, anything using the Chromium Engine (Chrome and Iron) have suddenly stopped functioning as normal. I can still run Firefox or IE but any attempt to run Chrome produces multiple instances of the error:<br>
+<br>
+"SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1"<br>
+<br>
+no less than 16 times on opening the browser and then another 2 or 3 for every tab I open. The browser is actually working but the constant error reports make it unusable. <br>
+<br>
+As this is not happening on any other machine I know it can't be a Sandboxie or Chrome problem. But even after scrubbing the installations (with Revo advanced) of Chrome, Iron AND Sandboxie, and then reinstalling them, the problem remains. <br>
+<br>
+If I could find any clue as to what the error message ("SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1") means, I might be able to troubleshoot it, but as of now, I haven't a clue where to begin. <br>
+<br>
+Obviously the first thought is "what's changed". But I haven't allowed a windows Update in the past few days, so it can't be that. I did make a minor modification to my Zonealarm firewall (stopped it locking the hosts file - to prevent its conflict with Spybot Antibeacon) but I repeated that on nearly 20 other machines yesterday and none of them are exhibiting this behaviour, so it's unlikely to be related to that. I did update SRWare Iron to the 64 bit version 2 days ago (partly because the 32 bit version stopped working in SB on the affected laptop), but didn't touch the Chrome installation (and both were working normally for the rest of that day), so it's unlikely to be that. And no other changes (that I'm aware of) have taken place in the last 48 hours.<br>
+<br>
+Suggestions?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Fri Mar 31, 2017 11:19 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello HarryStottle,<br>
+<br>
+What are your OS and Sandboxie versions? <br>
+Have you tried deleting the contents of your Sandbox or creating a new one to see if the issue follows you there? <br>
+Does it work if you disable your Antivirus protection? <br>
+<br>
+There are multiple threads regarding that error message:<br>
+<a href="searchfbdcfbdc.php?keywords=access%3D001FFFFF" class="postlink">http://forums.sandboxie.com/phpBB3/sear ... 3D001FFFFF</a><br>
+<br>
+If Chrome is installed inside Sandboxie, please follow these steps:<br>
+<a href="viewtopic522b522b.php?f=11&amp;t=21974&amp;p=126187&amp;hilit=access%3D001FFFFF#p126209" class="postlink">http://forums.sandboxie.com/phpBB3/view ... FF#p126209</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon Apr 03, 2017 7:15 am</strong></div>
+				<div class="author">by <strong>HarryStottle</strong></div>
+				<div class="content">Thanks for replying, Barb<br>
+
+<blockquote><div><cite>Barb wrote:</cite>Hello HarryStottle,<br>
+What are your OS and Sandboxie versions? </div></blockquote>
+W10 64bit v1507 and SB 5.16 (64bit) but I can tell you that they can't be relevant, any more than the antivirus. <br>
+Why? Because I'm using identical setups with identical versions on multiple machines. This problem occurs on only one. <br>
+
+<blockquote><div><cite>Barb wrote:</cite>Have you tried deleting the contents of your Sandbox or creating a new one to see if the issue follows you there? </div></blockquote>
+I didn't just clean the sandbox I uninstalled it, using Revo (which removes ALL traces)<br>
+
+<blockquote><div><cite>Barb wrote:</cite>Does it work if you disable your Antivirus protection? </div></blockquote>
+see above - despite which I did try disabling both firewall and antivirus at various points in my exploration.<br>
+
+<blockquote><div><cite>Barb wrote:</cite>There are multiple threads regarding that error message:<br>
+<a href="searchfbdcfbdc.php?keywords=access%3D001FFFFF" class="postlink">http://forums.sandboxie.com/phpBB3/sear ... 3D001FFFFF</a></div></blockquote>
+
+Yup, but none come close to giving be a clue as to what may be going on. <br>
+<br>
+As the problem only occurs with Iron and Chrome I went looking for files that might be common to both, but although they use a few with identical names, (eg chrome.exe, chrome.dll) none are identical. And my Chrome is 32bit, Iron is 64.<br>
+<br>
+I even tried making both 64 bit (in line with my SB) but that made no difference. I did discover, however, that if you disable "Force Chrome" in SB, Iron also fails to fire in the Sandbox, despite being explicitly selected to "Force SRWare Iron". I don't know if that's a clue for developers, but it clearly confirms a tight link between them in the SB environment.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon Apr 03, 2017 1:41 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">That error means that something in the sandbox tried to open a process and got ACCESS DENIED. More often than not, that is because the process being opened crashed or exited before it could be opened successfully. Most likely some add-in/plug-in does not like being run in the sandbox. Running ProcMon may show which process crashed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Wed Apr 05, 2017 6:20 am</strong></div>
+				<div class="author">by <strong>HarryStottle</strong></div>
+				<div class="content">looks plausible. It must be a component failure rather than the browser as the browser happily keeps going. I have Process Hacker as my default Task Manager and I did watch what  was going on as the messages appeared but nothing obvious was visible (which would be more consistent with failure to launch rather than launch then crash) but you don't see that kind of failure in the monitor. What I'll do is selectively disable the plugins till the problem disappears. But I have to point out that even identifying an offending plugin would only raise more questions as I tend to use the same plugins in all installations, so we'd have to address the issue of why a configuration which works satisfactorily on (for example) it's identical sister laptop doesn't work on this one. <br>
+<br>
+Obviously, as I said in the first post, this is not an SB issue (because it does work everywhere else in my territory) I'm just hoping you have a better diagnostic tool which could trap the error and not just tell us what the error is, but what caused it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Tue Apr 11, 2017 10:11 pm</strong></div>
+				<div class="author">by <strong>plastic00</strong></div>
+				<div class="content"><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1
+SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1
+SBIE2101 Object name not found: , error AlpcConnectPort (C0000022) access=001F0001 initialized=1
+SBIE2314 Canceling process chrome.exe [1192 / 7]
+</code></pre></div>
+
+These messages appeared for me while Chrome v57.0.2987.133 was completely closed and attempting to open a link from Steam chat window. Chrome is set to be a 'Forced Program' and nothing was running inside of Sandboxie v5.17.6 x64 at the time of clicking on the link. I am on Windows version 15063 - Creators Build. I've attached a 7zipped .PML output file of the filtered events using "ProcessName -&gt; Contains: chrome.exe".</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Wed Apr 12, 2017 5:03 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello plastic00, <br>
+<br>
+So far, we have not been able to reproduce the issue (I tested using Steam chat and links, links from the Steam Store, etc... ).<br>
+Do you have any addons in Chrome? Is Chrome installed inside Sandboxie? Are you using the 64 bits version? <br>
+<br>
+Also,  could you please provide a non-filtered PML as well?  <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Thu Apr 13, 2017 2:11 pm</strong></div>
+				<div class="author">by <strong>plastic00</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>Hello plastic00, <br>
+<br>
+So far, we have not been able to reproduce the issue (I tested using Steam chat and links, links from the Steam Store, etc... ).<br>
+Do you have any addons in Chrome? Is Chrome installed inside Sandboxie? Are you using the 64 bits version? <br>
+<br>
+Also,  could you please provide a non-filtered PML as well?  <br>
+<br>
+Regards,<br>
+Barb.-</div></blockquote>
+
+I tested with all extensions disabled in Chrome and it still happens. I am using the x64 version for Sandboxie, and was unaware Chrome even had an x64 version if it does. Chrome is not installed inside of Sandboxie. I cannot attach the PML file to my post because "The file is too big, maximum allowed size is 256 KiB." and the file is 747kb. I've uploaded the file to Google Drive <a href="https://drive.google.com/file/d/0ByKm51MmTC4_RnVWRk82azlrYVE/view?usp=sharing" class="postlink">https://drive.google.com/file/d/0ByKm51 ... sp=sharing</a> for you instead.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Thu Apr 13, 2017 3:06 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">plastic00,<br>
+<br>
+Thank you for the update. We have something for you to test:<br>
+<br>
+Create a new shortcut for Google Chrome on your Desktop<br>
+Right-click  on it ---&gt;Properties <br>
+Update the target to reflect the following: " --no-sandbox " at the end (no quotation marks) <br>
+This should be added after the quotation marks in the Target area, leaving 1 space <br>
+<br>
+Launch Chrome outside Sbie to ensure it works (using the new shortcut), then launch it Sandboxed and let us know if the issue goes away.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Thu Apr 13, 2017 6:37 pm</strong></div>
+				<div class="author">by <strong>plastic00</strong></div>
+				<div class="content">I probably should have been more specific about it running fine if I open it manually, or from clicking a link in some applications - one being Teamspeak 3. Not sure if this helps at all, but If I open a link from Teamspeak 3 the Chrome window appears separately from the pinned Chrome icon on my taskbar. Opening the browser from the pinned icon initially will replace the pinned icon as normal.<br>
+<br>
+The error(s) only occur while GameGuard is running <strong>and</strong> when attempting to open a link from some applications, such as Steam/Skype. Every process that's Sandboxed is also killed the instant that GameGuard finishes its initialization, not sure if that can be fixed though. I've attempted to start the chrome browser using the --no-sandbox launch option, and the browser runs fine since I am opening it myself. Is it possible that it would work if I disabled the Chrome sandbox and had it launch by default with it disabled, so it will properly launch the browser through something like Steam?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Fri Apr 14, 2017 11:33 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello plastic00,<br>
+<br>
+UPDATE:<br>
+I cannot really find a flag, but if you open Chrome from the Shortcut and leave it open, new links should open inside that session. <br>
+<br>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+You can try to modify Chrome instead of just the shortcut. I am checking to see if there's a way to disable the Sandbox via flags.<br>
+Which games are you using when the issue occurs? (How are you triggering GameGuard? )<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Fri Apr 14, 2017 9:06 pm</strong></div>
+				<div class="author">by <strong>plastic00</strong></div>
+				<div class="content">I've tried what you said by launching Chrome with the --no-sandbox launch option, and then clicking on a link from Steam but the error still occurs. The game I am playing that uses GameGuard can be found here: <a href="http://store.steampowered.com/app/390100/" class="postlink">http://store.steampowered.com/app/390100/</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon Apr 17, 2017 12:58 pm</strong></div>
+				<div class="author">by <strong>cj716</strong></div>
+				<div class="content">Likely a different issue to the OP but reporting I'm getting this and Aw Snap on Chrome latest on Win 10 Pro x 64 CU and 5.18 newly created box with default config today. HMP.A. only other security app:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1
+</code></pre></div>
+
+All Extensions (UBlock O &amp; Lastpass) disabled then deleted with same results.<br>
+<br>
+Regards</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon Apr 17, 2017 3:43 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">plastic00,<br>
+<br>
+The game would not connect to the server (outside Sbie), so I cannot test it. <br>
+I'll give it another try tomorrow (might be a maintenance issue?) <br>
+------------------------------- X ------------------------------- <br>
+cj716,<br>
+<br>
+Is this happening all the time? Can you provide repro steps? <br>
+Does turning off Chrome's Sandbox/rebooting  help? <br>
+Does it work without HMPA? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon Apr 17, 2017 5:35 pm</strong></div>
+				<div class="author">by <strong>cj716</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>
+cj716,<br>
+<br>
+Is this happening all the time? Can you provide repro steps? <br>
+Does turning off Chrome's Sandbox/rebooting  help? <br>
+Does it work without HMPA? <br>
+<br>
+Regards,<br>
+Barb.-</div></blockquote>
+Reinstalling Chrome has fixed it. I think either a Chrome or extension update wasn't fully completed when I updated uBlock patterns outwith the Sandbox and when I've then run the app in SBIE its got a bit confused. I noticed Google Docs in extensions that wasn't there before as I got rid of that ages ago so something has triggered that again when I've run Chrome outwith SBIE and without my input so it probably wasn't installed fully and/or correctly installed causing the error, anyway working now.<br>
+<br>
+Thanks for considering the problem.<br>
+<br>
+Cheers.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>5</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24217&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:06:28 GMT -->
+</html>

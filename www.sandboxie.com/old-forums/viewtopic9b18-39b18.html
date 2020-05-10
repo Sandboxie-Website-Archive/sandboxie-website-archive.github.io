@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&start=45&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 10:15:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Block Process Access - Page 4</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Block Process Access</h2>
+		<p><a href="viewtopic7fcb7fcb.html?f=22&amp;t=4885">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=4885</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>4</strong> of <strong>15</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 17, 2009 2:01 am</strong></div>
+				<div class="author">by <strong>hch</strong></div>
+				<div class="content">WONDERFUL!<br>
+<br>
+everything is working perfectly now, no error messages, process access control is working, explorer runs okay!<br>
+<br>
+many thanks to wraithdu! <br>
+<br>
+Keep up the good work <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+cheers</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 17, 2009 2:05 am</strong></div>
+				<div class="author">by <strong>hch</strong></div>
+				<div class="content">so I guess you can release it as an official version now eh?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 17, 2009 11:00 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">I'm going to test one more thing when I get home tonight.  I made a change to how the parent process ID is found, to close a small security hole.  In the test version I had to temporarily remove one of the blocks so my own function could work, for the duration of the function call (then the block was replaced).  Under most circumstances this is OK, but if the process is multithreaded there's a minute chance that another thread could call the function whose block I removed in that instant.<br>
+<br>
+So instead I'm using the low level kernel functions to perform the same task, which doesn't require me to remove any blocks, and with better performance as well.  I want to test this method on my XP box, then I'll release it as a quick test for you, then I'll inform tzuk of the update and update my first post as well.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 17, 2009 6:13 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">I've posted v1.0.0.7 which works great on my XP testbed.  Barring any problems, this will be the next release version.  Let me know if it works for you!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 17, 2009 10:16 pm</strong></div>
+				<div class="author">by <strong>hch</strong></div>
+				<div class="content">tried out v1.0.0.7, it's working fine, and overall performance seems more or less the same as v1.0.0.6.<br>
+<br>
+as far as I've tested this build, i have not encountered any problems.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 17, 2009 11:06 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Thanks for all your work testing over the last few days!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Feb 19, 2009 6:25 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">New release version, v1.0.0.7.  See first post to download.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jun 03, 2009 8:20 am</strong></div>
+				<div class="author">by <strong>demoneye</strong></div>
+				<div class="content">@ tzuk  @<br>
+<br>
+can we get your reply on this DLL ?is it safe / stable to use it? <br>
+<br>
+10x wraithdu for this <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jun 03, 2009 8:26 am</strong></div>
+				<div class="author">by <strong>Ruhe</strong></div>
+				<div class="content">...and: how compatible is it to new and upcoming releases of Sandboxie?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jun 05, 2009 4:45 pm</strong></div>
+				<div class="author">by <strong>Jmtyra</strong></div>
+				<div class="content"><blockquote><div><cite>wraithdu wrote:</cite>Why did I create it?  I was curious from the post about WoW and the Warden client.  I still hope that guy tests it, cause I wanna know if Warden freaks out.  My other reasons... it was a challenge. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+The purpose is pretty clearly stated.  It blocks sandboxed processes from using the ReadProcessMemory function (search MSDN) to read the memory of unsandboxed processes.  Incidentally it also blocks the EnumProcessModules function (and perhaps others) of PSAPI.dll, since that function internally seems to use ReadProcessMemory.</div></blockquote>
+
+Hey there wraithdu! I ~*LOVE*~ what you've done with this DLL, its perfect! I, too, am concerned as to where Blizzard's little Warden tool 'sticks its nose' in my system. I'm a privacy advocate, thus I don't believe it's any of Blizzard's @)#$&amp;(@# business as to what's going on in my system (assuming I'm not affecting/modifying/cheating on their game).<br>
+<br>
+Also, I tried this on Windows 7 RC (build 7100) and it works great ~PLUS~ I believe the runtimes are already installed as I didn't have to install them and your AutoIt test program functioned properly inside and outside of the sandbox.<br>
+<br>
+Any-who, just wanted to say thanks!  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jun 05, 2009 7:18 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Glad you like it!  Keep in mind I'm not sure this won't get you banned by blizzard or similar online games.  Just a warning!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 16, 2009 5:12 am</strong></div>
+				<div class="author">by <strong>Tom</strong></div>
+				<div class="content">Hi, just what I have been looking for, but I can't for the life of me find "Sandboxie.ini"<br>
+Where should i be looking? <br>
+I tried in the C/programfiles/sandboxie. But nothing in there editable, except the <br>
+Template file.<br>
+<br>
+Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 16, 2009 5:55 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Tom wrote:</cite>Hi, just what I have been looking for, but I can't for the life of me find "Sandboxie.ini"<br>
+Where should i be looking? <br>
+I tried in the C/programfiles/sandboxie. But nothing in there editable, except the <br>
+Template file.<br>
+<br>
+Thanks.</div></blockquote>
+
+SANDBOXIE.INI is located in Windows folder. (usually C:\WINDOWS)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 16, 2009 4:48 am</strong></div>
+				<div class="author">by <strong>bugmenot</strong></div>
+				<div class="content">IDK what happen, but after i tried to put AntiDel and BlockProcessAccess, my Firefox seem bits laggy and the word that i type require some time before it appear, <br>
+<br>
+any solution?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 16, 2009 5:10 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>bugmenot wrote:</cite>IDK what happen, but after i tried to put AntiDel and BlockProcessAccess, my Firefox seem bits laggy and the word that i type require some time before it appear, <br>
+<br>
+any solution?</div></blockquote>
+
+Enable AntiDel and disable BlockProcessAccess and viceversa to find out what of both DLLs is producing that effect.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>4</strong> of <strong>15</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&start=45&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 10:15:50 GMT -->
+</html>

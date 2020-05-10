@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/16181" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-08-01T12:55:58-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/16181</id>
+
+		<entry>
+		<author><name><![CDATA[sycondaman]]></name></author>
+		<updated>2013-08-01T12:55:58-04:00</updated>
+
+		<published>2013-08-01T12:55:58-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92503#p92503</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92503#p92503"/>
+		<title type="html"><![CDATA[[.03] Command Line /wait Parameter Doesn't Work]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92503#p92503"><![CDATA[
+Thanks so much!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=17027">sycondaman</a> — Thu Aug 01, 2013 12:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-08-01T07:00:05-04:00</updated>
+
+		<published>2013-08-01T07:00:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92487#p92487</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92487#p92487"/>
+		<title type="html"><![CDATA[[.03] Command Line /wait Parameter Doesn't Work]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92487#p92487"><![CDATA[
+And with version 4.05.03 that I just released, it should once again work outside the sandbox.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Aug 01, 2013 7:00 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BUCKAROO]]></name></author>
+		<updated>2013-08-01T06:44:20-04:00</updated>
+
+		<published>2013-08-01T06:44:20-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92483#p92483</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92483#p92483"/>
+		<title type="html"><![CDATA[[.03] Command Line /wait Parameter Doesn't Work]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92483#p92483"><![CDATA[
+Thanks. And it all works as expected if BOXED. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>@<br>"%ComSpec%" /E:ON /V:OFF<br><br>SET "SbieExec=START "" /WAIT "%ProgramFiles%\Sandboxie\Start.exe" /wait"<br>SET "CHOICE=(ECHO.)&amp;CHOICE /M "EXIT"&amp;(IF !ERRORLEVEL!==1 TIMEOUT /T 5&amp;EXIT)&amp;PAUSE"<br><br>PUSHD path common to the following programs<br>%SbieExec% /box:DefaultBox "%ComSpec%" /T:6E /E:ON /V:ON /K "%CHOICE%"<br>%SbieExec% /box:DefaultBox "%ComSpec%" /T:E6 /E:ON /V:ON /K "%CHOICE%"<br>ECHO echo echo<br>POPD<br><br>EXIT<br>@<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=5050">BUCKAROO</a> — Thu Aug 01, 2013 6:44 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-08-01T05:02:19-04:00</updated>
+
+		<published>2013-08-01T05:02:19-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92480#p92480</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92480#p92480"/>
+		<title type="html"><![CDATA[[.03] Command Line /wait Parameter Doesn't Work]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92480#p92480"><![CDATA[
+Thanks for pointing it out.  Will be fixed in version 4.05.03.<br><br>Remember that you also need the built-in Start command to wait for Start.exe if you want completely sequential execution.<br><div class="codebox"><p>CODE: </p><pre><code>start /wait Start.exe /wait cmd.exe</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Aug 01, 2013 5:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BUCKAROO]]></name></author>
+		<updated>2013-07-31T22:37:53-04:00</updated>
+
+		<published>2013-07-31T22:37:53-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92473#p92473</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92473#p92473"/>
+		<title type="html"><![CDATA[[.03] Command Line /wait Parameter Doesn't Work]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92473#p92473"><![CDATA[
+Doesn't work for me. It was recently that I tried /wait with a box designation, can't work it with or without.<br><br>CHDIR /D "%ProgramFiles%\Sandboxie"<br>SET "CHOICE=(ECHO.)&amp;CHOICE /M "EXIT"&amp;(IF !ERRORLEVEL!==1 PAUSE&amp;EXIT)&amp;PAUSE"<br>".\Start.exe" <strong>/wait /box:DefaultBox</strong> "%ComSpec%" /T:6E /E:ON /V:ON /K "%CHOICE%"<br>".\Start.exe" <strong>/box:DefaultBox /wait</strong> "%ComSpec%" /T:E6 /E:ON /V:ON /K "%CHOICE%" <br>ECHO echo echo<br>@<br><br>To sidetrack, pasting that into a cmd prompt <em>sometimes</em> spat the following error for one missing console:<br>SBIE2205 Service not implemented:  ConsoleInit (C00000D4)<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=5050">BUCKAROO</a> — Wed Jul 31, 2013 10:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[sycondaman]]></name></author>
+		<updated>2013-07-31T21:01:53-04:00</updated>
+
+		<published>2013-07-31T21:01:53-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92470#p92470</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92470#p92470"/>
+		<title type="html"><![CDATA[[.03] Command Line /wait Parameter Doesn't Work]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=16181&amp;p=92470#p92470"><![CDATA[
+OS: Windows 7 64-bit Enterprise<br>Sandboxie Version: 4.04 64-bit<br><br>This is a relatively freshly installed machine with UAC disabled.<br><br>I opened a command prompt to C:\Program Files\Sandboxie and executed the following command to test:<br><br>Start.exe /wait cmd.exe<br><br>The result was an opened command prompt but Start.exe returned immediately.<br><br>Let me know if you can repro or have any debugging ideas, thanks!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=17027">sycondaman</a> — Wed Jul 31, 2013 9:01 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

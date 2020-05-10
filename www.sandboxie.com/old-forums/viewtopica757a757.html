@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15260&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:39:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.07] EMET 4 compatibility</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.07] EMET 4 compatibility</h2>
+		<p><a href="viewtopic8ee08ee0.html?f=38&amp;t=15260">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15260</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>[.07] EMET 4 compatibility</h3>
+				<div class="date">Posted: <strong>Fri Apr 19, 2013 4:50 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">With the <a href="http://blogs.technet.com/b/srd/archive/2013/04/18/introducing-emet-v4-beta.aspx" class="postlink">beta release of EMET 4</a> (and final May 14), the EMET template needs a small update in order for the EMET Agent (notifier) to receive notifications if EMET is triggered in a sandboxed program. EMET 4 uses a <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/aa365576(v=vs.85).aspx" class="postlink">Mailslot</a> instead of window messages. The Mailslot is named EMET_Agent_<em>SessionID</em>, so add the following:<br>
+<br>
+OpenPipePath=\Device\Mailslot\EMET_Agent_*<br>
+<br>
+<br>
+BTW, in the EMET DLL, I see the string ...\EMET_Recipient_%u%u and in the sent Mailslot message, a Reply XML attribute, etc. So it's possible another Mailslot could be used for some other communication, although nothing I did showed evidence of that. But anyway, not sure if there could be a need for:<br>
+<br>
+OpenPipePath=\Device\Mailslot\EMET_Recipient_*<br>
+<br>
+As well. Or even simply \EMET_* <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> *shrug*<br>
+<br>
+<br>
+<br>
+AND... There seems to be another bug with 4.01 vs 3.76 (although it seems weird too), after I noticed it mentioned in <a href="http://www.wilderssecurity.com/showthread.php?p=2218877" class="postlink">this Wilders EMET thread</a> about EMET not showing stuff as protected. Shouldn't be any problems with that (the current template's IPC is fine still), however...<br>
+<br>
+I noticed that when using Run Sandboxed with IE (XP and 7 64-bit), the EMET DLL doesn't even get loaded! On Win 7 (IE 8 I guess?), the child iexplore.exe does get it, so again it seems like Start.exe is messing something up? <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> This should NOT be specific to EMET, but perhaps any AppCompat mechanism is being interfered with...?<br>
+<br>
+What's REALLY weird is that another program I was checking for the EMET Notifier (crashes with DEP), DOES get EMET loaded if I use "Run From Start Menu," but not Run Sandboxed -- aren't they almost the same?! With IE, nothing involving Start.exe lets EMET load.<br>
+<br>
+Even weirder, in 3.76 (only checked on XP), EMET loads in IE 6 no matter what, but the other DEP-crash-testing program won't load EMET no matter how I do it -- from sandboxed Explorer, nothing...<br>
+<br>
+So different random things seem to be happening with the AppCompat layer and Sandboxie...<br>
+<br>
+<strong>Just found it.</strong> <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> EMET seems to load from Run Sandboxed before 4.01.04, so I'm assuming it's related to the .04 change: <a href="../phpbb/viewtopicea7d.php?t=14090" class="postlink">Sandboxie ignores __COMPAT_LAYER setting</a> (since it's AppCompat related). I was also going to ask about that __COMPAT_LAYER fix, since I'm not sure you preserved some manifest-related behavior I noticed (not sure it's important), but haven't gone back to check on Win 7 yet... (I had just been poking around with RunAsInvoker tricks, etc. a couple months ago before you updated the thread.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 22, 2013 6:55 am</strong></div>
+				<div class="author">by <strong>EMET_User</strong></div>
+				<div class="content">Bump! This needs to be taken care of.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 22, 2013 6:42 pm</strong></div>
+				<div class="author">by <strong>EMET USER 2</strong></div>
+				<div class="content">I'm still on 3.76<br>
+<br>
+could you where i need to add "OpenPipePath=\Device\Mailslot\EMET_Agent_*" to emet 4 work correctly?<br>
+<br>
+thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 22, 2013 7:10 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">EMET 4 <em>will still work</em> correctly, it's just that if something triggers its protection in a sandbox, you won't see any notification about it without this additional new setting. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+But anyway, that line is for manually editing your Sandboxie.ini file, and for tzuk to add to the Templates.ini file in a future release. To add the setting from the GUI, go to Sandbox Settings for whichever sandbox(es), and then Resource Access &gt; File Access &gt; Full Access. Then click Edit/Add and paste: <strong>\Device\Mailslot\EMET_Agent_*</strong><br>
+<br>
+Hope that helps, and sorry I forgot to include the GUI instructions in my first post. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Apr 23, 2013 11:43 am</strong></div>
+				<div class="author">by <strong>Sampei Nihira</strong></div>
+				<div class="content"><span style="color: darkblue">We must add the line:<br>
+<br>
+\Device\Mailslot\EMET_Agent_*<br>
+<br>
+new ver 4.01.06 ?</span></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Apr 23, 2013 12:16 pm</strong></div>
+				<div class="author">by <strong>Sampei Nihira</strong></div>
+				<div class="content"><span style="color: darkblue">Not present in template.ini file ver 4.01.06 sez EMET.</span></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Apr 23, 2013 8:12 pm</strong></div>
+				<div class="author">by <strong>Emet_lover</strong></div>
+				<div class="content">No. Emet will not work properly. Emet.dll is not loaded if the browser is run through shortcuts or right click run sandboxed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 24, 2013 4:47 am</strong></div>
+				<div class="author">by <strong>EMET USER 2</strong></div>
+				<div class="content"><blockquote><div><cite>Emet_lover wrote:</cite>No. Emet will not work properly. Emet.dll is not loaded if the browser is run through shortcuts or right click run sandboxed.</div></blockquote>
+
+What doyou mean, it looks like it load the .dll correctly<br>
+<br>
+<a href="http://www.wilderssecurity.com/attachment.php?attachmentid=237845&amp;d=1366610409" class="postlink">http://www.wilderssecurity.com/attachme ... 1366610409</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 24, 2013 5:40 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Sampei Nihira, yes, still need to add the setting in 4.01.06, since tzuk has not updated the EMET Template yet. Again, this is only for notifications, which people probably do want to see, but should rarely, if ever, happen. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+And the EMET DLL is loading correctly in that screenshot because it's with Sandboxie 3.76. The problem is only (generally) with Run Sandboxed/Start.exe shortcuts since 4.01.04, and is <em>in no way</em> related to EMET 4. It's a Sandboxie/AppCompat bug that probably affects <em>any</em> "Shim DLL" that should be loaded! My complete findings are in the second half of my original post...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 24, 2013 9:46 am</strong></div>
+				<div class="author">by <strong>Sampei Nihira</strong></div>
+				<div class="content"><span style="color: darkblue">@ DR_LaRRY_PEpPeR  <br>
+<br>
+Ok, the same results for me.<br>
+Just changing the "start default....." with the name browser.<br>
+See at the image:<br>
+<br>
+<br>
+<a href="../s24.postimg.org/hektqlnk5/Immagine.jpg" class="postlink">http://s24.postimg.org/hektqlnk5/Immagine.jpg</a><br>
+<br>
+P.s. <br>
+<br>
+DR_LaRRY_PEpPeR there's a solution for it:</span><br>
+<br>
+<br>
+<a href="../phpbb/viewtopicfe36.php?t=15293&amp;sid=8bceb6eb0997255ee835b7c7539c82ab" class="postlink">http://www.sandboxie.com/phpbb/viewtopi ... c7539c82ab</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 24, 2013 3:25 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>Sampei Nihira wrote:</cite><a href="../s24.postimg.org/hektqlnk5/Immagine.jpg" class="postlink">http://s24.postimg.org/hektqlnk5/Immagine.jpg</a></div></blockquote>The .jpg file shows:<br>
+C:\Programmi\Sandboxie\Start.exe Opera.exe<br>
+but this cannot be correct.<br>
+<br>
+Assuming that the "C:\Programmi" part is correct, then it should probably be something like:<br>
+C:\Programmi\Sandboxie\Start.exe C:\Programmi\Opera\Opera.exe<br>
+although I don't know the exact path to the opera.exe file.<br>
+<br>
+You should allow Sandboxie to make a shortcut for you:<br>
+Sandboxie Control tray icon window &gt; Configure &gt; Windows Shell Integration<br>
+"Add shortcut icons" button.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 6:26 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Guest10, that shortcut is fine, IF Opera.exe is in HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\<strong>App Paths</strong> or its folder is in the PATH env var, of course (I guess!).<br>
+<br>
+Sampei Nihira, I tried that with iexplore.exe (it's in App Paths), modifying the Sandboxed Browser shortcut, as well as one created from Shell Integration &gt; Add Shortcut Icons. While neither unmodified allows EMET to load, your modification DOES WORK! Nice find <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">, and yet more weirdness... <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"><br>
+<br>
+<br>
+BTW, I thought maybe it was an issue, running <em>shortcuts</em> through Start.exe, but no, as it still fails if I go to the Program Files folder and Run Sandboxed directly on iexplore.exe.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 6:51 am</strong></div>
+				<div class="author">by <strong>Sampei Nihira</strong></div>
+				<div class="content"><span style="color: darkblue"> <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+<br>
+Great news !!!<br>
+Alerts you of Wilders ?<br>
+My English is very bad.</span></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 7:10 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I looked into this today.  EMET.DLL injects into forced programs, or programs that are not started directly through Start.exe.<br>
+For example run cmd.exe then use that to run iexplore.exe, and iexplore.exe will have EMET.DLL injected.<br>
+Or run Internet Explorer as a forced program, iexplore.exe will have EMET.DLL injected.<br>
+<br>
+EMET is injected by the shim engine component, instructed by data below this registry key:<br>
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags<br>
+<br>
+From what I can tell the problem has to do with Start.exe itself not loading the shim engine component,<br>
+which might affect the program it starts.  I have not researched this at depth.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 7:18 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Right. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Again, this seems to go back again to what I was saying about Start.exe in 3.76 not allowing SRP to work (I never updated that thread, I found no evidence at all of problems you talked about 32&lt;-&gt;64 bit loading)... <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+Simply, if Start.exe was started as a NORMAL program <em>inside the sandbox</em> (e.g. like cmd.exe example), OR another copy, with the program to start as an argument, it should all work absolutely fine. I cannot figure out why Start.exe does this weird-acting stuff when it seems to already start running in the sandbox...<br>
+<br>
+<br>
+<br>
+Sampei Nihira, sorry, what about Wilders...? Yeah, I saw your posts there, and I check there when I check here usually. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15260&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:39:30 GMT -->
+</html>

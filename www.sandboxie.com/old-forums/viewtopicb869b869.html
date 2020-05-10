@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=23640&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:24:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SBUE2101 AlpcConnectPort  / SBIE 2314 Cancl'g proc Start.exe</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SBUE2101 AlpcConnectPort  / SBIE 2314 Cancl'g proc Start.exe</h2>
+		<p><a href="viewtopic67f967f9.html?f=11&amp;t=23640">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=23640</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>SBUE2101 AlpcConnectPort  / SBIE 2314 Cancl'g proc Start.exe</h3>
+				<div class="date">Posted: <strong>Tue Nov 15, 2016 4:55 pm</strong></div>
+				<div class="author">by <strong>ashlaj</strong></div>
+				<div class="content">I cannot find this error in the Forum:<br>
+I cannot get past the SBIEctrl.exe main window to run anything "as sandboxed", without this error:<br>
+<br>
+SBIE2101 Object name not found: , error AlpcConnectPort (C0000022) access=001F0001 initialized=1<br>
+SBIE2314 Canceling process Start.exe [97580 / 7]<br>
+SBIE2314 Canceling process Start.exe [97580 / 7]<br>
+<br>
+Sandboxie was running fine a month or so ago. I did reboot from patches and Adobe/Java, etc updates last week. <br>
+Running WIndows 7 32-bit, Same problem from older v4,14 and the upgrade to 5.14. I even uninstalled and reinstalled.<br>
+I have Trend Micro products, MBAM/MBAE running, but never interfered before. <br>
+<br>
+This would point to an error in sbieDrv.sys perhaps?<br>
+I can't find any registry entry or anything in the .ini for SBIE or templates.ini about this and am not sure where this configuration setting may be missing or in error. <br>
+The sbiesvc.exe and sbiectrl.exe are running as is the SBIEsvc service<br>
+<br>
+I have created a second Sandbox and get the same errors 2101 / 2314.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBUE2101 AlpcConnectPort  / SBIE 2314 Cancl'g proc Start</h3>
+				<div class="date">Posted: <strong>Tue Nov 15, 2016 5:47 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Most of the search results for NTAlpcConnectPort seem to be related to rootkits or Anti-Virus software.<br>
+I've not heard of a conflict with SBIE &amp; Trend Micro (that I recall) before but I suppose it isn't impossible one has developed. I hear good things about it so I'd be surprised if it was due to a rootkit getting past it (especially if MBAM is also in the mix) but I don't use it myself. I'll see if I can reproduce it in a VM with a trial of TrendMicro MAX and MBAM 2.x.<br>
+<br>
+Initial testing done with a non-updated Win7 x86 SP1 VM.<br>
+<br>
+Trend Micro Max is at version 11.0.1186<br>
+Malwarebytes Anti Malware is at version 2.2.1.1043<br>
+Malwarebytes Anti Exploit is at version 1.09.1.1261<br>
+Sandboxie is at version 5.14<br>
+<br>
+Apps tested, Internet Explorer 8 and Wordpad. No issues or crashes. Haven't reproduced so far. Currently working on installing windows updates (this may take a while!) to see if anything changes after that... =(</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBUE2101 AlpcConnectPort  / SBIE 2314 Cancl'g proc Start</h3>
+				<div class="date">Posted: <strong>Wed Nov 16, 2016 1:06 am</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Went through the first stage of updates already, KB3020369, KB3138612 &amp; roll up kb3125574 but for some reason it's still taking HOURS to continue. It looks like I won't have an answer to if an update might be involved tonight. Sorry =(<br>
+<br>
+As I'd be surprised to see an update being involved (and not already known) I wonder if a <a href="https://technet.microsoft.com/en-us/sysinternals/processmonitor.aspx" class="postlink">procmon</a> log might be more helpful here? Or perhaps a <a href="http://www.bleepingcomputer.com/download/farbar-recovery-scan-tool/" class="postlink">FRST</a> log?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBUE2101 AlpcConnectPort  / SBIE 2314 Cancl'g proc Start</h3>
+				<div class="date">Posted: <strong>Wed Nov 30, 2016 3:05 am</strong></div>
+				<div class="author">by <strong>sysinfo</strong></div>
+				<div class="content">After updating TM OfficeScan to version 11.0.6125 SP1 AV blocks every program launched by Sandboxie.<br>
+<br>
+I had add all .exe files in Sandboxie folder in the Truster Program List of AV, but still get:<br>
+<br>
+SBIE2101 Object name not found: , error AlpcConnectPort (C0000022) access=001F0001 initialized=1<br>
+BIE2314 Canceling process........</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBUE2101 AlpcConnectPort  / SBIE 2314 Cancl'g proc Start</h3>
+				<div class="date">Posted: <strong>Fri Dec 09, 2016 11:38 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">I just got this error when Firefox crashed, here is what it said:<br>
+SBIE2101 Object name not found: , error AlpcConnectPort (C0000022) access=001F0001 initialized=1<br>
+SBIE2314 Canceling process crashreporter.exe [6220 / 7]<br>
+<br>
+Sandboxie 5.14<br>
+Windows 7 x64</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBUE2101 AlpcConnectPort  / SBIE 2314 Cancl'g proc Start</h3>
+				<div class="date">Posted: <strong>Mon Dec 12, 2016 10:44 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Cornflake,<br>
+<br>
+Which AV are you running? <br>
+<br>
+All, <br>
+<br>
+Does SBIE work if you disable your AV protection?  Have a look at these Known Conflicts to help you set up your AV:<br>
+<a href="../indexa186.html?KnownConflicts#Anti-virus%20tool-bars" class="postlink">https://www.sandboxie.com/index.php?Kno ... 0tool-bars</a><br>
+<br>
+<a href="viewtopica726a726.html?f=11&amp;t=21539" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=21539</a><br>
+<br>
+You can try adding the following files to your AV exclusion list:<br>
+Start.exe""License.exe""SandboxieBITS.exe""SandboxieCrypto.exe""SandboxieDcomLaunch.exe""SandboxieRpcSs.exe""SandboxieWUAU.exe""SbieCtrl.exe""SbieIni.exe""SbieSvc.exe"<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SBUE2101 AlpcConnectPort  / SBIE 2314 Cancl'g proc Start</h3>
+				<div class="date">Posted: <strong>Wed Dec 14, 2016 10:15 am</strong></div>
+				<div class="author">by <strong>sysinfo</strong></div>
+				<div class="content">Solved (AV issue):<br>
+<br>
+I added all the .exe files (Sandboxie folder) in "Behavior Monitoring Settings" -&gt; "Exceptions" -&gt; "Approved Programs".<br>
+<br>
+Then I removed the same .exe files previously added to the "Truster Program List" (useless)<br>
+<br>
+Thank you!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=23640&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:24:36 GMT -->
+</html>

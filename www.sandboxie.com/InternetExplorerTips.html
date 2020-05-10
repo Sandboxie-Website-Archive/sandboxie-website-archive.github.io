@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="robots" content="index,follow">
+	<meta name="language" content="en">
+	<meta name="google-translate-customization" content="e0b0918ac010f34-ee72acc87a31fea6-gc7951f1948fb9449-11">
+	<meta name="description" content="Sandboxie - Sandbox security software for Windows. Install and run programs in a virtual sandbox environment without writing to the hard drive.">
+	<link rel="stylesheet" type="text/css" href="includes/style.css">
+	<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="includes/js/mobile-menu.js">
+	</script>
+	<script type="text/javascript">
+var onload_reposition_ie = 0;
+	</script>
+
+<!--[if IE]>
+<script type="text/javascript">
+onload_reposition_ie = 1;
+</script>
+<![endif]-->
+
+	<script type="text/javascript">
+function onload_reposition()
+{
+}
+	</script>
+
+	<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15566261-2', 'auto');
+ga('send', 'pageview');
+	</script>
+
+<title>Sandboxie - Internet Explorer Tips</title>
+<meta name="description" content="Internet Explorer Tips - Sandboxie, sandbox security and secure web browsing software for Windows">
+</head>
+<body onload="onload_reposition()">
+<a name="top"></a> 
+<div id="masthead">
+	<table class="masthead" width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td width="312" style="vertical-align:top;"><a href="index.html" title="Sandboxie.com"><img src="images/MastheadLogo.jpg" alt="" height="92" width="312"></a></td>
+			<td><span id="motto"><i>Trust&nbsp;No&nbsp;Program</i></span></td>
+		</tr>
+	</table>
+	<div id="submasthead">
+		<div id="drop-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="HelpTopics.html">Help &amp; FAQ</a></li>
+				<li><a href="https://forums.sandboxie.com/">Forum</a></li>
+				<li><a href="DownloadSandboxie.html">Download</a></li>
+				<li><a href="RegisterSandboxie.html">Buy</a>
+				<ul>
+					<li><a href="HomeUse.html">Home Use</a></li>
+				</ul>
+				</li>
+				<li><a href="SiteSearch.html">Search</a></li>
+				<li><a href="HowItWorks.html">How It Works</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container-menus">
+	<div class="one-menus">
+		<div id="google_translate_element">
+		</div>
+
+		<script type="text/javascript">
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,bg,cs,da,de,el,en,es,et,fi,fr,hr,hu,id,it,iw,jv,ko,mk,nl,pl,pt,ru,sk,sq,sv,tr,uk,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, gaTrack: true, gaId: 'UA-53196810-1'}, 'google_translate_element');
+}
+		</script>
+
+	</div>
+	<div class="two-menus">
+		<div id="nav-trigger">
+			<span>Menu</span>
+		</div>
+		<div id="nav-mobile"> 
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="HelpTopics.html">Help &amp; FAQ</a></li>
+			<li><a href="https://forums.sandboxie.com/">Forum</a></li>
+			<li><a href="DownloadSandboxie.html">Download</a></li>
+			<li><a href="RegisterSandboxie.html">Buy</a></li>
+			<li><a href="SiteSearch.html">Search</a></li>
+			<li><a href="HowItWorks.html">How It Works</a></li>
+		</ul>
+		</div> 
+	</div>
+</div><div id="wrapper">
+	<h1 style="margin:0;padding-top:.5em">
+		Internet Explorer Tips 
+	</h1>
+	<h2>
+		Tips Specific to Internet Explorer 
+	</h2>
+	<p>
+	<a href="SandboxieControl.html">Sandboxie&nbsp;Control</a> &gt; <a href="SandboxSettings.html">Sandbox&nbsp;Settings</a> &gt; <a href="ApplicationsSettings.html#web">Applications &gt; Web Browser &gt; Internet Explorer</a>
+	</p>
+	<p align="center">
+		<img src="images/NewGui/WebBrowserSettings1.png" alt=""> 
+	</p>
+	<hr>
+	<p>
+		<strong>Always Run In Sandbox</strong> 
+	</p>
+	<ul>
+		<li> Setting: Force Internet Explorer to run in this sandbox (Registered version only) 
+	</ul>
+	<p>
+		This setting tells Sandboxie to automatically supervise any instance of Internet Explorer as it starts, even if it was not started directly through a Sandboxie facility or command. 
+	</p>
+	<hr>
+	<p>
+		<strong>Windows Vista/7 with UAC Enabled</strong> 
+	</p>
+	<p>
+		In Windows Vista or Windows 7 with UAC enabled, Internet Explorer maintains two sets of configurations: Normal configuration and administrator configuration. Each set contains its own cookies, home pages and some other settings. When you normally launch Internet Explorer, you get the normal configuration. When you right-click Internet Explorer and select the <em>Run as administrator</em> action, you get the administrator configuration. 
+	</p>
+	<p>
+		Under Sandboxie, Internet Explorer selects the Administrator configuration. (But Internet Explorer does not necessarily run as Administrator under Sandboxie.) To fine-tune the administrator configuration, use the <em>Run as administrator</em> right-click action when you run Internet Explorer outside the sandbox. 
+	</p>
+	<hr>
+	<p>
+		<strong>Windows Update on Windows XP</strong> 
+	</p>
+	<p>
+		When you wish to visit the Windows Update web site, you should run Internet Explorer outside the sandbox. If Internet Explorer is forced to always run under Sandboxie (as discussed above), then use the <a href="FileMenu.html#disableforce">Disable Forced Programs</a> command to disable forced sandboxing before and after visiting the Windows Update web site.
+	</p>
+	<p>
+		Note the Automatic Updates facility in Windows does not rely on Internet Explorer and should not be affected by any Sandboxie settings related to Internet Explorer. Similarly, the Windows Updates window in Windows Vista also does not rely on Internet Explorer and is also not affected by Sandboxie. 
+	</p>
+	<hr>
+	<p>
+		<strong>Favorites</strong> 
+	</p>
+	<ul>
+		<li> Setting: Allow direct access to Internet Explorer favorites 
+		<li> Setting: Add Internet Explorer favorites to Quick Recovery folders 
+	</ul>
+	<p>
+		These settings allows Internet Explorer running under Sandboxie to store favorites outside the sandbox, so they can persist even after the sandbox is deleted. When this option is not set, favorites are stored only in the sandbox, and will be deleted when the sandbox is deleted. 
+	</p>
+	<p>
+		The first setting (direct access) stores favorites directly outside the sandbox. The second setting (<a href="QuickRecovery.html">Quick&nbsp;Recovery</a>) initially keeps the favorites in the sandbox but offers to recover (move out of the sandbox) any new favorites as they are added.
+	</p>
+	<p>
+		The first setting is more flexible in that you can add, edit and delete favorites freely. The second setting is more secure, but at the cost of some measure of convenience. 
+	</p>
+	<p>
+		<strong>Bottom line:</strong> For greater convenience, select the setting "Allow direct access to Internet Explorer favorites." 
+	</p>
+	<hr>
+	<p>
+		<strong>Cookies</strong> 
+	</p>
+	<ul>
+		<li> Setting: Allow direct access to Internet Explorer cookies 
+	</ul>
+	<p>
+		This setting allows Internet Explorer running under Sandboxie to store cookies outside the sandbox, so they can persist even after the sandbox is deleted. When this option is not set, cookies are stored only in the sandbox, and will be deleted when the sandbox is deleted. 
+	</p>
+	<p>
+		An alternative approach is to this setting is to visit your favorite sites once with a normal Internet Explorer, to get these sites to remember you in their cookies. Then switch to an Internet Explorer under Sandboxie, so any new cookies are kept the sandbox until you delete the sandbox. 
+	</p>
+	<p>
+		<strong>Bottom line:</strong> 
+	</p>
+	<ul>
+		<li> If you regularly delete cookies, and plan to start regularly using Sandboxie, then you can keep this setting unselected, and you will not have to keep regularly deleting cookies. 
+		<li> If you need web sites that you visit in a sandboxed Internet Explorer to remember you, then select this setting. 
+	</ul>
+	<hr>
+	<p>
+		<strong>Feeds</strong> 
+	</p>
+	<ul>
+		<li> Setting: Allow direct access to Internet Explorer feeds 
+	</ul>
+	<p>
+		This setting allows Internet Explorer running under Sandboxie to store feed links outside the sandbox, so they can persist even after the sandbox is deleted. When this option is not set, feed links are stored only in the sandbox, and will be deleted when the sandbox is deleted. 
+	</p>
+	<p>
+		Internet Explorer perdiocally checks its feeds from a component which is running outside the web browser. That component will not see (and will not check or refresh) feeds that are created in the sandbox when this setting is not in effect. (Technically, the component is a scheduled task. The task is created and altered whenever you use the Feed Settings tab in the Internet Options dialog.) 
+	</p>
+	<p>
+		<strong>Bottom line:</strong> If you work with Internet Explorer feeds, it is recommended that you select this setting. 
+	</p>
+	<hr>
+	<p>
+	<a name="SaveOutsideSandbox" id="SaveOutsideSandbox"></a><strong>Save Outside Sandbox</strong> 
+	</p>
+	<ul>
+		<li> Setting: Save outside sandbox: History of search strings and invoked commands. 
+		<li> Setting: Save outside sandbox: Account information for Hotmail and Messenger. 
+	</ul>
+	<p>
+		The first setting allows Internet Explorer running under Sandboxie to store "AutoComplete" information, which is typically used for keeping history: History of search strings, or history of commands typed into an input box. 
+	</p>
+	<p>
+		The second setting allows Internet Explorer running under Sandboxie to store "Credentials" information, which is typically used by Microsoft web sites, such as Hotmail, to remember your Windows Live ID. It is also used by Windows (Live) Messenger. 
+	</p>
+	<p>
+		<strong>Bottom line:</strong> These settings are concerned with privacy more than security. Information that you enter into web sites can be kept permanently (as with a normal browser) or only until you delete the sandbox. To keep it permanently, select these settings. Otherwise, leave the settings unselected. 
+	</p>
+	<hr>
+	<h2>
+		General Tips 
+	</h2>
+	<p>
+		<strong>Automatic Delete Sandbox</strong> 
+	</p>
+	<p>
+	<a href="SandboxieControl.html">Sandboxie&nbsp;Control</a> &gt; <a href="SandboxSettings.html">Sandbox&nbsp;Settings</a> &gt; <a href="DeleteSettings.html">Delete</a> &gt; <a href="DeleteSettings.html#invocation">Invocation</a>
+	</p>
+	<p align="center">
+		<img src="images/NewGui/DeleteInvocationSettings.png" alt=""> 
+	</p>
+	<ul>
+		<li> Setting: Automatically delete contents of sandbox 
+	</ul>
+	<p>
+		This setting tells Sandboxie to delete the sandbox whenever all programs in the sandbox stop running. 
+	</p>
+	<hr>
+	<p>
+		<strong>Highlight Windows of Programs Running Under Sandboxie</strong> 
+	</p>
+	<p>
+	<a href="SandboxieControl.html">Sandboxie&nbsp;Control</a> &gt; <a href="SandboxSettings.html">Sandbox&nbsp;Settings</a> &gt; <a href="AppearanceSettings.html">Appearance&nbsp;Settings</a>
+	</p>
+	<p align="center">
+		<img src="images/NewGui/AppearanceSettings.png" alt=""> 
+	</p>
+	<ul>
+		<li> Setting: Display a border around the window 
+	</ul>
+	<p>
+		This setting tells Sandboxie to draw a color border around windows that belong to programs running in this sandbox. The default color is yellow, but you can select a different color for every sandbox. 
+	</p>
+	<p>
+		Alternatively, if you wish to blur the distinction between programs running under the supervision of Sandboxie and those that are not, select the setting "Don't show Sandboxie indicator in the window title." 
+	</p>
+</div>
+
+<p align="center" style="font-size:8pt; line-height:1.4em;">
+	<b>Sandboxie</b> is Copyright &copy; 2004-2019 by Sandboxie Holdings, LLC.&nbsp; All rights reserved. <br>
+	<b><a href="index.html">Sandboxie.com</a> | <a href="ContactAuthor.html">Contact Author</a></b> <br>
+</p>
+
+<script type="text/javascript" src="../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
+</body>
+</html>

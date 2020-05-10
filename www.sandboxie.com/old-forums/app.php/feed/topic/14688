@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14688" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-02-25T15:32:28-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14688</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-02-25T15:32:28-04:00</updated>
+
+		<published>2013-02-25T15:32:28-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87509#p87509</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87509#p87509"/>
+		<title type="html"><![CDATA[[.02] New KeyScrambler dosen't run when Firefox is sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87509#p87509"><![CDATA[
+Version 4.01.02 includes the fixes to the KeyScrambler template.  Thanks again Guest10.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Feb 25, 2013 2:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-02-13T19:47:44-04:00</updated>
+
+		<published>2013-02-13T19:47:44-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87304#p87304</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87304#p87304"/>
+		<title type="html"><![CDATA[[.02] New KeyScrambler dosen't run when Firefox is sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87304#p87304"><![CDATA[
+<blockquote><div><cite>AMD wrote:</cite>Can you tell me if I need to remove the original template(default built in template) I have for Keyscrambler?</div></blockquote>Sorry, somehow I didn't see your post earlier.<br>Leave the original KeyScrambler template setting, probably listed under Software Compatibility, since you will still need it in the future.<br><br>The local template, and the line "Template=Local_KeyScrambler3" line under [GlobalSettings], can be removed after the next version of Sandboxie is installed. I wouldn't be in any hurry though. If you needed to revert to v3.76, you would need to use the additional settings for KeyScrambler because they would not be in the templates.ini file for 3.76.<br><br>[Edit: Personally, I find the latest KeyScrambler update v3.0.2.1 (released 2/13) to be buggy. I'll be checking to see if there's anything else that needs to be done with it's settings]<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Wed Feb 13, 2013 6:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AMD]]></name></author>
+		<updated>2013-02-11T19:31:36-04:00</updated>
+
+		<published>2013-02-11T19:31:36-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87248#p87248</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87248#p87248"/>
+		<title type="html"><![CDATA[[.02] New KeyScrambler dosen't run when Firefox is sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87248#p87248"><![CDATA[
+Guest 10, thank you for posting that info as Keyscrambler 3 was not protecting IE9 on my system either. I  shifted the template line up and into global settings so its universal for all sandboxes.<br><br>Can you tell me if I need to remove the original template(default built in template) I have for Keyscrambler?<br><br>Many Thanks<br><br>Andy<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11559">AMD</a> — Mon Feb 11, 2013 6:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-02-11T10:41:13-04:00</updated>
+
+		<published>2013-02-11T10:41:13-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87235#p87235</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87235#p87235"/>
+		<title type="html"><![CDATA[[.02] New KeyScrambler dosen't run when Firefox is sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87235#p87235"><![CDATA[
+Once the new settings are added to templates.ini, they will no longer be needed in the sandboxie.ini file. I have written a removal tool that can remove these new settings from sandboxie.ini, using the Sandboxie program "SbieIni.exe".<br><br>Copy/Paste the text in the code box into a Notepad document, and save it with a .cmd extension.<br>I called it Undo1.cmd, and have made a zipped copy available for download at:<br><a href="https://dl.dropbox.com/u/16046062/Sandboxie/Undo1.zip" class="postlink">https://dl.dropbox.com/u/16046062/Sandboxie/Undo1.zip</a><br><br>Move the .cmd file to Sandboxie's 'Program Files' folder and double-click it in Windows Explorer.<br>It will examine [GlobalSettings] and every sandbox 3 times - once for each of the possible settings - and remove those settings.<br>One thing that it does not do is remove the Local Template, if you added it.<br>There are instructions listed at the end of the .cmd file on how you can get Sandboxie Control to delete the local template - AFTER you have used the .cmd file.<div class="codebox"><p>CODE: </p><pre><code>@echo offRem Don't have any programs running sandboxed when you run this.Rem Check to see if this .cmd script is in the same folder as 'SbieIni.exe'if not exist sbieini.exe (goto error)echo.echo Please wait.echo Checking [GlobalSettings] and all sandboxes.echo.echo Working...sbieini delete GlobalSettings Template Local_KeyScrambler3sbieini delete GlobalSettings OpenIpcPath *\BaseNamedObjects*\KSSettingsEvent*sbieini delete GlobalSettings OpenIpcPath "\RPC Control\KSControlEp.Default*"sbieini query /boxes * &gt; Boxes.txtfor /f %%a in (Boxes.txt) do (sbieini delete %%a Template Local_KeyScrambler3)for /f %%a in (Boxes.txt) do (sbieini delete %%a OpenIpcPath *\BaseNamedObjects*\KSSettingsEvent*)for /f %%a in (Boxes.txt) do (sbieini delete %%a OpenIpcPath "\RPC Control\KSControlEp.Default*")if exist Boxes.txt (del Boxes.txt)goto end:errorecho.echo This script must be run from Sandboxie's Program Files folder.echo Typically, that's "C:\Program Files\Sandboxie"echo The folder should already contain: "SbieIni.exe"echo.pause:endexit------AFTER you run this command script...To remove the "Local_KeyScrambler3" template, if it was created:1) (Choose any sandbox) &gt; Sandbox Settings &gt; Applications &gt; Local2) Click on: "Additional settings for KeyScrambler v3"to highlight it.3) Click the Remove button.(you will NOT see a [+] beside the entry)4) Click the OK button.5) Click on "Yes" to "...delete this application configuration",if it lists the "Additional settings for KeyScrambler v3" template.6) Click OK</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Mon Feb 11, 2013 9:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-02-09T09:08:22-04:00</updated>
+
+		<published>2013-02-09T09:08:22-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87194#p87194</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87194#p87194"/>
+		<title type="html"><![CDATA[[.02] New KeyScrambler dosen't run when Firefox is sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87194#p87194"><![CDATA[
+<blockquote><div><cite>424tsiai wrote:</cite>In the mean while, Sandboxie users must do it manually, right?</div></blockquote>That's right.<br>I prefer using the local template approach, believing that it's easier to remove (and therefore do a bit of clean-up to the configuration file) when the next Sandboxie release makes it unnecessary.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Sat Feb 09, 2013 8:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[424tsiai]]></name></author>
+		<updated>2013-02-09T07:40:25-04:00</updated>
+
+		<published>2013-02-09T07:40:25-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87192#p87192</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87192#p87192"/>
+		<title type="html"><![CDATA[[.02] New KeyScrambler dosen't run when Firefox is sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87192#p87192"><![CDATA[
+<blockquote><div><cite>tzuk wrote:</cite>Thank you Guest10  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>I will add the two OpenIpcPath lines to Templates.ini</div></blockquote>Are you going to include these two lines to the <strong>Next</strong> Sandboxie <span style="text-decoration: underline">Release</span>?<br><br>In the mean while, Sandboxie users must do it manually, right?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1659">424tsiai</a> — Sat Feb 09, 2013 6:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-02-08T05:37:57-04:00</updated>
+
+		<published>2013-02-08T05:37:57-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87161#p87161</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87161#p87161"/>
+		<title type="html"><![CDATA[[.02] New KeyScrambler dosen't run when Firefox is sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87161#p87161"><![CDATA[
+Thank you Guest10  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>I will add the two OpenIpcPath lines to Templates.ini<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Feb 08, 2013 4:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-02-07T14:39:16-04:00</updated>
+
+		<published>2013-02-07T14:39:16-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87145#p87145</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87145#p87145"/>
+		<title type="html"><![CDATA[[.02] New KeyScrambler dosen't run when Firefox is sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87145#p87145"><![CDATA[
+Thank you Guest10 <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><p>Statistics: Posted by Guest — Thu Feb 07, 2013 1:39 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-02-07T13:50:48-04:00</updated>
+
+		<published>2013-02-07T13:50:48-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87143#p87143</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87143#p87143"/>
+		<title type="html"><![CDATA[[.02] New KeyScrambler dosen't run when Firefox is sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87143#p87143"><![CDATA[
+I'm glad you noticed it, because I had not.<br>I use the Pro version, and not the free version, so I tested only Pro.<br>You can see if these settings will work for you, as they do for me.<br><br>There are 2 Methods of adding additional settings for KeyScrambler described below.<br>Please read both, and pick the one that you would be more comfortable using.<br>----<br><strong>Method (1)</strong><br>Sandbox Settings &gt; Resource Access &gt; IPC Access &gt; Direct Access<br>"Add" button: <strong>\RPC Control\KSControlEp.Default*</strong><br>"Add" button: <strong>*\BaseNamedObjects*\KSSettingsEvent*</strong><br>OK<br>If you only use one sandbox, you are finished.<br><br>If you use more than one sandbox, you can repeat the above steps for each sandbox.<br><strong>Or,</strong> you can move the two new settings, so that they will apply to <span style="text-decoration: underline">all</span> sandboxes as follows:<br>Use the Sandboxie Control menu:<br>Configuration &gt; Edit Configuration<br>Find the configuration section for the sandbox where you added these new settings.<br>Move the 2 new lines (shown in <strong>bold</strong>) so that they are underneath [GlobalSettings].<br><br>[GlobalSettings]<br>...<br>... (&lt;--your existing settings are here)<br>...<br><strong>OpenIpcPath=\RPC Control\KSControlEp.Default*<br>OpenIpcPath=*\BaseNamedObjects*\KSSettingsEvent*</strong><br><br>Save the configuration file, after moving the lines as shown above.<br>Finished.<br>----<br><strong>Or, Method (2)</strong><br>Copy to the Clipboard the Local Template shown in the code box, and Paste it into a "Create New" window as follows:<br>For a sandbox where you will use KeyScrambler...<br>Sandbox Settings &gt; Applications &gt; Local &gt; "Create New" button:<div class="codebox"><p>CODE: </p><pre><code>[Template_Local_KeyScrambler3]Tmpl.Title=Additional settings for KeyScrambler v3OpenIpcPath=\RPC Control\KSControlEp.Default*OpenIpcPath=*\BaseNamedObjects*\KSSettingsEvent*Tmpl.Class=Local</code></pre></div>After you have entered the above local template, select it in the list and click the "Add" button.<br>Click OK<br>If you only use that one sandbox you are finished.<br><br>If you use multiple sandboxes, you have a choice...<br>You can apply the local template to each sandbox where you will use it:<br>Sandbox Settings &gt; Applications &gt; Local<br>Select the "Additional settings for KeyScrambler v3" template.<br>Click the "Add" button and then OK<br>If you create new sandboxes, and want to use these settings in it, you will need to perform the above step for each sandbox, until tzuk adds new settings to the KeyScrambler template in templates.ini<br><br><strong>Or,</strong> if you prefer, you can apply the new settings to all current and future sandboxes this way...<br>Move the new local template <strong>line</strong> to the [GlobalSettings] section of your configuration file.<br><br>[GlobalSettings]<br>...<br>... (&lt;--your existing settings are here)<br>...<br><strong>Template=Local_KeyScrambler3</strong><br><br>Save the configuration file.<br>----<br>Notes:<br>Of the two new exclusion settings, the first one seems to be the most important.<br>But without the second setting, it seemed to be unreliable during my tests.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Thu Feb 07, 2013 12:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-02-07T10:27:21-04:00</updated>
+
+		<published>2013-02-07T10:27:21-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87141#p87141</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87141#p87141"/>
+		<title type="html"><![CDATA[[.02] New KeyScrambler dosen't run when Firefox is sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14688&amp;p=87141#p87141"><![CDATA[
+Hello,<br><br>QFX Software just released new KeyScrambler Personal 3.0 and when Firefox is sandboxed, Keyscrambler dosen't run.<br><a href="http://www.qfxsoftware.com/download.htm" class="postlink">http://www.qfxsoftware.com/download.htm</a><br><a href="http://download.qfxsoftware.com/download/KeyScrambler_Setup.exe" class="postlink">http://download.qfxsoftware.com/downloa ... _Setup.exe</a><p>Statistics: Posted by Guest — Thu Feb 07, 2013 9:27 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

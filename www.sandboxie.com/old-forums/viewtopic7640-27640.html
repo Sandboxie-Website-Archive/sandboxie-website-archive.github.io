@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16378&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:44:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.10] link clicking</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.10] link clicking</h2>
+		<p><a href="viewtopic76827682.html?f=40&amp;t=16378">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=16378</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.10] link clicking</h3>
+				<div class="date">Posted: <strong>Mon Aug 26, 2013 2:10 pm</strong></div>
+				<div class="author">by <strong>yodar444</strong></div>
+				<div class="content">i normally run with opera as my default browser and i force it to always run sandboxed by setting the appropriate options in sandboxie. this allows me to click links in emails and miscellaneous web pages and have them always open in a sandboxed browser. i have been operating this way for years.<br>
+<br>
+upon returning from a 4 day trip on 7/14/13, clicking links in emails results in search results displayed in japanese [?] characters. the computer was hibernated and the power shut off at the UPS while we were gone.<br>
+<br>
+e.g.<br>
+clicking <a href="http://www.iheart.com/" class="postlink">http://www.iheart.com/</a> results in<br>
+<br>
+<a href="http://www.google.com/search?client=opera&amp;q=%E6%A0%25%5Bi" class="postlink">http://www.google.com/search?client=opera&amp;q=%E6%A0%<em></em></a><em>.......</em><br>
+<br>
+the google web page says:<br>
+"脂" (and any subsequent words) was ignored because we limit queries to 32 words.<br>
+Your search - 栢瑴㩰⼯睷⹷桩慥瑲挮浯∯〬〬ⰬⰰⰰⰬ汇扯污作彐啍䕔ㅘ㘳㔲＀翿䮋謐ᡓ턻䆋㬈ࡂ 謁ଁ脂à  - did not match any documents.<br>
+<br>
+if i rt clk the link and select 'copy link location' and then paste into the browser it goes to the right web page.<br>
+<br>
+if i remove the forced sandbox from opera, link clicking works properly.<br>
+<br>
+if i make firefox my default browser, link clicking works ok whether or not FF is forced to sandbox.<br>
+<br>
+i use FF for most of my browsing and thus don't want to run it forced sandbox mode.<br>
+<br>
+parameters:<br>
+win7pro 64<br>
+sandboxie 4.04 64bit<br>
+opera 12.16<br>
+firefox ESR 17.0.8<br>
+<br>
+help!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 27, 2013 5:04 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">This was fixed in a later version 4.05 beta.  Get version 4.05.06 from here:<br>
+<br>
+<a href="../phpbb/viewtopicbd0a.php?t=16079" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=16079</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>link clicking</h3>
+				<div class="date">Posted: <strong>Tue Aug 27, 2013 8:27 am</strong></div>
+				<div class="author">by <strong>yodar444</strong></div>
+				<div class="content">thank you for the 4.05.06 fix, but it also seems to be fixed by using opera 15.0<br>
+opera 15 doesn't show if u 'check for updates', but it is available. <br>
+i think they have screwed up the UI, but it seems fast.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>link clicking</h3>
+				<div class="date">Posted: <strong>Wed Aug 28, 2013 10:37 am</strong></div>
+				<div class="author">by <strong>yodar444</strong></div>
+				<div class="content">tzuk, thanks for the 4.05.06 fix, but this seems like a pretty obscure and interesting problem. would you care to describe what caused it?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 28, 2013 1:38 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Obscure, yes.  Interesting, no.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">  This was a simple matter of a conversion error between ANSI and UNICODE text strings.<br>
+Opera sends the link text as a single byte string (ANSI) and Sandboxie thought it was supposed to be a UNICODE string.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>link clicking</h3>
+				<div class="date">Posted: <strong>Wed Aug 28, 2013 6:10 pm</strong></div>
+				<div class="author">by <strong>yodar444</strong></div>
+				<div class="content">ok, tnx for the explanation.<br>
+<br>
+the end</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 03, 2013 8:03 am</strong></div>
+				<div class="author">by <strong>doll</strong></div>
+				<div class="content">Same problem in the operation to drop a local file to the shortcut of Opera.<br>
+That opera is starting state is a condition.<br>
+<br>
+Sandboxie 4.05.08<br>
+Opera 12.16 32bit<br>
+Windows 7 Pro SP1 32bit</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 03, 2013 5:31 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">OK, I will take a look at it, and post my findings in a couple of days.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Sep 12, 2013 9:10 am</strong></div>
+				<div class="author">by <strong>doll</strong></div>
+				<div class="content">Same problem with 4.05.09</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 13, 2013 4:38 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Sorry, did not look into this yet.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 23, 2013 9:00 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Should be fixed in version 4.05.10.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 23, 2013 1:35 pm</strong></div>
+				<div class="author">by <strong>doll</strong></div>
+				<div class="content">Thank you !!!<br>
+Fixed with 4.05.10</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16378&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:44:15 GMT -->
+</html>

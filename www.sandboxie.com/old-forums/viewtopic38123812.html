@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25057&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:25:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Loosing Windows Live Mail Contacts</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Loosing Windows Live Mail Contacts</h2>
+		<p><a href="viewtopica351a351.html?f=11&amp;t=25057">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25057</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Loosing Windows Live Mail Contacts</h3>
+				<div class="date">Posted: <strong>Wed Nov 01, 2017 7:48 pm</strong></div>
+				<div class="author">by <strong>DaveK</strong></div>
+				<div class="content">I use Windows live Mail in its own sandbox.  While I don't ever lose any messages, I've noticed that all my contacts sometimes get deleted.  I think this relates opening a second instance of mail from outside the sandbox.  For example, I think it happens if I click on a mailto link on a website accessed using a web browser that is operating in another sandbox or maybe not sandboxed at all.  Note, that I don't intentionally do this, but sometimes maito links aren't always obvious.<br>
+<br>
+I suspect I am misusing Sandboxie in some way and I am hoping there is a simple way to avoid this.<br>
+<br>
+I am using Win7 Pro 64-bit.  MS Window Live Mail (Version 2011 (Build 15.4.3555.0308)) and Sandboxie 64-bit version 5.20.<br>
+<br>
+The browser I usually use is Chrome Version 61.0.3163.100 (Official Build) (64-bit).<br>
+<br>
+I suppose the quick answer is maybe to operate my mail client and all browsers in the same sandbox, but that seems to defeat the purpose of having multiple sandboxes that you can clear after a browsing session.  I also tend not to sandbox browser sessions to known safe sites.<br>
+<br>
+Meanwhile, I plan to start making backup copies of just my email contacts to reduce the loss.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Loosing Windows Live Mail Contacts</h3>
+				<div class="date">Posted: <strong>Fri Nov 03, 2017 9:58 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello DaveK,<br>
+<br>
+Is the Windows Live Mail template active in your Sandbox? (Right-click on your Sandbox --&gt; Sandbox Settings--&gt; Applications --&gt; Email Reader--&gt; Windows Live Mail<br>
+Is there any antivirus software involved?<br>
+<br>
+Have you followed this guide in order to properly set up your email configuration? <br>
+<a href="../TestEmailConfiguration.html" class="postlink">https://www.sandboxie.com/TestEmailConfiguration</a><br>
+<br>
+Any chance you are saving the contacts to a non-standard location? (So whenever you delete the contents of your Sandbox, your contacts get deleted as well). <br>
+Currently, the template for Windows Live Mail is saving contacts from these folders:<br>
+%AppData%\Microsoft\Windows Live Mail<br>
+%AppData%\Microsoft\Windows Live Contacts<br>
+%Local AppData%\Microsoft\Windows Live Mail<br>
+%Local AppData%\Microsoft\Windows Live Contacts<br>
+%Local AppData%\Microsoft\Windows Live\Contacts<br>
+<br>
+Can you clarify a bit what do you mean by all your contacts get deleted? <br>
+Repro steps would be greatly appreciated. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Loosing Windows Live Mail Contacts</h3>
+				<div class="date">Posted: <strong>Fri Nov 03, 2017 12:20 pm</strong></div>
+				<div class="author">by <strong>DaveK</strong></div>
+				<div class="content">By losing the contacts, I mean the number of contacts shown in the email client drops from some number (currently 48) to zero and no contacts are listed in the contacts listing in the email client.<br>
+<br>
+The email reader is set to Windows Live Mail in all three of my sandboxes.<br>
+I can close the email client, delete the contents of the sandbox, and reopen email inside the sandbox without losing any messages or contacts.<br>
+I can close the sandboxed email app, delete the sandbox contents, and reopen it unsandboxed without losing contacts.<br>
+I went through the email setup guide when I first installed Sandboxie<br>
+I use Avast Free Antivirus version 17.7.2314.<br>
+<br>
+I backed up my email contacts using the email's export option, so now I can recover easily of it happens again.  I will look to find out where the email client stores contacts.  I have several folder's named "contacts", but don't know which is currently associated with the email client.  The others are probably remnants of backups or past operating systems.  Your list of locations should help.<br>
+<br>
+I think it only loses contacts when a second instance of the email client is accidentally opened outside the email sandbox.  I will experiment a little more now that I can easily recover.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Loosing Windows Live Mail Contacts</h3>
+				<div class="date">Posted: <strong>Fri Nov 03, 2017 12:41 pm</strong></div>
+				<div class="author">by <strong>DaveK</strong></div>
+				<div class="content">Well, so much for my theory.  I am not able to recreate the problem simply by opening a second instance of Windows Live Mail outside my email sandbox.<br>
+<br>
+The problem is that I never notice it at the moment it actually happens because I'm obviously not watching my email contacts waiting for them to disappear.  What I've done is try to think back on what I've been doing when I do notice they are gone, but I never know how long the contacts have been gone before I noticed it. <br>
+<br>
+Until I can provide more info, I doubt there is much you can offer.  If I zero in on a definite set of circumstances, I will post again.  Otherwise, I don't think there's any point in trying to resolve this from your end with the limited info I've been able to provide.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25057&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:25:03 GMT -->
+</html>

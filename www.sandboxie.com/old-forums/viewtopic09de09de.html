@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24553&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:06:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Configure Sandboxie usb access for UTF security key? [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Configure Sandboxie usb access for UTF security key? [SOLVED]</h2>
+		<p><a href="viewtopicebefebef.html?f=17&amp;t=24553">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24553</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Configure Sandboxie usb access for UTF security key? [SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Jun 15, 2017 5:14 pm</strong></div>
+				<div class="author">by <strong>FrankieW</strong></div>
+				<div class="content">Hi, I use the UTF security key option for two factor authentication on several sites. To authenticate I insert the key into a usb slot and the site identifies it and approves login, then I remove the key.<br>
+<br>
+However the key only works in unsandboxed browsers, in sandboxie the sites can’t locate the inserted key. How do I configure sandboxie to access my usb key automatically on insertion? I can get by with text message as a second option for two factor but I prefer to use the key.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Configure Sandboxie usb access for UTF security key?</h3>
+				<div class="date">Posted: <strong>Fri Jun 16, 2017 9:44 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello  FrankieW ,<br>
+<br>
+Are you receiving an error message when you try to use it? Or just nothing happens?<br>
+Does the issue occur in a New Sandbox?<br>
+What are your browsers, OS, Sandboxie and Antivirus versions? <br>
+<br>
+Please provide the output or your Resource Access Monitor, so that I can have a look :<br>
+(use the "&lt;/&gt;" button in the forum to format it)<br>
+<a href="../index9970.html?ResourceAccessMonitor" class="postlink">https://www.sandboxie.com/index.php?Res ... essMonitor</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Configure Sandboxie usb access for UTF security key?</h3>
+				<div class="date">Posted: <strong>Sat Jun 17, 2017 7:38 pm</strong></div>
+				<div class="author">by <strong>FrankieW</strong></div>
+				<div class="content">Hi, I don't receive any error, nothing happens. It's always a new sandbox. I'm using latest Sandboxie with default settings except with internet access and start/run access restricted to chrome only. <br>
+<br>
+The thing about UTF keys is they never show up as drives when inserted in usb slots, they are simply cryptographic info on a chip, so I can't give chrome direct access to a drive. There's nothing online about it but I think it's probably a universal issue with a universal solution.<br>
+<br>
+If I insert a UTF key and press the button on it when a browser isn't requesting it, it will light up for five seconds then become inactive until removed. <br>
+If I insert it when an unsandboxed browser is requesting it, it flashes until the button is pressed, then the website authenticates and it becomes inactive. <br>
+If I insert it when a sandboxed browser is requesting it, it behaves like a browser isn't requesting it, and the website behaves like there is no key.<br>
+<br>
+It seems sandboxed browsers need to be given access to read the key somehow, even when it doesn't register as a drive. How do I do that? Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Configure Sandboxie usb access for UTF security key?</h3>
+				<div class="date">Posted: <strong>Mon Jun 19, 2017 11:49 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello FrankieW,<br>
+<br>
+Have a look at these threads:<br>
+<a href="search2a942a94.html?st=0&amp;sk=t&amp;sd=d&amp;sr=posts&amp;keywords=yubikey" class="postlink">search.php?st=0&amp;sk=t&amp;sd=d&amp;sr=posts&amp;keywords=yubikey</a><br>
+<br>
+Please create a new sandbox without restrictions or any edits and see if that alleviates the issue.<br>
+<br>
+If it still doesn't work in the new Sandbox, please provide your browsers, OS, Sandboxie and Antivirus versions.<br>
+<br>
+We can have a look at your Resource Access Monitor to see if there's anything listed there that might help:<br>
+(use the "&lt;/&gt;" button in the forum to format it)<br>
+<a href="../index9970.html?ResourceAccessMonitor" class="postlink">https://www.sandboxie.com/index.php?Res ... essMonitor</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Configure Sandboxie usb access for UTF security key?</h3>
+				<div class="date">Posted: <strong>Tue Jun 20, 2017 3:38 pm</strong></div>
+				<div class="author">by <strong>FrankieW</strong></div>
+				<div class="content">Hi, thanks for the thread links I checked them out but I'm not using Kapersky and I can't see similar configs in Avira so no solutions for me. I tried a new sandbox with no restrictions, made no difference. I also temporarily disabled antivirus and windows firewall but still no joy. <br>
+Browser: Google Chrome 59.0.3071.86 (64-bit) / OS: Windows 10 Pro / Sandboxie 5.20 (64-bit) / Avira Free Antivirus 15.0.26.48<br>
+<br>
+Resource Access Monitor info below:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Clsid       -------------------------------
+File/Key    -------------------------------
+Image       -------------------------------
+Ipc         -------------------------------
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_06c218440287d7dc0767df8247e9239f586a78679d0eb5cab99ce50423e0f3b2
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_092620225e8901738754faf81b5bae4561d4fc112fa6ba16de925a79a2fa1730
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_112c1ee8bd0e7cf0cda2b193f685a999d9c54dbbfb7014bdc0ef90f9425cb57f
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_179b27c1947d80e6ed6cca7c6363ac65803e44c53ed8edc6a1b3fe66dc73ab87
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_2a17f9af22ae864af8a5d16329de85840907b87a6c352ab5a91458b99ff9ad6a
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_2c23f30c1f5feae485924cabca96eefe9f7879159e6c9273f85340b2e96af0c9
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_33a11a78256582d621036b1037d6b24b6b45bae6019f06309692be9718ddfc93
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_3559c2b5a08a41689b1bccae3bbf84149d7ea98b1e7aa77ccce5ccee9cf89dae
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_35f112514548ead5b24705a3e501958372f1936974cad169e52bb7fecfb5c1bf
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_3dc7fd131aa74deb4634865de224228816d33ea7dafe2d0ccfa98b1cb75687a8
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_63b066804212e3762d0171a14d756930124f5b425e98bfc4d73579e7e3ed2be9
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_644f1704176410a6d32d93fd5e31f567109a29a3b2a5e4a5742ece9e384600f4
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_6f8a228cc7243b34bb5ea7cfaf1b947c0f7101b62063d565a19b4a428f919bf7
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_7521ba990bb3a3cfbcbc25a49b796af41a91b709763754bd37d54de1c4441f94
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_7702c89403bb02d8aa535dd5d3428968854bcf5a21672f9fea77f7d5df61c810
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_80a0d4c81dbc6585750697adb5698465464e7cf61832dc018adb471a242a0142
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_a18e5d0c7a1ed5791a878ae32dc3ead465e1459f13a25a459f146245963cd1e4
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_a33472ed0540d567de3c64163e6d08d031737d535cc657774024a8bd49c2e535
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_a3bd5ac793e1327e8dd8cd886eeeab8e1e2ceea5f063a72c53c1ee8d1c961d43
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_a3ef0fa55b517edee4971a3e2360b889cacb719c0d2f64cbd57788df6c6d9db9
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_a6c5319d77988dd67deacdc1c45b3b54bdcccef30c8105257c4e3f8f319e0d06
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_a9047e5eb25a391eea540883dd25db6bf8bd609076022665e264fd670bcdbd7a
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_b5edd306b679c8cf0ae731db648211e4588c8d6365144398f7352bd61756a531
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_c2e1bda5ce085db6b8d310d94d0fbf8085f00aa05b2917318720abb214fe1054
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_d5ecb0768b9cb85686e8f671e8f96c6b4cfc7e428224f1d5ca22a2815878b1d9
+Pipe        -------------------------------
+Pipe        \Device\00000064
+Pipe        \Device\USBPDO-0
+WinCls      -------------------------------</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Configure Sandboxie usb access for UTF security key?</h3>
+				<div class="date">Posted: <strong>Tue Jun 20, 2017 4:16 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello FrankieW,<br>
+<br>
+See if these entries are also present when you try the key in other browsers:<br>
+Pipe        \Device\00000064<br>
+Pipe        \Device\USBPDO-0<br>
+<br>
+If yes, try opening them one at a time by accessing Sandboxie Control ---&gt; Configure ---&gt; Edit Configuration<br>
+Add them at the bottom of a desired Sandbox. <br>
+<a href="../index0047.html?OpenPipePath" class="postlink">https://www.sandboxie.com/index.php?OpenPipePath</a><br>
+<br>
+It should look like this:<br>
+OpenPipePath=\Device\00000064<br>
+OpenPipePath=\Device\USBPDO-0<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Configure Sandboxie usb access for UTF security key?</h3>
+				<div class="date">Posted: <strong>Wed Jun 21, 2017 3:28 pm</strong></div>
+				<div class="author">by <strong>FrankieW</strong></div>
+				<div class="content">Hi,<br>
+<br>
+those entries are present in chromium browsers, but not in firefox as firefox does not have native support for UTF security keys, sandboxed or not I'd need an add-on.<br>
+<br>
+Opening the numbered pipe path would not work as its a new device every time I insert the key, it counts up (65, 66, 67, etc).<br>
+<br>
+Opening the USBPDO-0 pipe path sounds promising. However before I got to that, I managed to get it to work without making any changes:<br>
+<br>
+I found when using a sandboxed browser if I insert the key before its required i.e. at the username or password stage, then when it gets to the authentication stage the key will activate and function normally. However if the key is inserted when already on the authentication request page, then it doesn't work. On unsandboxed browsers it works both ways.<br>
+<br>
+Thanks for the help and advice,<br>
+<br>
+Regards</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24553&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:06:57 GMT -->
+</html>

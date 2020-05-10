@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=19374&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:44:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; How To: Run two or more instances of Thunderbird Portable</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>How To: Run two or more instances of Thunderbird Portable</h2>
+		<p><a href="viewtopicffc5ffc5.html?f=5&amp;t=19374">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=19374</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>How To: Run two or more instances of Thunderbird Portable</h3>
+				<div class="date">Posted: <strong>Tue Aug 05, 2014 6:19 am</strong></div>
+				<div class="author">by <strong>JohnBox</strong></div>
+				<div class="content">Run two or more instances of Thunderbird Portable with Sandboxie each in their own sandbox:<br>
+<br>
+<br>
+1.<br>
+<br>
+In the install folder of TunderbirdPortable go to folder ..\other\sources\ and open ThunderbirdPortable.ini.<br>
+<br>
+<br>
+<br>
+<br>
+2.<br>
+<br>
+Change ThunderbirdExecutable=thunderbird.exe to ThunderbirdExecutable=thunderbird_ADD_ANY_CHOSEN_VALUE_HERE_INST1.exe<br>
+<br>
+and save the ThunderbirdPortable.ini file so that changes to the file are updated.<br>
+<br>
+<br>
+<br>
+<br>
+3.<br>
+<br>
+Put the ThunderbirdPortable.ini file in install folder where ThunderbirdPortable.exe is.<br>
+<br>
+<br>
+<br>
+4. <br>
+<br>
+In the install folder of TunderbirdPortable go to folder ..\App\thunderbird<br>
+<br>
+and change thunderbird.exe to thunderbird_ADD_ANY_CHOSEN_VALUE_HERE_INST1.exe.<br>
+<br>
+This HAS to be the same value you chose in the ThunderbirdPortable.ini file!<br>
+<br>
+<br>
+<br>
+5.<br>
+<br>
+Change ThunderbirdPortable.exe to ThunderbirdPortable_ADD_ANY_CHOSEN_VALUE_HERE_USERNAME1.exe.<br>
+<br>
+<br>
+<br>
+6.<br>
+<br>
+Make a new Sandbox with NO default settings and call it Thunderbird_ADD_ANY_CHOSEN_VALUE_HERE_USERNAME1.<br>
+<br>
+<br>
+<br>
+7.<br>
+<br>
+In Sandbox Settings for Thunderbird_ADD_ANY_CHOSEN_VALUE_HERE_USERNAME1 choose:<br>
+<br>
+Delete -&gt; Delete Invocation -&gt; select Automatically delete contents of sandbox<br>
+<br>
+Program Groups -&gt; Add Group -&gt; Call it Thunderbird_USERNAME1 -&gt; Click Apply<br>
+<br>
+Program Groups -&gt; Add Program -&gt; Open / Select file -&gt; add ThunderbirdPortable_ADD_ANY_CHOSEN_VALUE_HERE_USERNAME1.exe -&gt; OK<br>
+<br>
+Program Groups -&gt; Add Program -&gt; Open / Select file -&gt; add thunderbird_ADD_ANY_CHOSEN_VALUE_HERE_INST1.exe -&gt; OK<br>
+<br>
+Program Groups -&gt; select &lt;InternetAccess&gt; from the "The list below applies to" drop down menu -&gt; Add Program -&gt; Program groups (far right) -&gt; select Thunderbird_USERNAME1 -&gt; OK<br>
+<br>
+Program Start -&gt; Forced Programs -&gt; Add program -&gt; Program groups (far right) -&gt; select Thunderbird_USERNAME1 -&gt; OK<br>
+<br>
+Restrictions -&gt; Internet Access -&gt; Add program -&gt; Program groups (far right) -&gt; select Thunderbird_USERNAME1 -&gt; OK<br>
+<br>
+Restrictions -&gt; Start/Run Access -&gt; Add program -&gt; Program groups (far right) -&gt; select Thunderbird_USERNAME1 -&gt; OK<br>
+<br>
+Restrictions -&gt; Drop Rights -&gt; select Drop rights from Administrators and Power Users groups<br>
+<br>
+Applications -&gt; Local -&gt; Create New -&gt;<br>
+<br>
+Copy &amp; Paste the new Local template given below and CHANGE the VALUES for _USERNAME1 AND _ADD_ANY_CHOSEN_VALUE_HERE_INST1.exe to the VALUES you have chosen them in step 2.<br>
+<br>
+You can name the Template to anything you like, though I recommend naming the template according to the user or the intended use of this Thunderbird instance so that you can easily remember it.<br>
+<br>
+<br>
+================================<br>
+[Template_Thunderbird_USERNAME1]<br>
+Tmpl.Title=Thunderbird_USERNAME1<br>
+Tmpl.Class=EmailReader<br>
+OpenFilePath=thunderbird_ADD_ANY_CHOSEN_VALUE_HERE_INST1.exe,%Tmpl.Thunderbird_USERNAME1%<br>
+Tmpl.Class=Local<br>
+================================<br>
+<br>
+-&gt; OK -&gt; Apply<br>
+<br>
+Applications -&gt; Folders -&gt; Select folder for -&gt; here the template Thunderbird_USERNAME1 should show up -&gt; Default location is EMPTY -&gt; Alternate location -&gt; Add -&gt; go to the install folder of TunderbirdPortable and then to ..\Data\profile -&gt; OK<br>
+<br>
+Resource Access -&gt; File Access -&gt; Direct Access -&gt; select thunderbird_ADD_ANY_CHOSEN_VALUE_HERE_INST1.exe from the "The list below applies to" drop down menu and make sure that [%Tmpl.Thunderbird_USERNAME1%] is shown.<br>
+<br>
+<br>
+<br>
+8.<br>
+<br>
+In Sandbox Settings for Thunderbird_ADD_ANY_CHOSEN_VALUE_HERE_USERNAME1 hit OK.<br>
+<br>
+<br>
+<br>
+9.<br>
+<br>
+Make sure to TEST your Sandbox configuration for Thunderbird offline and with Thunderbird sandboxed and UNsandboxed like lined out on the FAQ for Test Email on the Sandboxie site <br>
+<br>
+<a href="../indexea85.html?TestEmailConfiguration" class="postlink">http://www.sandboxie.com/index.php?Test ... figuration</a><br>
+<br>
+to make sure everything runs fine before you go live! OTHERWISE YOU WILL BE LOOSING EMAIL PERMANENTLY!<br>
+<br>
+<br>
+<br>
+10.<br>
+<br>
+Now you can add as many instances of Thunderbird Portable, given you name each TunderbirdPortable.exe, thunderbird.exe and Sandboxie Local Template differently.<br>
+<br>
+<br>
+This has worked for me setting up various accounts of Thunderbird Portable all running along nicely each in their own sandbox. If you have any questions or comments please do not refrain from posting them. If you happen to find an error or type please do let me know. Of course you can tweak your Sandboxie settings more to your personal liking, I just presented a working method that works just fine for me.<br>
+<br>
+Best Regards</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=19374&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:44:20 GMT -->
+</html>

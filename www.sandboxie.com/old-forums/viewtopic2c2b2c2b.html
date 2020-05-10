@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24992&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:29:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; LastPass in sandboxie</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>LastPass in sandboxie</h2>
+		<p><a href="viewtopic09440944.html?f=11&amp;t=24992">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24992</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>LastPass in sandboxie</h3>
+				<div class="date">Posted: <strong>Sun Oct 15, 2017 2:48 pm</strong></div>
+				<div class="author">by <strong>yodar444</strong></div>
+				<div class="content">when i run firefox in sandboxie, the LastPass icon does not appear in the Add-on bar and LastPass doesn't function. it used to up until recently. if i look at Tools|Add-ons, LastPass is listed there. it still appears normal in a copy of firefox running outside of sandboxie.<br>
+what could cause this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: LastPass in sandboxie</h3>
+				<div class="date">Posted: <strong>Mon Oct 16, 2017 12:04 pm</strong></div>
+				<div class="author">by <strong>yodar444</strong></div>
+				<div class="content">more info:<br>
+in the Sandbox Settings - Default Box panel, Applications | Security/Privacy i see: [--] LastPass<br>
+<br>
+what does [--] mean?<br>
+why is LastPass listed here?<br>
+<br>
+win7pro64<br>
+<br>
+SB 5.20 (64bit) registered<br>
+<br>
+LP Version: 4.1.54<br>
+Built: Wed May 17 2017 10:10:13 GMT-0400 (EDT)<br>
+Binary Component: false</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: LastPass in sandboxie</h3>
+				<div class="date">Posted: <strong>Mon Oct 16, 2017 4:19 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello yodar444,<br>
+
+<blockquote class="uncited"><div>what does [--] mean?</div></blockquote>
+It means it is added globally and you will need to use the Software Compatibility tool to remove it (Configure --&gt; Software compatibility). 
+<blockquote class="uncited"><div>why is LastPass listed here?</div></blockquote>
+It was probably detected by Sandboxie in the past and added to your global templates. <br>
+<br>
+I installed LastPass on Firefox and then launched it Sandboxed. LastPass appeared just fine. Please try a new Sandbox with default settings to see if that solves the problem. <br>
+You can also try removing the lastpass template as explained above, to see if that makes a difference. <br>
+<br>
+If the issue persists, please try the latest beta:<br>
+<a href="viewtopic95959595.html?f=62&amp;t=24741" class="postlink">viewtopic.php?f=62&amp;t=24741</a><br>
+<br>
+Are you using any security software? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: LastPass in sandboxie</h3>
+				<div class="date">Posted: <strong>Mon Oct 16, 2017 4:20 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist2b7d.html?mode=viewprofile&amp;u=1938">yodar444</a> wrote: <a href="viewtopic4acc4acc.html?p=130654#p130654" data-post-id="130654" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Oct 16, 2017 12:04 pm</div></cite>
+more info:<br>
+in the Sandbox Settings - Default Box panel, Applications | Security/Privacy i see: [--] LastPass<br>
+<br>
+what does [--] mean?<br>
+why is LastPass listed here?
+</div></blockquote>[--] means that the setting comes from a template, as a result of having it listed under [GlobalSettings] in the Sandboxie configuration file (Sandboxie.ini):<br>
+<br>
+[GlobalSettings]<br>
+...<br>
+Template=LastPass<br>
+...<br>
+<br>
+In other words, that is normal and correct for all sandboxes, since Sandboxie detected that LastPass is being used.<br>
+My LastPass icon is at the top, next to the address bar. But I use Cyberfox, so I don't know of any problems with Firefox.<br>
+I assume that you have Deleted Contents of the sandbox, since that will force Firefox to re-read the profile files from unsandboxed Firefox the next time that it runs sandboxed.<br>
+Also, you might try using "Customize" when not sandboxed, move the icon from the add-on bar so that it's next to the address bar, and make sure that you have Deleted Contents of the sandbox before running Firefox sandboxed, again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: LastPass in sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 17, 2017 4:40 pm</strong></div>
+				<div class="author">by <strong>yodar444</strong></div>
+				<div class="content">i tried everything Barb suggested, but no help.<br>
+next i tried disabling some of my add-ons. that seemed to help, but wasn't consistent. so i disabled all the add-ons except lastpass. that fixed it. now i am adding them back 1 at a time to see which one breaks it. i had 10 add-ons enabled.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24992&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:29:13 GMT -->
+</html>

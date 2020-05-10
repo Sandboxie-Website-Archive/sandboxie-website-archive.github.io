@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=2028&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:01:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SandboxToys, a toolbox for Sandboxie: now v07.11.04.09</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SandboxToys, a toolbox for Sandboxie: now v07.11.04.09</h2>
+		<p><a href="viewtopic33fc33fc.html?f=22&amp;t=2028">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=2028</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>SandboxToys, a toolbox for Sandboxie: now v07.11.04.09</h3>
+				<div class="date">Posted: <strong>Thu Sep 06, 2007 6:59 am</strong></div>
+				<div class="author">by <strong>r0lZ</strong></div>
+				<div class="content">After having read some feature requests in this board, and figured out how Sandboxie works, I had the intention to post some requests myself.  But since I have my own idea on how they should be implemented, I decided to write my own implementation of the tools I need.  Of course, I would prefer to see those tools integrated in Sandboxie itself, but in the meantime, SandboxToys can be useful, so I decided to make it publicly available, as a freeware.<br>
+<br>
+<strong>Download SandboxToys: <a href="http://home.base.be/vt6328799/SandboxToys.zip" class="postlink">SandboxToys.zip</a>  or <a href="http://download.videohelp.com/r0lZ/SandboxToys.zip" class="postlink">Mirror</a>.</strong><br>
+<br>
+<strong>The current version of SandboxToys is: <a href="../phpbb/viewtopicf97a.php?p=14694#14694" class="postlink">07.11.04.09</a></strong><br>
+(The version number is the date of the last compilation, in the form YY.MM.DD.HH)<br>
+<br>
+Installation: Do not try to run SandboxToys sandboxed, as it will probably not work properly!<br>
+To install it, extract SandboxToys from the archive, and place it <strong>in your Sandboxie installation folder</strong>, then <strong>right-click it and select Run As Administrator</strong>.  It will install itself, and create some new shortcuts in your Start Menu.  The file "SandboxToys_install.txt", included in the archive, gives more details.<br>
+<br>
+To use SandboxToys, read the next post.<br>
+<br>
+Please report bugs and feature requests in this thread.  I don't have the intention to read the whole Sandboxie board!<br>
+<br>
+Have fun!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>SandboxToys user manual</h3>
+				<div class="date">Posted: <strong>Thu Sep 06, 2007 6:59 am</strong></div>
+				<div class="author">by <strong>r0lZ</strong></div>
+				<div class="content"><span style="font-size: 200%; line-height: normal">SandboxToys user manual</span><br>
+<br>
+SandboxToys is a toolbox for Sandboxie v3.01 or (hopefully) greater.<br>
+SandboxToys is mainly designed to ease launching programs that have been installed in your sandboxes, or to open any program or file sandboxed in any sandbox.<br>
+SandboxToys provides also some tools to explore, examine and maintain yous sandboxes in a variety of ways.<br>
+<br>
+<strong><span style="font-size: 150%; line-height: normal">Installation:</span></strong><br>
+<br>
+Extract SandboxToys.exe from the zip archive and place it in your Sandboxie installation folder.  Then, launch it.  SandboxToys will install itself automatically.<br>
+Read also SandboxToys_install.txt, included in the archive.  It gives more details.<br>
+Note that you cannot uninstall SandboxToys from the standard "Add or Remove Programs" control panel, but you can uninstall it with the "Uninstall or Repair SandboxToys" shortcut installed in your Start Menu.<br>
+<br>
+<strong><span style="font-size: 150%; line-height: normal">Usage:</span></strong><br>
+<br>
+Several shortcuts have been created in the SandboxToys sub-folder of your Sandboxie Start Menu folder.
+<ul>
+<li> <span style="text-decoration: underline"><strong>Main SandboxToys Start Menu</strong></span><br>
+This tool is the core of SandboxToys.<br>
+When you launch it, it displays a little popup menu with a sub-menu for each Sandbox that has been properly configured and created with Sandboxie.  Note that only the sandboxes that are currently not empty are displayed in the menu.<br>
+The structure of that popup menu is:
+	<ul><li> <strong>&lt;Sandbox_name&gt;</strong><br>
+	Each sandbox is represented by a sub-menu with the following menu items:
+		<ul><li> <span style="text-decoration: underline">Tools sub-menu:</span>
+			<ul><li> Mirror Shortcuts in Start Menu<br>
+			Mirror shortcuts are shortcuts installed in your regular Start Menu, by default in the folder "[#] Sandboxes [#]\&lt;Sandbox_name&gt;".  Those shortcuts can be used to launch the programs that have been properly installed in the sandbox "&lt;Sandbox_name&gt;".  They are launched automatically sandboxed in the same sandbox.<br>
+			When you select "Mirror Shortcuts in Start Menu", SandboxToys scans the sandbox folder, and duplicates the shortcuts it finds in the Start Menu, Desktop and Quick Launch folders of your sandbox to your regular Start Menu.</li>
+			<li> Delete Dead Mirror Shortcuts<br>
+			When a program is uninstalled form a sandbox, the shortcuts created by the previous option are not removed automatically.<br>
+			Delete Dead Mirror Shortcuts can be used to find the sandboxed shortcuts in the "[#] Sandboxes [#]\&lt;Sandbox_name&gt;" folder of your regular Start Menu that are not pointing to an existing target any more, and to delete them.<br>
+			Note: When you create a mirror for the first time, an new shortcut is created also in the mirror's root folder of your Start Menu, called "<strong>Delete dead shortcuts</strong>".  This icon can be used to delete ALL dead shortcuts of ALL sandboxes that have been mirrored so far, without confirmation!</li>
+			<li> Sandboxie's Run Dialog<br>
+			Launches the regular Run Dialog of Sandboxie, but automatically sandboxed in the right sandbox instead of the "DefaultBox".</li>
+			<li> Sandboxie's Start Menu<br>
+			Launches the regular Start Menu of Sandboxie, but automatically sandboxed in the right sandbox instead of the "DefaultBox".</li>
+			<li> Sandboxed MS-DOS command prompt<br>
+			Launches the command prompt, sandboxed in the right sandbox.  The current directory is set automatically to the path of your sandbox.</li>
+			<li> Registry Editor<br>
+			Launches the Registry Editor, sandboxed or unsandboxed, and opens automatically the key corresponding to the sandbox.<br>
+			Note that when it is run unsandboxed, the standard Run dialog is also opened.  This is necessary to force Sandboxie to link the RegHive file of the sandbox to the registry.  Do not close the Run dialog while you are working in the registry editor (unless you are sure that another program is currently running sandboxed in that sandbox.)</li>
+			<li> Add or Remove Programs<br>
+			Launches the Add or Remove Programs control panel, sandboxed.<br>
+			All programs installed on your system and in the sandbox are listed.  If you uninstall a program that has been installed in the sandbox, it will be completely uninstalled.<br>
+			If you uninstall a program that has been installed unsandboxed, it will disappear from the sandbox, but will still be available outside of the box.  This can be useful if you need to hide a program in a specific sandbox.<br>
+			You can also use this control panel to install a new program in the sandbox.</li>
+			<li> Delete Fake Files and Folders<br>
+			When a file is deleted by a sandboxed program, Sandboxie leaves an empty file in your sandbox with a "magic" creation date to recognize that the file doesn't exists any more "officially".  However, those fake files are necessary only when a file of the same name exists in the corresponding folder outside of the box.<br>
+			Those empty files consume some disc space and make it difficult to browse your sandbox folder.  Use "Delete Fake Files and Folders" to remove them completely.</li>
+			<li> Terminate Sandboxed Processes<br>
+			Does exactly the same thing than the regular Sandboxie tool of the same name, except that it works on the sandbox of the menu, and not the sandbox that is current in Sandboxie Control.</li>
+			<li> Back Sandbox up to ZIP file<br>
+			Creates a ZIP archive with the content of the sandbox.  It is highly recommended to quit all applications running in the sandbox before calling this function, as they will be killed any way!<br>
+			A log file is created in case of error.  Do not trust a backup that has failed!<br>
+			If a malware has infected your sandbox, simply delete it and restore the backup manually.</li>
+			<li> Delete Contents of Sandbox<br>
+			Does exactly the same thing than the regular Sandboxie tool of the same name, except that it works on the sandbox of the menu, and not the sandbox that is current in Sandboxie Control.</li>
+		</ul></li><li> <span style="text-decoration: underline">Explore sub-menu:</span>
+		    <ul><li> Sandboxed<br>
+			Launch a sandboxed explorer to explore the Sandbox folder.</li>
+		    <li> Sandboxed, Restricted<br>
+			Launch a sandboxed explorer to explore the Sandbox folder.  You cannot browse outside of the sandbox (although it is still possible to type any folder name in the address bar.)</li>
+		    <li> Unsandboxed<br>
+			Launch an unsandboxed explorer to explore the Sandbox folder.</li>
+		    <li> Sandboxed, Restricted<br>
+			Launch an unsandboxed explorer to explore the Sandbox folder.  You cannot browse outside of the sandbox.</li>
+		</ul></li><li> <span style="text-decoration: underline">Desktop sub-menu:</span><br>
+		    This sub-menu is only available if there are files or shortcuts in the Desktop folder of the sandbox (or in its sub-folders.)<br>
+			It contains a menu item for each file or shortcut found in the sandboxed Desktop.  Use those menu items to launch the file, automatically sandboxed.<br>
+			This function is similar to the regular Start Menu -&gt; Desktop of Sandboxie, except that it displays the files that are installed in the desktop of the sandbox, and not in your regular Desktop, and that it launches the file sandboxed in its own sandbox, and not in the "DefaultBox".</li>
+		<li> <span style="text-decoration: underline">Quick Launch sub-menu:</span><br>
+		    This sub-menu is only available if there are files or shortcuts in the Quick Launch folder of the sandbox.<br>
+			It contains a menu item for each file or shortcut found in the sandboxed Quick Launch folder.  Use those menu items to launch the file, automatically sandboxed.</li>
+		<li> <span style="text-decoration: underline">All Users Start Menu:</span><br>
+			This sub-menu is only available if you have installed some programs in the sandbox, and if those programs have created some shortcuts in the start menu for all users.<br>
+		    Click on this item to explore the All Users Start Menu of your sandbox.  Explorer runs sandboxed and restricted to that Start Menu folder.  You can easily launch any shortcut that have been installed by the programs in your sandbox.</li>
+		<li> <span style="text-decoration: underline">Other sub-menus under "All Users Start Menu"</span>:<br>
+		    They duplicate the structure of the All Users Start Menu of the sandbox.<br>
+		    You can launch the installed programs easily from those sub-menus, sandboxed.</li>
+		<li> <span style="text-decoration: underline">User Start Menu:</span><br>
+			This sub-menu is only available if you have installed some programs in the sandbox, and if those programs have created some shortcuts in the start menu for the current user.<br>
+		    Click on this item to explore the Current User Start Menu of your sandbox.  Explorer runs sandboxed and restricted to that Start Menu folder.  You can easily launch any shortcut that have been installed by the programs in your sandbox.</li>
+		<li> <span style="text-decoration: underline">Other sub-menus under "User Start Menu"</span>:<br>
+		    They duplicate the structure of the Current User Start Menu of the sandbox.<br>
+		    You can launch the installed programs easily from those sub-menus, sandboxed.</li>
+	</ul></li><li> <strong>Sandboxie Control:</strong><br>
+	Use this item to launch the regular Sandboxie Control panel, if it is not already running in your system tray.  Useful if you have disabled the "Run Sandboxie Control on System Startup" option, or if you have closed Sandboxie Control manually.</li>
+	<li> <strong>Cancel:</strong><br>
+	Close the SandboxToys popup menu without carrying out any action.</li>
+	</ul></li>
+
+<li> <span style="text-decoration: underline"><strong>Run Program in Any Sandbox</strong></span><br>
+Select the program to launch from the File Open dialog that pops up, and then the sandbox to use in the little popup menu.  The program will be launched sandboxed in that box.<br>
+There is an easier way to launch this function.  More on this in the "Right-click context menu" section below.</li>
+
+
+<li> <span style="text-decoration: underline"><strong>Create Sandboxed Shortcut</strong></span><br>
+With this tool, you can create a shortcut to any file on your computer to run it sandboxed in any sandbox.<br>
+Select the file to run with the File Open dialog that pops up when you launch the tool.  Then, defines the shortcut file to create with the File Save dialog.<br>
+Now, if you have several sandboxes configured in Sandboxie, a popup menu opens where you can select the sandbox to use, or the special "_ask_" entry that lets you select the sandbox at run time.<br>
+There is an easier way to launch this function.  More on this in the "Right-click context menu" section below.</li>
+
+
+<li> <span style="text-decoration: underline"><strong>Delete Fake Files and Folders</strong></span><br>
+This tool allows you to delete the fake files and folders found in your sandboxes.  See above for details.<br>
+When you launch it, a dialog is displayed, where you can un-select the boxes you want to skip.  Only the boxes that are currently not empty are displayed.<br>
+This tool is similar to the "Delete Fake Files and Folders" option of the Main SandboxToys Start Menu, except that you can clean all sandboxes at once.<br>
+Note that you can clean all sandboxes automatically without displaying the dialog by launching SandboxToys from the command line with the /CLEANUP and /QUIET options.  This might be useful if you want to automatically clean all sandboxes at system startup.</li>
+
+
+<li> <span style="text-decoration: underline"><strong>Standard Sandboxie's Run Dialog</strong></span><br>
+This tool displays a little popup menu to select a sandbox and then calls the standard Run dialog of Sandboxie, sandboxed in that box.</li>
+
+
+<li> <span style="text-decoration: underline"><strong>Standard Sandboxie's Start Menu</strong></span><br>
+This tool displays a little popup menu to select a sandbox and then calls the standard Start Menu dialog of Sandboxie, sandboxed in that box.</li>
+
+
+<li> <span style="text-decoration: underline"><strong>Help about SandboxToys</strong></span><br>
+Displays two dialogs with a general help message and the command line usage of SandboxToys.<br>
+The version number of SandboxToys is displayed in the title bar of those dialogs.</li>
+
+
+<li> <span style="text-decoration: underline"><strong>Edit SandboxToys configuration</strong></span><br>
+Opens the configuration file of SandboxToys in your favourite text editor.  You can edit this file to modify some settings, such as the default icons to use for the sandboxed shortcuts, the text string to prepend to the sandboxed shortcuts names to distinguish them from standard shortcuts, or the default folder to use for the Start Menu mirror.<br>
+The file is documented, and it should be easy to understand its usage and syntax.  However, do not edit it if you don't understand it well!<br>
+The configuration file, "SandboxToys.cfg", is in your %APPDATA% folder (usually "C:\Documents and Settings\&lt;your login name&gt;\Application Data\SandboxToys.cfg".)<br>
+If, per chance, SandboxToys doesn't work well any more, you can try to delete or rename this file.  SandboxToys will use its hard-coded defaults, and save the file again when you create a shortcut.  If that doesn't work, try to repair or to uninstall and re-install SandboxToys.</li>
+
+
+<li> <span style="text-decoration: underline"><strong>Uninstall or Repair SandboxToys</strong></span><br>
+Launch this tool to uninstall SandboxToys, or, if you have trouble with some functions, repair it.<br>
+Don't forget that it is NOT possible to uninstall or repair SandboxToys from the "Add or Remove Programs" control panel, so, don't delete this shortcut!</li></ul>
+
+<strong><span style="font-size: 150%; line-height: normal">Right-Click Context Menus:</span></strong><br>
+<br>
+You can also launch some of the functions of SandboxToys by right-clicking on any file, folder or drive icon (except URL icons) to open its standard contextual menu.<br>
+There are two function available for all type of files and folders, an additional function available only in shortcut files (.LNK files) and a "Send To" sub-menu item.
+<ul>
+<li> <span style="text-decoration: underline"><strong>Open in Any Sandbox</strong></span><br>
+Displays a popup menu to select the sandbox to use, and then opens the file or folder sandboxed in that box.  If you have only one sandbox, the popup menu is not displayed.<br>
+This function is similar to the "Run Program in Any Sandbox" tool, except that you don't have to browse to the file you want to open.  It is also possible to open a folder (or even a drive) sandboxed by using its context menu.</li>
+
+
+<li> <span style="text-decoration: underline"><strong>Create Sandboxed Shortcut</strong></span><br>
+Opens the File Save dialog to select a shortcut to create, and then a popup menu to select the box to use, and creates a shortcut to launch the file automatically sandboxed in the selected box.<br>
+If you have only one sandbox, the dialog is not displayed.<br>
+This function is similar to the "Create Sandboxed Shortcut" tool, except that you don't have to browse to the file you want to create a shortcut for.  It is also possible to to create a sandboxed shortcut to a folder (or even a drive) by using its context menu.</li>
+
+
+<li> <span style="text-decoration: underline"><strong>Open Sandboxed Container</strong></span><br>
+This function is only available in the context menu of the shortcut (.LNK) files.<br>
+It allows you to open the folder containing the target file of the shortcut, sandboxed in any sandbox, or unsandboxed.<br>
+A new popup menu is opened, where you can select the sandbox to use, or "Unsandboxed".<br>
+This function works with any shortcut.  When the shortcut is a sandboxed shortcut (as created by SandboxToys's Create Shortcuts or Mirrors functions), the sandbox used by the shortcut is highlighted in green in the popup menu.  When you use this function on a standard shortcut, not sandboxed, the "Unsandboxed" option is highlighted.</li>
+
+
+<li> <span style="text-decoration: underline"><strong>Send To -&gt; Any Sandbox</strong></span><br>
+Use this function to copy any file or folder from any location on your hard disc to the corresponding location in any sandbox.  For example, a file on your desktop will be copied in the sub-directory &lt;selected_sandbox_path&gt;\user\current\Desktop.<br>
+The same function can be used to do the opposite.  When the source file or folder is already in a sandbox, the user has the option to "recover" it, that is to copy it from the sandbox to the corresponding unsandboxed location.  The sandboxed file or folder can also be copied to another sandbox.</li></ul>
+
+<strong><span style="font-size: 150%; line-height: normal">Command line arguments:</span></strong>
+<ul>
+<li> SandboxToys.exe [/MENU]<br>
+Displays the main SandboxToys popup menu.<br>
+The /MENU argument is optional.  Therefore, launching SandboxToys.exe without argument opens also its main popup menu.</li>
+<li> SandboxToys.exe /START_MENU<br>
+Launch Sandboxie's Start Menu in ANY Sandbox.</li>
+<li> SandboxToys.exe /RUN<br>
+Runs any file or folder in any box.</li>
+<li> SandboxToys.exe /RUN "file"<br>
+Runs the specified file or folder in any Sandbox.</li>
+<li> SandboxToys.exe /RUN_DIALOG<br>
+Launch Sandboxie's Run Dialog in ANY Sandbox.</li>
+<li> SandboxToys.exe /SC<br>
+Creates a sandboxed shortcut. Prompts for the source file to create a shortcut for, the shortcut to create, and the sandbox to use.</li>
+<li> SandboxToys.exe /SC "file"<br>
+Same as above, but prompts only for the shortcut and the sandbox.</li>
+<li> SandboxToys.exe /SC "file" "target.lnk"<br>
+Same as above, but prompts only for the sandbox.</li>
+<li> SandboxToys.exe /OPEN_CONTAINER "shortcut.lnk"<br>
+Opens the real container folder of any shortcut, sandboxed or not.<br>
+(To be used from the shortcut's context menu.)</li>
+<li> SandboxToys.exe /CLEANUP<br>
+Deletes fake files and folders in sandboxes.</li>
+<li> SandboxToys.exe /CLEANUP /QUIET<br>
+Silently deletes all empty files in ALL sandboxes!</li>
+<li> SandboxToys.exe /DEL_DEAD_SHORTCUTS<br>
+Deletes all dead shortcuts from your Start Menu mirrors!<br>
+(To be used after having created mirrors with the /MENU option.)</li>
+<li> SandboxToys.exe /HELP (or /?)<br>
+Displays the SandboxToyx help message, version number, and command line arguments.</li>
+<li> SandboxToys.exe /INSTALL<br>
+Installs, uninstalls or repairs SandboxToys.</li></ul>
+
+<strong><span style="font-size: 150%; line-height: normal">Known bugs:</span></strong>
+<ul>
+<li> It is not possible to open an URL shortcut in the standard File dialog of Windows, and there is currently no SandboxToys options in the context menus of the URL shortcuts.</li></ul>
+There might be other bugs as well.  Please report them in this thread.  Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 07, 2007 12:50 am</strong></div>
+				<div class="author">by <strong>dlguild</strong></div>
+				<div class="content">r0lZ, the final version turned out very nice! All the functions seem to work as expected. Great job! Thanks! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Version 07.09.07.07 already released!</h3>
+				<div class="date">Posted: <strong>Fri Sep 07, 2007 1:11 am</strong></div>
+				<div class="author">by <strong>r0lZ</strong></div>
+				<div class="content">Well, thanks, but I have just posted another version, v 07.09.07.07, as with the original version, there is a problem when you re-install Sandboxie, or upgrade to a newer version.  The shortcuts installed in the Sandboxie\SandboxToys sub-menu of your Start Menu during the SandboxToys installation are deleted by the Sandboxie installation procedure, and you have no way to uninstall SandboxToys any more, except by typing "SandboxToys.exe /install" in a command prompt or by recreating an "Uninstall SandboxToys" shortcut manually with the same command.  Therefore, the new version installs the SandboxToys shortcuts in its own folder in your Start Menu.<br>
+It's the only modification I did since the original version 07.09.06.12.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>v 07.09.12.11 released!</h3>
+				<div class="date">Posted: <strong>Wed Sep 12, 2007 4:23 am</strong></div>
+				<div class="author">by <strong>r0lZ</strong></div>
+				<div class="content">A new version of SandboxToys is available: v07.09.12.11<br>
+Download it from the first post of this thread.<br>
+<br>
+New in v07.09.12.11:<ul><li> New option in the main SandboxToys menu to back the content of any (non-empty) sandbox up to a ZIP file.  To restore a damaged or infected sandbox, simply delete it completely, and restore the backup.</li>
+<li> Since I've learned now how to distinguish "real" empty files intentionally left empty on the disc by a sandboxed application, and the "fake" empty files left by Sandboxie to represent a file that has been completely deleted by the sandboxed application, I have modified the CLEANUP function to delete ONLY those fake empty files, and ONLY when a file of the same name doesn't exist in the equivalent folder outside of the box.<br>
+I have also renamed "empty file" to "fake file" in the messages and the name of the shortcuts.  (To update the shortcuts, you have to uninstall SandboxToys and Install it again, or to use the Repair option of the uninstall process.)</li>
+<li> A couple of little bugs have been fixed.</li></ul>I have also modified the second post (the SandboxToys manual to reflect the changes.)<br>
+<br>
+[EDIT] Oops!  I forgot a bug in v07.09.12.10.  The current version is therefore now v07.09.12.11!  If you have downloaded v07.09.12.10, please download SandboxToys again, and overwrite SandboxToys.exe with the new version.<br>
+Sorry!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>version 07.09.12.12</h3>
+				<div class="date">Posted: <strong>Wed Sep 12, 2007 6:20 am</strong></div>
+				<div class="author">by <strong>r0lZ</strong></div>
+				<div class="content">Yet another bug fixed in v07.09.12.12<ul><li>The function to create a mirror of your sandboxed Start Menu in your standard Start Menu did not work for the All Users Start Menu.</li></ul></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 12, 2007 4:32 pm</strong></div>
+				<div class="author">by <strong>dlguild</strong></div>
+				<div class="content">Thanks again r0lZ! It just keeps getting better and better! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Version 07.09.14.10</h3>
+				<div class="date">Posted: <strong>Fri Sep 14, 2007 5:21 am</strong></div>
+				<div class="author">by <strong>r0lZ</strong></div>
+				<div class="content">New version 07.09.14.10, with some important changes and additions.
+<ul><li> Added a shortcut in your "SendTo" folder to enable the context menu option "Send To -&gt; Any Sandbox".<br>
+This function can be used to copy any file or folder to its corresponding location in any sandbox.<br>
+It can also be used to do the opposite.  When the source file is already in a sandbox, the user has the option to "recover" it, and to copy it from the sandbox to the corresponding unsandboxed location.  You can also copy a file or folder from a sandbox to another sandbox.</li>
+<li> The shortcuts created by SandboxToys are now pointing to the (possibly non-existing) target file in the "real" fileststem, instead of the virtual target in the sandbox.  This method should improve the reliability of the shortcut when the target program relies on its default startup directory to work properly.<br>
+The same thing is true for the files launched via the main SandboxToys menu.</li>
+<li> When SandboxToys creates a sandboxed shortcut, it tries now to find the original icon of any file type (and not just EXE files like before) or when the target file is also a shortcut, it uses the icon defined in the target shortcut (if any).</li>
+<li> The shortcut's context menu "Open Sandboxed Container" offers now to open the real target folder instead of the equivalent folder in the box.  (Only when the box selected by the user is the box containing the file pointed to by the shortcut and that the same file exists in and out of the box.)</li>
+<li> Added a confirmation dialog to the potentially dangerous option "Delete Contents of Sandbox" of the main SandboxToys menu.</li></ul>
+<span style="color: red">IMPORTANT:</span> You need to re-install or repair SandboxToys to force it to create the new shortcut in your SendTo folder, otherwise you will not have the "Send To -&gt; Any Sandbox" context menu.<br>
+<br>
+<br>
+@dlguild: Thanks for the thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Version 07.09.14.21</h3>
+				<div class="date">Posted: <strong>Fri Sep 14, 2007 3:20 pm</strong></div>
+				<div class="author">by <strong>r0lZ</strong></div>
+				<div class="content"><img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> Last minute bug fixed in v 07.09.14.21! 
+<ul><li> The function to create a sandboxed shortcut did not work properly when the target file of the sandboxed shortcut is itself a shortcut.  (The shortcuts were created but with the standard Sandboxie icon and without the comment.  However, they worked as expected.)</li></ul></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Version 07.09.14.21</h3>
+				<div class="date">Posted: <strong>Sat Sep 15, 2007 2:37 am</strong></div>
+				<div class="author">by <strong>dlguild</strong></div>
+				<div class="content"><blockquote><div><cite>r0lZ wrote:</cite><img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> Last minute bug fixed in v 07.09.14.21!</div></blockquote>
+No need for the red face. It didn't trash my drives or cause a BSOD! Keep up the good work! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Sep 15, 2007 11:16 am</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content">Yeah, I gotta say, although I don't really need this "addon", I gotta admit, your doing a good job keeping it updated, fixing bugs and adding new features. <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 17, 2007 6:06 am</strong></div>
+				<div class="author">by <strong>r0lZ</strong></div>
+				<div class="content">Thanks.  But I will probably leave it as it is now (unless some bugs are reported.)  It does what I need, and I have to work on my big project, <a href="http://download.videohelp.com/r0lZ/pgcedit/" class="postlink">PgcEdit</a>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 17, 2007 11:30 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Holy crap!!  I never put the two together!  I love PgcEdit.  Although I don't use it that ofter or for anything really complex, it's never let me down when I needed it.  No wonder you're addon is so feature rich.  LOL Keep up the good work!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 18, 2007 4:51 am</strong></div>
+				<div class="author">by <strong>r0lZ</strong></div>
+				<div class="content">The world is so small, dear PgcEdit user!  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Version 07.09.14.10</h3>
+				<div class="date">Posted: <strong>Wed Sep 19, 2007 7:46 am</strong></div>
+				<div class="author">by <strong>LittleBiG</strong></div>
+				<div class="content"><blockquote><div><cite>r0lZ wrote:</cite>New version 07.09.14.10, with some important changes and additions.
+<ul><li> Added a shortcut in your "SendTo" folder to enable the context menu option "Send To -&gt; Any Sandbox".<br>
+This function can be used to copy any file or folder to its corresponding location in any sandbox.</li></ul>
+</div></blockquote>
+
+I think "move" would be better and more logical. There is no reason to let  file on the original location. And move would be faster than copy.<br>
+<br>
+Your extension is really great,  "Main SandboxToys Start Menu" is the most used function in my Sandboxie. Without SandboxToys Sandboxie would be very uncomfortable.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=2028&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:01:36 GMT -->
+</html>

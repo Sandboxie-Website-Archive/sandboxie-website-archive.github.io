@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25534&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie could cause a sandboxed app fail to reset its registry settings</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie could cause a sandboxed app fail to reset its registry settings</h2>
+		<p><a href="viewtopic72317231.html?f=11&amp;t=25534">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25534</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie could cause a sandboxed app fail to reset its registry settings</h3>
+				<div class="date">Posted: <strong>Tue Mar 06, 2018 3:06 pm</strong></div>
+				<div class="author">by <strong>sbf</strong></div>
+				<div class="content">Win 7 32-bit.<br>
+Sandboxie v5.22 32-bit.<br>
+EmEditor (Latest version).<br>
+Tested on a "naked" OS.<br>
+<br>
+For example, EmEditor has a command: Reset All Settings, which removes all its registry data (along with the files for settings) and restarts the app.<br>
+<br>
+However, in a Sandboxie sandbox, EmEditor can never reset its registry settings. When restarted, it uses the old window size and position, for example.<br>
+<br>
+I guess the procedure is:<br>
+The sandboxed EmEditor did remove its sandboxed registry data. But as it restarts, Sandboxie fetches the old registry data from outside.<br>
+<br>
+FYI,<br>
+Comodo sandbox does not have such a problem. It seems Comodo sandbox adds a mark for the removed registry data:<br>
+Type: 0x39c0<br>
+Data: (zero-length binary value)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie could cause a sandboxed app fail to reset its registry settings</h3>
+				<div class="date">Posted: <strong>Tue Mar 06, 2018 3:20 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello sbf ,<br>
+<br>
+Please provide the required information:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+According to the devs, if you delete a key in Sbie, it will be deleted --&gt; not read from host.<br>
+If you clear the sandbox, it will be read from host instead. Are you clearing the contents of your Sandbox? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie could cause a sandboxed app fail to reset its registry settings</h3>
+				<div class="date">Posted: <strong>Tue Mar 06, 2018 3:54 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistc98a.html?mode=viewprofile&amp;u=35613">sbf</a> wrote: <a href="viewtopic5e245e24.html?p=132631#p132631" data-post-id="132631" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Mar 06, 2018 3:06 pm</div></cite>
+FYI,<br>
+Comodo sandbox does not have such a problem. It seems Comodo sandbox adds a mark for the removed registry data:
+</div></blockquote>
+
+Sandboxie does the same thing.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie could cause a sandboxed app fail to reset its registry settings</h3>
+				<div class="date">Posted: <strong>Tue Mar 06, 2018 4:04 pm</strong></div>
+				<div class="author">by <strong>sbf</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopica0cb-2a0cb.html?p=132632#p132632" data-post-id="132632" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Mar 06, 2018 3:20 pm</div></cite>
+Are you clearing the contents of your Sandbox? 
+</div></blockquote>
+No.<br>
+EmEditor resets and restarts at once.<br>
+Hope you give it a test on EmEditor.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie could cause a sandboxed app fail to reset its registry settings</h3>
+				<div class="date">Posted: <strong>Tue Mar 06, 2018 4:25 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello sbf ,<br>
+<br>
+In order to test this behavior I need to know what are you doing, exactly.<br>
+Please provide repro steps, include any workspaces you may be using, changes you are looking at, and how are you resetting the application.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie could cause a sandboxed app fail to reset its registry settings</h3>
+				<div class="date">Posted: <strong>Tue Mar 06, 2018 5:27 pm</strong></div>
+				<div class="author">by <strong>sbf</strong></div>
+				<div class="content">OK. Thank you.<br>
+<br>
+Install EmEditor (Installer version, which will use the registry).<br>
+Run EmEditor outside (with default settings). Change its window size/position.<br>
+(Restart EmEditor. It should use the changed size/position.)<br>
+<br>
+Run EmEditor in a sandbox.<br>
+Use the menu: Tools &gt; All Commands.<br>
+Then in the (All Commands) popup menu: Tools &gt; Reset All Settings.<br>
+Follow the prompts.<br>
+<br>
+After restarted, EmEditor should use the default window size/position (if you don't have my issue).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie could cause a sandboxed app fail to reset its registry settings</h3>
+				<div class="date">Posted: <strong>Wed Mar 07, 2018 1:43 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello sbf,<br>
+<br>
+I see the behavior. The window size is still remembered, even after using "Reset all settings". <br>
+I have made the devs aware.<br>
+<br>
+As a workaround you can add the following entry under the desired Sandbox:<br>
+Open Sandboxie Control <br>
+Configure --- &gt; Edit configuration<br>
+Find the Sandbox you wish to modify and add this at the end:<br>
+WriteKeyPath=HKEY_CURRENT_USER\Software\EmSoft<br>
+<br>
+Save the changes.<br>
+Configure--&gt; Reload configuration<br>
+Re-try launching your program Sandboxed and resetting all settings. <br>
+<br>
+Here's more info regarding the WriteKeyPath setting:<br>
+<a href="../WriteKeyPath.html" class="postlink">https://www.sandboxie.com/WriteKeyPath</a><br>
+<a href="../ResourceAccessSettings.html#key" class="postlink">https://www.sandboxie.com/ResourceAccessSettings#key</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie could cause a sandboxed app fail to reset its registry settings</h3>
+				<div class="date">Posted: <strong>Thu Mar 08, 2018 6:45 am</strong></div>
+				<div class="author">by <strong>sbf</strong></div>
+				<div class="content">Thanks for the info. I see.<br>
+<br>
+I'm curious about the reason of the issue. Could you please explain it a little?</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25534&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:25 GMT -->
+</html>

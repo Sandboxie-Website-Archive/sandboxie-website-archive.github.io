@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1135&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; About Firefox's bookmarks , Sandboxie 2.79</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>About Firefox's bookmarks , Sandboxie 2.79</h2>
+		<p><a href="viewtopic80a080a0.html?f=11&amp;t=1135">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=1135</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>About Firefox's bookmarks , Sandboxie 2.79</h3>
+				<div class="date">Posted: <strong>Wed Feb 28, 2007 3:27 am</strong></div>
+				<div class="author">by <strong>Unknown_User_659</strong></div>
+				<div class="content">I am glad you made this feature.<br>
+<br>
+A few questions about the configuration.<br>
+I had in the '<strong>Set File Copy options...</strong>' ticked the last 2 boxes, Thunderbird to it's mail and Firefox to the bookmarklets.<br>
+Thunderbird works I think as expected, any new email gets copied to the original TB profile mail boxes.<br>
+<br>
+Question is. I made in the sandboxed Firefox a few new bookmarks. Then closed it. Restarted Firefox again in the sandbox. It had not remembered the new bookmarks, but copied all from the original FF bookmarks. Not the behaviour I was expecting !!! Those original bookmarks were left untouched, meaning not updated as I thought ??? <br>
+I had to <strong>untick</strong> 'Allow Mozilla Firefox full access to bookmark file'.<br>
+<br>
+I did got the feature working as I wanted by going to <strong>Set Automatic Clean-Up Options</strong> and ticking Firefox profiles there. To me it should not matter if I close the Firefox, since that 'Automatically Delete Contents of Sandbox' is unticked. To loose the sandboxed Firefox's bookmarks since they should remain in there until manually or by that check box option unticked.<br>
+<br>
+Works anyways by now as I want it and that feature was missing in 2.64.<br>
+It works this way, I have to delete the sandbox manually and then I get asked what files to recover and can choose also bookmarks.html.<br>
+<br>
+The real time bookmark update from the sandboxed ones to original profile bookmarks seems not be working yet though.<br>
+This is a Finnish language Firefox browser the above comments applied.<br>
+<br>
+<br>
+Jarmo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 28, 2007 12:34 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Did you delete the contents of the sandbox, before marking new bookmarks?<br>
+<br>
+This is working fine for me, I hope more people can share their experience?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 28, 2007 2:36 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_659</strong></div>
+				<div class="content">If I remember right. First uninstalled 2.64 and then installed 2.79 and I hope Processguard free was disabled. There could be something in it. I remember that a few reboots in learning mode were necessary before I could log to my admin and limited XP Home user accounts, switch from one to another.<br>
+<br>
+Now it works like this, the bookmarks. I have not ticked that 'Allow Mozilla Firefox full access to bookmark file' but have ticked that 'FireFox Profiles' (actually all 4 of them). <br>
+I can use 'Recover Files' from systray pizza slice to have the real boomarks file updated to sandboxed one. Or I can also delete Sandbox contents and use that quick recovery thing.<br>
+<br>
+But the automatic synchronization does not really work for sandboxed/real bookmarks. <br>
+Maybe I should uninstall, might be just my system, but as everything else seems to work so well, I feel a bit lazy. If I do that uninstall/install I will post some more if the experience is different.<br>
+<br>
+Best wishes,<br>
+Jarmo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 04, 2007 3:47 pm</strong></div>
+				<div class="author">by <strong>MikeH</strong></div>
+				<div class="content">Tzuk:<br>
+<br>
+      The Firefox bookmark feature is not working for me as well.  I checked allow mozilla firefox full access to the bookmarks folder (recommended) under set file copy options...  The results that I get are not consistent, however I can give you an example:<br>
+<br>
+Operned firefox sandboxed.<br>
+Added 4 new bookmarks to the boolmark folder.<br>
+Deleted all 4 of the added bookmarks.<br>
+Closed the sandboxed firefox without deleting the contents of the sandboxed folder.<br>
+Opened firefox sandboxed.<br>
+2/4 of the deleted bookmarks reappear.<br>
+<br>
+     As I said the results are not consistent.  I did the above with version 2.79.2.  I had the same sort of problem with version 2.79.1.  Sometimes the bookmark sync will work and sometimes it won't.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Mar 05, 2007 6:18 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks, got it.  More experimenting showed the problem happens because Firefox is occasionally renaming the bookmark file.<br>
+<br>
+This means <em>opening</em> (via OpenFilePath) the bookmark file is not enough; the directory itself has to be opened as well.<br>
+<br>
+To fix, you can wait for the next beta, or even now, make the following corrections in Sandboxie.ini:<br>
+<br>
+<span style="font-size: 75%; line-height: normal">OpenFilePath=firefox.exe,%AppData%\Mozilla\Firefox\Profiles\*.default</span><br>
+<span style="font-size: 75%; line-height: normal">OpenFilePath=firefox.exe,%AppData%\Mozilla\Firefox\Profiles\*.default\bookmark*</span><br>
+<br>
+Note another change:  bookmark* instead of bookmark<em>s</em>* .<br>
+<br>
+Another note for the curious:  the first line opens <em>only</em> the directory.  <em>Not</em> the directory <em>and</em> everything below it.  This is because OpenFilePath in version 2.7x does not append a final asterisk *, if the pattern already contains an asterisk anywhere.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Mar 05, 2007 8:40 pm</strong></div>
+				<div class="author">by <strong>Johnincal</strong></div>
+				<div class="content">There is an unpatched security issue with bookmarklets in FireFox. The issue comes from FireFox should not, but does bookmark data:<br>
+<a href="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2007-1084" class="postlink">http://nvd.nist.gov/nvd.cfm?cvename=CVE-2007-1084</a><br>
+<br>
+Does this apply here? Would this be a security risk until it is patched?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 06, 2007 6:54 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Would this be a security risk until it is patched?</div></blockquote>
+
+I guess yes, it would be.  But if you run Firefox sandboxed every time, then it shouldn't matter if your unsandboxed bookmarks.html contains data that is vulnerable to Firefox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 08, 2007 3:13 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">So does the bookmark setting now work fine?  Anyone?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 09, 2007 1:29 am</strong></div>
+				<div class="author">by <strong>Unknown_User_659</strong></div>
+				<div class="content">I installed on top of 2.79 the 2.79.4 version. And set the file copy option to bookmarks. Seems it works now.<br>
+<br>
+But:<br>
+There is one thing. When i add a bookmark to my bookmarks bar for a sandboxed Firefox 2.0.0.2 and then close it. And then open unsandboxed firefox, I do get a prompt that "there was a previous session unclosed and if i want to restart that session or start a new session". That translated from finnish, but I think you get the meaning about what prompt I am talking about.<br>
+Anyways bookmarks are now in synch.<br>
+<br>
+EDIT<br>
+I also wrote the above in the sandboxed FF and then closed it. When I opened "normal" Firefox, I got the above prompt and when I answered to use the same session, it also opened the Firefox to Sandboxie forum to my post. <br>
+<br>
+I am quite happy with just being able to "recover" the bookmarks so I will disable that "file copy" option. One of the reasons I run Firefox sandboxed is that I won't get corrupted FF profile since my old computer is quite unstable (sudden freeze running Skype etc. needing a cold reboot). So if this synch makes this protection weaker, I don't care about the automatic synchronization that much.<br>
+Jarmo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Mar 09, 2007 3:46 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Yeah, I get that fake crash too...  It must be due to the recent addition:<br>
+<br>
+OpenFilePath=firefox.exe,...\Profiles\*.default <br>
+<br>
+I'll have to think about this for a bit.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 11, 2007 4:26 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Alright, I fixed this.  Again  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">   Please try with version 2.79.5.  Make sure to un-check then re-check that Firefox option.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Mar 12, 2007 10:04 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">Sry for the other thread, <br>
+<br>
+about the problem, if i get it right the problem occured when FF uses filemove than when the source file was sb'xed the target was to even if the particular path is open.<br>
+<br>
+Is it now fixed in generally, or only for FF?<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Mar 12, 2007 12:09 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Fixed in general, as this was a general problem with renaming files in paths that match OpenFilePath settings.  Very little of Sandboxie is application specific.<br>
+<br>
+The problem was this.  For a successful rename for a file that maches an OpenFilePath, you would have to have OpenFilePath that match both the file itself, and its parent folder.<br>
+<br>
+So at the top of this topic we had OpenFilePath only for bookmarks.html, not for the folder, and this created some problems.<br>
+<br>
+Then we had an OpenFilePath for bookmarks*, and for the parent folder, and this was working well...  Except that now, renaming OTHER files in the same folder would have problems, because only the parent folder matches an OpenFilePath.<br>
+<br>
+Hopefully this last fix gets things right.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>bookmarks problems in FF basically solved</h3>
+				<div class="date">Posted: <strong>Tue Mar 13, 2007 6:51 am</strong></div>
+				<div class="author">by <strong>llarue</strong></div>
+				<div class="content">just get the Foxmarks extension and sych while sandboxed!  It works.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 13, 2007 8:18 am</strong></div>
+				<div class="author">by <strong>Unknown_User_659</strong></div>
+				<div class="content">Sounds good.<br>
+I myself have problems with my new machine a few days ago, vibrating cooling fans, preinstalled programs for CD burning calling to Korea and asking me that language install, Everest censors not showing CPU temp, fan speed etc.<br>
+To limit any uncertainty, I am back using 2.64. Will try Sandboxie the betas again soon since they caused me no problems.<br>
+<br>
+Best wishes, Jarmo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1135&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:25 GMT -->
+</html>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/12544" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2014-07-22T22:48:57-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/12544</id>
+
+		<entry>
+		<author><name><![CDATA[JohnBox]]></name></author>
+		<updated>2014-07-22T22:48:57-04:00</updated>
+
+		<published>2014-07-22T22:48:57-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=102472#p102472</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=102472#p102472"/>
+		<title type="html"><![CDATA[Re: SandboxieReflector - cross-sandbox execution]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=102472#p102472"><![CDATA[
+Would it be possible for the people that got SandboxieReflector running successfully with an app either sandboxed in another sandbox or running outside any sandbox share some detailed information on the steps to achieve this?<br><br>Even though I am at times coding away little sites as a past time I find the little documentation too steep to follow as of now, even though I have been digging into it and got a few minor results already.<br><br>I guess js, $, html5 and such do not have that much to do with dos and shell and the registry so a completely different area really.<br><br>I am not interested in security breaches or any malicious activity, on the contrary I would love to be able to have Office and Email and Browser "talk" to each other, either all sandboxed individually or just the browser and email and, unfortunately as it stands now I will have to accept that Office will need to be run from the drive, unsandboxed.<br><br>Help in this area would not only be appreciated by myself looking at the many topics of people that like to run certain apps in individual sandboxes or outside of a sandbox.<br><br>Even pointing to good learning resources, tuts, links or helping topics about how to get SandboxieReflector to run (I guess learning dos and shell commands??) or how to get it to communicate with apps would be tremendously appreciated.<br><br>I am not looking for a solution served ready made, NO, happy to learn this myself but would love at least for some guidance or feedback or ideas shared.<br><br>Thanks to anyone that feels to chip in here. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=10449">JohnBox</a> — Tue Jul 22, 2014 10:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[discs]]></name></author>
+		<updated>2012-07-10T18:12:42-04:00</updated>
+
+		<published>2012-07-10T18:12:42-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=81978#p81978</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=81978#p81978"/>
+		<title type="html"><![CDATA[Thank you, Carl]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=81978#p81978"><![CDATA[
+Carl, I wished to thank you for SandboxieReflector.  <br><br>It has enabled me to find a secure way for my wife to use a sandboxed Firefox browser while ensuring she <strong>automatically</strong> calls forth  Trusteer Rapport functionality (not available sandboxed) in an unsandboxed browser when clicking in sandboxed Firefox for various sensitive sites she accesses regularly.  [Full details, should you be interested: <a href="http://www.sandboxie.com/phpbb/viewtopic.php?p=81977#81977" class="postlink">http://www.sandboxie.com/phpbb/viewtopi ... 1977#81977</a>].<br><br>Mine is perhaps an unorthodox use of your utility, but I believe with good intention.<br><br>Thank you, particularly for your simple and clear instructions that someone only familiar with some programming fundamentals was eventually able to apply with great success to obtain the result required.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=6979">discs</a> — Tue Jul 10, 2012 6:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Wepver]]></name></author>
+		<updated>2012-04-28T18:13:54-04:00</updated>
+
+		<published>2012-04-28T18:13:54-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=79739#p79739</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=79739#p79739"/>
+		<title type="html"><![CDATA[SandboxieReflector - cross-sandbox execution]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=79739#p79739"><![CDATA[
+Thanks a lot for this utility. I was looking for something like this for <a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=9514" class="postlink">a long time</a>. It helps me a lot, and it would help me even more if I were a more knowledge user (I am trying to open eml files in the Windows Live Mail's sandbox but the "/eml:" parameter makes me mad because the file path is always taken with two double quotes).<br><br>But I have experimented some Effectuator crashes. <a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=12848" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=12848</a><br><br>Thanks MichaelS for recommending "Default Programs Editor" too.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3231">Wepver</a> — Sat Apr 28, 2012 6:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MichaelS]]></name></author>
+		<updated>2012-03-20T12:51:20-04:00</updated>
+
+		<published>2012-03-20T12:51:20-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78496#p78496</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78496#p78496"/>
+		<title type="html"><![CDATA[SandboxieReflector - cross-sandbox execution]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78496#p78496"><![CDATA[
+Thank you for the useful updates.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=9514">MichaelS</a> — Tue Mar 20, 2012 12:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Carl Colijn]]></name></author>
+		<updated>2012-03-20T09:10:39-04:00</updated>
+
+		<published>2012-03-20T09:10:39-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78493#p78493</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78493#p78493"/>
+		<title type="html"><![CDATA[SandboxieReflector - cross-sandbox execution]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78493#p78493"><![CDATA[
+Hi all,<br><br>A slight update for something I got fed up with real quickly: SandboxieReflector now automatically reloads it's settings is you change the settings file.  Should save you some hassle with continuously restarting the Effectuator each time you're adding new profiles <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=9066">Carl Colijn</a> — Tue Mar 20, 2012 9:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Carl Colijn]]></name></author>
+		<updated>2012-03-13T09:14:39-04:00</updated>
+
+		<published>2012-03-13T09:14:39-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78232#p78232</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78232#p78232"/>
+		<title type="html"><![CDATA[SandboxieReflector - cross-sandbox execution]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78232#p78232"><![CDATA[
+Update: I've ignored my own advise, and added simple DDE support to SandboxieReflector.  This will allow you to also reflect file and protocol associations which rely on DDE to transfer the correct data to the receiving app.  Note that setting this up will not be as easy as setting up simple command line reflecting, so it's probably only for the more experienced users.<br><br>I didn't want to spend a lot of time on this and thus I resorted to a hack (for the DDE insiders: I just pass on the WM_DDE_INITIATE message unmodified from the Reflector to the target app and be done with it), so I do not know if it will work all the time on all platforms.  It does work on Windows XP though.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=9066">Carl Colijn</a> — Tue Mar 13, 2012 9:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2012-03-11T10:32:18-04:00</updated>
+
+		<published>2012-03-11T10:32:18-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78176#p78176</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78176#p78176"/>
+		<title type="html"><![CDATA[Re: Small command I would like]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78176#p78176"><![CDATA[
+<blockquote><div><cite>Carl Colijn wrote:</cite><blockquote><div><cite>Messmer wrote:</cite>Can you add /min to the Effectuator so it go small on start.</div></blockquote>Hi Messmer,<br><br>It's already there <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">  It's the /s switch.</div></blockquote>Great, it solved one my problem. Software I wan't to use but with highly restrictive right on install.<p>Statistics: Posted by Guest — Sun Mar 11, 2012 10:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Carl Colijn]]></name></author>
+		<updated>2012-03-11T07:40:53-04:00</updated>
+
+		<published>2012-03-11T07:40:53-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78165#p78165</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78165#p78165"/>
+		<title type="html"><![CDATA[Re: Small command I would like]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78165#p78165"><![CDATA[
+<blockquote><div><cite>Messmer wrote:</cite>Can you add /min to the Effectuator so it go small on start.</div></blockquote>Hi Messmer,<br><br>It's already there <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">  It's the /s switch.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=9066">Carl Colijn</a> — Sun Mar 11, 2012 7:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2012-03-10T17:16:40-04:00</updated>
+
+		<published>2012-03-10T17:16:40-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78146#p78146</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78146#p78146"/>
+		<title type="html"><![CDATA[Small command I would like]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=78146#p78146"><![CDATA[
+Can you add /min to the Effectuator so it go small on start.<p>Statistics: Posted by Guest — Sat Mar 10, 2012 4:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MichaelS]]></name></author>
+		<updated>2012-03-02T17:22:06-04:00</updated>
+
+		<published>2012-03-02T17:22:06-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77875#p77875</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77875#p77875"/>
+		<title type="html"><![CDATA[SandboxieReflector - cross-sandbox execution]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77875#p77875"><![CDATA[
+Thank you for the improvements! This surely broadens the use of SandboxieReflector.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=9514">MichaelS</a> — Fri Mar 02, 2012 4:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Carl Colijn]]></name></author>
+		<updated>2012-03-02T06:47:20-04:00</updated>
+
+		<published>2012-03-02T06:47:20-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77848#p77848</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77848#p77848"/>
+		<title type="html"><![CDATA[SandboxieReflector - cross-sandbox execution]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77848#p77848"><![CDATA[
+<blockquote><div><cite>MichaelS wrote:</cite><blockquote><div><cite>Carl Colijn wrote:</cite>But I still do think my solution will also help you;<br>[...]<br>Does this do what I think you meant?  It is a (potentially) useful and quick-to-add addition in it's own right, though, so I'd probably add it anyway.  Another use case would be to consolidate multiple almost-similar cmdlines into one profile (like some programs have when they have multiple shell verbs), with the differences triggered via alternate Reflector.exe calls.</div></blockquote>No doubt, what you presented would be a welcomed addition.<br><br>Thank you!</div></blockquote>And thus came version 12.3.2; you can download it from the SandboxieReflector web page on my site (see the initial post).<br><br>The previous version could only handle a single /file parameter (reflected in any %1 CmdLine tag), but now you can use a more general /p parameter passing method, which allows you to create as many parameters as you want.  Now on to investigating simple DDE proxying again...  Did I tell you I wanted to leave it at version 12.2.22? <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=9066">Carl Colijn</a> — Fri Mar 02, 2012 5:47 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MichaelS]]></name></author>
+		<updated>2012-03-01T08:41:41-04:00</updated>
+
+		<published>2012-03-01T08:41:41-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77818#p77818</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77818#p77818"/>
+		<title type="html"><![CDATA[SandboxieReflector - cross-sandbox execution]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77818#p77818"><![CDATA[
+<blockquote><div><cite>Carl Colijn wrote:</cite>I get what you're after, but I do not want to add a "raw" interpretation to SandboxieReflector - if such an interpretation would be added, anyone could execute any command in a sandbox, as long as they know the name of the corresponding profile.</div></blockquote>Yes, I realize this, that's why I initially suggested to <em>add an alternative version of the Reflector and/or Effectuator that allows the Reflector to pass raw command lines to the Effectuator</em>, so only those who are aware of the risks would use it, but I understand the concern for security breaches.<br><blockquote><div><cite>Carl Colijn wrote:</cite>But I still do think my solution will also help you;<br>[...]<br>Does this do what I think you meant?  It is a (potentially) useful and quick-to-add addition in it's own right, though, so I'd probably add it anyway.  Another use case would be to consolidate multiple almost-similar cmdlines into one profile (like some programs have when they have multiple shell verbs), with the differences triggered via alternate Reflector.exe calls.</div></blockquote>No doubt, what you presented would be a welcomed addition.<br><br>Thank you!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=9514">MichaelS</a> — Thu Mar 01, 2012 7:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Carl Colijn]]></name></author>
+		<updated>2012-03-01T07:02:53-04:00</updated>
+
+		<published>2012-03-01T07:02:53-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77813#p77813</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77813#p77813"/>
+		<title type="html"><![CDATA[SandboxieReflector - cross-sandbox execution]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77813#p77813"><![CDATA[
+<blockquote><div><cite>MichaelS wrote:</cite>Hello! Thank you for considering the suggestion.<br>Your approach is good, but the command would still depend on the CmdLine from the INI file, while a raw interpretation wouldn't.</div></blockquote>Hi MichaelS,<br><br>I get what you're after, but I do not want to add a "raw" interpretation to SandboxieReflector - if such an interpretation would be added, anyone could execute any command in a sandbox, as long as they know the name of the corresponding profile.  Since the SandboxieReflector.ini file is readable by anyone (even the baddies), this would mean a giant security breach.  (as if like it's worthwhile to build circumvention code for all 10+ people on Earth using SandboxieReflector <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">, but still...)<br><br>But I still do think my solution will also help you;<br><blockquote><div><cite>MichaelS wrote:</cite>An example. Let's say I run the following user command from my sandboxed file manager (which would replace $I, $R, $L with file paths or whatever):<div class="codebox"><p>CODE: </p><pre><code>"C:\Program Files\SandboxieReflector\Reflector.exe" /exec &lt;profilename&gt; "D:\MyApp.exe" /I="$I" /R="$R" /L="$L" /Type=Mov /Notify="C:\Windows\Media\ding.wav"</code></pre></div>In this case, the CmdLine property in SandboxieReflector.ini for the invoked profile could be null, like CmdLine="" and Effectuator.exe would run<div class="codebox"><p>CODE: </p><pre><code>"D:\MyApp.exe" /I="$I" /R="$R" /L="$L" /Type=Mov /Notify="C:\Windows\Media\ding.wav"</code></pre></div></div></blockquote>In this case the Reflector.exe call would be:<div class="codebox"><p>CODE: </p><pre><code>Reflector.exe /exec &lt;profilename&gt; /p I "$I" /p R "$R" /p L "$L" /p file "%1"</code></pre></div>which would expand to e.g.:<div class="codebox"><p>CODE: </p><pre><code>Reflector.exe /exec &lt;profilename&gt; /p I "inactive_pane_path" /p R "right_pane_path" /p L "left_pane_path" /p file "C:\Windows\Media\ding.wav"</code></pre></div>The CmdLine in the .ini would be (now with the .wav supplied via Reflector as well via the "file" parameter):<div class="codebox"><p>CODE: </p><pre><code>CmdLine="D:\MyApp.exe" /I="$I" /R="$R" /L="$L" /Type=Mov /Notify=$file</code></pre></div>which in this case would expand to:<div class="codebox"><p>CODE: </p><pre><code>CmdLine="D:\MyApp.exe" /I="inactive_pane_path" /R="right_pane_path" /L="left_pane_path" /Type=Mov /Notify="C:\Windows\Media\ding.wav"</code></pre></div>Does this do what I think you meant?  It is a (potentially) useful and quick-to-add addition in it's own right, though, so I'd probably add it anyway.  Another use case would be to consolidate multiple almost-similar cmdlines into one profile (like some programs have when they have multiple shell verbs), with the differences triggered via alternate Reflector.exe calls.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=9066">Carl Colijn</a> — Thu Mar 01, 2012 6:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MichaelS]]></name></author>
+		<updated>2012-02-29T13:18:00-04:00</updated>
+
+		<published>2012-02-29T13:18:00-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77786#p77786</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77786#p77786"/>
+		<title type="html"><![CDATA[SandboxieReflector - cross-sandbox execution]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77786#p77786"><![CDATA[
+Hello! Thank you for considering the suggestion.<br>Your approach is good, but the command would still depend on the CmdLine from the INI file, while a raw interpretation wouldn't.<br><br>An example. Let's say I run the following user command from my sandboxed file manager (which would replace $I, $R, $L with file paths or whatever):<div class="codebox"><p>CODE: </p><pre><code>"C:\Program Files\SandboxieReflector\Reflector.exe" /exec &lt;profilename&gt; "D:\MyApp.exe" /I="$I" /R="$R" /L="$L" /Type=Mov /Notify="C:\Windows\Media\ding.wav"</code></pre></div>In this case, the CmdLine property in SandboxieReflector.ini for the invoked profile could be null, like CmdLine="" and Effectuator.exe would run<div class="codebox"><p>CODE: </p><pre><code>"D:\MyApp.exe" /I="$I" /R="$R" /L="$L" /Type=Mov /Notify="C:\Windows\Media\ding.wav"</code></pre></div>or, if it is possible, introduce a /raw parameter whose value is concatenated to the ini CmdLine property (which can be null).<blockquote class="uncited"><div>"C:\Program Files\SandboxieReflector\Reflector.exe" /exec &lt;profilename&gt; <span style="color: red"><strong>/raw</strong></span> "D:\MyApp.exe" /I="$I" /R="$R" /L="$L" /Type=Mov /Notify="C:\Windows\Media\ding.wav"</div></blockquote>Of course, the call is yours, and as I said before, I'm already using your applications in conjunction with one of mine to get the desired functionality.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=9514">MichaelS</a> — Wed Feb 29, 2012 12:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Carl Colijn]]></name></author>
+		<updated>2012-02-29T11:31:57-04:00</updated>
+
+		<published>2012-02-29T11:31:57-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77780#p77780</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77780#p77780"/>
+		<title type="html"><![CDATA[SandboxieReflector - cross-sandbox execution]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12544&amp;p=77780#p77780"><![CDATA[
+<blockquote><div><cite>MichaelS wrote:</cite>Carl, I know you said you do not wish to improve or further extend your application, unless it's a bug-fix or vulnerability issue, and I completely understand if you do not want to implement the following suggestion:<br><br>Add an alternative version of the Reflector and/or Effectuator that allows the Reflector to pass raw command lines to the Effectuator, so it is not confined to the /file parameter.</div></blockquote>Hi MichaelS,<br><br>A more generic method would be to pass all parameters along via a dedicated /p switch, with "/p file" a good replacement for the "/file" in use now.  Something like:<div class="codebox"><p>CODE: </p><pre><code>Reflector.exe /exec &lt;profile name&gt; [/p &lt;param name&gt; &lt;param value&gt; [&lt;param value&gt; ...]] </code></pre></div>and the profile code something like:<div class="codebox"><p>CODE: </p><pre><code>CmdLine=MyApp.exe [$&lt;param name&gt; [$&lt;param name&gt; ...]] </code></pre></div>As an example:<div class="codebox"><p>CODE: </p><pre><code>Reflector.exe /exec MyProfile /p file "%1",CmdLine=MyApp /open $file</code></pre></div>and:<div class="codebox"><p>CODE: </p><pre><code>Reflector.exe /exec MyProfile /p I "$I" /p R "$R" /p L "$L"CmdLine=MyApp /left_path=$L /other=$R /and_even=$I</code></pre></div>Just like the Effectuator now looks for all %1's in the cmdlines and complains if there is an unmatch with any /file switch, it could just as easily compare all /p's in the same manner.<br><br>I'm already breaking my own promise of not improving the code by looking if initial DDE proxying support is easy to add, so the above would be a quick addition as well <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">  No promise on a time frame, but the idea intrigues me!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=9066">Carl Colijn</a> — Wed Feb 29, 2012 10:31 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

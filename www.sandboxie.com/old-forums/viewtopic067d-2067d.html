@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4462&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:02:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SBDelete - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SBDelete</h2>
+		<p><a href="viewtopic59495949.html?f=22&amp;t=4462">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=4462</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 12, 2009 3:21 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Did you delete your sandbox Test3 while SBDelete was running?  SBDelete enumerates the sandboxes only once on startup.<br>
+<br>
+And just to double check, you don't have another copy of your Sandboxie.ini in your Sandboxie program folder, right?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 12, 2009 5:02 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Maybe I don't understand how it's supposed to work, but 'Run Tool' never deletes any lines for me.<br>
+<br>
+If Test3 box is not empty; SBDelete is run; Test3 is the only box checked; then 'Empty Sandboxes' works.<br>
+If I immediately click on Extras/Run Tool, while Test3 is still checked, the 'SbieCtrl_BoxExpandedView_Test3=Y' entry is not deleted.<br>
+<br>
+If Test3 box has been previously emptied; and then SBDelete is started; Test3 is still the only box checked; clicking on Extras/Run Tool does nothing to sandboxie.ini.<br>
+<br>
+If I use Control to "Remove Sandbox" Test3, then SBDelete does not see any Test3 when it starts, so naturally it cannot remove that line.<br>
+<br>
+And I'm certain - there's only 1 sandboxie.ini file.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 12, 2009 5:46 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Yes, you don't understand what that tool is doing.  It is meant to remove the 'BoxExpandedView' lines that were left over in the Sandboxie.ini file after completely removing a sandbox (not just emptying it).  So if you use SB Control to remove sandbox Test3, then start SBDelete, you won't see Test3 listed in the view, which is correct.  If you then run the tool the 'BoxExpandedView' line that corresponds to Test3 will be removed from your INI.  It will not remove anything that is listed in the view on the main tab, regardless of the checkbox state.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 12, 2009 6:23 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>wraithdu wrote:</cite>Yes, you don't understand what that tool is doing...</div></blockquote>You are so right. With the sandbox removed, the tool does what it's supposed to do.  <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"><br>
+Chalk that one up to bad memory, because at one time I knew what it does.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 12, 2009 7:43 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">No big deal.  I threw it in there just because there were a bunch of people who kept commenting on those settings being left over.  Figured I'd do something about it <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Oct 06, 2010 3:09 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">I think this utility is all but forgotten, but I've updated it to v1.0.2.2 to fix x64 compatibility.  The included application is compiled x86 and will work on x86 and x64 systems, but the source has support to be compiled as a native x64 app as well (for anyone that has some philosophical reason to do so).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 19, 2011 1:49 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Updated, compatible with 3.51 beta+ only.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 19, 2011 11:13 pm</strong></div>
+				<div class="author">by <strong>Alan Baxter</strong></div>
+				<div class="content">Thanks, I'll try it out after 3.52 is released.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 20, 2011 1:28 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Alan Baxter wrote:</cite>Thanks, I'll try it out after 3.52 is released.</div></blockquote>
+
+It has been released already. You can download it from:<br>
+<br>
+<a href="../index05f1.html?DownloadSandboxie" class="postlink">http://www.sandboxie.com/index.php?DownloadSandboxie</a><br>
+<br>
+Previous official version does not notice the new official release in a while.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 20, 2011 10:41 am</strong></div>
+				<div class="author">by <strong>Alan Baxter</strong></div>
+				<div class="content">I'd forgotten that I updated to 3.52 a week ago.  Thank you for reminding me, Buster.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 03, 2012 12:44 pm</strong></div>
+				<div class="author">by <strong>Chron Kyrios</strong></div>
+				<div class="content">The issue this tool addresses was fixed in 3.55.07, yes?<br>
+
+<blockquote><div><cite><a href="../phpbb/viewtopic574a.php?p=68233&amp;sid=893eacb21996765b857bf81b01ac90c1#68233" class="postlink">in [url=http://www.sandboxie.com/phpbb/viewtopic.php?p=68233&amp;sid=893eacb21996765b857bf81b01ac90c1#68233]Templates become hardcoded when renaming sandbox[/url]. tzuk</a> wrote:</cite>
+Version 3.55.07 will keep template settings in their unexpanded form, when renaming sandboxes.<br>
+<br>
+Also in version 3.55.07, a minor fix but quite overdue: When renaming or removing sandboxes, Sandboxie Control will delete the corresponding SbieCtrl_BoxExpandedView_SandboxName setting.
+</div></blockquote>
+
+So does this mean SBDelete is no longer necessary?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 03, 2012 1:43 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I would say SBDelete is no longer required because tzuk added a feature to do this:<br>
+<br>
+<a href="http://sandboxie.com/phpbb/viewtopic.php?t=12023" class="postlink">http://sandboxie.com/phpbb/viewtopic.php?t=12023</a></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4462&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:02:24 GMT -->
+</html>

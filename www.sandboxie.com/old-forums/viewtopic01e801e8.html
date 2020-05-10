@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=14454&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:36:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Version 4.01 - Major changes to underlying architecture</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Version 4.01 - Major changes to underlying architecture</h2>
+		<p><a href="viewtopiccbd1cbd1.html?f=38&amp;t=14454">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=14454</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>4</strong></div>
+					<div class="post">
+				<h3>Version 4.01 - Major changes to underlying architecture</h3>
+				<div class="date">Posted: <strong>Thu Jan 10, 2013 2:16 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">SANDBOXIE INTERNALS REDESIGNED IN VERSION 4<br>
+<br>
+The 64-bit edition of Windows 8 introduces a new version of the Kernel Patch Protection (PatchGuard) component, which limits Sandboxie v3 in establishing some of the kernel hooks that it needs in order to fully supervise programs.<br>
+<br>
+To ensure a high level of sandbox isolation on Windows 8 and future versions of Windows, and to mitigate the risk that a future update to Windows 7 will include the new PatchGuard, and break compatibility with Sandboxie, version 4 introduces a change in the way Sandboxie works under the hood.<br>
+<br>
+In version 4, Sandboxie is designed to not rely on unofficial hooks into the kernel. (A few such hooks are still in use on Windows XP.)  Instead, a program under the supervision of Sandboxie v4 runs with no permissions and cannot access or manipulate objects in the system outside the program's own memory.  (This restricted security context can be seen by looking at a process in the sandbox using Process Explorer.)<br>
+<br>
+Sandboxie 4 on 64-bit Windows removes the Experimental Protection feature, and no longer has to suggest use of Drop Rights option.<br>
+<br>
+Minimum Windows Version<br>
+<br>
+Features in the Windows kernel which guarantee that a program cannot improve its own set of permissions are only available starting with Windows XP SP 2, with additional security features in Windows Vista.<br>
+<br>
+Sandboxie v4 officially supports Windows XP SP 3, Windows Vista with Service Pack 2, Windows 7 with Service Pack 1, and Windows 8. Other variants may or may not work at this time.<br>
+<br>
+Please note that these changes do not mean that Sandboxie now supports Metro apps.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 10, 2013 2:17 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">KNOWN PROBLEMS IN VERSION 4<br>
+<br>
+Important Note:  This is a major revision, and some stuff will break.  Following is a brief list of issues that are known at this time.<br>
+<br>
+- Printing doesn't work for 32-bit programs running on 64-bit Windows</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Version 4.01 - Major changes to underlying architecture</h3>
+				<div class="date">Posted: <strong>Thu Jan 10, 2013 2:26 pm</strong></div>
+				<div class="author">by <strong>soccerfan</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>SANDBOXIE INTERNALS REDESIGNED IN VERSION 4<br>
+[~<em>snipped</em>~]<br>
+Minimum Windows Version<br>
+<br>
+Features in the Windows kernel which guarantee that a program cannot improve its own set of permissions are only available starting with Windows XP SP 2, with additional security features in Windows Vista.<br>
+<br>
+Sandboxie v4 officially supports Windows XP SP 3, Windows Vista with Service Pack 2, Windows 7 with Service Pack 1, and Windows 8. Other variants may or may not work at this time.
+</div></blockquote>
+
+Thanks for your efforts.<img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">  I have been on Windows XP SP2 for years and it is not clear (to me) <br>
+from your first post (quoted above) if sandboxie v4 and higher will continue to support XP SP2.<br>
+Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 10, 2013 2:30 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">That really depends on the changes between XP SP 2 and SP 3.  I didn't test with earlier service packs than the latest service pack for each version of Windows, because that would multiply the number of setups I have to support.  You can easily check if Sandboxie 4.01 works on your XP SP 2, and easily go back to version 3.76 if it doesn't.  Maybe it works fine and this is a non-issue.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 10, 2013 2:40 pm</strong></div>
+				<div class="author">by <strong>soccerfan</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>...You can easily check if Sandboxie 4.01 works on your XP SP 2, and easily go back to version 3.76 if it doesn't.</div></blockquote>
+I might just do that once the dust settles on v4 <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz">  <br>
+Thanks for the testing update on XP machines.<br>
+<br>
+EDIT: I assume sandboxie v4 does not check if <br>
+service pack SP3 is actually installed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Version 4.01 - Major changes to underlying architecture</h3>
+				<div class="date">Posted: <strong>Thu Jan 10, 2013 3:18 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Cool. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+
+<blockquote><div><cite>tzuk wrote:</cite>In version 4, Sandboxie is designed to not rely on unofficial hooks into the kernel. (A few such hooks are still in use on Windows XP.)  Instead, a program under the supervision of Sandboxie v4 runs with no permissions and cannot access or manipulate objects in the system outside the program's own memory.  (This restricted security context can be seen by looking at a process in the sandbox using Process Explorer.)</div></blockquote>
+
+I'm curious to know more about the "runs with no permissions part and cannot access..." <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> But of course Resource Access stuff will still all function as expected, even in a restricted context? Is this "restricted" context like the Restricted level using RunAs (in XP at least)? e.g. Less than "Basic User?" I don't guess so, since it sounds like Drop Rights still exists, therefore programs CAN still have admin permissions in a sandbox? (admin+restricted, hmm... <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused">) Well, barring any bugs, I guess everything is still <em>supposed</em> to operate the same from a user's point of view?<br>
+<br>
+Besides improving things for 64-bit systems, do these changes in general (inc. 32-bit, XP, etc.) help to protect even "better," by locking things down even more or anything...?<br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 10, 2013 5:16 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>soccerfan wrote:</cite>EDIT: I assume sandboxie v4 does not check if service pack SP3 is actually installed.</div></blockquote>
+
+At this time no.  But I'm not ruling out doing something like that eventually.<br>
+
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>Well, barring any bugs, I guess everything is still supposed to operate the same from a user's point of view? </div></blockquote>
+
+Yes, exactly the same, including Resource Access and even Resource Monitor.<br>
+<br>
+The way this works is Sandboxie reduces the permissions of the program to nothing, so the program has to go through Sandboxie to access resources, or else the resource access is guaranteed to fail.  If Sandboxie thinks the access is ok, it will do the access on behalf of the program with the original permissions of the program.  So Drop Rights can still determine if those original permissions will include Administrators or not.<br>
+<br>
+These changes don't make much difference in 32-bit systems in terms of protection, or compared to 64-bit systems with Experimental Protection for that matter.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 11, 2013 11:36 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Hoooooly crap, definitely some amazing changes. <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> I just spent a couple hours messing with stuff on the laptop's fresh Windows install, since I'm still keeping 3.74 running on the main system to see IF I have any EMET+Firefox problems (9 days so far...). Anyway, don't want to be too excited in case there's something wrong that I haven't noticed yet, haha. <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> But some interesting findings -- some good, some bad (hopefully fixable, will post in <a href="../phpbb/viewtopic7eb7.php?t=14455" class="postlink">other topic</a>). <em>Looks</em> like good news about this: <a href="../phpbb/viewtopic623d.php?t=13260" class="postlink">Run Sandboxed + SRP doesn't work?</a> Thanks! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+<br>
+tzuk, after your reply yesterday, I was going to say/ask: Sounds more like a full "proxy" for resources now, instead of something like a "gatekeeper" up until now? Does the new way of handling stuff have any impact on performance?<br>
+<br>
+<br>
+I see in Process Explorer that Job Objects are being used now (which I guess is part of what you described), and under the ANONYMOUS LOGON user name. Chrome users: Is that the same way it works? (Yeah, I still haven't tried Chrome <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed">, and only found out about Jobs when reading about its sandbox.)<br>
+<br>
+Makes it easier to see sandboxed processes in Task Manager, etc. with the different name... I was wondering if that meant files needed different permissions, or would be created with that ANON owner, but no, everything is as before. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> (Don't know if that's Sandboxie handling things, or just part of the Job system.)<br>
+<br>
+I also noticed a small (but unlikely) security hole with file permissions that I never posted about has been fixed as well! (I was going to post about it awhile ago with another possible hole, which I haven't investigated further yet...)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Version 4.01 - Major changes to underlying architecture</h3>
+				<div class="date">Posted: <strong>Sat Jan 12, 2013 11:29 am</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content">I was hoping that it will possible for Sandboxie 4 supporting from Windows 200 SP1, I have now Windows XP 3, but how long will you support this? <br>
+I still have old computer which works just fine for my usual needs and it would be a shame if Sandboxie stops supporting this version. <br>
+<br>
+My friend has windows 2000 sp4, he was afraid that future versions of Sandboxie will not support these systems anymore what a shame..., and he bought a lifetime license like me... <br>
+I wonder what he will use for protection if Sandboxie does not support older windows systems anymore...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Version 4.01 - Major changes to underlying architecture</h3>
+				<div class="date">Posted: <strong>Sat Jan 12, 2013 11:31 am</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content">I'm not sure if I understand, does this mean the Patchguard in Windows 64-bit systems does not allow to Sandboxie to reach its full protection level like in previous version of Sandboxie on both 32-bit and 64-bit systems?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jan 12, 2013 1:23 pm</strong></div>
+				<div class="author">by <strong>Stephan</strong></div>
+				<div class="content">Will we also get a new, cool, modern interface to Sandboxie? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Please?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jan 12, 2013 2:28 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Sorry guys, too much stuff going on here, so I'm going to be brief.<br>
+<br>
+DR_LaRRY_PEpPeR:<br>
+- I suppose you can still say it's a gatekeeper.  It used to be about closing the gate on the program, now it's about opening it for the program.<br>
+- There are a few similarities to the Chrome sandbox, but also many differences, the chief one being that there isn't a separate proxy, like in Chrome.  The program will be able to access the resources it needs, but only if Sandboxie says it's ok.<br>
+<br>
+Lumberjack:  The point of compatibility with old versions of Windows and service packs was already mentioned in this topic.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 13, 2013 4:51 pm</strong></div>
+				<div class="author">by <strong>Escalader</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>KNOWN PROBLEMS IN VERSION 4<br>
+<br>
+Important Note:  This is a major revision, and some stuff will break.  Following is a brief list of issues that are known at this time.<br>
+<br>
+- Printing doesn't work for 32-bit programs running on 64-bit Windows</div></blockquote>
+
+So making it simple for me I have MS Office 10 32 bit running on 64 bit W7 i7.<br>
+<br>
+does this mean no printing will be possible for word, excel etc etc?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 20, 2013 1:45 am</strong></div>
+				<div class="author">by <strong>reand</strong></div>
+				<div class="content">this feels stable enough, i didn't find bugs also.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 29, 2013 5:27 am</strong></div>
+				<div class="author">by <strong>PiwPi</strong></div>
+				<div class="content">Sounds good!<br>
+<br>
+But how does Sandboxie decide what kind of permissions to grant to a program ? (i.e. whitelist or heuristics ?)<br>
+What kind of permissions will the default configuration grant ? (i.e. disk operations and everything else that can be allowed or blocked)<br>
+Can a malicious program within a sandbox take control of a more trusted program in the same box and abuse of its permissions ?<br>
+<br>
+Side question, why doesn't Sandboxie support Metro apps ? I don't use Win 8 but am wondering.<br>
+<br>
+Thanks and keep up the good work <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+All I need from Sandboxie 4 is an even more detailed understanding of its internals, and a better looking interface / icon. No I'm not shallow!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>4</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=14454&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:36:17 GMT -->
+</html>

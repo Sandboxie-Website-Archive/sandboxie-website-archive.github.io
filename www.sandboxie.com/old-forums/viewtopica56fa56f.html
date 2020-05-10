@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=908&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:15:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; How to recover Bookmarks in Firefox</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>How to recover Bookmarks in Firefox</h2>
+		<p><a href="viewtopicd346d346.html?f=4&amp;t=908">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=908</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>How to recover Bookmarks in Firefox</h3>
+				<div class="date">Posted: <strong>Wed Jan 03, 2007 9:53 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_575</strong></div>
+				<div class="content">I am very new to Sandboxie so I apologise for what is probably a simple question.<br>
+I use Firefox as my default (and much preferred browser) but I am unable to recover Bookmarks that I created in a Sandboxed Firefox.<br>
+I did in fact follow the "Getting started" tutorial and I was able to recover favourites created in a Sandboxed Internet explorer but when I try to recover files after creating new bookmarks using Firefox the Quick Recovery -DefaultBox does not show the recently created bookmarks and consequently I cannot manage to recover these bookmarks to be recorded in Firefox when not Sandboxed.<br>
+Any suggestions or directions would be much appreciated.<br>
+Thank you. <img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 04, 2007 1:46 pm</strong></div>
+				<div class="author">by <strong>Sorcos</strong></div>
+				<div class="content">I was just trying to figure this out too, as I am also very new to Sandboxie.  An easy way I used to figure this out was to explore the contents of the sandbox (option right above the recover files).  I found that Firefox saves its list of bookmarks in <span style="text-decoration: underline">one</span> html file in the users profile folder (for ease of transferring bookmarks to other browsers).  I have not tried it yet, but it would appear that by saving this one html file, you would save all of your bookmarks.<br>
+<br>
+The users profile for Firefox can be found at:<br>
+C:\Documents and Settings\user\Application Data\Mozilla\Firefox\Profiles\<br>
+<br>
+The html file you are looking for is simply called "bookmarks".  So, by going to "Configuration" then "Edit Configuration" in Sandboxie, you can add "RecoverFolder=%AppData%\Mozilla\Firefox\Profiles\'name_of_profile'" to the end of the file, where 'name_of_profile' is the name of the folder in "Profiles\".  This will add everything changed in this folder to the "Recover Files" option in Sandboxie.  You just have to pick "bookmarks.html" out of the list and recover it.  You may also choose to recover "bookmarks.bak" which is a backup of your current bookmarks.  <br>
+<br>
+Also note that once you add the RecoverFolder string to the file, you must close Firefox, go to "Configuration" then "Reload Configuration" in Sandboxie in order for the changes to take effect.<br>
+<br>
+Since I have not tried this yet, please, someone correct me if I am wrong or if there is a better way.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 04, 2007 8:31 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I vaguely remember this being discussed in this forum some time ago, with various approaches suggested and compared.  Try searching for it.<br>
+<br>
+A more practical advice:  You can configure Sandboxie to punch holes in the sandbox.  You could say:  The file holding my bookmarks (bookmarks.html) should not be sandboxed.  Any updates to this file by a sandboxed program, should bypass the sandbox mechanism.<br>
+<br>
+In fact there is an option for this in Sandboxie Control.  It's the last checkbox on the File Copy Options dialog box:<br>
+<br>
+Sandboxie Control menu -&gt; Configuration -&gt; Sandbox Settings -&gt; Set File Copy Options</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 04, 2007 9:44 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_575</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I vaguely remember this being discussed in this forum some time ago, with various approaches suggested and compared.  Try searching for it.<br>
+<br>
+A more practical advice:  You can configure Sandboxie to punch holes in the sandbox.  You could say:  The file holding my bookmarks (bookmarks.html) should not be sandboxed.  Any updates to this file by a sandboxed program, should bypass the sandbox mechanism.<br>
+<br>
+In fact there is an option for this in Sandboxie Control.  It's the last checkbox on the File Copy Options dialog box:<br>
+<br>
+Sandboxie Control menu -&gt; Configuration -&gt; Sandbox Settings -&gt; Set File Copy Options</div></blockquote>
+
+Tzuk:<br>
+Sorry to be so dense but I really am making no headway with your recommendations.<br>
+I did as you suggested in checking the last checkbox on the File Copy Options dialog box but sadly it did not seem to make any difference at all.<br>
+I have no difficulty in recovering files when I am using Internet Explorer, but with Firefox, when I press Function &gt; Contents of Sandbox &gt; Recover Files.......any recently added Bookmarks are just not listed and I am therefore unable to update the bookmarks in my regular (non sandboxed) Firefox.<br>
+All I'm asking is how do I make a sandboxed Firefox work exactly the same as a sandboxed Internet Explorer works?<br>
+Or is this not possible? <br>
+Please help me, I am not particularly adept at the inner workings of computer programming so I really need simple instructions and Sandboxie seems to be a truly great program and I would love to use it regularly, but I must be able to retain any and all of my Bookmarks that I acquire while browsing.<br>
+Many thanks for your guidance.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 08, 2007 6:41 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Sorry, I didn't notice this follow-up question earlier.<br>
+
+<blockquote class="uncited"><div> did as you suggested in checking the last checkbox on the File Copy Options dialog box but sadly it did not seem to make any difference at all. </div></blockquote>
+
+Did you ever delete the contents of the sandbox, after doing this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 08, 2007 7:56 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_575</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Did you ever delete the contents of the sandbox, after doing this?</div></blockquote>
+
+I did indeed delete the contents of the sandbox after checking the checkbox to which you refer.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 08, 2007 11:25 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_575</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Did you ever delete the contents of the sandbox, after doing this?</div></blockquote>
+
+tzuk:<br>
+<br>
+I would like to correct my earlier post.<br>
+I am very happy to say that all seems to be working OK now.<br>
+I'm really not sure what I was doing incorrectly, but "punching a hole in the sandbox" seems to have done the trick!<br>
+One small question: in the 'File Copy Options- DefaultBox' dilogue box; next to the last checkbox there is a note:  (NOT Recommended) ...is there in fact any danger in checking this box (which I have in fact done) on your recommendation.<br>
+Thanks for your help.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 09, 2007 6:37 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I marked it not recommended because when you "punch a hole" at the profile folder, this applies to bookmarks, but also to many other data files, including extensions I think.<br>
+<br>
+So it just tries to draw attention that you may be punching a hole for more than you may have intended.<br>
+<br>
+However, the 2.7 line of Sandboxie makes it possible to punch much more delicate holes.  You can now say you want to punch a hole for just the bookmarks file:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=firefox.exe,%appdata%\Mozilla\Firefox\Profiles\*\bookmarks.html
+</code></pre></div>
+
+Whereas before you had to expose the whole Profiles directory.<br>
+<br>
+I'll have to update Sandboxie Control to be smarter about this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 09, 2007 8:58 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_575</strong></div>
+				<div class="content"><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=firefox.exe,%appdata%\Mozilla\Firefox\Profiles\*\bookmarks.html
+</code></pre></div>
+
+tzuk: <br>
+<br>
+Do I put this line of code in the Configuration&gt; Edit configuration dialogue?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 09, 2007 9:29 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_575</strong></div>
+				<div class="content">tzuk:<br>
+<br>
+I did in fact insert that line of code in the Configuration &gt; Edit Configuration dialogue box.<br>
+A 'Sandboxie.ini-Notepad' dialogue box opened and I simply inserted the line of code at the bottom of the rest of the code.<br>
+<br>
+Unfortunately it does not seem to be working.<br>
+<br>
+I would prefer to punch a more delicate hole as you described but could you please tell be what I am doing incorrectly.<br>
+<br>
+More specifically could you please give me directions as to exactly what I need to do.<br>
+<br>
+Thank you very much for your help and support.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 16, 2007 5:01 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The <em>delicate hole</em> (that phrase is beginning to sound silly to me now) that I was referring to, is only possible in a version 2.7 Sandboxie.  Have you upgraded to that line of beta versions?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 16, 2007 5:25 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_575</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>The <em>delicate hole</em> (that phrase is beginning to sound silly to me now) that I was referring to, is only possible in a version 2.7 Sandboxie.  Have you upgraded to that line of beta versions?</div></blockquote>
+
+Tzuk:<br>
+<br>
+I am actually using version 2.64. <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"><br>
+Does one need special knowledge to use v 2.7?  and where would I get it?<br>
+I have looked around the site but the download page only points to v 2.64 as far as I can tell.<br>
+Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 18, 2007 7:47 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Does one need special knowledge to use v 2.7? </div></blockquote>
+
+Not special knowledge, no, but that version is still being tested and still has some quirks.<br>
+<br>
+I think at this point, the best thing for you is to expose the entire Profiles folder, like we discussed a few posts ago (and quite a few days ago) in this very thread.<br>
+<br>
+It's just going to be the easiest thing at this time.  And with the next version, you could tighten things up a bit more.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 18, 2007 8:19 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_575</strong></div>
+				<div class="content"><blockquote class="uncited"><div>I think at this point, the best thing for you is to expose the entire Profiles folder, like we discussed a few posts ago (and quite a few days ago) in this very thread.<br>
+<br>
+It's just going to be the easiest thing at this time.  And with the next version, you could tighten things up a bit more.</div></blockquote>
+
+Tzuk:<br>
+<br>
+OK I'll do as you suggest and I await the next version with keen anticipation.<br>
+Thanks for your advice.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 07, 2007 12:58 am</strong></div>
+				<div class="author">by <strong>Unknown_User_632</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite><blockquote class="uncited"><div>Does one need special knowledge to use v 2.7? </div></blockquote>
+
+Not special knowledge, no, but that version is still being tested and still has some quirks.<br>
+<br>
+I think at this point, the best thing for you is to expose the entire Profiles folder, like we discussed a few posts ago (and quite a few days ago) in this very thread.<br>
+<br>
+It's just going to be the easiest thing at this time.  And with the next version, you could tighten things up a bit more.</div></blockquote>
+I will be looking forward to the new version as well.  This is an important thread for FireFox users.<br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=908&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:15:39 GMT -->
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=39&t=15799&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:42:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.01] VS2012 - Canceling process MSBuild.exe</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.01] VS2012 - Canceling process MSBuild.exe</h2>
+		<p><a href="viewtopic235e235e.html?f=39&amp;t=15799">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=39&amp;t=15799</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.01] VS2012 - Canceling process MSBuild.exe</h3>
+				<div class="date">Posted: <strong>Fri Jun 21, 2013 6:27 am</strong></div>
+				<div class="author">by <strong>fstroll</strong></div>
+				<div class="content">I expirienced 2 Problems in Version 4.02, now i downgraded to 3.7.6 and it works again:<br>
+<br>
+1. MSbuild (Visual Studio 2012's Platform toolset v110_xp) does not work any more inside a sandbox. It can't connect to a subprocess. Sandboxie displays an error message that ImpersonateNamedPipe is not implemented.<br>
+2. Sandboxed Programs can't catch the mouse cursor properly any more. This prevents some games from working.<br>
+<br>
+I am using Windows 7 64bit</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>[4.02][64 bit] Problem with MSBuild.exe in VisualStudio 2012</h3>
+				<div class="date">Posted: <strong>Mon Jun 24, 2013 10:18 am</strong></div>
+				<div class="author">by <strong>lopezimg</strong></div>
+				<div class="content">Hello guys!<br>
+<br>
+I have a problem with a new version of Sandboxie. Whenever I try to build any project ( C#, C++, VB ) in Visual studio 2012 it gives mi a following error:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Error	1	The build stopped unexpectedly because of an internal failure.
+Microsoft.Build.Exceptions.BuildAbortedException: Build was canceled. Failed to successfully launch or connect to a child MSBuild.exe process. Verify that the MSBuild.exe "C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe" launches successfully, and that it is loading the same microsoft.build.dll that the launching process loaded. If the location seems incorrect, try specifying the correct location in the BuildParameters object, or with the MSBUILD_EXE_PATH environment variable.
+   at Microsoft.Build.BackEnd.NodeProviderOutOfProc.CreateNode(Int32 nodeId, INodePacketFactory factory, NodeConfiguration configuration)
+   at Microsoft.Build.BackEnd.NodeManager.AttemptCreateNode(INodeProvider nodeProvider, NodeConfiguration nodeConfiguration)
+   at Microsoft.Build.BackEnd.NodeManager.CreateNode(NodeConfiguration configuration, NodeAffinity nodeAffinity)
+   at Microsoft.Build.Execution.BuildManager.PerformSchedulingActions(IEnumerable`1 responses)
+   at Microsoft.Build.Execution.BuildManager.HandleNewRequest(Int32 node, BuildRequestBlocker blocker)
+   at Microsoft.Build.Execution.BuildManager.IssueRequestToScheduler(BuildSubmission submission, Boolean allowMainThreadBuild, BuildRequestBlocker blocker)	C:\Users\Lucas\Documents\Visual Studio 2012\Projects\WpfApplication1\WpfApplication1\WpfApplication1.csproj	WpfApplication1
+</code></pre></div>
+
+I don't want to rollback to an older version of sandboxie just bacause I've noticed that the form designer in Visual studio 2012 is finally working.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 25, 2013 5:54 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">In Version 4.03.01:<br>
+<br>
+- Should fix the error with canceling MSBuild.exe.<br>
+<br>
+- ImpersonateNamedPipe still issues a warning message, because the implementation is not correct but is good enough for MSBuild and probably most other cases.  You can  HIDE the message if it annoys you, but I want to keep it there so it can give a hint in case something else doesn't work because of it.<br>
+<br>
+- Regarding mouse capture issues, perhaps an OpenWinClass=* setting will fix that.  See also:<br>
+<br>
+<a href="../phpbb/viewtopic8a29.php?t=15837" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15837</a></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=39&t=15799&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:42:56 GMT -->
+</html>

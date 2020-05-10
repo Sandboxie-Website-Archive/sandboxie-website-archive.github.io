@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=15983&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:46:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.01] Windows 8 and Sbie 4. Python Setup error code 2203.</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.01] Windows 8 and Sbie 4. Python Setup error code 2203.</h2>
+		<p><a href="viewtopic9ccf9ccf.html?f=40&amp;t=15983">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=15983</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.01] Windows 8 and Sbie 4. Python Setup error code 2203.</h3>
+				<div class="date">Posted: <strong>Wed Jul 10, 2013 5:58 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content"><a href="http://www.python.org/download/" class="postlink">http://www.python.org/download/</a><br>
+Python 2.7.5 Windows Installer<br>
+Python 2.7.5 Windows X86-64 Installer<br>
+Python 3.3.2 Windows x86 MSI Installer<br>
+Python 3.3.2 Windows X86-64 MSI Installer<br>
+<br>
+"The installer has encountered an unexpected error installing this package. This may indicate a problem with this package. The error code is 2203."<br>
+<br>
+Win7 (32-bit) and Sbie 3.76 ... PASS<br>
+Win8 (32-bit) and Sbie 3.76 ... PASS<br>
+Win7 (32-bit) and Sbie 4.03.03 .PASS<br>
+Win7 (32-bit) and Sbie 4.04 ... PASS<br>
+Win8 (32-bit) and Sbie 4.04 ... FAIL<br>
+Win8 (64-bit) and Sbie 4.04 ... FAIL</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 10, 2013 6:12 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Alright.  I am making a note about this but first let me get to the Minecraft issue, then please remind me about this one.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 10, 2013 5:27 pm</strong></div>
+				<div class="author">by <strong>Fisher42</strong></div>
+				<div class="content">This isn't only a Python issue, i cannot install any MSI installers neither Google Chrome.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 10, 2013 6:12 pm</strong></div>
+				<div class="author">by <strong>Fisher42</strong></div>
+				<div class="content">An Installation with verbose logging showed the following error:<br>
+<br>
+DEBUG: Error 2203:  Database: C:\Windows\Installer\inprogressinstallinfo.ipi. Cannot open database file. System error -2147287037<br>
+<br>
+I tried to create this file manually in the Sandbox and it worked, but it got deleted.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 17, 2013 3:54 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Right, that's the symptom.  Actually the problem is a missing folder<br>
+C:\Windows\System32\config\systemprofile\AppData\Local\Temp<br>
+in which the Windows Installer service is trying to create a temp file.<br>
+<br>
+I'm not sure why this works outside the sandbox but the next beta<br>
+build will create this folder in the sandbox and that fixes the problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 18, 2013 7:57 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Please check version 4.05.01.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 18, 2013 12:25 pm</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">Python* tested.<br>
+Windows 7 (32-bit) passed.<br>
+Windows 8 (32-bit) passed.<br>
+Windows 8 (64-bit) passed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 31, 2013 1:40 am</strong></div>
+				<div class="author">by <strong>aguy</strong></div>
+				<div class="content">This problem also affected installing Copy.com (ver 1.33.0486), a cloud app like Dropbox.<br>
+<br>
+Upgrading to beta 4.05.02 allowed me to install the program.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=15983&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:46:01 GMT -->
+</html>

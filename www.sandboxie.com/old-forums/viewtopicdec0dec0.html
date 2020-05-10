@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16043&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; No IE History in Sandbox</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>No IE History in Sandbox</h2>
+		<p><a href="viewtopic89c889c8.html?f=40&amp;t=16043">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=16043</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>No IE History in Sandbox</h3>
+				<div class="date">Posted: <strong>Sun Jul 14, 2013 11:17 am</strong></div>
+				<div class="author">by <strong>doveman</strong></div>
+				<div class="content">running 4.04 on Win7 x64 Ultimate.<br>
+<br>
+When running IE10 in the Sandbox, I get no History and it just shows Search History. Favourites and Feeds are fine. History is fine running outside the Sandbox.<br>
+<br>
+I've just updated to 4.04 but it still isn't working. I deleted and recreated the DefaultBox, disabled Quick and Immediate Recovery, set Direct Access on My Documents, Favourites, Desktop and Downloads and set all the IE options except Force IE to Run and Add Favourites to Quick.<br>
+<br>
+I'm also getting this error 2 out of 3 times I launch IE<br>
+<br>
+"Exception EInvalidPointer in module ammemb64.dll at 0000000000005982. Invalid Pointer operation"<br>
+<br>
+I think that dll is part of Actual Multiple Monitors. I never had this error with the previous version (3.8).<br>
+<br>
+EDIT: I did a full uninstall and reinstall (keeping my config files though) and that seems to have fixed the error. Still no IE History though. I tried creating a new Sandbox, not based on any existing one and running IE in that but still no joy.<br>
+<br>
+Scratch that, I'm still getting this error. I'll make another thread about that though.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 16, 2013 2:03 pm</strong></div>
+				<div class="author">by <strong>doveman</strong></div>
+				<div class="content">I've just done a fresh install of 4.04 on a different PC and no IE History on that either, so I presume this is a general problem and it's not working for anyone?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 24, 2013 2:14 pm</strong></div>
+				<div class="author">by <strong>doveman</strong></div>
+				<div class="content">bump</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>No IE History in Sandbox</h3>
+				<div class="date">Posted: <strong>Thu Jul 25, 2013 4:42 pm</strong></div>
+				<div class="author">by <strong>richardk</strong></div>
+				<div class="content">Same Problem:  No History in Sandbox   <img class="smilies" src="images/smilies/icon_exclaim.gif" width="15" height="15" alt=":!:" title="Exclamation"> <br>
+<br>
+W7, 32 bit<br>
+<br>
+Thanks Richard</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 26, 2013 3:26 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I am not sure this can be made to work.  Try experimenting with the direct access settings in<br>
+Sandbox Settings &gt; Applications &gt; Web Browser &gt; Internet Explorer</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 26, 2013 11:24 am</strong></div>
+				<div class="author">by <strong>doveman</strong></div>
+				<div class="content">I presumed it should work and it was just me that was having problems as there's a<br>
+<br>
+"Allow direct access to IE bookmark and history database" <br>
+<br>
+in Sandbox Settings &gt; Applications &gt; Web Browser &gt; Internet Explorer.<br>
+<br>
+Surely the history can only be stored in a folder/file or in the registry key though and Sandboxie can be given Direct Access to either, so it should just be a matter of identifying where IE stores it's history.<br>
+<br>
+It's quite a problem if it can't be made to work as I've found people get a bit annoyed when they go to their history to open something they had opened they day before, only for it to be empty and I have to explain to them that it's because it's running in the Sandbox that it's not working. I've had to just let them run without Sandboxie for now and hope their anti-virus protects them.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 26, 2013 5:46 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">I wouldn't hold my breath while waiting for a solution:<br>
+<br>
+<a href="http://blog.nirsoft.net/2012/12/08/a-few-words-about-the-cache-history-on-internet-explorer-10/" class="postlink">http://blog.nirsoft.net/2012/12/08/a-fe ... plorer-10/</a><br>
+<br>
+<a href="http://blog.nirsoft.net/2013/05/02/improved-solution-for-reading-the-history-of-internet-explorer-10/" class="postlink">http://blog.nirsoft.net/2013/05/02/impr ... plorer-10/</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 30, 2013 1:23 pm</strong></div>
+				<div class="author">by <strong>doveman</strong></div>
+				<div class="content">Not sure what the big deal is. Why wouldn't it work just allowing Direct Access to C:\Users\[User Profile]\AppData\Local\Microsoft\Windows\WebCache\WebCacheV24.dat ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 30, 2013 1:37 pm</strong></div>
+				<div class="author">by <strong>doveman</strong></div>
+				<div class="content">Hmm, now I don't even have Favourites in Sandboxed IE. Not sure if I did have before to be honest as I don't know if I checked. Running 4.04 on Windows 7 x64.<br>
+<br>
+EDIT: On my other PC, also running Win 7 x64 Ultimate but with v4.05.02, Favourites do work, although it took a long while for the menu bar (File, Edit, View, etc) to stop being greyed out and become accessible. The Favourites bar did appear straight away and could be clicked on though.<br>
+<br>
+EDIT2: Updated to 4.05.02 but it turned out that I needed to disable Drop Rights for Favourites to appear in the Sandboxe IE10.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 31, 2013 11:05 am</strong></div>
+				<div class="author">by <strong>doveman</strong></div>
+				<div class="content">Well giving Direct Access to %Local AppData%\Microsoft\Windows\WebCache\ doesn't make the History available in the Sandbox for some reason.<br>
+<br>
+I can delete everything in that folder except for<br>
+<br>
+V01.log<br>
+WebCacheV01.dat<br>
+WebCacheV01.tmp<br>
+<br>
+which it tells me are open in "Host Process for Windows Tasks" so maybe that's a clue as to why it's not working in Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 07, 2013 10:05 am</strong></div>
+				<div class="author">by <strong>doveman</strong></div>
+				<div class="content">Bump! Anyone understand why giving Sandboxie Direct Acess to the folder where the history files are located doesn't get History working in Sandboxed IE10?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 08, 2013 3:21 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I experimented briefly with IE 10 on 32-bit Windows 8 with this setting:<br>
+<br>
+Sandbox Settings &gt; Applications &gt; Web Browser &gt; Internet Explorer &gt;<br>
+Allow direct access to Internet Explorer bookmark and history database<br>
+<br>
+It seems to work as I would expect:  Websites I enter into the address bar in a sandboxed IE 10 can<br>
+also be seen in IE 10 outside the sandbox.  And can still be seen after the contents of the sandbox are deleted.<br>
+<br>
+And if I clear that setting, there is no longer sharing of web site history across the sandbox.<br>
+<br>
+Next I will check in Windows 7 with IE 10.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 08, 2013 7:31 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I think that setting from my earlier post might record only the URLs that I enter directly into the address bar.<br>
+<br>
+Looks like I need two settings for full history:<br>
+<br>
+Sandbox Settings &gt; Applications &gt; Web Browser &gt; Internet Explorer &gt;<br>
+Allow direct access to Internet Explorer bookmark and history database<br>
+Allow direct access to Internet Explorer cookies<br>
+<br>
+That cookie setting was updated recently in 4.05.03 so you should probably get version 4.05.04 before trying this.<br>
+<br>
+It is still not perfect.  Web sites visited don't always appear in the history immediately, sometimes only after restarting IE.<br>
+And, it looks like history entries can't be deleted in the sandboxed IE.<br>
+<br>
+I think you will have more luck wiith this after switching to a different browser, if that's an option.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 08, 2013 8:01 am</strong></div>
+				<div class="author">by <strong>doveman</strong></div>
+				<div class="content">Thanks for testing.<br>
+<br>
+I've updated to 4.05.04 and have both those options ticked. The cookies option has added a path under Direct Access to %Local Appdata%\Microsoft\Internet Explorer\DOMStore\* but the bookmark and history database option doesn't appear to add anything.<br>
+<br>
+Anyway, I still have no history at all when running IE10 sandboxed, with it just showing Search History in the dropdown. Outside the Sandbox, it shows View by Date, View by Site, etc and underneath it shows Monday, Tuesday, Wednesday, Today.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 08, 2013 8:39 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Oh.  I thought we were talking about the drop down that appears below<br>
+the address bar when you click the small down arrow near the Refresh (F5) icon.<br>
+<br>
+Try this please:<br>
+<br>
+Open Sandbox Settings &gt; Resource Access &gt; File Access &gt; Direct Access,<br>
+click Edit/Add and paste:<br>
+<strong>|%Local AppData%\Microsoft\Windows\</strong><br>
+<br>
+(Make sure to copy the pipe character ( | ) at the beginning.)<br>
+<br>
+* * *<br>
+<br>
+How do you make the history pane actually go to the web site?<br>
+Clicking on it doesn't seem to do anything.<br>
+<br>
+<em>Edit:</em> Oh, I figured it out... There's a difference between the<br>
+history group title, and the actual web pages below it.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16043&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:25 GMT -->
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=22693&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:30:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Application interaction with outside files</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Application interaction with outside files</h2>
+		<p><a href="viewtopice110e110.html?f=5&amp;t=22693">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=22693</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Application interaction with outside files</h3>
+				<div class="date">Posted: <strong>Fri Mar 25, 2016 8:20 am</strong></div>
+				<div class="author">by <strong>win_drive</strong></div>
+				<div class="content">Hi,<br>
+<br>
+I'm completely new to Sandbox and I've read about how it works as much as I could, but still it's unclear to me how isolated applications in sandbox really are.<br>
+<br>
+If the program is installed in Sandbox and the it's basic functionality is to configure data outside the sandbox, how will the program run? It says in description that in general applications in sandbox don't<br>
+have access to system resources, does that also include non-system files?<br>
+<br>
+If an application is installed in Sandbox and you want to open an outside file in that application, and let's say that the application is infected, when saving the file back to the ouside of the Sandbox, can that file transmit virus?<br>
+<br>
+Can you utilize software that is installed outside of the sandbox with an application inside?<br>
+<br>
+Thanks for the answers</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Application interaction with outside files</h3>
+				<div class="date">Posted: <strong>Fri Mar 25, 2016 8:48 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote class="uncited"><div>If the program is installed in Sandbox and the it's basic functionality is to configure data outside the sandbox, how will the program run? It says in description that in general applications in sandbox don't<br>
+have access to system resources, does that also include non-system files?</div></blockquote>
+
+Depends on what your are trying to access. A program installed in a SB creates its own (fake) registry hive, folders, etc. It's not "aware" of your c: drive or your host system. You can give access to your registry, files a file folders, doing that is "punching a hole" in the SB, thus defeating the purpose.<br>
+
+<blockquote class="uncited"><div>
+If an application is installed in Sandbox and you want to open an outside file in that application, and let's say that the application is infected, when saving the file back to the ouside of the Sandbox, can that file transmit virus?</div></blockquote>
+
+If the program is installed directly into the sandbox, that's were it lives. It's a temp space. deleting the contents of that sandbox will delete everything including that program.  <br>
+If the program directly installed in the sb is infected and then your save (recovery) the file outside of the sandbox to your host machine, yes. You're telling SBIE that your are authorizing that file to leave the sandbox. But you also would need that same program installed on your host to open that file (say word for example.) Directly installing it in a SB is a different installation totally.<br>
+If you have the program installed on your host, and then your "Run as sandboxed" then everything also applies, but if you don't run that program 100% in a sandbox, then you risk problems, as SBIE cannot protect your if you are not running the program in the sandbox to begin with. Also, SBIE does not detect, stop or identify viruses or malware. <a href="../index0afb.html?FAQ_Virus" class="postlink">http://www.sandboxie.com/index.php?FAQ_Virus</a>
+<blockquote class="uncited"><div>
+Can you utilize software that is installed outside of the sandbox with an application inside?</div></blockquote> People install web browsers and other things in the SB as well as on the host. And people just run the programs on the host "as sandboxed" in SBIE. Can they interact? Depends. You have to allow that, or utilize a template (FF template for example enables your to write cookies, bookmarks back your profile living on your host) otherwise, ANY changes, etc done in the sandbox are gone. and are not permanent.<br>
+<br>
+The point of a sandbox, a container, is to protect you and your data from changes and malware. Should changes/malware occur, you delete the contents of the sb and move on.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Application interaction with outside files</h3>
+				<div class="date">Posted: <strong>Fri Mar 25, 2016 11:57 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>win_drive wrote:</cite>
+If the program is installed in Sandbox and the it's basic functionality is to configure data outside the sandbox, how will the program run? It says in description that in general applications in sandbox don't<br>
+have access to system resources, does that also include non-system files?</div></blockquote>
+Programs running in the sandbox (installed in the sandbox or host), by default have Read only access to files outside the sandbox, this allows sandboxed programs to work as they do when they run in the non sandboxed environment. So, they can access files outside the sandbox just like any program you have installed in your real system, but if the program make changes to files, programs or the system, this changes are captured within the sandbox, and your real system remains intact. 
+<blockquote><div><cite>win_drive wrote:</cite>
+Can you utilize software that is installed outside of the sandbox with an application inside?
+</div></blockquote>
+Thats part of the beauty about Sandboxie. I do it all the time. I ll give you a couple of examples how I do it. In my W7, I don't install Flash in the real system. So, in the rare occasions that I need Flash, I install it in a sandbox and then run Firefox in the same sandbox. Works great.<br>
+<br>
+In Firefox I use Adblock plus. There is an addon thats named Element Hiding Helper for Adblock Plus, this addon helps create rules for Adblock plus. I rarely use the addon, so, when I need to make a rule with the addon, I install the addon while running Firefox sandboxed, create the rule, save the rule out of the sandbox and then apply it. I never get to install the addon outside the sandbox. And still get out of it all I need.<br>
+<br>
+Other examples. You can install a video player in a sandbox, and navigate to videos in your real system and open then. Or, if you use Java sometimes, and you would prefer not to install it in your real system, you can install it in a sandbox and then run your browser or program that requires it in the same sandbox. The interaction between programs outside and inside the sandbox works great. For the most part, all goes smooth and feels natural.
+<blockquote><div><cite>win_drive wrote:</cite>
+If an application is installed in Sandbox and you want to open an outside file in that application, and let's say that the application is infected, when saving the file back to the ouside of the Sandbox, can that file transmit virus?</div></blockquote>
+I think its possible. But don't forget, when you save the file back, you can run it sandboxed. You can continue using Sandboxie (thats what I do, I never stop using SBIE). So, if the file is infected when you save it back and if you execute it sandboxed, the infection is isolated within the sandbox and you can easily get rid of it by deleting the sandbox.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Application interaction with outside files</h3>
+				<div class="date">Posted: <strong>Wed Mar 30, 2016 12:10 pm</strong></div>
+				<div class="author">by <strong>win_drive</strong></div>
+				<div class="content">OK, thank you all for the answers.<br>
+<br>
+I understand now that Sandbox can be used fully to it's purpose if you install an application that should work by itself without interaction with the outside data. <br>
+
+<blockquote class="uncited"><div>Depends on what your are trying to access. A program installed in a SB creates its own (fake) registry hive, folders, etc. It's not "aware" of your c: drive or your host system. You can give access to your registry, files a file folders, doing that is "punching a hole" in the SB, thus defeating the purpose.</div></blockquote>
+Worst case scenario, a malicious application could detect that hole, steal data through that hole and then send it through the same hole again to the web. Also if that application is not aware of the c: drive, it cannot utilize graphics or sound driver, right?<br>
+Punching a hole to access driver could potentially open a door to infect entire c:/ProgramFiles directory, right?<br>
+
+<blockquote class="uncited"><div>The point of a sandbox, a container, is to protect you and your data from changes and malware. Should changes/malware occur, you delete the contents of the sb and move on.</div></blockquote>
+<blockquote class="uncited"><div>I think its possible. But don't forget, when you save the file back, you can run it sandboxed. You can continue using Sandboxie (thats what I do, I never stop using SBIE). So, if the file is infected when you save it back and if you execute it sandboxed, the infection is isolated within the sandbox and you can easily get rid of it by deleting the sandbox.</div></blockquote>
+
+For instance, I have a Sandboxed application that works with sound files, and I need the sound files that are not located in Sandbox. I would import that file to Sandbox and that malicious app would destory that file or infect it. After completing with work with that file I would then move it back outside. Then I would see that the file is infected and erasing entire Sandbox would not help me with removing all associated data that would be changed, the file would stay corrputed?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Application interaction with outside files</h3>
+				<div class="date">Posted: <strong>Wed Mar 30, 2016 3:47 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>win_drive wrote:</cite>
+For instance, I have a Sandboxed application that works with sound files, and I need the sound files that are not located in Sandbox. I would import that file to Sandbox and that malicious app would destory that file or infect it. After completing with work with that file I would then move it back outside. Then I would see that the file is infected and erasing entire Sandbox would not help me with removing all associated data that would be changed, the file would stay corrputed?</div></blockquote>
+win_drive, I am no malware expert. When you delete the sandbox, all changes done by the sandboxed program are gone...except what you recover out of the sandbox. In the case above, that would be the the file that you moved back. I dont think it would be corrupted but perhaps it is infected and perhaps its not. <br>
+<br>
+You can safely run it in a sandbox. But be aware, if you run  it sandboxed and all appears to be well, that doesn't mean that the file is safe to be run unsandboxed. Be careful.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Application interaction with outside files</h3>
+				<div class="date">Posted: <strong>Thu Mar 31, 2016 11:08 am</strong></div>
+				<div class="author">by <strong>win_drive</strong></div>
+				<div class="content">Ok, thanks Bo.<br>
+<br>
+I will be cautious, also I've already tried a more complex application, that uses many Windows integrated services and appears that it cannot function installed in Sandbox.<br>
+<br>
+Regards!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Application interaction with outside files</h3>
+				<div class="date">Posted: <strong>Thu Mar 31, 2016 4:29 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>win_drive wrote:</cite>Ok, thanks Bo.<br>
+<br>
+I will be cautious, also I've already tried a more complex application, that uses many Windows integrated services and appears that it cannot function installed in Sandbox.<br>
+<br>
+Regards!</div></blockquote>
+You are welcome, win_drive. I dont know if this is your first time testing Sandboxie, if it is, dont get discouraged about the program you installed in the sandbox not working properly. Not all programs are going to work fine in the sandboxed environment. <br>
+<br>
+One of the things I recommend you do when installing programs in a sandbox is to use a fresh new sandbox. After creating one, dont change any settings. Specially the ones that restrict what can run and connect, or Drop rights. This restrictions have to be as they come by default for most programs to install properly in the sandbox.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=22693&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:30:06 GMT -->
+</html>

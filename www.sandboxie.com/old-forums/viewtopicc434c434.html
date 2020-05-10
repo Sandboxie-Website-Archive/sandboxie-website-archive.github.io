@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=49&t=19837&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:56:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 4.15 Beta Available (Latest Version 4.15.12)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>4.15 Beta Available (Latest Version 4.15.12)</h2>
+		<p><a href="viewtopicd59fd59f.html?f=49&amp;t=19837">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=49&amp;t=19837</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>14</strong></div>
+					<div class="post">
+				<h3>4.15 Beta Available (Latest Version 4.15.12)</h3>
+				<div class="date">Posted: <strong>Fri Nov 07, 2014 4:19 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Combined 32/64 installer:<br>
+<a href="../SandboxieInstall-415-12.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall-415-12.exe</a><br>
+<br>
+Separate:<br>
+<a href="../SandboxieInstall32-415-12.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall32-415-12.exe</a><br>
+<a href="../SandboxieInstall64-415-12.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall64-415-12.exe</a><br>
+<br>
+<strong>Fixes in 4.15.12</strong><br>
+<br>
+1) KB3031432 in Win 8-64 causes Chrome-64 to crash.<br>
+2) Sbie now detects when a sandboxed application starts WerFault.exe because it has crashed, and gives WerFault plenty of time to create a crash DMP file.<br>
+<br>
+WerFault has a couple of flaws.  It doesn't create the crash DMP until the user presses OK on the crash popup dialog box.  If the user does not respond quickly, the crashed application will exit memory and the DMP cannot be created.  So now Sbie disables the WerFault dialog box and issues its own SBIE2224 "Sandboxed program has crashed".  WerFault also must be given enough time to do various Internet activities before the application exits.<br>
+<br>
+<strong>Fixes in 4.15.11</strong><br>
+<br>
+The only change in this beta is to diagnose these 2 error messages:<br>
+   SBIE2205 Service Not Implemented: LoadedModules<br>
+   SBIE2205 Service Not Implemented: NtCreateProcessEx (xxxx)<br>
+<br>
+I added an error code to the LoadedModules error.  I believe the NtCreateProcessEx error is masking the real problem, which is a crash in the sandboxed application.  So I removed it.<br>
+Now whatever application is crashing should reveal itself and we can diagnose the problem.<br>
+<br>
+<strong>Fixes in 4.15.10</strong><br>
+<br>
+1) Outlook 2013 crash at start fixed<br>
+2) Excel 2013 would remain in memory after program exit.<br>
+<br>
+<strong>Fixes in 4.15.9</strong><br>
+<br>
+1) Hooking crash in Win 8.0 fixed<br>
+<br>
+<strong>Fixes in 4.15.8</strong><br>
+<br>
+1) Fixed another Dll Initialization Failed issue<br>
+2) Error SBIE2101 now gives more information.<br>
+3) Increased named pipe timeout from 3 seconds to 10 seconds to eliminate SBIE2101 error.<br>
+4) A security problem reported by a user has been fixed (details when 4.16 is released).<br>
+<br>
+<strong>Fixes in 4.15.7</strong><br>
+<br>
+1) Fixed a DLL Initialization Failed error 0x0C0000142 with Chrome and possibly other 32 bit applications (hooking conflict).<br>
+2) Removed Avast from the list of known conflicts in templates.ini.  This means Sandboxie will no longer popup the dialog box telling you to "review the Known Conflicts page..." when Avast is detected.<br>
+<br>
+<strong>Fixes in 4.15.6</strong><br>
+<br>
+1) Certificate revocation information is sometimes unavailable.  IE occasionally pops up dialog "Revocation information for the security certificate for this site is not available. Do you want to proceed?" <br>
+2) Win 8.1 KB3000850 affected Office 2013 (and possibly other apps). Sandboxie would issue error SBIE2205 Service not Implemented: LoadedModules.<br>
+3) Added OpenIpcPath=*\BaseNamedObjects*\FntCache to templates.ini to eliminate more font cache problems.<br>
+4) Added ClosedFilePath=%SystemRoot%\System32\IDStore.dll &amp; ClosedFilePath=%SystemRoot%\System32\wlidprov.dll to templates.ini to eliminate Windows Live problems.<br>
+<br>
+<br>
+<strong>Fixes in 4.15.5</strong><br>
+<br>
+1) More hooking code fixes.<br>
+2) Fixed drag/drop crash in Chrome<br>
+<br>
+<strong>Fixes in 4.15.4</strong><br>
+<br>
+1) Several problems fixed in new hooking code.   Win 8.1-64 explorer.exe menu problem fixed.<br>
+<br>
+<br>
+<strong>Fixes in 4.15.3</strong><br>
+<br>
+1) Several problems fixed in new hooking code. <br>
+<br>
+<br>
+<strong>Fixes in 4.15.2</strong><br>
+<br>
+1) More changes to hooking code.  If you have been having problems with starting applications (particularly games) under Sandboxie, see if this fixes the problem.<br>
+<br>
+2) Chrome should now be able to create dump files (DMP) if it crashes.  If you have been crashing with dropped rights in Chrome, see if there are DMP files in C:\Sandbox\&lt;user&gt;\DefaultBox\user\current\AppData\Local\CrashDumps.<br>
+<br>
+<strong>Fixes in 4.15.1</strong><br>
+<br>
+1) Major redesign of hooking/injection code.  ASLR is now enabled for 64 bit (it was already enabled for 32 bit).<br>
+<br>
+2) VC Redistributables are no longer downloaded by the combined 32/64 installer.  The required VC DLLs are now included in the installer binary (which is why it is much larger now).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.1)</h3>
+				<div class="date">Posted: <strong>Fri Nov 07, 2014 8:32 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">Thanks for the update.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.1)</h3>
+				<div class="date">Posted: <strong>Fri Nov 07, 2014 10:00 pm</strong></div>
+				<div class="author">by <strong>nanana1</strong></div>
+				<div class="content">Thank you and like the implementation of ASLR for my Windows 64-bit system !</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.1)</h3>
+				<div class="date">Posted: <strong>Sat Nov 08, 2014 7:31 am</strong></div>
+				<div class="author">by <strong>Stone</strong></div>
+				<div class="content">I had my fingers crossed when I saw this new beta posted but I am still getting the following error when launching Chrome (Version 38.0.2125.111 m) with Drop Rights enabled:<br>
+<br>
+The system isn't giving me the option to attach a screenshot - here is the text:<br>
+<br>
+---------------<br>
+Windows Application Error<br>
+<br>
+The instruction at 0x5856632e referenced memory at<br>
+0x00000001c. The memory could not be read.<br>
+<br>
+Click on OK to terminate the program.<br>
+---------------<br>
+<br>
+Clicking OK results in the "Aw, Snap!" Chrome error message.<br>
+<br>
+Chrome seems to work fine if "Drop Rights" is not selected.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.1)</h3>
+				<div class="date">Posted: <strong>Sat Nov 08, 2014 9:38 am</strong></div>
+				<div class="author">by <strong>Julian</strong></div>
+				<div class="content">This problem still exists:<br>
+<a href="viewtopic5b5d5b5d.html?p=104529#p104529" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 29#p104529</a><br>
+Kind of bypass. :(</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.1)</h3>
+				<div class="date">Posted: <strong>Sat Nov 08, 2014 10:13 am</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">Thanks Curt...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.1)</h3>
+				<div class="date">Posted: <strong>Sat Nov 08, 2014 11:51 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">4.15.1 feels good (W7 and XP 32 bits), Curt. <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.1)</h3>
+				<div class="date">Posted: <strong>Sun Nov 09, 2014 9:30 pm</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content"><blockquote><div><cite>Julian wrote:</cite>This problem still exists:<br>
+<a href="viewtopic5b5d5b5d.html?p=104529#p104529" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 29#p104529</a><br>
+Kind of bypass. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div></blockquote>
+
+It's not a bypass. It's how IDM implement it. IDM is using Windows Filtering Platform which inspect packet and when a pattern is a matched it captures the download. My guess is you're using the older version. Try using the latest, I think there are some mechanism and changes made.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.1)</h3>
+				<div class="date">Posted: <strong>Mon Nov 10, 2014 7:26 am</strong></div>
+				<div class="author">by <strong>Julian</strong></div>
+				<div class="content">How is this supposed to be possible when IDM process is not running?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.1)</h3>
+				<div class="date">Posted: <strong>Mon Nov 10, 2014 8:29 am</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content"><blockquote><div><cite>Julian wrote:</cite>How is this supposed to be possible when IDM process is not running?</div></blockquote>
+
+It is a kernel driver that is loaded by service control manager upon windows start. Basically it can monitor, modify, capture, intercept the packet before it reaches destination. That means if you're using firefox sandboxed or unsandboxed for downloading and if the packet matches the pattern it can intercept before it reaches firefox browser and IDM download begins. But as I have said there are mechanisms involved using their advanced browser integration that may change it behavior.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.1)</h3>
+				<div class="date">Posted: <strong>Mon Nov 10, 2014 4:09 pm</strong></div>
+				<div class="author">by <strong>RonR</strong></div>
+				<div class="content">Windows 8 x64 / IE10<br>
+<br>
+When launching IE sandboxed:<br>
+<br>
+The instruction at 0xa9b11b4e referenced memory at 0xffffffff. The memory could not be read. Click OK to terminate the program.<br>
+<br>
+followed by:<br>
+<br>
+The instruction at 0xa9b16013 referenced memory at 0xcc5177d0. The memory could not be written. Click OK to terminate the program.<br>
+<br>
+After reverting back to 4.14, no problems.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.2)</h3>
+				<div class="date">Posted: <strong>Mon Nov 10, 2014 6:41 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">4.15.2 is available.  Hopefully, we can get some DMP files for the Chrome crash with dropped rights and find out what is going wrong.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.1)</h3>
+				<div class="date">Posted: <strong>Mon Nov 10, 2014 7:42 pm</strong></div>
+				<div class="author">by <strong>RonR</strong></div>
+				<div class="content"><blockquote><div><cite>RonR wrote:</cite>Windows 8 x64 / IE10<br>
+<br>
+When launching IE sandboxed:<br>
+<br>
+The instruction at 0xa9b11b4e referenced memory at 0xffffffff. The memory could not be read. Click OK to terminate the program.<br>
+<br>
+followed by:<br>
+<br>
+The instruction at 0xa9b16013 referenced memory at 0xcc5177d0. The memory could not be written. Click OK to terminate the program.<br>
+<br>
+After reverting back to 4.14, no problems.</div></blockquote>
+
+Problem has changed with 4.15.2 (see attachment)<br>
+<br>
+After reverting to 4.14, all is well again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.2)</h3>
+				<div class="date">Posted: <strong>Mon Nov 10, 2014 9:01 pm</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content">I tried to reproduce the drop rights issue today in Google Chrome using 4.15.1 in Windows 8.1 and fortunately I was able to. This drop rights issue more likely to occur on windows 7 when UAC is set to "Never notify" than in windows 8. As I could remember when I was using Windows 7 the behavior of UAC changes in windows 8. In Windows 7 when UAC is set to "Never notify" all running application will have an elevated privileges while in Windows 8 even set to "Never notify" you need to right-click -&gt; "Run as administrator" to run in elevated privileges. <br>
+<br>
+To reproduce drop rights issue in Windows 8. Since right-click -&gt; "Run Sandboxed" will not give you the option to attempt to elevate the process you need to enable "Force Google Chrome to run in this sandbox" after that, right-click Google Chrome -&gt; "Run as administrator" then try to browse then the error comes.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.15 Beta Available (Latest Version 4.15.2)</h3>
+				<div class="date">Posted: <strong>Tue Nov 11, 2014 10:10 am</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">Not sure why you expect DMP if it is not 'chrome has stopped working' or 'Whoa! Google Chrome has crashed'. Who the hell have UAC enabled  <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> Masochists?</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>14</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=49&t=19837&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:56:04 GMT -->
+</html>

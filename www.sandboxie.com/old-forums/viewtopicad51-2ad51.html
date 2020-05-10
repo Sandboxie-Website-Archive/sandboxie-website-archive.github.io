@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9803&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:54:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Include processes to run in a specific sandbox</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Include processes to run in a specific sandbox</h2>
+		<p><a href="viewtopicfaecfaec.html?f=4&amp;t=9803">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=9803</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Include processes to run in a specific sandbox</h3>
+				<div class="date">Posted: <strong>Wed Jan 26, 2011 2:57 pm</strong></div>
+				<div class="author">by <strong>Jokerside</strong></div>
+				<div class="content">I know the subject sounds odd, but there wasn't room for more.<br>
+<br>
+First, I'd like to say that I have no idea how easy it would be to implement such; so, I'd just like to express a wish. If possible to do it, great; if not, it's OK.<br>
+<br>
+OK. What I have in mind is, suppose you have an e-mail client you do not want to run the e-mail client itself under a sandbox, but you still would like to open its attachments under a sandbox.<br>
+My idea is to have a sandbox where I could define to start XYZ process under that sandbox, but only if the process that triggers this XYZ process is on the list. This way, such XYZ process would only run sandboxed under those conditions, and run outside the sandbox, if the process triggering them doesn't match the one in the list.<br>
+<br>
+Again, if something easy, or something you'd feel OK implementing it, great, otherwise no hard feelings. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+Thank you for your time and for Sandboxie. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 26, 2011 3:41 pm</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content">So if I understand correctly, you're basically asking for this.<br>
+As an example,<br>
+Don't force Firefox sandboxed.<br>
+Don't force Notepad sandboxed.<br>
+<span style="text-decoration: underline">Do</span> force Notepad sandboxed if opened by Firefox.<br>
+ <img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 26, 2011 4:20 pm</strong></div>
+				<div class="author">by <strong>Jokerside</strong></div>
+				<div class="content"><blockquote><div><cite>SnDPhoenix wrote:</cite>So if I understand correctly, you're basically asking for this.<br>
+As an example,<br>
+Don't force Firefox sandboxed.<br>
+Don't force Notepad sandboxed.<br>
+<span style="text-decoration: underline">Do</span> force Notepad sandboxed if opened by Firefox.<br>
+ <img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"></div></blockquote>
+
+Yes, precisely. The reason for such is that, I recently installed Sandboxie to a relative, but to be able to set it up in a proper way to resolve any program that would not start/run, I decided not to force the e-mail client to a sandbox, because it could be possible that such an alert/some other alert could appear, and my relative didn't want it that way, and also dislikes having to right-click something and choose to run unsandboxed then.<br>
+<br>
+So, that left me with an alternative: I have sandboxed PDF reader and media player, but I have not, as an example, sandboxed Office applications, otherwise whenever starting some office application it would be forced to open in sandboxie. So, it would be great it would be possible to force xyz *.doc file, *.xls file, etc., if Word, Excel, etc are triggered by the e-mail client process.<br>
+<br>
+That's just an example.<br>
+<br>
+This would give my relative the comfort of having those dangerous stuff sandboxed, while the e-mail client, itself, would not. It sure would be way better than not being sandboxed, at all.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 26, 2011 4:31 pm</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content">In the meantime, you might try this as a workaround: <a href="../phpbb/viewtopic0151.php?t=7088" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=7088</a><br>
+
+<blockquote><div><cite>Jokerside wrote:</cite>... I decided not to force the e-mail client to a sandbox, because it could be possible that such an alert/some other alert could appear ...</div></blockquote>
+I think that, once you figure out the necessary settings for the above workaround, you would rarely if ever see alerts related to the email client.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 26, 2011 4:47 pm</strong></div>
+				<div class="author">by <strong>Jokerside</strong></div>
+				<div class="content"><blockquote><div><cite>Mike wrote:</cite>In the meantime, you might try this as a workaround: <a href="../phpbb/viewtopic0151.php?t=7088" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=7088</a><br>
+
+<blockquote><div><cite>Jokerside wrote:</cite>... I decided not to force the e-mail client to a sandbox, because it could be possible that such an alert/some other alert could appear ...</div></blockquote>
+I think that, once you figure out the necessary settings for the above workaround, you would rarely if ever see alerts related to the email client.</div></blockquote>
+
+Thanks for the link.<br>
+<br>
+I'm aware that once I figure out the necessary settings that most of the alerts would be gone. The problem is I don't have such time, and having from time to time my relative sending me an e-mail or calling me on the phone "Oh, this is displaying an error." "Oh, something is requesting permissions to run in the sandbox, should I allow it?".<br>
+<br>
+Stuff like that. I really don't have such time. Not to mention it wouldn't be practical, I'm afraid.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 26, 2011 5:38 pm</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content"><blockquote><div><cite>Jokerside wrote:</cite>The problem is I don't have such time, and having from time to time my relative sending me an e-mail or calling me on the phone "Oh, this is displaying an error." "Oh, something is requesting permissions to run in the sandbox, should I allow it?".</div></blockquote>
+Yeah, I totally get that.<br>
+<br>
+I was kind of assuming that you wouldn't really have to figure anything out, since settings like this should practically make your email program unsandboxed:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=outlook.exe,*
+OpenKeyPath=outlook.exe,*
+OpenIpcPath=outlook.exe,*
+OpenWinClass=outlook.exe,*
+OpenClsid=outlook.exe,*</code></pre></div>
+But who knows, there are always surprises. Anyway, just trying to give you an option if tzuk isn't able to fulfill your request.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 26, 2011 6:41 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I think this is an interesting feature and I may implement it some day.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 26, 2011 8:08 pm</strong></div>
+				<div class="author">by <strong>Jokerside</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I think this is an interesting feature and I may implement it some day.</div></blockquote>
+
+Thanks. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 12, 2011 6:46 pm</strong></div>
+				<div class="author">by <strong>CKYTEP</strong></div>
+				<div class="content">Hello,<br>
+<br>
+Sorry for bringing this kind of old thread into life... I'm truly an angel, you know. <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"> Anyway, I'd just like to say that this would indeed by a welcome feature to Sandboxie.<br>
+<br>
+So, I vote for this feature. It would be nice if I could force an application to be sandbox only if it was initiated by another application.<br>
+<br>
+<br>
+Thanks!!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 12, 2011 7:04 pm</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I think this is an interesting feature and I may implement it some day.</div></blockquote>
+
++1</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jun 13, 2011 11:26 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Yes, I plan to add this feature soon, "soon" being a flexible term of course.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 02, 2011 6:30 am</strong></div>
+				<div class="author">by <strong>wangyin</strong></div>
+				<div class="content">I think this could be an fascinating attribute and I may possibly apply it some day.<br>
+<br>
+<em>(This is a spam post. --tzuk)</em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 02, 2011 7:40 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Ha! ^^^^<br>
+<br>
+In the past I've seen a spammer use my signature in a message, along with their junk.<br>
+Now tzuk's words have been copied and used in a spam message.<br>
+(Sorry about adding to the posts that need to be deleted, but I couldn't help myself)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 02, 2011 2:20 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Funny that it's not a verbatim quote but they change the wording a bit.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9803&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:54:19 GMT -->
+</html>

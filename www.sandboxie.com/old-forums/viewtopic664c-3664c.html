@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24681&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:03:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Changing the computername per sandbox?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Changing the computername per sandbox?</h2>
+		<p><a href="viewtopicc0ecc0ec.html?f=17&amp;t=24681">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24681</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Changing the computername per sandbox?</h3>
+				<div class="date">Posted: <strong>Mon Jul 24, 2017 3:49 am</strong></div>
+				<div class="author">by <strong>kevinrocksman</strong></div>
+				<div class="content">How would I go about changing the computer name that an application sees when running in a sandbox?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Changing the computername per sandbox?</h3>
+				<div class="date">Posted: <strong>Mon Jul 24, 2017 3:12 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">I'd likely just open regedit sandboxed and navigate to the keys to edit them both under<br>
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName<br>
+<br>
+It should also be possible to open sysdm.cpl sandboxed then change it but I'm not sure how that would work out as it will want you to reboot before applying the change and that won't work in the box so it won't ever change the active one.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24681&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:03:57 GMT -->
+</html>

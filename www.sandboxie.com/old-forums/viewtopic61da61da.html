@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=23781&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:27:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Thunderbird folderlocation</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Thunderbird folderlocation</h2>
+		<p><a href="viewtopicd48fd48f.html?f=11&amp;t=23781">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=23781</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Thunderbird folderlocation</h3>
+				<div class="date">Posted: <strong>Sun Dec 18, 2016 4:07 am</strong></div>
+				<div class="author">by <strong>gottfried</strong></div>
+				<div class="content">Dera Sirs!<br>
+<br>
+I want to use Thunderbird with sandboxie. The mailbox folders are on an other partition. When I want to add the folder Sandboxie says:<br>
+an alternative folder should contain localstore.rtf.<br>
+<br>
+There is no localstore.rdf in my mailboxfolder and Mozilla says localstore.rtf ist deprecated<br>
+<br>
+<a href="http://kb.mozillazine.org/Localstore.rdf" class="postlink">http://kb.mozillazine.org/Localstore.rdf</a><br>
+<br>
+xulstore.json (new) is in the profilefolder, not in the mailboxfolder.<br>
+<br>
+what can I/ you  do?<br>
+<br>
+gottfried  <img class="smilies" src="images/smilies/icon_neutral.gif" width="15" height="15" alt=":|" title="Neutral"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Thunderbird folderlocation</h3>
+				<div class="date">Posted: <strong>Tue Dec 20, 2016 11:59 am</strong></div>
+				<div class="author">by <strong>Bertus</strong></div>
+				<div class="content">What you can try is to add the new path for your thunderbird install to the sandboxie.ini configuration.<br>
+In the sandboxie control window choose "edit configuration" in the "configure" menu.<br>
+Copy the template settings below and paste it after your [usersettings] (replace the "D:\mail\Thunerbird\Data\profile" with your path to the thunderbird profile folder)<br>
+<br>
+[TemplateSettings]<br>
+<br>
+Tmpl.Thunderbird=D:\mail\Thunerbird\Data\profile<br>
+<br>
+save the sandboxie.ini file and reload the configuration in the "configure" menu.<br>
+<br>
+greetz,<br>
+ben</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Thunderbird folderlocation</h3>
+				<div class="date">Posted: <strong>Tue Dec 20, 2016 3:40 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">What I would suggest is that you create a new empty file named "localstore.rtf" in the Thunderbird profile folder - as long as you are sure that you have the correct folder.<br>
+It should contain files like prefs.js, extensions.ini, abook.mab, cert8.db<br>
+<br>
+After Sandboxie accepts the folder as a valid Thunderbird profile folder, you can always go back and delete the localstore.rtf file that you created, or just leave it there.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Thunderbird folderlocation</h3>
+				<div class="date">Posted: <strong>Wed Dec 21, 2016 11:06 am</strong></div>
+				<div class="author">by <strong>gottfried</strong></div>
+				<div class="content">Hi!<br>
+Thank you all for your suggestions.<br>
+<br>
+They where useful for me thinking.<br>
+<br>
+I did find out, that sandboxie does not ask for the mailboxfolder, it asks for the profilefolder and the path <br>
+<br>
+%Local AppData%\Thunderbird<br>
+<br>
+seems not to work for me i think .... there were a lot of errormessages ...<br>
+<br>
+C:\Users\[user]\AppData\Roaming\Thunderbird\Profiles\xxxxxx.default (i did select) did work.<br>
+<br>
+After i cleaned  my inbox and compressed it (from 500MB to 4, errormessages)  it seemed  to work.<br>
+<br>
+I have to investigate it further the next days.<br>
+<br>
+<img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile"> Thanx!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Thunderbird folderlocation</h3>
+				<div class="date">Posted: <strong>Sat Dec 24, 2016 3:48 am</strong></div>
+				<div class="author">by <strong>gottfried</strong></div>
+				<div class="content">Hi!<br>
+<br>
+No - my Thunderbildinstallation does not work with sandboxie. Sandboxie wants the folder defined where localstore.rdf is in. That is the profilefolder on a SSD  and i can see files with datestamps of the time i was working with TB. <br>
+<br>
+But my mailboxes are an another partition on a HDD. When I send and receive emails with TB they disappear after restart.<br>
+<br>
+So I had to define 2 folders but this is not possible.<br>
+<br>
+ <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=23781&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:27:51 GMT -->
+</html>

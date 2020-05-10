@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=23233&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:28:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Possible Security flaw [SOLVED] [unfounded]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Possible Security flaw [SOLVED] [unfounded]</h2>
+		<p><a href="viewtopic59fa59fa.html?f=5&amp;t=23233">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=23233</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Possible Security flaw [SOLVED] [unfounded]</h3>
+				<div class="date">Posted: <strong>Tue Aug 09, 2016 2:30 am</strong></div>
+				<div class="author">by <strong>zerjetfuel</strong></div>
+				<div class="content">I'd like to point out a small Security flaw that isn't very safe, if you attempt to install <a href="https://www.gog.com/galaxy" class="postlink">https://www.gog.com/galaxy</a> in Sandboxie it'll install and when you try to run it, it'll run outside of sandboxie despite never being installed there, if a video game client can do something like that I fear what malicious programs would be able to do.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Possible Security flaw</h3>
+				<div class="date">Posted: <strong>Tue Aug 09, 2016 11:30 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Yes, we know. And now, this isn't a flaw. GOG needs to install a Service. So It needs to talk to that service and it loads up. So, it needs to terminate the SB session and restart outside of the SB.<br>
+<br>
+One work around is to have GOG Forced (paid version of SBIE) and then it will load up all processes in the SB even when it force closes itself to run.<br>
+<br>
+And we don't recommend you install GOG inside a sandbox, you install it on your host, then run it "as sandboxed."<br>
+SBIE was never designed to install or host GOG directly into the SB. Programs, legitimate programs like this, should be installed on your host first. Just like Steam and Steam games.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Possible Security flaw [SOLVED] [unfounded]</h3>
+				<div class="date">Posted: <strong>Tue Aug 09, 2016 1:17 pm</strong></div>
+				<div class="author">by <strong>zerjetfuel</strong></div>
+				<div class="content">I do have paid version of SBIE. Also how would I force all GOG processes to run in SBIE when it is supposed to already be forced since it writes inside the sandbox folder where as far as I've seen all things are forced to their specific sandbox.<br>
+Also while SBIE is good to test software it is also VERY good to keep clutter/trash "findable" and easy to get rid of but when installed to host you don't have it all in one place and you gotta go looking for folders to delete and such</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Possible Security flaw [SOLVED] [unfounded]</h3>
+				<div class="date">Posted: <strong>Tue Aug 09, 2016 1:46 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">GOG will install, but it will not run correctly. If you install it directly into the sb.<br>
+<br>
+It wants to run an update every time it runs, so I has to talk with the service. The service is installed on your machine, either by you or GOG (if you had GOG galaxy, etc) installed previoulsy.<br>
+<br>
+As for forcing, you can read how to force here. <a href="../indexca35-2.html?ProgramStartSettings" class="postlink">http://www.sandboxie.com/?ProgramStartSettings</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Possible Security flaw [SOLVED] [unfounded]</h3>
+				<div class="date">Posted: <strong>Tue Aug 09, 2016 2:13 pm</strong></div>
+				<div class="author">by <strong>zerjetfuel</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite>GOG will install, but it will not run correctly. If you install it directly into the sb.<br>
+<br>
+It wants to run an update every time it runs, so I has to talk with the service. The service is installed on your machine, either by you or GOG (if you had GOG galaxy, etc) installed previoulsy.<br>
+<br>
+As for forcing, you can read how to force here. <a href="../indexca35-2.html?ProgramStartSettings" class="postlink">http://www.sandboxie.com/?ProgramStartSettings</a></div></blockquote>
+
+I know how to force, what I don't know is how to force GOG specifically, and yes I did have GOG galaxy on my host machine installed previously but I uninstalled it, apparently it didn't uninstall the service, this is what I mean with clutter/trash, and why I prefer things in SBIE since there I can just completely wipe it. Where do I find and uninstall this service?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Possible Security flaw [SOLVED] [unfounded]</h3>
+				<div class="date">Posted: <strong>Tue Aug 09, 2016 2:29 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>zerjetfuel wrote:</cite>I know how to force, what I don't know is how to force GOG specifically....</div></blockquote>
+An easy way to figure out which exe to force is to run GOG sandboxed manually (once). Close it.<br>
+<br>
+Then go to Sandbox settings&gt;Program start&gt;Forced programs, Click Add program, and look at window "Programs that were recently started". It is likely you ll only see one exe there that is related to GOG. And thats the exe you force.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Possible Security flaw [SOLVED] [unfounded]</h3>
+				<div class="date">Posted: <strong>Tue Aug 09, 2016 4:13 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Our Dev Tom noticed this many months ago. It's simply a poorly written way of doing this on the GOG side.<br>
+<br>
+As for removal, you can go into services.msc and disable that service. I don't know what the name of it is however, but It may reflect GOG.<br>
+<br>
+We don't recommend installing Games into the sandbox directly. As that's not what SBIE was intended for. And it's not possible if a program needs a service and/or a driver to be installed. That simply cannot be done.<br>
+<br>
+I'd recommend a VM environment.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Possible Security flaw [SOLVED] [unfounded]</h3>
+				<div class="date">Posted: <strong>Wed Aug 10, 2016 1:32 am</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content"><blockquote><div><cite>zerjetfuel wrote:</cite>and yes I did have GOG galaxy on my host machine installed previously but I uninstalled it, apparently it didn't uninstall the service, this is what I mean with clutter/trash, and why I prefer things in SBIE since there I can just completely wipe it.</div></blockquote>
+
+I can relate to this.  I've always felt that minimising third party software written on the REAL system is important from a security point of view - the more software there is, the more chance of exploitation.<br>
+<br>
+Since (reluctantly) moving to Windows 7 (from XP), I've only got a handful of third party software that's actually written on my REAL system.  I don't have any third party browsers installed, as Chrome and Firefox seem to install and run perfectly for me within the sandbox.  And since there's very good online syncing for both browsers, I don't have to worry about losing settings when re-installing (that is, deleting the sandbox and installing it sandboxed again) etc.  A lot of other applications I use seem to install and run perfectly within the sandbox too.<br>
+<br>
+I don't have any experience with this GOG software, but it serves as a reminder to minimise the amount/number of third party software written on one's system:
+<blockquote><div><cite>Craig@Invincea wrote:</cite>Yes, we know. And now, this isn't a flaw. GOG needs to install a Service. So It needs to talk to that service and it loads up. So, it needs to terminate the SB session and restart outside of the SB.</div></blockquote>
+If I'm not mistaken (please clarify/correct if I am), it sounds like the GOG software actually "breaks" out of the sandbox by using a service that's running on the REAL system?  So therefore, a malware could exploit this if the malicious coder knew about that service?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Possible Security flaw [SOLVED] [unfounded]</h3>
+				<div class="date">Posted: <strong>Wed Aug 10, 2016 8:29 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote class="uncited"><div>
+If I'm not mistaken (please clarify/correct if I am), it sounds like the GOG software actually "breaks" out of the sandbox by using a service that's running on the REAL system? So therefore, a malware could exploit this if the malicious coder knew about that service?</div></blockquote>
+<strong>NO.</strong><br>
+User has the GOG SERVICE running on their computer. If the software makes a VALID CALL TO THAT SERVICE --which you have running, then it's permitted. <strong>There is nothing here.</strong> Please understand how a program and services work before making such a statement.<br>
+
+<blockquote class="uncited"><div>
+I can relate to this. I've always felt that minimizing third party software written on the REAL system is important from a security point of view - the more software there is, the more chance of exploitation</div></blockquote>
+
+If you're paying for this software or, like GOG, is known to be legit, you should install it on your host. SBIE wasn't designed for this sort of thing. If you want to test it in the SB, fine. GOG you can't do that. As, it requires a SERVICE to be installed. So, you have to install directly.<br>
+<br>
+SBIE is designed primarily for web surfing. hence the name, SandboxIE.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=23233&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:28:42 GMT -->
+</html>

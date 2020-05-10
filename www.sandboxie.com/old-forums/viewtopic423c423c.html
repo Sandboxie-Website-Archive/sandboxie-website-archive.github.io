@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=12778&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:29:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Recovering Registry data</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Recovering Registry data</h2>
+		<p><a href="viewtopice16de16d.html?f=5&amp;t=12778">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=12778</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Recovering Registry data</h3>
+				<div class="date">Posted: <strong>Wed Apr 11, 2012 7:44 pm</strong></div>
+				<div class="author">by <strong>InTheMood</strong></div>
+				<div class="content">The "All Files and Folders" tree, in the Sandboxie control panel, contains "RegHive" data.  <br>
+<br>
+Is there a way to view this data?<br>
+Is there a way to recover this registry data into a .reg or a text file?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Apr 12, 2012 12:56 am</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content">The easiest way to get access to a sandbox's registry entries is while the sandbox is active (i.e. programs are running within it).<br>
+<br>
+Depending on your needs, you've got two quick options:<br>
+<br>
+1. If you want to view/save the sandbox's registry working set, while an application is running in the sandbox, run regedit (the Registry Editor) and then explore the registry tree HKEY_USERS\Sandbox_[your_username]_[sandbox_name]<br>
+<br>
+2. If you want to view/save registry entries as if they'd be part of the whole OS registry, then run regedit.exe under the sandbox you want to analyze. If you're exporting, you can use these registry entries later by loading them under the same sandbox, or a different one if need arises.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Apr 12, 2012 6:04 pm</strong></div>
+				<div class="author">by <strong>InTheMood</strong></div>
+				<div class="content">Running regedit in the sandbox displays the whole system registry.  I am only interested in viewing the registry keys affected by the application(s) running in the sandbox.<br>
+<br>
+Can I view/recover the affected registry keys in the same way that Sandboxie lets me view the affected files?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Recovering Registry data</h3>
+				<div class="date">Posted: <strong>Thu Apr 12, 2012 6:14 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>InTheMood wrote:</cite>Is there a way to recover this registry data into a .reg or a text file?</div></blockquote>
+
+Buster Sandbox Analyzer has a feature to convert Sandboxie´s RegHive file to .REG.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 13, 2012 1:46 am</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content"><blockquote><div><cite>InTheMood wrote:</cite>Running regedit in the sandbox displays the whole system registry.  I am only interested in viewing the registry keys affected by the application(s) running in the sandbox.<br>
+<br>
+Can I view/recover the affected registry keys in the same way that Sandboxie lets me view the affected files?</div></blockquote>
+
+As Buster said, using his tool, or if you do not always have it available, do what I said before:
+<blockquote class="uncited"><div>1. If you want to view/save the sandbox's registry working set, while an application is running in the sandbox, run regedit (the Registry Editor) and then explore the registry tree <strong>HKEY_USERS</strong>\Sandbox_<span style="color: red">[your_username]</span>_<span style="color: red">[sandbox_name]</span> </div></blockquote></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Recovering Registry data</h3>
+				<div class="date">Posted: <strong>Sat May 14, 2016 3:53 am</strong></div>
+				<div class="author">by <strong>Asailum</strong></div>
+				<div class="content">Is there some tool anyone knows of to copy the registry entries in a file system kind of way? I'm trying to move things from machine-&gt;software folder into my real one..</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Recovering Registry data</h3>
+				<div class="date">Posted: <strong>Sat May 14, 2016 7:44 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">If it's only a few keys you can find them and export them within regedit either by mounting the reghive file or finding it while the sandbox in question is active. So let's say you have something that creates a 'GAME' key under software. You export the entire 'Game' key, then edit it with notepad to search/replace the entry eg "HKEY_USERS\Sandbox_XXXX_XXXXX_XXXXXX\machine\software" to HKEY_LOCAL_MACHINE\Software" etc. Once the exported .reg has replaced those values (assuming you get the paths correct) you can then just save it [might want to save to a new file in case you get it wrong at first] and double click to import into the actual registry. That example is actually the reverse of how I normally place games I install on my gaming OS into the Steam\Origin Boxes on my other OS with SBIE where I mount the reghive first then import the altered original export into the box.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=12778&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:29:29 GMT -->
+</html>

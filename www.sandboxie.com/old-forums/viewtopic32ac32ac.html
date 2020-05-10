@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9794&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; DLL &amp; Script Execution blocking</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>DLL &amp; Script Execution blocking</h2>
+		<p><a href="viewtopic4d1d4d1d.html?f=4&amp;t=9794">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=9794</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>DLL &amp; Script Execution blocking</h3>
+				<div class="date">Posted: <strong>Mon Jan 24, 2011 10:53 pm</strong></div>
+				<div class="author">by <strong>Balalaika</strong></div>
+				<div class="content">Hello, I researched about Sandboxie start/run and what file types it blocks.<br>
+According to this thread: <a href="../phpbb/viewtopic2103.php?t=7646" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=7646</a><br>
+ exe and script type files are blocked (although indirectly) The major executable type file that isnt blocked however is DLL. Would it be possible to add this feature in the near future? also is there any plans to develop this more to block scripts directly instead of target applications ie cmd etc</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 25, 2011 1:35 am</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content">Hi Balalaika, <br>
+<br>
+I don't think that blocking scripts is by any means useful since a whitelisted app that could run scripts, like Java for example, could defeat the purpose of such restrictions. What you want to do is add the java and flash program folder to blocked access settings and to also enable start/run for a very few limited programs to realize its power.<br>
+<br>
+I think the main one to worry about here is just .dll blocking because it has been used by worms like Conficker and even recently it was discovered that dll's could bypass SRP due to windows built in esoteric features. <br>
+I am all for dll blocking, but you have to wait and see what Tzuk has to say about this</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 25, 2011 8:41 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">A DLL file is not a standalone program so is not affected by Start/Run Access Restrictions.<br>
+If you want to prevent sandboxed programs from accessing/using any kind of file then you have Sandbox Settings &gt; Resource Access &gt; File Access &gt; Blocked Access.<br>
+Use the Edit/Add button to enter something like <strong>*\whatever.dll</strong> and that should take care of it.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9794&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:24 GMT -->
+</html>

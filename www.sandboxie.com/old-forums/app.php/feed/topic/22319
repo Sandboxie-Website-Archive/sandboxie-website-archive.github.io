@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/22319" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2018-01-23T13:51:55-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/22319</id>
+
+		<entry>
+		<author><name><![CDATA[APMichael]]></name></author>
+		<updated>2018-01-23T13:51:55-04:00</updated>
+
+		<published>2018-01-23T13:51:55-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=131986#p131986</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=131986#p131986"/>
+		<title type="html"><![CDATA[Re: Program Compatibility Templates [non-security programs]]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=131986#p131986"><![CDATA[
+Updated template for Firefox 58.0: <div class="codebox"><p>CODE: </p><pre><code>[Template_Firefox_Phishing_DirectAccess]Tmpl.Title=#4337,Firefox/Waterfox/Pale MoonTmpl.Class=WebBrowserProcessGroup=&lt;FirefoxPrograms&gt;,firefox.exe,waterfox.exe,palemoon.exeOpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\blocklist*OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\cert*.dbOpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\safebrowsing*</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=24269">APMichael</a> — Tue Jan 23, 2018 12:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Bertus]]></name></author>
+		<updated>2017-12-03T17:19:40-04:00</updated>
+
+		<published>2017-12-03T17:19:40-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=131369#p131369</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=131369#p131369"/>
+		<title type="html"><![CDATA[firefox quantum cookies direct access template fix]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=131369#p131369"><![CDATA[
+I always run firefox in a sandbox.For some sites I want to preserve the cookie.<br>In order to do this I enable the "Allow direct access to firefox cookies" setting but this doesn't seem to work with the new Firefox quantum.<br>To make it work I also have to create an OpenFilePath to the webappsstore.sqlite in the firefox profile folder.<br>My new "Allow direct access to firefox cookies" template:<br><br>[Template_Local_Firefox_Cookies_DirectAccess]<br>OpenFilePath=firefox.exe,%Tmpl.Firefox%\cookies*<br>OpenFilePath=firefox.exe,%Tmpl.Firefox%\webappsstore*<br>Tmpl.Title=Template_Local_Firefox_Cookies_DirectAccess<br>Tmpl.Class=Local<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2039">Bertus</a> — Sun Dec 03, 2017 4:19 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[APMichael]]></name></author>
+		<updated>2017-09-14T12:45:36-04:00</updated>
+
+		<published>2017-09-14T12:45:36-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=130235#p130235</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=130235#p130235"/>
+		<title type="html"><![CDATA[Re: Program Compatibility Templates [non-security programs]]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=130235#p130235"><![CDATA[
+Updated settings for Firefox add-on <strong>uBlock Origin</strong>: <div class="codebox"><p>CODE: </p><pre><code>OpenFilePath=firefox.exe,%AppData%\Mozilla\Firefox\Profiles\*\browser-extension-data\uBlock0@raymondhill.net\storage.jsOpenFilePath=firefox.exe,%AppData%\Mozilla\Firefox\Profiles\*\storage\default\moz-extension+++*\idb\1671402671ueBglaorcokt0SCeahc.*</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=24269">APMichael</a> — Thu Sep 14, 2017 12:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[APMichael]]></name></author>
+		<updated>2017-08-10T11:39:53-04:00</updated>
+
+		<published>2017-08-10T11:39:53-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=129621#p129621</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=129621#p129621"/>
+		<title type="html"><![CDATA[Re: Program Compatibility Templates [non-security programs]]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=129621#p129621"><![CDATA[
+Updated templates for Firefox:<div class="codebox"><p>CODE: </p><pre><code>[Template_Firefox_Bookmarks_DirectAccess]Tmpl.Title=#4336,FirefoxTmpl.Class=WebBrowserOpenFilePath=firefox.exe,%Tmpl.Firefox%\bookmark*OpenFilePath=firefox.exe,%Tmpl.Firefox%\favicons*OpenFilePath=firefox.exe,%Tmpl.Firefox%\places*</code></pre></div><div class="codebox"><p>CODE: </p><pre><code>[Template_Firefox_Phishing_DirectAccess]Tmpl.Title=#4337,Firefox/Waterfox/Pale MoonTmpl.Class=WebBrowserProcessGroup=&lt;FirefoxPrograms&gt;,firefox.exe,waterfox.exe,palemoon.exeOpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\blocklist*OpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\cert8.dbOpenFilePath=&lt;FirefoxPrograms&gt;,%USERPROFILE%\*\safebrowsing*</code></pre></div>I hope you will add them to the Templates.ini. And please check my other post: <a href="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=24698#p129424" class="postlink">viewtopic.php?f=4&amp;t=24698#p129424</a>. Thanks!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=24269">APMichael</a> — Thu Aug 10, 2017 11:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2017-06-09T06:26:12-04:00</updated>
+
+		<published>2017-06-09T06:26:12-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=128536#p128536</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=128536#p128536"/>
+		<title type="html"><![CDATA[Re: Program Compatibility Templates [non-security programs]]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=128536#p128536"><![CDATA[
+<blockquote><div><cite><a href="./../../../memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> wrote: <a href="./../../../viewtopic.php?p=128528#p128528" data-post-id="128528" >↑</a><div class="responsive-hide">Thu Jun 08, 2017 5:05 pm</div></cite>Today I learned that the issue is a known bug, supposedly fixed in version 2.91. I retested 2.91 today in a new Firefox profile  and still experience the problem. I ll keep using UBO.</div></blockquote>No problem here with 2.91, using 64-bit Cyberfox.<br><br>The add-on Ghostery keeps it's data in the same profile folder:<br>%AppData%\Mozilla\Firefox\Profiles\xxxxxxxx.default\browser-extension-data<br>only a different sub-folder:<div class="codebox"><p>CODE: </p><pre><code>%AppData%\Mozilla\Firefox\Profiles\xxxxxxxx.default\browser-extension-data\firefox@ghostery.com\storage.js</code></pre></div>For Firefox:<div class="codebox"><p>CODE: </p><pre><code>OpenFilePath=firefox.exe,%AppData%\*\Profiles\*\browser-extension-data\firefox@ghostery\storage.js</code></pre></div>For Cyberfox:<div class="codebox"><p>CODE: </p><pre><code>OpenFilePath=cyberfox.exe,%AppData%\*\Profiles\*\browser-extension-data\firefox@ghostery\storage.js</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Fri Jun 09, 2017 6:26 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2017-06-08T17:05:42-04:00</updated>
+
+		<published>2017-06-08T17:05:42-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=128528#p128528</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=128528#p128528"/>
+		<title type="html"><![CDATA[Re: Program Compatibility Templates [non-security programs]]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=128528#p128528"><![CDATA[
+<blockquote><div><cite><a href="./../../../memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> wrote: <a href="./../../../viewtopic.php?p=128503#p128503" data-post-id="128503" >↑</a><div class="responsive-hide">Wed Jun 07, 2017 9:11 pm</div></cite>Recent versions of AdBlock Plus no longer save data to the browser's profile folder in "adblockplus\patterns.ini"<br>.......<br><br>Data is now saved to...<br>(For Firefox):</div></blockquote>Hi Guest10. I did notice this change a few days ago. What I also had noticed is that Firefox freezes during the first few minutes after opening the browser. In my case it happened every time I opened the browser. Yesterday I switched adblocker to UBO, and all is well.<br><br>Today I learned that the issue is a known bug, supposedly fixed in version 2.91. I retested 2.91 today in a new Firefox profile  and still experience the problem. I ll keep using UBO.<br><a href="https://issues.adblockplus.org/ticket/5298" class="postlink">https://issues.adblockplus.org/ticket/5298</a><br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Thu Jun 08, 2017 5:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2017-06-07T21:11:27-04:00</updated>
+
+		<published>2017-06-07T21:11:27-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=128503#p128503</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=128503#p128503"/>
+		<title type="html"><![CDATA[Re: Program Compatibility Templates [non-security programs]]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=128503#p128503"><![CDATA[
+Recent versions of AdBlock Plus no longer save data to the browser's profile folder in "adblockplus\patterns.ini"<br>Recent versions will delete the "patterns.ini" file when they are installed.<br><br>If you no longer have a "patterns.ini" file in that folder, you need to define a new Direct Access setting.<br><br>Data is now saved to...<br>(For Firefox):<br>%AppData%\Mozilla\Firefox\Profiles\xxxxxxxx.default\browser-extension-data\{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}\storage.js<br><br>(For Cyberfox):<br>%AppData%\8pecxstudios\Cyberfox\Profiles\xxxxxxx.default\browser-extension-data\{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}\storage.js<br><br><br>For the above, add the appropriate OpenFilePath setting to the settings for your sandbox...<br><br>(For Firefox):<div class="codebox"><p>CODE: </p><pre><code>OpenFilePath=firefox.exe,%AppData%\*\Profiles\*\browser-extension-data\{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}\storage.js</code></pre></div>(For Cyberfox):<div class="codebox"><p>CODE: </p><pre><code>OpenFilePath=cyberfox.exe,%AppData%\*\Profiles\*\browser-extension-data\{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}\storage.js</code></pre></div>The "Element Hiding Helper For AdBlock Plus" will also save it's data there, if you have it installed.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Wed Jun 07, 2017 9:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-05-10T11:26:08-04:00</updated>
+
+		<published>2016-05-10T11:26:08-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=120810#p120810</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=120810#p120810"/>
+		<title type="html"><![CDATA[&quot;New&quot; Opera [v36 and above]]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=120810#p120810"><![CDATA[
+Direct access to bookmarks and thumbnails [@rpljhun]<br><div class="codebox"><p>CODE: </p><pre><code>[Template_New_Opera_Bookmarks_Thumbnails_DirectAccess]Tmpl.Title=#4356,OperaTmpl.Class=WebBrowserOpenFilePath=opera.exe,%AppData%\Opera Software\*\Bookmarks*OpenFilePath=opera.exe,%AppData%\Opera Software\*\Thumbnails*</code></pre></div>Use this to create a template in SBIE.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Tue May 10, 2016 11:26 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-03-31T15:11:52-04:00</updated>
+
+		<published>2016-03-31T15:11:52-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=119732#p119732</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=119732#p119732"/>
+		<title type="html"><![CDATA[Google Hangouts [Web Version] [Chrome qWave]]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=119732#p119732"><![CDATA[
+When using the website hangouts.google.com<br><br>hangouts.google.com<br><br>Add code:<div class="codebox"><p>CODE: </p><pre><code>OpenPipePath=\Device\QWAVEdrv</code></pre></div>Make sure that you grant Chrome access to your mic/device when it asks for it.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Thu Mar 31, 2016 3:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-03-23T12:09:26-04:00</updated>
+
+		<published>2016-03-23T12:09:26-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=119489#p119489</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=119489#p119489"/>
+		<title type="html"><![CDATA[Chrome, uBlock. Auto update uBlock]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=119489#p119489"><![CDATA[
+Per this thread <a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=20838&amp;p=119412&amp;hilit=ublock#p119412" class="postlink">http://forums.sandboxie.com/phpBB3/view ... ck#p119412</a> Thanks to @cj716<br><div class="codebox"><p>CODE: </p><pre><code>OpenFilePath=chrome.exe,%Local AppData%\Google\Chrome\User Data\Default\Extensions\cjpalhdlnbpafiamejdnhcphjbkeiagm\OpenFilePath=chrome.exe,%Local AppData%\Google\Chrome\User Data\Default\Local Extension Settings\cjpalhdlnbpafiamejdnhcphjbkeiagm</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Wed Mar 23, 2016 12:09 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-03-07T11:02:28-04:00</updated>
+
+		<published>2016-03-07T11:02:28-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=118892#p118892</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=118892#p118892"/>
+		<title type="html"><![CDATA[Chrome &amp; uBlock Origin]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=118892#p118892"><![CDATA[
+courtesy of @Dun<br><div class="codebox"><p>CODE: </p><pre><code>OpenFilePath=firefox.exe,%appdata%\Mozilla\Firefox\Profiles\[profile name]\extension-data\</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Mon Mar 07, 2016 10:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Solution-Design]]></name></author>
+		<updated>2016-02-16T17:08:47-04:00</updated>
+
+		<published>2016-02-16T17:08:47-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=118383#p118383</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=118383#p118383"/>
+		<title type="html"><![CDATA[Opera 35]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=118383#p118383"><![CDATA[
+Is it possible for the team, to integrate Opera35 in the templates.ini?<br><div class="codebox"><p>CODE: </p><pre><code>[TemplateSettings]Tmpl.OperaStable=%AppData%\Opera Software\*## Opera Stable#[Template_OperaStable_Force]Tmpl.Title=#4323,Opera StableTmpl.Class=WebBrowserForceProcess=opera.exe[Template_OperaStable_Bookmarks_DirectAccess]Tmpl.Title=#4356,Opera StableTmpl.Class=WebBrowserOpenFilePath=opera.exe,%Tmpl.OperaStable%\Bookmarks*OpenFilePath=opera.exe,%Tmpl.OperaStable%\Thumbnails*[Template_OperaStable_History_DirectAccess]Tmpl.Title=#4336,Opera StableTmpl.Class=WebBrowserOpenFilePath=opera.exe,%Tmpl.OperaStable%\Bookmarks*OpenFilePath=opera.exe,%Tmpl.OperaStable%\Thumbnails*OpenFilePath=opera.exe,%Tmpl.OperaStable%\*History*OpenFilePath=opera.exe,%Tmpl.OperaStable%\Current *OpenFilePath=opera.exe,%Tmpl.OperaStable%\Last *OpenFilePath=opera.exe,%Tmpl.OperaStable%\Visited Links*[Template_OperaStable_Cookies_DirectAccess]Tmpl.Title=#4328,Opera StableTmpl.Class=WebBrowserOpenFilePath=opera.exe,%Tmpl.OperaStable%\Cookies*[Template_OperaStable_Passwords_DirectAccess]Tmpl.Title=#4331,Opera StableTmpl.Class=WebBrowserOpenFilePath=opera.exe,%Tmpl.OperaStable%\Login Data*[Template_OperaStable_Preferences_DirectAccess]Tmpl.Title=#4339,Opera StableTmpl.Class=WebBrowserOpenFilePath=opera.exe,%Tmpl.OperaStable%\Preferences*[Template_OperaStable_Profile_DirectAccess]Tmpl.Title=#4338,Opera StableTmpl.Class=WebBrowserOpenFilePath=opera.exe,%Tmpl.OperaStable%\*[Template_OperaStable_Separator]Tmpl.Title=-Tmpl.Class=WebBrowser</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=5027">Solution-Design</a> — Tue Feb 16, 2016 4:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-02-12T16:38:28-04:00</updated>
+
+		<published>2016-02-12T16:38:28-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=118284#p118284</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=118284#p118284"/>
+		<title type="html"><![CDATA[IE 11 web credentials]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=118284#p118284"><![CDATA[
+From Curt:<br><br>IE 11 has changed the way they store web credentials. <br>If you want to have them saved outside the sandbox, you can open<br><div class="codebox"><p>CODE: </p><pre><code> IPC path \RPC Control\Vault</code></pre></div>. <br><br>But be aware that when you do this, and you clear them inside the sandbox, <strong>you will be clearing them outside the sandbox</strong> <strong><span style="text-decoration: underline"><em>(in the host) as well</em></span></strong>. And anything running in the sandbox will have access to all your web credentials.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Fri Feb 12, 2016 3:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-02-09T12:43:09-04:00</updated>
+
+		<published>2016-02-09T12:43:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=118171#p118171</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=118171#p118171"/>
+		<title type="html"><![CDATA[New Delete Command for Eraser v6.2.0.2962]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=118171#p118171"><![CDATA[
+Courtesy of @Guest10<br><br>New Delete Command for Eraser v6.2.0.2962 and Sandboxie<br>Tested with Sandboxie v4.16 and v4.17 on 64-bit Win 8.1<br><span style="color: #FF0000">Edit</span> Also works with Eraser v6.2.0.2963 and 6.2.0.2967, but does NOT work for me with 6.2.0.2969. On 6.2.0.2969 it leaves behind the renamed sandbox folder "__Delete_xxxxx_xxxxxxxx" <span style="color: #FF0000"> /Edit</span><br><br>Copy all of the text from this post to your Clipboard, and then Paste it into a Notepad document, so that you will have it available when you are off-line.<br><br><span style="color: #FF0000">Edit</span>: I should mention that the command lines assume that the "Eraser.exe" program file is located at "C:\Program Files\Eraser\Eraser.exe". If that's not correct for your computer, then the path inside of the following command lines must be corrected.<span style="color: #FF0000"> /Edit</span><br><br>Choose from these two eraser methods...<br><br>Command line for <span style="text-decoration: underline">3 Pass deletion - DOD /E method</span> (This is the usual method used by Sandboxie):<div class="codebox"><p>CODE: </p><pre><code>"C:\Program Files\Eraser\Eraser.exe" erase /quiet /method=ecbf4998-0b4f-445c-9a06-23627659e419 dir="%SANDBOX%"</code></pre></div>Command line for <span style="text-decoration: underline">1 Pass deletion with PseudoRandom Data</span> (A quicker method that I use, and all that's really needed):<div class="codebox"><p>CODE: </p><pre><code>"C:\Program Files\Eraser\Eraser.exe" erase /quiet /method=bf8ba267-231a-4085-9bf9-204de65a6641 dir="%SANDBOX%"</code></pre></div>Decide which of the above erase methods you will use (1 Pass or 3 Pass), and have the Notepad document open so you can Copy to the Clipboard.<br><br>For each sandbox where you use Eraser v6.2 for secure deletion:<br>(Right-click the sandbox name) &gt; Sandbox Settings &gt; Delete &gt; Delete Command<br><br>In the "Delete Command" box, use the arrow keys or your mouse to select everything in the box, and then delete it by pressing the &lt;Delete&gt; key on your keyboard.<br><span style="text-decoration: underline">Text in that box extends beyond what you can see, so make sure that it has all been deleted</span>.<br>Paste the new command line of your choice from above into the Delete Command  box, and Click OK to close the Sandbox Settings window.<br><br>Repeat for the next sandbox.<br><br><br>NOTES:<br>If you have multiple sandboxes that use Eraser v6.2, you could use:<br>Sandboxie Control window &gt; Configure &gt; Edit Configuration<br>Scroll down to each "DeleteCommand=..." line and replace the line with the new DeleteCommand=..." line of your choice:<br><br>Either the 3 Pass method that's usually used by Sandboxie:<br><br>DeleteCommand="C:\Program Files\Eraser\Eraser.exe" erase /quiet /method=ecbf4998-0b4f-445c-9a06-23627659e419 dir="%SANDBOX%"<br><br>Or the 1 Pass method:<br><br>DeleteCommand="C:\Program Files\Eraser\Eraser.exe" erase /quiet /method=bf8ba267-231a-4085-9bf9-204de65a6641 dir="%SANDBOX%"<br> <br><span style="color: #FF0000">Edit</span> Here's an example using <span style="color: #4000FF">methodName</span>:<br><br>DeleteCommand="C:\Program Files\Eraser\Eraser.exe" erase /quiet /methodName=Pseudorandom data dir="%SANDBOX%"<br><br><span style="color: #FF0000"> /Edit</span><br>------<br>Justification for only using 1 Pass deletion -<br>At the bottom of Peter Gutmann's paper on Secure Deletion Methods:<br><a href="https://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html#Epilogue" class="postlink">https://www.cs.auckland.ac.nz/~pgut001/ ... l#Epilogue</a><br>Why Eraser still sets 35-Pass Gutmann method as the default setting when installing Eraser is a mystery to me.<br>------<br>Eraser Help usage screen follows:<br><div class="codebox"><p>CODE: </p><pre><code>Eraser 6.2.0.2962(c) 2008-2015 The Eraser ProjectEraser is Open-Source Software: see http://eraser.heidi.ie/ for details.usage: Eraser &lt;action&gt; &lt;arguments&gt;where action is  help                Show this help message.  erase               Erases items specified on the command line. This is equivalent to addtask, with the schedule set to "now".  addtask             Adds a task to the current task list.  importtasklist      Imports an Eraser Task list to the current user's Task List.global parameters:  /quiet              Do not create a Console window to display progress.parameters for help:  eraser help         No parameters to set.parameters for erase and addtask:  eraser erase [/method=(&lt;methodGUID&gt;|&lt;methodName&gt;)] &lt;target&gt; [target [...]]  eraser addtask [/method=(&lt;methodGUID&gt;|&lt;methodName&gt;)] [/schedule=(now|manually|restart)] &lt;target&gt; [target [...]]  /method             The Erasure method to use.    methodGUID and methodName can be any GUID/Name from the following list:       Erasure Method                      GUID    ---------------------------------------------------------------------------    U  Gutmann                             1407fc4e-feff-4375-b4fb-d7efbb7e9922    U  US DoD 5220.22-M (8-306./E, C &amp; E)  d1583631-702e-4dbf-a0e9-c35dba481702    U  RCMP TSSIT OPS-II                   f335cc40-5de5-4733-90b1-6957b4a45688    U  Schneier 7 pass                     b1bfab4a-31d3-43a5-914c-e9892c78afd8    U  German VSITR                        607632b2-651b-4935-883a-bdaa74febb54    U  US DoD 5220.22-M (8-306./E)         ecbf4998-0b4f-445c-9a06-23627659e419    U  British HMG IS5 (Enhanced)          45671da4-9401-46e4-9c0d-89b94e89c8b5    U  US Air Force 5020                   7bf5b185-8ea5-4e12-83f1-f6c2efb3d2c2    U  US Army AR380-19                    0fe620ea-8055-4861-b5bb-bd8bdc3fd4ac    U  Russian GOST P50739-95              92681583-f484-415f-a66c-cc210222edc5    U  British HMG IS5 (Baseline)          9acdbd78-0406-4116-87e5-263e5e3b2e0d    U  Pseudorandom Data                   bf8ba267-231a-4085-9bf9-204de65a6641       First/last 16KB Erasure             0c2e07bf-0207-49a3-ade8-46f9e1499c01    Only erasure methods labelled "U" can be used to erase unused disk space.  /schedule           The schedule the task will follow. The value must be one of:    now               The task will be queued for immediate execution.    manually          The task will be created but not queued for execution.    restart           The task will be queued for execution when the computer is next restarted.                      This parameter is only valid for use with "addtask".  target is one or more of:    file                Erases the specified file      argument: file=&lt;path&gt;    dir                 Erases files and folders in the directory      arguments: dir=&lt;directory&gt;[,-excludeMask][,+includeMask][,deleteIfEmpty[=true|false]]        excludeMask     A wildcard expression for files and folders to exclude.        includeMask     A wildcard expression for files and folders to include.                        The include mask is applied before the exclude mask.        deleteIfEmpty   Deletes the folder at the end of the erasure if it is                        empty. If this parameter is not specified, it defaults to true.    recyclebin          Erases files and folders in the recycle bin    unused              Erases unused space in the volume.      arguments: unused=&lt;drive&gt;[,clusterTips[=(true|false)]]      clusterTips     If specified, the drive's files will have their cluster tips erased.                      This parameter accepts a Boolean value (true/false) as an argument;                      if none is specified true is assumed.    move                Securely moves a file/directory to a new location      arguments: move=&lt;source&gt;|&lt;destination&gt;    drive               Erases partitions, volumes or drives      arguments:        drive=\Device\Harddisk&lt;index&gt;        drive=\\.\PhysicalDrive&lt;index&gt;        drive=\\?\Volume&lt;guid&gt;parameters for importtasklist:  eraser importtasklist &lt;file&gt;[...]    file               A list of one or more files to import.All arguments are case sensitive.Response files can be used for very long command lines (generally, anythinginvolving more than 32,000 characters.) Response files are used by prepending"@" to the path to the file, and passing it into the command line. Thecontents of the response files' will be substituted at the same position intothe command line.</code></pre></div>End of post<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Tue Feb 09, 2016 11:43 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-01-24T16:44:26-04:00</updated>
+
+		<published>2016-01-24T16:44:26-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=117778#p117778</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=117778#p117778"/>
+		<title type="html"><![CDATA[Cyberfox 32/64]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22319&amp;p=117778#p117778"><![CDATA[
+Courtesy of @Guest10<br>Here are some traditional type Sandboxie templates, adapted for use with sandboxed Cyberfox 36 on 64-bit Windows.<br><br>They are written as Local Templates, so after you add them to Sandboxie's configuration file you will not find them listed at Sandbox Settings &gt; Applications &gt; Web Browser<br>They will be listed at Sandbox Settings &gt; Applications &gt; Local<br><br>The exclusions use a wild card character (*) in place of the path to each file or folder, so they should work regardless of the actual location of the profile files. As long as the portable version of Cyberfox uses "cyberfox.exe" (as shown in Sandboxie Control's window &lt;- not checked), they should also work with the portable version.<br><br>In addition to the traditional templates, I have also included an alternative template that uses a whitelist approach. One template contains the exclusions for all of the Cyberfox files that you always want to be saved out of the sandbox. If you use the whitelist template, you don't need any of the other templates - unless you also want to use the Force template (assuming that you have a registered version of Sandboxie).<br><br>If you use the traditional templates instead of the whitelist template, be sure to use the "Phishing" template. It's primarily needed to keep the "safebrowsing" anti-phishing files updated while running sandboxed. These files are not saved in the profile folder in a normal install of Cyberfox, although they might be saved there in a portable install. The Phishing template will allow the anti-phishing files to be kept updated, wherever they are stored.<br><br>Copy the text in this post to your Clipboard, and save it to a Notepad document, so you can Copy and Paste from it while off line.<br>----<br><br>For a sandbox that you will use with Cyberfox:<br>(A) Open Sandboxie Control's window and right-click the sandbox name, then click...<br>Sandbox Settings &gt; Applications &gt; Local<br>1) Click the "Create New" button and Paste one template at a time into the window. <br>2) Then, click OK in the "Create New" window.<br>3) Repeat steps 1 and 2 until you have entered all of the local templates that you want to use.<br><br>(B) After the templates have been added, click on one of them and then click the "Add" button.<br>Repeat, selecting templates and clicking the Add button, until all of the templates have been applied for that sandbox [+].<br>Then, click OK to close the "Sandbox Settings" window.<br>At this point, if you have templates that you haven't applied, you will asked if you want to remove the unused templates. Answering "No" will keep those templates in the configuration file.<br><br>If you have another sandbox that will also use the template(s), you can repeat step (B) for that sandbox at:<br>(Right-click the sandbox name) &gt; Sandbox Settings &gt; Applications &gt; Local<br><br>Only one sandbox should "Force" Cyberfox. If multiple force settings exist, the first one that is found will be the one that's used. Also, running multiple instances of Cyberfox, with each of them trying to use the same profile files, is best avoided.<br>------<br>Traditional type templates follow...<br><br><br>[Template_Local_Cyberfox_Force]<br>Tmpl.Title=Force Cyberfox to run in this sandbox (Registered version only)<br>Tmpl.Class=Local<br>Tmpl.Comment=As an alternative to this template: Sandbox Settings &gt; Program Start &gt; Forced Programs<br>ForceProcess=cyberfox.exe<br><br><br>[Template_Local_Cyberfox_Bookmarks_DirectAccess]<br>Tmpl.Title=Allow direct access to Cyberfox bookmark and history database<br>Tmpl.Class=Local<br>Tmpl.Comment=To delete the browsing history, use Cyberfox's own "Options" settings<br>Tmpl.Comment=Deleting browsing history will keep "session management" from working<br>Tmpl.Comment=Deleting browsing history will delete "thumbnails"<br>OpenFilePath=cyberfox.exe,*\bookmark*<br>OpenFilePath=cyberfox.exe,*\places*<br><br><br>[Template_Local_Cyberfox_Cookies_DirectAccess]<br>Tmpl.Title=Allow direct access to Cyberfox cookies<br>Tmpl.Class=Local<br>OpenFilePath=cyberfox.exe,*\cookies*<br><br><br>[Template_Local_Cyberfox_Passwords_DirectAccess]<br>Tmpl.Title=Allow direct access to Cyberfox passwords<br>Tmpl.Class=Local<br>Tmpl.Comment=Applies to Firefox derivatives, version 32 and later<br>Tmpl.Comment=Previous to version 32: signons.sqlite was used instead of logins.json<br>OpenFilePath=cyberfox.exe,*\logins.json<br>OpenFilePath=cyberfox.exe,*\key3.db<br><br><br>[Template_Local_Cyberfox_Phishing_DirectAccess]<br>Tmpl.Title=Allow direct access to Cyberfox phishing database and blocklist files<br>Tmpl.Class=Local<br>Tmpl.Comment=On a normal install, the "safebrowsing" folder is beneath AppData\Local<br>OpenFilePath=cyberfox.exe,*\cert8.db<br>OpenFilePath=cyberfox.exe,*\blocklist.xml<br>OpenFilePath=cyberfox.exe,*\safebrowsing\*<br><br><br>[Template_Local_Cyberfox_Session_DirectAccess]<br>Tmpl.Title=Allow direct access to Cyberfox session management<br>Tmpl.Class=Local<br>Tmpl.Comment=This won't work if you delete browsing history<br>OpenFilePath=cyberfox.exe,*\sessionstore.js<br>OpenFilePath=cyberfox.exe,*\sessionstore-backups\*<br><br><br>[Template_Local_Cyberfox_Thumbnails_DirectAccess]<br>Tmpl.Title=Allow direct access to Cyberfox thumbnails folder<br>Tmpl.Class=Local<br>Tmpl.Comment=If you delete browsing history, thumbnails will be deleted<br>Tmpl.Comment=The "thumbnails" folder is beneath AppData\Local, not AppData\Roaming<br>OpenFilePath=cyberfox.exe,*\thumbnails\*<br><br><br>[Template_Local_Cyberfox_Settings_DirectAccess]<br>Tmpl.Title=Allow direct access to Cyberfox preferences<br>Tmpl.Class=Local<br>Tmpl.Comment=The exclusions for "search" and "xulstore" allow changes to the search engine setting<br>OpenFilePath=cyberfox.exe,*\prefs.js<br>OpenFilePath=cyberfox.exe,*\search*<br>OpenFilePath=cyberfox.exe,*\xulstore.json<br><br><br>If you've picked the templates that you want from the above, then you don't need the following one.<br>If you use this one, read the template comments.<br><br>[Template_Local_Cyberfox_Profile_DirectAccess]<br>Tmpl.Title=Allow direct access to entire Cyberfox profile folder<br>Tmpl.Class=Local<br>Tmpl.Comment=This template only works if the Cyberfox profile is in its default folder beneath AppData\Roaming<br>Tmpl.Comment=You also need to use the Phishing template, if you use this one<br>Tmpl.Comment=If you want to save thumbnails, you also need the Thumbnails template<br>OpenFilePath=cyberfox.exe,%AppData%\8pecxstudios\Cyberfox\Profiles\*\<br><br><br>------<br>An alternative approach:<br>You could use just one "whitelist" template. All of the files/folders that you want to save out of the sandbox are listed in one template. You would only use this one template, unless you also wanted to use the Forcing template. This is the same approach that I use for 2 of my Firefox profiles, both of which make use of the same whitelist template.<br><br><br>[Template_Local_Cyberfox_Whitelist]<br>Tmpl.Title=My Cyberfox whitelisted files and folders<br>Tmpl.Class=Local<br>OpenFilePath=cyberfox.exe,*\bookmark*<br>OpenFilePath=cyberfox.exe,*\places*<br>OpenFilePath=cyberfox.exe,*\cookies*<br>OpenFilePath=cyberfox.exe,*\logins.json<br>OpenFilePath=cyberfox.exe,*\key3.db<br>OpenFilePath=cyberfox.exe,*\cert8.db<br>OpenFilePath=cyberfox.exe,*\blocklist.xml<br>OpenFilePath=cyberfox.exe,*\safebrowsing\*<br>OpenFilePath=cyberfox.exe,*\sessionstore.js<br>OpenFilePath=cyberfox.exe,*\sessionstore-backups\*<br>OpenFilePath=cyberfox.exe,*\thumbnails\*<br>OpenFilePath=cyberfox.exe,*\prefs.js<br>OpenFilePath=cyberfox.exe,*\search*<br>OpenFilePath=cyberfox.exe,*\xulstore.json<br><br><br>Here are a few exclusions for files and extensions that I use for Firefox, that also seem to apply with Cyberfox, and the OpenFilePath=... settings could be added to the list, above.<br>Listed, in order:<br>The Cyberfox personal (spelling) dictionary file;<br>"Adblock Plus" and "Element Hiding Helper For AdBlock Plus" extensions;<br>"Paste Email Plus" extension<br><br>OpenFilePath=cyberfox.exe,*\persdict.dat<br>OpenFilePath=cyberfox.exe,*\adblockplus\*<br>OpenFilePath=cyberfox.exe,*\pasteemailplus.json<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Sun Jan 24, 2016 3:44 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

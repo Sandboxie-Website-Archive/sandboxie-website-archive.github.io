@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25100&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:18:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; lastpass always requires login for FF inside SBIE [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>lastpass always requires login for FF inside SBIE [SOLVED]</h2>
+		<p><a href="viewtopic6cef6cef.html?f=11&amp;t=25100">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25100</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>lastpass always requires login for FF inside SBIE [SOLVED]</h3>
+				<div class="date">Posted: <strong>Tue Nov 14, 2017 4:19 pm</strong></div>
+				<div class="author">by <strong>gordon55y</strong></div>
+				<div class="content">Hi,<br>
+  I just installed FF 57 and I am having a new problem with lastpass when starting FF inside SBIE.   <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":-(" title="Sad"><br>
+Lastpass requires password each time I start FF.<br>
+Previously Lastpass would keep me logged in for each FF start inside SBIE.<br>
+When I run FF outside SBIE, everything is OK.<br>
+<br>
+  Under Applications/web browser/firefox I have set "allow direct access to firefox cookies", with no help.<br>
+<br>
+FF 57  (64bits)<br>
+SB 5.22 (64bits)<br>
+Windows 7 pro (64bits)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: lastpass always requires login for FF inside SBIE</h3>
+				<div class="date">Posted: <strong>Thu Nov 16, 2017 11:48 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello gordon55y ,<br>
+<br>
+I cannot reproduce the issue.  Does LastPass remember your password outside Sandboxie? <br>
+<br>
+Do you have the LastPass template enabled? <br>
+Right-click on your Sandbox --&gt; Sandbox Settings--&gt; Applications---&gt; Security/Privacy<br>
+Ensure LastPass is selected <br>
+Apply and Ok your way out<br>
+Configure--&gt; Reload Configuration<br>
+<br>
+Delete the contents of your Sandbox and re-try.<br>
+<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: lastpass always requires login for FF inside SBIE</h3>
+				<div class="date">Posted: <strong>Thu Nov 16, 2017 6:03 pm</strong></div>
+				<div class="author">by <strong>gordon55y</strong></div>
+				<div class="content">Hi Barb,<br>
+  I do have lastpass selected under application/securityPrivacy  (it has a "-")<br>
+<br>
+I see that if I set this:<br>
+Allow access to entire FF profile folder<br>
+then it works ok.<br>
+But that is not a secure solution, only a workaround.<br>
+<br>
+I also tried:<br>
+Allow access to FF session management<br>
+and that did not help.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: lastpass always requires login for FF inside SBIE</h3>
+				<div class="date">Posted: <strong>Fri Nov 17, 2017 3:24 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello gordon55y,<br>
+<br>
+I still cannot reproduce the behavior. LastPass automatically logs in inside  Sandboxed Firefox v57 for me (only Firefox template checked is the default phishing database one). It does take about 5 seconds for it to turn red (starts grayed out and if I click on it before it loads, then I am presented with the password request, but otherwise it works as expected). <br>
+<br>
+Did you check outside Sandboxie as I suggested? Is the password remembered there? <br>
+If yes, can you please try a new Sandbox with default settings and see if the issue follows you there?<br>
+Is there any antivirus software involved?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: lastpass always requires login for FF inside SBIE</h3>
+				<div class="date">Posted: <strong>Fri Nov 17, 2017 7:55 pm</strong></div>
+				<div class="author">by <strong>gordon55y</strong></div>
+				<div class="content">Hi Barb,<br>
+  I turned off MSE and windows firewall, no help.<br>
+I disabled all FF extensions, except LP, no help.<br>
+Yes, I see that it takes a second or two for the LP auto login when outside SB.<br>
+I wait for 10 seconds, no help.<br>
+I tried a new sandbox, and no help.<br>
+Outside SB it works as normal.<br>
+I am on windows 7.<br>
+I could manually add some direct access paths to see if that helps.<br>
+Not sure where to add them: &lt;firefox.exe&gt; or &lt;firefoxprograms&gt;, see below.<br>
+<br>
+Here is something that looks odd to me, is this expected?<br>
+I currently have 2 boxes:<br>
+DirectAccessBox<br>
+DefaultBox<br>
+<br>
+When I look at:<br>
+resource access/file access/direct access<br>
+It is different between DirectAccessBox and DefaultBox<br>
+This is DirectAccessBox:<br>
+&lt;firefox.exe&gt;<br>
+[%Tmpl.Firefox%\]<br>
+[%Tmpl.Firefox%\cookies*]<br>
+[%Tmpl.Firefox%\bookmark*]<br>
+[%Tmpl.Firefox%\places*]<br>
+<br>
+&lt;firefoxprograms&gt;<br>
+[%USERPROFILE%\*\urlclassifier.pset]<br>
+[%USERPROFILE%\*\urlclassifier*.sqlite*]<br>
+[%USERPROFILE%\*\cert8.db]<br>
+[%USERPROFILE%\*\blocklist.xml]<br>
+[%USERPROFILE%\*\safebrowsint\*]<br>
+<br>
+This is DefaultBox:<br>
+&lt;firefoxprograms&gt;<br>
+[%USERPROFILE%\*\urlclassifier.pset]<br>
+[%USERPROFILE%\*\urlclassifier*.sqlite*]<br>
+[%USERPROFILE%\*\cert8.db]<br>
+[%USERPROFILE%\*\blocklist.xml]<br>
+[%USERPROFILE%\*\safebrowsint\*]</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: lastpass always requires login for FF inside SBIE</h3>
+				<div class="date">Posted: <strong>Mon Nov 20, 2017 10:57 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello gordon55y,<br>
+<br>
+Can you please post your Sandboxie Configuration file:<br>
+Configure--&gt; Edit Configuration<br>
+Copy/paste the contents on your response<br>
+Highlight the contents and hit the "&lt;/&gt;" button to format them. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: lastpass always requires login for FF inside SBIE</h3>
+				<div class="date">Posted: <strong>Mon Nov 20, 2017 2:59 pm</strong></div>
+				<div class="author">by <strong>gordon55y</strong></div>
+				<div class="content">Hi Barb,<br>
+  I may not have been clear on the problem.<br>
+I would like to make sure we are on the same page.<br>
+LP has a box to "remember password" and it will populate the master password after<br>
+selecting the LP icon.  This option works as expected.<br>
+The problem I am having is when the "remember password" is not selected.<br>
+<br>
+This is my problem:<br>
+In the past (a week ago) when I started FF inside SB (no "remember password"), it would<br>
+automatically log me in to LP with no intervention on my part.<br>
+<br>
+<br>
+Here is my configure.<br>
+I do not know what this means:<br>
+&gt;Highlight the contents and hit the "&lt;/&gt;" button to format them.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=RBTray
+Template=LogitechSetPoint
+Template=nVidia_nView
+Template=LastPass
+Template=7zipShellEx
+Template=OfficeLicensing
+Template=Microsoft_Security_Essentials
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+Template=Firefox_Phishing_DirectAccess
+Template=Firefox_Passwords_DirectAccess
+Template=Firefox_Cookies_DirectAccess
+Template=Firefox_Profile_DirectAccess
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%AppData%\POP Peeper
+RecoverFolder=C:\gw\notes
+RecoverFolder=C:\gw\E642download
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+AutoDelete=y
+NeverDelete=n
+OpenFilePath=poppeeper.exe,%AppDAta%\POP Peeper\*\data.db
+OpenFilePath=poppeeper.exe,%AppDAta%\POP Peeper\AntiJunk.db
+OpenFilePath=poppeeper.exe,%AppDAta%\POP Peeper\*\data.db-journal
+OpenFilePath=poppeeper.exe,%AppDAta%\POP Peeper\PluginData\UrlCheck.ini
+OpenFilePath=poppeeper.exe,%AppDAta%\POP Peeper\*\*\*.eml
+OpenFilePath=poppeeper.exe,%AppDAta%\POP Peeper\poppeeper.ini
+OpenFilePath=poppeeper.exe,%AppData%\POP Peeper\PluginData\Profile\Cache\*.xml
+OpenFilePath=poppeeper.exe,%AppData%\POP Peeper\PluginData\Profile\Cache\*.png
+OpenFilePath=poppeeper.exe,%AppData%\POP Peeper\*\Sent\index.dat
+OpenFilePath=poppeeper.exe,%AppData%\POP Peeper\MailViewer.cfg
+OpenFilePath=poppeeper.exe,%AppData%\POP Peeper\*\Outbox\*.emx
+OpenFilePath=poppeeper.exe,%AppData%\POP Peeper\*\Draft\*.emx
+OpenFilePath=poppeeper.exe,%AppData%\POP Peeper\PluginData\Spelling\Personal\en.prepl
+OpenFilePath=poppeeper.exe,%AppData%\POP Peeper\PluginData\Spelling\Personal\en.pws
+OpenFilePath=poppeeper.exe,%AppData%\POP Peeper\PluginData\Spelling\Personal\spelldef.dat
+
+[UserSettings_05A80102]
+
+SbieCtrl_UserName=e642
+SbieCtrl_NextUpdateCheck=1511292283
+SbieCtrl_UpdateCheckNotify=y
+SbieCtrl_ShowWelcome=y
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_WindowCoords=0,4,928,527
+SbieCtrl_ActiveView=40021
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_TerminateNotify=y
+SbieCtrl_TerminateWarn=y
+SbieCtrl_ExplorerNotify=y
+SbieCtrl_ExplorerWarn=n
+SbieCtrl_EditConfNotify=n
+SbieCtrl_ReloadConfNotify=n
+SbieCtrl_ProcSettingsNotify=y
+SbieCtrl_SettingChangeNotify=y
+SbieCtrl_ShortcutNotify=y
+SbieCtrl_ShouldDeleteNotify=y
+SbieCtrl_BoxExpandedView=DefaultBox,testing
+
+[testing]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: lastpass always requires login for FF inside SBIE</h3>
+				<div class="date">Posted: <strong>Mon Nov 20, 2017 5:08 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello gordon55y,<br>
+<br>
+I tested disabling "Remember password" outside Sandboxie. Upon clearing Firefox cache and relaunching it (on host), LastPass did not remember my password and did not log in automatically.  So, it is expected that you will see the same behavior inside Sandboxie. <br>
+<br>
+Try logging in to Firefox LastPass outside Sandboxie, do not delete the browser cache. Then, try launching it Sandboxed using the newly created Sandbox. <br>
+
+<blockquote class="uncited"><div>I currently have 2 boxes:<br>
+DirectAccessBox<br>
+DefaultBox</div></blockquote>
+I did not see DirectAccessBox. Is that the full Configuration file?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: lastpass always requires login for FF inside SBIE</h3>
+				<div class="date">Posted: <strong>Mon Nov 20, 2017 6:06 pm</strong></div>
+				<div class="author">by <strong>gordon55y</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+  Do you want me to share my screen?<br>
+Skype has an option, very easy.<br>
+<br>
+  What do you see under SB "direct access:?<br>
+I see firefox.exe and &lt;firefoxprograms&gt;<br>
+<br>
+Reading between the lines, it sounds like you did not manually enter master password?<br>
+<br>
+Do these steps to show workaround does work.<br>
+Then unselect SB: "allow direct access to entire FF profile folder"<br>
+and repeat to show that without the workaround it does not work.<br>
+1)  start FF outside SB<br>
+     set FF:  do not clear cache.<br>
+     set SB:  allow direct access to entire FF profile folder   (workaround)<br>
+     close FF<br>
+2)  start FF outside SB<br>
+3)  If LP does not login, then enter master password<br>
+     Unselect "remember password"<br>
+4)  close FF<br>
+5)  start FF outside SB<br>
+     notice: LP auto login, no intervention.<br>
+6)  close FF<br>
+7)  start FF inside SB<br>
+     notice: LP auto login, no intervention<br>
+<br>
+I was trying to save some time.<br>
+I guess that did not work.<br>
+DefaultBox is actually DirectAccessBox<br>
+testing is  actually DefaultBox</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: lastpass always requires login for FF inside SBIE</h3>
+				<div class="date">Posted: <strong>Tue Nov 21, 2017 11:20 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello gordon55y,<br>
+<br>
+Sorry, we do not do remote sessions. I am going by the information you have provided.<br>
+
+<blockquote class="uncited"><div>Reading between the lines, it sounds like you did not manually enter master password?</div></blockquote>
+In order to log in to LastPass, I have to enter the master password.<br>
+<br>
+To clarify, this is what I tested using Windows 7 + MSE+ FF v57 + Sandboxie v5.22 + Global LastPass Template added:<br>
+Scenario 1- <br>
+    1-  Create a default Sandbox. <br>
+    2- Launch Firefox outside Sandboxie, log out of LastPass. Log back in without checking the remember password option (only option ticked is <br>
+    "Remember Email").<br>
+    3 - Close Firefox and launch it in the default sandbox<br>
+Result: LastPass logged in automatically inside Sbie.<br>
+<br>
+Scenario 2 -<br>
+  1-  Create another default Sandbox<br>
+  2- Launch Firefox outside Sandboxie, log out LastPass. Log back in without checking the remember password option.<br>
+	2.a - Delete the Firefox cache outside the Sandbox (ctrl+shift+del --&gt; Everything --&gt; all options checked).<br>
+  3 - Close Firefox and launch it in the default sandbox.<br>
+Result: LastPass does not auto-login inside Sbie (nor does it do it in non-sandboxed Firefox).<br>
+<br>
+I am seeing tat this is the exact same behavior both in host and in the Sandbox. <br>
+<br>
+For your scenario:
+<blockquote class="uncited"><div>2) start FF outside SB<br>
+3) If LP does not login, then enter master password</div></blockquote>
+If this is happening on the host, then you may have a setting to delete or not remember your passwords in Firefox itself. I cannot reproduce this behavior. <br>
+Any chance you may have LastPass set up to Automatically logout?  (LastPass--&lt; Preferences ---&gt; General).<br>
+Other than that, the Firefox Profile template does not make a difference in behavior for me (I tested both with and without to ensure I covered your steps in full).<br>
+<br>
+Can you please try a new Firefox profile, reinstall the extension and re-test using a new Sandbox?  <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: lastpass always requires login for FF inside SBIE</h3>
+				<div class="date">Posted: <strong>Wed Nov 22, 2017 2:55 pm</strong></div>
+				<div class="author">by <strong>gordon55y</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+  WOW, OK that worked   <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile"><br>
+As you suggested, I created a new FF profile (using firefox.exe -P) and now LP continues to <br>
+stay logged in when running inside SB  (as expected)  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile"><br>
+I did not have to change any FF profile defaults.<br>
+I have installed all my extensions, and it continues to work as expected  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile"><br>
+<br>
+Thank you for all your testing and suggestions, that was a long ride.<br>
+I suspect the problem was probably some old modifications I had made to FF about:config<br>
+Visually comparing FF about:config modifications, it looks like there are about 1/2 as many<br>
+with the new default profile.<br>
+In addition, I can open 20 tabs now and FF does not slow down.<br>
+Previously (before 57), it would handle 20 tabs easily.<br>
+But after 57, it would drag on 10 tabs.<br>
+<br>
+Using firefox.exe -P is really easy.<br>
+I can easily run my old FF profile to see how it was configured.<br>
+<br>
+Let me know if you want me to fill in details.<br>
+thankyou</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25100&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:18:07 GMT -->
+</html>

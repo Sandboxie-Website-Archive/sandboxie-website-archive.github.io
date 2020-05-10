@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25354&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:03:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Unable to copy-paste within Sandboxed Firefox [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Unable to copy-paste within Sandboxed Firefox [SOLVED]</h2>
+		<p><a href="viewtopicb188b188.html?f=11&amp;t=25354">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25354</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Unable to copy-paste within Sandboxed Firefox [SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Jan 17, 2018 7:51 pm</strong></div>
+				<div class="author">by <strong>deepjb</strong></div>
+				<div class="content">The Clipboard doesnt work on Firefox, thats it...  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> <br>
+<br>
+My System:<br>
+Windows 7 x64<br>
+FIrefox 57.0.4 x64<br>
+Sandboxie 5.23.3 x64</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox and Clipboard</h3>
+				<div class="date">Posted: <strong>Thu Jan 18, 2018 2:18 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello deepjb ,<br>
+<br>
+Does the issue follow you to a new Sandbox with default settings (or have you cleared the contents of your Sandbox and re-tried? ) <br>
+Can you provide more info regarding how are you reproducing the problem? <br>
+<br>
+Does the clipboard work fine outside Sandboxie?<br>
+Are you using any clipboard managers? <br>
+Is there any security software involved?<br>
+<br>
+If all fails, please try these steps:<br>
+Open Firefox outside Sandboxie<br>
+type about:config and accept the risk<br>
+search sandbox<br>
+Switch security.sandbox.content.level to 2 ( if needed switch it to 1 or 0 ).<br>
+Close Firefox<br>
+Relaunch it Sandboxed and re-test<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox and Clipboard</h3>
+				<div class="date">Posted: <strong>Thu Jan 18, 2018 8:12 pm</strong></div>
+				<div class="author">by <strong>deepjb</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic1c571c57.html?p=131950#p131950" data-post-id="131950" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Jan 18, 2018 2:18 pm</div></cite>
+Hello deepjb ,<br>
+<br>
+Does the issue follow you to a new Sandbox with default settings (or have you cleared the contents of your Sandbox and re-tried? ) <br>
+Can you provide more info regarding how are you reproducing the problem? <br>
+<br>
+Does the clipboard work fine outside Sandboxie?<br>
+Are you using any clipboard managers? <br>
+Is there any security software involved?<br>
+<br>
+If all fails, please try these steps:<br>
+Open Firefox outside Sandboxie<br>
+type about:config and accept the risk<br>
+search sandbox<br>
+Switch security.sandbox.content.level to 2 ( if needed switch it to 1 or 0 ).<br>
+Close Firefox<br>
+Relaunch it Sandboxed and re-test<br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+My default box is empty<br>
+Clipboard works outside sandboxie<br>
+Am not using managers<br>
+My only security is AVAST<br>
+Switching security.sandbox to 2-1-0 didnt work<br>
+<br>
+PD. this problem is only on Sandboxed Firefox, copy and paste works from an unsandboxed source to sandboxed firefox but on the other way</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox and Clipboard</h3>
+				<div class="date">Posted: <strong>Tue Jan 23, 2018 10:12 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello deepjb,<br>
+<br>
+What are you copy-pasting exactly? Please provide exact repro steps so that I can test them.<br>
+If you are trying to drag-drop images,links or files from Sandboxed Firefox to explorer you'll need to use a Sandboxed explorer. <br>
+More info here:<br>
+<a href="viewtopic50d150d1.html?f=11&amp;t=4185" class="postlink">viewtopic.php?f=11&amp;t=4185</a><br>
+<br>
+Can you please create a new Sandbox with default settings and see if the problem follows you there? <br>
+Also, please try a new Firefox profile for testing purposes.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox and Clipboard</h3>
+				<div class="date">Posted: <strong>Tue Jan 30, 2018 8:47 pm</strong></div>
+				<div class="author">by <strong>deepjb</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic3176-23176.html?p=131985#p131985" data-post-id="131985" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Jan 23, 2018 10:12 am</div></cite>
+Hello deepjb,<br>
+<br>
+What are you copy-pasting exactly? Please provide exact repro steps so that I can test them.<br>
+If you are trying to drag-drop images,links or files from Sandboxed Firefox to explorer you'll need to use a Sandboxed explorer. <br>
+More info here:<br>
+<a href="viewtopic50d150d1.html?f=11&amp;t=4185" class="postlink">viewtopic.php?f=11&amp;t=4185</a><br>
+<br>
+Can you please create a new Sandbox with default settings and see if the problem follows you there? <br>
+Also, please try a new Firefox profile for testing purposes.<br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+THIS IS THE THIRD TIME...I AM JUST TRYING TO COPY-PASTE TEXT anything, letters, numbers inside sandboxed firefox or from unsandboxed source to sandboxed firefox and in the other way...CREATING A NEW SANDBOX DIDNT WORK!!!! NEITHER CREATING A NEW PROFILE</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox and Clipboard</h3>
+				<div class="date">Posted: <strong>Wed Jan 31, 2018 11:46 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello deepjb ,<br>
+<br>
+I cannot repro the issue. If you tell me where are you copying the text from (which application) I will test the exact steps you are following. I cannot re-create your scenario if you do not provide the repro steps. <br>
+<br>
+This is what I tested so far:<br>
+I tried copying text from other browsers (non-sandboxed to Sandboxed Firefox and the other way around), as well as from notepad and office apps (non-sandboxed to Sandboxed Firefox and the other way around). <br>
+I also tried both using keyboard shortcuts (ctrl c/ v), and right-click copy/paste,  and found no issues.<br>
+<br>
+Can you copy-paste from a Sandboxed application to Sandboxed Firefox? (For example, open notepad in Sandboxie and try to copy-paste text to a sandboxed Firefox session).  <br>
+<br>
+I have found a similar issue in the forum:<br>
+<a href="viewtopic74d274d2.html?f=11&amp;t=24729" class="postlink">viewtopic.php?f=11&amp;t=24729</a>  <br>
+See if the steps listed there help you provide the info that we need to try to repro the problem.<br>
+<br>
+If all fails, please provide the results of running resource access monitor from a new Sandbox with default settings,  which may give us some additional info:<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+And provide a copy of your Sandboxie configuration file:<br>
+Configure--Edit Configuration<br>
+Copy/paste the contents here<br>
+Highlight the contents and click on the "&lt;/&gt;" button for format them in the forums.<br>
+<br>
+If possible, test the behavior without having your Antivirus software enabled to see if that makes a difference. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox and Clipboard</h3>
+				<div class="date">Posted: <strong>Thu Feb 01, 2018 9:40 pm</strong></div>
+				<div class="author">by <strong>deepjb</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic34673467.html?p=132125#p132125" data-post-id="132125" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Jan 31, 2018 11:46 am</div></cite>
+Hello deepjb ,<br>
+<br>
+I cannot repro the issue. If you tell me where are you copying the text from (which application) I will test the exact steps you are following. I cannot re-create your scenario if you do not provide the repro steps. <br>
+<br>
+This is what I tested so far:<br>
+I tried copying text from other browsers (non-sandboxed to Sandboxed Firefox and the other way around), as well as from notepad and office apps (non-sandboxed to Sandboxed Firefox and the other way around). <br>
+I also tried both using keyboard shortcuts (ctrl c/ v), and right-click copy/paste,  and found no issues.<br>
+<br>
+Can you copy-paste from a Sandboxed application to Sandboxed Firefox? (For example, open notepad in Sandboxie and try to copy-paste text to a sandboxed Firefox session).  <br>
+<br>
+I have found a similar issue in the forum:<br>
+<a href="viewtopic74d274d2.html?f=11&amp;t=24729" class="postlink">viewtopic.php?f=11&amp;t=24729</a>  <br>
+See if the steps listed there help you provide the info that we need to try to repro the problem.<br>
+<br>
+If all fails, please provide the results of running resource access monitor from a new Sandbox with default settings,  which may give us some additional info:<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+And provide a copy of your Sandboxie configuration file:<br>
+Configure--Edit Configuration<br>
+Copy/paste the contents here<br>
+Highlight the contents and click on the "&lt;/&gt;" button for format them in the forums.<br>
+<br>
+If possible, test the behavior without having your Antivirus software enabled to see if that makes a difference. <br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+there is not a specific application, the only one with issues is sandboxed firefox any other application is working ok so far, I will try the theme thing and if it doesn't work I am sending you any data I can</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox and Clipboard</h3>
+				<div class="date">Posted: <strong>Sun Feb 04, 2018 10:18 am</strong></div>
+				<div class="author">by <strong>deepjb</strong></div>
+				<div class="content">well I made it work but using a different method, Just uninstalling and making a deep wipe of any folder and registry about sandboxie then reinstalling with the AV disabled and using admin rights</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox and Clipboard</h3>
+				<div class="date">Posted: <strong>Sun Feb 04, 2018 2:22 pm</strong></div>
+				<div class="author">by <strong>deepjb</strong></div>
+				<div class="content">IT IS FAILING AGAIN!<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=ScreenReader
+Template=7zipShellEx
+Template=SynapticsTouchPad
+Template=Avast_Antivirus
+Template=OfficeLicensing
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+
+[UserSettings_08100197]
+
+SbieCtrl_UserName=user
+SbieCtrl_BoxExpandedView=DefaultBox
+SbieCtrl_NextUpdateCheck=1517842821
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_WindowCoords=200,150,880,450
+SbieCtrl_ActiveView=40021
+SbieCtrl_EnableLogonStart=n
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=y
+SbieCtrl_AddQuickLaunchIcon=y
+SbieCtrl_AddContextMenu=y
+SbieCtrl_AddSendToMenu=y
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+</code></pre></div>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\CdRom0
+(Drive)     \Device\HarddiskVolume2
+(Drive)     \Device\HarddiskVolume3
+Clsid       -------------------------------
+File/Key    -------------------------------
+Image       -------------------------------
+Image       *:\program files\mozilla firefox\firefox.exe
+Image       *:\program files\sandboxie\sandboxierpcss.exe
+Image       *:\program files\sandboxie\start.exe
+Image       c:\program files\mozilla firefox\api-ms-win-core-file-l1-2-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-core-file-l2-1-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-core-localization-l1-2-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-core-processthreads-l1-1-1.dll
+Image       c:\program files\mozilla firefox\api-ms-win-core-synch-l1-2-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-core-timezone-l1-1-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-crt-convert-l1-1-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-crt-environment-l1-1-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-crt-filesystem-l1-1-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-crt-heap-l1-1-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-crt-locale-l1-1-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-crt-math-l1-1-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-crt-multibyte-l1-1-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-crt-runtime-l1-1-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-crt-stdio-l1-1-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-crt-string-l1-1-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-crt-time-l1-1-0.dll
+Image       c:\program files\mozilla firefox\api-ms-win-crt-utility-l1-1-0.dll
+Image       c:\program files\mozilla firefox\freebl3.dll
+Image       c:\program files\mozilla firefox\lgpllibs.dll
+Image       c:\program files\mozilla firefox\mozglue.dll
+Image       c:\program files\mozilla firefox\msvcp140.dll
+Image       c:\program files\mozilla firefox\nss3.dll
+Image       c:\program files\mozilla firefox\nssckbi.dll
+Image       c:\program files\mozilla firefox\softokn3.dll
+Image       c:\program files\mozilla firefox\ucrtbase.dll
+Image       c:\program files\mozilla firefox\vcruntime140.dll
+Image       c:\program files\mozilla firefox\xul.dll
+Image       c:\program files\sandboxie\sbiedll.dll
+Image       c:\windows\system32\advapi32.dll
+Image       c:\windows\system32\api-ms-win-core-synch-l1-2-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-advapi32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-advapi32-l2-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-normaliz-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-ole32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-shlwapi-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-shlwapi-l2-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-user32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-version-l1-1-0.dll
+Image       c:\windows\system32\apphelp.dll
+Image       c:\windows\system32\audioses.dll
+Image       c:\windows\system32\avrt.dll
+Image       c:\windows\system32\bcrypt.dll
+Image       c:\windows\system32\cfgmgr32.dll
+Image       c:\windows\system32\clbcatq.dll
+Image       c:\windows\system32\comdlg32.dll
+Image       c:\windows\system32\crypt32.dll
+Image       c:\windows\system32\cryptbase.dll
+Image       c:\windows\system32\cryptsp.dll
+Image       c:\windows\system32\d2d1.dll
+Image       c:\windows\system32\d3d10_1.dll
+Image       c:\windows\system32\d3d10_1core.dll
+Image       c:\windows\system32\d3d11.dll
+Image       c:\windows\system32\dbghelp.dll
+Image       c:\windows\system32\devobj.dll
+Image       c:\windows\system32\dhcpcsvc.dll
+Image       c:\windows\system32\dnsapi.dll
+Image       c:\windows\system32\dui70.dll
+Image       c:\windows\system32\duser.dll
+Image       c:\windows\system32\dwmapi.dll
+Image       c:\windows\system32\dwrite.dll
+Image       c:\windows\system32\dxgi.dll
+Image       c:\windows\system32\explorerframe.dll
+Image       c:\windows\system32\fwpuclnt.dll
+Image       c:\windows\system32\gdi32.dll
+Image       c:\windows\system32\hid.dll
+Image       c:\windows\system32\iertutil.dll
+Image       c:\windows\system32\igd10iumd64.dll
+Image       c:\windows\system32\igdusc64.dll
+Image       c:\windows\system32\imm32.dll
+Image       c:\windows\system32\iphlpapi.dll
+Image       c:\windows\system32\kernel32.dll
+Image       c:\windows\system32\kernelbase.dll
+Image       c:\windows\system32\lpk.dll
+Image       c:\windows\system32\mmdevapi.dll
+Image       c:\windows\system32\msasn1.dll
+Image       c:\windows\system32\mscms.dll
+Image       c:\windows\system32\msctf.dll
+Image       c:\windows\system32\msimg32.dll
+Image       c:\windows\system32\msvcrt.dll
+Image       c:\windows\system32\mswsock.dll
+Image       c:\windows\system32\napinsp.dll
+Image       c:\windows\system32\ncrypt.dll
+Image       c:\windows\system32\netutils.dll
+Image       c:\windows\system32\nlaapi.dll
+Image       c:\windows\system32\normaliz.dll
+Image       c:\windows\system32\nsi.dll
+Image       c:\windows\system32\ntdll.dll
+Image       c:\windows\system32\ntmarta.dll
+Image       c:\windows\system32\ole32.dll
+Image       c:\windows\system32\oleaut32.dll
+Image       c:\windows\system32\pnrpnsp.dll
+Image       c:\windows\system32\profapi.dll
+Image       c:\windows\system32\propsys.dll
+Image       c:\windows\system32\psapi.dll
+Image       c:\windows\system32\rasadhlp.dll
+Image       c:\windows\system32\rpcrt4.dll
+Image       c:\windows\system32\rpcrtremote.dll
+Image       c:\windows\system32\rsaenh.dll
+Image       c:\windows\system32\samcli.dll
+Image       c:\windows\system32\samlib.dll
+Image       c:\windows\system32\sechost.dll
+Image       c:\windows\system32\secur32.dll
+Image       c:\windows\system32\setupapi.dll
+Image       c:\windows\system32\shell32.dll
+Image       c:\windows\system32\shlwapi.dll
+Image       c:\windows\system32\sspicli.dll
+Image       c:\windows\system32\sxs.dll
+Image       c:\windows\system32\user32.dll
+Image       c:\windows\system32\userenv.dll
+Image       c:\windows\system32\usp10.dll
+Image       c:\windows\system32\uxtheme.dll
+Image       c:\windows\system32\version.dll
+Image       c:\windows\system32\wbem\wbemprox.dll
+Image       c:\windows\system32\wbemcomn.dll
+Image       c:\windows\system32\webio.dll
+Image       c:\windows\system32\wevtapi.dll
+Image       c:\windows\system32\winhttp.dll
+Image       c:\windows\system32\wininet.dll
+Image       c:\windows\system32\winmm.dll
+Image       c:\windows\system32\winnsi.dll
+Image       c:\windows\system32\winrnr.dll
+Image       c:\windows\system32\wintrust.dll
+Image       c:\windows\system32\wldap32.dll
+Image       c:\windows\system32\wpc.dll
+Image       c:\windows\system32\ws2_32.dll
+Image       c:\windows\system32\wshbth.dll
+Image       c:\windows\system32\wship6.dll
+Image       c:\windows\system32\wshtcpip.dll
+Image       c:\windows\system32\wsock32.dll
+Image       c:\windows\system32\wtsapi32.dll
+Image       c:\windows\system32\xmllite.dll
+Image       c:\windows\winsxs\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.23403_none_e36ad4593102f066\comctl32.dll
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\__ComCatalogCache__
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000014.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000003.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \BaseNamedObjects\windows_shell_global_counters
+Ipc         \RPC Control\plugplay
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000014.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000003.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users******AppData*Local*Microsoft*Windows*Caches*{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x00000000000000e2.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users******AppData*Local*Microsoft*Windows*Caches*cversions.1.ro
+Ipc         \Sessions\1\BaseNamedObjects\FirefoxStartupMutex
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_1232
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_4028
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_5508
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_5860
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_RPCSS_SXS_READY
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_Mutex1
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\1\BaseNamedObjects\SboxSession
+Ipc         \Sessions\1\BaseNamedObjects\windows_shell_global_counters
+Ipc      O  \BaseNamedObjects\BFE_Notify_Event_{d1238f0f-9f51-47ab-9602-90f9c786b24c}
+Ipc      O  \BaseNamedObjects\FontCachePort
+Ipc      O  \BaseNamedObjects\msctf.serverDefault1
+Ipc      O  \KernelObjects\MaximumCommitCondition
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-advapi32-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-normaliz-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-ole32-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-shlwapi-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-user32-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-version-l1-1-0.dll
+Ipc      O  \KnownDlls\CFGMGR32.dll
+Ipc      O  \KnownDlls\clbcatq.dll
+Ipc      O  \KnownDlls\COMDLG32.dll
+Ipc      O  \KnownDlls\CRYPT32.dll
+Ipc      O  \KnownDlls\DEVOBJ.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\IERTUTIL.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\kernelbase.dll
+Ipc      O  \KnownDlls\LPK.dll
+Ipc      O  \KnownDlls\MSASN1.dll
+Ipc      O  \KnownDlls\MSCTF.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\NORMALIZ.dll
+Ipc      O  \KnownDlls\NSI.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\profapi.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\Setupapi.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\USERENV.dll
+Ipc      O  \KnownDlls\USP10.dll
+Ipc      O  \KnownDlls\WININET.dll
+Ipc      O  \KnownDlls\WINTRUST.dll
+Ipc      O  \KnownDlls\WLDAP32.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \RPC Control\AudioClientRpc
+Ipc      O  \RPC Control\Audiosrv
+Ipc      O  \RPC Control\dhcpcsvc
+Ipc      O  \RPC Control\DNSResolver
+Ipc      O  \RPC Control\epmapper
+Ipc      O  \RPC Control\LRPC-349cdfeb57aaca1e75
+Ipc      O  \RPC Control\LRPC-fb85ac2a5866d065a7
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\LSARPC_ENDPOINT
+Ipc      O  \RPC Control\lsasspirpc
+Ipc      O  \RPC Control\OLE96843E1C20894965A7E810B08587
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \Security\LSA_AUTHENTICATION_INITIALIZED
+Ipc      O  \Sessions\1\BaseNamedObjects\CTF.AsmListCache.FMPDefault1
+Ipc      O  \Sessions\1\BaseNamedObjects\Dwm-2AFB-ApiPort-1FD8
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.Asm.MutexDefault1
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.AsmCacheReady.Default1
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.CtfActivated.Default1
+Ipc      O  \Sessions\1\Windows\ApiPort
+Ipc      O  \Sessions\1\Windows\SharedSection
+Ipc      O  \ThemeApiPort
+Ipc      O  \UxSmsApiPort
+Pipe        -------------------------------
+Pipe        \Device\aswMonFltProxy\fffffa8004390a00
+Pipe        \Device\HarddiskVolume2
+Pipe        \Device\KsecDD
+Pipe        \Device\MountPointManager
+Pipe        \Device\NamedPipe\chrome.4028.0.12653013
+Pipe        \device\namedpipe\chrome.4028.0.12653013
+Pipe        \Device\NamedPipe\chrome.4028.1.64627665
+Pipe        \device\namedpipe\chrome.4028.1.64627665
+Pipe        \Device\NamedPipe\chrome.4028.2.130240358
+Pipe        \device\namedpipe\chrome.4028.2.130240358
+Pipe        \Device\NamedPipe\chrome.4028.3.193915883
+Pipe        \device\namedpipe\chrome.4028.3.193915883
+Pipe        \Device\NamedPipe\chrome.4028.4.185213912
+Pipe        \device\namedpipe\chrome.4028.4.185213912
+Pipe        \Device\NamedPipe\chrome.4028.5.71339293
+Pipe        \device\namedpipe\chrome.4028.5.71339293
+Pipe        \Device\NamedPipe\chrome.5860.0.206768088
+Pipe        \device\namedpipe\chrome.5860.0.206768088
+Pipe        \Device\NamedPipe\chrome.5860.1.156030576
+Pipe        \device\namedpipe\chrome.5860.1.156030576
+Pipe        \Device\NamedPipe\gecko-crash-server-pipe.4028
+Pipe        \device\namedpipe\gecko-crash-server-pipe.4028
+Pipe        \device\namedpipe\samr
+Pipe     O  \Device\Afd
+Pipe     O  \Device\NetBT_Tcpip_{7B38B4FD-AB9D-4C7E-9C48-DDF5E06C52A4}
+Pipe     O  \Device\NetBT_Tcpip_{E0E4656F-B36D-4933-BF8E-F46B714D078E}
+Pipe     O  \Device\NetBT_Tcpip_{F43C94A8-B2AB-4514-87B0-4717E1162EAD}
+Pipe     O  \Device\Nsi
+WinCls      -------------------------------
+WinCls   O  firefoxMessageWindow
+WinCls   O  OleMainThreadWndClass
+WinCls   O  Shell_TrayWnd
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox and Clipboard</h3>
+				<div class="date">Posted: <strong>Mon Feb 05, 2018 12:11 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello deepjb ,<br>
+<br>
+I am not seeing anything specific/weird in your outputs. . You still haven't provided much info regarding the exact repro steps. I unfortunately cannot re-create the problem, I just re-tested using Win 7x64+ Avast + Sbie 5.23.5 + FF v58.0.1 and still no issues. <br>
+<br>
+The theme issue is unrelated to this one, the topic I sent before had several steps for you to test (which may help).  One of the questions regarding clipboard managers includes if you ever installed one in the past (sometimes they do not fully remove, and cause issues. Can't be sure without further details).<br>
+<br>
+Since you said this worked for a bit after you reinstalled Sandboxie, can you let me know if it works again inside a new Sandbox with default settings? (Trying to see if it maybe works the first time, and then stops, or if there's a pattern).<br>
+<br>
+Also, re-try with a new Sandbox and your AV software disabled ---&gt; Any difference in behavior? <br>
+<br>
+Can you copy-paste from a Sandboxed application to Sandboxed Firefox? (For example, open notepad/another browser in Sandboxie and try to copy-paste text to a sandboxed Firefox session). <br>
+<br>
+Are all websites affected by this behavior? Or you are just copy-pasting in/out the web address section?<br>
+<br>
+Are there any extensions installed?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox and Clipboard</h3>
+				<div class="date">Posted: <strong>Tue Feb 06, 2018 3:20 pm</strong></div>
+				<div class="author">by <strong>deepjb</strong></div>
+				<div class="content">I cant send you more info, I mean, the problem i just that, I CANT COPY-PASTE TEXT INSIDE SANDBOXED FIREFOX THATS IT!, but I can paste text from any other sandboxed source to sandboxed firefox.<br>
+<br>
+I havent used any clipboard manager ever. I did again the same steps I did before to make it work and the problem persist and with a new firefox profile</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox and Clipboard</h3>
+				<div class="date">Posted: <strong>Tue Feb 06, 2018 3:59 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello deepjb,<br>
+<br>
+A few more ideas for you:<br>
+<br>
+For Sandboxie:<br>
+Go to configure --&gt; Software Compatibility<br>
+Un-check one template at a time, hit okay  [Start with ScreenReader and move your way down the ladder]<br>
+Configure--&gt; Reload configuration <br>
+Delete the contents of your Sandbox and re-try the actions you were following to copy-paste <br>
+If no difference, please re-enable the templates to ensure proper software compatibility inside the sandbox. <br>
+<br>
+For Firefox:<br>
+Try disabling multiprocess (outside Sandboxie)<br>
+<a href="viewtopice82ae82a.html?p=130710#p130710" class="postlink">viewtopic.php?p=130710#p130710</a><br>
+Then, create a new Sandbox with default settings and re-try. <br>
+<br>
+For Windows (not sure if you tried disabling your Antivirus as suggested before, but if that didn't work, try this instead): <br>
+Remove your Antivirus software.<br>
+Reboot the computer.<br>
+Re-try the Sandboxed actions. <br>
+<br>
+Let me know if any of those steps help alleviate the issue.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox and Clipboard</h3>
+				<div class="date">Posted: <strong>Wed Feb 07, 2018 8:53 am</strong></div>
+				<div class="author">by <strong>deepjb</strong></div>
+				<div class="content">it is working by disabling Screen readers, I will keep informing is something else happens</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25354&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:03:38 GMT -->
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4008&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:04:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Question regarding Sandboxed programs that attempt to delete</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Question regarding Sandboxed programs that attempt to delete</h2>
+		<p><a href="viewtopicdb10db10.html?f=22&amp;t=4008">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=4008</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Question regarding Sandboxed programs that attempt to delete</h3>
+				<div class="date">Posted: <strong>Fri Sep 19, 2008 6:37 pm</strong></div>
+				<div class="author">by <strong>HappyUser</strong></div>
+				<div class="content">Hi all,<br>
+<br>
+I was wondering if there is a feature someplace that I have overlooked that preserves files that are targetted by the sandboxed program for deletion?<br>
+<br>
+IE: whatever the file creates, if it tries to delete it later, the "deleted" file should go to a recycle bin or something in the sandbox. I wish to preserve all files created during the sandboxed programs run. Including any files the host program tries to purge.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Sep 20, 2008 3:08 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Look here:<br>
+<br>
+<a href="http://sandboxie.com/phpbb/viewtopic.php?t=3933" class="postlink">http://sandboxie.com/phpbb/viewtopic.php?t=3933</a><br>
+<br>
+and here:<br>
+<br>
+<a href="http://sandboxie.com/phpbb/viewtopic.php?t=3749" class="postlink">http://sandboxie.com/phpbb/viewtopic.php?t=3749</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 22, 2008 3:11 am</strong></div>
+				<div class="author">by <strong>raid</strong></div>
+				<div class="content">Damn, I was the one who posted as HappyUser as I was away from my home computer at the time...<br>
+<br>
+The reason I wanted the feature is the same as yours Buster. I have gone so far as to tell sandboxie that my entire documents and settings folder is available for quickrecovery upon something trying to delete. When testing a malware sample the other night, I wasn't able to capture one of the temporary executables it drops, short of manually extracting the installer myself. Sandboxie showed the file as available for recovery, but when I tried, no file found recovered. Strange too, it would bring back others.<br>
+<br>
+Anyway... It does allow me to pick a folder I can recover too. Maybe tzuk could add a box we could check for autorecover, and store the "deleted" files in the folder we picked previously?<br>
+<br>
+That would accomplish our needs of preservation I suspect. As we both know the installers are using temp folders from documents and settings trees.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 22, 2008 5:17 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Any way to recover or keep deleted files would be a valid option for me too.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 23, 2008 5:33 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I don't see Sandboxie as a malware research tool, so I'm not going to add features that are dedicated to malware research.  Buster, I've already mentioned the InjectDll setting which would let you inject DLLs into sandboxed programs.  All you need is to write a small DLL that hooks DeleteFile and prevent the deletion.  Maybe you and guys can team up and figure out how to do that.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 23, 2008 6:21 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I don't see Sandboxie as a malware research tool, so I'm not going to add features that are dedicated to malware research.  Buster, I've already mentioned the InjectDll setting which would let you inject DLLs into sandboxed programs.  All you need is to write a small DLL that hooks DeleteFile and prevent the deletion.  Maybe you and guys can team up and figure out how to do that.</div></blockquote>
+
+I understand you didn´t code Sandboxie as a malware research tool but it can be used for that purpose as I use it for other tasks. I didn´t insist in the feature because almost nobody else seemed interested on it.<br>
+<br>
+I was researching the InjectDll but I was unable to do it. The DLL I coded uses a system hook which is not compatible with Sandboxie.<br>
+<br>
+Personally I would not hook DeleteFile but NtSetInformationFile and then I would check if FileInformationClass is equal to FileDispositionInformation.<br>
+<br>
+If anyone has any idea of how to code such DLL I´m open to collaborate with him to make it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 23, 2008 8:13 pm</strong></div>
+				<div class="author">by <strong>BobJam</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I don't see Sandboxie as a malware research tool</div></blockquote>
+
+But indeed it is used for that.  As I see it, it's a perfect fit, though I'm not campaigning for a function to allow placement of deleted files/sessions.<br>
+<br>
+I'm new to Sandboxie, so I may not even understand what raid and Buster are getting at.  Nevertheless, I know many who use Sandboxie for their malware "surfing" to rate sites (a la WOT and SA).  My compliments, tzuk.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 23, 2008 8:22 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Sample DLL:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>#include &lt;windows.h&gt;
+
+//
+
+typedef void *(*P_SbieDll_Hook)(const char *ApiName, void *ApiFunc, void *NewFunc);
+
+typedef BOOL (*P_DeleteFileW)(const WCHAR *Path);
+
+//
+
+static P_DeleteFileW pDeleteFileW = NULL;
+
+//
+
+static BOOL MyDeleteFileW(const WCHAR *Path)
+{
+    const WCHAR *dot = wcsrchr(Path, L'.');
+    if (dot &amp;&amp; _wcsicmp(dot, L".txt") == 0) {
+        MessageBoxW(NULL, Path, L"Intercepted", MB_OK);
+        SetLastError(0);
+        return TRUE;
+    } else
+        return pDeleteFileW(Path);
+}
+
+//
+
+BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
+{
+    if (dwReason == DLL_PROCESS_ATTACH) {
+
+        MessageBoxW(NULL, L"Started", L"InjDll", MB_OK);
+    }
+
+    if (dwReason == DLL_PROCESS_ATTACH) {
+
+        HMODULE SbieDll = GetModuleHandleW(L"SbieDll.dll");
+        P_SbieDll_Hook SbieDll_Hook = (P_SbieDll_Hook)
+                    GetProcAddress(SbieDll, "_SbieDll_Hook@12");
+
+        HMODULE Kernel32 = GetModuleHandleW(L"Kernel32.dll");
+        pDeleteFileW = (P_DeleteFileW)
+                    GetProcAddress(Kernel32, "DeleteFileW");
+
+        pDeleteFileW = SbieDll_Hook("DeleteFile",
+                                    pDeleteFileW,
+                                    MyDeleteFileW);
+    }
+
+    return TRUE;
+}
+</code></pre></div>
+
+Note the use of SbieDll_Hook to hook APIs, along with InjectDll, this makes it very easy for you to focus on the interception logic and not the boilerplate of injecting DLLs and rewriting APIs.  But you have to run the program sandboxed, otherwise none of that works.<br>
+<br>
+Now let's say you compile this into c:\temp\inj.dll, so you add a DefaultBox setting,<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>InjectDll=c:\temp\inj.dll
+</code></pre></div>
+
+Refresh configuration, start a sandboxed command prompt, type "del somefile.txt", you'll get a message box and the file will not be deleted.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 24, 2008 4:23 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I compiled the DLL with lcc-win32 and I did the test but it didn´t work. <br>
+<br>
+Does it work for you?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 24, 2008 7:04 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">It does work for me.  I've revised the source above to include another MessageBox which appears as soon as the DLL is injected into the process.  You can get my compiled DLL here:<br>
+<br>
+<a href="../Inj.dll" class="postlink">http://www.sandboxie.com/Inj.dll</a><br>
+<br>
+I compile with the Windows DDK compiler.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 24, 2008 9:20 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">What´s the command line you use to compile?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 24, 2008 9:45 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I use the WinDDK build tool, it runs the compiler and linker internally.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 24, 2008 10:00 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Your DLL works fine.<br>
+<br>
+I generated the DLL with Visual Studio 2008 and works too. The difference is that your DLL is 3 KB and mine over 40 KB. That´s why I was asking what command line you were using. <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";-)" title="Wink"><br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 24, 2008 10:06 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Ha, I guess the build tool knows its stuff.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">   Glad the DLL is working, I'd like to hear that you got it doing what you want and that you can take back your feature request.   <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Sep 24, 2008 10:12 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Ha, I guess the build tool knows its stuff.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">   Glad the DLL is working, I'd like to hear that you got it doing what you want and that you can take back your feature request.   <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div></blockquote>
+
+It almost does what I want. <br>
+<br>
+Do you know if it´s possible to know (if yes, some code would be of help) what´s the file name that made the DeleteFile call?</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4008&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:04:09 GMT -->
+</html>

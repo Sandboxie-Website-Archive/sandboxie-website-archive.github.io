@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=23862&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:45:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie leaks pictures  - [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie leaks pictures  - [SOLVED]</h2>
+		<p><a href="viewtopic72f672f6.html?f=5&amp;t=23862">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=23862</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie leaks pictures  - [SOLVED]</h3>
+				<div class="date">Posted: <strong>Mon Jan 09, 2017 2:01 pm</strong></div>
+				<div class="author">by <strong>rodalsa</strong></div>
+				<div class="content">Here is a copy of a Word 2010 file that details how I proved Sandboxie leaks pictures ...<br>
+<br>
+USING PIRIFORM’S RECUVA IN THUMBNAIL VIEW, I SCANNED EACH OF THE FOLDERS IN MY C:\ DRIVE. <br>
+This scan was performed outside of Sandboxie.  I was looking for any pictures (*.jpg|*.png|*.raw|*.gif|*.jpeg|*.bmp|*.tif)  in Recuva’s parlance that were produced on screen while operating under the supervision of Sandboxie while cruising the Internet.  These pictures, that I did not expect to find outside of Sandboxie after Sandboxie’s files were deleted, appeared in Recuva’s scans<br>
+I refer to these pictures as my “the watch criteria” below.  None of the watch criteria files were user saved.  They were only displayed within the Sandboxie "enclosed" browser (Firefox in my case).<br>
+<br>
+The computer used for this work has only one hard drive naturally named the C:\ drive.  This drive (C:\) contained many folders.  I scanned each of these folders separately using Recuva.  The results of these scans produced only six files as matching my watch criteria.  Here they are as Filename and Path.  The duplicate was indeed a duplicate. <br>
+<br>
+Scanning C:\Users\*<br>
+Found 1,638 files 3 of which satisfy the watch criteria.<br>
+<br>
+Filename: tree_view[1].jpg<br>
+Path: C:\Users\Rodger A Sanders\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.IE5\E5UVIAZV<br>
+Filename: B7FB31AD0A4575EADE23D14B226DEFA97951E145<br>
+Path: C:\Users\Rodger A Sanders\AppData\Local\Mozilla\Firefox\Profiles\86nikl3x.default-1444703085006\cache2\entries<br>
+Filename: B7FB31AD0A4575EADE23D14B226DEFA97951E145<br>
+Path: C:\Users\Rodger A Sanders\AppData\Local\Mozilla\Firefox\Profiles\86nikl3x.default-1444703085006\cache2\entries<br>
+==============================================================================<br>
+Scanning C:\Program Data\*<br>
+Found 44 files 2 of which satisfy the watch criteria.<br>
+<br>
+Filename: {CCFFD13D-C418-4AFB-83FA-E9CEACE148BC}<br>
+Path: C:\ProgramData\Microsoft\Windows Defender\Scans\History\Results\Resource<br>
+Filename: {3264B22E-2E72-4134-9FCA-D0F263D9F448}<br>
+Path: C:\ProgramData\Microsoft\Windows Defender\Scans\History\Results\Resource<br>
+==============================================================================<br>
+Scanning C:\Program Files\*<br>
+Found 120 files 1 of which satisfies the watch criteria.<br>
+<br>
+Filename: CrtCheck.exe<br>
+Path: C:\Program Files\AVAST Software\Avast\x64<br>
+==============================================================================<br>
+==============================================================================<br>
+Having scanned EACH of the folders in C:\, the above are the only files that fit the watch criteria.<br>
+<br>
+I then scanned the complete C:\ “folder” as reported below…<br>
+==============================================================================<br>
+Scanning C:\*<br>
+Found 11030 files 756 of which satisfies the watch criteria.<br>
+Which means that 756 – 6 = 750 lay outside of the subdirectories on the C:\ folder.<br>
+==============================================================================<br>
+I selected all of the 11030 files and requested that Piriform Recuva secure overwrite them all.<br>
+Recuva overwrote 5825 files in 10 minutes 36 seconds.  File types not overwritten were…<br>
+               File is resident in the MFT<br>
+               File is already overwritten by existing files(s)<br>
+As reported by Recuva.  I then ran a scan on C:\ to verify the result of the overwrite.  It bombed.<br>
+==============================================================================<br>
+Scanning C:\*<br>
+Found 10995 files of which a large number satisfies the watch criteria many of which were recognizable from the scan of C:\* prior to the secure overwrite.  I did not count each hit on my watch criteria. Piriform – you are not doing what you claim.<br>
+<br>
+I am running Eraser on unused space on C:\* to see if that program will get the job that Sandboxie should have been doing done.    Eraser completed in 3 hrs. 7 min. with warnings.  What warnings?   Here is the entire log…<br>
+<br>
+Session: Monday, January 09, 2017 7:01:26 AM<br>
+Monday, January 09, 2017 7:01:26 AM	Information	Session started<br>
+Monday, January 09, 2017 7:01:27 AM	Warning	This computer has had System Restore or Volume Shadow Copies enabled. This may allow copies of files stored on the disk to be recovered and pose a security concern.<br>
+Monday, January 09, 2017 11:08:49 AM	Information	Session ended<br>
+<br>
+I then ran Recuva on C:\ again to see if Erase had done its job.  It did.<br>
+<br>
+Running Recuva on C:\ after the erase.  1/9/2017 11:36 AM.<br>
+This scan found 1419 files of which 0 satisfied the watch criteria.<br>
+I searched the 1419 files found for each of the file names found earlier….<br>
+	Filename: tree_view[1].jpg<br>
+	Filename: B7FB31AD0A4575EADE23D14B226DEFA97951E145<br>
+	Filename: B7FB31AD0A4575EADE23D14B226DEFA97951E145<br>
+	Filename: {CCFFD13D-C418-4AFB-83FA-E9CEACE148BC}<br>
+	Filename: {3264B22E-2E72-4134-9FCA-D0F263D9F448}<br>
+	Filename: CrtCheck.exe<br>
+Yes, there were two identical files (names) found.  None of these files were found.<br>
+NOTE:  The filenames did not represent the content of the six files.<br>
+<br>
+Bottom Line:  Sandboxie leaks  pictures that Recuva can find and restore.  I did not restore any of the files.  If you are serious about using Sandboxie as a privacy program for photographic content – FORGET IT.  After you “delete” Sandboxie’s files, run Eraser on all drives that Sandboxie can touch to finish the job. <br>
+<br>
+I did not test for the other file types that Recuva can find BUT as far as Sandboxie’s privacy claims go – be careful.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie leaks pictures</h3>
+				<div class="date">Posted: <strong>Mon Jan 09, 2017 3:21 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">We get these "Sandboxie leaks files" claims every now and then. They are usually the result of not understanding how Sandboxie works, or accidentally running browsers outside Sandboxie (even though people are usually "positive" they never did).<br>
+<br>
+First off, Sandboxie is not a "privacy app". See <a href="../index6b1b.html?PrivacyConcerns" class="postlink">https://www.sandboxie.com/index.php?PrivacyConcerns</a>. Your c:\sandbox folder is completely visible to anything running on your host. That includes backup software, Recuva, A/V, etc. You can use Explorer on your host and copy files manually out of the sandbox, if you so desire. That is not considered a "leak".<br>
+<br>
+Secondly, users sometimes accidentally run browsers outside of Sandboxie. This is especially a problem with Firefox because, by default, it does not have a title bar -- and hence no "#   #" is displayed. You can confirm apps are running in Sbie by looking at the list in SbieCtrl, or moving the mouse over the top of the window to see the yellow border.<br>
+<br>
+If you want to prove to yourself that Sandboxie is not leaking FF cache files, open Explorer and go to your C:\Users\&lt;username&gt;\AppData\Local\Mozilla\Firefox\Profiles\&lt;profilename&gt; folder. Check the timestamps on the cache sub-folders. Now start FF sandboxed. Unless you have opened your FF profile inside Sbie, you will not see the timestamps change on these folders while running Sbie.<br>
+<br>
+And I am not clear on what some of your results are supposed to mean. For example, does this one mean that Sbie supposedly leaked C:\Program Files\AVAST Software\Avast\x64\CrtCheck.exe? How did CrtCheck.exe get into the sandbox in the first place?
+<blockquote class="uncited"><div>
+==============================================================================<br>
+Scanning C:\Program Files\*<br>
+Found 120 files 1 of which satisfies the watch criteria.<br>
+<br>
+Filename: CrtCheck.exe<br>
+Path: C:\Program Files\AVAST Software\Avast\x64
+</div></blockquote></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie leaks pictures</h3>
+				<div class="date">Posted: <strong>Wed Jan 18, 2017 8:41 pm</strong></div>
+				<div class="author">by <strong>rodalsa</strong></div>
+				<div class="content">Thanks for the response Curt.<br>
+1.  Firefox was running within Sandboxie.  Evidenced by the yellow border.<br>
+2.  The generation of the watch criteria pictures was done under the conditions of 1 above.<br>
+3.  The default sandbox was used.<br>
+4.  Post generation of the pictures, Sandboxie was either closed with or without subsequent deletion of content and reopened later with additional generation of watch criteria pictures displayed.<br>
+5.  The last Sandboxie activity before running Recuva was to delete the content of the default sandbox.<br>
+6.  The above processes  1. to 5.  were repeated several times with Eraser providing a wipe of free space between iterations.<br>
+7.  None of the watch criteria file names reported by Recuva reflect the content of the pictures nor were they typical of the source file names.<br>
+8.  No watch criteria files were found after Eraser's free space runs.<br>
+9.  No watch criteria files were copied from within Sandboxie to any source reachable by the physical computing system.  Internet to Firefox running under Sandboxie was the only data transmission path used.<br>
+<br>
+All of this seems to me so far to tie down loose ends.  Pictures presented on the monitor while running Firefox within / under Sandboxie's supervision were presented on the monitor outside of Sandboxie after Sandboxie had been closed (the default Sandboxie files deleted).<br>
+<br>
+Rod</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie leaks pictures</h3>
+				<div class="date">Posted: <strong>Thu Jan 19, 2017 12:26 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello rodalsa,<br>
+<br>
+Please take a look at this entry which covers the Sandboxie deletion process:<br>
+<br>
+<a href="../index572c.html?SecureDeleteSandbox" class="postlink">https://www.sandboxie.com/index.php?SecureDeleteSandbox</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie leaks pictures</h3>
+				<div class="date">Posted: <strong>Wed Jan 25, 2017 9:23 am</strong></div>
+				<div class="author">by <strong>rodalsa</strong></div>
+				<div class="content">Thanks Barb.<br>
+<br>
+Spot on.  I did not realize that Sandboxie allowed modification of its default behaviour to do what I had done with Eraser.<br>
+I've used the *.ini files in the deep past but seemed to forget about them in this instance.  I'm 82.<br>
+Once again the community excels.<br>
+<br>
+You indexing my mind should solve the problem.<br>
+<br>
+Rod</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie leaks pictures  - [SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Jan 25, 2017 10:29 pm</strong></div>
+				<div class="author">by <strong>rodalsa</strong></div>
+				<div class="content">Well,  I used Sandboxie 6.2.0.2979 to generate the command...<br>
+"C:\Program Files\Eraser\Eraser.exe" addtask --quiet --method=ecbf4998-0b4f-445c-9a06-23627659e419 --schedule=now --dir="%SANDBOX\\%"<br>
+With it ending in "%SANDBOX\\%" and all references to this parameter that I have observed being "%SANDBOX%", I was unsure things would work as planned.<br>
+<br>
+They did not.  After the erase I counted 57 instances of my watch criteria present as reported by Recuva.<br>
+<br>
+What does the "....\\..." do the the "dir=" specification?<br>
+<br>
+Also,  Eraser, as I assume, is being told to erase the content of some portion(or all) of the folder "Sandbox".  I found pairs of my watch criteria located per Recuva's Info report located outside of Sandbox.  In the specific case that I checked a file named "J0287645.JPG" was reported at...<br>
+ "Path:  C:\Program Files(86)\Microsoft Office\CLIPART\PUB60COR\"<br>
+a place where my watch criteria would not appear.<br>
+<br>
+If the "fact" that the files were located outside of "SANDBOX", then how did they get where they were "reportedly" found since they were accessed from within Sandboxie's instance of Firefox?  Here I am back to my claim that Sandboxie "Leaks".<br>
+<br>
+One instance of this file was marked "Unrecoverable".  The other "Excellent".  Both displayed a "Preview".  That a Recuva problem.  Both were reported located in the same Path.<br>
+<br>
+From the above it may be a bit premature to label this thread as SOLVED.<br>
+<br>
+I pause all attempts to "crack this nut" until my concerns gain a deeper insight into their cause.  I will freely use my system.  Eraser and Recuva rest.  Some of these watch criteria files may be overwritten.  Should I enter this problem again, Eraser on C:\ Freespace will be my next move unless the "deeper insight" that opens the door to re-entry dictate otherwise.<br>
+<br>
+I appreciate the help that has us this far down the road.  Thank You.<br>
+<br>
+Rod</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie leaks pictures  - [SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Jan 26, 2017 10:15 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi rodalsa,<br>
+<br>
+"Path: C:\Program Files(86)\Microsoft Office\CLIPART\PUB60COR\" --&gt; That path is for Microsoft Publisher, not Firefox.  Any chance that this is what you are seeing? :<br>
+<a href="https://forum.piriform.com/?showtopic=38261" class="postlink">https://forum.piriform.com/?showtopic=38261</a><br>
+<br>
+Have you tested what Curt suggested before? What were the results? :
+<blockquote class="uncited"><div>If you want to prove to yourself that Sandboxie is not leaking FF cache files, open Explorer and go to your C:\Users\&lt;username&gt;\AppData\Local\Mozilla\Firefox\Profiles\&lt;profilename&gt; folder. Check the timestamps on the cache sub-folders. Now start FF sandboxed. Unless you have opened your FF profile inside Sbie, you will not see the timestamps change on these folders while running Sbie.
+</div></blockquote>
+
+Here's a thread with exact examples that you can try for Eraser, hope this helps :  <br>
+<a href="viewtopic2f422f42.php?f=5&amp;t=20784&amp;p=116837&amp;hilit=eraser#p107643" class="postlink">http://forums.sandboxie.com/phpBB3/view ... er#p107643</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie leaks pictures  - [SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Mar 15, 2018 6:01 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist598a.html?mode=viewprofile&amp;u=22270">rodalsa</a> wrote: <a href="viewtopic0fa70fa7.html?p=132812#p132812" data-post-id="132812" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Mar 14, 2018 9:59 pm</div></cite>
+I have on multiple Recuva runs encountered photos that I recognize as having been on screen while Sandboxie was running my browser.<br>
+<br>
+I tested this specifically by choosing helicopter photos for my search while running Sandboxie(Firefox).  During my normal usage of my computer, I have never used the word "helicopter" for my search criteria either inside or outside of Sandboxie giving the test run a form of purity.  Nor have I searched for anything that would remotely imply helicopters.  I tried "Aardvark" photos also.  Same comments and results.<br>
+<br>
+After my test run and fully expecting not to see any helicopter photos, I ran Recuva.  They were found and Recuva gave their folder specification as "C:/?".  Ditto with Aardvark photos.<br>
+<br>
+How is that possible?<br>
+<br>
+Rod<br>
+<br>
+For me to believe is insufficient for you to know - rodalsa
+</div></blockquote>
+Rod, Recuva recovers deleted files. When Sandboxie deletes the sandbox, it uses the normal Windows file delete. So Recuva will be able to see/recover everything in the deleted sandbox. If you want to permanently delete the sandbox, you need to use a tool like Eraser, as Barb links to above.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=23862&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:45:02 GMT -->
+</html>

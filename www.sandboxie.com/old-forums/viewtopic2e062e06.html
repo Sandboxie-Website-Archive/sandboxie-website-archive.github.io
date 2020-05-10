@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25569&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Program Exclusion From Sandboxing</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Program Exclusion From Sandboxing</h2>
+		<p><a href="viewtopic66366636.html?f=11&amp;t=25569">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25569</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Program Exclusion From Sandboxing</h3>
+				<div class="date">Posted: <strong>Tue Mar 13, 2018 1:35 pm</strong></div>
+				<div class="author">by <strong>PAlotta</strong></div>
+				<div class="content">I am running Sandboxie 5.22 x64 on a Windows Server 2008 R2. There is an Eaton 5S UPS attached via USB which is monitored by Eaton's Intelligent Power Protector (IPP). When I ran IPP today, I noticed that there was no communication between the UPS and IPP. After checking the hardware end and finding no faults, I noticed that IPP was sandboxed. IPP uses IE as the interface so IE is being sandboxed upon invocation by IPP.  IPP also can no longer send alert e-mails through the server utility blat.exe. <br>
+<br>
+The IPP command line is "%ProgramFiles(x86)%\Eaton\IntelligentPowerProtector\mc2.exe" -launch "<a href="http://127.0.0.1:4679/default.html" class="postlink">http://127.0.0.1:4679/default.html</a>". Is there any way to exclude IE from sandboxing when invoked from IPP?<br>
+<br>
+Or, is there a way to set up a sandbox for IPP that will allow it to function properly and access the USB ports and e-mail?<br>
+<br>
+I ran the Resource Access Monitor for IPP and attached results.<br>
+<br>
+Thanks in advance,<br>
+<br>
+Peter</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Program Exclusion From Sandboxing</h3>
+				<div class="date">Posted: <strong>Tue Mar 13, 2018 3:52 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello PAlotta,<br>
+<br>
+Have a look at the disable forced programs section in the Start Command Line entry:<br>
+<a href="../StartCommandLine.html" class="postlink">https://www.sandboxie.com/StartCommandLine</a><br>
+<br>
+You could also disable forced programs for X amount of time:<br>
+<a href="../FileMenu.html#disableforce" class="postlink">https://www.sandboxie.com/FileMenu#disableforce</a><br>
+<br>
+Regarding making the software work in Sandboxie, I cannot really test it (I don't have required software/hardware and we do not directly support Windows Server), but here's what I recommend:<br>
+Go over these examples and start opening IPC paths, classes and COM classes as needed (mind you, you will be punching wholes in your system, so do this at your own risk):<br>
+<a href="../ResourceAccessSettings.html#ipc" class="postlink">https://www.sandboxie.com/ResourceAccessSettings#ipc</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25569&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:58:05 GMT -->
+</html>

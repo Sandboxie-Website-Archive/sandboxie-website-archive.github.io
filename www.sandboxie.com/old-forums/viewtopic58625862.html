@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&start=180&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:54:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Block Process Access - Page 13</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Block Process Access</h2>
+		<p><a href="viewtopic7fcb7fcb.html?f=22&amp;t=4885">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=4885</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>13</strong> of <strong>15</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 24, 2012 1:52 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">It might be something as trivial as a typo somewhere, which causes the DLL to not load.  Post your Sandboxie.ini so we can review it together.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Apr 04, 2012 8:25 am</strong></div>
+				<div class="author">by <strong>budyn</strong></div>
+				<div class="content">So iv downloaded sandboxie, i got my diablo III beta and i want to run it sandboxed,<br>
+Iv put ur DLL into my sandboxie.ini.<br>
+I run D3beta normally, than i want to run it in sandbox it says on the launcher that diablo 3 beta is already running.How to solve that?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jun 13, 2012 1:29 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">@needsomehelpplease<br>
+You need to get DbgView working first and enable debug messages in sbiextra.ini. Hopefully that will clue you into what is going on. You can also open the sandboxed process with something like Process Explorer to see if the sbiextra.dll has really been injected.<br>
+<br>
+@budyn<br>
+I'm not helping you bypass game anti-cheat mechanisms, so don't bother pursuing the request.<br>
+<br>
+@all<br>
+You can safely ignore any warnings from VirusTotal or Jotti. The test apps included in the package are written in AutoIt and are commonly (and unfortunately) flagged by crappy anti-virus engines included in those online scanners.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>sbiextra confilicts with Flash Player in ProtectedMode</h3>
+				<div class="date">Posted: <strong>Tue Jun 19, 2012 2:22 pm</strong></div>
+				<div class="author">by <strong>Binky</strong></div>
+				<div class="content">I have the following installed: Sandboxie 3.72, sbiextra v1.0.0.17, Firefox 13.0.1, Flash Player 11.3.300.257<br>
+I use this web page to test Flash Player functionality: <a href="http://www.adobe.com/software/flash/about/" class="postlink">http://www.adobe.com/software/flash/about/</a><br>
+Here is some info on Flash Player's ProtectedMode: <a href="https://blogs.adobe.com/asset/2012/06/inside-flash-player-protected-mode-for-firefox.html" class="postlink">https://blogs.adobe.com/asset/2012/06/i ... refox.html</a><br>
+By default, Flash Player has ProtectedMode enabled.<br>
+At the bottom of this page (under "Last resort") is how to disable ProtectedMode: <a href="http://forums.adobe.com/thread/1018071?tstart=0" class="postlink">http://forums.adobe.com/thread/1018071?tstart=0</a><br>
+I am getting the same results with both Win7 x32 and Win7 x64.<br>
+<br>
+Here are the combinations that work fine for me:<br>
+Firefox+Flash Player with ProtectedMode enabled<br>
+Sandboxie+sbiextra+Firefox+Flash Player with ProtectedMode disabled<br>
+Sandboxie+Firefox+Flash Player with ProtectedMode enabled<br>
+<br>
+Here is the combination that causes Flash Player to crash (on the above test web page):<br>
+Sandboxie+sbiextra+Firefox+Flash Player with ProtectedMode enabled<br>
+<br>
+When I say crash, I mean that plugin-container.exe and both instances of FlashPlayerPlugin_11_3_300_257.exe terminate after about 30 seconds, and Flash Player fails to render the intended graphics.<br>
+<br>
+Thus, I have to choose between sbiextra and Flash Player with ProtectedMode enabled.  For now, I disabled Flash Player's ProtectedMode.<br>
+<br>
+My questions:<br>
+1) Can anyone else reproduce the behavior I am seeing?<br>
+2) If so, any ideas on how to modify sbiextra to allow the sandboxed Flash Player to access specifically what it needs, without allowing malware Flash content to have access to dangerous info, and without reducing sbiextra protection on other sandboxed processes?<br>
+3) Is it possible to allow entries to 'sbiextra.ini' for "process A is allowed to access process B outside the sandbox"?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 19, 2012 2:37 pm</strong></div>
+				<div class="author">by <strong>Binky</strong></div>
+				<div class="content">By the way, I added FlashPlayerPlugin_11_3_300_257.exe to &lt;InternetAccess&gt; and &lt;StartRunAccess&gt;.  This is needed to allow Sandboxie+Firefox+Flash Player with ProtectedMode enabled to work.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 19, 2012 2:30 pm</strong></div>
+				<div class="author">by <strong>Binky</strong></div>
+				<div class="content">I am experiencing the same problem with Firefox 14.0.1 and Flash Player 11.3.300.265 (with Sandboxie 3.72 and sbiextra v1.0.0.17)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jul 21, 2012 11:04 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Is this blocking only for "nice" programs...? e.g. could code bypass the hooks and call the REAL functions directly? GetProcAddress to get the address from the DLLs, anything like that?<br>
+<br>
+I have some ideas, but not sure if they're worth implementing if it's trivial to get around the hooks. <img class="smilies" src="images/smilies/icon_mad.gif" width="15" height="15" alt=":x" title="Mad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 27, 2012 12:29 pm</strong></div>
+				<div class="author">by <strong>Binky</strong></div>
+				<div class="content">I am experiencing the same problem with Firefox 14.0.1 and Flash Player 11.3.300.268 (with Sandboxie 3.72 and sbiextra v1.0.0.17)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Sep 27, 2012 10:05 am</strong></div>
+				<div class="author">by <strong>Binky</strong></div>
+				<div class="content">I am experiencing the same problem with Firefox 15.0.1 and Flash Player 11.4.202.278 (with Sandboxie 3.74 and sbiextra v1.0.0.17)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 05, 2012 5:56 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">@DR<br>
+The short answer is yes. These are user mode hooks, so a determined app could get around them, but they would specifically have to be aware of the hooks and actively bypass them. This is a limitation of InjectDll.<br>
+<br>
+@Binky<br>
+What makes you think there *is* a workaround? If flashplayer needs access to a resource you're blocking, then you simply can't block it. I won't be developing this DLL further to allow the kind of whitelisting you're talking about. Even so, can you selectively allow components in sbiextra.ini until you find the conflict?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 02, 2013 3:16 am</strong></div>
+				<div class="author">by <strong>arclite89</strong></div>
+				<div class="content">Can someone update the download link for the DLLs, please? The files aren't available anymore on that link. Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Apr 02, 2013 11:27 pm</strong></div>
+				<div class="author">by <strong>Sabotaged</strong></div>
+				<div class="content"><blockquote><div><cite>arclite89 wrote:</cite>Can someone update the download link for the DLLs, please? The files aren't available anymore on that link. Thanks.</div></blockquote>
+
+Here: <a href="../phpbb/viewtopic8b9e.php?t=12899" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=12899</a><br>
+<br>
+I downloaded BSA and inside was the latest sbiextra.dll and sbiextra_x64.dll</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed May 08, 2013 1:47 pm</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content">It may be a dumb question, but is this still useful with version 4?<br>
+<br>
+This is part of what Tzuk mentioned  for version 4 - <em>Instead, a program under the supervision of Sandboxie v4 runs with no permissions and cannot access or manipulate objects in the system outside the program's own memory.</em><br>
+<br>
+This is what this utility does - <em>...block sandboxed processes from accessing information about processes running outside the sandbox, and to prevent them from reading the memory of any process not running in their same sandbox...</em><br>
+<br>
+I may be misinterpreting, but it sounds like version 4 does what this tool does? At least, for the most part of it? Is there still any advantage to use it?<br>
+<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jun 17, 2013 11:14 pm</strong></div>
+				<div class="author">by <strong>warriorpaw</strong></div>
+				<div class="content"><blockquote><div><cite>fanish wrote:</cite>It may be a dumb question, but is this still useful with version 4?<br>
+<br>
+This is part of what Tzuk mentioned  for version 4 - <em>Instead, a program under the supervision of Sandboxie v4 runs with no permissions and cannot access or manipulate objects in the system outside the program's own memory.</em><br>
+<br>
+This is what this utility does - <em>...block sandboxed processes from accessing information about processes running outside the sandbox, and to prevent them from reading the memory of any process not running in their same sandbox...</em><br>
+<br>
+I may be misinterpreting, but it sounds like version 4 does what this tool does? At least, for the most part of it? Is there still any advantage to use it?<br>
+<br>
+<br>
+Thanks</div></blockquote>
+
+I run the winhex in sandboxie 4.0.2 without this utility , then the winhex can list the processes running outside the sandbox and read their memory . <br>
+I try to read memory from chrome and foobar2000 and PDF reader, even avast! , all access successfully ....... <br>
+<br>
+And sbiextra v1.0.0.17 can't work with sandboxie 4.0.2 ....... I got 'CRT not initialized' error ~<br>
+<br>
+PLS update ~~~ thanks ~~!!!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>CRT not initialized error.</h3>
+				<div class="date">Posted: <strong>Tue Dec 17, 2013 11:30 pm</strong></div>
+				<div class="author">by <strong>Javapraca</strong></div>
+				<div class="content">I have encountered "CRT not initialized" error while trying to run sbiextra v1.0.0.17 on Sandboxie 4.06 (Windows XP SP3).<br>
+<br>
+Wraithdu, could you please take a look on that.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>13</strong> of <strong>15</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&start=180&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:54:51 GMT -->
+</html>

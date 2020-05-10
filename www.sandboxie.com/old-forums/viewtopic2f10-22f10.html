@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=16656&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:00:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; NoDelete for 32 and 64-bit platforms</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>NoDelete for 32 and 64-bit platforms</h2>
+		<p><a href="viewtopic77ad77ad.html?f=22&amp;t=16656">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=16656</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>NoDelete for 32 and 64-bit platforms</h3>
+				<div class="date">Posted: <strong>Sun Oct 06, 2013 7:53 pm</strong></div>
+				<div class="author">by <strong>MiRo</strong></div>
+				<div class="content">As there was no 64-bit version of Buster's Anti Delete DLL available, I've created a similar plugin called NoDelete, which is available for both 32 and 64-bit platforms. I've hooked API functions, which have the delete functionality that I know of:<br>
+<br>
+- DeleteFile<br>
+- CreateFile<br>
+- NtDeleteFile<br>
+- NtSetInformationFile<br>
+- SHFileOperation<br>
+<br>
+Usage is the same as for other plugins (see readme.txt). Full source of the plugin is included (released under MIT license).<br>
+<br>
+Download from here:  <a href="https://app.box.com/NoDelete-104-zip" class="postlink">https://app.box.com/NoDelete-104-zip</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 07, 2013 10:12 am</strong></div>
+				<div class="author">by <strong>Domochevsky</strong></div>
+				<div class="content">What exactly does this do?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 07, 2013 10:56 am</strong></div>
+				<div class="author">by <strong>MiRo</strong></div>
+				<div class="content">It prevents programs running under Sandboxie to delete files - useful for example during installation of a program or when some malware creates temporary files, do something with them and then deletes them to hide it's activity. With this plugin the programs think they were successful when deleting files although in reality the files are left in the sandbox.<br>
+<br>
+Of course this could cause a different response from the program if it checks if the file is really deleted, but that's a trade-off.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 07, 2013 11:05 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Thanks for the utility, MiRo!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 15, 2013 5:09 am</strong></div>
+				<div class="author">by <strong>baselsayeh</strong></div>
+				<div class="content">Thanks you MiRo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=16656&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:00:16 GMT -->
+</html>

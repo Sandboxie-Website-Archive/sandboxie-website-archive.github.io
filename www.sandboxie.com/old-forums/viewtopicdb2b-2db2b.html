@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=59&t=23535&start=75&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:17:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 5.15 Beta Available (latest version 5.16 RC) - Page 6</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>5.15 Beta Available (latest version 5.16 RC)</h2>
+		<p><a href="viewtopic00b2-200b2.html?f=59&amp;t=23535">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=59&amp;t=23535</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>6</strong> of <strong>8</strong></div>
+					<div class="post">
+				<h3>Re: 5.15.7 Beta</h3>
+				<div class="date">Posted: <strong>Wed Dec 07, 2016 1:16 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>And FF does not have a title bar. So therefor, no #..#</div></blockquote>
+424tsiai, Firefox by default dont display the title bar but you can make it show up in Customize, Click Title bar.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.7)</h3>
+				<div class="date">Posted: <strong>Thu Dec 08, 2016 4:00 am</strong></div>
+				<div class="author">by <strong>Klausel</strong></div>
+				<div class="content">I have installed the beta now, my first sandboxie beta. I have choosen the upgrade option. But now everytime i switch to a sandboxed application my keyboard language changes to English.<br>
+This is super annoying as it does not change back, I always have to switch to German again.<br>
+<br>
+I dont know if this is a bug at all or just applies to a beta version but I feel like I should report it.<br>
+//edit: Just in case of course I've disabled the windows default shortcuts CTRL+SHIFT/ALT+SHIFT</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>5.15.7 Beta</h3>
+				<div class="date">Posted: <strong>Thu Dec 08, 2016 7:10 am</strong></div>
+				<div class="author">by <strong>424tsiai</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite><blockquote><div><cite>Curt@invincea wrote:</cite>And FF does not have a title bar. So therefor, no #..#</div></blockquote>
+424tsiai, Firefox by default don't display the title bar but you can make it show up in Customize, Click Title bar.</div></blockquote>
+Already done that via Customize&gt;click Title Bar.<br>
+The problem is that by choosing  Settings &gt;Applications &gt;Accessibility &gt;Screen Readers<br>
+there is No Sandboxie name anymore.<br>
+<br>
+To be fair, maybe it is a Firefox 64-bit issue...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.7)</h3>
+				<div class="date">Posted: <strong>Thu Dec 08, 2016 9:50 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">424tsiai,<br>
+<br>
+Please read Curt's previous post and use OpenWinClass=SWFlash_PlaceHolderX instead of the screen reader template.<br>
+<br>
+Klausel,<br>
+<br>
+What OS are you using? And how are you switching to your applications?  <br>
+If you can provide repro steps, I will test them (I have not seen this issue while using Japanese IME ). <br>
+<br>
+Also, please try deleting the contents of your sandbox (or try a new Sandbox) and see if the issue persists.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>5.15.7 Beta</h3>
+				<div class="date">Posted: <strong>Thu Dec 08, 2016 11:10 am</strong></div>
+				<div class="author">by <strong>424tsiai</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>424tsiai,<br>
+Use OpenWinClass=SWFlash_PlaceHolderX instead of the screen reader template.</div></blockquote>
+
+Can you, PLEASE, guide me (step-by-step) in respect with:<br>
+<br>
+OpenWinClass=SWFlash_PlaceHolderX<br>
+<br>
+?<br>
+<br>
+How do I use the above?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.7)</h3>
+				<div class="date">Posted: <strong>Thu Dec 08, 2016 11:27 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">424tsiai,<br>
+<br>
+Please disable the screen readers template, close all your Sandboxed apps,  then do the following: <br>
+<br>
+In SBIECtrl select Configure --&gt; Edit Configuration<br>
+A Notepad file will open<br>
+Inside, you will find the [Global Settings], followed by the settings for each of your Sandboxes [DefaultBox] , etc...<br>
+Copy OpenWinClass=SWFlash_PlaceHolderX at the end of the [DefaultBox] area (Or at the end of any Sandbox that you want ).<br>
+Save, go back to SBie Control and select Configure --&gt; Reload configuration<br>
+Test flash.<br>
+<br>
+If you need additional assistance setting this up, do not hesitate to send me a PM. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.7)</h3>
+				<div class="date">Posted: <strong>Thu Dec 08, 2016 1:42 pm</strong></div>
+				<div class="author">by <strong>424tsiai</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>424tsiai,<br>
+<br>
+Please disable the screen readers template, close all your Sandboxed apps,  then do the following: <br>
+<br>
+In SBIECtrl select Configure --&gt; Edit Configuration<br>
+A Notepad file will open<br>
+Inside, you will find the [Global Settings], followed by the settings for each of your Sandboxes [DefaultBox] , etc...<br>
+Copy OpenWinClass=SWFlash_PlaceHolderX at the end of the [DefaultBox] area (Or at the end of any Sandbox that you want ).<br>
+Save, go back to SBie Control and select Configure --&gt; Reload configuration<br>
+Test flash.<br>
+<br>
+If you need additional assistance setting this up, do not hesitate to send me a PM. <br>
+<br>
+Regards,<br>
+Barb.-</div></blockquote>
+Worked!!!<br>
+THANKS!!!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.7)</h3>
+				<div class="date">Posted: <strong>Sat Dec 10, 2016 3:46 am</strong></div>
+				<div class="author">by <strong>LoluJaafJofe</strong></div>
+				<div class="content">Hello,<br>
+<br>
+I want to report a bug in the current beta (but should exist in previous versions as well).<br>
+When trying to recover files from sandbox to out of sandbox, when it is a folder, the recovery fails.<br>
+<br>
+Steps to reproduce:<br>
+<br>
+1. Open Sandboxie Control<br>
+2. In File &amp; Folder view browse to any directory with content in your sandbox and left click on the folder with the content<br>
+3. Right click the folder and choose "Recovery in a different path"<br>
+4. Choose any path, I've choosen my G:\ drive<br>
+5. Sandboxie fails to recover the content of the folder.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.7)</h3>
+				<div class="date">Posted: <strong>Mon Dec 12, 2016 10:29 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>LoluJaafJofe wrote:</cite>Hello,<br>
+<br>
+I want to report a bug in the current beta (but should exist in previous versions as well).<br>
+When trying to recover files from sandbox to out of sandbox, when it is a folder, the recovery fails.<br>
+<br>
+Steps to reproduce:<br>
+<br>
+1. Open Sandboxie Control<br>
+2. In File &amp; Folder view browse to any directory with content in your sandbox and left click on the folder with the content<br>
+3. Right click the folder and choose "Recovery in a different path"<br>
+4. Choose any path, I've choosen my G:\ drive<br>
+5. Sandboxie fails to recover the content of the folder.</div></blockquote>
+
+LoluJaafJofe,<br>
+<br>
+What OS are you running? And, do you have any AV software installed? <br>
+I need those details in order to test this issue.<br>
+<br>
+Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 13, 2016 7:54 am</strong></div>
+				<div class="author">by <strong>a3739349drdrbcom</strong></div>
+				<div class="content">Platform:Win8.1 x64 with all patch; SBIE 5.15.7 <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> <br>
+<br>
+SBIE incompatible with <strong>Opera 42.0.2393.85 <span style="text-decoration: underline">Stable</span> x64</strong>、Opera 43.0.2431.0 developer x64、<strong>Vivaldi 1.6 RC1 1.6.689.29</strong> Snapshot x64 which based on Chromium 55 &amp; 56.Please look at them.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re:</h3>
+				<div class="date">Posted: <strong>Tue Dec 13, 2016 9:46 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>a3739349drdrbcom wrote:</cite>Platform:Win8.1 x64 with all patch; SBIE 5.15.7 <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> <br>
+<br>
+SBIE incompatible with <strong>Opera 42.0.2393.85 <span style="text-decoration: underline">Stable</span> x64</strong>、Opera 43.0.2431.0 developer x64、<strong>Vivaldi 1.6 RC1 1.6.689.29</strong> Snapshot x64 which based on Chromium 55 &amp; 56.Please look at them.</div></blockquote>
+
+<br>
+Could you please provide more details so that I can test this? What do you mean by "incompatible"? <br>
+If you can provide your OS, SBIE and AV versions, I'll check it out. Also, are the browsers installed inside the SBIE or outside? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.8)</h3>
+				<div class="date">Posted: <strong>Tue Dec 13, 2016 1:42 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">5.15.8 has been released. We are targeting this as 5.16 RC in a few days.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.8)</h3>
+				<div class="date">Posted: <strong>Wed Dec 14, 2016 12:16 am</strong></div>
+				<div class="author">by <strong>nomnom</strong></div>
+				<div class="content">Someone already reported issue with Chrome 55 before at <a href="viewtopicf583f583.html?p=124748#p124748" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 48#p124748</a>. But just in case the sandboxie team forgot about it. Chrome 55 (stable) x64 version couldn't run properly on Sandboxie (also on 5.15.8 ) since it was released almost 2 weeks ago. Tested on W7 64 + SB 5.15.8 + Chrome 55 (64 bit) installed in sandbox. The only way to be able to run chrome 55 (and be able to open any page) inside the sandbox is by disabling Chrome's own sandbox feature.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 14, 2016 1:09 am</strong></div>
+				<div class="author">by <strong>a3739349drdrbcom</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>Could you please provide more details so that I can test this? What do you mean by "incompatible"? <br>
+If you can provide your OS, SBIE and AV versions, I'll check it out. Also, are the browsers installed inside the SBIE or outside? <br>
+<br>
+Regards,<br>
+Barb.-</div></blockquote>
+
+All of them written below While inside SBIE. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> <br>
+Opera 42 <span style="text-decoration: underline">Stable</span> x64 (Chromium 55)、Opera 43 developer x64 (Chromium 56) run wiht a loading blank page and CAN NOT open any website including its settings. <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"> <br>
+Vivaldi 1.6 RC2 x64 (Chromium 55) CAN NOT run and lead to auto-exit.<br>
+<br>
+Platform : <em>Win8.1 x64</em> with lastest patch &amp; SBIE 5.15.8 x64.<br>
+<br>
+Another issue:<br>
+<br>
+MPC-BE 1.5.0.2235 Release x64 will exit once open any video or audio files inside SBIE.<br>
+<br>
+Platform: Win8.1 x64 with all lastest patch &amp; SBIE 5.15.8 x64 &amp; Avira Antivirus 15.0.24 without any other security software.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 5.15 Beta Available (latest version 5.15.8)</h3>
+				<div class="date">Posted: <strong>Wed Dec 14, 2016 1:38 am</strong></div>
+				<div class="author">by <strong>13334</strong></div>
+				<div class="content">Hello：<br>
+<br>
+I'm sorry, my English is poor，But encounter problems，With the aid of translation tools. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> <br>
+Platform:Win8.1 x64 with all patch<br>
+SBIE 5.14~5.15.8<br>
+All versions of chrome55+ always crash</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>6</strong> of <strong>8</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=59&t=23535&start=75&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:17:49 GMT -->
+</html>

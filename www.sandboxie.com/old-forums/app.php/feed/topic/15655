@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15655" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-06-11T16:57:16-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15655</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-06-11T16:57:16-04:00</updated>
+
+		<published>2013-06-11T16:57:16-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90558#p90558</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90558#p90558"/>
+		<title type="html"><![CDATA[FaxtAccess Facial Recognition does not work on Sandboxie 3.7]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90558#p90558"><![CDATA[
+Thank you for the quick confirmation.  I'm glad to hear it works, I'll add that as a compatibility setting in Sandboxie.<br><br>As for reducing the security.  In theory any exclusion you make might reduce security.  But I think it's about striking a balance between security and usability/convenience that works for you.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Tue Jun 11, 2013 4:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-06-11T11:17:51-04:00</updated>
+
+		<published>2013-06-11T11:17:51-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90555#p90555</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90555#p90555"/>
+		<title type="html"><![CDATA[FaxtAccess Facial Recognition does not work on Sandboxie 3.7]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90555#p90555"><![CDATA[
+<blockquote><div><cite>tzuk wrote:</cite>Let's try a couple of resource settings based on your log.<br><br>Open Sandboxie Control &gt; Sandbox &gt; Sandbox Settings<br><br>In Sandbox Settings:<br><br>Resource Access &gt; IPC Access &gt; Direct Access<br>Click Add, then paste:<br><strong>*\BaseNamedObjects*\E84B01BF-FA91-48e4-A4B3-EECD7E4DB810</strong><br>Click add again, paste:<br><strong>\RPC Control\Callbacks*</strong><br><br>Resource Access &gt; Window Access<br>Click Add, then paste:<br><strong>FATrayAlert</strong><br><br>Click OK all the way back, restart browser and tell me if there is an improvement.<br>If still doesn't work, leave the new settings in place, and produce a new resource log.</div></blockquote><br>Hi again Tzuk,<br>Thanks a lot for this and your quick response.  I tried it and it worked!!!!.  Much appreciated.  Will keep on testing to make sure.  I just thought I would report straight back.  <br><br>Just so I know.  Do these changes reduce the security of the system in any way?<p>Statistics: Posted by Guest — Tue Jun 11, 2013 11:17 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-06-11T01:57:21-04:00</updated>
+
+		<published>2013-06-11T01:57:21-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90540#p90540</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90540#p90540"/>
+		<title type="html"><![CDATA[FaxtAccess Facial Recognition does not work on Sandboxie 3.7]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90540#p90540"><![CDATA[
+Let's try a couple of resource settings based on your log.<br><br>Open Sandboxie Control &gt; Sandbox &gt; Sandbox Settings<br><br>In Sandbox Settings:<br><br>Resource Access &gt; IPC Access &gt; Direct Access<br>Click Add, then paste:<br><strong>*\BaseNamedObjects*\E84B01BF-FA91-48e4-A4B3-EECD7E4DB810</strong><br>Click add again, paste:<br><strong>\RPC Control\Callbacks*</strong><br><br>Resource Access &gt; Window Access<br>Click Add, then paste:<br><strong>FATrayAlert</strong><br><br>Click OK all the way back, restart browser and tell me if there is an improvement.<br>If still doesn't work, leave the new settings in place, and produce a new resource log.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Tue Jun 11, 2013 1:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-06-10T21:49:23-04:00</updated>
+
+		<published>2013-06-10T21:49:23-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90534#p90534</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90534#p90534"/>
+		<title type="html"><![CDATA[FaxtAccess Facial Recognition does not work on Sandboxie 3.7]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90534#p90534"><![CDATA[
+<blockquote><div><cite>tzuk wrote:</cite>We can try the Resource Access Monitor feature in Sandboxie to see if it reveals any resources any hints about this.<br><br>For step by step instructions please see the following page.<br>Please make sure that you first start the monitor, and only then you start IE in the sandbox.<br><br><a href="http://www.sandboxie.com/index.php?ResourceAccessMonitor" class="postlink">http://www.sandboxie.com/index.php?Reso ... essMonitor</a><br><br>Post your log results here in your reply.</div></blockquote><br>Thank you Tzuk for your quick response.  <br><br>I started the Resource monitor, opened up my browser (which opens on Google search page), then opened up the Yahoo mail login page.  This normally starts up FastAccess and the camera to do its face recognition thing when unsandboxed. Hope there is a workaround for this.  Here are the results<br><br><br><em>snipped. --tzuk</em><p>Statistics: Posted by Guest — Mon Jun 10, 2013 9:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-06-10T07:22:28-04:00</updated>
+
+		<published>2013-06-10T07:22:28-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90520#p90520</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90520#p90520"/>
+		<title type="html"><![CDATA[FaxtAccess Facial Recognition does not work on Sandboxie 3.7]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90520#p90520"><![CDATA[
+We can try the Resource Access Monitor feature in Sandboxie to see if it reveals any resources any hints about this.<br><br>For step by step instructions please see the following page.<br>Please make sure that you first start the monitor, and only then you start IE in the sandbox.<br><br><a href="http://www.sandboxie.com/index.php?ResourceAccessMonitor" class="postlink">http://www.sandboxie.com/index.php?Reso ... essMonitor</a><br><br>Post your log results here in your reply.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Jun 10, 2013 7:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-06-08T21:00:12-04:00</updated>
+
+		<published>2013-06-08T21:00:12-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90495#p90495</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90495#p90495"/>
+		<title type="html"><![CDATA[FaxtAccess Facial Recognition does not work on Sandboxie 3.7]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15655&amp;p=90495#p90495"><![CDATA[
+Hi<br><br>I have been running Sandboxie version 3.76 (latest stable release) on a Dell XPS 15 L502 laptop with Windows 7 64 bit version operating system and internet explorer 10.  Mcafee Security Centre 11.6 (latest) is also installed (comes with firewall and virus scanner).  I have had to turn off the Mcafee site Advisor toolbar to stop IE10 from freezing and am living with that.  I am however having problem with running FastAccess Sensible Vision Version 4 web add-on in IE10 (latest version 4).  This comes pre installed on Dell pcs and allows fast access into web sites that requires logging on by using facial recognition via the inbuilt camera. This works fine when running IE10 outside Sandboxie but does not even try to work when running IE under Sandboxie.  I need help to get this working.  Any suggestions ?  I suspect that others may have come across this problem as FastAccess comes with many Dell pcs. Can someone help ??<br><br>Thanks <br>Glenn<p>Statistics: Posted by Guest — Sat Jun 08, 2013 9:00 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

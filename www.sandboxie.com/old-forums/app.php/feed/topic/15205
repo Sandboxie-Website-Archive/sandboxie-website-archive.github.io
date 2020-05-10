@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15205" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-06-20T18:16:21-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15205</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-06-20T18:16:21-04:00</updated>
+
+		<published>2013-06-20T18:16:21-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90887#p90887</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90887#p90887"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90887#p90887"><![CDATA[
+I looked into this but I'm sorry to say this isn't fixable.  The way Firefox interacts with the taskbar involves putting data into the Windows Explorer process.  Now since you're running as full Admin, your Windows Explorer is only accessible to administrators.  At the same time, you're using Drop Rights which means the process in the sandbox does not have administrator privileges.  So it can't put data into the Windows Explorer process.<br><br>You can prove this to yourself by using Process Explorer, double click to display properties for explorer.exe, view Security tab, click the Permissions button on the bottom (just above Cancel), then add your user account and give it full access.  This way you're making it possible to put data into Windows Explorer for processes that run with your user account but don't have admin privileges.  And then your rights-dropped sandboxed Firefox will be able to un-hide the taskbar (as a result of being allowed to put data into Windows Explorer).<br><br>If you're saying this worked in version 3.76 then that's actually not something to strive for, and while the new behavior may be less convenient for you, it is nevertheless the correct behavior.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Jun 20, 2013 6:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-06-17T11:31:32-04:00</updated>
+
+		<published>2013-06-17T11:31:32-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90695#p90695</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90695#p90695"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90695#p90695"><![CDATA[
+Sorry that I didn't check Firefox, I didn't think Firefox would handle that bit differently than Chrome.  I'll make a note to fix that later.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Jun 17, 2013 11:31 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[henri]]></name></author>
+		<updated>2013-06-17T10:33:05-04:00</updated>
+
+		<published>2013-06-17T10:33:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90691#p90691</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90691#p90691"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90691#p90691"><![CDATA[
+4.02 =&gt; Ok solve in google but not in firefox; of corse in w7.<br><br>Thanks<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=13098">henri</a> — Mon Jun 17, 2013 10:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-06-17T07:05:10-04:00</updated>
+
+		<published>2013-06-17T07:05:10-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90680#p90680</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90680#p90680"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90680#p90680"><![CDATA[
+No need for multiple posts.  I was able to reproduce on Windows 7, and this will be fixed in the official version 4.02.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Jun 17, 2013 7:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[henri]]></name></author>
+		<updated>2013-06-17T06:46:08-04:00</updated>
+
+		<published>2013-06-17T06:46:08-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90679#p90679</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90679#p90679"/>
+		<title type="html"><![CDATA[Taskbar not unhiding with Firefox and Chrome again.]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90679#p90679"><![CDATA[
+Hi Tzuk <br><br>I don´t now if the right place it´s here, for put again this issue or in this topic: <a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=15205" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15205</a>.<br><br>Thanks<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=13098">henri</a> — Mon Jun 17, 2013 6:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[henri]]></name></author>
+		<updated>2013-06-17T04:25:36-04:00</updated>
+
+		<published>2013-06-17T04:25:36-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90677#p90677</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90677#p90677"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90677#p90677"><![CDATA[
+Hi Tzuk!<br><br>I can reproduce ethe problem. <br><br>It's drop rights again. If you check this in am administrattive account, you have this situation.<br><br>I am sorry, but seems this part of sandboxie (drop rigths) it is not stable or fix enough<br><br>Thanks again.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=13098">henri</a> — Mon Jun 17, 2013 4:25 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[henri]]></name></author>
+		<updated>2013-06-17T04:11:12-04:00</updated>
+
+		<published>2013-06-17T04:11:12-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90675#p90675</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90675#p90675"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90675#p90675"><![CDATA[
+Hi again!<br><br>This came again!<br><br>Thanks again.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=13098">henri</a> — Mon Jun 17, 2013 4:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Mandrake]]></name></author>
+		<updated>2013-06-06T02:18:36-04:00</updated>
+
+		<published>2013-06-06T02:18:36-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90411#p90411</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90411#p90411"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=90411#p90411"><![CDATA[
+hello<br>I still have the problem with the 4.01.11 release.<br><br>Win 7 64bit<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=6821">Mandrake</a> — Thu Jun 06, 2013 2:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Andyjm]]></name></author>
+		<updated>2013-04-22T08:17:40-04:00</updated>
+
+		<published>2013-04-22T08:17:40-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=89133#p89133</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=89133#p89133"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=89133#p89133"><![CDATA[
+Fixed for me in 4.01.06.<br><br>Thank you tzuk.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=14937">Andyjm</a> — Mon Apr 22, 2013 8:17 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-04-22T06:36:11-04:00</updated>
+
+		<published>2013-04-22T06:36:11-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=89122#p89122</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=89122#p89122"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=89122#p89122"><![CDATA[
+Please check version 4.01.06.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Apr 22, 2013 6:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-04-17T15:28:55-04:00</updated>
+
+		<published>2013-04-17T15:28:55-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88993#p88993</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88993#p88993"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88993#p88993"><![CDATA[
+This will be fixed in the next beta version.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Apr 17, 2013 3:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-04-16T16:35:27-04:00</updated>
+
+		<published>2013-04-16T16:35:27-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88964#p88964</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88964#p88964"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88964#p88964"><![CDATA[
+I've started looking into this problem earlier today.  It's probably fixable, but I didn't yet get around to finishing work on this.  I'll have more to say about this tomorrow.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Tue Apr 16, 2013 4:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[henri]]></name></author>
+		<updated>2013-04-16T15:35:03-04:00</updated>
+
+		<published>2013-04-16T15:35:03-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88960#p88960</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88960#p88960"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88960#p88960"><![CDATA[
+This started happening in version 4. It´s frustrating to have to be minimizing the browsers, if we want to see a file in taskbar like opens pdf files. The alternative I have used since that problema is browsers with IE, when need to see the open files.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=13098">henri</a> — Tue Apr 16, 2013 3:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-04-15T09:28:57-04:00</updated>
+
+		<published>2013-04-15T09:28:57-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88935#p88935</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88935#p88935"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88935#p88935"><![CDATA[
+Same here. <br><br>Sandboxie 4.01.05. Windows 7 64bit.<br>Using Firefox 20.0.1<p>Statistics: Posted by Guest — Mon Apr 15, 2013 9:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Andyjm]]></name></author>
+		<updated>2013-04-12T12:56:51-04:00</updated>
+
+		<published>2013-04-12T12:56:51-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88868#p88868</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88868#p88868"/>
+		<title type="html"><![CDATA[[.06] 4.01.05.  Taskbar not unhiding with Firefox and Chrome]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15205&amp;p=88868#p88868"><![CDATA[
+I've just realised that mousing into the corners to bring up Windows 8 options like open apps, start page, settings doesn't work either with the browser maximised.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=14937">Andyjm</a> — Fri Apr 12, 2013 12:56 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

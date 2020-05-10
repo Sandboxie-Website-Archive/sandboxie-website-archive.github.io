@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=21319&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:04:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Forced folder bug</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Forced folder bug</h2>
+		<p><a href="viewtopicbbe7bbe7.html?f=11&amp;t=21319">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21319</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>Forced folder bug</h3>
+				<div class="date">Posted: <strong>Sun Jun 21, 2015 5:07 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">Outside sandboxie folder behave like forced folder when it should not.<br>
+<br>
+How to reproduce:<br>
+1. Download some simple installer .exe/.msi and save it to desktop (unsandboxed path) [in my case CCleaner free]<br>
+2. Run installer in clean TEST sandbox and install the app<br>
+3. Run unsandboxed explorer, navigate to path where app has been installed [C:\Sandbox\*\TEST\drive\C\Program Files\CCleaner]. App shoud run sandboxed and it's ok.<br>
+4. Close it (make sure the app doesn't stay in background like taskbar icon), move (cut-paste) whole app folder to unsandboxed desktop<br>
+5. Open (unsandboxed) app folder and start the application. It will run sandboxed in your TEST sandbox (even if path is outside of sandbox now). Whole app [CCleaner] folder behaves like forced folder (for all executables) for TEST sandbox which is really old bug.<br>
+<br>
+[any simple application, CCleaner, CPU-Z]</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced folder bug</h3>
+				<div class="date">Posted: <strong>Sun Jun 21, 2015 8:14 pm</strong></div>
+				<div class="author">by <strong>nanana1</strong></div>
+				<div class="content">After step 4, can you reboot your PC before running step 5 and report back if step 5 bug still happen after reboot.  <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced folder bug</h3>
+				<div class="date">Posted: <strong>Sun Jun 21, 2015 9:00 pm</strong></div>
+				<div class="author">by <strong>btm</strong></div>
+				<div class="content">I was able to duplicate this 'issue' on my Windows 7 x64 system and I eliminated a few possibilities. SbieSvc and the gui are not involved. That leaves Windows itself (the one I'm leaning toward) and the sbie driver. After a reboot if you cut and paste the folder before sandboxie ever runs anything from the folder it is still protected so this is why I'm inclined to think it is more likely windows is responsible. Either way it could be related to some sort of handle issue in the sandboxie driver or more likely, such as when using disk management and removing or changing a drive letter, it is still available  from the old path until the next reboot in certain cases. I doubt it's a 'sandboxie' handle issue because sandboxie still protects paths that aren't loaded at boot and has never caused my system to be unable to safely remove a drive even after a path from a removable hdd was used. I really do think it's somehow related to how windows and/or ntfs works and not sbie in particular.<br>
+<br>
+A reboot after the move fixes it either way so I'm not concerned.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced folder bug</h3>
+				<div class="date">Posted: <strong>Mon Jun 22, 2015 5:18 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">I just tried this with CC.  As long as I kill the ccleaner.exe that is running in the background inside the sandbox, the new ccleaner.exe runs outside the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced folder bug</h3>
+				<div class="date">Posted: <strong>Mon Jun 22, 2015 11:18 pm</strong></div>
+				<div class="author">by <strong>btm</strong></div>
+				<div class="content">Just in case, as you weren't very specific with your test method, <em>copying</em> the directory to a diff directory won't cause this issue. Cutting and pasting the folder does. Eg "C:\Program Files\Test1\Test2\test.exe" with "C:\Program Files\Test1\Test2\" being a forced folder. Running the test app and then closing it, followed by cutting and pasting the Test2 folder so that it exists as "C:\Program Files\Test2\" then launching the test exe from the new folder location manually does it for me every time. Subsequently renaming the same directory STILL leaves it protected by sandboxie and it continues on like this any time a CUT and paste is used until reboot. It'd be nice if you could reproduce it to see what he meant (and verify if sandboxie is not at fault).<br>
+<br>
+I just retested it with a FAT XP install followed by an NTFS XP install, happened on both so it is def not 'NTFS specific' after all. That leaves windows or sbie. Either way it's not something I'm actually concerned about but the fact you weren't able to reproduce it makes me think you did it wrong!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced folder bug</h3>
+				<div class="date">Posted: <strong>Tue Jun 23, 2015 6:03 am</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>I just tried this with CC.  As long as I kill the ccleaner.exe that is running in the background inside the sandbox, the new ccleaner.exe runs outside the sandbox.</div></blockquote>
+Ok, my fault, some time has passed since I reported this for a first time <a href="viewtopic8e988e98.php?p=105389#p105389" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 89#p105389</a> I've experienced some issues with latest CCleaner. However it was possible to reproduce the issue with 4.x CCleaner version.<br>
+<br>
+So I decided to record the video on my crappy netbook, so my apologies for low video quality.<br>
+<a href="https://youtu.be/bedwlZhvGX4" class="postlink">https://youtu.be/bedwlZhvGX4</a><br>
+<br>
+CPU-Z is unable to load the driver but it does not really matter in this case - issue can be reproduced same way.<br>
+<br>
+Here is my configuration:<br>
+<a href="http://pastebin.com/ZBfRBnfV" class="postlink">http://pastebin.com/ZBfRBnfV</a><br>
+<br>
+Also the tread title may be a little bit confusing as forced folder option should not be used. If you find any better title that is short enough, please feel free to change it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced folder bug</h3>
+				<div class="date">Posted: <strong>Tue Jun 23, 2015 5:29 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">I just ran through the same steps.  I can't tell exactly what you are doing because it is in Polish and you have a bunch of other apps that have added to the R-click context menus.<br>
+<br>
+I downloaded IrfanView into the sandbox.  I r-click and select copy the InfraView folder.  If I "Paste" the IrfanView folder onto the desktop, the exe will run outside the sandbox.  If I "Paste shortcut" onto the desktop, the exe runs in the sandbox.<br>
+<br>
+I think you have something on your machine that makes this copy behave like a copy shortcut.  Can anyone else try these steps to verify what I am seeing?<br>
+<br>
+When you look at the properties for i_view32.exe, is it located on your desktop?<br>
+
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/filed0e0d0e0.jpg?id=319" class="postimage" alt="IrfanView.jpg" onclick="viewableArea(this);" /></dt>
+						<dd>IrfanView.jpg (69.89 KiB) Viewed 2016 times</dd>
+		</dl>
+		
+		
+		
+			</div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced folder bug</h3>
+				<div class="date">Posted: <strong>Tue Jun 23, 2015 6:13 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">Oh, c'mon that one should be simple. Setup has been downloaded using sandboxed browser, moved by IDM do the unsandboxed desktop. Then using content menu setup started inside of abc sandbox. The program has been executed inside of the sandbox - it was ok. After that whole folder has been <strong>moved</strong> (cut -&gt; paste; not copied) to desktop. The bug is that something <strong>wrongly</strong> thinks that moved folder and executables are still inside sandboxed path while they are not.<br>
+<br>
+<a href="../iv.pl/images/61242900438243351442.jpg" class="postlink"><img src="../iv.pl/images/61242900438243351442_thumb.jpg" class="postimage" alt="Image"></a><br>
+<br>
+Most likely you won't reproduce this if you copy a folder.<br>
+<br>
+Paths are shown on the video and yes it was unsandboxed desktop.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Folder moved from inside-&gt;outside of box behaves like fo</h3>
+				<div class="date">Posted: <strong>Tue Jun 23, 2015 6:33 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Ok, <span style="text-decoration: underline">cut</span> and paste produces the same thing for me.  I can't repeat the problem.  It runs outside the sandbox just like it is supposed to.  Perhaps IDM is causing this -- I don't use it.<br>
+<br>
+What are the contents of your user's desktop folder?  Do you see an IrfanView folder and all its contents?  Did you look at the properties of i_view32.exe like I asked?  Have you tried this without IDM?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Folder moved from inside-&gt;outside of box behaves like fo</h3>
+				<div class="date">Posted: <strong>Tue Jun 23, 2015 6:43 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Sandboxie does not keep track of files you copy out of the sandbox.  When you start an exe outside Sbie, Sbie has no way of knowing that it used to be in the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Folder moved from inside-&gt;outside of box behaves like fo</h3>
+				<div class="date">Posted: <strong>Tue Jun 23, 2015 11:16 pm</strong></div>
+				<div class="author">by <strong>btm</strong></div>
+				<div class="content">I would have expected some sort of locked file issue to occur if sandboxie was the culprit but my original findings attempting to duplicate his stand. It's not 'just' folders moved from the sandbox directory that show this issue as I was easily able to reproduce it with the C:\Program Files\Test1\Test2 folder example I gave above over multiple OS's. I still think it may have to do more with windows and like I've said before, it's not a big deal either way. What has gotten on my nerves by even being a part of this thread and reading what followed is that it seems my time, tests to eliminate certain things, example of how to re-create and ultimately - notes were either skimmed over and not understood or completely ignored. I made the 'CUT' and paste point quite clear and yet you still tried to copy and paste it...again?! =( I'll happily make a nice little windows step recorder session for you if needed.<br>
+<br>
+*update: I went ahead and created the psr...it was greater than the 2MB limit on uploads of this forum so I was forced to upload it elsewhere: <a href="http://www.mediafire.com/download/c3gl55czhs9kakg/SBIE_Forced_Folders.zip" class="postlink">http://www.mediafire.com/download/c3gl5 ... olders.zip</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Folder moved from inside-&gt;outside of box behaves like fo</h3>
+				<div class="date">Posted: <strong>Wed Jun 24, 2015 3:06 am</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Ok, <span style="text-decoration: underline">cut</span> and paste produces the same thing for me.  I can't repeat the problem.  It runs outside the sandbox just like it is supposed to.  Perhaps IDM is causing this -- I don't use it.<br>
+<br>
+What are the contents of your user's desktop folder?  <strong>Do you see an IrfanView folder and all its contents?</strong>  Did you look at the properties of i_view32.exe like I asked?  Have you tried this without IDM?</div></blockquote>
+Yes, I see an IrfanView folder and all its contents. Yes, the properties are underlined red to the left on the screenshoot I posted above.<br>
+Of course I've tried this without IDM. This is one of the first bugs/issues I have ever had with Sandboxie. I use your app since 3.64. I won't argue about this but I think such behavior was there since always...<br>
+<br>
+Maybe it's prefetch issue or some other mechanism?<br>
+
+<blockquote><div><cite>btm wrote:</cite>Just in case, as you weren't very specific with your test method, <em>copying</em> the directory to a diff directory won't cause this issue. Cutting and pasting the folder does. Eg "C:\Program Files\Test1\Test2\test.exe" with "C:\Program Files\Test1\Test2\" being a forced folder. Running the test app and then closing it, followed by cutting and pasting the Test2 folder so that it exists as "C:\Program Files\Test2\" then launching the test exe from the new folder location manually does it for me every time. <strong>Subsequently renaming the same directory STILL leaves it protected by sandboxie and it continues on like this any time a CUT and paste is used until reboot.</strong> It'd be nice if you could reproduce it to see what he meant (and verify if sandboxie is not at fault).<br>
+<br>
+I just retested it with a FAT XP install followed by an NTFS XP install, happened on both so it is def not 'NTFS specific' after all. That leaves windows or sbie. Either way it's not something I'm actually concerned about but the fact you weren't able to reproduce it makes me think you did it wrong!</div></blockquote>
+
+You are right. I created new 123 sandbox, and C:\a folder, then placed GPU-Z there, made it forced folder, ran the GPU-Z - started inside, closed it, renamed the folder to b. GPU-Z still run inside 123 sandbox.<br>
+<br>
+<strong>Thank you btm for your time and engagement! I really appreciate that.</strong><br>
+
+<blockquote><div><cite>btm wrote:</cite>It's not 'just' folders moved from the sandbox directory that show this issue as I was easily able to reproduce it with the C:\Program Files\Test1\Test2 folder example I gave above over multiple OS's.</div></blockquote>
+I was able to reproduce this issue on over 15 years old PC with XP running. Both my way with InfraView (setup) I and btm's way with GPU-Z (renamed folder). In other words if you already place InfraView folder to the desktop and try to run the app you will see it run sandboxed. Then you can rename the folder and you'll see it does not change anything.<br>
+<br>
+Why I think it's a problem? If any app installer can not be extracted by 7z, then I install apps in sandbox and then move their folders outside. These are two simple ways to make apps portable <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Do you want me to reproduce the issue on your machine via TeamViewer, @invincea?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Folder folder bug</h3>
+				<div class="date">Posted: <strong>Wed Jun 24, 2015 5:41 am</strong></div>
+				<div class="author">by <strong>nanana1</strong></div>
+				<div class="content">Now I just tried to reproduce the Forced Folder bug and can reproduce the reported bug :<br>
+<br>
+1. Create a forced folder<br>
+2. Download any program, eg. irfanview (iview438_setup.exe) and place it in the forced folder<br>
+3. Double-click on the program within the Forced Folder to install (of course, the program would install itself with the Forced Folder sandbox)<br>
+4. After installation completed, the program runs in the Forced Folder sandbox<br>
+5. Explore the contents of the Forced Folder sandbox and locate the irfanview program folder<br>
+6. CUT &amp; paste the irfanview program folder to desktop which is not protected by Sandboxie<br>
+7. Open the irfanview program folder and double-click on i_view32.exe<br>
+<br>
+You will notice that i_view32.exe run within the Forced Folder sandbox even though it was located on the desktop which is not protected by Sandboxie. <img class="smilies" src="images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes"> <br>
+<br>
+Hope you can now reproduce this Forced Folder bug. <img class="smilies" src="images/smilies/icon_twisted.gif" width="15" height="15" alt=":twisted:" title="Twisted Evil"><br>
+<br>
+On Win7 SP1 - 64bit</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Folder folder bug</h3>
+				<div class="date">Posted: <strong>Wed Jun 24, 2015 8:43 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">I'll see if I can recreate the issue.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Folder folder bug</h3>
+				<div class="date">Posted: <strong>Wed Jun 24, 2015 3:47 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>nanana1 wrote:</cite>Now I just tried to reproduce the Forced Folder bug and can reproduce the reported bug :<br>
+<br>
+1. Create a forced folder<br>
+2. Download any program, eg. irfanview (iview438_setup.exe) and place it in the forced folder<br>
+3. Double-click on the program within the Forced Folder to install (of course, the program would install itself with the Forced Folder sandbox)<br>
+4. After installation completed, the program runs in the Forced Folder sandbox<br>
+5. Explore the contents of the Forced Folder sandbox and locate the irfanview program folder<br>
+6. CUT &amp; paste the irfanview program folder to desktop which is not protected by Sandboxie<br>
+7. Open the irfanview program folder and double-click on i_view32.exe<br>
+<br>
+You will notice that i_view32.exe run within the Forced Folder sandbox even though it was located on the desktop which is not protected by Sandboxie. <img class="smilies" src="images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes"> <br>
+<br>
+Hope you can now reproduce this Forced Folder bug. <img class="smilies" src="images/smilies/icon_twisted.gif" width="15" height="15" alt=":twisted:" title="Twisted Evil"><br>
+<br>
+On Win7 SP1 - 64bit</div></blockquote>
+
+Alright, I did this with (2) test programs. One was Skype and the other was ccleaner. Followed the same steps as you have listed (minus the irfanview.exe program, but you suggested ANY program) .......and I did <strong>not</strong> get an sort of sandboxed behavior when I cut and paste to the desktop from a forced folder. When I run the cut program from the unprotected desktop, it runs normally. Anyone else??<br>
+<br>
+Windows 7/64. SBie 4.19.4</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=21319&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:04:39 GMT -->
+</html>

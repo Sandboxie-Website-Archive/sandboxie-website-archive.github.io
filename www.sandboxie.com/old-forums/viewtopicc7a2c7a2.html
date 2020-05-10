@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24290&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:15:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Disk thrashing in catroot while running Chrome</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Disk thrashing in catroot while running Chrome</h2>
+		<p><a href="viewtopic9c529c52.html?f=11&amp;t=24290">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24290</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Disk thrashing in catroot while running Chrome</h3>
+				<div class="date">Posted: <strong>Fri Apr 14, 2017 9:49 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">I have noticed rarely my laptop running Windows 8.1 and Sandboxie and Chrome will sometimes have large disk thrashing so constant it slows the computer to be unusable. I've checked in performance monitor and I can see it is a ton of files with the name catroot in the path that are being read when Chrome is running in a Sandboxie sandbox. Why all those files need to be read I don't know. I found two reports about this but they are old:<br>
+<br>
+2015: <a href="viewtopicb74ab74a.php?f=17&amp;t=21660" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 17&amp;t=21660</a><br>
+2012: <a href="viewtopic12ad12ad.php?f=11&amp;t=13706" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=13706</a><br>
+<br>
+I may have also reported this before and forgot about it, and I can't find it via search. This happened to me in prior years then went away. Are there other reports of this and why is there so much disk activity in catroot? Is it a bug? It happened this afternoon when I had just one site open, dominos.com.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disk thrashing in catroot while running Chrome</h3>
+				<div class="date">Posted: <strong>Mon Apr 17, 2017 4:04 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi cornflake,<br>
+<br>
+Did this occur after having been browsing for a while, or you had just opened Chrome and that site?<br>
+Any Antivirus installed?<br>
+Are you running Chrome 64 or 32 bits?<br>
+Is your OS 32 or 64 bits?<br>
+<br>
+Any additional information you can provide might be useful.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disk thrashing in catroot while running Chrome</h3>
+				<div class="date">Posted: <strong>Mon Apr 17, 2017 9:21 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">Sorry, I forgot that information. I'm using Sandboxie 5.17.1 in Windows 8.1 x64. No antivirus other than Windows Defender. I had just opened Chrome 57.0.2987.133 64-bit and I was going to order a pizza, so I went to dominos.com and there is an option pickup or delivery and I chose pickup and then the disk started thrashing (normally at this point it would also show me locations to pick up from). I opened Firefox and was able to complete an order. During this time Chrome was frozen. I left the computer on and when I came back Chrome was working again, and also I reloaded dominos.com and did the same thing just to see what would happen and it worked fine.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disk thrashing in catroot while running Chrome</h3>
+				<div class="date">Posted: <strong>Tue Apr 18, 2017 10:48 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello cornflake,<br>
+<br>
+There were changes in beta 5.17.4 that involved fixing a memory leak (not necessarily related to Chrome, but it might be related to your issue).<br>
+Can you please give the latest beta [<a href="viewtopiccca7cca7.php?f=60&amp;t=23888#p125732" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 88#p125732</a>], or the latest Stable version (5.18) a try? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disk thrashing in catroot while running Chrome</h3>
+				<div class="date">Posted: <strong>Tue Apr 18, 2017 4:59 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">Sure, I am going to update to 5.18. Note this issue happens rarely so I don't expect to encounter it for a long time.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disk thrashing in catroot while running Chrome</h3>
+				<div class="date">Posted: <strong>Sat Apr 22, 2017 12:14 am</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">Barb I updated that computer to Sandboxie 5.18 and Chrome 58.0.3029.81 64-bit. Now I have another weird problem which may be related. Whenever I close chrome the processes linger in the sandbox for exactly one minute. During that time I can see lsass.exe eating CPU. I cannot reproduce it in any other sandbox on that machine, just the one that had the catroot issue. I also tried some other computers, Windows 8 and Windows 10 with the same setup and I cannot reproduce there.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disk thrashing in catroot while running Chrome</h3>
+				<div class="date">Posted: <strong>Mon Apr 24, 2017 1:06 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello cornflake,<br>
+<br>
+If you can repro the issue, it will be great if you provide a PML log so that the devs can review it:<br>
+<a href="https://technet.microsoft.com/en-us/sysinternals/processmonitor.aspx" class="postlink">https://technet.microsoft.com/en-us/sys ... nitor.aspx</a><br>
+Launch procmon, reproduce the issue in SBIE, stop procmon (hit the magnifying glass) .<br>
+Go to File--&gt;Save and upload the log (you may need to use a free file hosting site as the logs tend to be big).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disk thrashing in catroot while running Chrome</h3>
+				<div class="date">Posted: <strong>Sat Dec 09, 2017 3:15 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic3ef53ef5.html?p=127655#p127655" data-post-id="127655" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Apr 24, 2017 1:06 pm</div></cite>If you can repro the issue, it will be great if you provide a PML log so that the devs can review it</div></blockquote>
+
+Sorry I can't send that because it likely contains sensitive information. I am still seeing lsass 25% CPU usage when I start Chrome. I don't know if there's disk thrashing or not anymore since I replaced the hard drive with an SSD.<br>
+<br>
+Now I am using:<br>
+<br>
+Sandboxie 5.23.1<br>
+Chrome 63.0.3239.84 (Official Build) (64-bit)<br>
+OS Name:                   Microsoft Windows 8.1 Pro<br>
+OS Version:                6.3.9600 N/A Build 9600<br>
+<br>
+I did run process monitor and I see lsass repeatedly accessing the same registry entries over and over for the 1-2 min lsass eats CPU:<br>
+
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file615d615d.gif?id=1304" class="postimage" alt="Clipboard01.gif" onclick="viewableArea(this);" /></dt>
+						<dd>Clipboard01.gif (104.9 KiB) Viewed 571 times</dd>
+		</dl>
+		
+		
+		
+			</div>
+
+and this file is accessed often: C:\Users\Username\AppData\Roaming\Microsoft\Protect\CREDHIST<br>
+<br>
+then it stops.<br>
+<br>
+Also there's a dberr file in sandboxed catroot that is being written to repeatedly these lines:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>CatalogDB: 10:09:36 PM 12/8/2017: waitsvc.cpp at line #440 encountered error 0x00000006
+CatalogDB: 10:09:36 PM 12/8/2017: catdbcli.cpp at line #347 encountered error 0x00000006
+CatalogDB: 10:09:36 PM 12/8/2017: catdbcli.cpp at line #592 encountered error 0x00000426
+CatalogDB: 10:09:36 PM 12/8/2017: catadnew.cpp at line #1950 encountered error 0x00000426
+CatalogDB: 10:09:36 PM 12/8/2017: catadnew.cpp at line #958 encountered error 0x00000426
+CatalogDB: 10:09:37 PM 12/8/2017: waitsvc.cpp at line #440 encountered error 0x00000006
+CatalogDB: 10:09:37 PM 12/8/2017: catdbcli.cpp at line #347 encountered error 0x00000006
+CatalogDB: 10:09:37 PM 12/8/2017: catdbcli.cpp at line #592 encountered error 0x00000426
+CatalogDB: 10:09:37 PM 12/8/2017: catadnew.cpp at line #1950 encountered error 0x00000426
+CatalogDB: 10:09:37 PM 12/8/2017: waitsvc.cpp at line #440 encountered error 0x00000006</code></pre></div>
+
+I have the process monitor log so if you need more information let me know, but I can't send you the whole file it contains sensitive information.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disk thrashing in catroot while running Chrome</h3>
+				<div class="date">Posted: <strong>Mon Dec 11, 2017 11:02 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello cornflake,<br>
+<br>
+Does Chrome behave differently if you run the same tests outside Sandboxie? <br>
+Also, you reported several issues with Chrome in another thread: <br>
+<a href="viewtopic500d500d.html?p=131433#p131433" class="postlink">viewtopic.php?p=131433#p131433</a><br>
+Please follow the provided steps to try to resolve those first, then re-run your tests (inside and outside) Sandboxie. Be sure to use a new Sandbox with default settings. <br>
+<br>
+Regarding the PML, without the full log the devs cannot review it. If you wish to send it privately, you can send us a link to <a href="mailto:support@sandboxie.com">support@sandboxie.com</a> and we will download it from there so it is not public in the forums. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disk thrashing in catroot while running Chrome</h3>
+				<div class="date">Posted: <strong>Mon Dec 11, 2017 10:43 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic73437343.html?p=131449#p131449" data-post-id="131449" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Dec 11, 2017 11:02 am</div></cite>Does Chrome behave differently if you run the same tests outside Sandboxie? <br>
+Also, you reported several issues with Chrome in another thread: <br>
+<a href="viewtopic500d500d.html?p=131433#p131433" class="postlink">viewtopic.php?p=131433#p131433</a><br>
+Please follow the provided steps to try to resolve those first, then re-run your tests (inside and outside) Sandboxie. Be sure to use a new Sandbox with default settings.</div></blockquote>
+
+That issue in the other thread is separate. I have Sandboxie installed on many computers, all a mix of Windows 7, 8, 8.1 and 10.<br>
+<br>
+I am not able to reproduce in a new profile in a new Sandbox.<br>
+<br>
+In the Sandbox I notice this issue I deleted all the RegHive files and all folders except for "C:\Sandbox\Username\Chrome\user\current\AppData\Local\Google\Chrome\User Data" (this includes deleting the sandboxed windows catroot) but lsass still eats CPU for 1-2 min every time I start Chrome. I also tried killing SandboxieRpcSs/DcomLaunch/Crypto but it didn't make a difference.<br>
+<br>
+Unfortunately since both the Chrome profile and the Process Monitor log contain sensitive information I cannot offer that more detailed information to the developers. I hope someone else who also has this problem will come forward with a way to reproduce. Thank you for your help.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24290&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:15:54 GMT -->
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14356" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2012-12-29T09:45:24-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14356</id>
+
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2012-12-29T09:45:24-04:00</updated>
+
+		<published>2012-12-29T09:45:24-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14356&amp;p=86147#p86147</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14356&amp;p=86147#p86147"/>
+		<title type="html"><![CDATA[[.01] Autodesk Inventor 2013 - failing to run in Sandboxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14356&amp;p=86147#p86147"><![CDATA[
+Oh that would be fantastic - thank you very much! <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><p>Statistics: Posted by Guest — Sat Dec 29, 2012 8:45 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2012-12-28T06:23:05-04:00</updated>
+
+		<published>2012-12-28T06:23:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14356&amp;p=86121#p86121</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14356&amp;p=86121#p86121"/>
+		<title type="html"><![CDATA[[.01] Autodesk Inventor 2013 - failing to run in Sandboxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14356&amp;p=86121#p86121"><![CDATA[
+Interesting.  Right now the limit on manifest length is 384KB or 393216 bytes.  I guess that's just not big enough for some programs, in this case we have a program that requires 435004 bytes of configuration data.<br><br>There is no immdiate fix, but I'll change this limit in the upcoming beta version.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Dec 28, 2012 5:23 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2012-12-27T16:46:25-04:00</updated>
+
+		<published>2012-12-27T16:46:25-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14356&amp;p=86097#p86097</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14356&amp;p=86097#p86097"/>
+		<title type="html"><![CDATA[[.01] Autodesk Inventor 2013 - failing to run in Sandboxie]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14356&amp;p=86097#p86097"><![CDATA[
+Hello,<br><br>Some important information:<ul><li>Sandboxie version is 3.76 (64-bit).</li><li>OS is Windows 7 64-bit.</li><li>Attempting to install Autodesk Inventor 2013 Professional 64-bit Trial (<a href="http://trial.autodesk.com/SWDLDDLM/2013/INVNTOR/ESD/Autodesk_Inventor_2013_English_Win_64bit.exe" class="postlink">download link</a>)</li><li>.NET 4.0 appears to be required so this has been installed outside of the sandbox as it is common enough.</li><li>Settings for the sandbox are default with the following changes:<br>- File Migration = 46GB (I just add a few 0's onto the end of the existing number).<br>- Drop rights in unchecked.</li></ul>Steps:<ul><li>Firstly the installed unpacks all the files required for installation.</li><li>Installation starts (make sure to select try for 30 days).</li><li>Leave the default packages.</li><li>Start installation.</li></ul>Problems:<ul><li>Very quickly I get a couple of messages from Sandboxie:<blockquote class="uncited"><div>SBIE2205 Service not implemented:  WMI StdRegProv::DeleteValue<br>SBIE2205 Service not implemented:  WMI IWbemServices 24</div></blockquote></li><li>Towards the end of the installation I get:<blockquote class="uncited"><div>SBIE2205 Service not implemented:  Manifest Length (435004)<br>SBIE2205 Service not implemented:  Manifest Length (435004)</div></blockquote></li><li>Despite these 'errors' the installer reports that everything installed okay.</li><li>When I attempt to run the program, the splash screen appears and the following messages are displayed:<blockquote class="uncited"><div>SBIE2205 Service not implemented:  Manifest Length (435004)<br>SBIE2205 Service not implemented:  Manifest Length (435004)</div></blockquote></li><li>The program doesn't appear to load, although the following programs remain running:<br>- FNPLicensingService64.exe<br>- LMU.exe</li></ul>I'd appreciate any suggestions.<br><br>Thank you.<p>Statistics: Posted by Guest — Thu Dec 27, 2012 3:46 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

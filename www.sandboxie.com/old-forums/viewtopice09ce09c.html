@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24234&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:20:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Forced Folder / Program Sandbox Priorities</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Forced Folder / Program Sandbox Priorities</h2>
+		<p><a href="viewtopice4f9e4f9.html?f=17&amp;t=24234">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24234</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Forced Folder / Program Sandbox Priorities</h3>
+				<div class="date">Posted: <strong>Tue Apr 04, 2017 5:04 pm</strong></div>
+				<div class="author">by <strong>bassmastergg</strong></div>
+				<div class="content">Hi there, <br>
+<br>
+I am attempting to setup my environment where by most larger apps sit in their own sandboxes (via forced program settings), so that data can be kept separate from each other.<br>
+<br>
+I have a default sandbox that has several forced folder settings applied. When I try to open one of the forced program files in a forced folder it opens up within the default sandbox rather than the specific forced program sandbox.<br>
+<br>
+I have attempted to modify the priorities by moving the default sandbox settings in Sandboxie.ini to the very bottom, following what is mentioned here:<br>
+<br>
+<a href="viewtopicc906c906.php?f=17&amp;t=13950&amp;p=84966&amp;hilit=all+encompassing#wrap" class="postlink">http://forums.sandboxie.com/phpBB3/view ... ssing#wrap</a> <br>
+<br>
+but this does not appear to work.<br>
+<br>
+Is the the correct way of doing this? Or is there something I am missing?<br>
+<br>
+Thanks in advance!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Folder / Program Sandbox Priorities</h3>
+				<div class="date">Posted: <strong>Tue Apr 04, 2017 5:25 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello bassmastergg ,<br>
+<br>
+I am not sure I fully understand what you are trying to do. If you want an application to launch inside a specific Sandbox, you need to add the forced program to that specific Sandbox.<br>
+<br>
+Can you please post your Sandboxie.ini contents so that we can have a look? <br>
+<a href="../index6e14.html?SandboxieIni" class="postlink">https://www.sandboxie.com/index.php?SandboxieIni</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Folder / Program Sandbox Priorities</h3>
+				<div class="date">Posted: <strong>Tue Apr 04, 2017 7:57 pm</strong></div>
+				<div class="author">by <strong>bassmastergg</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+As an example I have created a sandbox for Microsoft Word to run in. I added "winword.exe" to the forced programs for that sandbox. This works correctly. <br>
+However, I also have another default sandbox that contains forced folders for things like Dropbox and downloads. If I were to open a word file in either of those forced folders, Word would run within the default sandbox not the Microsoft Word sandbox created specifically for it. <br>
+<br>
+What I am looking for, is a way to have forced programs override forced folder settings for my default box.<br>
+<br>
+Sandbox.ini
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>
+[GlobalSettings]
+
+Template=WindowsRasMan
+Template=WindowsLive
+Template=AdobeAcrobatReader
+Template=Microsoft_MSMQ
+Template=OfficeLicensing
+ActivationPrompt=y
+ForceDisableSeconds=120
+
+[UserSettings_07C60194]
+
+SbieCtrl_UserName=[USER_NAME]
+SbieCtrl_NextUpdateCheck=1491850572
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_WindowCoords=184,164,1237,632
+SbieCtrl_ActiveView=40021
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_EnableLogonStart=y
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=n
+SbieCtrl_AddQuickLaunchIcon=n
+SbieCtrl_AddContextMenu=y
+SbieCtrl_AddSendToMenu=y
+SbieCtrl_TerminateNotify=y
+SbieCtrl_TerminateWarn=n
+SbieCtrl_ExplorerNotify=n
+SbieCtrl_ExplorerWarn=y
+SbieCtrl_EditConfNotify=n
+SbieCtrl_ReloadConfNotify=n
+SbieCtrl_ProcSettingsNotify=n
+SbieCtrl_SettingChangeNotify=n
+SbieCtrl_ShortcutNotify=y
+SbieCtrl_ShouldDeleteNotify=n
+SbieCtrl_AutoApplySettings=n
+BoxDisplayOrder=General(DefaultBox),Applications(Windows(OfficeWord))
+SbieCtrl_BoxExpandedView=DefaultBox,OfficeWord
+
+[OfficeWord]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+ForceProcess=winword.exe
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=Firefox_Bookmarks_DirectAccess
+Template=Chrome_Bookmarks_DirectAccess
+Template=Firefox_Force
+Template=Office_Outlook
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=D:\Users\[USER_NAME]\Dropbox
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+CopyLimitKb=3956445
+ForceFolder=C:\Users\[USER_NAME]\Downloads
+ForceFolder=D:\Users\[USER_NAME]\Dropbox
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Folder / Program Sandbox Priorities</h3>
+				<div class="date">Posted: <strong>Wed Apr 05, 2017 10:11 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello bassmastergg,<br>
+<br>
+If both ForceFolder and ForceProcess are applicable to a program that is starting, the ForceFolder setting takes precedence.<br>
+<br>
+More info here:<br>
+<a href="../indexb34e.html?ForceFolder" class="postlink">https://www.sandboxie.com/index.php?ForceFolder</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Folder / Program Sandbox Priorities</h3>
+				<div class="date">Posted: <strong>Wed Apr 05, 2017 5:31 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content">Not ideal but you can still right click/run sandboxed and choose the correct sandbox for the file, this should override the force folder setting.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24234&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:20:47 GMT -->
+</html>

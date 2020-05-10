@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=877&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; v2.71 problem running DropMyRights</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>v2.71 problem running DropMyRights</h2>
+		<p><a href="viewtopice222e222.html?f=11&amp;t=877">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=877</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>v2.71 problem running DropMyRights</h3>
+				<div class="date">Posted: <strong>Thu Dec 28, 2006 9:57 am</strong></div>
+				<div class="author">by <strong>budfox9</strong></div>
+				<div class="content">When loading a browser (IE or Firefox) through DropMyRights, the sandbox shows the program has loaded and the program shows up in the task manager, but nothing ever shows up on screen.<br>
+<br>
+I had run 2.64 w/o any conflict between the two programs.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Dec 29, 2006 2:10 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Hello budfox9, I looked into the problem with DropMyRights.<br>
+
+<blockquote><div><cite>posbis wrote:</cite>
+Could be a conflict between the two programs. Maybe SB blocks some actions of DropMyRights. 
+</div></blockquote>
+
+This is exactly what happens.<br>
+<br>
+Up to version 2.64, Sandboxie was blocking drivers from becoming loaded, by intercepting OS calls, and denying the call.  (That was the NtLoadDriver call, in case anyone cares.)<br>
+<br>
+Since its the stated goal of version 2.71 to stop intercepting OS calls, this had to be done in a different way.  And the different way is this:<br>
+<br>
+Sandboxie now discards the "load driver" privilege from sandboxed programs, so it no longer needs to explicitly deny any requests -- the OS will deny them because the privilege is not there anymore.<br>
+<br>
+This causes DropMyRights to fail, because it doesn't have all the privileges that it needs in order to function.  In a way your rights are already dropped, inside the sandbox.<br>
+<br>
+Other than just forgetting about DropMyRights, you can try two alternatives:<br>
+<br>
+o   right now you're trying DropMyRights from a sandboxed program.  Try it the other way.  First DropYourRights, then use Start.exe to go sandboxed.<br>
+<br>
+o   tell Sandboxie not to apply its privilege protection.  Set BlockDrivers=no in Sandboxie.ini</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>thx</h3>
+				<div class="date">Posted: <strong>Fri Dec 29, 2006 3:48 pm</strong></div>
+				<div class="author">by <strong>budfox9</strong></div>
+				<div class="content">Thanks Tzuk, I will give your ideas a try over the weekend.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Dec 30, 2006 8:38 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I wanted to bring another issue to your attention.<br>
+<br>
+Some components in a Windows system decide whether you are allowed to carry out some operation, or not, based on whether your account is a member of the built in local Administrators group.<br>
+<br>
+That is, not if your account, or that Admin group, have any particular privilege enabled, or any particular access allowed or denied through access-control lists.  But merely whether your account is a member of that group, or not.<br>
+<br>
+I don't think DropMyRights takes you out of that group, because in many cases, the Admin group is the only group an account has to begin with!<br>
+<br>
+So I think, if you're concerned about security while browsing, running with a non-Admin account is more secure than running as a 'disabled' Admin.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>DropMyRights</h3>
+				<div class="date">Posted: <strong>Sun Dec 31, 2006 7:23 pm</strong></div>
+				<div class="author">by <strong>budfox9</strong></div>
+				<div class="content">Tzuk,<br>
+<br>
+I run some trading software that doesnt allow me to run as limited user.  I have no doubt that what you say is true about XP accounts, but I do know that when I have accidentally run IE with dropmyrights for a activeX type install, the install will fail.  <br>
+<br>
+For me the prefect, low footprint browser security is dropmyrights+ sandboxie. On a sidenote, I have beta tested some of you competitors, and your program in my opinion is still the best.  <br>
+<br>
+Happy New Year in Bezerkly..</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=877&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:44 GMT -->
+</html>

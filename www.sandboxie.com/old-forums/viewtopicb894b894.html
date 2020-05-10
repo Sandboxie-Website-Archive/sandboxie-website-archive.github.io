@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25358&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Using a sandbox on a network share</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Using a sandbox on a network share</h2>
+		<p><a href="viewtopic7e7f7e7f.html?f=17&amp;t=25358">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25358</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Using a sandbox on a network share</h3>
+				<div class="date">Posted: <strong>Fri Jan 19, 2018 7:05 pm</strong></div>
+				<div class="author">by <strong>TonyF</strong></div>
+				<div class="content">Is it possible to run a sandbox on a network share? From what i can tell it should be possible but i am having no luck.<br>
+<br>
+With my use case i am running sandboxie on my daily pc which is a virtual machine. <br>
+<br>
+On my back end i have a parity protected array and specific SSD drives that i am using as a network share. Instead of creating a new drive image (in case it corrupts etc) to store my sandboxed items i would rather store them directly on the share. This also gives me the ability to transparently move files on the back end as the need requires.<br>
+<br>
+<br>
+I have created a symbolic link on my c drive "C:\Sandbox\SandboxCache" which points to "\\192.168.168.99\Sandboxie Cache"<br>
+<br>
+If i run an installer i get:<br>
+SBIE1212 Cannot create directory '\Device\Mup\192.168.168.99\Sandboxie Cache\testbox'<br>
+SBIE2314 Canceling process Start.exe<br>
+<br>
+Note that the 'testbox' folder, reg hive and drive folder were created on the network drive.<br>
+Deleting the contents from sandboxie is also successful.<br>
+<br>
+I have tried opening pipes to this directory etc but to no avail.<br>
+<br>
+<br>
+The computer has write permissions and sandboxie does indeed write there so i dont know what else to try.<br>
+<br>
+Why would sandboxie try to be writing to '\Device\Mup\192.168.168.99\Sandboxie Cache\testbox' instead of "C:\Sandbox\SandboxCache\testbox"?<br>
+<br>
+Any help would be appreciated.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Using a sandbox on a network share</h3>
+				<div class="date">Posted: <strong>Mon Jan 22, 2018 10:29 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello TonyF,<br>
+<br>
+Have a look at these entries:<br>
+<a href="../SBIE1212.html" class="postlink">https://www.sandboxie.com/SBIE1212</a><br>
+<a href="viewtopic919e-2919e.html?f=11&amp;t=24979&amp;hilit=symbolic" class="postlink">viewtopic.php?f=11&amp;t=24979&amp;hilit=symbolic</a><br>
+<a href="viewtopic98e298e2.html?p=130918#p130918" class="postlink">viewtopic.php?p=130918#p130918</a><br>
+<br>
+If you are still unable to get it to work, please provide repro steps along with this info, so that I can test it:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Using a sandbox on a network share</h3>
+				<div class="date">Posted: <strong>Tue Jan 23, 2018 7:27 pm</strong></div>
+				<div class="author">by <strong>TonyF</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+Windows 10 64bit<br>
+Sandboxie v5.22<br>
+<br>
+Software involved. MSI installers, my testing installers in this case is the default MinecraftInstaller.msi or 'PDF Xchange EditorV7.x64.msi<br>
+<br>
+No antivirus running outside of windows defender.<br>
+<br>
+<br>
+I create a symbolic link at "C:\Sandbox\SandboxCache" which points to "\\192.168.168.99\SandboxieCache"<br>
+<br>
+I create a 'test_sandbox' whos filerootpath C:\Sandbox\SandboxCache\%SANDBOX%<br>
+<br>
+- I am able to install steam without issue. Steam however gets stuck permanently 'cleaning up'.<br>
+- Installing an MSI file results in SBIE1212 Cannot create directory '\Device\Mup\192.168.168.2\SandboxieCache\test_sandbox'<br>
+   - Adding Full and direct access to these folders does not make a difference.<br>
+<br>
+<br>
+Note running the above installers in a sandbox not on a symbolic link to a network drive work without issue.<br>
+<br>
+<br>
+There was another test installing steam in a sandbox on the c drive and storing the games on the network drive (via symbolic link) with direct access.<br>
+This scenario works without sandboxie error however steam goes into a game permanent update scenerio (Where the files are on the network drive) which does not happen on the local drive. This indicates there is a permission error however in this case sandboxie does not report anything.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Using a sandbox on a network share</h3>
+				<div class="date">Posted: <strong>Wed Jan 24, 2018 12:43 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello TonyF,<br>
+<br>
+Maybe I am not following, but can't you just set the root folder to the network share that you want to use? You will still need to follow the steps I provided before: <a href="viewtopic98e298e2.html?p=130918#p130918" class="postlink">viewtopic.php?p=130918#p130918</a><br>
+If OpenFilePath doesn't do the trick, do OpenPipePath instead. <br>
+<br>
+I tested that setup and I was able to save a notepad file to the location I gave access to on my network drive.  (It will not work for other drives like C: drive unless you also open paths for them (this is probably why you cannot finish installing your apps), which kind of defeats the purpose of running things in a Sandbox). <br>
+<br>
+The symlink behavior was the same as with the root folder change. However, the performance will degrade a lot when using this setup, just to keep in mind. Launching a web browser took several minutes, saving a notepad file took almost 40 seconds...<br>
+<br>
+I also found further discussions about this (older, but may still apply):<br>
+<a href="viewtopicb1b4b1b4.html?f=11&amp;t=11892" class="postlink">viewtopic.php?f=11&amp;t=11892</a><br>
+<a href="viewtopic1cb01cb0.html?f=11&amp;t=13571" class="postlink">viewtopic.php?f=11&amp;t=13571</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Using a sandbox on a network share</h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2018 6:28 am</strong></div>
+				<div class="author">by <strong>TonyF</strong></div>
+				<div class="content">I had less luck trying to use the root folder directly to the network share.<br>
+<br>
+Using the direct approach without symlinks and trying to open as much access as possible i have done:<br>
+<br>
+FileRootPath=\\192.168.168.99\Sandboxie\NetworkSandbox\%SANDBOX%<br>
+OpenPipePath=\Device\Mup\192.168.168.99\Sandboxie\NetworkSandbox\<br>
+OpenPipePath=\\192.168.168.99\Sandboxie\NetworkSandbox\<br>
+OpenFilePath=\Device\Mup\192.168.168.99\Sandboxie\NetworkSandbox\<br>
+OpenFilePath=\\192.168.168.99\Sandboxie\NetworkSandbox\<br>
+<br>
+Under restrictions -&gt; Network Files i have unticked to block network file access<br>
+<br>
+<br>
+If i run notepad in this sandbox and save a file to the My Documents folder i get ' C:\Users\Me\Documents\test file.txt Path does not exist'. Note i get this error for any path i put in</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Using a sandbox on a network share</h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2018 11:34 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello TonyF,<br>
+
+<blockquote class="uncited"><div>If i run notepad in this sandbox and save a file to the My Documents folder i get ' C:\Users\Me\Documents\test file.txt Path does not exist'. Note i get this error for any path i put in</div></blockquote>
+
+The only paths that will work are the ones within the network drive you are selecting as your root folder.  For other drives, including C: drive, you will need to manually open the paths as I explained on my response above. Again, this setup is not recommended. <br>
+ <br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Using a sandbox on a network share</h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2018 5:20 pm</strong></div>
+				<div class="author">by <strong>TonyF</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+What if i want the saved location to be sandboxed?<br>
+<br>
+If i openfilepath or openpipepath to the for example 'My Documents' then the location is directly accessible and defeats the purpose of a sandbox.<br>
+<br>
+My goal is to have my sandbox functionality the exact same whether the sandbox location is stored on a physical drive or a network drive. eg if i save to 'Program Files' then it is saved in the sandboxed location of 'Program Files'. (ie change 'Set Container Folder' to a network drive and have it work the same as the one on the c drive)<br>
+<br>
+If i get this right and opening direct paths is the only way this works then it defaults the purpose of the sandbox.<br>
+<br>
+You can see why i went the symbolic link route as it had some better results however there were many inconsistencies with that as well. (Hence this post)</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25358&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:48:29 GMT -->
+</html>

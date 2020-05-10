@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=2976&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:54:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; An external equivalent for &quot;Auto Exec&quot; - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>An external equivalent for &quot;Auto Exec&quot;</h2>
+		<p><a href="viewtopic76cd76cd.html?f=4&amp;t=2976">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=2976</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 05, 2010 3:16 pm</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">I just meant myself on a few computers. I wouldn't want a black screen everytime. It always gives me the feeling of an evil script. Anyway, I have a folder of the latest installation files for all my programs, which I store for backup. If you release a new version, I delete the old installation and put the new one instead. It's more comfortable having just one file for each installation.<br>
+<br>
+Although I did and hopefully will again help people install and set up their own Sandboxie. But if they ask how to save/restore sandboxes, there's no way they'll understand how to use a batch file.<br>
+<br>
+But that's all off-topic. The point is "Pre Exec" would be as helpful as "Delete Command". Since "Delete Command" already exists, it means there's potential support for "Pre Exec".</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Feb 06, 2010 4:29 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">You can't just assume that because there is a Delete Command, it must be a trivial task to also have the PreExec you suggest.  But I'm afraid that is just not the case.  It would be true if all programs went through Start.exe, which begins un-sandboxed and might run a PreExec command, before switching to sandboxed mode.  But forced programs completely bypass Start.exe.<br>
+<br>
+On the other hand, Delete Command always works the same, regardless of the way the program started.  And AutoExec also works the same way, regardless of the way the program started.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 07, 2010 5:54 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">Point taken. So "Delete Command" aside, do you plan to eventually enable a standalone facility to do something before the sandbox begins (even if they begin without Start.exe)?<br>
+<br>
+If not, how about a checkbox next to "Delete Command" called "prepare for deletion"? Signaling no would just run the delete command on the regular folder (thus supporting something like Toucan).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 07, 2010 7:19 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I don't think such a feature deserves a GUI element.  At this point I believe you'd probably be the only one using it.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">  But I can revise Start.exe so if the Delete Command starts with a special indication, then it would skip the "preparation" process.<br>
+<br>
+But you should take into consideration that if a new sandboxed program is started, while you mirror the contents, and the sandbox folder has not been renamed, then it might mess up your mirroring results.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 07, 2010 1:31 pm</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">So maybe keep  the renaming, but prevent anything else.  The question is what is anything else. Is there a list or is it just renaming plus unhiding the LOG file?<br>
+<br>
+Although note that those who save/restore sandboxes (there were a lot of these questions lately) already take the risk. This is because the current method copies over the backup folder, which assumes the destination doesn't exist. This is exactly why "Pre Exec" is more fitting (it wouldn't start the sandbox until it's "ready"). Do you think it'll ever be possible to have such a thing?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 07, 2010 3:51 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I thought we were past the PreExec thing.<br>
+<br>
+Have you considered having scripts that are unrelated to Sandboxie and Delete Command, which you invoke when you wish to save or restore the sandbox?<br>
+<br>
+Maybe a couple of shortcuts on your desktop that take care of this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 26, 2010 3:26 pm</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Have you considered having scripts that are unrelated to Sandboxie and Delete Command, which you invoke when you wish to save or restore the sandbox?</div></blockquote>
+I've considered it but I prefer it to be internal. When I get people to install their own Sandboxie, I don't want to also give them my own script. It'll just be confusing. Sandboxie should be standalone.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 26, 2010 3:30 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">It's not a bad feature request but look, I haven't even added an easy way to set up AutoExec commands.  I will probably work on these type of automation utilities at some point but it's not a high priority at this time.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 16, 2011 4:01 pm</strong></div>
+				<div class="author">by <strong>Ruhe</strong></div>
+				<div class="content">I join this request with this posting <a href="../phpbb/viewtopicdbf9.php?t=11284" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=11284</a></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=2976&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:54:17 GMT -->
+</html>

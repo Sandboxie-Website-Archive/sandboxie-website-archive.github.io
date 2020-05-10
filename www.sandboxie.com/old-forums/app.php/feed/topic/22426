@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/22426" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2016-01-26T10:04:17-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/22426</id>
+
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-01-26T10:04:17-04:00</updated>
+
+		<published>2016-01-26T10:04:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22426&amp;p=117817#p117817</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22426&amp;p=117817#p117817"/>
+		<title type="html"><![CDATA[steamwebhelper.exe running in a Sandbox]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=22426&amp;p=117817#p117817"><![CDATA[
+Courtesy of @Rooj<br>In case its of use to anyone else, I recently began sandboxing steamwebhelper.exe (the only unsandboxed browser left on my system at the time) while avoiding the headache of a full steam sandbox. The benefit I guess is that you can download and run games without extra rules being needed, but the webbrowser side of steam should be sandboxed at all times.<br><br>In order to do the same you need to add steamwebhelper.exe as a forced program... You then need to add IPC access otherwise steam locks up and runs terribly. To do this add the following in IPC Access -&gt; Direct Access:<br><br>\Sessions\1\BaseNamedObjects\SteamChrome_*<br><br>Once the above is in place Steam will happily run and all steamwebhelper processes will automatically run within the chosen sandbox. For those that hate steamwebhelper.exe (I personally don't have an issue with it) it means you can also deny the process internet access independently of steam which avoids unnecessary memory usage etc.<br><br>Not suggesting you do the same but I also added steamerrorreporter.exe as a forced program, then only allowed webhelper to run in the sandbox. In this way steamerrorreporter is unable to start and so is unable to send random memory dumps to valve whenever it feels like it.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Tue Jan 26, 2016 9:04 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

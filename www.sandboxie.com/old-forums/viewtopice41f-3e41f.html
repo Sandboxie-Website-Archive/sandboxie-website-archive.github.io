@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1203&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Message SBIE1242 from Sandbox Driver</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Message SBIE1242 from Sandbox Driver</h2>
+		<p><a href="viewtopic5eaa5eaa.html?f=11&amp;t=1203">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=1203</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Message SBIE1242 from Sandbox Driver</h3>
+				<div class="date">Posted: <strong>Sun Mar 18, 2007 11:43 am</strong></div>
+				<div class="author">by <strong>Zandbak</strong></div>
+				<div class="content">Hello,<br>
+<br>
+Sandboxie worked like a charm until I added "/box:Browser firefox.exe" to the commandline. Now I cannot run Firefox within SB - FF does appear in the dialog screen for a few seconds than disappears - neither from starting it from a shortcut nor by running "default browser". I get the message "SBIE1242 Cannot remove registry hive:  [C0000121]". The "Any Program..." browse function has also stopped working...<br>
+<br>
+Uninstalled/reinstalled SB - everything works until I again tried opening the SB by this shortcut.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 18, 2007 12:26 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_687</strong></div>
+				<div class="content">UPDATE:<br>
+<br>
+No need to use the shortcut method anymore:<br>
+Changing the Sandbox Top-Level Folder form %AppData% to a custom %SID% folder (e.g. G:\My Documents\Sandboxie\%SID%) prevents FF2 from running in a SB.<br>
+<br>
+EDIT:<br>
+Seems that anything except "%AppData%" (e.g. %Personal%) prevents FF2 from running in a SB.<br>
+<br>
+Generic Firefox 2 alert:<br>
+"Could not initialize the browser's security component. The most likely cause is problems with files in your browser's  profile directory. Please check that this directory has no read/write restrictions and your hard disk is not full or close to full. It is recommended that you exit the browser and fix the problem. If you continue to use this browser session, you might see incorrect browser behaviour when accessing security features."</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 18, 2007 2:41 pm</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">As far as I see you are trying to upen FF in an not default sandbox, <br>
+do you have OpenProtectedStorage=yes specyfyed for this new sandbox ("Browser")<br>
+btw: its a stupid question, but have you added the secundary sandbox, befoure trying to use it?<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 18, 2007 3:53 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_687</strong></div>
+				<div class="content"><blockquote><div><cite>OwenBurnett wrote:</cite>As far as I see you are trying to upen FF in an not default sandbox, <br>
+do you have OpenProtectedStorage=yes specyfyed for this new sandbox ("Browser")<br>
+btw: its a stupid question, but have you added the secundary sandbox, befoure trying to use it?<br>
+<br>
+Owen</div></blockquote>
+Thank you for your time, Owen. I tried your suggestions but the problem seems to be the other-than-%AppData% parameter: for both specific and default sandboxes and with and without protected storage.<br>
+<br>
+I didn't have this problem with 2.64 before. Updating to 2.80 just migrated my custom folder. I'm positive it had nothing to do with the commandline parameter.<br>
+<br>
+EDIT:<br>
+Tried adding "FileRootPath=g:\My Documents\Sandboxie" to 'Browser' sandbox in sandboxie.ini. It is possible to open FF2 inside the default SB (%AppData%) but not in SB 'Browser'.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Mar 19, 2007 5:52 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I have tried with a sandbox named "Browser" but can't get this error.<br>
+Can you create a new sandbox, a fresh start, and see what happens?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Mar 19, 2007 6:18 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_687</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I have tried with a sandbox named "Browser" but can't get this error.<br>
+Can you create a new sandbox, a fresh start, and see what happens?</div></blockquote>
+Tried it... all works fine until I switch from %AppData% to an other Top-Level Folder. IE doesn't seem to have problems with this change, nor does Opera - but after closing these browsers I also get the "SBIE1242 Cannot remove registry hive: [C0000121]" message from the Sandbox Driver.<br>
+<br>
+Really strange... how can a proces within a SB be aware of the location the SB is storing its information in?<br>
+<br>
+Keep up the good work, I'll just stick to the %AppData% folder... <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1203&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:22 GMT -->
+</html>

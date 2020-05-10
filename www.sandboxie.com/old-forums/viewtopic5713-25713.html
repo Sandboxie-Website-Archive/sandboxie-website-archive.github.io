@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24931&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:28:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; forced folder and *reg file [Solved in Beta 5.21.6]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>forced folder and *reg file [Solved in Beta 5.21.6]</h2>
+		<p><a href="viewtopicc375c375.html?f=11&amp;t=24931">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24931</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>forced folder and *reg file [Solved in Beta 5.21.6]</h3>
+				<div class="date">Posted: <strong>Wed Sep 27, 2017 6:33 am</strong></div>
+				<div class="author">by <strong>vgishmasters</strong></div>
+				<div class="content">Hello! i use sandboxie 5.20 and win10 1703 x64. Problem occurs with forced folders and starting *reg file. I used forced folders for my flash drive E:/ And any application from flash drive starts in sandboxie exclude any *reg file. When i'm starts any *reg file then i'm have notification, that sandboxie block it, but after that starts microsoft registry editor( not in  sandboxie) and succesfully add information from *reg file to windows registry. Is this normal?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: forced folder and *reg file</h3>
+				<div class="date">Posted: <strong>Wed Sep 27, 2017 11:51 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello vgishmasters,<br>
+<br>
+You can right-click--&gt; Run Sandboxed on the *.reg file in order to launch it Sandboxed VS. opening directly from a Forced Folder.<br>
+<br>
+I'll talk to the devs about the behavior you are seeing (I saw it too), might be the way ForceFolders works, but I'll have to confirm.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: forced folder and *reg file</h3>
+				<div class="date">Posted: <strong>Wed Sep 27, 2017 2:02 pm</strong></div>
+				<div class="author">by <strong>vgishmasters</strong></div>
+				<div class="content">Ok! I'll waiting for solution. (Maybe it will be on 5.21  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">  )</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: forced folder and *reg file</h3>
+				<div class="date">Posted: <strong>Wed Sep 27, 2017 3:11 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello vgishmasters,<br>
+<br>
+The devs explained that what's happening is that Sandboxie is trying to load a registry hive via a .reg file (which will not work, not even on the host) when using the ForceFolder feature.  <br>
+You can find more info here:<br>
+<a href="../SBIE1241.html" class="postlink">https://www.sandboxie.com/SBIE1241</a><br>
+<br>
+For the time being, you'll have to right-click on the .reg file instead, in order to run it sandboxed. <br>
+We will update this thread if any functionality changes are made to the Force Folder feature.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: forced folder and *reg file</h3>
+				<div class="date">Posted: <strong>Thu Sep 28, 2017 3:37 am</strong></div>
+				<div class="author">by <strong>vgishmasters</strong></div>
+				<div class="content">Barb, i mean that - if  happens adding *reg to real registry(from sandbox), it will be big security problem. Can devs fix it? any file or application from forced folder must start only in sandbox, because launching in real system(like in my case) may damage the system.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: forced folder and *reg file</h3>
+				<div class="date">Posted: <strong>Thu Sep 28, 2017 6:40 am</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">i can not confirm sandboxie behavior (5.21.2/5.20)<br>
+using a reg file from a forced (root &gt; includes subfolders as well) folder (usb-stick) starts regedit in the box.<br>
+there is something wrong with your settings.<br>
+<br>
+i assume you are trying to use a portable app from stick - which program is it?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: forced folder and *reg file</h3>
+				<div class="date">Posted: <strong>Thu Sep 28, 2017 9:42 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Brummelchen,<br>
+<br>
+Please try this:<br>
+<br>
+Create a .reg file by exporting a registry key from your host (any will do)-  Windows 10 CU.<br>
+Put it in a folder on your Desktop, set that folder as forced in Sandboxie .<br>
+Double- Click on the .reg file, and you will see the behavior.<br>
+<br>
+The devs are aware and if anything comes up, I will update this thread. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: forced folder and *reg file</h3>
+				<div class="date">Posted: <strong>Thu Sep 28, 2017 2:51 pm</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">is this a specific 1703 CU issue or any windows 10?<br>
+i am running LTSB only without the app crap and current is 1607 (14393.1715)<br>
+<br>
+at least it does not matter if exported or manually created - i am capable to do both on the fly.<br>
+<br>
+same test - no problem here. either its a CU issue or details for reproduction missing.<br>
+<br>
+btw - no exceptions defined for programs, it remains all in the box.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: forced folder and *reg file</h3>
+				<div class="date">Posted: <strong>Fri Sep 29, 2017 11:29 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Brummelchen ,<br>
+<br>
+Thanks for the update. We can repro this on Win 7 as well, not only 10 X 64 CU. <br>
+If you are seeing something else, please provide more info so that we can review it.<br>
+<br>
+Just to be sure we are following the same steps:<br>
+Create a .reg file by exporting a registry key from your host (any will do)- Windows 10 CU / Win 7 x64<br>
+Put it in a folder on your Desktop, set that folder as forced in Sandboxie . (Right-click on your Sandbox --&gt; Sandbox Settings --&gt; Program Start ---&gt; Forced Folders). <br>
+Configure --&gt; Reload configuration to apply the new settings<br>
+Double- Click on the .reg file located inside the forced folder.<br>
+UAC prompt will show, (outside Sbie), then the registry editor message will appear (outside Sandboxie). If you click yes, the changes are applied outside Sandboxie. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: forced folder and *reg file</h3>
+				<div class="date">Posted: <strong>Fri Sep 29, 2017 3:43 pm</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">is UAC mandatory? it is not activated here (complete off).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: forced folder and *reg file</h3>
+				<div class="date">Posted: <strong>Fri Sep 29, 2017 3:57 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Brummelchen ,<br>
+<br>
+I turned off the UAC notification and the registry file opened Sandboxed in Win 7, from a forced folder. <br>
+However, it did not do the same thing in Windows 10 CU . It opened the prompts un-sandboxed as reported in the original post. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: forced folder and *reg file [Solved in Beta 5.21.6]</h3>
+				<div class="date">Posted: <strong>Thu Oct 19, 2017 11:41 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Fixed in beta 5.21.6<br>
+<a href="viewtopic73f273f2.html?p=129389#p129389" class="postlink">viewtopic.php?p=129389#p129389</a></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24931&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:28:47 GMT -->
+</html>

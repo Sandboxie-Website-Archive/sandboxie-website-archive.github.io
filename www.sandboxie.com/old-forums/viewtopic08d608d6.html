@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24849&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:59:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; AVG Internet Security v17.6.3028 - URGENT HELP needed [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>AVG Internet Security v17.6.3028 - URGENT HELP needed [SOLVED]</h2>
+		<p><a href="viewtopic641c641c.html?f=11&amp;t=24849">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24849</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>AVG Internet Security v17.6.3028 - URGENT HELP needed [SOLVED]</h3>
+				<div class="date">Posted: <strong>Tue Sep 05, 2017 11:29 am</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">AVG pushed this update on me and neither Firefox 64 bit (v56.0b8) or Chrome 64 bit (60.0.3112.113 (Official Build)) will run sandboxed; <span style="text-decoration: underline">even though IE 11.5410.15063.0 runs perfectly well sandboxed</span>. <br>
+<br>
+The error messages are the same for Firefox and Chrome:<br>
+<br>
+SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1<br>
+SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1<br>
+<br>
+which are as meaningles to me as such messages have ever been.<br>
+<br>
+My sandbox install folder is excluded from scanning by AVG but I don't know if anything else is needed. <br>
+<br>
+The AVG update process was a complete disaster as it didn't properly uninstall AVG v16 and both were running. Even reverting to an image failed in the same way again, so I had to do a complete remove/clean of AVG in safe mode as well as a manual registry hunt and clean before it would install properly; and even then it required a post-install repair. Piece of rubbish software!<br>
+<br>
+Sandboxie x64 v 5.21.2, Windows x64 1703 build 15063.540</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG Internet Security v17.6.3028 - URGENT HELP needed</h3>
+				<div class="date">Posted: <strong>Tue Sep 05, 2017 12:49 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Please see <a href="viewtopic24632463.html?f=11&amp;t=24841" class="postlink">viewtopic.php?f=11&amp;t=24841</a> and try that to see if it also fixes your issue. If not I'll fire up a Win10 vm to re-test.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG Internet Security v17.6.3028 - URGENT HELP needed</h3>
+				<div class="date">Posted: <strong>Tue Sep 05, 2017 5:41 pm</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">Syrinx<br>
+<br>
+Thanks, that does it. How do you know this stuff [rhetorical]!!  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> Apologies for not searching first but I thought I had looked at the topics.<br>
+<br>
+While I can't now test it, loading seems much slower although that could easily be down to AVG v17</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG Internet Security v17.6.3028 - URGENT HELP needed</h3>
+				<div class="date">Posted: <strong>Wed Sep 06, 2017 3:27 am</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">Firefox is now <span style="text-decoration: underline">extremely</span> slow to start up (Chrome seems normal, but then I don't use it very often) but afterwards seems ok. Any idea why this would be? 45 secs until my start page loads (<a href="http://www.bbc.co.uk/news" class="postlink">http://www.bbc.co.uk/news</a>)!<br>
+<br>
+At first I thought it was because my sandbox was empty, but subequent starts were the same when my profiles already existed in the sandbox (located on a ram drive).<br>
+<br>
+And why doesn't IE need this entry?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG Internet Security v17.6.3028 - URGENT HELP needed</h3>
+				<div class="date">Posted: <strong>Thu Sep 07, 2017 12:21 pm</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">If I can't get this resolved pretty quickly, I'm going to have to look at a replacement for Sandboxie  <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad">  <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad">  <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"> <br>
+<br>
+Any recommendations, eg ReHIPS?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG Internet Security v17.6.3028 - URGENT HELP needed</h3>
+				<div class="date">Posted: <strong>Fri Sep 08, 2017 4:25 am</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">Things are now back to normal with Firefox load times. Actually, it feels snappier but that could be because of the previous long delays, but it is loading faster than Chrome again.<br>
+<br>
+I messed around with sandboxie.ini: cleaned it up; moved a few things around; and corrected the odd openpath error; and with the added Syrinx entry of ClosedFilePath=*avg*snxhk*.dll all seems ok. I had forced SB to create a new default ini file and that proved the problem if nothing else.<br>
+<br>
+Sticky Password is not working again, but that's for another time.<br>
+<br>
+And a bit of an apology for an OTT reaction, but the cycle of forced AVG updates and image recoveries was driving me crazy; and taking up loads of time.<br>
+<br>
+I do so hope it stays this way after a reboot!!!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24849&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:59:37 GMT -->
+</html>

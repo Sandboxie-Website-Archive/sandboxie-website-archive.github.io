@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25070&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:23:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Problems with volume mouned as folder</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Problems with volume mouned as folder</h2>
+		<p><a href="viewtopic439c439c.html?f=11&amp;t=25070">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25070</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Problems with volume mouned as folder</h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2017 12:38 pm</strong></div>
+				<div class="author">by <strong>r21514</strong></div>
+				<div class="content">I have one HDD with two volumes. It's a dual boot system (XP and 10x64).<br>
+I have several folders from one volume mounted using junction into corresponding folders of the other and reverse, so I have same folders on both systems with same paths.<br>
+For example:<br>
+mklink /j "C:\My" "\\?\Volume{xxxxx}\My"<br>
+mklink /j "C:\Program FIles\SomeSoftware" "\\?\Volume{xxxxx}\Program FIles\SomeSoftware"<br>
+You get the idea?<br>
+The thing is I don have root directory \\?\Volume{xxxxx}\ mounted anywhere. It's very important!<br>
+<br>
+And so all executables in this directories can't be launched in Sandboxie, it says that "%1 is not win32".<br>
+BUT! If I add some executable name like "SomeSoftware.exe" to forced list it works.<br>
+<br>
+I do understand the easiest solution for me is to simple mount somewhere the root directory.<br>
+As far as I understand Sanboxie checks list of mountpoints, doesn't find what it wants.<br>
+BUT! For some reason it works with forced exe's without any problems, so maybe it can be fixed?<br>
+<br>
+------<br>
+Steps to reproduce (tested in VirtualBox on clean W10x64):<br>
+1. HDD with two volumes (C:,D:) Windows on C:, D: empty, install Sandboxie<br>
+2. Create folder D:\My put some exe there, like myapp.exe<br>
+3. Go to disk management, remove association with D:<br>
+4. Open admin command prompt, use "mountvol" to learn guid of ex-D, create junction:<br>
+   mklink /j "C:\My" "\\?\Volume{xxxxx}\My"<br>
+5. Try SendTo-Sandboxie on C:\My\myapp.exe - see the error.<br>
+6. Add "myapp.exe" to forced list, start "myapp.exe" - works.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Problems with volume mouned as folder</h3>
+				<div class="date">Posted: <strong>Mon Nov 06, 2017 12:20 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello r21514,<br>
+<br>
+If you can provide the required information, I will test it:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Here's more information regarding Sandboxie's hierarchy<br>
+<a href="../SandboxHierarchy.html" class="postlink">https://www.sandboxie.com/SandboxHierarchy</a><br>
+<br>
+And here are related threads that might help:<br>
+<a href="searchb339b339.html?keywords=mklink+" class="postlink">search.php?keywords=mklink+</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Problems with volume mouned as folder</h3>
+				<div class="date">Posted: <strong>Mon Nov 13, 2017 12:33 pm</strong></div>
+				<div class="author">by <strong>r21514</strong></div>
+				<div class="content">Described situation was tested on clean installation of Windows 10 1703 x64, Windows 7 SP1 x64, Windows XP SP3 x86 with latest Sandboxie 5.22.<br>
+Steps to reproduce in my first post.<br>
+I think the problem will be present on any version of Windows with any version of Sandboxie.<br>
+<br>
+The source of the problem is that operation system sees files from that folder from example not as "C:\My\app.exe" but as "\Device\HarddiskVolume1\My\app.exe". And Sandboxie doesn't understand "\Device\HarddiskVolume1\". I think it should.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Problems with volume mouned as folder</h3>
+				<div class="date">Posted: <strong>Mon Nov 13, 2017 3:08 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello r21514,<br>
+
+<blockquote class="uncited"><div>3. Go to disk management, remove association with D:</div></blockquote>
+
+This is the step that seems to cause the issue. <br>
+Is there any particular reason why you need to remove the letter association of your Drive? Can you try mounting it to a folder? <br>
+<br>
+I tested on Windows 10 x64 + Sbie 5.22  and I was able to launch the application from the link by either keeping the drive letter, or by mounting it to a folder inside the C: drive. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Problems with volume mouned as folder</h3>
+				<div class="date">Posted: <strong>Tue Nov 14, 2017 1:58 am</strong></div>
+				<div class="author">by <strong>r21514</strong></div>
+				<div class="content">Mounting root directory of volume in dual boot environment messes up Recycle Bin and System Restore because users have different SIDs.<br>
+<br>
+Important thing is that <strong>adding executable name to forced list helps</strong>, so Sandboxie CAN work in this situation and works perfectly. <br>
+The problem is it can't launch correctly through Start.exe (shell menu/sendto) when application is <strong>not</strong> on forced list.<br>
+So forced list does something that regular launch through Start.exe doesn't.<br>
+<br>
+There may be other situations when path for some reason can't be associated with mounted volume and same problem will be present.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25070&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:23:47 GMT -->
+</html>

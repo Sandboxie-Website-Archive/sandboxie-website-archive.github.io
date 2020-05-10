@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=50&t=20793&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:57:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; 4.17 Beta Available (Latest Version 4.17.8)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>4.17 Beta Available (Latest Version 4.17.8)</h2>
+		<p><a href="viewtopic5c2d5c2d.html?f=50&amp;t=20793">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=50&amp;t=20793</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>14</strong></div>
+					<div class="post">
+				<h3>4.17 Beta Available (Latest Version 4.17.8)</h3>
+				<div class="date">Posted: <strong>Wed Mar 04, 2015 4:41 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Combined 32/64 installer:<br>
+<a href="../SandboxieInstall-417-8.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall-417-8.exe</a><br>
+<br>
+Separate:<br>
+<a href="../SandboxieInstall32-417-8.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall32-417-8.exe</a><br>
+<a href="../SandboxieInstall64-417-8.exe" class="postlink">http://www.sandboxie.com/SandboxieInstall64-417-8.exe</a><br>
+<br>
+<strong>Fixes in 4.17.8</strong><br>
+<br>
+1) Fixed rare BSOD reported by APMichael that could occur when resuming from sleep.<br>
+<br>
+<strong>Fixes in 4.17.7</strong><br>
+<br>
+1) The print spooler is now allowed to write files outside the sandbox according to OpenFilePath settings.  So for example, with BullZip PDF Printer, you can open the folders it uses to store its work files.<br>
+<br>
+<strong>Fixes in 4.17.6</strong><br>
+<br>
+1) The print spooler is now allowed to write temporary files into its own spooler work folder outside the sandbox.  This should eliminate the SBIE1319 msgs when not printing to file.<br>
+<br>
+<strong>Fixes in 4.17.5</strong><br>
+<br>
+1) More print spooler block improvements.  Now, when you get the error "SBIE1319 Blocked spooler print to file", you can double-click the error message to open the print spooler for that particular process.<br>
+2) I removed the spooler print to file property sheet in the sandbox settings.  This is too risky to allow setting it permanently in the GUI where it can easily be forgotten.  You can still add AllowSpoolerPrintToFile=y manually in sandbox.ini.<br>
+3) Error msgs when auto-deleting a sandbox will now be shown to the user.<br>
+<br>
+<strong>Fixes in 4.17.4</strong><br>
+<br>
+1) The print spooler block has been improved.  Any time a sandboxed process uses the print spooler to write to a file, it will be blocked and you will get error "SBIE1319  Blocked spooler print to file". <br>
+Even when not printing to file, sometimes the print spooler will attempt to write temporary files and be blocked by Sandboxie.  The print still prints successfully.  If these error popups become annoying, just hide SBIE1319.<br>
+You can allow the print spooler to write outside the sandbox under Sandbox Settings-&gt;Restrictions-&gt;Print Spooler.  See that property sheet for more information.<br>
+<br>
+<strong>Fixes in 4.17.3</strong><br>
+<br>
+1) Fixed Chrome SBIE2205 Service not implemented:  Win32Init.5 (00000005)<br>
+2) Changed hook for ChangeDisplaySettingsEx() to fix game using undocumented flag.<br>
+3) Added new sandbox.ini setting: AllowPrintToFile.  The default is AllowPrintToFile=n.<br>
+   Print to file via the print spooler is a security hole which behaves very differently in Win 7 vs. Win 8.  In Win 7, we can allow most print to file.  In Win 8, due to MS printer driver changes, we have to block most print to file requests.  So Win 7 users most likely will not have to add this setting in sandbox.ini.  For Win 8 users, if you want to be able to print to file, you need to add AllowPrintToFile=y.  I suggest you only do this temporarily because it does open a security hole.  When Sandboxie blocks a print to file, you will get error "SBIE1319 Blocked request to print to file".<br>
+<br>
+<strong>Fixes in 4.17.2</strong><br>
+<br>
+1) Added Hitman Pro Alert to templates.ini<br>
+2) Changed hook for ChangeDisplaySettingsEx() to allow CDS_RESET. A user reported that a game (fifa15) is trying to use this and failing resulting in incorrect display colors.<br>
+3) DFS mapped drives are now supported (<a href="viewtopic6d086d08.php?f=11&amp;t=18825&amp;p=100656" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 5&amp;p=100656</a>)<br>
+4) VMWare HGFS (Host Guest File System) mapped drives are now supported.<br>
+5) A BSOD bugcheck reported by a user when using bittorrent has been removed (this was a rare situation).  SbieDrv was detecting corrupted memory when no corruption had occurred.<br>
+6) Fixed a rare bug in clipboard handling that could crash SbieSvc.<br>
+7) WebEx running under Chrome would sometimes hang.<br>
+<br>
+<strong>Fixes in 4.17.1</strong><br>
+<br>
+1) Recent Windows update in Win 8-64 causes Skype (and possibly other apps) to issue error SBIE2335 Initialization failed for process Skype.exe [33 / 0]</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Wed Mar 04, 2015 5:01 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">Thank you Curt, working fine on Windows 8.1 x64</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Wed Mar 04, 2015 7:36 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">All feels well in XP and W7 32 bits. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Thu Mar 05, 2015 6:35 am</strong></div>
+				<div class="author">by <strong>superkryo</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>
+<br>
+<strong>Fixes in 4.17.1</strong><br>
+<br>
+1) Recent Windows update in Win 8-64 causes Skype (and possibly other apps) to issue error SBIE2335 Initialization failed for process Skype.exe [33 / 0]</div></blockquote>
+
+Curt, you might be <a href="viewtopicc058c058.php?f=11&amp;t=20227&amp;p=106415&amp;hilit=matlab#p106982" class="postlink">interested</a> to know that it also fixed SBIE2335 for <a href="viewtopicf6dcf6dc.php?f=11&amp;t=18845" class="postlink">matlab</a>, looks like the issue  has a similar cause.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Thu Mar 05, 2015 4:54 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>superkryo wrote:</cite><blockquote><div><cite>Curt@invincea wrote:</cite>
+<br>
+<strong>Fixes in 4.17.1</strong><br>
+<br>
+1) Recent Windows update in Win 8-64 causes Skype (and possibly other apps) to issue error SBIE2335 Initialization failed for process Skype.exe [33 / 0]</div></blockquote>
+
+Curt, you might be <a href="viewtopicc058c058.php?f=11&amp;t=20227&amp;p=106415&amp;hilit=matlab#p106982" class="postlink">interested</a> to know that it also fixed SBIE2335 for <a href="viewtopicf6dcf6dc.php?f=11&amp;t=18845" class="postlink">matlab</a>, looks like the issue  has a similar cause.</div></blockquote>
+I'm glad to hear it.  So matlab is now working 100%?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Thu Mar 05, 2015 11:45 pm</strong></div>
+				<div class="author">by <strong>PaperPrince</strong></div>
+				<div class="content">Hi - Wondering if anyone has had any luck running this on Windows 10 Technical Preview? I tried using various compatibility settings etc with no luck - would be interested in hearing if/how we can get this started on Windows 10.<br>
+Cheers</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Fri Mar 06, 2015 9:14 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content"><blockquote><div><cite>PaperPrince wrote:</cite>Hi - Wondering if anyone has had any luck running this on Windows 10 Technical Preview? I tried using various compatibility settings etc with no luck - would be interested in hearing if/how we can get this started on Windows 10.<br>
+Cheers</div></blockquote>
+
+There are a couple of threads about this.  It's not luck, developers have stated that no at this time SBIE isn't compatible.  They won't do much until Win 10 is much closer to release.<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Fri Mar 06, 2015 11:08 am</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content"><blockquote><div><cite>Peter2150 wrote:</cite><blockquote><div><cite>PaperPrince wrote:</cite>Hi - Wondering if anyone has had any luck running this on Windows 10 Technical <br>
+There are a couple of threads about this.  It's not luck, developers have stated that no at this time SBIE isn't compatible.  They won't do much until Win 10 is much closer to release.<br>
+Pete</div></blockquote></div></blockquote>
+The public beta will be along soon, and surely the full release will follow sooner than later. If MSoft is ready to allow a wider beta release as it sees a BENEFIT, Invincea should consider the same (as a beta, or even an alpha). <br>
+<br>
+Losing Sandboxie is preventing me using Win 10 on a serious basis!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Fri Mar 06, 2015 11:50 am</strong></div>
+				<div class="author">by <strong>Astrohere</strong></div>
+				<div class="content">Hi, after installing the latest windows 8.1 64bit security updates the problems I had with Opera and Sandboxie 4.16 and 4.17.1 have gone.<br>
+<br>
+I'm still receiving these errors though when Turbine's Lord of the Rings Online gamelauncher is closing:<br>
+<br>
+SBIE2101 Object name not found: , error OpenProcess (C0000022) access = 001FFFFF<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+SBIE2314 Canceling process TurbineLauncher.exe<br>
+<br>
+When the gamelauncher sits active in the background, at some point it will also crash with these errors. It then disrupts online gameplay since the Sandbox messagebox brings up the desktop.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Fri Mar 06, 2015 12:16 pm</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">1) Does Opera 12.17 work inside sandboxie 4.16?<br>
+2) Has flash player &amp;&amp; firefox running inside sandboxie issue been fixed?<br>
+3) Vivaldi 1.0.118.19 - Technical Preview 2 (x64) works with 4.16 sandboxie even slower than google chrome x64. I thought it's impossible for any browser to work slower but I was wrong.<br>
+4) Firefox 37.0b2 (official Mozilla x64 beta release) crashes immediately after startup.<br>
+5) Missing force &lt;browserName&gt; in GUI where browserName == Vivaldi || Maxthon Nitro<br>
+6) Many typos &amp; minor polish translation bugs<br>
+7) If firefoxDownloadFolder == %USERPROFILE%\Desktop &amp;&amp; someRandomCase sandboxieQuickRecovery returns 1</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Fri Mar 06, 2015 1:23 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Dun wrote:</cite>1) Does Opera 12.17 work inside sandboxie 4.16?<br>
+2) Has flash player &amp;&amp; firefox running inside sandboxie issue been fixed?<br>
+4) Firefox 37.0b2 (official Mozilla x64 beta release) crashes immediately after startup.<br>
+7) If firefoxDownloadFolder == %USERPROFILE%\Desktop &amp;&amp; someRandomCase sandboxieQuickRecovery returns 1</div></blockquote>
+Hi Dun. a few weeks ago a friend in another forum was asking about Opera 12.17 and Sandboxie. At the time, I was using SBIE 4.15.10, something like that. The new and old version of Opera, both ran fine for me. I don't remember if it was in W7 or XP when I tested but all went well.<br>
+<br>
+I am not having issues between Flash and Sandboxie. In fact, I think things are better now than they were a few months ago. At least, that's my feeling. But sometimes, in some systems things work better between SBIE and Flash if you disable Flash PM in W7 and up or disable plugin container in XP. I used to disable plugin container in XP but for the past few months, I enabled plugin container back in that computer.<br>
+<br>
+I have very little use for Flash in W7 so I don't keep the program installed in that PC. When I need it, I install it sandboxed and have things setup in that PC for PM to be disabled. But the last few time that I tested Flash in W7 with PM on, I haven't experienced an issue.<br>
+<br>
+When I tried Firefox 37 a few months ago, it was a very very early version and for the most part, the browser ran fine in SBIE. I did notice a few things that were not working right but they had nothing to do with SBIE. No crash in SBIE.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Sun Mar 08, 2015 12:09 pm</strong></div>
+				<div class="author">by <strong>Bellzemos</strong></div>
+				<div class="content">The new official Sandboxie version 4.16 fixed Skype crash that occured upon quitting with the previous version 4.14. Good job.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Tue Mar 10, 2015 11:47 am</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">Hi Bo and thanks for reply. Yes, 4.15 stable works with Opera 12.17.<br>
+<br>
+I've forgotten about<br>
+7) forced folder bug <a href="viewtopicfae8fae8.php?f=49&amp;t=19837&amp;p=105389&amp;hilit=+forced+folder#p105389" class="postlink">http://forums.sandboxie.com/phpBB3/view ... er#p105389</a><br>
+8 ) Firefox sometimes and for no reason hangs for a couple of seconds when trying to switch tabs</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Thu Mar 12, 2015 12:44 am</strong></div>
+				<div class="author">by <strong>ericjln</strong></div>
+				<div class="content">I recently got a new laptop with Office 2013 installed. Neither Excel nor Word will run inside Sandboxie. I get a Windows metrofied dialog about "Something went wrong." and "Repair the installation".<br>
+<br>
+I installed 4.17.1 in the hopes of fixing the problem. I'm not sure what debug info you want. Here is my config:<br>
+<br>
+<br>
+[GlobalSettings]<br>
+<br>
+Template=7zipShellEx<br>
+Template=SynapticsTouchPad<br>
+Template=AdobeAcrobatReader<br>
+Template=OfficeLicensing<br>
+ActivationPrompt=n<br>
+ForceDisableSeconds=1000<br>
+<br>
+<br>
+[UserSettings_0CC40222]<br>
+<br>
+SbieCtrl_UserName=me<br>
+SbieCtrl_NextUpdateCheck=1426739734<br>
+SbieCtrl_UpdateCheckNotify=n<br>
+SbieCtrl_ShowWelcome=n<br>
+SbieCtrl_HideWindowNotify=n<br>
+SbieCtrl_HideWindowNotify=n<br>
+SbieCtrl_WindowCoords=325,62,880,638<br>
+SbieCtrl_ActiveView=40021<br>
+SbieCtrl_AutoApplySettings=y<br>
+SbieCtrl_SettingChangeNotify=n<br>
+SbieCtrl_RecoverTarget=C:\Users\me\Desktop<br>
+SbieCtrl_RecoverTarget=C:\<br>
+SbieCtrl_RecoverTarget=K:\<br>
+SbieCtrl_SaveRecoverTargets=y<br>
+SbieCtrl_ExplorerNotify=n<br>
+SbieCtrl_ProcessViewColumnWidths=250,70,300<br>
+SbieCtrl_BoxExpandedView=AppsPortable,DefaultBox,NewSoftware,Pidgin,Secure<br>
+<br>
+<br>
+[NewSoftware]<br>
+<br>
+Enabled=y<br>
+ConfigLevel=7<br>
+Template=BlockPorts<br>
+Template=LingerPrograms<br>
+Template=Chrome_Phishing_DirectAccess<br>
+Template=Firefox_Phishing_DirectAccess<br>
+Template=AutoRecoverIgnore<br>
+RecoverFolder=C:<br>
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%<br>
+RecoverFolder=%Personal%<br>
+RecoverFolder=%Favorites%<br>
+RecoverFolder=%Desktop%<br>
+BorderColor=#00FFFF,ttl<br>
+CopyLimitKb=141889<br>
+OpenPipePath=E:\<br>
+<br>
+<br>
+[UserSettings_1870030F]<br>
+<br>
+SbieCtrl_UserName=myguest<br>
+SbieCtrl_ShowWelcome=n<br>
+SbieCtrl_NextUpdateCheck=1392145877<br>
+SbieCtrl_UpdateCheckNotify=y<br>
+SbieCtrl_BoxExpandedView=,<br>
+SbieCtrl_WindowCoords=653,150,1237,667<br>
+SbieCtrl_ActiveView=40021</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: 4.17 Beta Available (Latest Version 4.17.1)</h3>
+				<div class="date">Posted: <strong>Thu Mar 12, 2015 10:52 am</strong></div>
+				<div class="author">by <strong>Dun</strong></div>
+				<div class="content">9) Why Sandboxie quick recovery window pops-up when full screen application is running? Full screen app got minimized just to show sandboxie window <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> I assume the same situation when sandboxie info/error/other window appears.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>14</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=50&t=20793&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:57:49 GMT -->
+</html>

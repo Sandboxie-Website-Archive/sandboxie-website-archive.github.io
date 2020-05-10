@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=12714&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:29:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; DISABLE all SBIE messages</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>DISABLE all SBIE messages</h2>
+		<p><a href="viewtopic726d726d.html?f=5&amp;t=12714">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=12714</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>DISABLE all SBIE messages</h3>
+				<div class="date">Posted: <strong>Thu Mar 29, 2012 10:29 am</strong></div>
+				<div class="author">by <strong>Striker900</strong></div>
+				<div class="content">It should be a option to turn of all future sandboxie messages <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 29, 2012 10:59 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">You can do that, if you're willing to make a manual edit, using Configure &gt; Edit Configuration.<br>
+<br>
+Put a line in the [UserSettings_xxxxxxxx] section:<br>
+[UserSettings_xxxxxxxx]<br>
+...<br>
+...<br>
+<strong>SbieCtrl_HideMessage=*</strong><br>
+<br>
+----<br>
+If you have enabled Sandboxie's message logging via a Registry entry, to save messages to a file on the hard drive, they should continue to be logged in that file.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 29, 2012 12:17 pm</strong></div>
+				<div class="author">by <strong>Striker900</strong></div>
+				<div class="content"><blockquote><div><cite>Guest10 wrote:</cite>You can do that, if you're willing to make a manual edit, using Configure &gt; Edit Configuration.<br>
+<br>
+Put a line in the [UserSettings_xxxxxxxx] section:<br>
+[UserSettings_xxxxxxxx]<br>
+...<br>
+...<br>
+<strong>SbieCtrl_HideMessage=*</strong><br>
+<br>
+----<br>
+If you have enabled Sandboxie's message logging via a Registry entry, to save messages to a file on the hard drive, they should continue to be logged in that file.</div></blockquote>
+
+Thanks alot mate! This was exactly what I was looking for, you saved my day! Have a great day sir!<br>
+<br>
+Striker900</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: DISABLE all SBIE messages</h3>
+				<div class="date">Posted: <strong>Fri May 06, 2016 11:32 pm</strong></div>
+				<div class="author">by <strong>marzametal</strong></div>
+				<div class="content">how to permanently hide SBIE2314? It seems to generate for every exe, and clicking hide each time just adds another entry in User section. Is there a way to make this universal across all exe's, without hiding "all" messages?<br>
+<br>
+eg: this is for all messages... SbieCtrl_HideMessage=*<br>
+what I am after is one that looks like SbieCtrl_HideMessage=2314,[executable name here]<br>
+<br>
+SbieCtrl_HideMessage=2314,* and SbieCtrl_HideMessage=2314,*.exe does not work...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: DISABLE all SBIE messages</h3>
+				<div class="date">Posted: <strong>Sat May 07, 2016 2:51 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">First, determine why you're always getting the message.<br>
+<br>
+Then, you can hide it temporarily. Or you the code above to hide all messages.<br>
+<br>
+Yes, the messages can be annoying, but they are there to let you know something is a-miss.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=12714&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:29:30 GMT -->
+</html>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14831" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-06-13T13:58:11-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14831</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-06-13T13:58:11-04:00</updated>
+
+		<published>2013-06-13T13:58:11-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=90600#p90600</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=90600#p90600"/>
+		<title type="html"><![CDATA[[.03] Clipboard enhancement programs.]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=90600#p90600"><![CDATA[
+No problem.  I'm glad to hear the problem was specific to your setup and the fix was simple.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Jun 13, 2013 1:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[semerra]]></name></author>
+		<updated>2013-06-13T04:04:26-04:00</updated>
+
+		<published>2013-06-13T04:04:26-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=90590#p90590</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=90590#p90590"/>
+		<title type="html"><![CDATA[[.03] Clipboard enhancement programs.]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=90590#p90590"><![CDATA[
+My apologies.<br>The problem was that installing the .13 beta changed the settings in Webroot WSA from allow to deny/monitor for the sbie processes.<br>I have changed them back to allow and the clipboard is working again.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1354">semerra</a> — Thu Jun 13, 2013 4:04 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-06-13T03:29:27-04:00</updated>
+
+		<published>2013-06-13T03:29:27-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=90587#p90587</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=90587#p90587"/>
+		<title type="html"><![CDATA[[.03] Clipboard enhancement programs.]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=90587#p90587"><![CDATA[
+I am sorry but there is nothing I can look into to fix, because it works correctly on my system.<br><br>I already explained to you in the topic about CLCL why this will not always work:<br><br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=14831" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=14831</a><br><br>Try to use Process Explorer or Task Manager to give the CLCL process a lower priority, see if that makes a difference.<br><br>Please note that I will soon merge these posts here into that other topic.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Jun 13, 2013 3:29 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[semerra]]></name></author>
+		<updated>2013-06-12T21:30:07-04:00</updated>
+
+		<published>2013-06-12T21:30:07-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=90579#p90579</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=90579#p90579"/>
+		<title type="html"><![CDATA[[.13] clipboard problems cannot paste]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=90579#p90579"><![CDATA[
+I upgraded from the .08 to the .13 beta on Win 7 64-bit and I can no longer paste anything from the clipboard.<br>Only the copy function works. <br>I tried this with two clipboard enhancement programs CLCL and Ditto using Firefox and Internet Explorer.<br>This also happens with a sandboxed notepad.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1354">semerra</a> — Wed Jun 12, 2013 9:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[semerra]]></name></author>
+		<updated>2013-03-07T19:41:21-04:00</updated>
+
+		<published>2013-03-07T19:41:21-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=87793#p87793</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=87793#p87793"/>
+		<title type="html"><![CDATA[[.03] Clipboard enhancement programs.]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=87793#p87793"><![CDATA[
+Thanks. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> So far clcl is working with the .03 beta.<br>For the record I used Ditto for about a week with .02 and there  were times when nothing at all was copied to the clipboard.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1354">semerra</a> — Thu Mar 07, 2013 6:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-03-07T16:35:05-04:00</updated>
+
+		<published>2013-03-07T16:35:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=87783#p87783</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=87783#p87783"/>
+		<title type="html"><![CDATA[[.03] Clipboard enhancement programs.]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=87783#p87783"><![CDATA[
+If you would like to go back to using "clcl", version 4.01.03 <em>may</em> fix the problem.<br><br>I say "may" because it turns out Sandboxie has to adjust the data that was copied into the clipboard.  Usually this happens before "clcl" would get to inspect the data, so everything seem fine.  But it is possible "clcl" would get to the data first, and see it before the data was adjusted by Sandboxie.   Unfortunately there isn't a 100% solution in this case.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Mar 07, 2013 3:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-03-01T05:41:29-04:00</updated>
+
+		<published>2013-03-01T05:41:29-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=87607#p87607</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=87607#p87607"/>
+		<title type="html"><![CDATA[[.03] Clipboard enhancement programs.]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=87607#p87607"><![CDATA[
+Thanks.  I looked into it and there is a problem with putting data on the clipboard in version 4.<br>The problem is not with the clipboard viewer (clcl), even if you found one (Ditto) that knows to live with this problem.<br><br>I think this is the same problem as the one reported here:<br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=14909" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=14909</a><br><br>I think I will have this fixed by the next beta version.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Mar 01, 2013 4:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[semerra]]></name></author>
+		<updated>2013-02-27T23:21:32-04:00</updated>
+
+		<published>2013-02-27T23:21:32-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=87578#p87578</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=87578#p87578"/>
+		<title type="html"><![CDATA[[.03] Clipboard enhancement programs.]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14831&amp;p=87578#p87578"><![CDATA[
+Since upgrading from version 3.76 to the .02 beta on Win 7 64x my clipboard enhancement program CLCL<br><a href="http://www.nakka.com/soft/clcl/index_eng.html" class="postlink">http://www.nakka.com/soft/clcl/index_eng.html</a> no longer works when using Firefox 19 sandboxed.<br><br>I can use Ditto without any problem.<br><a href="http://sourceforge.net/projects/ditto-cp/" class="postlink">http://sourceforge.net/projects/ditto-cp/</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1354">semerra</a> — Wed Feb 27, 2013 10:21 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

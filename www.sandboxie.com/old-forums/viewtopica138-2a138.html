@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24719 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:21:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility [SOLVED] - Sandboxie Support</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - Sandboxie Support" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="app.php/feed/topics_active">			
+	<link rel="canonical" href="viewtopic2d182d18.html?t=24719">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="assets/css/font-awesome.mince91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+<link href="styles/sbie_prosilver/theme/en/stylesheetce91ce91.css?assets_version=7" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/sbie_prosilver/theme/tweaks.css?assets_version=7" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="../index.html" title="Home"><span class="site_logo"></span></a>
+				<h1>Sandboxie Support</h1>
+				<p>Support Forum for Sandboxie</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									<div id="search-box" class="search-box search-header" role="search">
+				<form action="https://forums.sandboxie.com/phpBB3/search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+					<button class="button button-search" type="submit" title="Search">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+					</button>
+					<a href="search.html" class="button button-search-end" title="Advanced search">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+					</a>
+					
+				</fieldset>
+				</form>
+			</div>
+						
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a733a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+																			<li>
+								<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp26c326c3.html?mode=login" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp83198319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs">
+							<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="../index.html" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">Home</span></a></span>
+										<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="index-2.html" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Board index</span></a></span>
+
+											<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="43"><a href="viewforum107e107e.html?f=43" itemprop="url"><span itemprop="title">Problems and Questions</span></a></span>
+															<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="11"><a href="viewforum8a838a83.html?f=11" itemprop="url"><span itemprop="title">Problem Reports</span></a></span>
+												</li>
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="viewtopica138-2a138.html?f=11&amp;t=24719">Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility [SOLVED]</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Please post your problem description here<br /></div>
+<p>
+	<strong>Moderator:</strong> <a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>
+</p>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="https://www.sandboxie.com/old-forums/postingea27-2.html?mode=reply&amp;f=11&amp;t=24719" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic7aae-27aae.html?f=11&amp;t=24719&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://forums.sandboxie.com/phpBB3/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="24719" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			17 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic61f4-261f4.html?f=11&amp;t=24719&amp;start=15" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic61f4-261f4.html?f=11&amp;t=24719&amp;start=15" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p129555" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129555">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist3b56.html?mode=viewprofile&amp;u=34198" class="username">bayinmin</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search68926892.html?author_id=34198&amp;sr=posts">6</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Aug 05, 2017 9:49 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129555">
+
+						<h3 class="first"><a href="#p129555">Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility [SOLVED]</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting2c59.html?mode=quote&amp;f=11&amp;p=129555" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic9f7f9f7f.html?p=129555#p129555" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist3b56.html?mode=viewprofile&amp;u=34198" class="username">bayinmin</a></strong> &raquo; </span>Sat Aug 05, 2017 10:02 pm
+			</p>
+			
+			
+			
+			<div class="content">Hi Sandboxie Team,<br>
+<br>
+This is to report security vulnerability for Sandboxie installer. This report had been sent privately to the Sandboxie contact email and the support team replied that email only handles license related issues and technology issue has to go into the forum. Thus, the report is posted here.<br>
+<br>
+<strong>1. Overview &amp; Impact</strong><br>
+<br>
+Sandboxie installer was vulnerable to DLL hijacking. The product did not verify the authenticity of the DLL file before loading thus a malicious individual or program may leverage this vulnerability to execute arbitrary code on the targeted machine.<br>
+<br>
+<strong>2. Product Description</strong><br>
+<br>
+Sandboxie — Sandbox security software for Windows. Install and run programs in a virtual sandbox environment without writing to the hard drive.<br>
+<br>
+<strong>3. PROOF-OF-CONCEPT</strong><br>
+<br>
+1. Upon installation of affected exe file, the installer searched for non-existent dwmapi.dll and profapi.dll files from C:\Users\&lt;username&gt;\AppData\Local\Temp directory<br>
+<br>
+2. To leverage this, created customised DLL shell code with arbitrary command ( eg. launching calc.exe) renamed as affected DLLs name and placed in the same directory<br>
+<br>
+3. After placing the malicious DLL, clicked the installer again for installation. Subsequently, installer loaded these malicious DLLs file without verification and resulting in code execution.<br>
+<br>
+4. Additionally, it was noted that SandboxieInstall-64-bit-5071703.exe was created in same affected directory when the main SandboxieInstall.exe was run. SandboxieInstall-64-bit-5071703.exe was similarly vulnerable to DLL hijacking.<br>
+<br>
+Affected DLL<br>
+dwmapi.dll,<br>
+profapi.dll<br>
+<br>
+<strong>Version Affected</strong><br>
+<br>
+Tested in the following version:<br>
+SandboxieInstall.exe for SandboxieInstall-64-bit-5071703.exe<br>
+SandboxieInstall-64-bit-5071703.exe<br>
+<br>
+<strong>Disclosure Timeline</strong><br>
+<br>
+03–08–2017: Notified Vendor<br>
+03–08–2017: Vendor replied to post vulnerability report in publicly accessible Sandboxie forum<br>
+04–08–2017: Requested to MITRE for CVE<br>
+06–08–2017: Vulnerability disclosed<br>
+06–08–2017: Vulnerability report posted in Vendor forum<br>
+<br>
+<strong>Ref:</strong> <a href="https://medium.com/@BaYinMin/cve-2017-12480-sandboxie-installer-dll-hijacking-or-unsafe-dll-loading-vulnerability-41ad0562f41" class="postlink">https://medium.com/@BaYinMin/cve-2017-1 ... 1ad0562f41</a></div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129574" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129574">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Support<br /><img src="images/ranks/gloss/yellow/yellow-supportteam.png" alt="Sandboxie Support" title="Sandboxie Support" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchdf5ddf5d.html?author_id=32296&amp;sr=posts">2337</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 07, 2016 3:10 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129574">
+
+						<h3 ><a href="#p129574">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting3533.html?mode=quote&amp;f=11&amp;p=129574" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic168e-2168e.html?p=129574#p129574" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a></strong> &raquo; </span>Mon Aug 07, 2017 1:49 pm
+			</p>
+			
+			
+			
+			<div class="content">Hello bayinmin,<br>
+<br>
+Thanks for your report. We are looking into it.<br>
+Which version of Sandboxie did you install, and where did you download it from?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129590" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129590">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist502d.html?mode=viewprofile&amp;u=990" class="username">soccerfan</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search15e815e8.html?author_id=990&amp;sr=posts">440</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Sep 25, 2007 2:59 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129590">
+
+						<h3 ><a href="#p129590">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting4b2e.html?mode=quote&amp;f=11&amp;p=129590" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic33083308.html?p=129590#p129590" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist502d.html?mode=viewprofile&amp;u=990" class="username">soccerfan</a></strong> &raquo; </span>Tue Aug 08, 2017 2:07 pm
+			</p>
+			
+			
+			
+			<div class="content">Hello bayinmin,<br>
+<br>
+Could you please also post the SHA1 and/or MD5 hash <br>
+for the sandboxie installer file that was used in the test?<br>
+Thanks.</div>
+
+			
+									
+									<div id="sig129590" class="signature">soccerfan</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129596" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129596">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist3b56.html?mode=viewprofile&amp;u=34198" class="username">bayinmin</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search68926892.html?author_id=34198&amp;sr=posts">6</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Aug 05, 2017 9:49 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129596">
+
+						<h3 ><a href="#p129596">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting308e-2.html?mode=quote&amp;f=11&amp;p=129596" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic89f489f4.html?p=129596#p129596" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist3b56.html?mode=viewprofile&amp;u=34198" class="username">bayinmin</a></strong> &raquo; </span>Tue Aug 08, 2017 9:08 pm
+			</p>
+			
+			
+			
+			<div class="content">Hello All,<br>
+<br>
+Thank you for your replies. <br>
+<br>
+The file was downloaded from the Sandboxie website.<br>
+Related informations are as follows:<br>
+<br>
+<strong>md5</strong><br>
+B415ED5C57620721421C5EA19790F150<br>
+<br>
+<strong>sha1</strong><br>
+5B3C0C5BA78A3C28436BF9480B6D183F2C7E8022<br>
+<br>
+<strong>version</strong><br>
+5.20 64bit</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129601" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129601">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Support<br /><img src="images/ranks/gloss/yellow/yellow-supportteam.png" alt="Sandboxie Support" title="Sandboxie Support" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchdf5ddf5d.html?author_id=32296&amp;sr=posts">2337</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 07, 2016 3:10 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129601">
+
+						<h3 ><a href="#p129601">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting679c.html?mode=quote&amp;f=11&amp;p=129601" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8df7-28df7.html?p=129601#p129601" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a></strong> &raquo; </span>Wed Aug 09, 2017 10:02 am
+			</p>
+			
+			
+			
+			<div class="content">Hello bayinmin,<br>
+<br>
+I have passed the information to the devs.<br>
+<br>
+We have tried to repro this scenario using many combinations and we were unable to (Tested on Windows 10, 8.1 and 7 x64).<br>
+Please provide the exact set of steps followed in order to test the behavior.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129604" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129604">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist3b56.html?mode=viewprofile&amp;u=34198" class="username">bayinmin</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search68926892.html?author_id=34198&amp;sr=posts">6</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Aug 05, 2017 9:49 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129604">
+
+						<h3 ><a href="#p129604">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting74f2.html?mode=quote&amp;f=11&amp;p=129604" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic4693-34693.html?p=129604#p129604" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist3b56.html?mode=viewprofile&amp;u=34198" class="username">bayinmin</a></strong> &raquo; </span>Wed Aug 09, 2017 12:29 pm
+			</p>
+			
+			
+			
+			<div class="content">Hello Support Team,<br>
+<br>
+Please refer to the demonstration video.<br>
+<br>
+<a href="https://www.youtube.com/embed/paOVF3IcexU" class="postlink">https://www.youtube.com/embed/paOVF3IcexU</a><br>
+<br>
+Thanks</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129606" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129606">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Support<br /><img src="images/ranks/gloss/yellow/yellow-supportteam.png" alt="Sandboxie Support" title="Sandboxie Support" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchdf5ddf5d.html?author_id=32296&amp;sr=posts">2337</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 07, 2016 3:10 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129606">
+
+						<h3 ><a href="#p129606">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting164b.html?mode=quote&amp;f=11&amp;p=129606" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica5e6a5e6.html?p=129606#p129606" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a></strong> &raquo; </span>Wed Aug 09, 2017 12:39 pm
+			</p>
+			
+			
+			
+			<div class="content">Hi bayinmin ,<br>
+<br>
+I have sent the link to the devs. We are still unable to repro the issue.<br>
+<br>
+We have tried adding Temp to the environment variables, but we are not seeing the installer looking for or using the files placed in the Temp location.<br>
+Have you made any changes to your environment variables? <br>
+From the video, it looks like you are running Windows 7, is that correct? Is there anything else running on the computer while reproducing the issue?<br>
+<br>
+Could you please provide a procmon log reproducing the issue?<br>
+Download procmon.exe from <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procmon" class="postlink">https://docs.microsoft.com/en-us/sysint ... ds/procmon</a><br>
+Start procmon and reproduce the issue, then save the log and provide us the link (you will have to upload it to some free hosting website, as they tend to be big files).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129608" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129608">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518" class="username">Syrinx</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Guru<br /><img src="images/ranks/gradient/blue/blue-guru.png" alt="Sandboxie Guru" title="Sandboxie Guru" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4dd94dd9.html?author_id=29518&amp;sr=posts">620</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Nov 13, 2015 4:11 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129608">
+
+						<h3 ><a href="#p129608">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting583c.html?mode=quote&amp;f=11&amp;p=129608" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicfbd1-2fbd1.html?p=129608#p129608" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518" class="username">Syrinx</a></strong> &raquo; </span>Wed Aug 09, 2017 7:23 pm
+			</p>
+			
+			
+			
+			<div class="content">I was unable to locate such an installer tho my 'personal backup' directory of SBIE installers isn't exactly filled to the brim. The noted name itself seems similar but also quite wrong. If taken a certain way it looks like it might be a beta that isn't available but regardless I was not able to reproduce with public builds at this point tho I have <strong>not</strong> tested <em>every single</em> recent installer.<br>
+<br>
+*YAWN*</div>
+
+			
+									
+									<div id="sig129608" class="signature">Goo.gl/p8qFCf</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129612" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129612">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist3b56.html?mode=viewprofile&amp;u=34198" class="username">bayinmin</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search68926892.html?author_id=34198&amp;sr=posts">6</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Aug 05, 2017 9:49 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129612">
+
+						<h3 ><a href="#p129612">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingdfce-2.html?mode=quote&amp;f=11&amp;p=129612" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicb391-2b391.html?p=129612#p129612" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist3b56.html?mode=viewprofile&amp;u=34198" class="username">bayinmin</a></strong> &raquo; </span>Wed Aug 09, 2017 10:18 pm
+			</p>
+			
+			
+			
+			<div class="content">Hi Support Team,<br>
+<br>
+It was tested on Window 7. To the best of my memory that I can recall, no additional environmental variable change were made.<br>
+<br>
+I have reproduced the steps again. The full log is certainly too big, so I filtered to Sandboxie related.<br>
+Please find here : <a href="https://drive.google.com/open?id=0B6Uzbwymyqw2S3ZCLWtiRDZTMVU" class="postlink">https://drive.google.com/open?id=0B6Uzb ... WtiRDZTMVU</a><br>
+<br>
+The following is the limited initial screenshot I still have from the initial testing<br>
+<br>
+<img src="https://lh3.googleusercontent.com/_2ZH2bYW1Me6ZWkZxBXvtix23XpIchO96LBSOwK6QPXOUhEr_DGPj0hUDhklwRuKA-JGnidTdlojLZw=w1280-h703-rw" class="postimage" alt="Image"><br>
+<br>
+Thanks</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129613" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129613">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518" class="username">Syrinx</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Guru<br /><img src="images/ranks/gradient/blue/blue-guru.png" alt="Sandboxie Guru" title="Sandboxie Guru" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4dd94dd9.html?author_id=29518&amp;sr=posts">620</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Nov 13, 2015 4:11 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129613">
+
+						<h3 ><a href="#p129613">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting1393.html?mode=quote&amp;f=11&amp;p=129613" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic160f-2160f.html?p=129613#p129613" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518" class="username">Syrinx</a></strong> &raquo; </span>Thu Aug 10, 2017 12:13 am
+			</p>
+			
+			
+			
+			<div class="content">While not a member of the support team I'd like to thank you for the PML. I'll try to take another look tomorrow, while sober, since at first glance it appears you were using a SBIE x64 5.20 installer but in my VM test just now on a Windows 7 x64 VM I was <em>still</em> unable to reproduce. In my latest attempt I was using a modified <span style="text-decoration: underline">dwmapi.dll</span> in the tmp dir but it still always loaded from trusted paths instead... I may need to try a full clean install tomorrow as the one I was working on isn't exactly virgin so maybe some policy or tweak has changed the outcome?!?</div>
+
+			
+									
+									<div id="sig129613" class="signature">Goo.gl/p8qFCf</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129619" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129619">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518" class="username">Syrinx</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Guru<br /><img src="images/ranks/gradient/blue/blue-guru.png" alt="Sandboxie Guru" title="Sandboxie Guru" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4dd94dd9.html?author_id=29518&amp;sr=posts">620</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Nov 13, 2015 4:11 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129619">
+
+						<h3 ><a href="#p129619">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting34a1.html?mode=quote&amp;f=11&amp;p=129619" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica048-2a048.html?p=129619#p129619" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518" class="username">Syrinx</a></strong> &raquo; </span>Thu Aug 10, 2017 8:50 am
+			</p>
+			
+			
+			
+			<div class="content">lol, I wasn't moving the installer into the temp directory but I can reproduce it now. I could see this being an issue while using the internal update function. Thanks and sorry I was so daft while trying to reproduce!</div>
+
+			
+									
+									<div id="sig129619" class="signature">Goo.gl/p8qFCf</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129636" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129636">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist3b56.html?mode=viewprofile&amp;u=34198" class="username">bayinmin</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search68926892.html?author_id=34198&amp;sr=posts">6</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Aug 05, 2017 9:49 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129636">
+
+						<h3 ><a href="#p129636">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/postingf6c2.html?mode=quote&amp;f=11&amp;p=129636" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicb3a3-2b3a3.html?p=129636#p129636" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist3b56.html?mode=viewprofile&amp;u=34198" class="username">bayinmin</a></strong> &raquo; </span>Fri Aug 11, 2017 4:30 am
+			</p>
+			
+			
+			
+			<div class="content">Glad to hear that It can be reproduced.<br>
+Thanks for the effort!</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129637" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129637">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518" class="username">Syrinx</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Guru<br /><img src="images/ranks/gradient/blue/blue-guru.png" alt="Sandboxie Guru" title="Sandboxie Guru" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4dd94dd9.html?author_id=29518&amp;sr=posts">620</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Nov 13, 2015 4:11 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129637">
+
+						<h3 ><a href="#p129637">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting0583.html?mode=quote&amp;f=11&amp;p=129637" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopiccd36-2cd36.html?p=129637#p129637" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518" class="username">Syrinx</a></strong> &raquo; </span>Fri Aug 11, 2017 6:21 am
+			</p>
+			
+			
+			
+			<div class="content">Sadly I may have to retract that. I got up to check it yesterday morning, before I had to go, so I wasn't very thorough. What happened was I did see activity in procmon where the installer would read and did a Load image on the local temp copy instead but did not check with procexp to see if ended up actually running. Even worse is that this morning I can't even reproduce that. I'll try to play with this more next week when I have more free time. =( Sorry if I've just added confusion on this matter but atm I'm not entirely sure if my results yesterday were correct.</div>
+
+			
+									
+									<div id="sig129637" class="signature">Goo.gl/p8qFCf</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129641" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129641">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a>							</dt>
+
+						<dd class="profile-rank">Sandboxie Support<br /><img src="images/ranks/gloss/yellow/yellow-supportteam.png" alt="Sandboxie Support" title="Sandboxie Support" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchdf5ddf5d.html?author_id=32296&amp;sr=posts">2337</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 07, 2016 3:10 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129641">
+
+						<h3 ><a href="#p129641">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting9829.html?mode=quote&amp;f=11&amp;p=129641" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8983-28983.html?p=129641#p129641" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296" style="color: #006699;" class="username-coloured">Barb@Invincea</a></strong> &raquo; </span>Fri Aug 11, 2017 11:14 am
+			</p>
+			
+			
+			
+			<div class="content">Hello bayinmin,<br>
+<br>
+We have not been able to recreate the issue. <br>
+Can you please provide more information regarding the exact Windows version that you used? <br>
+<br>
+Perhaps you can provide a copy of your dll files? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p129656" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile129656">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://www.sandboxie.com/old-forums/memberlist3b56.html?mode=viewprofile&amp;u=34198" class="username">bayinmin</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search68926892.html?author_id=34198&amp;sr=posts">6</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Aug 05, 2017 9:49 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content129656">
+
+						<h3 ><a href="#p129656">Re: Vulnerability Reporting - Sandboxie Installer DLL Hijacking Vulnerbility</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://www.sandboxie.com/old-forums/posting582f.html?mode=quote&amp;f=11&amp;p=129656" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic582d-2582d.html?p=129656#p129656" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://www.sandboxie.com/old-forums/memberlist3b56.html?mode=viewprofile&amp;u=34198" class="username">bayinmin</a></strong> &raquo; </span>Sat Aug 12, 2017 10:30 pm
+			</p>
+			
+			
+			
+			<div class="content">Hi Barb,<br>
+<br>
+Window 7 Ultimate was used to test. I have difficulties uploading the poc DLL file or send through mail as it is being blocked as malicious. <br>
+<br>
+Thanks</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="https://www.sandboxie.com/old-forums/postingea27-2.html?mode=reply&amp;f=11&amp;t=24719" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic7aae-27aae.html?f=11&amp;t=24719&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24719">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			17 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic61f4-261f4.html?f=11&amp;t=24719&amp;start=15" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic61f4-261f4.html?f=11&amp;t=24719&amp;start=15" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum8a838a83.html?f=11" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Problem Reports”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum907f907f.html?f=42" class="jumpbox-cat-link"> <span> Sandboxie Forums</span></a></li>
+																<li><a href="viewforum12a312a3.html?f=2" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Announcements</span></a></li>
+																<li><a href="viewforumcf19cf19.html?f=6" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Positive Reviews</span></a></li>
+																<li><a href="viewforum107e107e.html?f=43" class="jumpbox-cat-link"> <span> Problems and Questions</span></a></li>
+																<li><a href="viewforum8a838a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Problem Reports</span></a></li>
+																<li><a href="viewforum48ab48ab.html?f=17" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Quick Questions</span></a></li>
+																<li><a href="viewforumbcb4bcb4.html?f=65" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.25</span></a></li>
+																<li><a href="viewforumab78ab78.html?f=44" class="jumpbox-cat-link"> <span> More Forums</span></a></li>
+																<li><a href="viewforum31e631e6.html?f=4" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Feature Requests</span></a></li>
+																<li><a href="viewforume774e774.html?f=5" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Anything Else</span></a></li>
+																<li><a href="viewforum89418941.html?f=22" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Contributed Utilities &amp; Templates</span></a></li>
+																<li><a href="viewforum97809780.html?f=14" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; International Translations</span></a></li>
+																<li><a href="viewforum2b892b89.html?f=38" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.01</span></a></li>
+																<li><a href="viewforumdfa4dfa4.html?f=39" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.03</span></a></li>
+																<li><a href="viewforuma3f5a3f5.html?f=40" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.05</span></a></li>
+																<li><a href="viewforum51ee51ee.html?f=41" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.07</span></a></li>
+																<li><a href="viewforum590b590b.html?f=46" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.09</span></a></li>
+																<li><a href="viewforumcdbacdba.html?f=48" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.13</span></a></li>
+																<li><a href="viewforum30ac30ac.html?f=49" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.15</span></a></li>
+																<li><a href="viewforum91409140.html?f=50" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.17</span></a></li>
+																<li><a href="viewforum208f208f.html?f=51" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 4.19</span></a></li>
+																<li><a href="viewforum26492649.html?f=53" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.01</span></a></li>
+																<li><a href="viewforum9e0d9e0d.html?f=54" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.05</span></a></li>
+																<li><a href="viewforumfac0fac0.html?f=55" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.07</span></a></li>
+																<li><a href="viewforuma05ca05c.html?f=56" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.09</span></a></li>
+																<li><a href="viewforum6ac36ac3.html?f=57" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.11</span></a></li>
+																<li><a href="viewforume57de57d.html?f=58" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.13</span></a></li>
+																<li><a href="viewforum07560756.html?f=59" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.15</span></a></li>
+																<li><a href="viewforumb8c1b8c1.html?f=60" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.17</span></a></li>
+																<li><a href="viewforumdbf5dbf5.html?f=61" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.19</span></a></li>
+																<li><a href="viewforum75c275c2.html?f=62" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.21</span></a></li>
+																<li><a href="viewforume5f3e5f3.html?f=64" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span> &#8627; &nbsp; Beta Version 5.23</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="stat-block online-list">
+		<h3>Who is online</h3>
+		<p>Users browsing this forum: No registered users and 1 guest</p>
+	</div>
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="../index.html" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Home</span></a></span>									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="America/New York">UTC-04:00</span></li>
+							<li class="rightside">
+				<a href="ucp033a033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete all board cookies</span>
+				</a>
+			</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="https://www.sandboxie.com/old-forums/memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+									</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="cron68e368e3.gif?cron_type=cron.task.text_reparser.pm_text" width="1" height="1" alt="cron" /></div>
+
+<script type="text/javascript" src="assets/javascript/jquery.mince91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="assets/javascript/corece91ce91.js?assets_version=7"></script>
+
+
+
+<script type="text/javascript" src="styles/sbie_prosilver/template/forum_fnce91ce91.js?assets_version=7"></script>
+<script type="text/javascript" src="styles/sbie_prosilver/template/ajaxce91ce91.js?assets_version=7"></script>
+
+
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24719 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:21:13 GMT -->
+</html>

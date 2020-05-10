@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1144&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Major Problem when unmounting drives while SBxed apps run</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Major Problem when unmounting drives while SBxed apps run</h2>
+		<p><a href="viewtopicc820c820.html?f=11&amp;t=1144">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=1144</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Major Problem when unmounting drives while SBxed apps run</h3>
+				<div class="date">Posted: <strong>Sat Mar 03, 2007 9:28 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">I found a major problem when I try to unmount a drive (Unplug an USB HDD, or unmount a TC volume) while a program insandbox is running the drive latter is not being freed, untill the SBxed process is cloded.<br>
+<br>
+EDIT: an other related problem:<br>
+when I mount or plug in a drive while a process is running in SB the process can not accedd the drive.<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 03, 2007 12:18 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The second problem is expected.  Sandboxie scans and remembers drive letter information when a sandboxed program comes up, and this doesn't get refreshed later on.<br>
+<br>
+This could be improved in a later version, perhaps, but I won't deal with that now. <br>
+<br>
+As for the first problem:  With TrueCrypt I was also able to reproduce this problem.  I mounted drive T:, started a sandboxed command prompt, typed dir T: and I get<br>
+
+<blockquote class="uncited"><div>
+ Volume in drive T has no label.<br>
+ Volume Serial Number is 45E9-C634<br>
+<br>
+ Directory of T:\<br>
+<br>
+File Not Found
+</div></blockquote>
+
+Then I unmounted the drive and typed dir T: in the sandboxed cmd:<br>
+
+<blockquote class="uncited"><div>
+The system cannot find the file specified.
+</div></blockquote>
+
+However, TrueCrypt displays drive U: twice, in other words, its display of drives got messed up to display U: instead of T:.<br>
+<br>
+As soon as I exit the sandboxed cmd, the TrueCrypt display is corrected.<br>
+<br>
+* * *<br>
+<br>
+If I use Process Explorer to look into a sandboxed app, I see it holds open handles for the drives available when the app started.  This may be what is keeping the drive from being ultimately unmounted.  I'll see if this is something I can fix.<br>
+<br>
+* * *<br>
+<br>
+(Later)  Yes, that was it, and there was no reason to keep the handles open.  I fixed it now, thanks.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1144&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:34 GMT -->
+</html>

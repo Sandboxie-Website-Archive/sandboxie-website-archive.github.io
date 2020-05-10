@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=20784&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:32:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; New Delete Command for Eraser v6.2.0.2962 and Sandboxie</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>New Delete Command for Eraser v6.2.0.2962 and Sandboxie</h2>
+		<p><a href="viewtopic46464646.html?f=5&amp;t=20784">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=20784</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>New Delete Command for Eraser v6.2.0.2962 and Sandboxie</h3>
+				<div class="date">Posted: <strong>Sun Mar 01, 2015 6:17 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">New Delete Command for Eraser v6.2.0.2962 and Sandboxie<br>
+Tested with Sandboxie v4.16 and v4.17 on 64-bit Win 8.1<br>
+<span style="color: #FF0000">Edit</span> Also works with Eraser v6.2.0.2963 and 6.2.0.2967, but does NOT work for me with 6.2.0.2969. On 6.2.0.2969 it leaves behind the renamed sandbox folder "__Delete_xxxxx_xxxxxxxx" <span style="color: #FF0000"> /Edit</span><br>
+<br>
+Copy all of the text from this post to your Clipboard, and then Paste it into a Notepad document, so that you will have it available when you are off-line.<br>
+<br>
+<span style="color: #FF0000">Edit</span>: I should mention that the command lines assume that the "Eraser.exe" program file is located at "C:\Program Files\Eraser\Eraser.exe". If that's not correct for your computer, then the path inside of the following command lines must be corrected.<span style="color: #FF0000"> /Edit</span><br>
+<br>
+Choose from these two eraser methods...<br>
+<br>
+Command line for <span style="text-decoration: underline">3 Pass deletion - DOD /E method</span> (This is the usual method used by Sandboxie):
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"C:\Program Files\Eraser\Eraser.exe" erase /quiet /method=ecbf4998-0b4f-445c-9a06-23627659e419 dir="%SANDBOX%"
+</code></pre></div>
+Command line for <span style="text-decoration: underline">1 Pass deletion with PseudoRandom Data</span> (A quicker method that I use, and all that's really needed):
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"C:\Program Files\Eraser\Eraser.exe" erase /quiet /method=bf8ba267-231a-4085-9bf9-204de65a6641 dir="%SANDBOX%"
+</code></pre></div>
+Decide which of the above erase methods you will use (1 Pass or 3 Pass), and have the Notepad document open so you can Copy to the Clipboard.<br>
+<br>
+For each sandbox where you use Eraser v6.2 for secure deletion:<br>
+(Right-click the sandbox name) &gt; Sandbox Settings &gt; Delete &gt; Delete Command<br>
+<br>
+In the "Delete Command" box, use the arrow keys or your mouse to select everything in the box, and then delete it by pressing the &lt;Delete&gt; key on your keyboard.<br>
+<span style="text-decoration: underline">Text in that box extends beyond what you can see, so make sure that it has all been deleted</span>.<br>
+Paste the new command line of your choice from above into the Delete Command  box, and Click OK to close the Sandbox Settings window.<br>
+<br>
+Repeat for the next sandbox.<br>
+<br>
+<br>
+NOTES:<br>
+If you have multiple sandboxes that use Eraser v6.2, you could use:<br>
+Sandboxie Control window &gt; Configure &gt; Edit Configuration<br>
+Scroll down to each "DeleteCommand=..." line and replace the line with the new DeleteCommand=..." line of your choice:<br>
+<br>
+Either the 3 Pass method that's usually used by Sandboxie:<br>
+<br>
+DeleteCommand="C:\Program Files\Eraser\Eraser.exe" erase /quiet /method=ecbf4998-0b4f-445c-9a06-23627659e419 dir="%SANDBOX%"<br>
+<br>
+Or the 1 Pass method:<br>
+<br>
+DeleteCommand="C:\Program Files\Eraser\Eraser.exe" erase /quiet /method=bf8ba267-231a-4085-9bf9-204de65a6641 dir="%SANDBOX%"<br>
+ <br>
+<span style="color: #FF0000">Edit</span> Here's an example using <span style="color: #4000FF">methodName</span>:<br>
+<br>
+DeleteCommand="C:\Program Files\Eraser\Eraser.exe" erase /quiet /methodName=Pseudorandom data dir="%SANDBOX%"<br>
+<br>
+<span style="color: #FF0000"> /Edit</span><br>
+------<br>
+Justification for only using 1 Pass deletion -<br>
+At the bottom of Peter Gutmann's paper on Secure Deletion Methods:<br>
+<a href="https://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html#Epilogue" class="postlink">https://www.cs.auckland.ac.nz/~pgut001/ ... l#Epilogue</a><br>
+Why Eraser still sets 35-Pass Gutmann method as the default setting when installing Eraser is a mystery to me.<br>
+------<br>
+Eraser Help usage screen follows:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Eraser 6.2.0.2962
+(c) 2008-2015 The Eraser Project
+Eraser is Open-Source Software: see http://eraser.heidi.ie/ for details.
+
+usage: Eraser &lt;action&gt; &lt;arguments&gt;
+where action is
+  help                Show this help message.
+  erase               Erases items specified on the command line. This is equivalent to addtask, with the schedule set to "now".
+  addtask             Adds a task to the current task list.
+  importtasklist      Imports an Eraser Task list to the current user's Task List.
+
+global parameters:
+  /quiet              Do not create a Console window to display progress.
+
+parameters for help:
+  eraser help         No parameters to set.
+
+parameters for erase and addtask:
+  eraser erase [/method=(&lt;methodGUID&gt;|&lt;methodName&gt;)] &lt;target&gt; [target [...]]
+  eraser addtask [/method=(&lt;methodGUID&gt;|&lt;methodName&gt;)] [/schedule=(now|manually|restart)] &lt;target&gt; [target [...]]
+
+  /method             The Erasure method to use.
+    methodGUID and methodName can be any GUID/Name from the following list:
+       Erasure Method                      GUID
+    ---------------------------------------------------------------------------
+    U  Gutmann                             1407fc4e-feff-4375-b4fb-d7efbb7e9922
+    U  US DoD 5220.22-M (8-306./E, C &amp; E)  d1583631-702e-4dbf-a0e9-c35dba481702
+    U  RCMP TSSIT OPS-II                   f335cc40-5de5-4733-90b1-6957b4a45688
+    U  Schneier 7 pass                     b1bfab4a-31d3-43a5-914c-e9892c78afd8
+    U  German VSITR                        607632b2-651b-4935-883a-bdaa74febb54
+    U  US DoD 5220.22-M (8-306./E)         ecbf4998-0b4f-445c-9a06-23627659e419
+    U  British HMG IS5 (Enhanced)          45671da4-9401-46e4-9c0d-89b94e89c8b5
+    U  US Air Force 5020                   7bf5b185-8ea5-4e12-83f1-f6c2efb3d2c2
+    U  US Army AR380-19                    0fe620ea-8055-4861-b5bb-bd8bdc3fd4ac
+    U  Russian GOST P50739-95              92681583-f484-415f-a66c-cc210222edc5
+    U  British HMG IS5 (Baseline)          9acdbd78-0406-4116-87e5-263e5e3b2e0d
+    U  Pseudorandom Data                   bf8ba267-231a-4085-9bf9-204de65a6641
+       First/last 16KB Erasure             0c2e07bf-0207-49a3-ade8-46f9e1499c01
+
+    Only erasure methods labelled "U" can be used to erase unused disk space.
+
+  /schedule           The schedule the task will follow. The value must be one of:
+    now               The task will be queued for immediate execution.
+    manually          The task will be created but not queued for execution.
+    restart           The task will be queued for execution when the computer is next restarted.
+                      This parameter is only valid for use with "addtask".
+
+  target is one or more of:
+    file                Erases the specified file
+      argument: file=&lt;path&gt;
+    dir                 Erases files and folders in the directory
+      arguments: dir=&lt;directory&gt;[,-excludeMask][,+includeMask][,deleteIfEmpty[=true|false]]
+        excludeMask     A wildcard expression for files and folders to exclude.
+        includeMask     A wildcard expression for files and folders to include.
+                        The include mask is applied before the exclude mask.
+        deleteIfEmpty   Deletes the folder at the end of the erasure if it is
+                        empty. If this parameter is not specified, it defaults to true.
+    recyclebin          Erases files and folders in the recycle bin
+    unused              Erases unused space in the volume.
+      arguments: unused=&lt;drive&gt;[,clusterTips[=(true|false)]]
+      clusterTips     If specified, the drive's files will have their cluster tips erased.
+                      This parameter accepts a Boolean value (true/false) as an argument;
+                      if none is specified true is assumed.
+    move                Securely moves a file/directory to a new location
+      arguments: move=&lt;source&gt;|&lt;destination&gt;
+    drive               Erases partitions, volumes or drives
+      arguments:
+        drive=\Device\Harddisk&lt;index&gt;
+        drive=\\.\PhysicalDrive&lt;index&gt;
+        drive=\\?\Volume&lt;guid&gt;
+
+parameters for importtasklist:
+  eraser importtasklist &lt;file&gt;[...]
+
+    file               A list of one or more files to import.
+
+All arguments are case sensitive.
+
+Response files can be used for very long command lines (generally, anything
+involving more than 32,000 characters.) Response files are used by prepending
+"@" to the path to the file, and passing it into the command line. The
+contents of the response files' will be substituted at the same position into
+the command line.</code></pre></div>
+End of post</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: New Delete Command for Eraser v6.2.0.2962 and Sandboxie</h3>
+				<div class="date">Posted: <strong>Sun Mar 01, 2015 6:23 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">Magnificent information thanks! Although I use a RAMDisk and have no need of Eraser.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: New Delete Command for Eraser v6.2.0.2962 and Sandboxie</h3>
+				<div class="date">Posted: <strong>Thu Apr 16, 2015 9:31 am</strong></div>
+				<div class="author">by <strong>secret365</strong></div>
+				<div class="content">Okay, I can confirm this solution is working under windows 7 64 bit (using the latest Eraser v6.2.0.2969).<br>
+<br>
+Thank you!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: New Delete Command for Eraser v6.2.0.2962 and Sandboxie</h3>
+				<div class="date">Posted: <strong>Sat Apr 18, 2015 7:29 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>secret365 wrote:</cite>Okay, I can confirm this solution is working under windows 7 64 bit (using the latest Eraser v6.2.0.2969).</div></blockquote>It doesn't seem to work with that version, for me. It leaves behind the __Delete_xxxxxxxx folder.<br>
+I have that version on my notebook now, so I'm going to see if I can figure out what has changed with the command line.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: New Delete Command for Eraser v6.2.0.2962 and Sandboxie</h3>
+				<div class="date">Posted: <strong>Sun Apr 19, 2015 4:11 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">I was not able to get Eraser 6.2.0.2969 to work correctly from within Sandboxie.<br>
+However, 6.2.0.2967 does seem to work OK.<br>
+<br>
+Using 6.2.0.2969:<br>
+DeleteCommand="C:\Program Files\Eraser\Eraser.exe" erase /quiet /method=bf8ba267-231a-4085-9bf9-204de65a6641 dir="%SANDBOX%"<br>
+<br>
+Capturing the commands using Process Monitor...<br>
+The resultant command to run Eraser was:<br>
+"C:\Program Files\Eraser\Eraser.exe" erase /quiet /method=bf8ba267-231a-4085-9bf9-204de65a6641 dir="C:\Sandbox\Paul\__Delete_Firefox_01D07ACDF5BAD900"<br>
+<br>
+It looks perfect to me, but it did not work when Sandboxie tried to Delete Contents with 6.2.0.2969.<br>
+Since that command does work in previous Eraser versions, it would seem that Eraser might be at fault.<br>
+<br>
+However, the above command line <span style="text-decoration: underline">did work</span> when it I ran it in a command window.<br>
+That reminds me of another thread in the forum where it was reported that the DeleteCommand did not work from Sandboxie, but it did work from a command window.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: New Delete Command for Eraser v6.2.0.2962 and Sandboxie</h3>
+				<div class="date">Posted: <strong>Mon Sep 28, 2015 11:08 pm</strong></div>
+				<div class="author">by <strong>secret365</strong></div>
+				<div class="content">The delete command seems to be working with Eraser v6.2.0.2970, sandboxie 5.04 &amp; windows 10 64 bit.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: New Delete Command for Eraser v6.2.0.2962 and Sandboxie</h3>
+				<div class="date">Posted: <strong>Wed Dec 23, 2015 4:57 pm</strong></div>
+				<div class="author">by <strong>wayne Kerr</strong></div>
+				<div class="content">Thank you very, very much.<br>
+<br>
+I have been struggling with this for over a year following an update. I have spent ages searching and trying different things then gave up in despair. I tried again today and found your post that has worked.<br>
+<br>
+Sandboxie was not clearing the folder and I had to use CCleaner to fully clean up.<br>
+<br>
+<strong>You are a star!!!</strong><br>
+<br>
+Merry Christmas and a very happy New Year.<br>
+<br>
+Thanks again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: New Delete Command for Eraser v6.2.0.2962 and Sandboxie</h3>
+				<div class="date">Posted: <strong>Wed Dec 23, 2015 5:37 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">A lot of folks use CCleaner in the SB. Glad it worked for you.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=20784&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:32:31 GMT -->
+</html>

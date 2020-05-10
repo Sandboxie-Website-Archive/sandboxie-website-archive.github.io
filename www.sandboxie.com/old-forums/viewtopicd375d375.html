@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=11723&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Add option to evaluate sandbox rules in file order</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Add option to evaluate sandbox rules in file order</h2>
+		<p><a href="viewtopic0b730b73.html?f=4&amp;t=11723">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=11723</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Add option to evaluate sandbox rules in file order</h3>
+				<div class="date">Posted: <strong>Thu Oct 20, 2011 11:02 am</strong></div>
+				<div class="author">by <strong>Binky</strong></div>
+				<div class="content">After researching Windows security for 11 years, I have relied for the last year on Sandboxie for my primary security.  Really great software!<br>
+<br>
+There is something I have been wishing for over the last year.  Other security software (HIPS I used to use, firewall I still use) achieves surgical precision and simplicity by evaluating rules in the order they appear in file.  According to tzuk (see <a href="../phpbb/viewtopic7bb2.php?t=9427" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=9427</a>), Sandboxie evaluates all ClosedFilePath rules, then all ReadFilePath rules and then all OpenFilePath rules.  If none of these *FilePath rules apply to a file I/O, then a read is allowed and a write is sandboxed.  Thus, the order of these rules doesn't matter.<br>
+<br>
+I would like a new Sandboxie.ini setting that tells Sandboxie to evaluate these rules in the order they appear in file.  Without the new setting, Sandboxie would work as today for backwards compatibility.  I propose that this new evaluation mode would speed up execution because 1) only one pass through is needed for the three *FilePath rules compared to three passes today, and 2) I can reduce the number of rules to achieve the same effect.  More importantly, the new setting provides more surgical precision in achieving security.  Here is a good example: <a href="../phpbb/viewtopic4d1b.php?t=11714" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=11714</a><br>
+<br>
+I further propose adding a new rule/setting, maybe called NormalFilePath, that specifies that file I/O matching the path is allowed to read, but writes are sandboxed.  Today, this behavior applies if file I/O doesn't match any *FilePath rules.  This new setting, which would only when rules are evaluated in file order, could be inserted between *FilePath rules to provide more flexibility in file I/O rules.  I suggest that NormalFilePath behavior would still apply if no *FilePath rules match a given file I/O.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 20, 2011 2:17 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Since I've had this discussion too many times already, you'll have to forgive me for being brief this time.  The answer is no.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Alternative</h3>
+				<div class="date">Posted: <strong>Wed Nov 02, 2011 10:37 am</strong></div>
+				<div class="author">by <strong>gnasirator</strong></div>
+				<div class="content">I might suggest a simpler alternative here:<br>
+<br>
+Sandboxie - as it works right now - prefers denying rules over allowing ones.<br>
+Thus it is impossible to block acces to whole drives while still allowing acces to some handpicked important files.<br>
+<br>
+Suggestion: Change the priority the other way round - or better: Include a checkbox that let's the user decide wether he wants to priorize the block or the allow rules.<br>
+<br>
+By the way - that's a feature I really miss. <br>
+I just found sandboxie very handy to block the Origin spyware from scanning my private files (Origin - Battlefield 3). But Blocking every single sub folder and file in a specific directory just to allow the one which is necceary to run the game is VERY complicated.<br>
+This would be an (i guess) easily programmable solution which offers a BIG extra in usability.<br>
+<br>
+Greetings</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=11723&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:53:49 GMT -->
+</html>

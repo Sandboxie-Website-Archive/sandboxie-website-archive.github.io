@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24217&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:07:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Chrome - SBIE2101 Object name not found -(C0000022) - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Chrome - SBIE2101 Object name not found -(C0000022)</h2>
+		<p><a href="viewtopic43514351.html?f=11&amp;t=24217">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24217</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>5</strong></div>
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon Apr 24, 2017 2:58 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">All,<br>
+<br>
+We have been trying to gather information to reproduce this issue without luck...except for a specific scenario:<br>
+Are you using Roboform? <br>
+If so, are you using the Sandboxie Roboform template?  <br>
+<br>
+The more information you can provide, the better.<br>
+<br>
+Thanks,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Tue Apr 25, 2017 4:19 am</strong></div>
+				<div class="author">by <strong>sphinx8911</strong></div>
+				<div class="content">Frustratingly enough, it suddenly started working fine yesterday when I randomly tested launching Chrome in sandboxie. It might be related to Chrome update mechanism when it is installed outside Sandboxie, because the issue usually appears randomly around it.<br>
+<br>
+Chrome seems to be using the windows bits service (because occasionally I get warnings about chrome trying to talk to it and was blocked). In my case, I found that when I ran chrome outside sandboxie, it did update, and I relaunched it twice outside the sandbox, and deleted the contents, and then when running it inside it still gave the behavior I reported. (This was before I reported my error)<br>
+<br>
+Maybe there is a residue outside the sandbox in bits that chrome was still checking for ? Probably related to catalogs error. Now when Chrome DOES work, there is no sandboxed dberr.txt file in sandboxed C:\Windows\System32\catroot2 (I posted a copy of it in my previous post in the zip file).<br>
+<br>
+Maybe the problem is not with Chrome but with a series of events that Chrome triggers related to verification of catalogs. Maybe Chrome is checking for presence of certain Windows Updates ? When does windows generate C:\Windows\System32\catroot2\dberr.txt ? The file is normally populated on my machine with successful messages:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>CatalogDB: 12:52:45 AM 2017-04-18: DONE Adding Catalog File (16ms): oem4.cat
+CatalogDB: 12:52:46 AM 2017-04-18: DONE Adding Catalog File (16ms): vmnetuserif.cat
+CatalogDB: 12:52:54 AM 2017-04-18: DONE Adding Catalog File (16ms): oem6.cat
+CatalogDB: 12:52:59 AM 2017-04-18: DONE Adding Catalog File (15ms): vmx86.cat
+CatalogDB: 12:52:59 AM 2017-04-18: DONE Adding Catalog File (16ms): oem7.cat
+CatalogDB: 1:05:50 AM 2017-04-18: DONE Adding Catalog File (16ms): oem4.cat
+CatalogDB: 1:05:51 AM 2017-04-18: DONE Adding Catalog File (16ms): vmnetuserif.cat
+CatalogDB: 1:05:59 AM 2017-04-18: DONE Adding Catalog File (0ms): oem6.cat
+CatalogDB: 1:07:53 AM 2017-04-18: DONE Adding Catalog File (109ms): oem4.cat
+CatalogDB: 1:07:54 AM 2017-04-18: DONE Adding Catalog File (15ms): vmnetuserif.cat
+CatalogDB: 1:08:03 AM 2017-04-18: DONE Adding Catalog File (0ms): oem6.cat
+</code></pre></div>
+
+Maybe chrome is trying to install a "driver" or something that installs with INF install with a security catalog ?<br>
+<br>
+No, I don't have RoboForm. I have the following extensions:<br>
+HTTPS Everywhere<br>
+LastPass<br>
+Signal<br>
+uBlock Origin<br>
+Video DownloadHelper<br>
+XDebug helper<br>
+<br>
+No antimalware, Windows Defender built-in Windows 10.<br>
+<br>
+I have automated daily backups on my machine. I will try to go back in time a few days with a duplicate Chrome installation and an isolated Sandboxie configuration, I'm a bit busy now though.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Sandboxie Crash on Chrome 58</h3>
+				<div class="date">Posted: <strong>Tue Apr 25, 2017 12:46 pm</strong></div>
+				<div class="author">by <strong>HiTechLover</strong></div>
+				<div class="content">Hi,<br>
+<br>
+I updated Chrome x64 to version 58 yesterday and found a big bug in Sandboxie. It crashed upon opening Chrome and many error messages popped up. I am running a clean install of Windows 10 Creators Update x64 with Sandboxie 5.18 x64. Please find a fix soon.<br>
+<br>
+Error Message:<br>
+SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1<br>
+<br>
+Why I cannot attach a screenshot here? It said upload limit reached. Weird.<br>
+<br>
+Thank You</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Sun Apr 30, 2017 11:45 am</strong></div>
+				<div class="author">by <strong>coffeecup25</strong></div>
+				<div class="content">The chrome / sandboxie problem gets fixed if you create a new windows 10 user id and transfer / reload / copy / whatever your files into it. <br>
+<br>
+5.19.2 fixed my returning problem of chrome not loading at all. Originally it failed after an update to Windows 10-64 pro creators. Updating to 5.18 did not fix it. Eventually, I got it to work via lots of loading and reloading of various programs. After a Windows update, it failed again. 5.19.2 fixed it, again. 1 user on 1 out of 5 laptops was affected.<br>
+<br>
+1 PC updated with Win 10-64 creators had a corrupted user id. To fix it I had to recreate the user id. Various aspects of the taskbar would not work correctly. Sandboxed Chrome worked fine on it.<br>
+<br>
+Sandboxed Chrome bookmark changes  would not update for 1 user on 1 pc. Recreating the user id also fixed it.<br>
+<br>
+Hard to tell at this time if the Sandboxie issues are really corrupted Windows user id issues caused by Win 10 updates.<br>
+<br>
+<br>
+correction: I still have no access to my bookmarks within sandboxie at this time. At least the SBIE2101 has stopped.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon May 01, 2017 12:53 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello coffeecup25,<br>
+<br>
+Glad to hear things are working now. <br>
+Did you try to reinstall Chrome before creating a new user account? <br>
+<br>
+As for the bookmarks, make sure that you have the correspondent templates, also you can sign-in to Chrome to sync them.<br>
+If the issue persists, please see this thread (you can continue replying there as needed):<br>
+<a href="viewtopicc9c2c9c2.php?f=17&amp;t=23059&amp;hilit=chrome+bookmarks" class="postlink">http://forums.sandboxie.com/phpBB3/view ... +bookmarks</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon May 01, 2017 2:28 pm</strong></div>
+				<div class="author">by <strong>coffeecup25</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>Hello coffeecup25,<br>
+<br>
+Glad to hear things are working now. <br>
+Did you try to reinstall Chrome before creating a new user account? <br>
+<br>
+As for the bookmarks, make sure that you have the correspondent templates, also you can sign-in to Chrome to sync them.<br>
+If the issue persists, please see this thread (you can continue replying there as needed):<br>
+<a href="viewtopicc9c2c9c2.php?f=17&amp;t=23059&amp;hilit=chrome+bookmarks" class="postlink">http://forums.sandboxie.com/phpBB3/view ... +bookmarks</a><br>
+<br>
+Regards,<br>
+Barb.-</div></blockquote>
+
+Thank you.<br>
+<br>
+Yes, I tried every reasonably conceivable thing to fix my problem with Chrome / Sandboxie. At this time, it appears the only fix is to either wait for Microsoft to silently fix this problem or assume that occasionally a few creators update experiences will include corrupted user profiles, each of which has random problems. The only way to fix problems will be to create a new user profile and copy all data to it, delete the old one, rename the new one to the old one, and life goes on. Possibly Curt will figure out something more elegant if the problem only involves Sandboxie and chrome. <br>
+<br>
+As I mentioned in PMs, the 'correction' above was an error on your part trying to combine progress reports without understanding them. <br>
+<br>
+At this time, unless Curt figures out something better, the only fix is to NOT update to creators for a while or hope Curt figures out how to fix Microsoft's problem. Otherwise, create a new Windows user id and move on.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon May 01, 2017 4:58 pm</strong></div>
+				<div class="author">by <strong>coffeecup25</strong></div>
+				<div class="content">Final post: I forgot to mention above that my bookmarks worked just fine after creating the new Windows user id. <br>
+<br>
+The moderator edit above made that unclear. The beat version referred in the post fixed the sandbox / chrome load problem. It did not fix the bookmark problem. Perhaps Curt can nail that one down.<br>
+<br>
+Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon May 01, 2017 5:21 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">The error in the original post<em> "SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1"</em> is a complex issue caused, in this case, by delay loading of advapi32.dll. Windows CU changed something with how and when this DLL is loaded and it is creating a race condition causing Chrome to crash. Certain Chrome plugins seem to bring out the problem. We are still looking at this issue.<br>
+<br>
+However, I don't see how this could be fixed by recreating your Chrome profile.<br>
+<br>
+coffeecup25, you were getting the same error msg (SBIE2101) as the original post?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon May 01, 2017 6:39 pm</strong></div>
+				<div class="author">by <strong>coffeecup25</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>The error in the original post<em> "SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1"</em> is a complex issue caused, in this case, by delay loading of advapi32.dll. Windows CU changed something with how and when this DLL is loaded and it is creating a race condition causing Chrome to crash. Certain Chrome plugins seem to bring out the problem. We are still looking at this issue.<br>
+<br>
+However, I don't see how this could be fixed by recreating your Chrome profile.<br>
+<br>
+coffeecup25, you were getting the same error msg (SBIE2101) as the original post?</div></blockquote>
+
+It fixed the issue where the bookmarks would not sync when updated in the sandbox. Firefox updated fine.  SBIE2101 caused problems ... was fixed after reloads ... broke after a windows update .... fixed with newest beta.<br>
+<br>
+No other laptops or users on the same laptop had any issues with chrome / sandboxie. All are configured almost identically. Only 1 user on 1 laptop out of 5 laptops and multiple users had sandboxie problems. Another laptop had an issue with the taskbar. Google research stated a replacement user profile would fix the taskbar problem. I'm assuming CU caused both problems as everything worked fine before the update. Reports of CU problems have surfaced on various websites.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Mon May 01, 2017 8:23 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>coffeecup25 wrote:</cite>
+<br>
+At this time, unless Curt figures out something better, the only fix is to NOT update to creators for a while or hope Curt figures out how to fix Microsoft's problem. Otherwise, create a new Windows user id and move on.</div></blockquote>
+It would appear the Microsoft agrees with you: <a href="https://betanews.com/2017/04/25/microsoft-recommends-you-dont-install-the-windows-10-creators-update/" class="postlink">https://betanews.com/2017/04/25/microso ... rs-update/</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Tue May 02, 2017 6:08 pm</strong></div>
+				<div class="author">by <strong>HiTechLover</strong></div>
+				<div class="content">To everyone with Creators Update problem,<br>
+<br>
+Do a clean install of the new OS which I did and everything runs perfectly smooth and fast; I love the new update. Microsoft had fixed all if not all previous known bugs in this update that I found gone.<br>
+<br>
+DON'T use ancient computers which is more than 5 years old, you will run into hardware and drivers compatibility problems. I always buy a new computer (laptop nowadays) every 2 years. My 2016 Samsung Notebook 9 15" laptop and 2017 Dell XPS 13 runs nice. I did a clean install on my Samsung and upgrade on my Dell XPS 13 laptops. Microsoft added more touchpad gestures and functionalities which is a joy to use which I prefer it over touchscreen ultrabook. I bought an Acer Aspire S7 392 ultrabook with touchscreen which I had no use for. <br>
+<br>
+Google Chrome still sucks for their touchpad functionalities on the scroll and zoom ability...cough Google. I sent feedback to them for a fix but they never fix it. IE11 and Edge browsers' scroll and zoom works perfectly fast and smooth on laptops using touchpad. Shame on Google for not fixing this issue for so many years. Did they even know that more and more people use laptops/ultrabooks these days. Desktop is dying. My family only use laptops/ultrabooks which we had 8 of them... <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> <br>
+<br>
+Regards</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome suddenly not working in Sandbox</h3>
+				<div class="date">Posted: <strong>Tue May 02, 2017 6:39 pm</strong></div>
+				<div class="author">by <strong>coffeecup25</strong></div>
+				<div class="content">HiTechLover,<br>
+<br>
+Agree a clean install would probably be great but it's also a last resort since all profiles would have to be re-created from scratch.<br>
+<br>
+Do you know if a 'Windows Refresh' where the user files are retained would work? I will try it if I encounter more problems but insights from someone with good information would be helpful.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome - SBIE2101 Object name not found -(C0000022)</h3>
+				<div class="date">Posted: <strong>Thu May 04, 2017 2:04 pm</strong></div>
+				<div class="author">by <strong>coffeecup25</strong></div>
+				<div class="content">Add this to the 'weird files'. SBIE2101 started appearing again on the 'fixed' laptop. Yesterday fine. Today What???. Nothing changed except it's a new day. Going to Firefox ... sluggish but working.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome - SBIE2101 Object name not found -(C0000022)</h3>
+				<div class="date">Posted: <strong>Fri May 05, 2017 8:49 am</strong></div>
+				<div class="author">by <strong>coffeecup25</strong></div>
+				<div class="content">Chrome silently updated to a new version. This is what created the new problem. It just appeared on a laptop that had been working perfectly. Version 59.0.3071.36 (Official Build) (64-bit) Broken like the other now.<br>
+<br>
+To the good, Comodo Dragon works great. Firefox is sluggish to the point of distraction. Dragon is only on V55 of Chrome ... it still works. Fixed again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome - SBIE2101 Object name not found -(C0000022)</h3>
+				<div class="date">Posted: <strong>Fri May 05, 2017 2:31 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">5.19.3 has been released to fix Chrome crashing in Win 10.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>5</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24217&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:07:20 GMT -->
+</html>

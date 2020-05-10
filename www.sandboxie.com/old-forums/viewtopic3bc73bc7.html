@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24882&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:27:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie, Chrome and 1Password [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie, Chrome and 1Password [SOLVED]</h2>
+		<p><a href="viewtopic1442-21442.html?f=11&amp;t=24882">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24882</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie, Chrome and 1Password [SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Sep 13, 2017 5:15 am</strong></div>
+				<div class="author">by <strong>itayo</strong></div>
+				<div class="content">I have been having problem while working with Chrome (in Sandboxie) and the 1Password extension.<br>
+While Chrome is working fine in Sandboxie, the 1Password extension doesn't seem to work and is "grayed out".<br>
+I saw some threads about 1Password and Firefox but not about Chrome.<br>
+Since I prefer not to save my passwords in Chrome this has become an issue.<br>
+I tried to reinstall the 1P extension while Chrome is "sandboxed", but it didn't work.<br>
+Any ideas?<br>
+<br>
+itay</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie, Chrome and 1Password</h3>
+				<div class="date">Posted: <strong>Wed Sep 13, 2017 11:40 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello itayo,<br>
+<br>
+Please provide the following information so that we can test this:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Also, have you tried installing the add-on outside Sandboxie, deleting the contents of your Sandbox (or creating a new Sandbox) and re-trying using 1Password in Chrome?<br>
+<br>
+If the problem persists, please provide the results of your resource access monitor:<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie, Chrome and 1Password</h3>
+				<div class="date">Posted: <strong>Tue Oct 24, 2017 1:04 am</strong></div>
+				<div class="author">by <strong>itayo</strong></div>
+				<div class="content">Hi,<br>
+Sorry for the delay in response.<br>
+For some time, I wasn't sure if the problem was related to 1Password or to Sandboxie.<br>
+But now I am sure the issue is with Sandboxie.<br>
+when running it with Sandboxie off (and the browser "force" control is off) - everything works. when I start Sandboxie - 1P's icon is greyed out and it doesn't work. perhaps it elates to the fact that it uses secure-desktop?<br>
+<br>
+In any case, <br>
+my windows version number is: windows 10 version 1703 build 15063.674<br>
+Sandboxie version is 5.2 64bit<br>
+1Password version: 4.6.2.626 and the Chrome plug in: 4.6.12.90<br>
+I am using Norton Security : 22.11.0.41<br>
+<br>
+There are no error messages that I get while trying to operate 1P.<br>
+Besides unable to work in Chrome. The 1P software works great (outside the sandbox).<br>
+I have also tried uninstalling, reinstalling etc and nothing worked.<br>
+<br>
+Here is the resource manager log when trying to enter a password using 1P (pressing Ctrl+\)<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Clsid       -------------------------------
+File/Key    -------------------------------
+Image       -------------------------------
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\[CoreUI]-PID(13536)-TID(13876) cbed3625-7751-4b21-b66a-0a62840d1ccb
+Ipc         \RPC Control\LSMApi
+Ipc         \Sessions\1\BaseNamedObjects\1DefaultTIPSharedMemory
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_0ae2994fe643682e9dde676d704ad614a6cb724263234eccb039a3e87fc6784f
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_0e954241279c0e8061bf67df75c014b48f97f020f34d71d464d9fa10e30bf19d
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_1661b25f3b0c104dfeee71f7993de11b98e7cd75550ddf131d37e06fa931d36f
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_1ea27ce02b99a7f1990dc0bce158c48917781e9e95fd3bafc2778b856ce3702b
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_222c5265ccf1ca6bd511fff945db58eecf2e49e1a5d8b5bbfa8fefd6bc4ba82b
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_225be43d5c268a5c60d3082f41ece7487ae263f312dc8b4fabd235d367f108b7
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_259211a366c1cbc9747d072cb45ed83d864f3780104460fa2a8c2aacd8dead56
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_31069a6a1e27b5aad3236f40c89576f10d1b9f7159a5e33e575382f5abb588da
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_415f01397565888e45a2fabc91ef35186d9469c05e9610e5f8d16a99c89f87b9
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_472fe4941a0769fb5727aa1dcbeaf1d61abac8a4f18b4403e1a1e957ec9ba550
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_4b3cf42e3a7b55cd6887419624bea3523a2e55790cc6cf91497f5399b1715353
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_4f74a11cd4a850dccd2d5b1226047ec53b592f2e4f1d74888a8720ce3b0facae
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_52a9fde5ef7b05eecc60659e08abb7fe298c0604c7ca2d1e4df1a3e344ce7346
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_58bd466ac2aec6689a78712296f0abd484b5972e87dd86dd49a175ed8627f81c
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_66e459082fa78b40e74e3bc0e65c872eb70a786299022714123b16d4550fd086
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_79c1e6a70eded7cb1cb2c537f469d007895deb96060ee3315a9172bf38432769
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_7e7d67f488bb50a378390612eb4343a00eb5ac3a6481e698aba7bb2f7399ce3a
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_83d71a38ba4231e8730be0139a0c287087b74f304b0fa54c96e2d0617d7b67c2
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_859ceff7512876812a43b6668bb5d061814769049ae47f12087d7e9243880425
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_85dfbd66639d3566e680079e06a0787c61fda11d928a90bec9fa7420370b8c54
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_8d66d35227e9650f9d1d5be3b86d89f77fa55257e426afe9d804c533dbb6f046
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_9e1b4e4133fbf44a976605d3860d16de1bb3207c1b68bac94680e490272c788b
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_a6818ae74c04600e0cf9b141e422f7baa6c5fe4b1f7549847851e9bd4af14fe8
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_adbe44e71d8ff22818af97addc061fd6014069f59d39d2d6b48d7c8e7f5a69fd
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_afbf6027f6dcec0ae8217cd22ee77b71e09faa58ca869c27757204983a0af988
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_b64343843ae3589167448e901042d2c054204056132e88966e2464506b5f1fe1
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_b7ec3786a3c4f422b24623681a4c8dcddd4065c838fbb5c17755a098386d8b6d
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_b904e7b7b9d0509232e21f3ba6b7dcd962bd588651c41de60a61a3e9905c2c43
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_c73932a7afbcc062ccb05e07e3c7f07de88b0de23b10b9ec163e480921666fa8
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_c9e1684477b7304681150afefeabb34e2b08dcd5960c69deb570ea6f399011b3
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_dcedebf759902d2d2d38619149156df251c70a79ba50fc00f70e8f1ec8915cfd
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_df6e59b949748bfd61d9d3592dde5523d4e158ffc0bd40e172edc176a1042bf9
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_e4e71e9a6bf1c9f2daa17c61fe8cc3abe456a436cfd7638ba591d73e9fab1af5
+Ipc         \Sessions\1\BaseNamedObjects\CrSharedMem_f84752aafbdcee249d67a364205e0e06829e64ee9931cf367d1855b80de99eed
+Ipc      O  \BaseNamedObjects\TermSrvReadyEvent
+Pipe        -------------------------------
+WinCls      -------------------------------</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie, Chrome and 1Password</h3>
+				<div class="date">Posted: <strong>Wed Oct 25, 2017 12:18 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello itayo,<br>
+<br>
+I downloaded 1Password, the latest version is 6.7.457, created and account and logged in.<br>
+I added the Chrome plugin and was able to repro the problem usign the latest SBIE beta 5.21.7 - Release Candidate<br>
+<br>
+Heres'a workaround: <br>
+Right- click on your Sandbox --&gt; Sandbox Settings--&gt; Resource Access--&gt; File Access --&gt; Full Access <br>
+Hit "Add" and paste the following:<br>
+*\device\namedpipe\1password*<br>
+Apply and Okay your way out.<br>
+Configure --&gt; Reload Configuration <br>
+Delete the contents of your Sandbox<br>
+<br>
+After that, launch 1password on your host and then launch Chrome inside your modified Sandbox. <br>
+I tested it with existing accounts, as well as creating a new entry from a Sandboxed browser and did not find any issues. <br>
+<br>
+Regards,<br>
+Barb.-<br>
+<br>
+PS: Regarding Norton, please be aware of this thread:<br>
+<a href="viewtopiccb81cb81.html?p=130045#p130045" class="postlink">viewtopic.php?p=130045#p130045</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie, Chrome and 1Password</h3>
+				<div class="date">Posted: <strong>Thu Oct 26, 2017 3:32 am</strong></div>
+				<div class="author">by <strong>itayo</strong></div>
+				<div class="content">Many thanks.<br>
+Worked like a charm.<br>
+I will update if I encounter any problems.<br>
+<br>
+Thanks <br>
+Itay</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24882&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:27:54 GMT -->
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=41&t=16182&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:47:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.01] Some Problems with the Mousdriver (4.xx)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.01] Some Problems with the Mousdriver (4.xx)</h2>
+		<p><a href="viewtopice725e725.html?f=41&amp;t=16182">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=41&amp;t=16182</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>[.01] Some Problems with the Mousdriver (4.xx)</h3>
+				<div class="date">Posted: <strong>Thu Aug 01, 2013 8:32 am</strong></div>
+				<div class="author">by <strong>JayJayX</strong></div>
+				<div class="content">Hi,<br>
+<br>
+I used a long time Sandboxie V3.76. after the upgrade to V4. I have Problems with the Mouse at many Games:<br>
+L4D2, Team Fortress and also Beat Hazard. The Mouse works here like an analog stick.<br>
+In Valves Games I can switch in the Options to direct Mode without any Mousedriver but in Beat Hazard there is no option for this.<br>
+Roll back to V3.76 let me use the Mouse normal.<br>
+<br>
+Any Ideas?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 01, 2013 8:49 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">You need to put OpenWinClass=* setting into each of your games Sandboxes' configuration section in "Sandboxie.ini".<br>
+Or you can add an asterisk * to Window Access in the respective Sandbox Settings from Sandboxie Control.<br>
+<br>
+There are downsides to this setting:<br>
+(1) Maybe can't run multiple instances of the same game.<br>
+(2) No tray icons for these sandboxed processes.<br>
+<br>
+Decreased security? Not that I've found. This setting is purported to allow "full communication with all windows outside the sandbox" but Sandboxie v4 processes can't so much as (directly) show/hide an existing window outside... I don't know if that's a bug.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 02, 2013 5:01 am</strong></div>
+				<div class="author">by <strong>JayJayX</strong></div>
+				<div class="content">Hi,<br>
+<br>
+thx for the hint.<br>
+No Multiple Instances is no Problem for me, but the Tray Icons are needed. So I will stay on the 3.76 'til it is fixed.<br>
+<br>
+My Question: Why don't work only for some games?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 02, 2013 5:14 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Good point BUCKAROO.  I am posting my answer in the topic about OpenWinClass=*, here:<br>
+<br>
+<a href="../phpbb/viewtopic8a29.php?t=15837" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15837</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 09, 2013 5:15 am</strong></div>
+				<div class="author">by <strong>JayJayX</strong></div>
+				<div class="content">Hi,<br>
+<br>
+but it makes Steam or many of it's games unuseable. I have to choose between not working Games or an not useable Steam.<br>
+In Steam I have no TrayIcon anymore and so I can't open it's windows. In steamchat the Returnkey doesn't work anymore.<br>
+<br>
+Is there no way to get back the behaviour of V3.76?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 09, 2013 7:45 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Ideally the reason for the mouse going crazy would eventually become clear and once I fix that, you wouldn't need to use the OpenWinClass=* workaround anymore.  Perhaps you can produce a Resource Access Monitor log and if we see that you have any third party mouse DLLs, I could try to install those and see what happens.<br>
+<br>
+<a href="../index9970.html?ResourceAccessMonitor" class="postlink">http://www.sandboxie.com/index.php?Reso ... essMonitor</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 09, 2013 8:11 am</strong></div>
+				<div class="author">by <strong>JayJayX</strong></div>
+				<div class="content">I attached the whole output made with 3.76 for one of the not working games. Do you need another output with the latest 4.x?<br>
+very long please delete if you read it <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<em>snipped. --tzuk</em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 09, 2013 8:42 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thank you for the log.  Please try the following after upgrading to version 4.05.04 and getting rid of OpenWinClass=*.<br>
+<br>
+Can you try to get rid of some of your third party DLLs to see if it makes any difference?<br>
+<br>
+c:\program files (x86)\autosizer\autosizer.dll<br>
+c:\program files (x86)\fraps\fraps32.dll<br>
+c:\program files\filebx\filebxh32.dll<br>
+<br>
+You should be able to do that easily by going into Sandbox Settings &gt; Resource Access &gt; File Access &gt; Blocked Access<br>
+and adding with Edit/Add, one by one:<br>
+*\autosizer.dll<br>
+*\fraps32.dll<br>
+*\filebxh32.dll<br>
+<br>
+Also try adding in &gt; Resource Access &gt; IPC Access &gt; Direct Access:<br>
+*\BaseNamedObjects*\DirectInput*<br>
+for the DirectInput stuff<br>
+<br>
+I won't be able to respond immediately but thank you in advance for doing this  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 09, 2013 1:56 pm</strong></div>
+				<div class="author">by <strong>JayJayX</strong></div>
+				<div class="content">Hi, <br>
+ok I installed the latest beta and tested this things but it doesn't change anything <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+I also tried OpenWinClass=* only for the beathazard.exe but it doesn't work, too.<br>
+I have to enter OpenWinClass=* for the whole sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Aug 10, 2013 3:07 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">If I understand the problem correctly (as described by other posts) then the mouse overreacts to movement and even a small movement is treated like you made a very large movement.  If this is correct then I have the following questions:<br>
+<br>
+First, do you know if you use a high definition mouse?<br>
+<br>
+Second, what do you see in Mouse Properties in Control Panel in the Pointer Options tab?<br>
+<br>
+I have a speed setting roughly in the center of the range.<br>
+Enhance pointer precision is checked.<br>
+The other settings there do not seem relevant.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Aug 10, 2013 4:03 pm</strong></div>
+				<div class="author">by <strong>JayJayX</strong></div>
+				<div class="content">I'am not sure I understand you right, my pointer overreacts too,<br>
+but it's more an behavior like an analog stick.<br>
+There is an centerpoint (not at start, i have to search for this point) and I can move the pointer with very small movements of my mouse. <br>
+For examble: <br>
+If I found the centerpoint, the pointer stand still. When I move the mouse a little bit to the right, the pointer moves to the right until I move the mouse back, it did not stand still like an mouse pointer. I move the mouse more to the right, the pointer moves faster to the right until I move the mouse back.<br>
+<br>
+I hope you can understand what I mean.<br>
+<br>
+Yes I  think I have an high definition mouse 5700 DPI set to 2000DPI (Logitech G500 with the Logitech Gaming Software 8.45.88 )  <br>
+<br>
+<br>
+I have also the speedsetting in the center. <br>
+the checkbox for Enhance Pointer Precision is unchecked here.  <br>
+<br>
+The Problem in not generally, most of the Software/Games are working.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 11, 2013 3:32 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I saw some discussion by Microsoft about how programs that want high resolution mouse tracking must use a special approach to talking to the mouse.  Maybe it's just these handful of games that are aware of your high res mouse, and all the others do the regular thing.<br>
+<br>
+As for the enhance pointer precision feature, it should have something to do with how quickly the mouse accelerates.<br>
+<br>
+I suggest first to turn on enhance pointer precision and see if it makes a difference.<br>
+<br>
+If not, I suggest next to check your mouse if there is any way to make it normal/low resolution.  This doesn't have to be the long term solution, but I would like to know if has anything to do with the problem in the first place.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 19, 2013 12:46 pm</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">Nothing so complicated, tzuk. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+It's like mouse deltas are not discrete anymore. It has a delta but the bug made it seem cumulative (whether in the negative or positive direction).<br>
+<br>
+Anyway, here's the problem:<br>
+SetCursorPos ERROR_ACCESS_DENIED<br>
+<br>
+<img src="../imageshack.us/a/img36/1984/hq5.gif" class="postimage" alt="Image"><br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>/*
+"MouseLock" adapted from Torque3D source
+x86 &amp; x64 compatible AutoHotkey_L script
+
+AutoHotkey_L =&gt; http://l.autohotkey.net/
+
+Save as "MouseLock.ahk" &amp; drop onto exe.
+*/
+
+Gui,1:-AlwaysOnTop +Caption +OwnDialogs +Resize 
+Gui,1:+LastFound
+Global Gui1:=WinExist()
+Gui,1:Margin,0,0
+Global Gui1_Edit1_hWnd
+Gui,1:Add,Edit,R35 W240 HwndGui1_Edit1_hWnd VGui1_Edit1
+Gui,1:Show,W640 H480
+
+OnMessage(0x0200,"WM_MOUSEMOVE")
+
+return
+
+~Esc::ExitApp
+
+GuiClose:
+GuiEscape:
+ExitApp
+
+WM_MOUSEMOVE(wParam,lParam)
+{
+	; AutoHotkey drops messages without this line.
+	; Unfortunately it makes other messages dodgy.
+	; Actually, it'll deteriorate after some time.
+	Critical,-1
+	
+	Edit:=""
+	
+	VarSetCapacity(POINT,8)
+	NumPut(cursorX:=lParam&amp;0xFFFF,POINT,0,"Int")
+	NumPut(cursorY:=lParam&gt;&gt;16,POINT,4,"Int")
+	; subsequent coordinates unaffected by sibling windows
+	DllCall("SetCapture","UPtr",Gui1,"UPtr")
+	
+	VarSetCapacity(RECT,16)
+	DllCall("GetClientRect","UPtr",Gui1,"UPtr",&amp;RECT,"Int")
+	DllCall("ClientToScreen","UPtr",Gui1,"UPtr",&amp;RECT,"Int")
+	DllCall("ClientToScreen","UPtr",Gui1,"UPtr",&amp;RECT+8,"Int")
+	RECT_left:=NumGet(RECT,0,"Int"),RECT_top:=NumGet(RECT,4,"Int")
+	RECT_right:=NumGet(RECT,8,"Int"),RECT_bottom:=NumGet(RECT,12,"Int")
+	DllCall("ClipCursor","UPtr",&amp;RECT,"Int")
+	
+	;// Convert the incoming client pos into a screen pos, so we can
+	;// accurately convert to relative coordinates.
+	DllCall("ClientToScreen","UPtr",Gui1,"UPtr",&amp;POINT,"Int")
+	mouseX:=NumGet(POINT,0,"Int"),mouseY:=NumGet(POINT,4,"Int")
+	
+	;// Hide the cursor before it's moved
+;	DllCall("ShowCursor","Int",FALSE,"Int")
+	
+	;// Recenter the mouse if necessary (don't flood the message pump)
+	centerX:=(RECT_right+RECT_left)//2,centerY:=(RECT_bottom+RECT_top)//2
+	if(mouseX!=centerX||mouseY!=centerY)
+	{
+		DllCall("SetLastError","UInt",0)
+		BOOL:=DllCall("SetCursorPos","Int",centerX,"Int",centerY,"Int")
+		Edit.="SetCursorPos() returned " BOOL "`r`n" "GetLastError() returned " A_LastError "`r`n" """" FormatMessage(A_LastError) """" "`r`n"
+	}
+	
+	;// Now we can calculate the position relative to the center we set.
+	deltaX:=mouseX-centerX
+	deltaY:=mouseY-centerY
+	
+;do_something_useful_with(deltaX,deltaY)
+	
+	Text=mouseX=%mouseX% mouseY=%mouseY%`r`ncenterX=%centerX% centerY=%centerY%`r`ndeltaX=%deltaX% deltaY=%deltaY%
+	Edit.=Text "`r`n`r`n"
+	
+	if(deltaX||deltaY)
+	{
+		PrependEdit(Edit)
+	}
+	
+	ToolTip,%Text%
+	
+	return 0
+}
+
+PrependEdit(ByRef Text)
+{
+	DllCall("SendMessage","UPtr",Gui1_Edit1_hWnd,"UInt",0x00B1,"UPtr",0,"Ptr",0,"Ptr") ; EM_SETSEL
+	DllCall("SendMessage","UPtr",Gui1_Edit1_hWnd,"UInt",0x00C2,"UPtr",FALSE,"Ptr",&amp;Text,"Ptr") ; EM_REPLACESEL
+}
+
+FormatMessage(dwMessageId)
+{
+	static Buffer
+	VarSetCapacity(Buffer,nSize:=3000)
+	DllCall("FormatMessage","UInt",0x00001000,"UPtr",0,"UInt",dwMessageId,"UInt",0,"Str",Buffer,"UInt",nSize//2,"UPtr",0)
+	return RegExReplace(Buffer,"(.*)[`r`n]*$","$1")
+}
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Oct 20, 2013 2:29 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>BUCKAROO wrote:</cite>Anyway, here's the problem: SetCursorPos ERROR_ACCESS_DENIED </div></blockquote>
+
+Interesting!  Great job picking up on that.<br>
+Let me add support for SetCursorPos API and let's see if it works!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Oct 20, 2013 3:49 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I added support for this API today, and the script now says SetCursorPos() returned 1, both in the sandbox and outside the sandbox.<br>
+Hopefully this will have the desired effect on those games where the mouse behaves strange.<br>
+I want to get to a few more fixes before I release another beta version, so I will ask for your patience for a few more days.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=41&t=16182&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:47:28 GMT -->
+</html>

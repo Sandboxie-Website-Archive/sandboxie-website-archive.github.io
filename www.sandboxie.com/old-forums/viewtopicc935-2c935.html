@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24540&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:07:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Forced Programs to &quot;Run as UAC Administrator&quot;?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Forced Programs to &quot;Run as UAC Administrator&quot;?</h2>
+		<p><a href="viewtopic40764076.html?f=17&amp;t=24540">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24540</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Forced Programs to &quot;Run as UAC Administrator&quot;?</h3>
+				<div class="date">Posted: <strong>Sat Jun 10, 2017 12:42 pm</strong></div>
+				<div class="author">by <strong>Tridens</strong></div>
+				<div class="content">I have a program (Mailbird) that will not run correctly unless I check "Run as UAC Administrator" via the "Run Sandboxed..." menu item.  Is there a way to have a Forced Program set to automatically "Run as UAC Administrator" so I don't have to do this manually each time?  I can't find an option like that in Sandbox Settings.<br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Programs to &quot;Run as UAC Administrator&quot;?</h3>
+				<div class="date">Posted: <strong>Mon Jun 12, 2017 11:09 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Tridens,<br>
+<br>
+Have you tried changing the program's compatibility settings in order to run it as administrator? <br>
+Right-click on the program --&gt; Properties<br>
+Compatibility --&gt; Run this program as administrator.<br>
+<br>
+You can also create a Shortcut with the "/elevate" parameter (but this means you will have to use that specific shortcut to launch the application)<br>
+Configure --&gt; Windows Shell Integration --&gt; Add Shortcut icons<br>
+Select the desired Sandbox and program .<br>
+Once you have created the shortcut, right click on it--&gt; properties<br>
+Find Target and add "/elevate" (no quotation marks) right after the Sandbox's name<br>
+For example:<br>
+"C:\Program Files\Sandboxie\Start.exe"  /elevate cmd.exe<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Programs to &quot;Run as UAC Administrator&quot;?</h3>
+				<div class="date">Posted: <strong>Mon Jun 12, 2017 11:27 am</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content">Be aware that It's possible for programs running as UAC admin under sandboxie to view files in "blocked access" folders as I believe the extra rights allow disk level reading. Shouldn't be a huge issue for the mail app but worth considering for less trusted programs.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Programs to &quot;Run as UAC Administrator&quot;?</h3>
+				<div class="date">Posted: <strong>Mon Jun 12, 2017 11:48 am</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">its a bug in mailbird, need admin rights. dont know why, same here, when i reduce rights in sandbox it wont start and throw a message.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Programs to &quot;Run as UAC Administrator&quot;?</h3>
+				<div class="date">Posted: <strong>Wed Jun 14, 2017 1:00 pm</strong></div>
+				<div class="author">by <strong>Tridens</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberliste700.html?mode=viewprofile&amp;u=1766">Brummelchen</a> wrote: <a href="viewtopic7ee77ee7.html?p=128573#p128573" data-post-id="128573" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jun 12, 2017 11:48 am</div></cite>
+its a bug in mailbird, need admin rights. dont know why, same here, when i reduce rights in sandbox it wont start and throw a message.
+</div></blockquote>
+
+Thanks, Brummelchen.  I'll contact Mailbird Support and see if we can shed some light on this.<br>
+<br>
+MERGED POST 1 - 
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist0285.html?mode=viewprofile&amp;u=25472">RooJ</a> wrote: <a href="viewtopic7b2a7b2a.html?p=128572#p128572" data-post-id="128572" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jun 12, 2017 11:27 am</div></cite>
+Be aware that It's possible for programs running as UAC admin under sandboxie to view files in "blocked access" folders as I believe the extra rights allow disk level reading. Shouldn't be a huge issue for the mail app but worth considering for less trusted programs.
+</div></blockquote>
+
+Rooj, thanks for this head's up.  Yes, that certainly compromises the sandbox.<br>
+<br>
+@Invincea, can you confirm that what RooJ is saying is the case ?<br>
+<br>
+Thanks!<br>
+<br>
+MERGED POST 2 - -<br>
+
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic4dd2-24dd2.html?p=128571#p128571" data-post-id="128571" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Jun 12, 2017 11:09 am</div></cite>
+Hello Tridens,<br>
+<br>
+Have you tried changing the program's compatibility settings in order to run it as administrator? <br>
+...<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+@Barb, thanks, I've set this up this way for now, but am concerned about what RooJ mentions about what running a program Elevated in Sandboxie opens up in terms of disk reading.  Looking forward to hearing back from @Invincea on this.  Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Programs to &quot;Run as UAC Administrator&quot;?</h3>
+				<div class="date">Posted: <strong>Wed Jun 14, 2017 4:40 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Tridens,<br>
+<br>
+Not sure if this'll work for your particular scenario, but have you seen this contribution?:<br>
+<a href="viewtopic03010301.html?f=22&amp;t=24038&amp;p=126492&amp;hilit=runas#p126474" class="postlink">viewtopic.php?f=22&amp;t=24038&amp;p=126492&amp;hilit=runas#p126474</a><br>
+<br>
+Regarding access, please see this:<br>
+<a href="../index810a.html?ClosedFilePath" class="postlink">https://www.sandboxie.com/index.php?ClosedFilePath</a><br>
+<br>
+You can test it by creating a folder, blocking it from Sandboxie then running a program as Administrator and trying to access its contents (you can try to navigate to it via Internet Explorer, for example).<br>
+<br>
+If you want to tweak your Sandbox settings to make it more secure, you may want to create separate Sandboxes for different tasks.  This thread has some ideas regarding how to go about that:<br>
+<a href="viewtopic41594159.html?f=17&amp;t=24305#p127477" class="postlink">viewtopic.php?f=17&amp;t=24305#p127477</a><br>
+<br>
+Can I please get exact repro steps for your Mail issue? <br>
+<br>
+Regards,<br>
+Barb.-<br>
+<br>
+PS: Moving forward, please use the Edit function to update your existing post, do not double (or triple) post.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Programs to &quot;Run as UAC Administrator&quot;?</h3>
+				<div class="date">Posted: <strong>Wed Jun 14, 2017 8:43 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopicddcbddcb.html?p=128623#p128623" data-post-id="128623" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Jun 14, 2017 4:40 pm</div></cite>
+You can test it by creating a folder, blocking it from Sandboxie then running a program as Administrator and trying to access its contents (you can try to navigate to it via Internet Explorer, for example).</div></blockquote>
+
+This would trigger sandboxie to block access to the folder, as would be expected.<br>
+<br>
+Now download a low level disk reader like winhex from x-ways (free version). Block access to a folder via sandboxie and add a textfile with some text. Run winhex as admin in the sandbox. In winhex drop down menu click tools &gt; open disk &gt; select the drive and click OK. You'll find you can now browse the blocked folder and read the textfile without restrictions, even though the path is blocked in the sandbox winhex is currently running in. You can also see any folders hidden by write-only access etc.<br>
+<br>
+This functionality actually comes in useful when running data recovery tools in sandboxie (which I do sometimes), so I'm not complaining. The ability to somehow block this low level reading would be nice though.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Programs to &quot;Run as UAC Administrator&quot;?</h3>
+				<div class="date">Posted: <strong>Thu Jun 15, 2017 11:46 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi RooJ,<br>
+
+<blockquote class="uncited"><div>Now download a low level disk reader like winhex from x-ways (free version). Block access to a folder via sandboxie and add a textfile with some text. Run winhex as admin in the sandbox. In winhex drop down menu click tools &gt; open disk &gt; select the drive and click OK. You'll find you can now browse the blocked folder and read the textfile without restrictions, even though the path is blocked in the sandbox winhex is currently running in. You can also see any folders hidden by write-only access etc.</div></blockquote>
+
+I haven't tested that scenario, but it seems that it would require for a user to already have the software installed in their host, and then executing it as admin via Sandbox. If the user is running the email app Sandboxed (and maybe downloading files from emails), unless they purposely recover a file, install it on their host  and then run it as Admin, there are little chances of that behavior affecting them. <br>
+However, it would be a good idea to use separate Sandboxes with restrictions (blocking execution of any other executable files via Restrictions --&gt; Start/Run Access, for example) to perform different tasks. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Programs to &quot;Run as UAC Administrator&quot;?</h3>
+				<div class="date">Posted: <strong>Thu Jun 15, 2017 12:29 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic13e013e0.html?p=128632#p128632" data-post-id="128632" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Thu Jun 15, 2017 11:46 am</div></cite>
+I haven't tested that scenario, but it seems that it would require for a user to already have the software installed in their host, and then executing it as admin via Sandbox.
+</div></blockquote>
+
+Or I guess a vulnerability in mailbird allowing it to be used as a malicious platform. I agree though, I don't think it's a huge risk for the OP. It was more a heads up about running less trusted software as admin.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Programs to &quot;Run as UAC Administrator&quot;?</h3>
+				<div class="date">Posted: <strong>Fri Jun 16, 2017 4:26 pm</strong></div>
+				<div class="author">by <strong>Tridens</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopicddcbddcb.html?p=128623#p128623" data-post-id="128623" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Jun 14, 2017 4:40 pm</div></cite>
+<br>
+Can I please get exact repro steps for your Mail issue? <br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+Hi, Barb.  Basically, without running as Admin, Sandboxie prompts multiple times for Admin rights (every time you switch tabs between, say, Mail, Facebook, Whatsapp, etc.).  And even after providing them, any program in the secondary pane (Facebook, Google Calendar, or WhatsApp) never load.  Changing Compatibility Settings --&gt; Run as an Administrator under Windows 10 resolves the problems.  I have reached out to Mailbird support to see if they can help.<br>
+<br>
+I'll post anything I learn here.<br>
+<br>
+Thanks!<br>
+<br>
+Tridens</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24540&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:07:36 GMT -->
+</html>

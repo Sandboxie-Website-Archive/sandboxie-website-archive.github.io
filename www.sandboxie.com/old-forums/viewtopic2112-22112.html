@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=22054&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:05:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Allow Steam full access to keyboard / mouse</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Allow Steam full access to keyboard / mouse</h2>
+		<p><a href="viewtopic35033503.html?f=17&amp;t=22054">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=22054</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Sat Nov 07, 2015 7:02 pm</strong></div>
+				<div class="author">by <strong>demoQQ</strong></div>
+				<div class="content">I have in home streaming enabled. I have Steam installed to Sandboxie<br>
+<br>
+What settings do I need to enable to allow Steam to interact with other programs running in another sandbox or running without sandbox supervision. For example I need to control Explorer, Firefox, etc  basically everything that uses the mouse / keyboard. I have Steam in sandboxie to disallow registry / file changes. I only want to allow full keyboard and mouse control. <br>
+<br>
+I have Windows 7 x64. Sandbox Lifetime v5.06<br>
+<br>
+My current config
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[SteamGames]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=IExplore_Favorites_RecoverFolder
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Desktop%
+BorderColor=#FFFF00,ttl
+ForceFolder=E:\demoqq\SteamGames
+ForceFolder=C:\Steam
+BoxNameTitle=n
+CopyLimitKb=839850
+OpenPipePath=E:\demoqq\SteamGames\
+OpenPipePath=C:\Steam\
+OpenPipePath=%Personal%\
+OpenPipePath=E:\demoqq\GameSaves\
+OpenPipePath=C:\Users\demoqq\Documents\
+OpenPipePath=E:\demoqq\GameMods\
+OpenPipePath=C:\Users\demoqq\Saved Games\
+OpenPipePath=E:\demoqq\SteamTools\
+NeverDelete=y
+LingerProcess=Setup.exe
+LingerProcess=vcredist_x86.exe
+LingerProcess=VCREDI~3.EXE
+NotifyStartRunAccessDenied=y</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Mon Nov 09, 2015 2:32 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">The whole purpose of SBIE is to isolate a program running in a sandbox from your host and/or other sandboxes.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Mon Nov 09, 2015 4:53 pm</strong></div>
+				<div class="author">by <strong>demoQQ</strong></div>
+				<div class="content">This doesn't solve my problem<br>
+<br>
+BlockFakeInput=N and OpenWinClass=* are not letting key press through.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Thu Apr 21, 2016 8:49 pm</strong></div>
+				<div class="author">by <strong>X-Gamer</strong></div>
+				<div class="content"><strong>Hello,<br>
+<br>
+I have same problem here.<br>
+<br>
+Nobody can help ?<br>
+<br>
+<br>
+That steam in sandboxie has access outsite of sandboxie with mouse and keyboard ?<br>
+<br>
+<br>
+Because use my PC for work etc and in living room otherone can play with steam but when there an error or something mouse not work keyboard not work only in windows that are sandboxied !<br>
+<br>
+Tryed many thing like a accessibilty enabled but also not work mouse keyboard and brings other problems .  also Openwinclass=* <br>
+<br>
+<br>
+How can steam in sanboxie access other programms outside sanboxie ???<br>
+<br>
+<br>
+Hope someone can help use !?<br>
+<br>
+<br>
+Regards</strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Thu Apr 21, 2016 11:32 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">The whole purpose of SBIE is to isolate sandboxes from one another. That's the primary point. <br>
+<br>
+The openwinclass punches holes in that isolation, so you might as well not run in a sandbox then. It defeats the purpose.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Fri Apr 22, 2016 3:02 pm</strong></div>
+				<div class="author">by <strong>X-Gamer</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite>The whole purpose of SBIE is to isolate sandboxes from one another. That's the primary point. <br>
+<br>
+The openwinclass punches holes in that isolation, so you might as well not run in a sandbox then. It defeats the purpose.</div></blockquote>
+
+<strong><br>
+Yes but with Sandboxie no way for that ?   Like i asked the questions !?<br>
+<br>
+Or any other software or trick with sandboxie or a new feature in sandboxxie that steam can have access to outside sandboxie ?  because there ar eno settings in sandboxie for steam.<br>
+<br>
+regards<br>
+</strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Sat Apr 23, 2016 2:35 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>X-Gamer wrote:</cite><blockquote><div><cite>Craig@Invincea wrote:</cite>The whole purpose of SBIE is to isolate sandboxes from one another. That's the primary point. <br>
+<br>
+The openwinclass punches holes in that isolation, so you might as well not run in a sandbox then. It defeats the purpose.</div></blockquote>
+
+<strong><br>
+Yes but with Sandboxie no way for that ?   Like i asked the questions !?<br>
+<br>
+Or any other software or trick with sandboxie or a new feature in sandboxxie that steam can have access to outside sandboxie ?  because there ar eno settings in sandboxie for steam.<br>
+<br>
+regards<br>
+</strong></div></blockquote>
+
+Not that I know of.  The OpenFilePath is from a SB to your host machine. (Thus the hole punch)<br>
+SB are independent of one another. That's how SBIE is designed.  <br>
+Sandboxie is designed to protect you online. Originally it was Internet Explorer (SandboxIE) that expanded over the years. Gaming isn't really something we're focused on at this time. As Steam is well known and secure as anything else and not something we'd consider SB'ing.  We also don't routinely test Steam any longer given the changes that they have made and the fact they now report SBIE as a "cheat" software.<br>
+<br>
+Sandboxie is designed as an isolation "container" (A sandbox). Plain and simple. We have nothing built into it to directly support Steam.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Sat Apr 23, 2016 5:18 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">The responsible exe on server must have uiAccess="true" in its manifest. Steam apparently doesn't.<br>
+<br>
+No solution for you, demoQQ.<br>
+<br>
+Not a simple one at least...<br>
+<br>
+<span style="color: #FF0000"><span style="font-size: 150%; line-height: normal">*** BYPASS SANDBOXIE BYPASS ***</span></span><br>
+<br>
+ForceProcess=uiAccess.exe<br>
+<br>
+Interact with Any window!<br>
+<br>
+<a href="https://autohotkey.com/board/topic/70449-enable-interaction-with-administrative-programs/" class="postlink">https://autohotkey.com/board/topic/7044 ... -programs/</a><br>
+<br>
+As example, first endow AutoHotkey with special privilege:<br>
+AutoHotkeyU32.exe EnableUIAccess.ahk AutoHotkeyU32.exe "C:\Program Files (x86)\uiAccess.exe"<br>
+<br>
+Create a script uiAccess.ahk in same directory.
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Loop
+{
+Send()
+if(GetKeyState("Esc","P"))
+break
+Sleep,2000
+}
+
+Send()
+{
+SendInput SendInput
+SendPlay SendPlay
+SendEvent SendEvent
+ControlSend,,ControlSend,A
+}
+</code></pre></div>
+Now let ForceProcess launch uiAccess.exe<br>
+<br>
+Exploit via (ahk script) SendPlay.<br>
+OpenWinClass=* opens up SendInput and SendEvent as well.<br>
+<br>
+uiAccess.exe (example) must reside under Program Files* or System32.<br>
+<br>
+ForceProcess doesn't apply to Sandboxed items so whether this exploit can reside in Sandbox mirror location is not determinable to me.<br>
+<br>
+If it weren't for requisite ForceProcess launch, Sandboxed program could easily start and hijack Sandboxed process of anyone sporting uiAccess or his own binary:<br>
+<br>
+TabTip.exe<br>
+TabTip32.exe<br>
+AuditShD.exe<br>
+EaseOfAccessDialog.exe<br>
+F12Chooser.exe<br>
+Magnify.exe<br>
+msra.exe<br>
+Narrator.exe<br>
+osk.exe<br>
+psr.exe<br>
+rdpinput.exe<br>
+RdpSa.exe<br>
+<br>
+No one is vulnerable by default settings as far as I know.<br>
+<br>
+Any sibling program of a successfully UIA enabled process, can inherit UIA interaction! I think therein is one peculiar thing about ForceProcess, that it is spawned twice, the second instance from the parent (?) who may possess some special rights. [In some instances the first P/ID lingers though relevant only to programs that must wait on a worker process.]</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Sun Apr 24, 2016 9:30 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">@demoQQ:<br>
+<br>
+1. Download AutoHotkey portable and also EnableUIAccess script (extract preserving folder structure).<br>
+<br>
+2. Build uiAccess.exe (best of luck...)<br>
+AutoHotkeyU32.exe EnableUIAccess.ahk AutoHotkeyU32.exe "C:\Program Files (x86)\uiAccess.exe"<br>
+<br>
+3. Add to your [SteamGames] Sandbox.<br>
+OpenPipePath=\Device\QWAVEdrv<br>
+ForceProcess=uiAccess.exe<br>
+OpenWinClass=*<br>
+<br>
+4. Save uiAccess.ahk (just one line) to Program Files as above.<br>
+Run,C:\Program Files (x86)\Steam\Steam.exe<br>
+<br>
+5. Launch uiAccess.exe (Steam must NOT already be running/in the background.)<br>
+<br>
+It works. Type into and manipulate even Elevated process' window via Sandboxed Steam Streaming.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Mon Apr 25, 2016 6:43 am</strong></div>
+				<div class="author">by <strong>X-Gamer</strong></div>
+				<div class="content"><blockquote><div><cite>BUCKAROO wrote:</cite>@demoQQ:<br>
+<br>
+1. Download AutoHotkey portable and also EnableUIAccess script (extract preserving folder structure).<br>
+<br>
+2. Build uiAccess.exe (best of luck...)<br>
+AutoHotkeyU32.exe EnableUIAccess.ahk AutoHotkeyU32.exe "C:\Program Files (x86)\uiAccess.exe"<br>
+<br>
+3. Add to your [SteamGames] Sandbox.<br>
+OpenPipePath=\Device\QWAVEdrv<br>
+ForceProcess=uiAccess.exe<br>
+OpenWinClass=*<br>
+<br>
+4. Save uiAccess.ahk (just one line) to Program Files as above.<br>
+Run,C:\Program Files (x86)\Steam\Steam.exe<br>
+<br>
+5. Launch uiAccess.exe (Steam must NOT already be running/in the background.)<br>
+<br>
+It works. Type into and manipulate even Elevated process' window via Sandboxed Steam Streaming.</div></blockquote>
+
+<strong><br>
+Thanks i tryed but not work Steam in Sanboxie can still not use Mouse or Keyboard outside sandboxied steam or  explorer or windows or other software / programs.<br>
+<br>
+the uiAccess.exe is closed fast after Steam.exe ist started also with the oth uiAccess.ahk with more lines and sendinput etc not working .<br>
+<br>
+<br>
+How it must be done that it work ?</strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Mon Apr 25, 2016 11:20 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">Sounds like you have done everything according to instruction.<br>
+Purpose of uiAccess.exe is merely to pass on uiAccess privilege.<br>
+<br>
+SendInput stuff is there just to test without Steam involvement.<br>
+<br>
+Steam.exe <em>mustn't</em> exist in the Sandbox ("Stream Launch Failed").<br>
+uiAccess.exe must exist in <span style="text-decoration: underline">real</span> Program Files * folder only.<br>
+uiAccess.exe must be trigger-started by ForceProcess.<br>
+<br>
+If a single Win10 App is open and not minimized, it'll freeze up!<br>
+<strong>Have something like TightVNC installed to close problem windows.</strong><br>
+<br>
+It really works as I advertise. I can interact with the desktop &amp; start menu.<br>
+I can hear videos, can't see them, games fail, but might be my mobile GPU.<br>
+(I know it is my GPU drivers for most part. Flash games stream fine. Heh)<br>
+<br>
+I don't think it's worthwhile until Steam Streaming is built for this purpose.<br>
+
+<blockquote><div><cite>X-Gamer wrote:</cite><strong>Because use my PC for work etc and in living room otherone can play with steam but when there an error or something mouse not work keyboard not work only in windows that are sandboxied !</strong></div></blockquote>
+But it would - does for me in fact - solve this predicament ideally!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Mon May 02, 2016 4:30 am</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content">By using OpenWinClass=* you are allowing direct access to Window Objects outside the sandbox and rely on Windows UIPI mechanism to mitigate attacks. Windows allows UIPI bypass with requirements.<br>
+1. Setting UIAccess attribute to true in program's application manifest.<br>
+2. Digitally signed and trusted in root certificate.<br>
+3. Must reside in %ProgramFiles% and its subdirectories. Or %WinDir% and its subdirectories.<br>
+<br>
+These requires elevated rights to fulfill its requirements.<br>
+<br>
+I think made a response in bellzemos about these. And I quoute.<br>
+
+<blockquote><div><cite>rpljhun wrote:</cite>Bellzemos, using OpenWinClass=* in Windows XP is risky. For Windows Vista and above, the UIPI, UAC and the Untrusted Integrity Level(Lowest Level) of sandboxed application should prevent shatter attacks but that depends on how sandboxie handle application with manifest entry UIAccess="true" and passed UIPI requirements. If sandboxie removed this entry then shatter and shatter like attacks will be prevented while using OpenWinClass=*. Although without it being removed the risk is very low because malware will unlikely pass the requirements but still possible.</div></blockquote>
+
+<a href="viewtopic45c245c2.php?f=5&amp;t=21043&amp;p=109104#p108994" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 04#p108994</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Tue Jul 04, 2017 8:18 pm</strong></div>
+				<div class="author">by <strong>X-Gamer</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist08c3.html?mode=viewprofile&amp;u=5050">BUCKAROO</a> wrote: <a href="viewtopic15f415f4.html?p=120459#p120459" data-post-id="120459" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Apr 25, 2016 11:20 am</div></cite>
+Sounds like you have done everything according to instruction.<br>
+Purpose of uiAccess.exe is merely to pass on uiAccess privilege.<br>
+<br>
+SendInput stuff is there just to test without Steam involvement.<br>
+<br>
+Steam.exe <em>mustn't</em> exist in the Sandbox ("Stream Launch Failed").<br>
+uiAccess.exe must exist in <span style="text-decoration: underline">real</span> Program Files * folder only.<br>
+uiAccess.exe must be trigger-started by ForceProcess.<br>
+<br>
+If a single Win10 App is open and not minimized, it'll freeze up!<br>
+<strong>Have something like TightVNC installed to close problem windows.</strong><br>
+<br>
+It really works as I advertise. I can interact with the desktop &amp; start menu.<br>
+I can hear videos, can't see them, games fail, but might be my mobile GPU.<br>
+(I know it is my GPU drivers for most part. Flash games stream fine. Heh)<br>
+<br>
+I don't think it's worthwhile until Steam Streaming is built for this purpose.<br>
+
+<blockquote><div><cite>X-Gamer wrote:</cite><strong>Because use my PC for work etc and in living room otherone can play with steam but when there an error or something mouse not work keyboard not work only in windows that are sandboxied !</strong></div></blockquote>
+But it would - does for me in fact - solve this predicament ideally!
+</div></blockquote>
+
+<strong>Thanks is there also a other solution because with OpenWinClass=* i always get BSOD since new sandboxie and Windows 10 CU . <br>
+</strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Allow Steam full access to keyboard / mouse</h3>
+				<div class="date">Posted: <strong>Wed Jul 05, 2017 6:46 pm</strong></div>
+				<div class="author">by <strong>X-Gamer</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlisted8a.html?mode=viewprofile&amp;u=13192">rpljhun</a> wrote: <a href="viewtopic2b792b79.html?p=120574#p120574" data-post-id="120574" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon May 02, 2016 4:30 am</div></cite>
+By using OpenWinClass=* you are allowing direct access to Window Objects outside the sandbox and rely on Windows UIPI mechanism to mitigate attacks. Windows allows UIPI bypass with requirements.<br>
+1. Setting UIAccess attribute to true in program's application manifest.<br>
+2. Digitally signed and trusted in root certificate.<br>
+3. Must reside in %ProgramFiles% and its subdirectories. Or %WinDir% and its subdirectories.<br>
+<br>
+These requires elevated rights to fulfill its requirements.<br>
+<br>
+I think made a response in bellzemos about these. And I quoute.<br>
+
+<blockquote><div><cite>rpljhun wrote:</cite>Bellzemos, using OpenWinClass=* in Windows XP is risky. For Windows Vista and above, the UIPI, UAC and the Untrusted Integrity Level(Lowest Level) of sandboxed application should prevent shatter attacks but that depends on how sandboxie handle application with manifest entry UIAccess="true" and passed UIPI requirements. If sandboxie removed this entry then shatter and shatter like attacks will be prevented while using OpenWinClass=*. Although without it being removed the risk is very low because malware will unlikely pass the requirements but still possible.</div></blockquote>
+
+<a href="viewtopic45c245c2.php?f=5&amp;t=21043&amp;p=109104#p108994" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 04#p108994</a>
+</div></blockquote>
+
+<br>
+<strong>So how we can use it for that prupose how we need it  ?<br>
+<br>
+<br>
+thanks</strong></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=22054&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:05:20 GMT -->
+</html>

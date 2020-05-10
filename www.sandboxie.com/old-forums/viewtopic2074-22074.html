@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=23090&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:44:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Set priority to sandboxed processes</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Set priority to sandboxed processes</h2>
+		<p><a href="viewtopic6e306e30.html?f=4&amp;t=23090">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=23090</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Set priority to sandboxed processes</h3>
+				<div class="date">Posted: <strong>Tue Jun 28, 2016 6:04 am</strong></div>
+				<div class="author">by <strong>danicx</strong></div>
+				<div class="content">Like a process lasso, but builded in sandboxie. And rule for each sandbox. Sometimes i play my online game and got a system freezes for 10-15 seconds (may be my pc too slow). But i prefer freezes in sandboxed game, but not in windows.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Set priority to sandboxed processes</h3>
+				<div class="date">Posted: <strong>Tue Jun 28, 2016 8:32 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">That is not possible. <br>
+<br>
+Sandboxie is an isolation platform, not a VM environment. Games should be installed on your host directly, and not into the SB. <br>
+<br>
+Sandboxie was designed to sandboxe Internet Explorer (SandboxIE)<br>
+<br>
+We focus on browsers and office suites, and typical online browsing. <br>
+<br>
+Gaming was not a focus and given the access the games online need (steam, GoG) etc, it's best not to sandbox these games. There is really no security point. You're paying for a service that is generally safe.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Set priority to sandboxed processes</h3>
+				<div class="date">Posted: <strong>Wed Jun 29, 2016 2:28 am</strong></div>
+				<div class="author">by <strong>danicx</strong></div>
+				<div class="content">ok, thanks for answer. But sandboxie is so good... and i never had a problems with games too). I agree browser is most dangerus program at pc. But game is program too (and it connected to internet). Every program that have access to internet is potentialy dangerous. (look at this for example <a href="https://duo.com/blog/out-of-box-exploitation-a-security-analysis-of-oem-updaters" class="postlink">https://duo.com/blog/out-of-box-exploit ... m-updaters</a>). So, please continue support all software as you do now and not only IE (IE always was and will big enter door for problems)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Set priority to sandboxed processes</h3>
+				<div class="date">Posted: <strong>Wed Jun 29, 2016 2:31 am</strong></div>
+				<div class="author">by <strong>danicx</strong></div>
+				<div class="content">P.S. I will use external software for process priority or launch programs in sandbox via cmd with parameters <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Set priority to sandboxed processes</h3>
+				<div class="date">Posted: <strong>Thu Jun 30, 2016 8:12 am</strong></div>
+				<div class="author">by <strong>syazaz</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite>That is not possible. <br>
+<br>
+Sandboxie is an isolation platform, not a VM environment. Games should be installed on your host directly, and not into the SB. <br>
+<br>
+Sandboxie was designed to sandboxe Internet Explorer (SandboxIE)<br>
+<br>
+We focus on browsers and office suites, and typical online browsing. <br>
+<br>
+Gaming was not a focus and given the access the games online need (steam, GoG) etc, it's best not to sandbox these games. There is really no security point. You're paying for a service that is generally safe.</div></blockquote>
+Hi, just to express myself today.<br>
+<br>
+Back in the old days, while sandboxie is still maintained by tzuk, I use sandboxie mainly for security purposes eg quick malware inspection, debugging unknown software, etc. I saw how he struggle maintaining sandboxie, trying to fix and reproduce the problem the community reported and almost all his reply includes some bit of technical stuff where I have idea of what happen when something breaks. Sandboxie then become more mature and stable and I begin to install/run more and more software inside sandboxie and eventually games because simply I "trust no program". Not because of the developer may include bad-intention piece of codes inside their software (it can happen), but because of numerous reasons:<br>
+<br>
+a) Exploit, software that communicate directly with others may have exploits in them that other can abuse. For example chat software where other can use exploit to take over control of PC/scavenge files and it will get worse if the exploitable apps (need to) run on admins privilege. This can happen with games too, multiplayer... With sandboxie it can be prevented by denying them file access to work area or sensitive places.<br>
+<br>
+b) I don't trust where the apps store files and registry, they may end up storing in weird non-sense places and probably with non-sense filename. There is time where I found some weird filename that I thought some malware infected my PC and wasting my time investigate it, eventually it turned out to be apps license key. Games for example saving save game files in numerous locations, another reason I run games inside the sandbox. The next time I want to format/refresh my PC, I can do it without worrying losing anything. I had done this many times actually; on windows 7, I reformat many times without losing anything by using sandboxie. Upgrading to 8.1 and to 10 without losing anything inside sandboxie. The sandbox content isn't deleted, only the registry hive and windows folder (and others that may interfere with windows version) inside sandboxie is deleted and I can use back my apps/games that was inside sandbox just fine without losing any settings or savegames.<br>
+<br>
+I felt a bit disappointed when I saw suggestions like not to sandbox apps/games because it is not worth sandboxing. Sorry for this post, somehow derail the topic and sorry if it hurt anyone feeling. Sandboxie is a fine software and I hope it will continue with it success.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=23090&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:44:59 GMT -->
+</html>

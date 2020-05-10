@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=22537&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:45:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Request: Start/Run Access Restriction allowing sandboxed exe</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Request: Start/Run Access Restriction allowing sandboxed exe</h2>
+		<p><a href="viewtopicdab8dab8.html?f=4&amp;t=22537">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=22537</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Request: Start/Run Access Restriction allowing sandboxed exe</h3>
+				<div class="date">Posted: <strong>Fri Feb 19, 2016 11:16 am</strong></div>
+				<div class="author">by <strong>kawaiiwolf</strong></div>
+				<div class="content">Referencing the help pages ( <a href="../index7ac3.html?RestrictionsSettings#startrun" class="postlink">http://www.sandboxie.com/index.php?Rest ... s#startrun</a> ), I we find the text:
+<blockquote class="uncited"><div>When any Start/Run restrictions are in effect, programs that are installed (or downloaded) into the sandbox will never be allowed to start or run. </div></blockquote>
+This works well for applications installed outside a sandbox and run within, but I found it doesn't work for what I need it to do. Mostly I tend to install programs INTO a sandbox for the purposes of disk/registry/program isolation. I would like to, for example, be able to:<br>
+
+<ol style="list-style-type: decimal">
+<li>Install an application into a freshly created sandbox, such as firefox.</li>
+<li>Ensure that application (installed in the sandbox) is the only application allowed to run within the sandbox. Mostly this is to make sure other programs aren't accidentally run within and to prevent any applications from being maliciously used to alter the contents of said sandbox (such as malware).</li></ol>
+<strong>Note: </strong> Installing outside the sandbox is a last resort, I wish to keep my base windows install as uncluttered as possible. While a portable version of the example application (firefox) exists that can run without installation, not all applications can do this.<br>
+<br>
+So time for the request: <strong>Can we get a checkbox on the <em>Start/Run Access Restrictions</em> tab of the Sandbox Settings to allow executables (installed/located within the sandbox) to run within so long as they match the whitelist in the aforementioned settings tab ?</strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Request: Start/Run Access Restriction allowing sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Feb 19, 2016 11:34 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">You can create a sandbox just for Firefox. Install into there. <br>
+<br>
+You can have as many sandboxes as you like, but only one can be active at anyone time in the shareware version.<br>
+<br>
+When you have a program to start as forced, it will always force into the DefautSandbox<br>
+<br>
+When you run other programs (not forced) you are provided with a pop up box to select the sandbox to run the application in.<br>
+<br>
+While most programs can be installed directly within a sandbox, there are ones that cannot be. (Office, Programs requiring driver installation, services, etc.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Request: Start/Run Access Restriction allowing sandboxed</h3>
+				<div class="date">Posted: <strong>Sat Feb 20, 2016 3:47 pm</strong></div>
+				<div class="author">by <strong>kawaiiwolf</strong></div>
+				<div class="content">Ohh I understand that, and I've got about a dozen or so sandboxes for just such purposes with a lifetime license (firefox as an example, one of them). What I want to do is ensure that no applications OTHER than what is specified can run within them.<br>
+<br>
+In said example, I only want firefox.exe (in addition to explorer.exe, dllhost.exe and rundll32.exe) to be able to run into said sandbox. I don't want it opening up other software to open up files it may download, nor running executables within that sandbox that are downloading using it. Right now this is only possible if you install firefox outside a sandbox and run it within. I wish to install and run it within while still preventing other applications that are not white-listed from running.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Request: Start/Run Access Restriction allowing sandboxed</h3>
+				<div class="date">Posted: <strong>Thu Mar 03, 2016 11:56 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content">Hi kawaiiwolf,<br>
+<br>
+I think the security issue here is that there's nothing stopping a compromised application naming all of it's executables (or any application on your system) "firefox.exe" and then running it. A compromised application doesn't even need to read your sandboxie config to check the whitelist, it can just check the process name it's currently running under. Granted this would all happen sandboxed but it completely defeats the purpose of the setting. As sandboxie doesn't work on hash values (at least in the config) I'm not sure there would be an easy way to secure it. <br>
+<br>
+Far from ideal but you can achieve something similar with a workaround while you wait for an official response.<br>
+<br>
+As an example take firefox; Install firefox in the sandbox as you normally would. Once installed recreate the path to the main executable on your REAL system. For instance create the folder "C:\program files\mozilla\firefox" on your real system. Now copy firefox.exe (just that one exe) from the sandbox to the location you just created and delete it from the sandbox, leave all other files alone.<br>
+<br>
+You can now run the exe sandboxed as it's not actually within the sandbox on launch. Just remember to move the new exe out after each firefox update.<br>
+<br>
+You could also store the firefox exe in a seperate sandbox if you didn't want it on your main system, but I think you'd need to modify the current working directory or maintain a full mirrored install in order for it to work properly.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Request: Start/Run Access Restriction allowing sandboxed</h3>
+				<div class="date">Posted: <strong>Tue Mar 22, 2016 4:02 pm</strong></div>
+				<div class="author">by <strong>kawaiiwolf</strong></div>
+				<div class="content">This solution ended out working out pretty well !  I made a "C:\Sandbox Program Files\" Folder and had the sandboxed programs install there (within their respective sandboxes) and copied the exes out of the sandbox into the bare drive. Another sandbox uses that location as a forced folder, ensuring that anything in there is being run in SOME sandbox. This also has the added benefit of allowing you to register a file type on the bare system with an application installed in a sandbox. You just have to change the the registry class ( win10: CLASSES &gt; Application &gt; something.exe &gt; ... ) to open with sandboxie's "Start.exe /box:BoxName". It's about as isolated as you're gonna get while still being able to register applications to double-click shell handlers.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Request: Start/Run Access Restriction allowing sandboxed</h3>
+				<div class="date">Posted: <strong>Wed Mar 23, 2016 6:58 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content">Nice, glad to hear it helped.<br>
+<br>
+Just remember there's a slight security issue with installing something like a web browser inside a sandbox due to the fact you won't be clearing the sandbox after each use. <br>
+If the browser is compromised at some point (and if not picked up by other security products) it can remain compromised from that moment onwards. Malware could add code to legitimate browser DLL's or the browser exe for instance and then monitor activity each time the browser is in use. <br>
+In a situation where the browser binaries are outside of the sandbox and the sandbox is regularly cleared this can't happen.<br>
+<br>
+There are workaround's to this too of course but thought it was worth mentioning.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Request: Start/Run Access Restriction allowing sandboxed</h3>
+				<div class="date">Posted: <strong>Thu Mar 24, 2016 8:31 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">That's an excellent point. Compromised browser is a compromised browser. While your PC is safe, the browser may not be that's directly installed in that sandbox. Malware that needs a driver won't be an issue as a driver cannot be installed in the SB. You can always invoke blockedfilepath to add a layer between you and sensitive areas on your PC. <br>
+<br>
+But it's best to delete the contents, or be even more mindful.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Request: Start/Run Access Restriction allowing sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Mar 25, 2016 7:28 pm</strong></div>
+				<div class="author">by <strong>kawaiiwolf</strong></div>
+				<div class="content">A compromised browser is low on my list of priorities, and I used it here as an easy example. What I'm really interested in is data/process isolation. "Uninstalling" a program is as simple as deleting the sandbox it resides in; I'm much more concerned with programs clogging up and worming into who knows where in a hard disk or registry and by using sandboxie, it ensures it's gone when I want it gone. It also insures an install can't try to jack into browsers, startup and the windows shell with any real success, keeping my system clean and relatively annoyance free.<br>
+<br>
+I realize the intended use case is to isolate a running application, "Trust no program" ... however I'm taking it to the point where I find the installers more dangerous to trust than the application itself. I don't know how many other users there are like this but sandboxie works quite well to that end, better than any other application I've seen.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Request: Start/Run Access Restriction allowing sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Mar 25, 2016 8:25 pm</strong></div>
+				<div class="author">by <strong>TimW</strong></div>
+				<div class="content">My understanding is that SB needs to first know a drive letter in order to create the  forced folder/forced disk settings.<br>
+I see posts from 2010 that mention the USBDLM program which allows a user to manage drive letters.  That program is still under active development and works well on Win 10 Pro.  <strong><a href="http://www.uwe-sieber.de/usbdlm_e.html" class="postlink">http://www.uwe-sieber.de/usbdlm_e.html</a></strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Request: Start/Run Access Restriction allowing sandboxed</h3>
+				<div class="date">Posted: <strong>Sat Mar 26, 2016 11:19 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>kawaiiwolf wrote:</cite>A compromised browser is low on my list of priorities, and I used it here as an easy example. What I'm really interested in is data/process isolation. "Uninstalling" a program is as simple as deleting the sandbox it resides in; I'm much more concerned with programs clogging up and worming into who knows where in a hard disk or registry and by using sandboxie, it ensures it's gone when I want it gone. It also insures an install can't try to jack into browsers, startup and the windows shell with any real success, keeping my system clean and relatively annoyance free.<br>
+<br>
+I realize the intended use case is to isolate a running application, "Trust no program" ... however I'm taking it to the point where I find the installers more dangerous to trust than the application itself. I don't know how many other users there are like this but sandboxie works quite well to that end, better than any other application I've seen.</div></blockquote>
+
+The fact you cannot install a driver in the SB also makes all the more difficult for different vectors of malware.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=22537&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:45:14 GMT -->
+</html>

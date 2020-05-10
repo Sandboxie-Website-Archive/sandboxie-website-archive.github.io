@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10281&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Force process to be sandboxed</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Force process to be sandboxed</h2>
+		<p><a href="viewtopic39c439c4.html?f=4&amp;t=10281">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=10281</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Force process to be sandboxed</h3>
+				<div class="date">Posted: <strong>Thu Apr 14, 2011 10:31 pm</strong></div>
+				<div class="author">by <strong>is_m00nbl00d_</strong></div>
+				<div class="content">I don't think this had been talked about before. I didn't know which keyword to look for, to be honest.<br>
+<br>
+What I'd like to suggest is the following. I'll explain by steps, and by giving an example.<br>
+<br>
+1. I have my web browser forced to run in a sandbox;<br>
+2. I run the web browser outside of its sandbox;<br>
+3. I download a PDF file (example) and open it within the web browser;<br>
+4. I want the PDF file reader to be open in its own sandbox and not outside Sandboxie, as it happens.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Apr 14, 2011 11:02 pm</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content">If you're talking about a forced .pdf reader, then I believe that's actually how Disable Forced Programs used to work. Looks like the current behavior, which matches Run Outside Sandbox, was introduced in <a href="../indexbe25.html?VersionChanges#v_3_44" class="postlink">3.44</a>:<br>
+
+<blockquote><div><cite>Changelog wrote:</cite>When Disable Forced Programs is used to start some forced program X outside the supervision of Sandboxie, then any other forced programs started by that program X will also start outside the supervision of Sandboxie.</div></blockquote></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 15, 2011 5:53 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I don't see how this feature request is different than one posted not too long ago.<br>
+<br>
+<a href="../phpbb/viewtopice254.php?t=9853" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=9853</a><br>
+<br>
+What is the point of this topic?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 15, 2011 11:24 am</strong></div>
+				<div class="author">by <strong>_is_m00nbl00d</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I don't see how this feature request is different than one posted not too long ago.<br>
+<br>
+<a href="../phpbb/viewtopice254.php?t=9853" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=9853</a><br>
+<br>
+What is the point of this topic?</div></blockquote>
+
+They're completely unrelated.<br>
+<br>
+I just find it stupid that Sandboxie won't sandbox the PDF reader in its sandbox, if initiated by an unsandboxed process (which is forced to its own sandbox).<br>
+<br>
+So, I wonder if Sandboxie can't be aware that the process belonging to the PDF reader is being forced to run in a sandbox, and if yes, then force it to run in its sandbox?<br>
+<br>
+If I start my web browser (forced to a sandbox) unsandboxed, and then I download a PDF file (example), and I open it from <strong>within</strong> the web browser, then I'd expect the PDF reader to be forced to run in its sandbox, not outside of it. I believe Sandboxie should be aware of such situation. The same way if I open a mp3 file from within the web browser (unsandboxed at a given moment), I'd expect the media player to start in its sandbox, and not outside, etc.<br>
+<br>
+Or, is it something that cannot be done?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Apr 16, 2011 1:22 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I don't see how this isn't a repeat of the last topic.  I don't know why you say completely unrelated -- to me it looks like the same.  Please re-read the second paragraph of my first comment in that topic.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Apr 16, 2011 5:14 pm</strong></div>
+				<div class="author">by <strong>_is_m00nbl00d_</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I don't see how this isn't a repeat of the last topic.  I don't know why you say completely unrelated -- to me it looks like the same.  Please re-read the second paragraph of my first comment in that topic.</div></blockquote>
+
+The paragraph is the following:<br>
+
+<blockquote><div><cite>tzuk wrote:</cite>As for clicking documents/programs in a sandbox folder but actually opening them in another sandbox, I don't think I will offer this feature directly. But there have been requests to be able to specify a list of programs to be excluded from running in a sandbox. So you when that feature is available you may be able to specify WINWORD.EXE as excluded in one sandbox, and as a forced program in another sandbox.</div></blockquote>
+
+I'm not talking about excluding a program/list of programs from running in a sandbox. I'm talking about that, when I run my web browser unsandboxed (despite the fact it's being forced to run inside its sandbox), I would expect the PDF reader/etc to be opened in their respective sandboxes, and not outside, just because the program that triggers them (the web browser) runs outside its sandbox.<br>
+<br>
+When we run a forced program outside its sandbox, Sandboxie is aware of such, correct?<br>
+<br>
+Being so, when the unsandboxed program (browser) triggers the execution of one other program (PDF reader), Sandboxie should verify whether or not the process (pdf reader) has a sandbox of its own, and if so, force it to run in its sandbox.<br>
+<br>
+So, what I'm suggesting is not to exclude in one sandbox and include in another (which is why I said they're unrelated), but to force the pdf reader/etc to their respective sandboxes, in the scenario I mentioned.<br>
+<br>
+I just don't understand why Sandboxie doesn't do that by design. Or, doing what you mentioned others also suggested (exclude in a sandbox and force to others) will handle the scenario I mentioned? If yes, then it's great. If not, it should be looked at, IMO.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 17, 2011 3:04 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Ah, now I think I understand what you mean.<br>
+
+<blockquote><div><cite>_is_m00nbl00d_ wrote:</cite>I just don't understand why Sandboxie doesn't do that by design.</div></blockquote>
+
+Actually it is by design that when you intentionally run a program in "disable forced programs" mode, then this also applies to programs it starts.<br>
+<br>
+The intention here is that you can run Firefox unsandboxed and let it update and restart and run update utilities and not have to worry about any of them being started as a forced program.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 17, 2011 4:26 pm</strong></div>
+				<div class="author">by <strong>_is_m00nbl00d_</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Ah, now I think I understand what you mean.<br>
+
+<blockquote><div><cite>_is_m00nbl00d_ wrote:</cite>I just don't understand why Sandboxie doesn't do that by design.</div></blockquote>
+
+Actually it is by design that when you intentionally run a program in "disable forced programs" mode, then this also applies to programs it starts.<br>
+<br>
+The intention here is that you can run Firefox unsandboxed and let it update and restart and run update utilities and not have to worry about any of them being started as a forced program.</div></blockquote>
+
+<br>
+I totally understand why it is by design, and it's very welcome... I'm not asking to change that behavior... rather to improve it, by also letting the user define, via a setting, whether or not he/she wants to force other programs into their specific sandboxes, whenever they run another forced program outside of its sandbox.<br>
+<br>
+Is this something you could easily do?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 17, 2011 4:36 pm</strong></div>
+				<div class="author">by <strong>_is_m00nbl00d</strong></div>
+				<div class="content">-edit-<br>
+<br>
+Just to add something I previously forgot.<br>
+<br>
+Maybe this option, to let users force other programs into their respective sandboxes, could be given when the user chooses, precisely, to run a forced program outside its sandbox.<br>
+<br>
+Sandboxie could ask something like:<br>
+<br>
+"You have chosen to run a forced program outside of its sandbox. Do you also wish to run other programs initated by this one unsandboxed, or would you like Sandboxie to force them to run in their respective sandboxes, if they exist?" <br>
+<br>
+Well, something like that, anyway. lol<br>
+<br>
+Would something like this let users update their browsers, for example, without problems, without unsandboxing other programs that have a sandbox of their own? (Just like my examples.)<br>
+<br>
+Anyway, if it's something that could be done, I'm sure you'll find your way. lol</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10281&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:10 GMT -->
+</html>

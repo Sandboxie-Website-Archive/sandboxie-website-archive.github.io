@@ -1,0 +1,924 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="robots" content="index,follow">
+	<meta name="language" content="en">
+	<meta name="google-translate-customization" content="e0b0918ac010f34-ee72acc87a31fea6-gc7951f1948fb9449-11">
+	<meta name="description" content="Sandboxie - Sandbox security software for Windows. Install and run programs in a virtual sandbox environment without writing to the hard drive.">
+	<link rel="stylesheet" type="text/css" href="includes/style.css">
+	<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="includes/js/mobile-menu.js">
+	</script>
+	<script type="text/javascript">
+var onload_reposition_ie = 0;
+	</script>
+
+<!--[if IE]>
+<script type="text/javascript">
+onload_reposition_ie = 1;
+</script>
+<![endif]-->
+
+	<script type="text/javascript">
+function onload_reposition()
+{
+}
+	</script>
+
+	<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15566261-2', 'auto');
+ga('send', 'pageview');
+	</script>
+
+<title>Sandboxie - SBIE DLL API</title>
+<meta name="description" content="SBIE DLL API - Sandboxie, sandbox security and secure web browsing software for Windows">
+</head>
+<body onload="onload_reposition()">
+<a name="top"></a> 
+<div id="masthead">
+	<table class="masthead" width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td width="312" style="vertical-align:top;"><a href="index.html" title="Sandboxie.com"><img src="images/MastheadLogo.jpg" alt="" height="92" width="312"></a></td>
+			<td><span id="motto"><i>Trust&nbsp;No&nbsp;Program</i></span></td>
+		</tr>
+	</table>
+	<div id="submasthead">
+		<div id="drop-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="HelpTopics.html">Help &amp; FAQ</a></li>
+				<li><a href="https://forums.sandboxie.com/">Forum</a></li>
+				<li><a href="DownloadSandboxie.html">Download</a></li>
+				<li><a href="RegisterSandboxie.html">Buy</a>
+				<ul>
+					<li><a href="HomeUse.html">Home Use</a></li>
+				</ul>
+				</li>
+				<li><a href="SiteSearch.html">Search</a></li>
+				<li><a href="HowItWorks.html">How It Works</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container-menus">
+	<div class="one-menus">
+		<div id="google_translate_element">
+		</div>
+
+		<script type="text/javascript">
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,bg,cs,da,de,el,en,es,et,fi,fr,hr,hu,id,it,iw,jv,ko,mk,nl,pl,pt,ru,sk,sq,sv,tr,uk,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, gaTrack: true, gaId: 'UA-53196810-1'}, 'google_translate_element');
+}
+		</script>
+
+	</div>
+	<div class="two-menus">
+		<div id="nav-trigger">
+			<span>Menu</span>
+		</div>
+		<div id="nav-mobile"> 
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="HelpTopics.html">Help &amp; FAQ</a></li>
+			<li><a href="https://forums.sandboxie.com/">Forum</a></li>
+			<li><a href="DownloadSandboxie.html">Download</a></li>
+			<li><a href="RegisterSandboxie.html">Buy</a></li>
+			<li><a href="SiteSearch.html">Search</a></li>
+			<li><a href="HowItWorks.html">How It Works</a></li>
+		</ul>
+		</div> 
+	</div>
+</div><div id="wrapper">
+	<h1 style="margin:0;padding-top:.5em">
+		SBIE DLL API 
+	</h1>
+	<p>
+	<a name="top" id="top"></a> 
+	</p>
+	<table style="border: 1px solid #bba; background-color: #f7f8ff; padding: 0px; font-size: 95%; text-align: left; width: 90%;">
+		<tr>
+			<td> 
+			<p>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#overview">Overview</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#EnumBoxes">Enumerate Sandbox Names</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#QueryPathBySandbox">Query Sandbox Paths by Sandbox Name</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#QueryPathByProcess">Query Sandbox Paths by Process ID</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#EnumProcs">Enumerate Running Processes</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#QueryProcess">Query Process Information</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#KillOne">Terminate a Single Sandboxed Process</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#KillAll">Terminate All Sandboxed Processes</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#QueryConf">Query Configuration from Sandboxie.ini</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#UpdateConf">Update Configuration in Sandboxie.ini</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#ReloadConf">Reload Configuration from Sandboxie.ini</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#Hook">Hook a User-Mode Entrypoint</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#Callback">Register for DLL Load/Unload Callbacks</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="SBIE_DLL_API.html#HomePath">Get Sandboxie Home Folder</a><br>
+			<br>
+			</p>
+			</td>
+		</tr>
+	</table>
+	<h3>
+		<a name="overview" id="overview"></a>Overview 
+	</h3>
+	<p>
+		This page describes the callable entrypoints in the <em>SbieDll.dll</em> dynamically-linked library (DLL). These entrypoints expose some functionality of Sandboxie that can be accessed programmatically, that is, through other programs rather than through a person interacting with Sandboxie. 
+	</p>
+	<p>
+		There are three aspects to using Sandboxie programmatically: 
+	</p>
+	<ul>
+		<li> Driving some functionality using the Start.exe program. See <a href="StartCommandLine.html">Start&nbsp;Command&nbsp;Line</a>.
+		<li> Injecting custom DLLs into sandboxed programs. See <a href="InjectDll.html">InjectDll</a>.
+		<li> Calling Sandboxie entrypoints from programs running (sandboxed or not). Described here. 
+	</ul>
+	<p>
+		The entrypoints described here are all exported by <em>SbieDll.dll</em>. To access an entrypoint, you should dynamically load this DLL into your program, and get the address of the desired entrypoint. For example, 
+	</p>
+<pre>
+        <em>_<strong>_</em>declspec(dllexport) void <em>_</strong>_</em>stdcall InjectDllMain(HINSTANCE hSbieDll, ULONG_PTR UnusedParameter)
+	{
+		//
+	        // locate the address of SbieDll_Hook in SbieDll.dll
+	        //
+	</pre>
+<pre>
+	        typedef void *(__stdcall *P_SbieDll_Hook)(
+	                const char *ApiName, void *ApiFunc, void *NewFunc);
+	</pre>
+<pre>
+	        P_SbieDll_Hook p_SbieDll_Hook = GetProcAddress(hSbieDll, "SbieDll_Hook");
+	</pre>
+<pre>
+		//
+	        // invoke SbieDll_Hook through the function pointer
+	        //
+	</pre>
+<pre>
+	        p_SbieDll_Hook(...);
+	}
+	</pre>
+	<p>
+		Note the use of <em>InjectDllMain</em> (see <a href="InjectDll.html">Inject&nbsp;Dll</a>) to get a handle to the loaded instance of SbieDll. That is the recommended approach. However, using LoadLibrary or GetModuleHandle to look up SbieDll by name is also fine.
+	</p>
+	<hr>
+	<h3>
+		<a name="EnumBoxes" id="EnumBoxes"></a>Enumerate Sandbox Names 
+	</h3>
+	<ul>
+		<li> Prototype: 
+	</ul>
+<pre>
+        typedef LONG (__stdcall *P_SbieApi_EnumBoxes)(
+                LONG index,                 // initialize to -1
+                WCHAR *box_name);           // pointer to WCHAR [34]
+	</pre>
+	<ul>
+		<li> Export Name: 
+	</ul>
+<pre>
+	SbieApi_EnumBoxes
+	</pre>
+	<ul>
+		<li> Parameters: 
+	</ul>
+<pre>
+        index [in] specifies which sandbox to return.  Initialize to -1.
+        Sandboxes are enumerated in the order they appear in Sandboxie.ini.
+	</pre>
+<pre>
+        box_name [out] receives the sandbox name.
+	</pre>
+<pre>
+        Note:  this function cannot be used by a sandboxed program.
+	</pre>
+	<ul>
+		<li> Return Value: 
+	</ul>
+<pre>
+        Returns the next value to use for the index parameter.
+        Returns -1 when there is nothing left to enumerate.
+	</pre>
+	<ul>
+		<li> Sample Code: 
+	</ul>
+<pre>
+        WCHAR name[34];
+        int index = -1;
+        while (1) {
+                index = SbieApi_EnumBoxes(index, name);
+                if (index == -1)
+                    break;
+                SandboxNames_StringArray.add(name);
+	}
+	</pre>
+	<hr>
+	<h3>
+		<a name="QueryPathBySandbox" id="QueryPathBySandbox"></a>Query Sandbox Paths by Sandbox Name 
+	</h3>
+	<ul>
+		<li> Prototype: 
+	</ul>
+<pre>
+        typedef LONG (__stdcall *P_SbieApi_QueryBoxPath)(
+                const WCHAR *box_name,      // pointer to WCHAR [34]
+                WCHAR *file_path,
+                WCHAR *key_path,
+                WCHAR *ipc_path,
+                ULONG *file_path_len,
+                ULONG *key_path_len,
+                ULONG *ipc_path_len);
+	</pre>
+	<ul>
+		<li> Export Name: 
+	</ul>
+<pre>
+	SbieApi_QueryBoxPath
+	</pre>
+	<ul>
+		<li> Parameters: 
+	</ul>
+<pre>
+        box_name [in] specifies the name of the sandbox for which
+        to return path information.
+	</pre>
+<pre>
+        file_path [out] receives the path to the root directory of
+        the sandbox, as set by the <a href="FileRootPath.html">FileRootPath</a> setting.
+        The buffer receives at most the number of bytes specified
+        by the file_path_len parameter.  Pass NULL to ignore this
+        parameter.
+	</pre>
+<pre>
+        key_path [out] receives the path to the root key of the
+        sandbox registry, as set by the <a href="KeyRootPath.html">KeyRootPath</a> setting.
+        The buffer receives at most the number of bytes specified
+        by the key_path_len parameter.  Pass NULL to ignore this
+        parameter.
+	</pre>
+<pre>
+        ipc_path [out] receives the path to the root object directory
+        of the sandbox, as set by the <a href="IpcRootPath.html">IpcRootPath</a> setting.
+        The buffer receives at most the number of bytes specified
+        by the ipc_path_len parameter.  Pass NULL to ignore this
+        parameter.
+	</pre>
+<pre>
+        file_path_len [in/out] specifies the length in bytes of the
+        file_path buffer.  On return, receives the length in bytes
+        needed to receive a complete buffer.
+	</pre>
+<pre>
+        key_path_len [in/out] specifies the length in bytes of the
+        key_path buffer.  On return, receives the length in bytes
+        needed to receive a complete buffer.
+	</pre>
+<pre>
+        ipc_path_len [in/out] specifies the length in bytes of the
+        ipc_path buffer.  On return, receives the length in bytes
+        needed to receive a complete buffer.
+	</pre>
+	<ul>
+		<li> Return Value: 
+	</ul>
+<pre>
+        Returns zero on success, a non-zero value on error.
+	</pre>
+	<ul>
+		<li> Sample Code: 
+	</ul>
+<pre>
+        ULONG FileLen = 0;
+        ULONG KeyLen  = 0;
+        ULONG IpcLen  = 0;
+	</pre>
+<pre>
+        SbieApi_QueryBoxPath(
+                NULL, NULL, NULL, NULL, &amp;FileLen, &amp;KeyLen, &amp;IpcLen);
+	</pre>
+<pre>
+        // note that lengths are returned as the number of bytes,
+        // rather than number of WCHAR characters
+	</pre>
+<pre>
+        WCHAR *FileBuf = malloc(FileLen);
+        WCHAR *KeyBuf = malloc(KeyLen);
+        WCHAR *IpcBuf = malloc(IpcLen);
+	</pre>
+<pre>
+        SbieApi_QueryBoxPath(
+                FileBuf, KeyBuf, IpcBuf, &amp;FileLen, &amp;KeyLen, &amp;IpcLen);
+	</pre>
+<pre>
+        // now use wcslen to count the number of characters
+	</pre>
+<pre>
+        FileLen = wcslen(FileBuf);
+        KeyLen  = wcslen(KeyBuf);
+        IpcLen  = wcslen(IpcBuf);
+	</pre>
+	<hr>
+	<h3>
+		<a name="QueryPathByProcess" id="QueryPathByProcess"></a>Query Sandbox Paths by Process ID 
+	</h3>
+	<ul>
+		<li> Prototype: 
+	</ul>
+<pre>
+        typedef LONG (__stdcall *P_SbieApi_QueryProcessPath)(
+                HANDLE process_id,
+                WCHAR *file_path,
+                WCHAR *key_path,
+                WCHAR *ipc_path,
+                ULONG *file_path_len,
+                ULONG *key_path_len,
+                ULONG *ipc_path_len);
+	</pre>
+	<ul>
+		<li> Export Name: 
+	</ul>
+<pre>
+	SbieApi_QueryProcessPath
+	</pre>
+	<ul>
+		<li> Parameters: 
+	</ul>
+<pre>
+        process_id [in] specifies the ID of the sandboxed process to query.
+	</pre>
+<pre>
+        file_path [out]
+	</pre>
+<pre>
+        key_path [out]
+	</pre>
+<pre>
+        ipc_path [out]
+	</pre>
+<pre>
+        file_path_len [in/out]
+	</pre>
+<pre>
+        key_path_len [in/out]
+	</pre>
+<pre>
+        ipc_path_len [in/out]
+	</pre>
+<pre>
+        The last six parameters are similar to the last six parameters for
+        the QueryBoxPath function, discussed above.  However, QueryProcessPath
+        (this function) returns the sandbox paths that are in use by a running
+        program, whereas QueryBoxPath returns the paths as they are recorded
+        in the Sandboxie configuration.
+	</pre>
+<pre>
+        Or put another way:  Suppose a sandboxed program starts with PID 124,
+        and then some sandbox path (for instance <a href="FileRootPath.html">FileRootPath</a>) is set to a
+        new value.  At this point, QueryBoxPath will return the new value, but
+        QueryProcessPath for PID 124 will return the old value.
+	</pre>
+	<ul>
+		<li> Return Value: 
+	</ul>
+<pre>
+        Returns zero on success, a non-zero value on error.
+	</pre>
+	<hr>
+	<h3>
+		<a name="EnumProcs" id="EnumProcs"></a>Enumerate Running Processes 
+	</h3>
+	<ul>
+		<li> Prototype: 
+	</ul>
+<pre>
+        typedef LONG (__stdcall *P_SbieApi_EnumProcessEx)(
+                const WCHAR *box_name,      // pointer to WCHAR [34]
+                BOOLEAN all_sessions,
+                ULONG which_session,
+                ULONG *boxed_pids);         // pointer to ULONG [512]
+	</pre>
+	<ul>
+		<li> Export Name: 
+	</ul>
+<pre>
+	SbieApi_EnumProcessEx
+	</pre>
+	<ul>
+		<li> Parameters: 
+	</ul>
+<pre>
+        box_name [in] specifies the name of the sandbox in which
+        processes will be enumerated.
+	</pre>
+<pre>
+        all_sessions [in] specifies TRUE to enumerate processes in all
+        logon sessions or only in a particular logon session
+	</pre>
+<pre>
+        which_session [in] specifies the logon session number in which
+        processes will be enumerated.  Ignored if all_sessions if TRUE.
+        Pass the value -1 to specify the current logon session.
+	</pre>
+<pre>
+        boxed_pids [out] receives the process ID (PID) numbers.
+        The first ULONG receives the number of processes enumerated.
+        The second ULONG receives the first PID, the third ULONG receives
+        the second PID, and so on.
+	</pre>
+	<ul>
+		<li> Return Value: 
+	</ul>
+<pre>
+        Returns zero on success, a non-zero value on error.
+	</pre>
+	<hr>
+	<h3>
+		<a name="QueryProcess" id="QueryProcess"></a>Query Process Information 
+	</h3>
+	<ul>
+		<li> Prototype: 
+	</ul>
+<pre>
+        typedef LONG (__stdcall *P_SbieApi_QueryProcess)(
+                HANDLE process_id,
+                WCHAR *box_name,            // pointer to WCHAR [34]
+                WCHAR *image_name,          // pointer to WCHAR [96]
+                WCHAR *sid_string,          // pointer to WCHAR [96]
+                ULONG *session_id);
+	</pre>
+	<ul>
+		<li> Export Name: 
+	</ul>
+<pre>
+	SbieApi_QueryProcess
+	</pre>
+	<ul>
+		<li> Parameters: 
+	</ul>
+<pre>
+        process_id [in] specifies the ID of the sandboxed process to query.
+	</pre>
+<pre>
+        box_name [out] receives the name of the sandbox in which the
+        process is running.  Pass NULL to ignore this parameter.
+	</pre>
+<pre>
+        image_name [out] receives the process name.  Pass NULL to ignore
+        this parameter.
+	</pre>
+<pre>
+        sid_string [out] receives the SID string for the process.
+        Pass NULL to ignore this parameter.
+	</pre>
+<pre>
+        session_id [out] receives the logon session number in which
+        the process is running.  Pass NULL to ignore this parameter.
+	</pre>
+	<ul>
+		<li> Return Value: 
+	</ul>
+<pre>
+        Returns zero on success, a non-zero value on error.
+	</pre>
+	<hr>
+	<h3>
+		<a name="KillOne" id="KillOne"></a>Terminate a Single Sandboxed Process 
+	</h3>
+	<ul>
+		<li> Prototype: 
+	</ul>
+<pre>
+        typedef BOOLEAN (__stdcall *P_SbieDll_KillOne)(
+                HANDLE process_id);
+	</pre>
+	<ul>
+		<li> Export Name: 
+	</ul>
+<pre>
+	SbieDll_KillOne
+	</pre>
+	<ul>
+		<li> Parameters: 
+	</ul>
+<pre>
+        process_id [in] specifies the process ID for the sandboxed
+        process that should be terminated.
+	</pre>
+	<ul>
+		<li> Return Value: 
+	</ul>
+<pre>
+        Returns TRUE on success, FALSE on failure.
+	</pre>
+<pre>
+        The target process is terminated by the Sandboxie service
+        (SbieSvc) with exit code 1 through a call to the Windows API
+        TerminateProcess (ProcessId, 1).
+	</pre>
+	<hr>
+	<h3>
+		<a name="KillAll" id="KillAll"></a>Terminate All Sandboxed Processes 
+	</h3>
+	<ul>
+		<li> Prototype: 
+	</ul>
+<pre>
+        typedef BOOLEAN (__stdcall *P_SbieDll_KillAll)(
+                ULONG session_id,
+                const WCHAR *box_name);
+	</pre>
+	<ul>
+		<li> Export Name: 
+	</ul>
+<pre>
+	SbieDll_KillAll
+	</pre>
+	<ul>
+		<li> Parameters: 
+	</ul>
+<pre>
+        session_id [in] specifies the logon session number in which
+        sandboxed programs should be terminated.
+	</pre>
+<pre>
+        box_name [in] specifies the sandbox name in which sandboxed
+        programs should be terminated.  Specify -1 to indicate the
+        current logon session.
+	</pre>
+	<ul>
+		<li> Return Value: 
+	</ul>
+<pre>
+        Returns TRUE on success, FALSE on failure.
+	</pre>
+<pre>
+        The target processes are terminated in the fashion described
+        above; see SbieDll_KillOne.
+	</pre>
+	<hr>
+	<h3>
+		<a name="QueryConf" id="QueryConf"></a>Query Configuration from Sandboxie.ini 
+	</h3>
+	<ul>
+		<li> Prototype: 
+	</ul>
+<pre>
+        typedef LONG (__stdcall *P_SbieApi_QueryConf)(
+                const WCHAR *section_name,  // pointer to WCHAR [34]
+                const WCHAR *setting_name,  // pointer to WCHAR [66]
+                ULONG setting_index,
+                WCHAR *value,
+                ULONG value_len)
+	</pre>
+	<ul>
+		<li> Export Name: 
+	</ul>
+<pre>
+	SbieApi_QueryConf
+	</pre>
+	<ul>
+		<li> Parameters: 
+	</ul>
+<pre>
+        section_name [in] specifies the section name that contains
+        the setting to query.
+	</pre>
+<pre>
+        setting_name [in] specifies the setting name to query.
+	</pre>
+<pre>
+        setting_index [in] specifies the zero-based index number
+        for a setting that may appear multiple times.  The index
+        number can be logically OR'ed with these special values:
+	</pre>
+<pre>
+            0x40000000 - do not scan the [GlobalSettings] section
+            if the specified setting name does appear in the
+            specified section.
+	</pre>
+<pre>
+            0x20000000 - do not expand any variables in the result.
+	</pre>
+<pre>
+            0x10000000 - ignore any settings that originate from
+            a template (typically defined in the Templates.ini file).
+            only query those settings that appear explicitly in the
+            Sandboxie.ini file.
+	</pre>
+<pre>
+        value [out] receives the value of the specified setting.
+	</pre>
+<pre>
+        value_len [in] specifies the maximum length in bytes of
+        the buffer pointed to by the value parameter.
+	</pre>
+	<ul>
+		<li> Return Value: 
+	</ul>
+<pre>
+        Returns zero on success.  Returns 0xC000008B if the setting
+        was not found.  Any other return value indicates some other error.
+	</pre>
+	<hr>
+	<h3>
+		<a name="UpdateConf" id="UpdateConf"></a>Update Configuration in Sandboxie.ini 
+	</h3>
+	<ul>
+		<li> Prototype: 
+	</ul>
+<pre>
+        typedef LONG (__stdcall *P_SbieDll_UpdateConf)(
+        	WCHAR operation_code,
+        	const WCHAR *password,      // limited to 64 chars
+                const WCHAR *section_name,  // limited to 32 chars
+                const WCHAR *setting_name,  // limited to 64 chars
+                const WCHAR *value)         // limited to 2000 chars
+	</pre>
+	<ul>
+		<li> Export Name: 
+	</ul>
+<pre>
+	SbieDll_UpdateConf
+	</pre>
+	<ul>
+		<li> Parameters: 
+	</ul>
+<pre>
+        operation_code [in] specifies how to update the request setting:
+        's' to set (overwrite), replacing any existing values
+        'a' to append the new value at the bottom of a list of values
+            (or simply set the new value if there isn't one already)
+        'i' to insert the new value at the top of a list of values
+            (or simply set the new value if there isn't one already)
+        'd' to delete an existing value in a list of values
+	</pre>
+<pre>
+        password [in] specifies the password to use if one is required,
+        or NULL or an empty string otherwise.
+	</pre>
+<pre>
+        section_name [in] is a required parameter which specifies the
+        section name that contains the setting to set.
+	</pre>
+<pre>
+        setting_name [in] is a required parameter which specifies the
+        setting name to set.
+	</pre>
+<pre>
+        value [ini] is an optional parameter specifies the new value.
+	</pre>
+<pre>
+        If operation_code is 's' and value is omitted, the corresponding
+        setting in the specified section will be deleted.
+	</pre>
+<pre>
+        If operation_code is 's' and setting_name is "*" (wildcard star)
+        and value is omitted, this function deletes a complete section
+        from the configuration file.
+	</pre>
+	<ul>
+		<li> Return Value: 
+	</ul>
+<pre>
+        Returns zero on success.
+	</pre>
+	<hr>
+	<h3>
+		<a name="ReloadConf" id="ReloadConf"></a>Reload Configuration from Sandboxie.ini 
+	</h3>
+	<ul>
+		<li> Prototype: 
+	</ul>
+<pre>
+        typedef LONG (__stdcall *P_SbieApi_ReloadConf)(
+                ULONG session_id);
+	</pre>
+	<ul>
+		<li> Export Name: 
+	</ul>
+<pre>
+	SbieApi_ReloadConf
+	</pre>
+	<ul>
+		<li> Parameters: 
+	</ul>
+<pre>
+        session_id [in] specifies the logon session number to which
+        Sandboxie will log any error messages.  Pass -1 for the current
+        logon session.
+	</pre>
+	<ul>
+		<li> Return Value: 
+	</ul>
+<pre>
+        Returns zero on success, a non-zero value on error.
+	</pre>
+	<hr>
+	<h3>
+		<a name="Hook" id="Hook"></a>Hook a User-Mode Entrypoint 
+	</h3>
+	<ul>
+		<li> Prototype: 
+	</ul>
+<pre>
+        typedef void *(__stdcall *P_SbieDll_Hook)(
+                const char *name,
+                void *source_func,
+                void *detour_func);
+	</pre>
+	<ul>
+		<li> Export Name: 
+	</ul>
+<pre>
+	SbieDll_Hook
+	</pre>
+	<ul>
+		<li> Parameters: 
+	</ul>
+<pre>
+        name [in] specifies an ASCII-string naming the entrypoint to
+        be hooked.  In case of error, SbieDll_Hook logs a Sandboxie
+        error message which includes this descriptive name.
+	</pre>
+<pre>
+        source_func [in] pointer to the function to hook.
+	</pre>
+<pre>
+        detour_func [in] pointer to the hook code.
+	</pre>
+<pre>
+        This function will cause the source function to invoke the detour
+        function.  In other words, the detour function will intercept all
+        calls to the source function.
+	</pre>
+	<ul>
+		<li> Return Value: 
+	</ul>
+<pre>
+        Returns a function pointer which can be used by the detour
+        function to invoke the source function.
+	</pre>
+	<ul>
+		<li> Sample Code: 
+	</ul>
+<pre>
+        typedef BOOL (__stdcall *P_DeleteFileW)(const WCHAR *Path);
+	</pre>
+<pre>
+        P_DeleteFileW pDeleteFileW = NULL;
+	</pre>
+<pre>
+        BOOL __stdcall MyDeleteFileW(const WCHAR *Path)
+        {
+            if (Path[0] == L'C') {
+	</pre>
+<pre>
+                // silently ignore requests to delete any file on drive C
+	</pre>
+<pre>
+                SetLastError(0);
+                return TRUE;
+	</pre>
+<pre>
+            } else {
+	</pre>
+<pre>
+                // otherwise invoke the original DeleteFileW function
+	</pre>
+<pre>
+                return pDeleteFileW(Path);
+            }
+        }
+	</pre>
+<pre>
+        main()
+        {
+            pDeleteFileW = GetProcAddress(kernel32dll, "DeleteFileW");
+            pDeleteFileW = SbieDll_Hook("DeleteFile",
+                                        pDeleteFileW,
+                                        MyDeleteFileW);
+        }
+	</pre>
+	<hr>
+	<h3>
+		<a name="Callback" id="Callback"></a>Register for DLL Load/Unload Callbacks 
+	</h3>
+	<ul>
+		<li> Prototype: 
+	</ul>
+<pre>
+	typedef void (__stdcall *P_DllCallback)(const WCHAR *ImageName, HMODULE ImageBase);
+	</pre>
+<pre>
+	typedef BOOLEAN *(__stdcall *P_SbieDll_RegisterDllCallback)(
+		P_DllCallback pCallback);
+	</pre>
+	<ul>
+		<li> Export Name: 
+	</ul>
+<pre>
+        SbieDll_RegisterDllCallback
+	</pre>
+<pre>
+        This API is available starting with version 3.46 of Sandboxie.
+	</pre>
+	<ul>
+		<li> Parameters: 
+	</ul>
+<pre>
+	pCallback specifies a callback function to be invoked whenever
+	any DLL is loaded or unloaded in the process.  The callback
+	function cannot be unregistered.
+	</pre>
+<pre>
+	The ImageName (first) parameter to the callback function
+	specifies the UNICODE name string for the DLL that was loaded
+	or unloaded.  The name string does not include a path.
+	</pre>
+<pre>
+	The ImageBase (second) parameter to the callback function
+	specifies the load base address for the DLL, when the callback
+	function is invoked to notify of a DLL load.  When the callback
+	function is invoked to notify of a DLL unload, this parameter
+	is set to zero.
+	</pre>
+	<ul>
+		<li> Return Value: 
+	</ul>
+<pre>
+        Returns TRUE on success, FALSE if the callback cannot be registered.
+        As of version 3.46, Sandboxie supports up to 8 registrations within
+        a single process.
+	</pre>
+	<hr>
+	<h3>
+		<a name="HomePath" id="HomePath"></a>Get Sandboxie Home Folder 
+	</h3>
+	<ul>
+		<li> Prototype: 
+	</ul>
+<pre>
+	typedef LONG *(__stdcall *P_SbieApi_GetHomePath)(
+                WCHAR *NtPath,
+                ULONG NtPathMaxLen,
+                WCHAR *DosPath,
+                ULONG DosPathMaxLen);
+	</pre>
+	<ul>
+		<li> Export Name: 
+	</ul>
+<pre>
+        SbieApi_GetHomePath
+	</pre>
+<pre>
+        This API is available starting with version 3.52 of Sandboxie.
+	</pre>
+	<ul>
+		<li> Parameters: 
+	</ul>
+<pre>
+        NtPath specifies a pointer to a buffer which will receive the
+        full path of the Sandboxie installation folder in NT-path syntax.
+	</pre>
+<pre>
+        NtPathMaxLen specifies the size of the NtPath buffer.  Specify
+        NULL for NtPath and zero for NtPathMaxLen to not receive the
+        NT path.
+	</pre>
+<pre>
+        DosPath specifies a pointer to a buffer which will receive the
+        full path of the Sandboxie installation folder in DOS-path syntax.
+	</pre>
+<pre>
+        DosPathMaxLen specifies the size of the DosPath buffer.  Specify
+        NULL for DosPath and zero for DosPathMaxLen to not receive the
+        NT path.
+	</pre>
+	<ul>
+		<li> Return Value: 
+	</ul>
+<pre>
+        Returns zero on success, a non-zero value on error.
+	</pre>
+<pre>
+        STATUS_BUFFER_TOO_SMALL (0xC0000023) indicates either NtPathMaxLen
+        or DosPathMaxLen specifies a buffer that is too small.  Increase
+        the size of the input buffer and retry the call.
+	</pre>
+</div>
+
+<p align="center" style="font-size:8pt; line-height:1.4em;">
+	<b>Sandboxie</b> is Copyright &copy; 2004-2019 by Sandboxie Holdings, LLC.&nbsp; All rights reserved. <br>
+	<b><a href="index.html">Sandboxie.com</a> | <a href="ContactAuthor.html">Contact Author</a></b> <br>
+</p>
+
+<script type="text/javascript" src="../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
+</body>
+</html>

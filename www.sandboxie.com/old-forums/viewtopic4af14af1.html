@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24529&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:07:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie and Malware - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie and Malware</h2>
+		<p><a href="viewtopic38783878.html?f=17&amp;t=24529">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24529</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Re: Sandboxie and Malware</h3>
+				<div class="date">Posted: <strong>Fri Jun 09, 2017 7:53 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistf504.html?mode=viewprofile&amp;u=33796">DanM</a> wrote: <a href="viewtopicd154d154.html?p=128553#p128553" data-post-id="128553" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Jun 09, 2017 7:22 pm</div></cite>
+I installed the .exe file program right into the Sandbox. I did not install it outside and then Sandbox it, so wouldn't the (sandbox settings&gt;Resource access&gt;File access&gt;Read only access) being blank mean no read access. I want the programs in the sandbox to read nothing but whatever it needed to install itself. So I have none on the list for "files you might want to allow programs in the sandbox to read". </div></blockquote>
+The program you installed in the sandbox as is now by default settings can read all files in the computer. What you want do now are 2 things:<br>
+<br>
+1.This one can put your mind at ease completely. If the program you installed in the sandbox does not need internet access to function, you can block all programs in the sandbox from connecting to the internet. Remember, if programs can not access the internet, they cant steal your files and phone home. So, to block all programs from having internet access go to:<br>
+sandbox settings&gt;Restrictions&gt;Internet access<br>
+<br>
+There you select "Block all programs"<br>
+<br>
+2. Block sandboxed programs from reading sensitive files and folders by adding them in;<br>
+sandbox settings&gt;Resource access&gt;File access&gt;Blocked access, Click Add for navigating to the files and folder you want to block access. Theres more but this is a good start.<br>
+<br>
+I got baseball now, have to go but I ll be back later.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie and Malware</h3>
+				<div class="date">Posted: <strong>Fri Jun 09, 2017 8:00 pm</strong></div>
+				<div class="author">by <strong>DanM</strong></div>
+				<div class="content">No worries thanks. I already have internet blocked on all sandboxes to all programs. <br>
+<br>
+<br>
+I was looking at "Block sandboxed programs from reading sensitive files"  but Is there a way to block every program on my PC besides whatever that program needs to run? You never really know what is sensitive until it is stolen. That would be a great addon.  <br>
+<br>
+On a side note:<br>
+<br>
+Is what I was thinking impossible because I always thought that was what a sandbox does? I think a lot of people thought that too. Why can't default Sandboxie install whatever you want, let it share the resources, but box the program it in so it thinks it is the only program there. <br>
+<br>
+I was thinking a Sandbox is basically a virtual machine but slightly riskier to loopholes since it shares the same OS. If I install a program on a virtual machine, the virus is none the wiser to what is on my main PC. That would be a great sandbox. Can that ever be done?  <br>
+<br>
+Think about it a trojan can read data in minutes, so the damage could already be done before you empty the sandbox. When you delete something from a PC, there is always some remnants. Did you family forget to use the sandbox once?  Do you have cloud software installed? Do you put your name or address in any word document? All can be saved somewhere.<br>
+<br>
+ I am not afraid of damaging viruses since most things are backed up nowadays in cloud but those silent stealers, you never know.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie and Malware</h3>
+				<div class="date">Posted: <strong>Fri Jun 09, 2017 8:56 pm</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content">It sounds like you would be more comfortable running those programs in a full blown Virtual Machine (I use VirtualBox myself, and it's great).<br>
+<br>
+Sandboxie is what we would call "application virtualisation" - it's not meant to be used with the expectation of having a full blown Virtual Machine, and it was never designed that way, and I think it will never be designed that way (it wouldn't be under the category of "application virtualisation" software if it was).  Sandboxie allows the convenience of running programs "naturally" on your OS without having to open/load a separate Virtual Machine.  And due to the nature of this convenience, there is only so much that can be done to isolate it from your OS.  Sandboxie essentially is 100% at preventing programs running in the sandbox from <strong>writing</strong> code <span style="text-decoration: underline">outside</span> of the sandbox, but preventing those same sandboxed programs from <span style="text-decoration: underline">reading</span> code outside of the sandbox is a different matter altogether.  Then again, Sandboxie by definition was never designed for this purpose (while a Virtual Machine is).<br>
+<br>
+As already mentioned, you can block sandboxed programs from <span style="text-decoration: underline">reading</span> some parts of your OS (most people would term these parts as "sensitive", and would include directories/folders/files containing usernames/passwords, banking associated details and other sensitive documents).  And as already mentioned, blocking those same sandboxed programs from connecting to the internet essentially prevents anything being stolen anyway - even if those sandboxed programs <span style="text-decoration: underline">read</span> some sensitive code on your OS, they wouldn't be able to communicate beyond your OS, so it wouldn't matter anyway.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie and Malware</h3>
+				<div class="date">Posted: <strong>Fri Jun 09, 2017 9:32 pm</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content">I spent countless hours researching and testing the best security setup and approach for the (above average) home user from around 2007 to 2010, and came up with what I thought (and still think) to be an essentially bullet proof method.  I've personally never had an unintentional "infection" even prior to 2007 (perhaps reflecting that 99% of "security" is dependent on the user's computer practice).  Sandboxie still features as an integral part of my security setup/approach and in fact has been the only third party security related software on my system for years aside from on-demand scanners (which are ironically run sandboxed!).<br>
+<br>
+What I realised is that the user needs to be aware of all the ways malware could get on to the system - broadly speaking, there are two main categories - internet facing applications (eg. browsers), and external devices (including USB).  Direct hacking via modem and associated IP address (in general, a hardware/software firewall solves this, but if you're specifically targeted by attackers who have ample resources, it may not be possible to prevent the attack no matter what you do).<br>
+<br>
+Taking into account the two potential sources of malware entry above, the concept therefore is to default isolate any newly introduced code on to your system with Sandboxie.  This means you should ideally run all internet facing applications and external devices sandboxed by default (with external devices, it's important to also default prevent autorun/autoplay).  Any specific newly introduced files (music/video/picture files, documents etc) should ideally be always run sandboxed until you can verify they are clean (with black-listing software - VirusTotal, antivirus-type software...I personally like to use on-demand Emsisoft Emergency Kit).  Even then, the default should be to always run these files sandboxed if possible.<br>
+<br>
+Now the above may sound somewhat inconvenient, but I thought of ways of implementing this security approach with maximum convenience and still use it with absolutely no frustration to this day.  As implied above, it's certainly not for the average user.  Here are some videos I made that may be of interest to the above average user:<br>
+<a href="https://www.youtube.com/user/ssj104" class="postlink">https://www.youtube.com/user/ssj104</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie and Malware</h3>
+				<div class="date">Posted: <strong>Fri Jun 09, 2017 10:49 pm</strong></div>
+				<div class="author">by <strong>DanM</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist96bc.html?mode=viewprofile&amp;u=2543">ssj100</a> wrote: <a href="viewtopicf58b-2f58b.html?p=128558#p128558" data-post-id="128558" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Jun 09, 2017 8:56 pm</div></cite>
+It sounds like you would be more comfortable running those programs in a full blown Virtual Machine (I use VirtualBox myself, and it's great).
+</div></blockquote>
+
+I think you might be right. I was hoping a Sandbox would be a compromise. I feel like a VM for the few questionable program is not worth the setup. <br>
+<br>
+I thought a sandbox was basically a virtual machine but slightly riskier to loopholes since it shares the same OS. I was thinking that if I installed a program sandboxed, although it would share resources with other programs, the other programs would be none the wiser and unable to read/write etc.<br>
+<br>
+Does such program exist? Can it even be done because I know a lot of people that would buy that? <br>
+<br>
+
+<blockquote class="uncited"><div> Any specific newly introduced files (music/video/picture files, documents etc) should ideally be always run sandboxed until you can verify they are clean (with black-listing software - VirusTotal, antivirus-type software.
+</div></blockquote>
+
+As I said earlier ( I wrote a lot so far), I like to download new software from new developers to find that hidden gem. Most malware detectors don't like that, so I am forced to disable it. So I will never know truly if it is clean.<br>
+<br>
+Question for you:<br>
+<br>
+A lot of times I disable my anti-malware because it says (malware detected) and deletes the program automatically but when I disable them, install it and scan it says nothing found. Does that mean it is clean? If so I can use Sandboxie for the initial install. <br>
+<br>
+For example, my Nortons 360 removed it and said Trojan Gen 2. I disable install and run a full scan and it says clean. However, when I run power eraser (a deep dive), it says to remove. Malwarebytes says to remove it as well. I did run the program in Virus Total and I think out of 100 scanners it passed 40 out of 100. So.....is that clean? <br>
+<br>
+That is why I was looking for a program that would indefinitely contain it, so if there is malware, it will do nothing but log and infect itself. Does such program exist besides a virtual machine?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie and Malware</h3>
+				<div class="date">Posted: <strong>Fri Jun 09, 2017 11:43 pm</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistf504.html?mode=viewprofile&amp;u=33796">DanM</a> wrote: <a href="viewtopice98de98d.html?p=128560#p128560" data-post-id="128560" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Jun 09, 2017 10:49 pm</div></cite>If Sandboxie allows you to run two instances of the same program, it is obviously containing and hiding files. So why can't it do the same for malware?</div></blockquote> <br>
+<br>
+To clarify, why can't it do exactly what?  Prevent sandboxed programs from reading anything outside of the sandbox?  Don't think that's possible, as Sandboxie is actually installed on the OS and is a program itself.  So some read rights are going to be necessary for it to function.  As I said, if it created a whole virtual OS environment itself, it would be a Virtual Machine.<br>
+
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistf504.html?mode=viewprofile&amp;u=33796">DanM</a> wrote: <a href="viewtopice98de98d.html?p=128560#p128560" data-post-id="128560" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Jun 09, 2017 10:49 pm</div></cite>I thought a sandbox was basically a virtual machine but slightly riskier to loopholes since it shares the same OS. I was thinking that if I installed a program sandboxed, although it would share resources with other programs, the other programs would be none the wiser and unable to read/write etc.</div></blockquote>
+
+It doesn't just share the same OS - it is installed on the same OS and relies on the OS to function.  Complete read isolation isn't possible.  Not quite sure if I understand what you mean by "the other programs would be none the wiser and unable to read/write"?  What has "other programs" (presumably outside the sandbox) have to do with Sandboxie and programs run sandboxed?<br>
+
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistf504.html?mode=viewprofile&amp;u=33796">DanM</a> wrote: <a href="viewtopice98de98d.html?p=128560#p128560" data-post-id="128560" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Jun 09, 2017 10:49 pm</div></cite>Question for you:<br>
+<br>
+A lot of times I disable my anti-malware because it says (malware detected) and deletes the program automatically but when I disable them, install it and scan it says nothing found. Does that mean it is clean? If so I can use Sandboxie for the initial install. <br>
+<br>
+For example, my Nortons 360 removed it and said Trojan Gen 2. I disable install and run a full scan and it says clean. However, when I run power eraser (a deep dive), it says to remove. Malwarebytes says to remove it as well. I did run the program in Virus Total and I think out of 100 scanners it passed 40 out of 100. So.....is that clean?  Who knows. <br>
+<br>
+That is why I was looking for a program that would indefinitely contain it, so if there is malware, it will do nothing but log and infect itself. Does such program exist besides a virtual machine?</div></blockquote>
+
+With programs that you don't trust (no digital signatures, only passing 40 out of 100 on VT etc), you can submit them online formally to AV companies to get feedback.  I wouldn't trust that your system is truly clean after installing the program and a black-list scanner says it's clean - malware may be buried with administrator rights deep in your kernel and hidden etc.  Alarm bells should be ringing with any file only passing 40 out of 100 scanners - most of the time, a safe file should be 100 out of 100 or 95+ out of 100 (false positives are quite common with most black-listing scanners).<br>
+<br>
+Sure, a program that indefinitely contains it is probably what you need - either use a Virtual Machine or use Sandboxie on a system where you don't do anything "sensitive".  Or you could just ensure the sandboxed dodgy program is "shutdown" (terminate programs etc) whenever you want to do something sensitive on that system.  These options would ensure you don't have sensitive information stolen.  Or as mentioned a few times now, if those dodgy sandboxed programs don't require internet access to function, then ensuring the sandbox they run in has no internet access would solve your issue  too.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie and Malware</h3>
+				<div class="date">Posted: <strong>Sat Jun 10, 2017 12:16 am</strong></div>
+				<div class="author">by <strong>DanM</strong></div>
+				<div class="content"><blockquote class="uncited"><div>To clarify, why can't it do exactly what? Prevent sandboxed programs from reading anything outside of the sandbox? Don't think that's possible, as Sandboxie is actually installed on the OS and is a program itself. So some read rights are going to be necessary for it to function. As I said, if it created a whole virtual OS environment itself, it would be a Virtual Machine.</div></blockquote>
+
+I am starting to think it is not possible. I guess every little bit helps when you are doing what I am doing. I do have all Sandboxes internet disabled. After reading even VMs can be exploited, so I guess all this reading is getting me paranoid.<br>
+
+<blockquote class="uncited"><div>It doesn't just share the same OS - it is installed on the same OS and relies on the OS to function. Complete read isolation isn't possible. Not quite sure if I understand what you mean by "the other programs would be none the wiser and unable to read/write"? What has "other programs" </div></blockquote>
+
+Basically, everything I read before coming to this forum said Sandboxie creates an operating/virtual environment. They kept making it sound like it creates some sort of semi-virtual machine for the resources it needs. For example, say I installed Audacity a music program.  Sandboxie would virtualize everything Audacity needs to install and then isolates that virtual drive.  I thought of a sandbox as a semi-virtual machine. <br>
+
+<blockquote class="uncited"><div>With programs that you don't trust (no digital signatures, only passing 40 out of 100 on VT etc), you can submit them online formally to AV companies to get feedback. I wouldn't trust that your system is truly clean after installing the program and a black-list scanner says it's clean </div></blockquote>
+
+Yea but I am sure most don't have an actual human do a deep dive, so same results.<br>
+
+<blockquote class="uncited"><div>Sure, a program that indefinitely contains it is probably what you need - either use a Virtual Machine or use Sandboxie on a system where you don't do anything "sensitive". Or you could just ensure the sandboxed dodgy program is "shutdown" (terminate programs etc) whenever you want to do something sensitive on that system. </div></blockquote>
+
+That was my intention but apparently for data-stealing Trojans, when I do activate it, can still steal it. I do have internet access disabled which gives some peace of mind.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie and Malware</h3>
+				<div class="date">Posted: <strong>Sat Jun 10, 2017 12:31 am</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content">I think you thought Sandboxie would be able to 100% prevent a sandboxed program from <strong>reading</strong> anything on the OS it is installed on.  But in fact, Sandboxie has always been designed to 100% prevent a sandboxed program from <strong>writing</strong> code outside of the sandbox environment it creates for that program.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie and Malware</h3>
+				<div class="date">Posted: <strong>Mon Jun 12, 2017 2:33 pm</strong></div>
+				<div class="author">by <strong>DanM</strong></div>
+				<div class="content"><blockquote class="uncited"><div>I think you thought Sandboxie would be able to 100% prevent a sandboxed program from reading anything on the OS it is installed on. But in fact, Sandboxie has always been designed to 100% prevent a sandboxed program from writing code outside of the sandbox environment it creates for that program.</div></blockquote>
+
+Yep, I think I got confused because in the write access it says "The following folders will appear empty to the programs running in the sandbox". I assumed the files would think they are alone and thus nothing can be logged.<br>
+<br>
+However, if you say, Sandboxie can't write new files, then disabling the internet in the Sandbox should make any files a trojan can read useless correct? So say I have one Sandbox with the internet enabled but all the others disabled. It would be impossible for the Trojan to move from a disabled sandbox to the enabled one and transmit correct?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie and Malware</h3>
+				<div class="date">Posted: <strong>Mon Jun 12, 2017 3:00 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello DanM ,<br>
+<br>
+By default, Sandboxie does not block Read access to files and folders. But, the restriction options (like Write-Only Access) should allow you to block a lot of things.<br>
+Here's an example of a user that blocked pretty much everything, except for Google Chrome:<br>
+<a href="viewtopice539-2e539.html?f=4&amp;t=24012&amp;p=126526&amp;hilit=chrome#p126368" class="postlink">viewtopic.php?f=4&amp;t=24012&amp;p=126526&amp;hilit=chrome#p126368</a><br>
+(Look at the code listed under "Here is how I make google chrome working currently:" )<br>
+<br>
+If you disable internet access, the malware may still collect your data but it won't be able to send it anywhere. So,all you would have to do to get rid of the malware is delete the contents of your Sandbox.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie and Malware</h3>
+				<div class="date">Posted: <strong>Mon Jun 12, 2017 7:06 pm</strong></div>
+				<div class="author">by <strong>DanM</strong></div>
+				<div class="content">Barb,<br>
+
+<blockquote class="uncited"><div>By default, Sandboxie does not block Read access to files and folders. But, the restriction options (like Write-Only Access) should allow you to block a lot of things.<br>
+Here's an example of a user that blocked pretty much everything, except for Google Chrome:<br>
+viewtopic.php?f=4&amp;t=24012&amp;p=126526&amp;hilit=chrome#p126368 </div></blockquote>
+
+<br>
+Wow, I think that poster wanted exactly what I do. Wouldn't Sandboxie be much more powerful if all folders were by default Write only access enabled? Then as per the description all files and folders "will appear empty to programs running in the sandbox"? If said program needs access, Sandboxie would tell us exactly what it wants to read. <br>
+<br>
+Most programs only need to "create new files within the folders" and have no need or business reading other files on my computer. So why give programs so much freedom? With that restriction, Sandboxie would be pretty much key logger proof. Any plans on doing that?  <br>
+<br>
+So if I am understanding correctly, Sandboxie by default allows a program to read whatever it wants in my drive, to make a duplicate virtual drive in Sandboxie. However, no change is made to my external. If that is correct, restricting internet should be enough but as I said above, most programs have no need or businesses reading any of my drives. Restrict write access by default would be a great addition to Sandboxie. If it can be done, I can see this being a software every household would need. However, I am sure it is much harder than I am making it.<br>
+<br>
+<br>
+P.S From reading the forum, I noticed a lot of people misunderstood like I did due to the way it was worded, the difference between read only and write only access. Most of us assumed if "read only access" is left blank nothing can be read but that is what "write only access" is. Read only means "excludes the effects of sandboxing on a file" which should probably be called something clearer IMO.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie and Malware</h3>
+				<div class="date">Posted: <strong>Tue Jun 13, 2017 10:23 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello DanM,<br>
+
+<blockquote class="uncited"><div>So if I am understanding correctly, Sandboxie by default allows a program to read whatever it wants in my drive, to make a duplicate virtual drive in Sandboxie. However, no change is made to my external. If that is correct, restricting internet should be enough but as I said above, most programs have no need or businesses reading any of my drives. </div></blockquote>
+Correct, still nothing is 100% bulletproof (I provided you examples on my first response, maybe they will make more sense now).  If you want to make it as secure as possible, you may need to use restrictions. <br>
+
+<blockquote class="uncited"><div>Restrict write access by default would be a great addition to Sandboxie. If it can be done, I can see this being a software every household would need. However, I am sure it is much harder than I am making it.</div></blockquote>
+As of now, there are no plans of changing the default behavior of Sandboxie.<br>
+The link I provided (regarding Chrome) was a Feature Request, feel free to reply in it. Maybe the devs might make changes in the future, so all feedback is greatly appreciated.  <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24529&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:07:59 GMT -->
+</html>

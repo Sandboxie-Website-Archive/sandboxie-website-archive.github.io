@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10199&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SYSENTER/interrupt 2Eh System Call Blocking</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SYSENTER/interrupt 2Eh System Call Blocking</h2>
+		<p><a href="viewtopicf14bf14b.html?f=4&amp;t=10199">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=10199</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>SYSENTER/interrupt 2Eh System Call Blocking</h3>
+				<div class="date">Posted: <strong>Wed Mar 30, 2011 8:40 pm</strong></div>
+				<div class="author">by <strong>MessageBoxA</strong></div>
+				<div class="content">tzuk,<br>
+<br>
+Thanks for this great piece of software. I am a security researcher and I have been using your product for a number of years for researching/reversing/analyzing malware. I have a swarm of 12 automated honey pots which spider around the net collecting viri/trojan/rootkit. Your sandbox is running on all of the servers.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Anyway I have some suggestions for you to consider:<br>
+<br>
+1.) I would like to be able to block specific ntoskrnl and win32k system calls. It would be great if I could add something like this into the INI:<br>
+<br>
+Block_SysCall  0x121b, 0xbf, 0x184<br>
+<br>
+2.) Some of my honey pots are running a custom 'Windows Embedded' based on the XP kernel. It would be great if SandBoxie patched KiUserExceptionDispatcher and verified the exception chain. This would be analogous to the Microsoft SEHOP implementation in &gt;= Vista operating systems.<br>
+<br>
+I have a few more ideas but most of them can be accomplished with your SBIE DLL API.<br>
+<br>
+Thanks for listening.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+-MessageBoxA</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Mar 31, 2011 8:54 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Your first suggestion is not going to be possible on 64-bit Windows thanks to PatchGuard.  On the one hand it prevents code hooks on KiFastSystemCallEntry (if I have the name right), on the other hand it prevents modifications to the system MSR register, which says where SYSENTER jumps to.  And as far as I know there isn't an official interface for syscall hooking.  So basically you're asking me to develop a 32-bit-only feature, and with 32-bit fading away, slowly but surely, I'm sorry, but I don't think it is a good investment of my time.<br>
+<br>
+It would seem the same rationale also applies to some extent to your second suggestion, where you want me to develop a feature for XP which already exists on more recent versions of Windows.<br>
+<br>
+And on a more general note, I don't see the direct relevance of these features to Sandboxie.  I did not design Sandboxie as a malware analysis tool, and while it is possible to use Sandboxie for that, I will probably not be developing features that have little or no use, other than malware analysis.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 01, 2011 7:51 pm</strong></div>
+				<div class="author">by <strong>MessageBoxA</strong></div>
+				<div class="content">tzuk,<br>
+<br>
+I can see your point and completely understand. Unfortunately thanks to PatchGuard my only option on 64 bit Vista+ is to bootkit my workstations and servers. It makes me wonder if a commercial bootkit would be a useful security product.<br>
+<br>
+Its just that several times each year I have 3-4 zero-day exploits/privilege escalation in my possession and sometimes they take as long as 4-5 months to be patched in some cases. Through some experimentation I have discovered that I can prevent some of these exploits by assigning the number of system calls available to specific applications on an as-needed basis.<br>
+<br>
+Thanks for listening,<br>
+-MessageBoxA</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=10199&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:13 GMT -->
+</html>

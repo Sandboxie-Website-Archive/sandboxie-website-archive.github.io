@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=19767&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:49:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Prevent application from running browser to access internet</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Prevent application from running browser to access internet</h2>
+		<p><a href="viewtopicac88ac88.html?f=4&amp;t=19767">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=19767</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Prevent application from running browser to access internet</h3>
+				<div class="date">Posted: <strong>Thu Oct 23, 2014 7:28 pm</strong></div>
+				<div class="author">by <strong>Domochevsky</strong></div>
+				<div class="content">Hey,<br>
+<br>
+I do occasionally find myself in the annoying situation where a program is (without my consent) opening a web address via my browser. <br>
+Now, it <em>does</em> open the browser inside its own sandbox, which is ok, but I'd rather not have it have access to the browser (and by extension the internet via <em>it</em>) at all.<br>
+Especially since the browser will be in its default config, since all plugins and settings and such are in the browser's own sandbox.<br>
+<br>
+Under Start/Run Access you can define which applications are allowed to run inside the sandbox, but I'd like to request the <em>opposite</em> of that, a blacklist, so I can specifically set my browser and email program to never ever be run inside any given sandbox except its own.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Prevent application from running browser to access inter</h3>
+				<div class="date">Posted: <strong>Thu Oct 23, 2014 11:16 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Did you try using "ClosedFilePath" with the path where browser is installed?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Prevent application from running browser to access inter</h3>
+				<div class="date">Posted: <strong>Fri Oct 24, 2014 9:44 am</strong></div>
+				<div class="author">by <strong>JimC@invincea</strong></div>
+				<div class="content">You can force a specific browser to run in a specific sandbox. Go to the Sandbox settings for that Sandbox, then Applications, then the application/browser. The first option is "Force [browser] to run in this sandbox".<br>
+<br>
+Also, you can set a program to not access the internet. In Restrictions, Internet Access, add the program you don't want accessing the internet.<br>
+<br>
+It sounds like one of these should resolve what you're seeing.<br>
+<br>
+-Jim</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Prevent application from running browser to access inter</h3>
+				<div class="date">Posted: <strong>Fri Oct 24, 2014 12:54 pm</strong></div>
+				<div class="author">by <strong>Domochevsky</strong></div>
+				<div class="content">Buster, I don't know where to set that.<br>
+<br>
+Jim, neither of these things work. The browser is fully installed in its own sandbox and gets called via regular system browser association. So a sandboxed instance is started, <em>inside</em> of the sandbox the program uses, that called it, which I don't want. (Since the browser won't have any of its settings, addons and other security measures.)<br>
+I also don't want to deny this program entirely internet access, since it uses that to send crash reports. (And I can control that via firewall.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Prevent application from running browser to access inter</h3>
+				<div class="date">Posted: <strong>Fri Oct 24, 2014 2:16 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Domochevsky wrote:</cite>Buster, I don't know where to set that.</div></blockquote>
+
+Go to "Sandbox Settings" of the sandbox you want to configure. Then open "Resource Access -&gt; File Access -&gt; Blocked Access".<br>
+<br>
+Click in "Add Program" and select the browser(s) you want to block.<br>
+<br>
+Let us know if that fits your needs.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Prevent application from running browser to access inter</h3>
+				<div class="date">Posted: <strong>Fri Oct 24, 2014 3:04 pm</strong></div>
+				<div class="author">by <strong>Domochevsky</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite><blockquote><div><cite>Domochevsky wrote:</cite>Buster, I don't know where to set that.</div></blockquote>
+
+Go to "Sandbox Settings" of the sandbox you want to configure. Then open "Resource Access -&gt; File Access -&gt; Blocked Access".<br>
+<br>
+Click in "Add Program" and select the browser(s) you want to block.<br>
+<br>
+Let us know if that fits your needs.</div></blockquote>
+
+Alright, that seems to work. It fails now with "Application not found". <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+Now how do I instigate that policy in all sandboxes (except the browser's) by default...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Prevent application from running browser to access inter</h3>
+				<div class="date">Posted: <strong>Fri Oct 24, 2014 5:53 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Domochevsky wrote:</cite>Now how do I instigate that policy in all sandboxes (except the browser's) by default...</div></blockquote>
+
+Repeat the operation for all sandboxes you want.<br>
+<br>
+You could apply the policy to all sandboxes but I doubt you can do it for "all except".</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=19767&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:49:00 GMT -->
+</html>

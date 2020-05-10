@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=2894&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:18:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; copy or duplicate sandbox</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>copy or duplicate sandbox</h2>
+		<p><a href="viewtopic62f462f4.html?f=4&amp;t=2894">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=2894</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>copy or duplicate sandbox</h3>
+				<div class="date">Posted: <strong>Sat Feb 16, 2008 3:46 pm</strong></div>
+				<div class="author">by <strong>yakir.zadok@gmail.com</strong></div>
+				<div class="content">I didn't find a way to copy / duplicate a sandbox, this feature can be used to like starting a sandbox in sandbox (this feature also not supported I think).<br>
+<br>
+is there a way doing it?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 17, 2008 1:55 pm</strong></div>
+				<div class="author">by <strong>street011</strong></div>
+				<div class="content">it's actualy very easy, create a new sandbox, "Sandbox2" (for example) now "Explore" your "DefaultBox"  copy it's content to the "Sandbox2" folder...<br>
+there is your duplicate</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 26, 2008 5:26 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">Thanks! I mentioned this solution in <a href="http://sandboxie.com/phpbb/viewtopic.php?p=18874#18874" class="postlink">the rollback request</a> so people there would know about it.<br>
+<br>
+Nevertheless, can you add an interal option to do this? It would be a great feature for registered users. street011's manual way would be problematic when you want a sandbox with "Delete Invocation" on (deletets itself when being closed). Nothing would then beat quickly right clicking the program's icon and choosing "duplicate sandbox X".<br>
+<br>
+Until then, one could use <a href="../phpbb/viewtopic596e.php?p=19196#19196" class="postlink">the following "xcopy" command in "Delete Invocation"</a>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 29, 2008 7:05 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">Can anyone confirm I wrote all the relevant xcopy parameters that would create a 100% tree copy?<br>
+<br>
+I had to use xcopy because copy would only copy either files or folders (if they're in the same folder - e.g. sandbox\file.txt and sandbox\folder\).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>copy or duplicate sandbox</h3>
+				<div class="date">Posted: <strong>Fri Feb 29, 2008 1:17 pm</strong></div>
+				<div class="author">by <strong>yakir.zadok@gmail.com</strong></div>
+				<div class="content">the idea of xcopy is not enough,<br>
+I need to delete all created files and directories.<br>
+how can I delete files that has been changed since a TIME?<br>
+and then copy only the mised files?<br>
+<br>
+the idea of copy all the sandbox is 3 GB again and again and rooin the HD.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 29, 2008 1:52 pm</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">You're the one who wanted duplication and so this topic is about duplication.<br>
+<br>
+If you suddenly want to request a rollback feature, just join the relevant topic (linked above).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>copy or rollback</h3>
+				<div class="date">Posted: <strong>Sat Mar 01, 2008 5:42 am</strong></div>
+				<div class="author">by <strong>yakir.zadok@gmail.com</strong></div>
+				<div class="content"><blockquote><div><cite>lwc wrote:</cite>You're the one who wanted duplication and so this topic is about duplication.<br>
+<br>
+If you suddenly want to request a rollback feature, just join the relevant topic (linked above).</div></blockquote>
+the idea of mine was to do a kind of rollback, <br>
+So I will continue posting to the roll back forum</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Mar 04, 2008 7:22 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">Hmm, it turns out that unlike "Delete Command", "Auto Exec" is an internal command (within the sandbox's scope) so it's no good for duplicating sandboxes.<br>
+<br>
+<a href="../phpbb/viewtopic750b.php?p=19195" class="postlink">Does Sandboxie supply an external equivalent for it?</a><br>
+<br>
+Until I get an answer, here's a less efficient - but nonetheless a working - version of duplicating (a sandbox named "<strong>SavedBox</strong>") - via the external "Delete Command":
+<blockquote class="uncited"><div>"%ComSpec%" /c rmdir /s /q "%SANDBOX%" &amp;&amp; for /F "tokens=3 delims=_" %A IN ("%SANDBOX%") do xcopy "%SystemDrive%\Sandbox\%USERNAME%\%A_Dummy" "%SystemDrive%\Sandbox\%USERNAME%\%A" /e /i /h /k /x</div></blockquote>
+(thanks for Tzuk for <a href="../phpbb/viewtopicce95.php?p=19201" class="postlink">coming up with the %A thing</a>!)<br>
+That way you can have "Foobar" and "Foobar_Dummy", and upon deleting "Foobar" it would get restored to "Foobar_Dummy".<br>
+<br>
+P.S.
+<blockquote><div><cite>xcopy wrote:</cite><strong>/x</strong></div></blockquote>
+Don't use this xcopy parameter in Windows XP Home as it gets the relevant sandbox (%A)'s folder locked!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 18, 2008 6:28 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">v2.29.22 beta somehow interfered with xcopy. I have no idea why and how, but the above command doesn't work anymore.<br>
+<br>
+Actually, if I turn off Sandboxie (including the service) and run
+<blockquote class="uncited"><div>xcopy "c:\Sandbox\myuser\Box_Dummy" "c:\Sandbox\myuser\Box\" /e /i /h /k /x</div></blockquote>
+Then it says 0 files copied, but this is created:
+<blockquote class="uncited"><div>c:\Sandbox\myuser\Box_Dummy\drive\C\Box</div></blockquote>
+However, using double quotes somehow fixes the problem:
+<blockquote class="uncited"><div>xcopy <strong>""</strong>c:\Sandbox\myuser\Box_Dummy<strong>""</strong> "c:\Sandbox\myuser\Box\" /e /i /h /k /x</div></blockquote>
+And thus the new command is:
+<blockquote class="uncited"><div>"%ComSpec%" /c rmdir /s /q "%SANDBOX%" &amp;&amp; for /F "tokens=3 delims=_" %A IN ("%SANDBOX%") do xcopy <strong>""</strong>c:\Sandbox\%USERNAME%\%A_Dummy<strong>""</strong> "c:\Sandbox\%USERNAME%\%A\" /e /i /h /k /x</div></blockquote>
+
+I'm telling you, it wasn't like this moments before installing v2.29.22 beta (including a restart just to make sure).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 18, 2008 8:08 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Version 3.29.22 extends the new logic in ForceFolder to the sandbox folder.  In other words if you had<br>
+<br>
+xcopy c:\some\forced\folder<br>
+<br>
+then the new logic in ForceFolder can catch that.  You're doing<br>
+<br>
+xcopy c:\sandbox\folder<br>
+<br>
+so it is essentially caught by the same logic.  By using double-quotes you fooled the new logic to not catch the invocation.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 18, 2008 9:42 am</strong></div>
+				<div class="author">by <strong>lwc</strong></div>
+				<div class="content">If the sandboxes are now like forced folders, then:<br>
+1) How come they're still forced folders even if Sandboxie (including the service) is turned off?<br>
+2) If it affects xcopy, how come the delete command works (it just deletes the folder)?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 18, 2008 10:34 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I think the new ForceFolders (including its application to sandboxed folders) is a bit over-protective.  I will revise it and I hope it will resolve problems like this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 18, 2008 4:40 pm</strong></div>
+				<div class="author">by <strong>MitchE323</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>is a bit over-protective.</div></blockquote> I have seen this as well. In a sandbox that has limited 'run_access', right clicking to produce a menu on a file in a forcefolder from an UNsandboxed Windows Explorer gives a rundll32 error. Same sandbox with limited run_access but with ForceProcess shows no error. Also ForceFolder with Foxit seems to have a different effect than ForceProcess with Foxit, in a box with limited run_access. ForceFolder requires Foxit to be listed in the ProcessGroup, while ForceProcess just lets IE do it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 20, 2008 12:23 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Version 3.29.23 should have more reasonable behavior.<br>
+<br>
+Mitch, if you still have problems with version 3.29.23, then I'd need to better understand what's this "limited run_access" thing you're talking about.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 20, 2008 3:15 pm</strong></div>
+				<div class="author">by <strong>MitchE323</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Version 3.29.23 should have more reasonable behavior.<br>
+<br>
+Mitch, if you still have problems with version 3.29.23, then I'd need to better understand what's this "limited run_access" thing you're talking about.</div></blockquote> Still the same for me.<br>
+<br>
+<strong>Details</strong><br>
+------------------------------------------------------------------------------------<br>
+[GlobalSettings]<br>
+<br>
+ProcessGroup=&lt;Foxit&gt;,Foxit Reader.Exe,sandboxiedcomlaunch.exe,sandboxierpcss.exe,start.exe<br>
+<br>
+[Foxit]<br>
+<br>
+Enabled=y<br>
+ConfigLevel=4<br>
+ClosedIpcPath=!&lt;Foxit&gt;,*<br>
+ForceFolder=C:\Program Files\Foxit Reader<br>
+------------------------------------------------------------------------------------<br>
+In your Foxit folder place any existing pdf file, also create a NewTextDocument.txt. Now in an UN-sandboxed Windows Explorer navagate to the Foxit folder. RightClick on the Pdf and 'Open With...' - also RightClick on the Txt and 'Open With' &gt; 'Choose Program'. Both should create a Rundll32.Exe error notification. For this using the Foxit folder is just an example.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=2894&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:18:22 GMT -->
+</html>

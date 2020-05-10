@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=21567&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:11:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Print to File: Allow Spooler Folder - Security Risk?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Print to File: Allow Spooler Folder - Security Risk?</h2>
+		<p><a href="viewtopicf624f624.html?f=17&amp;t=21567">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=21567</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Print to File: Allow Spooler Folder - Security Risk?</h3>
+				<div class="date">Posted: <strong>Sat Aug 08, 2015 4:39 pm</strong></div>
+				<div class="author">by <strong>Spaceman Spiff</strong></div>
+				<div class="content">Quotes are from the following thread: <a href="viewtopicea58ea58.html?f=50&amp;t=20793&amp;start=150" class="postlink">http://forums.sandboxie.com/phpBB3/view ... &amp;start=150</a><br>
+
+<blockquote><div><cite>Curt@invincea wrote:</cite><blockquote><div><cite>APMichael wrote:</cite><blockquote><div><cite>Curt@invincea wrote:</cite>Ok, when Sbie first blocks PDF Creator, a failed print job gets stuck in the PDF Creator print queue.  From then on, PDF Creator will no longer work.  After you dbl-click on SBIE1319 to allow the process to print to file, you must manually clear the print from the print queue.  Then PDF Creator will function properly.</div></blockquote>
+Yes, that works! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> Thank you very much for the hint.<br>
+<br>
+Do you see if there is a solution with the OpenFilePath setting possible?</div></blockquote>
+<strong>Yes, just add OpenFilePath=%Local AppData%\Temp\PDFCreator\Spool.</strong>  And everything will just work from then on. </div></blockquote>
+
+Now this seems to be a nice solution, but I was wondering whether permanently opening a file path constitutes a security risk.<br>
+Or is the "real world security impact" of permanently allowing an app such as PDF creator more or less negligible ?<br>
+<br>
+If it is risky, the I would rather allow per session access for PDF creator (which is a slight pain in the ... as you can see above)  <img class="smilies" src="images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green"> <br>
+<br>
+Thanks in advance!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=21567&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:11:06 GMT -->
+</html>

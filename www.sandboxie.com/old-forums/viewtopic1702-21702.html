@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=11788&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:29:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie and Google Chrome</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie and Google Chrome</h2>
+		<p><a href="viewtopic6d4d6d4d.html?f=5&amp;t=11788">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=11788</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Sandboxie and Google Chrome</h3>
+				<div class="date">Posted: <strong>Fri Oct 28, 2011 11:47 am</strong></div>
+				<div class="author">by <strong>jellybelly</strong></div>
+				<div class="content">Below is a remark from a member over at Wilders Security. Is there any truth to this information? I ask, because I do use Google Chrome.<br>
+<br>
+<br>
+"I personally would not run Chrome in Sandboxie. It offers no further protection (except for Java) and increases the browsers attack surface. <br>
+<br>
+Chrome has no need for sandboxie. IT already has protection from exploits and it's got a great track record - a single undisclosed exploit on the flash player after three years.<br>
+<br>
+You can get the same level of security simply sandboxing your downloads folder. In fact I'd say you can get even better security having a downloads-folder-specific sandbox because you won't have to give it access to places you'd give Chrome access to and definitely no internet access."</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 28, 2011 9:52 pm</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content">With a simple comparison it should be clear what level of protection each provides separately. No harm combining both.<br>
+<br>
+<a href="http://www.chromium.org/developers/design-documents/sandbox" class="postlink">Chrome</a><br>
+
+<blockquote class="uncited"><div><strong>Design principles</strong><br>
+<br>
+<span style="color: red">Do not re-invent the wheel: It is tempting to extend the OS kernel with a better security model. Don't.</span> Let the operating system apply its security to the objects it controls. On the other hand, it is OK to create application-level objects (abstractions) that have a custom security model.<br>
+Principle of least privilege: This should be applied both to the sandboxed code and to the code that controls the sandbox. In other words, the sandbox should work even if the user cannot elevate to super-user.<br>
+Assume sandboxed code is malicious code: For threat-modeling purposes, we consider the sandbox compromised (that is, running malicious code) once the execution path reaches past a few early calls in the main() function. In practice, it could happen as soon as the first external input is accepted, or right before the main loop is entered.<br>
+Be nimble: Non-malicious code does not try to access resources it cannot obtain. In this case the sandbox should impose near-zero performance impact. It's ok to have performance penalties for exceptional cases when a sensitive resource needs to be touched once in a controlled manner. This is usually the case if the OS security is used properly.<br>
+Emulation is not security: Emulation and virtual machine solutions do not by themselves provide security. The sandbox should not rely on code emulation, code translation, or patching to provide security.<br>
+<br>
+<strong>Sandbox windows architecture</strong><br>
+<br>
+<span style="color: red">The Windows sandbox is a user-mode only sandbox. There are no special kernel mode drivers</span>, and the user does not need to be an administrator in order for the sandbox to operate correctly. The sandbox is designed for 32-bit processes and has been tested on Windows 2000, Windows XP 32 bits, and Windows Vista 32 and 64 bits.<br>
+<br>
+Sandbox operates at process-level granularity. Anything that needs to be sandboxed needs to live on a separate process. The minimal sandbox configuration has two processes: one that is a privileged controller known as the broker, and one or more sandboxed processes known as the target. Throughout the documentation and the code these two terms are used with that precise connotation. The sandbox is provided as a static library that must be linked to both the broker and the target executables.<br>
+<br>
+<br>
+<strong>Other caveats</strong><br>
+<span style="color: red">The operating system might have bugs. Of interest are bugs in the Windows API that allow the bypass of the regular security checks. If such a bug exists, malware will be able to bypass the sandbox restrictions and broker policy and possibly compromise the computer. Under Windows, there is no practical way to prevent code in the sandbox from calling a system service.</span>
+</div></blockquote>
+
+<br>
+Sandboxie in contrast, does reinvent the wheel and gives you kernel mode sandboxing which is more robust.<br>
+<br>
+<br>
+<a href="../index290e.html?FrequentlyAskedQuestions#HowItWorks" class="postlink">Sandboxie FAQ</a><br>
+
+<blockquote class="uncited"><div><strong>How does Sandboxie protect me, technically?</strong><br>
+<br>
+Sandboxie extends the operating system (OS) with sandboxing capabilities by blending into it. Applications can never access hardware such as disk storage directly, they have to ask the OS to do it for them. <span style="color: orange">Since Sandboxie integrates into the OS, it can do what it does without risk of being circumvented.</span><br>
+<br>
+The following classes of system objects are supervised by Sandboxie: Files, Disk Devices, Registry Keys, Process and Thread objects, Driver objects, and objects used for Inter-process communication: Named Pipes and Mailbox Objects, Events, Mutexs (Mutants in NT speak), Semaphores, Sections and LPC Ports. For some more information on this, see Sandbox Hierarchy.<br>
+<br>
+Sandboxie also takes measures to prevent programs executing inside the sandbox from hijacking non-sandboxed programs and using them as a vehicle to operate outside the sandbox.<br>
+<br>
+Sandboxie also prevents programs executing inside the sandbox from loading drivers directly. It also prevents programs from asking a central system component, known as the Service Control Manager, to load drivers on their behalf. In this way, drivers, and more importantly, rootkits, cannot be installed by a sandboxed program.</div></blockquote></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 29, 2011 11:52 am</strong></div>
+				<div class="author">by <strong>jellybelly</strong></div>
+				<div class="content">D1G1T@L, thank you for the explanation. I'm just an average user and not a geek, but I think I can understand this enough to continue using both Chrome and Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 29, 2011 3:14 pm</strong></div>
+				<div class="author">by <strong>HungryMan</strong></div>
+				<div class="content">That post on Wilders was mine.<br>
+<br>
+I disagree with Digital that there's no harm in combining both. You can get the same level of security on a vanilla chrome (Chrome + Flash) by simply sandboxing the downloads folder.<br>
+<br>
+The difference being that you don't needlessly increase attack surface or possibly mess with Chrome's built in security.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 29, 2011 3:41 pm</strong></div>
+				<div class="author">by <strong>jellybelly</strong></div>
+				<div class="content">Thank's for joining the thread HungryMan! I didn't know if it was alright to attach your handle to the statement or not...I like reading and appreciate your posts on Wilders. I just wish tzuk would come on here and hopefully put this issue to rest, as I'm sure there are a lot of Chrome-Sandboxie users like myself.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 29, 2011 4:33 pm</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content"><blockquote class="uncited"><div>The difference being that you don't needlessly increase attack surface or possibly mess with Chrome's built in security.</div></blockquote>
+
+From this standpoint, Chrome would have a much bigger attack surface since its around 80mb big compared to Sandboxie's 900kb. The mechnaism of isolation used by both differs and thats what makes them compatible like a Russian doll security backup measure. No incompatibilities between both sandboxes has been found; Sandboxie fully accomodates Chrome with no drawbacks.<br>
+<br>
+Also note that any single priviledge escalation exploit (like the ones you see on Patch Tuesday) and chrome's sandbox fails you. meanwhile Sandboxie could still enforce its protection since its at a deeper level in the OS. That makes it able to protect you from all types of zerodays bar direct kernel 0days which are very rare, but can bypass all security software. Thats why start/run restrictions provided by Sandboxie are important. So even if dangerous malware finds it sway on your machine, it can be blocked from executing any paload no matter how dangerous.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 29, 2011 5:11 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I don't understand why HungryMan is so sure that adding Sandboxie on top of Chrome can't help and can potentially hurt.<br>
+<br>
+This is a one-sided and unsubstantiated claim that Chrome is absolutely perfect and beyond reproach, and Sandboxie can only introduce a weakness in the mix.  I question the decency of posting something like that on this forum of all places.<br>
+<br>
+There is no reason to disregard a scenario in which Chrome is exploited and web page can run a program outside the Chrome sandbox.  (And there were actually talks all over the Internet about such an exploit just in May this year.)  But very unlikely that such a browser-specific exploit would also break through the Sandboxie sandbox.<br>
+<br>
+So in my opinion, it is a good idea to combine Sandboxie on top of Chrome.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 29, 2011 6:30 pm</strong></div>
+				<div class="author">by <strong>HungryMan</strong></div>
+				<div class="content">@Digital:<br>
+Attack surface is not measured in megabytes. I have no idea how Sandboxie interacts with Chrome and neither do you. No incompatibilities have been shown? Who's looking? I'm not saying it's necessarily there but come on... you and I don't have source code to go by and say "Oh, Sandboxie doesn't have these issues."<br>
+<br>
+Yes, if Chrome's sandbox fails you you have a problem. We've only seen this once in a poorly documented exploit that was never released 6 months ago. It could certainly happen again - I'd bet on it.<br>
+<br>
+@Tzuk<br>
+<br>
+"This is a one-sided and unsubstantiated claim that Chrome is absolutely perfect and beyond reproach"<br>
+I would not say Chrome is perfect at all. But there has to be some risk assessment her and Chrome has a strong policy and a pretty clean history.<br>
+<br>
+"and Sandboxie can only introduce a weakness in the mix. I question the decency of posting something like that on this forum of all places. "<br>
+I didn't post it on this forum, I posted it on Wilders. Someone brought it up here so I responded. <br>
+<br>
+Can Sandboxie introduce a weakness in the mix? Yes. Of course. <br>
+Can it strengthen Chrome's security? Possibly.<br>
+<br>
+I would rather not mess with Chrome's built in security, which relies on things like integrity levels (minus read access and with some application layer security, of course) by adding Sandboxie. <br>
+<br>
+I don't think it will necessarily hurt but I don't really see it helping much either unless an unprecedented 0day comes out. It could happen, sure, but that's a chance whereas there is a definite increase to Chrome's attack surface when using Sandboxie.<br>
+<br>
+For something like Java or Digsby or whatever I think Sandboxie is wonderful. Those programs don't do a lot to secure themselves and you know that<br>
+1) Adding attack surface isn't a big deal at all with them<br>
+2) They have no real security policy to begin with so what can you possibly break?<br>
+<br>
+"There is no reason to disregard a scenario in which Chrome is exploited and web page can run a program outside the Chrome sandbox. (And there were actually talks all over the Internet about such an exploit just in May this year.) But very unlikely that such a browser-specific exploit would also break through the Sandboxie sandbox. "<br>
+Yup, the Vupen exploit (Buffer overflow on Flash 10.1 I believe on Chrome... 13? Can't remember exactly.)<br>
+<br>
+0days happen. I still would rather not mess with Chrome, which hasn't really had a poor security history, and instead just sandbox the downloads folder.<br>
+<br>
+"So in my opinion, it is a good idea to combine Sandboxie on top of Chrome."<br>
+It could be. I can see it being helpful in some situations.<br>
+<br>
+The way I see it it comes down to this.<br>
+<br>
+It can help and it can potentially hurt. I'd rather not fuss with it and over-complicate a system that works. This doesn't mean Chrome is perfect. It just means that I prefer to keep things simple and their sandbox is simple - use OS-based security.<br>
+<br>
+EDIT: This is the general logic I use for not launching Chrome with EMET as well. There are no Chrome explots in the wild and I don't want to shove some .DLL's into a program that works when I don't have access to the source and have no idea how those programs work.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 29, 2011 8:27 pm</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Attack surface is not measured in megabytes.</div></blockquote>
+
+No, the more the amount of code the more exploits that could theoretically exist, as its a difficult ordeal to audit everything. I have seen your debate on Wilders where you said that you don't trust programs that are not opensource, even though you said you don't know how to code. From that viewpoint, using Windows must be a nuissance to you. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+A program doesn't have to be opensource to prove that it's coded correctly. One can tell from its track record whther it works great or not. You disregard the fact that Secunia has no listed vulnerabilities for Sandboxie. You also ignore the extensive testing done by both knowledgable enthusiasts and professionals alike. To each his own.<br>
+<br>
+
+<blockquote class="uncited"><div>Yes, if Chrome's sandbox fails you you have a problem.</div></blockquote>
+
+Thats why I use Sandboxie regardless. Chrome is relativiely safer than other browsers by design but because of its design limitiations, it will never measure up to Sandboxie. Thats not a rhetorical debate but based on the aforementioned quoted facts.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 29, 2011 9:07 pm</strong></div>
+				<div class="author">by <strong>HungryMan</strong></div>
+				<div class="content">lol it has nothing to do with me not trusting closed source... I use Windows and loads of closed source software. But I don't like using 3rd party security software when it is closed source. It's too difficult to know how it works.<br>
+<br>
+I also doubt I said I don't know how to code. I'm rubbish at Javascript but I know multiple languages to an extent.<br>
+
+<blockquote class="uncited"><div>
+One can tell from its track record whther it works great or not.</div></blockquote>
+Not really. I mean, to an extent I suppose. But Sandboxie is hardly a widely used program and there aren't a hell of a lot of eyes on it regardless.<br>
+<br>
+Secunia is irrelevant. Number of exploits found doesn't even mean a ton when there's open source... it means even less when there's closed source.<br>
+<br>
+Link to the tests where someone tries to find vulnerabilities etc in Sandboxie?<br>
+<br>
+<br>
+To be clear I am not adamantly against adding Chrome to Sandboxie. I just don't believe that it's worthwhile.<br>
+Thats why I use Sandboxie regardless. Chrome is relativiely safer than other browsers by design but because of its design limitiations, it will never measure up to Sandboxie. Thats not a rhetorical debate but based on the aforementioned quoted facts.[/quote]<br>
+Link to the supposed limitations?<br>
+<br>
+Anyways, Sandboxie and Chrome sandbox in different ways. Whether one "measures up" to another isn't really relevant, they're two different methods to accomplish the same thing.<br>
+<br>
+EDIT: And if you think my Wilders posts (I think I remember which ones you're referring to) were anti-sandboxie or anti-closed-source you're misunderstanding. There was a conversation about the importance of V&amp;V that I meant as a side-note and it got taken into a looooong discussion where I said that V&amp;V lends itself to open source products.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 29, 2011 10:09 pm</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Link to the tests where someone tries to find vulnerabilities etc in Sandboxie? 
+</div></blockquote>
+
+<a href="http://vallejo.cc/?p=48" class="postlink">http://vallejo.cc/?p=48</a> article by a well known greyhat who reversed Sandboxie to see how strong it is. He confirms and admits that its a well coded program.<br>
+
+<blockquote class="uncited"><div>there aren't a hell of a lot of eyes on it regardless. </div></blockquote>
+
+It has the "right" eyes on it, this is especially clear when many malware coders are programming their works not to run under its sandbox. Don't discount the fact that people who hack like a challenge and would try to break anything because they can, irrelevant of whether its for financial gain or not. <br>
+<br>
+OT: A little correction to your concepts: 'Security through obscurity' is when a program relies on the fact that its unknown to avoid being bypassed, Sandboxie uses 'security by design', where its known how it works but one can't break it even if they wanted to. <br>
+<br>
+
+<blockquote class="uncited"><div>Whether one "measures up" to another isn't really relevant, they're two different methods to accomplish the same thing. </div></blockquote>
+
+While the goal is security, the scope of each program and their abilties have many critical differences. Again do what you want, but I don't see why its being portrayed that they couldn't be used together. People don't have to choose, they can reap the extra benefit of having 2 layers - with no detriment. Anyone at Wilders will tell you that a good security approach involves layers. In life there is a similar method where one would have a plan and then a backup plan, just in case. <br>
+<br>
+
+<blockquote class="uncited"><div>Link to the supposed limitations? </div></blockquote>
+
+<a href="http://www.breakingpointsystems.com/community/blog/chrome-sandbox/" class="postlink">http://www.breakingpointsystems.com/com ... e-sandbox/</a><br>
+Also by looking at my former posts in this topic you'll find useful links if you are willing to understand and correct your ideas on this subject.<br>
+
+<blockquote><div><cite>Source wrote:</cite>You should notice that the targets communicate with the broker via IPC channels. This is necessary for a few reasons. First, hooks are installed into every target process, intercepting most system calls and re-routing each call through the broker, who ultimately says whether the call should be allowed. Chromium makes it very clear in their design document about the sandbox that this is not meant to provide security:<br>
+<br>
+<span style="color: red">"The interception + IPC mechanism does not provide security; it is designed to provide compatibility when code inside the sandbox cannot be modified to cope with sandbox restrictions."</span></div></blockquote>
+
+That is a huge design flaw that Sandboxie can handle while Chrome cannot.<br>
+<br>
+<span style="color: blue">Bottomline for the OP if he hasn't left already:<br>
+<br>
+Is Chrome as strong as Sandboxie? - No.<br>
+Can you do as much with Chrome's sandbox as Sandboxie? - No.<br>
+Is there harm using both? - Absolutely not.</span></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 29, 2011 10:28 pm</strong></div>
+				<div class="author">by <strong>HungryMan</strong></div>
+				<div class="content"><blockquote class="uncited"><div>5.5. Conclusion:<br>
+<br>
+From my point of view process isolation sandboxs have a intrinsic risk:<br>
+<br>
+<br>
+-It is difficult to intercept all that sandboxed process should not have access.<br>
+<br>
+-It will introduce risky code in sensitive points of the system.<br>
+<br>
+-Hooks and changes to the system will depend of the system version and build, and lof of times they will be dirty and undocumented.<br>
+<br>
+-Surely you will need to add some exceptions in the way that Sandboxie does.<br>
+<br>
+-Specifically, Sandboxie has risky code in kernel: PE headers parsing, ini files parsing.<br>
+<br>
+My conclusion about Sandboxie is that it is a useful tool. I would run a navigator or a pdf reader sandboxed, to help to protect myself from vulnerabilities, but I wouldn’t run a malware to analyze its behaviour in Sandboxie, unless Sandboxie was running in vmware, bochs or other virtual machine.</div></blockquote>
+Basically what I'd figure. This is basically what I'm saying... there are vulnerabilities and discrepancies. The article makes that fairly clear.<br>
+<br>
+I'm not saying Sandboxie isn't well programmed... and it's irrelevant how well it's programmed. It is a significantly complex program and you can bet it has vulnerabilities (just like Chrome.)<br>
+<br>
+
+<blockquote class="uncited"><div>
+It has the "right" eyes on it, this is especially clear when many malware coders are programming their works not to run under its sandbox. Don't discount the fact that people who hack like a challenge and would try to break anything because they can, irrelevant of whether its for financial gain or not. <br>
+<br>
+OT: A little correction to your concepts: 'Security through obscurity' is when a program relies on the fact that its unknown to avoid being bypassed, Sandboxie uses 'security by design', where its known how it works but one can't break it even if they wanted to. </div></blockquote>
+Malware coders are writing for Sandboxie? Never seen this. A bit surprised.<br>
+<br>
+No correction necessary...  I know what security by obscurity is and I mean it when I say that it's a factor.<br>
+<br>
+
+<blockquote class="uncited"><div>That is a huge design flaw that Sandboxie can handle while Chrome cannot.
+</div></blockquote>
+lol how is it a design flaw if it's not supposed to work for security? If it were an attempt to add security and didn't work that would be one thing.<br>
+<br>
+Sandboxie and Chrome's sandbox work entirely different. Chrome uses some integrity stuff as a basis with some higher level stuff on top. Sandboxie uses an entirely different sandboxing method with entirely different ways to do it.<br>
+<br>
+<br>
+<br>
+I am not trying to argue about which is more powerful or useful or whatever. That would be ridiculous and useless. I am saying that using Sandboxie with Chrome isn't that useful unless you want your Java sandboxed and it does provide further attack surface.<br>
+<br>
+As I said before, I'm not against running Chrome in a Sandboxie-sandbox, I was just noting that it isn't really necessary. Of course, I also ran Chrome in Sandboxie but had allowed access to the downloads folder, which is why I don't really think it changes a lot.[/quote]</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 29, 2011 10:56 pm</strong></div>
+				<div class="author">by <strong>jellybelly</strong></div>
+				<div class="content">D1G1T@L, I'm still here and read it all. Thank's to each person for the reply's and information. I will continue using Sandboxie and Chrome unless something happens to change my mind...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 29, 2011 11:02 pm</strong></div>
+				<div class="author">by <strong>HungryMan</strong></div>
+				<div class="content">It can definitely work out very well.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Oct 30, 2011 12:04 am</strong></div>
+				<div class="author">by <strong>JustPassingBy</strong></div>
+				<div class="content">If you're not against in running Chrome with Sandboxie, then don't post things like it could decrease the security in Chrome, it's just your opinion. Getting tired of your fanboyism for Chrome, just stating your "opinion" about reducing security could make a non-techie user have doubts about the software, just like what happened now.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=11788&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:29:32 GMT -->
+</html>

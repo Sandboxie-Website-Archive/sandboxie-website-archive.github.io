@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=988&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SB not working with &quot;Altiris Software Virtualization&qu - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SB not working with &quot;Altiris Software Virtualization&qu</h2>
+		<p><a href="viewtopic63016301.html?f=11&amp;t=988">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=988</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2007 4:23 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">This isn't possible.  The changes are too great.  Having this options actually means having two Sandboxie engines, with this option choosing between them.  It's just not something I can even consider.<br>
+<br>
+But, hold on, like I said, I will look into the conflict, maybe there will not even be a need for drastic measures.  No promises though!   <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 04, 2007 2:58 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The story continues...<br>
+<br>
+The conflict lies in the fact that with an Altiris layer enabled, the SbieDll helper DLL does not get loaded into the sandboxed process.<br>
+<br>
+If this is the whole crux of the matter, then perhaps by the next beta, I may be able to resolve this, by re-introducing another way to inject SbieDll into sandboxed programs.<br>
+<br>
+(Note that this 'another way' was in use in version 2.64, which perhaps explains why there was no conflict with Altiris in the older version.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 05, 2007 7:55 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Yep, that was it, the alternative SbieDll injection method works fine with Altiris.<br>
+<br>
+It is a bit worse than the primary SbieDll injection method, in that the DLL is not injected as early, but for 99% of the programs this shouldn't be a problem.<br>
+<br>
+(I'd like to emphasize that the alternative method is not used <em>instead of</em> but rather <em>in addition to</em> the primary method.)<br>
+<br>
+This fix will be published in the next beta version.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 09, 2007 3:56 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Version 2.78 is now more compatible with Altiris.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 12, 2007 9:48 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">I tested the 7.8 and altiris and it still does not work properly, when a layer is loaded and I try to start a program in sandbox i get an error: SBOX2604 Cannot mount registry hive [C0000034 / 33].<br>
+<br>
+When I have something aleady running in the SB mor apps starting works fine.<br>
+<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 12, 2007 6:18 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Sorry about that, but I don't experience this error.  (I've been testing with an "Empty Layer", if it makes a difference.)<br>
+<br>
+This particular error means Sandboxie was unable to query the registry key:<br>
+<br>
+HKLM\SYSTEM\CurrentControlSet\Control\hivelist<br>
+<br>
+This key is opened for <em>read</em> access.  If Altiris decides to block access to this key... Well, I can't do very much about it!  (But like I said, this did not happened to me.)<br>
+<br>
+Another conflict that I saw, has to do with creating files in the root directory of a drive.  It makes the sandboxed program not see the contents of the real directory.  This isn't a bug in Sandboxie.  Strangely, this only happens on the root directory.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 13, 2007 3:29 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">Strange,<br>
+I tested it now with an new layer with an other software installed and it works it also works with an empty layer.<br>
+But with the first layer witn an other software is fails (there was a dl manager called GetRight installed)<br>
+I tested an other layer with adobe and it works also, so it seems it depands on the installed software.<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=988&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:40 GMT -->
+</html>

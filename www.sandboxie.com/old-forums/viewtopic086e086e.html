@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=16597&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:52:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Prevent forum spam</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Prevent forum spam</h2>
+		<p><a href="viewtopicff62ff62.html?f=5&amp;t=16597">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=16597</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Prevent forum spam</h3>
+				<div class="date">Posted: <strong>Thu Sep 26, 2013 2:48 am</strong></div>
+				<div class="author">by <strong>Blackbeat</strong></div>
+				<div class="content">To return a little favor (or atleast trying to), I would like to give you a heads up on forum spam as it seems to be a certain problem on the sandboxie forum.<br>
+There are multiple ways to prevent forum spam (which I see here regularly).<br>
+Captchas are not protecting any longer, you can completely get rid of those in the registration because most bots nowadays use human-response-systems (people answering captchas the whole time like on an assembly line).<br>
+<br>
+My advise on possibilites to prevent spam:<br>
+a) Use a hidden input field on the registration php file that only bots would fill out. A safe and user friendly method. - I heard that some spambots already started avoiding that but you could try it out<br>
+b) Use an IP-Check PHP file. I personally have written one that is checking both stopforumspam and honeypotproject databases for bad IP entries. (though that may give some false positives for certain users as dynamical IPs are common)<br>
+c) Use Javascript and Cookie requirement in combination with individual questions on the registration page (not the pre-set or too common questions like "what's the color of the sky" - that would be too easy as it is too widely used - while they can still be easy for a user; example: "What's the name of the program provided by this website")<br>
+d) Change the name of the registration page from register.php to another name (not sure if phpbb has support for that in the backend, I'm more used to vBulletin).<br>
+<br>
+It's really not that much work, believe me. Just try it out.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 24, 2014 9:34 am</strong></div>
+				<div class="author">by <strong>alan@invincea</strong></div>
+				<div class="content">Thanks.  I am looking into it now.  Has it always bee this bad or has there been an increase in the last couple of weeks?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 24, 2014 11:42 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>alan@invincea wrote:</cite>Thanks.  I am looking into it now.  Has it always bee this bad or has there been an increase in the last couple of weeks?</div></blockquote>
+There are about 6 spam messages or threads with spam posted in different sections of the forum every day. The increase lately its probably about 2 extra spam messages per day. If you come to the forum every day in the early hours of every day and clean up the spam (US Eastern time), the forum will look clean, I think.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>thank you bo</h3>
+				<div class="date">Posted: <strong>Fri Jan 24, 2014 11:57 am</strong></div>
+				<div class="author">by <strong>suffer person</strong></div>
+				<div class="content">Bo, thank you for taking the time to deal with this annoying problem. I hope it will be solved soon.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 26, 2014 6:22 am</strong></div>
+				<div class="author">by <strong>doktornotor</strong></div>
+				<div class="content"><blockquote><div><cite>alan@invincea wrote:</cite>Thanks.  I am looking into it now.  Has it always bee this bad or has there been an increase in the last couple of weeks?</div></blockquote>
+
+It's not exactly *that* bad, seen much worse forums. Regardless, I would not really be comfortable with running phpBB2 at all, it's been totally unmaintained usptream for ages, pretty much nothing that can be done about spam while stuck with this zombie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 27, 2014 1:04 pm</strong></div>
+				<div class="author">by <strong>Domochevsky</strong></div>
+				<div class="content">Another option: Prevent anyone with less than X posts (1-3) from posting links and images. Spambots usually do not return, being one-off shots, and their sole purpose is to add links and images.<br>
+(This will also prevent links/images from non-registered accounts, since their posts cannot be counted, which is a bit off a loss but may be worth it.)<br>
+<br>
+There are already code snippets for that (I've been using that for my own forum when I still had the time to maintain one), specifically for phpbb3, which may be adaptable to phpbb2.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 29, 2014 6:01 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Preventing anyone with less than X posts from posting links and images will not mitigate the irritation that spam produces in a forum.<br>
+<br>
+I would suggest that posts from users with less than X posts to be invisible to users until the post has been moderated and accepted.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 29, 2014 7:43 am</strong></div>
+				<div class="author">by <strong>alan@invincea</strong></div>
+				<div class="content">I will be upgrading to phpBB3 pretty soon. I may get to it this weekend.  It has better controls and more addons for controlling spam.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 30, 2014 7:31 am</strong></div>
+				<div class="author">by <strong>Domochevsky</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>Preventing anyone with less than X posts from posting links and images will not mitigate the irritation that spam produces in a forum.<br>
+...</div></blockquote>
+
+Why not? Spam cannot be created that way, thus no irritation can be created.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 30, 2014 12:47 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Domochevsky wrote:</cite><blockquote><div><cite>Buster wrote:</cite>Preventing anyone with less than X posts from posting links and images will not mitigate the irritation that spam produces in a forum.<br>
+...</div></blockquote>
+
+Why not? Spam cannot be created that way, thus no irritation can be created.</div></blockquote>
+
+I understood the links and images would be filtered out from messages, but messages would be posted anyway.<br>
+<br>
+New registered users may have problems to report a problem if they can not use links and/or images.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=16597&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:52:59 GMT -->
+</html>

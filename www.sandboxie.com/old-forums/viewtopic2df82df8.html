@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24879&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:24:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Symantec / Norton 360 - Unable to launch web browsers - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Symantec / Norton 360 - Unable to launch web browsers</h2>
+		<p><a href="viewtopic4f074f07.html?f=11&amp;t=24879">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24879</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>6</strong></div>
+					<div class="post">
+				<h3>Re: Web browsers (only) not working</h3>
+				<div class="date">Posted: <strong>Mon Sep 18, 2017 12:02 pm</strong></div>
+				<div class="author">by <strong>tuppington</strong></div>
+				<div class="content">I figured out Norton was the problem because I uninstalled it and Sandboxie worked (it is a known conflict, so I feel sheepish complaining but whatever).<br>
+<br>
+But I reinstalled, followed deugneit's instructions, and at least for now this works. So here's to squeaky wheels getting the grease!<br>
+
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlista247.html?mode=viewprofile&amp;u=2236">deugniet</a> wrote: <a href="viewtopic4aca-24aca.html?p=130164#p130164" data-post-id="130164" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Sep 12, 2017 4:39 am</div></cite>
+Foud the problem: Norton Exploit Prevention-setting. Turned it OFF and FF and IE11 started sandboxed without a problem.<br>
+<br>
+Norton &gt; Settings &gt; Firewall &gt; Intrusion and Browser Protection &gt; Exploit Prevention set to OFF.
+</div></blockquote></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Mon Sep 18, 2017 4:26 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">All,<br>
+<br>
+Could somebody please use ProcDump to generate a dump?<br>
+Download via here:<br>
+<a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procdump" class="postlink">https://docs.microsoft.com/en-us/sysint ... s/procdump</a><br>
+<br>
+Open up an Admin command prompt and type the following (do not hit enter):<br>
+procdump -ma -e iexplore.exe     [If using firefox, replace iexplore.exe for firefox.exe].<br>
+Attempt to launch a browser in Sandboxie and, immediately after,  hit enter in the command prompt.<br>
+Save the dump file and either post a link here, or send it to <a href="mailto:support@sandboxie.com">support@sandboxie.com</a> <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Tue Sep 19, 2017 4:16 am</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content">Weird. Suddenly IE11 can be sandboxed again with Norton Exploit Protection ON. Was busy making a procdump... So 3 of of 3 laptops solved.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Tue Sep 19, 2017 10:38 am</strong></div>
+				<div class="author">by <strong>stonerd</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopicda70da70.html?p=130308#p130308" data-post-id="130308" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Mon Sep 18, 2017 4:26 pm</div></cite>
+All,<br>
+<br>
+Could somebody please use ProcDump to generate a dump?<br>
+Download via here:<br>
+<a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procdump" class="postlink">https://docs.microsoft.com/en-us/sysint ... s/procdump</a><br>
+<br>
+Open up an Admin command prompt and type the following (do not hit enter):<br>
+procdump -ma -e &lt;iexplore.exe&gt;      [If using firefox, replace iexplore.exe for firefox.exe].<br>
+Attempt to launch a browser in Sandboxie and, immediately after,  hit enter in the command prompt.<br>
+Save the dump file and either post a link here, or send it to <a href="mailto:support@sandboxie.com">support@sandboxie.com</a> <br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+"The syntax of the command is incorrect"<br>
+<br>
+This is all I get. I downloaded, ran the 64bit .exe, restarted the computer... Do I need to put procdump anywhere in particular? I don't know how to use it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Tue Sep 19, 2017 12:49 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">stonerd ,<br>
+<br>
+Sorry, I fixed the steps, I left the " &lt; &gt; " in place. <br>
+The command is:<br>
+procdump -ma -e iexplore.exe<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Sep 20, 2017 4:20 am</strong></div>
+				<div class="author">by <strong>stonerd</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopicd6b2d6b2.html?p=130328#p130328" data-post-id="130328" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Sep 19, 2017 12:49 pm</div></cite>
+stonerd ,<br>
+<br>
+Sorry, I fixed the steps, I left the " &lt; &gt; " in place. <br>
+The command is:<br>
+procdump -ma -e iexplore.exe<br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+"  'procdump' is not recognized as an internal or external command, operable program or batch file"<br>
+<br>
+Just to recount what I've done - I downloaded it, unzipped it, put it on desktop, opened the 64bit .exe, and have restarted the computer since.<br>
+Windows 8.1</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Sep 20, 2017 11:51 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello stonerd,<br>
+<br>
+You will then need to navigate to your Desktop via Command Prompt , so that it can find the program.<br>
+For example:<br>
+cd Users\<strong>ReplaceWithYourUsername</strong>\Desktop<br>
+<br>
+So, to recap:<br>
+Open up an Admin command prompt and navigate to the location where procdump is located <br>
+(For Example :  cd Users\<strong>ReplaceWithYourUsername</strong>\Desktop) <br>
+After accessing the location,  type the following (do not hit enter):<br>
+procdump -ma -e iexplore.exe [If using firefox, replace iexplore.exe for firefox.exe].<br>
+Attempt to launch a browser in Sandboxie and, immediately after, hit enter in the command prompt.<br>
+Save the dump file and either post a link here, or send it to <a href="mailto:support@sandboxie.com">support@sandboxie.com</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Sep 20, 2017 1:28 pm</strong></div>
+				<div class="author">by <strong>Thomas.Weinreich</strong></div>
+				<div class="content">Hi together, <br>
+the following process was successful (Exploit Prevention set to "On" and FF and IE works fine  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> )<br>
+<br>
+*** <strong>Complete uninstallation </strong>*** of Sandboxie and "Norten Security Online" and for both: *** <strong>no take over *** from user settings / configurations </strong>due the uninstallation program. <br>
+<br>
+The bad thing is, now i have to configure the user setting manual ...<br>
+<br>
+...by the way - <strong>Question </strong>I can copy the old saved Sandboxie.ini into the program directory and then load with the old settings/.ini? The ald ".ini" is from the new beta (SB 5.21), but now i install SB 5.20, are they compatible?<br>
+<br>
+Greetings<br>
+Tom</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Sep 20, 2017 2:01 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Thomas.Weinreich,<br>
+<br>
+So to confirm, reinstalling both applications did the trick for you?<br>
+<br>
+Regarding the ini file,here are some examples that might help you migrate it:<br>
+<a href="viewtopice71ae71a.html?f=17&amp;t=13428" class="postlink">viewtopic.php?f=17&amp;t=13428</a><br>
+<a href="viewtopicf83b-3f83b.html?t=2926" class="postlink">viewtopic.php?t=2926</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Sep 20, 2017 2:20 pm</strong></div>
+				<div class="author">by <strong>Thomas.Weinreich</strong></div>
+				<div class="content">Hi Barb,<br>
+yes i can confirm this.<br>
+<br>
+Maybe it's important: After the Norton installation i execute first all from Norton required live updates / pachtes - everytime after this with a PC restart. <br>
+<br>
+Later after i install Sandboxie...<br>
+<br>
+Thx for the ini migration links !<br>
+<br>
+Regards<br>
+Tom</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Oct 11, 2017 11:43 am</strong></div>
+				<div class="author">by <strong>powergo</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Norton Exploit Prevention-setting. Turned it OFF</div></blockquote>
+Work fine with me.<br>
+Thanks for the post and all replys.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Oct 11, 2017 2:19 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello powergo ,<br>
+<br>
+If you get a chance, could you please try the solution provided above, which involves re-installing Norton (and if needed, Sandboxie)?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Sat Oct 14, 2017 1:59 am</strong></div>
+				<div class="author">by <strong>powergo</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic5ca35ca3.html?p=130594#p130594" data-post-id="130594" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Oct 11, 2017 2:19 pm</div></cite>
+Hello powergo ,<br>
+<br>
+If you get a chance, could you please try the solution provided above, which involves re-installing Norton (and if needed, Sandboxie)?<br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+1. Norton exploit erevention OFF<br>
+2. I remove Norton toolbar<br>
+<br>
+Firefox work fine in sandbox without error.<br>
+I hope this help.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 7:40 pm</strong></div>
+				<div class="author">by <strong>brw11</strong></div>
+				<div class="content">I'm experiencing very similar issues with Windows 8.1 and Windows 10 since the latest October updates (but no problem with Windows 7). It's happening with Firefox, IE and Chrome. None of these browsers will run Sandboxed anymore and all were running fine before the Windows updates. See my post: "Windows 10 &amp; Windows 8.1 No Longer Work" where I also included a snapshot of Sandboxie details when it happens. I've suggested to the moderator that my post, plus this be incorporated into the post:<br>
+"Windows 10 - Fall Update - Not yet supported [work in progress]"</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Thu Oct 19, 2017 10:21 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello brw11,<br>
+<br>
+We are still unable to reproduce this issue.<br>
+However, there are 2 things for you to try, as of now:<br>
+<br>
+1 - Reinstall Norton (the fact that this helped other users seems to indicate that the problem might be on Norton's end). <br>
+<br>
+2 - Turn off Exploit Prevention - Probably you want to try this as the last resource.  <br>
+<br>
+If anything new comes up , we will update this thread.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>6</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24879&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:24:47 GMT -->
+</html>

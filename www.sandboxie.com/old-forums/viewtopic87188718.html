@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=22736&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:29:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [REQUEST YOUR THOUGHTS]|Ransomware &amp; SBIE - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[REQUEST YOUR THOUGHTS]|Ransomware &amp; SBIE</h2>
+		<p><a href="viewtopic3fb93fb9.html?f=5&amp;t=22736">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=22736</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>Re: [REQUEST YOUR ASSISTANCE]|Ransomware &amp; SBIE</h3>
+				<div class="date">Posted: <strong>Mon Apr 11, 2016 12:27 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>UPieper wrote:</cite>@bo<br>
+There's a tool called USBDLM which can be configured to always give the same drive letter to specific USB drives (eg. by volume label). 
+</div></blockquote>
+Hi UPieper, I dont think I ll use the tool but I appreciate you thinking of me and posting the link. <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [REQUEST YOUR ASSISTANCE]|Ransomware &amp; SBIE</h3>
+				<div class="date">Posted: <strong>Mon Apr 11, 2016 3:58 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite>when I introduced the flash drive, it did not run sandboxed even though I force my USB drives. The reason being that when he assembled the computer back together, a different letter got assigned to my USB drives than the ones I had as Forced.</div></blockquote>
+
+Hi Bo.. You should consider sandboxing all of the drive letters other than your main partition letters. Here's an example of one of my sandboxes:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[SBNull]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=AutoRecoverIgnore
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+BorderColor=#C0C0C0,ttl
+ForceFolder=S:\
+ForceFolder=A:\
+ForceFolder=B:\
+ForceFolder=D:\
+ForceFolder=E:\
+ForceFolder=G:\
+ForceFolder=H:\
+ForceFolder=I:\
+ForceFolder=J:\
+ForceFolder=K:\
+ForceFolder=L:\
+ForceFolder=M:\
+ForceFolder=N:\
+ForceFolder=O:\
+ForceFolder=P:\
+ForceFolder=Q:\
+ForceFolder=T:\
+ForceFolder=U:\
+ForceFolder=V:\
+ForceFolder=W:\
+ForceFolder=X:\
+ForceFolder=Y:\
+ForceFolder=Z:\
+ForceFolder=F:\Downloads
+ForceFolder=C:\Users\All Users\Microsoft\Windows\Start Menu\Programs\Startup
+ForceFolder=C:\Users\Roo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+NotifyInternetAccessDenied=y
+NotifyStartRunAccessDenied=y
+BoxNameTitle=n
+DropAdminRights=y
+ProcessGroup=&lt;StartRunAccess&gt;,Randomname123.exe
+ClosedIpcPath=!&lt;StartRunAccess&gt;,*
+ClosedIpcPath=\RPC Control\spoolss
+ClosedFilePath=C:\
+ClosedFilePath=\Device\Mup\
+ClosedFilePath=F:\
+ClosedFilePath=R:\
+ClosedFilePath=InternetAccessDevices
+ClosedFilePath=\Device\TrueCrypt
+ClosedFilePath=C:\Program Files\TrueCrypt\
+InjectDll=F:\Apps\Sandboxie\SBExtra\sbiextra.dll
+InjectDll64=F:\Apps\Sandboxie\SBExtra\sbiextra_x64.dll</code></pre></div>
+
+You can see that anything running from any drive letter other than C, F and R (so rogue USB pen for instance) are automatically sandboxed in the SBNull box. Further to this only files named Randomname123.exe are allowed to run meaning in all likelyhood (unless some freakish coincidence occurs) nothing can run from the device automatically or accidently.<br>
+<br>
+If I put a legitimate USB pen in it too will be protected by the Null sandbox; I can then copy files to and from the pen as usual and if I want to directly run something from it I can right click the file and choose a different sandbox/no sandbox.<br>
+<br>
+(I'm aware the above set of rules has entries which aren't necessary and I could probably delete about 8 lines... I'm okay with it  <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> )</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [REQUEST YOUR THOUGHTS]|Ransomware &amp; SBIE</h3>
+				<div class="date">Posted: <strong>Mon Apr 11, 2016 6:30 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content"><strong>• SBIE Configuration, specific to ransomware. Do you do anything different?</strong><br>
+<br>
+Nothing specific to ransomware.<br>
+<br>
+<strong>• How do you use SBIE when going online? Opening email attachments? Recovering and saving files? (Office2016/Office36 can be included, that is being released ASAP.)</strong><br>
+<br>
+I use a locked down web browser which also has security addons enabled. I always use drop rights on web browsers and have blocked file paths to the majority of key document folders I care about. <br>
+<br>
+I must say though; In order to strike a balance between usability and security I've changed the way I set up some of my sandboxes lately (especially office). I first lock down all important folders I know I don't want the program to access (using blocked access). I then run the sandboxed program for a few minutes clicking around in different options before checking sandboxies 'files and folders' view to see where the program saved files to. I exclude from the immediate recovery prompt all of the folders that the program uses to store temp files, configs etc. Once done I then add the root of F:\ (my main file storage partition) to my quick recovery list. <br>
+This means I won't be prompted to quick recover by the program saving settings or creating temp files, but It allows me to save and get a quick recovery prompt in any folder other than those I've specifically blocked. This has helped relieve the frustration I was beginning to feel using the 'files and folders' recovery system which often feels long-winded.<br>
+<br>
+<strong>• How do you deal with forcing / not forcing web browsers? Or any program?</strong><br>
+<br>
+I force all web browsers on my system. The only time I run a web browser unsandboxed is to update it or it's addons.<br>
+<br>
+<strong>• How do you eliminate it? (besides deleting your sandbox) do you do anything other than that?</strong><br>
+<br>
+I use a batch file to quickly clear multiple sandboxes as I have 18 at the moment. The batch file automatically opens the sandbox folder afterwards so I can see immediately that all boxes have been deleted. My sandbox is also contained on a ramdisk so rebooting ensures everything is taken care of. If It's a sandbox running in a VM then there's the added benefit of restoring a snapshot after each use.<br>
+<br>
+<strong>• What would you suggest, a fix? and update? And update too...? that would make SBIE even better to protect against ransomware - malware? (By default, you're protected) but we're looking more of refinements or changes we've missed or not considered or you've wondered about...</strong><br>
+<br>
+I'll need to think this question over...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [REQUEST YOUR THOUGHTS]|Ransomware &amp; SBIE</h3>
+				<div class="date">Posted: <strong>Mon Apr 11, 2016 11:07 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Hi Rooj  <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool">, thanks for posting your SBNull Sandbox configuration, I ll check it out and adopt something. I am not sure if you wanted me, us, to answer the questions you wrote above, but here are my answers <img class="smilies" src="images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green"> . I see a lot of similarities in what we do, expected I guess.<br>
+<br>
+• SBIE Configuration, specific to ransomware. Do you do anything different?<br>
+Nothing. I treat all programs and files the same way. Dont trust any.<br>
+<br>
+• How do you deal with forcing / not forcing web browsers? Or any program?<br>
+I force my 2 browsers in their own sandbox. And set the sandbox according to the browser. I run Firefox in at least 5 sandboxes, four of them are dedicated. Some of this sandboxes are set light and some are tight. Three of my Firefox sandboxes are for visiting specific sites. I set this 3 sandboxes with the settings this sites work best in my computer, the result I look for creating and using this sandboxes and I get is plugin container rarely crashes.<br>
+<br>
+Like you, the only time I run browsers (and other programs) out of the sandbox is for updating. I don't see any reason to do it for anything else.<br>
+<br>
+Other programs? I pretty much force all programs that I use in a daily basis. Any file that runs in my computers, runs sandboxed from the day it gets created in the PC to the day the file gets deleted. That covers just about anything, Rooj. Attachments, etc.<br>
+<br>
+I separate programs as much as possible. In my XP, I have 18 sandboxes, same as you. In the W7, I do less so I am using nine. And I set each sandbox according to the dedicated program or purpose for creating the sandbox. I always try to achieve the perfect balance between security and convenience. The result is that all my sandboxes are very comfortable to use and as resticted as they can be. I feel very very comfortable doing all I do all day long with SBIE, all feels natural.<br>
+<br>
+In all my sandboxes I block access to personal files and folders. I try to keep those in only a few folders so its easy to do.<br>
+<br>
+• How do you use SBIE when going online? Opening email attachments? Recovering and saving files? (Office2016/Office36 can be included, that is being released ASAP.)<br>
+I use Quick recovery and recover to the desktop or my Downloads folder. The Downloads folder is forced and set very restricted. All programs forbidden internet access, Drop rights.<br>
+<br>
+The normal life of any attachment I recover is first it goes in my downloads folder and no matter where it ends up when I move it, its either going to run sandboxed via forced programs or forced folder. One way or the other or by navigating to it using a sandboxed windows explorer, the attachment will run sandboxed till the day it gets deleted. <br>
+<br>
+• How do you eliminate it? (besides deleting your sandbox) do you do anything other than that?<br>
+No, I delete the sandbox and forget about it. I hardly ever save contents in any sandbox for more than a few hours or maybe a few days. Delete delete delete.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [REQUEST YOUR ASSISTANCE]|Ransomware &amp; SBIE</h3>
+				<div class="date">Posted: <strong>Mon Apr 11, 2016 11:26 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>RooJ wrote:</cite>
+Hi Bo.. You should consider sandboxing all of the drive letters other than your main partition letters. Here's an example of one of my sandboxes:</div></blockquote>
+Thanks for posting, I ll check it out and adopt something. But right now this is how I handle USB drives. First if all I avoid other peoples flash drives. And then in both of my computers, forcing 2 letters cover the USB drives that I plug. So, any flash drive I plug, it opens up sandboxed. In my USB sandbox, I allow a few programs to run, none internet access and Drop rights. I think that's plenty. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [REQUEST YOUR THOUGHTS]|Ransomware &amp; SBIE</h3>
+				<div class="date">Posted: <strong>Tue Apr 12, 2016 8:23 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content">@Bo,<br>
+The questions were from the original post by Craig, I just copied them to address them individually.<br>
+<br>
+Regarding suggestions, <br>
+By default it seems sandboxie has it covered so there's not much to improve for base protection. However, if developers ever get more time I think it may be worth adding some extra options to the file access -&gt; direct access rules. I could be wrong but I think currently we can only allow a program to have full access to a folder, it's all or nothing. Some suggestions for extra options:<br>
+<br>
+• <strong>FileTypes</strong>: Allow a user to specify file types that are blocked from being written to the direct access folder or alternatively the user can specify filetypes that are allowed only.<br>
+• <strong>Direct access write only</strong>: Allow a program to save into the folder directly but prevent it from seeing and editing any files that wern't saved by the sandboxed program during the current session. (sandboxie would need to handle filename conflicts)<br>
+• <strong>Direct access read only</strong>: Allow a program to see the contents of a folder and save new files directly, but prevent it from modifying files that already existed and wern't saved by the sandboxed program during the current session.<br>
+• <strong>Toast alerts(off by default)</strong>: allow sandboxie to popup an alert when a file is saved to a direct access folder. This could also have a button which allows a user to quickly undue (delete) the file and automatically block further saves to the folder for a specified time (time configurable in options).<br>
+<br>
+So as an example using 'direct access read only' with 'blocked filetypes' above would allow me to configure my parents laptop so that they could save to documents, images etc directly without getting the sandboxie prompt.. They could upload files without problem to sites like facebook.. But ransomware would be unable to overwrite files in these folders and executable files et al would be blocked from saving completely. Renaming files to blocked extentions after saving would also need to be blocked by sandboxie.<br>
+<br>
+I'm aware the above has security risks, but along side start/run access rules etc it would still provide a valuable layer of security for people who can't deal with the added popups when saving (these people exist  <img class="smilies" src="images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes">)<br>
+<br>
+Also.. a way to control whether a program can run on the fly for more advanced users (default off) <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> :<br>
+<a href="viewtopic3c393c39.html?f=4&amp;t=22177" class="postlink">http://forums.sandboxie.com/phpBB3/view ... =4&amp;t=22177</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [REQUEST YOUR THOUGHTS]|Ransomware &amp; SBIE</h3>
+				<div class="date">Posted: <strong>Fri Apr 15, 2016 4:30 am</strong></div>
+				<div class="author">by <strong>majokey</strong></div>
+				<div class="content">So, here is what we are in need of:<br>
+<img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"> SBIE Configuration, specific to ransomware. Do you do anything different?<br>
+Not really. Can't see what could be done differently. I'm more worried about keyloggers stealing my passwords. A keylogger could run inside the sandbox and capture my passwords if I keep using the sandbox while the keylogger is running.<br>
+<br>
+As a result, I have a setup inspired by the Qubes OS. I have several sandboxes called General Browsing, then Suspicious Sites, and then Work Sensitive, Private Sensitive, Bank, etc. The "sensitive" sandboxes are never used for anything else but logging into these important sites, plus if for instance an attachment must be downloaded, then the sandbox  has first its content deleted before I use it to log into a sensitive site again.<br>
+<br>
+<img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"> How do you use SBIE when going online? Opening email attachments? Recovering and saving files? (Office2016/Office36 can be included, that is being released ASAP.)<br>
+ALL my browsers are only used as sandboxed, apart from updating them (feel like naked at that point). ALL files originating from the Internet are first AV scanned and opened in the Sandbox, and then recovered, if they actually need to be saved.<br>
+<br>
+<img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"> How do you deal with forcing / not forcing web browsers? Or any program?<br>
+Most of my programs are forced, so that they couldn't be launched unsandboxed automatically without my action. Like when you uninstall a program and it launches a browser to fill out a form where the vendor asks you why you uninstalled their lovely program an. I do not however intentionally use them in the "_forced" sandboxes, I launch them manually in specific sandboxes depending on what I'm doing, see previous point. The "_forced" sandboxes, e.g. "Palemoon_forced" are just a precaution. My list of forced programs therefore includes: Chrome, Firefox, Palemoon, MSIE, SRWare Iron, (Vivaldi is so far installed directly in a sandbox), Adobe Acrobat and Reader, MS Office and TeamViewer.<br>
+<br>
+<img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"> IM clients?<br>
+I use three Skype "lines" using the "/secondary" switch to start more than one instance of Skype at a time. However, I haven't figured out how to launch the "primary" one in Sandboxie, as when I right-click on its icon, the "Run Sandboxed" item doesn't show in the context menu. Strangely, the two "/secondary" Skypes do show the icon. So I just never use the "primary" one.<br>
+<br>
+<img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"> How do you eliminate it? (besides deleting your sandbox) do you do anything other than that?<br>
+Don't see what else could be done.<br>
+<br>
+<img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"> What would you suggest, a fix? and update? And update too...? that would make SBIE even better to protect against ransomware - malware? (By default, you're protected) but we're looking more of refinements or changes we've missed or not considered or you've wondered about...<br>
+I can't pretend to be knowledgeable enough to comment on the technical side. My approaches focus on how to use your amazing tool to its fullest potential - in the Qubes-way. That said, I can imagine improvements when it comes to usability. The grouping/moving sandboxes seems to be mostly an afterthought, though perhaps I'm the only one who actually uses it <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile"> Especially because when I right-click a program to run it in a sandbox, the sandboxes are shown as just one long list without any groups. And my biggest issue is that the sandboxes can't be renamed unless they are cleared. Here's my situation, I'm researching something using my "Browsing_General_1" sandbox and the research is fruitful, so I'd like to continue with it in following days. But if I can't rename the sandbox, I have to remember in which one that research was. And mainly I need to be super-careful not to clear such a sandbox. So renaming without clearing would be #1 on my wish list. And as I can imagine that this might be impossible to achieve, as it would involve renaming the sandbox's directory, I suggest that perhaps tagging the sandboxes could be a feasible remedy - the name would stay the same, but I'd attach a tag "Sports Drinks Research" to it.<br>
+<br>
+Finally, you guys should get a medal from Redmond (if not a $ billion or two), because you are the only reason I (and many my friends and associates) still use Windows! I don't use Sandboxie in order to use Windows (securely), I use Windows in order to use Sandboxie!! Qubes don't run on my hardware and the Firejail gentleman has a long way to go to get his thing where tzuk got Sandboxie.<br>
+<br>
+Can't imagine existing without Sandboxie on the Internet these days any longer!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [REQUEST YOUR THOUGHTS]|Ransomware &amp; SBIE</h3>
+				<div class="date">Posted: <strong>Sat Apr 16, 2016 10:15 pm</strong></div>
+				<div class="author">by <strong>steamer</strong></div>
+				<div class="content">Haven't been here in a while, but saw this thread, so a few comments:<br>
+<br>
+I am using drop rights in my Sandboxes.  I sandbox browsers, Tixati, pretty much anything that works directly on the internet.  I have not done anything special for ransomware, but that is primarily because I don't have time to research the topic and decide what Sandboxie settings might be useful.  I did run across a thread - Wilders I think? -  where someone had said Sandboxie had protected them.<br>
+<br>
+Suggestions:<br>
+<br>
+1. Ran across "Shade" (you need to check out their website) which allows you to set up a Sandbox by dragging icons into the Sandbox. I like the idea.  Sandboxes could be represented by a map of sorts and administered from a graphical interface.  You can link to advanced settings for the more complicated options, but the admin part of setting up, moving programs into and out of a Sandbox, and deleting Sandboxes could be done simply at the GUI level.  I think many users would find that easier / nicer to use.  The advanced scripting stuff could still be used by more advanced users.<br>
+<br>
+2.  Same idea for recovering downloaded files - I often leave several downloaded items in a Sandbox, then go back later and move them.  Drag em where you want em.<br>
+<br>
+3.  Start a newsletter.  There is probably a lot of knowledge at Invincia about ransomware.  Not so much with Sandboxie users - we don't have our own internal IT departments available.  It would be nice to have an article - maybe even over two or three monthly newsletters - about how ransomware manages to encrypt files, what exactly Sandboxie does to stop that, and how deleting your Sandbox would make the problem go away.  <br>
+<br>
+Make some of the knowledge about how to use Sandboxie available to users in the form of articles written for the general Sandboxie user.  I think users will find this to be "value added" and I think it will promote loyalty to Sandboxie.  Do some articles about using popular programs with Sandboxie.  Then every few months, have an extra article for advanced users. <br>
+<br>
+Get these articles on other security websites or let other bloggers use them as source materials to spread the Sandboxie story.  You know, "buzz".<br>
+Newsletter subscribers lists could also be a good "emergancy notification" list if a weakness is found, telling them to install the latest version. <br>
+<br>
+Been using Sandboxie for a while (yep, bought a license way back ...... 2006 I think it was - maybe early 07.  Anyway, it has been a great investment.  Invincia has been doing a very good job of replacing Tzuk.  Hope those ideas are useful!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [REQUEST YOUR THOUGHTS]|Ransomware &amp; SBIE</h3>
+				<div class="date">Posted: <strong>Sat Apr 16, 2016 10:26 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Good Stuff! Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [REQUEST YOUR THOUGHTS]|Ransomware &amp; SBIE</h3>
+				<div class="date">Posted: <strong>Fri Apr 22, 2016 11:30 am</strong></div>
+				<div class="author">by <strong>BilleBarrett</strong></div>
+				<div class="content">1, I keep Sandboxie container off of the OS drive, i.e. d:\sandboxie<br>
+2. Every browser is in the Sandbox, except Edge (which do not use) I also make sure that Adobe Reader in is in the Sandbox, I get a lot of pdf files<br>
+    Since I use outlook 2013, if I click on a link or attachment it will be handles in the Sandbox. I know that I can run Outlook in the Sandbox but my migration files setup 2 Gigs, but I don't because the email I delete, we'll just come back in<br>
+3. I stay away from webmail as much as I can, I have a few clients that use AOL Desktop and they get errors using Sandboxie<br>
+4. sorry I don't do IM on my PC's just my Android, with I con't care.<br>
+5. I use the Pro version of Ccleaner, so when ever I close my browser is does a cleanup, I also use Privazer to clean my system.<br>
+6. BitDefender has recently offer a free copy of BitDefender Anti-Ransomware software, I have it on all my clients systems, the outch of prevention <br>
+Since I run a remote monitoring service, one of the things my clients know is that if they get hit and they were not in the Sandbox my repair service call is billable.<br>
+Personally, I'd love to see an detail tutorial for me to use, I run mini seminars on Sandboxie and I get a great turn out for the 1 hr class.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [REQUEST YOUR THOUGHTS]|Ransomware &amp; SBIE</h3>
+				<div class="date">Posted: <strong>Fri Apr 22, 2016 6:35 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>BilleBarrett wrote:</cite>....., but I don't because the email I delete, we'll just come back in</div></blockquote>
+Hi Bill, nice post. On that above, I think if you set up Outlook in Sandbox settings&gt;Applications&gt;E Mail reader, mails you delete in the sandbox wont come back. They are not supposed to. I never ran Outlook sandboxed but I used to use Outlook express, the saving or deleting mails in the sandbox worked out just fine once you setup the client in Sandbox settings.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [REQUEST YOUR THOUGHTS]|Ransomware &amp; SBIE</h3>
+				<div class="date">Posted: <strong>Fri Apr 22, 2016 10:53 pm</strong></div>
+				<div class="author">by <strong>stisev</strong></div>
+				<div class="content">Hi all,<br>
+<br>
+I am in a prime position to answer this question,  as I have reached "Grandmaster" level in terms of testing new software.  I can't tell you how many times SBIE has saved my computer from crappy software.   In addition to adding security, I also use Sandboxie to "portablize" settings in case of a Windows re-install.<br>
+<br>
+<br>
+Please send this message to the Invincea CEO: <br>
+You guys can't see me, but I am tearing up while writing this.  <strong>I want to thank you from the bottom of my heart for your support for the lifetime licenses</strong>.  It's rare to find this kind of dedication from any company these days.  I am in a tough situation with health &amp; money problems and cannot afford another license for Sandboxie (or any luxury for that matter) so the fact that you guys rewarded the early adopters &amp; people who supported tzuk in his early work is extremely appreciated.  I try to do my part for your company, as I constantly advertise Sandboxie as my "Top 3" app and my friends who know me know what kind of high honor that is. I've probably spammed forums across the Internet with my glowing praise of your software.<br>
+<br>
+Thank you so much Invincea!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [REQUEST YOUR THOUGHTS]|Ransomware &amp; SBIE</h3>
+				<div class="date">Posted: <strong>Sat Apr 23, 2016 8:47 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>stisev wrote:</cite>Hi all,<br>
+<br>
+I am in a prime position to answer this question,  as I have reached "Grandmaster" level in terms of testing new software.  I can't tell you how many times SBIE has saved my computer from crappy software.   In addition to adding security, I also use Sandboxie to "portablize" settings in case of a Windows re-install.<br>
+<br>
+<br>
+Please send this message to the Invincea CEO: <br>
+You guys can't see me, but I am tearing up while writing this.  <strong>I want to thank you from the bottom of my heart for your support for the lifetime licenses</strong>.  It's rare to find this kind of dedication from any company these days.  I am in a tough situation with health &amp; money problems and cannot afford another license for Sandboxie (or any luxury for that matter) so the fact that you guys rewarded the early adopters &amp; people who supported tzuk in his early work is extremely appreciated.  I try to do my part for your company, as I constantly advertise Sandboxie as my "Top 3" app and my friends who know me know what kind of high honor that is. I've probably spammed forums across the Internet with my glowing praise of your software.<br>
+<br>
+Thank you so much Invincea!</div></blockquote>
+Thank you very much, stisev, for your kind words. Your msg has been delivered to the CEO and the entire Invincea team.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=22736&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:29:40 GMT -->
+</html>

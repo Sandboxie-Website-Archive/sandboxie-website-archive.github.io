@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=23962&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:47:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxed and unsandboxed firefox brower conflict [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxed and unsandboxed firefox brower conflict [SOLVED]</h2>
+		<p><a href="viewtopicbc4cbc4c.html?f=5&amp;t=23962">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=23962</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxed and unsandboxed firefox brower conflict [SOLVED]</h3>
+				<div class="date">Posted: <strong>Sat Jan 28, 2017 11:00 pm</strong></div>
+				<div class="author">by <strong>john-anthony</strong></div>
+				<div class="content">I have a Windows 10 PC. Until I installed the latest Firefox update, I had been using Sandboxie almost a year with no problem. Now my Sandboxed Browser will not load load Firefox. But outside of the Sandbox I have no problems at all loading my Firefox browser. My Sandboxed Firefox web browser is 51.0.1, 32 bit; but my unsandboxed Firefox browser is also 51.0.1, but 64bit. I tried uninstalling Sandboxie, then reinstalling Sandboxie, but the Sandboxed Firefox web browser remained just 32bit, while the unsandboxed Firefox web browser was 64bit. So the Sandboxed web continues not to open. I also tried uninstalling Firefox, then reinstalling it; but this did not solve the problem of my Sandboxed web browser loading Firefox.<br>
+<br>
+Question: how solve the following problem, namely changing the Sandboxed Firefox browser from 32bit to 64bit, like the Firefox browser that is working outside of the Sandbox. The 32bit Firefox browser within the Sandbox cannot be updated since it is the latest version of that program. If someone can suggest a sequence of steps that would enable me to have the same 64bit Firefox browser working inside of the Sandbox as that working outside of the sandbox, I would greatly appreciate any insight that might be given that would solve this vexing problem of mine.<br>
+<br>
+john-Anthony</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed and unsandboxed firefox brower conflict</h3>
+				<div class="date">Posted: <strong>Mon Jan 30, 2017 11:46 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello john-Anthony,<br>
+<br>
+If you have Firefox installed inside the Sandbox, you can delete the contents and then try to re-install the version that you want.<br>
+You cannot rename Firefox to change its architecture.  <br>
+Maybe try a new Sandbox and see if the problem persists there? <br>
+<br>
+If you just switched to Firefox 51, you will need to disable e10 / or Firefox's own sandbox in order for it work:<br>
+<a href="viewtopicd92bd92b.php?f=11&amp;t=23902" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=23902</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed and unsandboxed firefox brower conflict</h3>
+				<div class="date">Posted: <strong>Tue Jan 31, 2017 1:33 pm</strong></div>
+				<div class="author">by <strong>john-anthony</strong></div>
+				<div class="content">Hello Barb.,<br>
+<br>
+Thanks for your response.<br>
+<br>
+I uninstalled and reinstalled both Firefox's version 51.0.1, 64bit browser and Sandboxie. Firefox in Sandboxie is now the same as the one that can be opened outside of Sandboxie. But Firefox will not load inside of Sandboxie.<br>
+<br>
+Deleting Sandboxie's default web browser contents does not solve the problem of Firefox version 51.0.1 not loading. Since Sandboxie had for nearly a year been working fine with versions of Firefox before 51.0.1, it appears the problem lies with changes in new Firefox update.<br>
+<br>
+After clicking Firefox's Help tab, then Troubleshooting Information, then under Application Basics the Multiprocess Windows indicates that is enabled by default. But no means is given to disable it. I then checked Firefox's Tools Tab, then Options. Under the various sub tabs, there is no information given concerning disabling e10.<br>
+<br>
+I typed about:config in Firefox's address bar, then clicked, the put in Firefox's search bar: browser.tabs.remote.autostart. What does toggle refer to with browser.tabs.remote.autostart? Does it disable e10? What would you suggest that I do?<br>
+<br>
+If disabling e10 actually will fix Firefox not loading Firefox in its Sandboxed Web Browser, perhaps I should provide a sequence of steps regarding how I might fix my current problem.<br>
+<br>
+Best wishes,<br>
+<br>
+john-anthony<br>
+<br>
+So I have Googled "how to disable e10".</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed and unsandboxed firefox brower conflict</h3>
+				<div class="date">Posted: <strong>Tue Jan 31, 2017 1:46 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello john-anthony ,<br>
+<br>
+The link I provided on my previous response contains the steps you need to follow.<br>
+<br>
+Please have a look :<br>
+<a href="viewtopic34b734b7.php?f=11&amp;t=23902&amp;start=30#p126150" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 30#p126150</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed and unsandboxed firefox brower conflict</h3>
+				<div class="date">Posted: <strong>Sat Feb 04, 2017 7:35 pm</strong></div>
+				<div class="author">by <strong>john-anthony</strong></div>
+				<div class="content">I have fixed my PC problem of my Sandboxie Web Browser not loading Firefox version 51.0.1. Here is the sequence of steps I followed:<br>
+<br>
+1) Click Firefox's Help Tab. Then click Troubleshooting Information;<br>
+2) In the Firefox address bar, after Firefox, type the phrase about:config, then click;<br>
+3) Carefully scroll down to browser.tabs.remote.autostart and browser.tabs.remote.autostart.2 and change both of their Status<br>
+    to default and both of their Value to false;<br>
+4) Close the Firefox PC information page and restart the PC.<br>
+<br>
+    <a href="http://www.ghacks.net/2016/07/22/multi-process-firefox/" class="postlink">http://www.ghacks.net/2016/07/22/multi-process-firefox/</a>            (Multi-Process Firefox:everything you need to know)<br>
+<br>
+John Coburn</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=23962&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:47:44 GMT -->
+</html>

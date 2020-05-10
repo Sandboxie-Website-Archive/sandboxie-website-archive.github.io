@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=20074&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:48:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandbox across many Drives.The right drive for the right job</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandbox across many Drives.The right drive for the right job</h2>
+		<p><a href="viewtopic59585958.html?f=4&amp;t=20074">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=20074</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandbox across many Drives.The right drive for the right job</h3>
+				<div class="date">Posted: <strong>Sat Dec 20, 2014 8:28 pm</strong></div>
+				<div class="author">by <strong>FF9F00</strong></div>
+				<div class="content">Let's say I have Two harddisks, one is a SSD, the other is a traditional harddisk. And two different types of programs that need communication to each other, for example Firefox and Torrent client.<br>
+<br>
+I would like to propose a feature like this:<br>
+<img src="../i.imgur.com/ktMivWX.png" class="postimage" alt="Image"><br>
+<br>
+The rationale is, some programs are good at taking advantage of SSD performance, while other programs are good at killing SSDs and wear them out fast with excessive I/O activity.<br>
+Sometimes these programs need to interact with each other, so separating them into different Sandboxes isn't optimal.<br>
+<br>
+Would it be possible to implement a feature for Sandboxie to allow a single Sandbox to access into multiple Drives?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox across many Drives.The right drive for the right</h3>
+				<div class="date">Posted: <strong>Sun Dec 21, 2014 3:40 pm</strong></div>
+				<div class="author">by <strong>JoeHood</strong></div>
+				<div class="content">Isn't that already possible?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox across many Drives.The right drive for the right</h3>
+				<div class="date">Posted: <strong>Sun Dec 21, 2014 5:46 pm</strong></div>
+				<div class="author">by <strong>FF9F00</strong></div>
+				<div class="content"><blockquote><div><cite>JoeHood wrote:</cite>Isn't that already possible?</div></blockquote>
+Not as far as I'm aware. Could you point me to the feature you're thinking of?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox across many Drives.The right drive for the right</h3>
+				<div class="date">Posted: <strong>Sun Dec 21, 2014 7:40 pm</strong></div>
+				<div class="author">by <strong>JoeHood</strong></div>
+				<div class="content">Maybe I misunderstood. I have multiple usb drives with programs on each and they can all run in any sandbox I choose.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox across many Drives.The right drive for the right</h3>
+				<div class="date">Posted: <strong>Mon Dec 22, 2014 5:39 am</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content">Just a thought, but perhaps if you have the RAM capacity a RAMDisk may negate the need for this feature? You could point your sandbox to the RAMDisk and then configure direct access to the hard disk for your torrent client allowing it to save to the download folder only therefore saving RAM:<br>
+<br>
+Resource Access -&gt; File Access -&gt; Direct Access<br>
+<br>
+This should be faster than your SSD with no harddisk writes other than the contents of your torrent download folder. If for some reason your torrent software attempted to automatically run something you downloaded it would still run sandboxed.<br>
+<br>
+I suppose alternatively you could just grant direct access to the torrent download folder for your torrent client and then leave your sandbox on the SSD as most of the writes would go directly to the harddisk containing the download folder... meh, something to consider  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox across many Drives.The right drive for the right</h3>
+				<div class="date">Posted: <strong>Mon Dec 22, 2014 10:49 am</strong></div>
+				<div class="author">by <strong>Domochevsky</strong></div>
+				<div class="content">hm... I think what you want is setting box-specific <strong>Container Folder</strong>s, which can indeed already be done and sit on whatever drive you want, per box.<br>
+(But don't ask me about the specifics right now. &gt;_&gt; )</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox across many Drives.The right drive for the right</h3>
+				<div class="date">Posted: <strong>Tue Dec 23, 2014 10:51 am</strong></div>
+				<div class="author">by <strong>FF9F00</strong></div>
+				<div class="content"><blockquote><div><cite>RooJ wrote:</cite>Resource Access -&gt; File Access -&gt; Direct Access
+</div></blockquote>Thank you so much for this tip!<br>
+<br>
+I used: Resource Access -&gt; File Access -&gt; FULL Access<br>
+And it worked as I wanted it to.<br>
+<br>
+I was honestly not aware this feature already existed. So I'm really happy this worked out, thank you so much.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=20074&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:48:29 GMT -->
+</html>

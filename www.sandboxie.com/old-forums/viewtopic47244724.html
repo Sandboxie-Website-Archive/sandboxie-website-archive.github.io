@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=19811&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:46:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SandBoxIE to harden SRP (software restriction policy)? - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SandBoxIE to harden SRP (software restriction policy)?</h2>
+		<p><a href="viewtopicd6a9d6a9.html?f=4&amp;t=19811">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=19811</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Mon Dec 22, 2014 8:51 am</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content">Will this white list also prevent a rogue DLL from being loaded and executed?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Mon Dec 22, 2014 5:30 pm</strong></div>
+				<div class="author">by <strong>JoeHood</strong></div>
+				<div class="content">That is a vague question. A rogue DLL? From where? Loaded by what? Executed by what? You have already seen that SRP is not what some thought it was.<br>
+Why stick with it? Would SRP stop that rogue DLL? Would it at least contain it? Sandboxie will at the minimum contain and delete it, <br>
+and more likely prevent it from running at all. Your choice of browser and hardening that browser would be of more benefit.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Tue Dec 23, 2014 3:43 am</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content">A rogue DLL could be downloaded to user's %TEMP% folder by his browser from a compromised site - either by a script or by user's own error.<br>
+This DLL could be executed by a shell code exploiting a 0-day in the browser.<br>
+Normally such kind of attack should be stopped by SRP/Applocker's "disallowed by default" policy.<br>
+<br>
+As <a href="http://blog.didierstevens.com/?s=srp" class="postlink">Didier Stevens</a> has shown - this SRP/Applocker policy is almost trivial to circumvent.<br>
+All I'm asking for is a sort of a <a href="http://support.microsoft.com/kb/2532445" class="postlink">KB2531445</a> being provided by SandBoxIE for winXP-SP3/vista users.<br>
+<br>
+Please re-read my opening post and my further reasonings on the topic.<br>
+<br>
+Thank you!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Tue Dec 23, 2014 5:08 am</strong></div>
+				<div class="author">by <strong>JoeHood</strong></div>
+				<div class="content">So let's say this theory happens. Whatever it is, it can not install a driver. If you have whitelisted your programs it probably will not run. If you set up ClosedFilesPaths, it will not see anything. And if you set auto delete and close the sandbox it is gone. Totally gone, cleanly, completely gone. All of that balanced against Curt stating that the goal of Sandboxie is to contain and delete. And changing for your request would cause other programs not to work correctly. That is a lot to ask to handle this emergency. And yet you did ask again, for Curt to reconsider. Have you considered upgrading from Windows XP?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Tue Dec 23, 2014 7:47 am</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content"><blockquote><div><cite>JoeHood wrote:</cite>... Whatever it is, it can not install a driver...<br>
+&lt;snip&gt;<br>
+... And changing for your request would cause other programs not to work correctly...</div></blockquote>
+How can you be sure it will not be able to install a driver? I will not take any risks here.<br>
+<br>
+What other programs (apart from clearly mentioned that SOME <span style="text-decoration: underline">installers</span> possibly could - please read MS's documentation on the matter) would fail?<br>
+How many programs fail because of the "Drop rights" check-box marked?<br>
+<br>
+I see SandBoxIE's task to discipline what a program running under SBIE's supervision could do.<br>
+<br>
+The feature I'm asking for is clearly intended to improve the discipline (what was not pre-installed by an admin that should not be runnable for LUA).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Tue Feb 03, 2015 2:30 pm</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content">I'd like to bring this up.<br>
+<br>
+Could you please create a beta/testing version to check for alleged compatibility issues?<br>
+<br>
+Thank you in advance.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Tue Feb 03, 2015 8:21 pm</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">SRP, pfft, if it's spyware it's gonna (down)load in &amp; execute any binary from memory, ASLR actually makes that a lot likelier.<br>
+<br>
+(but assuming it's not malware to begin with...)<br>
+One could create a 1KB Sandboxie InjectDll(64) to hook and mask (or Xor) out any occurrence of those flags in those functions.<br>
+<br>
+I'm disinterested as I don't know the exact SRP set up to test this, command line, please, I'm lazy. 2nd thought I'm too lazy.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Wed Feb 04, 2015 1:49 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">Okay 3 KB for OS compatibility.<br>
+Sorry for being a lazy asswipe.<br>
+<br>
+<strong>SANDBOXIE 32-BIT INJECTDLL INSTALLATION</strong><br>
+<br>
+ATTRIB +R "C:\SbieSRP.dll"<br>
+<br>
+[GlobalSettings]<br>
+InjectDll=C:\SbieSRP.dll<br>
+<br>
+<strong>SOURCE CODE</strong> (flat assembler 1.71.22 for Windows)
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>format PE GUI 4.0 DLL
+entry DllEntryPoint
+
+;include 'WIN32A.INC'
+;include 'WIN32W.INC'
+; "more advanced macroinstructions"
+;include 'WIN32AX.INC'
+include 'WIN32WX.INC'
+;include 'WIN32AXP.INC'
+;include 'WIN32WXP.INC'
+
+LOAD_IGNORE_CODE_AUTHZ_LEVEL=0xFFFFFFEF ; ~0x10
+SANDBOX_INERT=0xFFFFFFFD ; ~0x2
+SAFER_TOKEN_MAKE_INERT=0xFFFFFFFB ; ~0x4
+
+struct kernel32_
+LoadLibraryExA dd ?
+LoadLibraryExW dd ?
+ends
+
+struct advapi32_
+CreateRestrictedToken dd ?
+SaferComputeTokenFromLevel dd ?
+ends
+
+struct SbieDll_
+Hook dd ?
+ends
+
+section '' data readable writeable
+
+kernel32 kernel32_
+advapi32 advapi32_
+SbieDll SbieDll_
+
+section '' code executable readable
+
+proc DllEntryPoint hinstDLL,fdwReason,lpvReserved
+;	invoke DisableThreadLibraryCalls,[hinstDLL]
+	mov eax,TRUE
+	ret
+endp
+
+proc detour_LoadLibraryExA lpFileName,hFile,dwFlags
+	and [dwFlags],LOAD_IGNORE_CODE_AUTHZ_LEVEL
+	invoke kernel32.LoadLibraryExA,[lpFileName],[hFile],[dwFlags]
+	ret
+endp
+
+proc detour_LoadLibraryExW lpFileName,hFile,dwFlags
+	and [dwFlags],LOAD_IGNORE_CODE_AUTHZ_LEVEL
+	invoke kernel32.LoadLibraryExW,[lpFileName],[hFile],[dwFlags]
+	ret
+endp
+
+proc detour_CreateRestrictedToken ExistingTokenHandle,Flags,DisableSidCount,SidsToDisable,DeletePrivilegeCount,PrivilegesToDelete,RestrictedSidCount,SidsToRestrict,NewTokenHandle
+	and [Flags],SANDBOX_INERT
+	invoke advapi32.CreateRestrictedToken,[ExistingTokenHandle],[Flags],[DisableSidCount],[SidsToDisable],[DeletePrivilegeCount],[PrivilegesToDelete],[RestrictedSidCount],[SidsToRestrict],[NewTokenHandle]
+	ret
+endp
+
+proc detour_SaferComputeTokenFromLevel LevelHandle,InAccessToken,OutAccessToken,dwFlags,lpReserved
+	and [dwFlags],SAFER_TOKEN_MAKE_INERT
+	invoke advapi32.SaferComputeTokenFromLevel,[LevelHandle],[InAccessToken],[OutAccessToken],[dwFlags],[lpReserved]
+	ret
+endp
+
+proc InjectDllMain hSbieDll,UnusedParameter
+	invoke GetProcAddress,[hSbieDll],SbieDll_dll.SbieDll_Hook
+	mov [SbieDll.Hook],eax
+	or eax,eax
+	jz @f
+	invoke SbieDll.Hook,"LoadLibraryExA",[LoadLibraryExA],detour_LoadLibraryExA
+	mov [kernel32.LoadLibraryExA],eax
+;	or eax,eax
+;	jz @f
+	invoke SbieDll.Hook,"LoadLibraryExW",[LoadLibraryExW],detour_LoadLibraryExW
+	mov [kernel32.LoadLibraryExW],eax
+;	or eax,eax
+;	jz @f
+	invoke SbieDll.Hook,"CreateRestrictedToken",[CreateRestrictedToken],detour_CreateRestrictedToken
+	mov [advapi32.CreateRestrictedToken],eax
+;	or eax,eax
+;	jz @f
+	invoke SbieDll.Hook,"SaferComputeTokenFromLevel",[SaferComputeTokenFromLevel],detour_SaferComputeTokenFromLevel
+	mov [advapi32.SaferComputeTokenFromLevel],eax
+;	or eax,eax
+;	jz @f
+@@:
+	ret
+endp
+
+struct _SbieDll_dll
+SbieDll_Hook db 'SbieDll_Hook',0
+ends
+SbieDll_dll _SbieDll_dll
+
+section '' import data readable writeable
+
+library kernel32,'kernel32',advapi32,'advapi32'
+
+import kernel32,\
+GetProcAddress,'GetProcAddress',\
+LoadLibraryExA,'LoadLibraryExA',LoadLibraryExW,'LoadLibraryExW'
+
+import advapi32,\
+CreateRestrictedToken,'CreateRestrictedToken',SaferComputeTokenFromLevel,'SaferComputeTokenFromLevel'
+
+section '' export data readable
+
+export 'SbieSRP.dll',\
+InjectDllMain,'InjectDllMain'
+
+section '' data discardable readable
+data fixups
+if ~ $-$$
+dd 0,8
+end if
+end data
+</code></pre></div>
+:: <strong>BUILDING THE BINARY</strong> - <a href="http://flatassembler.net/download.php" class="postlink">http://flatassembler.net/download.php</a><br>
+@<br>
+REM your working directory should be one level above your FASM path<br>
+@<br>
+SET "Path=%Path%;.\fasmw17122"<br>
+SET "INCLUDE=.\fasmw17122\INCLUDE"<br>
+@<br>
+FASM.EXE "SbieSRP.asm"<br>
+REM flat assembler  version 1.71.22  (1048576 kilobytes memory)<br>
+REM 5 passes, 3072 bytes.<br>
+@<br>
+<br>
+:: <strong>AUTOHOTKEY DEBUG TEST CALLS</strong><br>
+@<br>
+ECHO DllCall("LoadLibraryExA","UPtr",NULL,"UPtr",NULL,"UInt",0xFFFFFFFF)|AutoHotkeyA32.exe *<br>
+ECHO DllCall("LoadLibraryExW","UPtr",NULL,"UPtr",NULL,"UInt",0xFFFFFFFF)|AutoHotkeyU32.exe *<br>
+ECHO DllCall("advapi32\CreateRestrictedToken","UPtr",VOID,"UInt",0xFFFFFFFF,"UInt",VOID, "UPtr",NULL,"UInt",VOID,"UPtr",NULL,"UInt",VOID,"UPtr",NULL,"UPtrP",VOID)|AutoHotkeyU32.exe *<br>
+ECHO DllCall("advapi32\SaferComputeTokenFromLevel","UPtr",VOID,"UPtr",NULL,"UPtr",VOID,"UInt",0xFFFFFFFF,"UPtr",VOID)|AutoHotkeyU32.exe *<br>
+@<br>
+<br>
+<strong>AUTOHOTKEY <a href="http://blog.didierstevens.com/2011/01/25/circumventing-srp-and-applocker-to-create-a-new-process-by-design/" class="postlink">POC</a> TEST</strong>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Global NULL:=0
+Global TOKEN_ALL_ACCESS:=0xF01FF
+Global SANDBOX_INERT:=0x2
+
+;
+szApplicationName:="C:\test\Dialog42.exe"
+;
+
+hToken:=""
+hNewToken:=""
+sPI:=""
+VarSetCapacity(sPI,A_PtrSize==8?24:16)
+sSI:=""
+
+if(DllCall("advapi32\OpenProcessToken","UPtr",DllCall("GetCurrentProcess","UPtr"),"UInt",TOKEN_ALL_ACCESS,"UPtrP",hToken,"Int"))
+{
+	if(DllCall("advapi32\CreateRestrictedToken","UPtr",hToken,"UInt",SANDBOX_INERT,"UInt",0,"UPtr",NULL,"UInt",0,"UPtr",NULL,"UInt",0,"UPtr",NULL,"UPtrP",hNewToken,"Int"))
+	{
+		VarSetCapacity(sSI,cb:=A_PtrSize==8?96:68,0)
+		NumPut(cb,sSI,"UInt")
+		if(DllCall("advapi32\CreateProcessAsUser","UPtr",hNewToken,"Str",szApplicationName,"UPtr",NULL,"UPtr",NULL,"UPtr",NULL,"Int",TRUE,"UInt",0,"UPtr",NULL,"UPtr",NULL,"UPtr",&amp;sSI,"UPtr",&amp;sPI,"Int"))
+		{
+			MsgBox,0x40040,,process created
+		}
+		else
+			MsgBox,% "CreateProcessAsUser fail`n" FormatMessage(A_LastError)
+	}
+	else
+		MsgBox,% "CreateRestrictedToken fail`n" FormatMessage(A_LastError)
+}
+else
+	MsgBox,% "OpenProcessToken fail`n" FormatMessage(A_LastError)
+
+FormatMessage(dwMessageId)
+{
+	static Buffer
+	VarSetCapacity(Buffer,nSize:=3000)
+	DllCall("FormatMessage","UInt",0x00001000,"UPtr",0,"UInt",dwMessageId,"UInt",0,"Str",Buffer,"UInt",nSize//2,"UPtr",0)
+	return RegExReplace(Buffer,"(.*)[`r`n]*$","$1")
+}
+</code></pre></div>
+Use Sysinternals' Process Explorer (Lower Pane DLLs view) to see that SbieSRP.dll is loaded into every Sbie BOXED, 32-bit process - all processes if WinXP &amp; SP3.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Thu Feb 05, 2015 7:02 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">My god, my god, my god. (This is about BUCKAROO's reply; I could no longer not reply.)<br>
+<br>
+I saw this thread back in December when I checked backed here for the first time in awhile (been doing other stuff), and was going to tell ya, catBot, don't worry, I'll have something for us to take care of this in Sandboxie by Christmas/New Years (been meaning to for a long time, but it's not as trivial/obvious to do as BUCKAROO did; that naive approach I would have made available long ago). But I've still been using time to get other stuff done, so I'm glad I waited to say anything that I didn't give in time! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+And I wanted to make a nice little GUI demo program you could use to see that it's working, etc.<br>
+<br>
+
+<blockquote><div><cite>catBot wrote:</cite>I'd like to bring this up.<br>
+<br>
+Could you please create a beta/testing version to check for alleged compatibility issues?<br>
+<br>
+Thank you in advance.</div></blockquote>
+
+What's this about...? Curt's comment, I guess (yes, silly, but they're not going to do any of this).<br>
+<br>
+Anyway, I was going to say before that I wouldn't expect them to do anything to prevent this bypass, nor would I ever <em>expect</em> them to (yes, I said "expect them" twice).<br>
+<br>
+
+<blockquote><div><cite>BUCKAROO wrote:</cite>SRP, pfft, if it's spyware it's gonna (down)load in &amp; execute any binary from memory, ASLR actually makes that a lot likelier.</div></blockquote>
+
+Really? And what malicious stuff is actually doing that vs trying to load a real file? (Albeit not even attempting to use these "SRP bypass" flags...)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Thu Feb 05, 2015 7:30 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Sorry BUCKAROO, but all I could think after seeing your post is, "My god, please make it stop!" <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"><br>
+<br>
+No reason for assembly, basically ever. You just need a few lines of C. The compiler will generate much better code (usual case I mean; this simple stuff I don't see anything obvious). And I was like, "Why are you only ANDing the flags, instead of "&amp; ~SOME_FLAG" but I see you defined them (named confusingly). The compiler should be doing that! (Even the assembler could... should?)<br>
+<br>
+AutoHotkey... I hate that junk.<br>
+<br>
+Where's the 64-bit for Vista? The answer is "assembly," right? <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+<br>
+And, "you're doing it wrong." I didn't think it was good to hook at that high of a level (Advapi32 is too high up, for sure). What if malware, etc. bypasses those high level functions and begins to start a process or load a DLL in a more "manual" way using lower level functions directly (e.g. after calls that use those flags)?<br>
+<br>
+So, long ago I was looking down to NtQueryInformationToken -- and still wondering if <em>that</em> was too high-level? Not sure how deep/low to go, so that's what I was sticking on, unless someone can provide better insight to image loading at the lowest level.<br>
+<br>
+<br>
+Finally, there's no need to hook the *A functions (ANSI) since they call the *W functions... Right? <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Thu Feb 05, 2015 9:38 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite><blockquote><div><cite>BUCKAROO wrote:</cite>SRP, pfft, if it's spyware it's gonna (down)load in &amp; execute any binary from memory, ASLR actually makes that a lot likelier.</div></blockquote>
+Really? And what malicious stuff is actually doing that vs trying to load a real file? (Albeit not even attempting to use these "SRP bypass" flags...)</div></blockquote>
+Yeah. I wouldn't know exactly what stuff is doing that, but it's what I would do (were I that way inclined).<br>
+
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>And, "you're doing it wrong." I didn't think it was good to hook at that high of a level (Advapi32 is too high up, for sure). What if malware, etc. bypasses those high level functions and begins to start a process or load a DLL in a more "manual" way using lower level functions directly (e.g. after calls that use those flags)?<br>
+<br>
+So, long ago I was looking down to NtQueryInformationToken -- and still wondering if <em>that</em> was too high-level? Not sure how deep/low to go, so that's what I was sticking on, unless someone can provide better insight to image loading at the lowest level.</div></blockquote>
+If the payload - let's say it's a ready-made trojan for the lazy skid - had its relocations section stripped (no fixups), but oh look, ASLR has conveniently freed up the payload's image base load address for the lazy, i.e. me, so time for my crafty loader to work its magic!<br>
+<br>
+It is just a matter of having read in the binary (easily hidden in the main program or gotten creatively from the www, whatever). If no reserved section, a dabble of VirtualAlloc(Ex) then, WriteProcessMemory (but again hardly necessary for our current process), and there is a further stage I'll shrug off too (naively). Before lastly, either CreateThread for it, or jump the CPU there; that old black magic...<br>
+<br>
+Windows image loading restrictions = defeated. So, SRP is (censored). And so should be the idea that any in-process Sbie InjectDll or system dll be invulnerable, forget about it -- without <em>authoritatively</em> higher up helper service and driver outside handling (censored), that agency Sbie has and we hope it does its jobs well enough.<br>
+
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>No reason for assembly, basically ever. You just need a few lines of C. The compiler will generate much better code (usual case I mean; this simple stuff I don't see anything obvious). And I was like, "Why are you only ANDing the flags, instead of "&amp; ~SOME_FLAG" but I see you defined them (named confusingly). The compiler should be doing that! (Even the assembler could... should?)<br>
+<br>
+AutoHotkey... I hate that junk.</div></blockquote>
+Mmhmm. Not disagreeing but not concurring.<br>
+<br>
+I wanted to code an "InjectExe" [a Sbie .dll Contributed Utility even] for the reason that I detest Visual Studio and I want to get the latest AutoHotkey*.exe releases loaded and running in its own remote thread in each and every sandboxed process Haha <img class="smilies" src="images/smilies/icon_twisted.gif" width="15" height="15" alt=":twisted:" title="Twisted Evil"> so I can rejig hooked functions left and right with relative ease. And AutoHotkey's added memory footprint (and cpu time) would not bother me, I just do very much like a C/C++ style scripting language and this interpreter for Win centric shortcutting.<br>
+<br>
+AutoHotkey script = high if not highest level language.<br>
+Flat assembler = low if not lowest level language next to machine code, and did I mention it rolls out flat binaries, as flat and linear as the source code is presented.<br>
+One that might mash the two together and use AHK to render FASM for on-the-fly assembalage, has best of both worlds. I've got a license to blah, you know!<br>
+
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>Finally, there's no need to hook the *A functions (ANSI) since they call the *W functions... Right? <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div></blockquote>
+Pfff. But but it's not my <strong>real</strong> competition entry...! <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>Where's the 64-bit for Vista? The answer is "assembly," right? <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"></div></blockquote>
+Haha yeah that definitely, and that WIndows 8.1 core home version has no AppLocker for me to bother or to even test any of this SRP stuff.<br>
+<br>
+Amending, I will add that it is possible to create a dll that has first say in hardening in-process security, but I won't be coding it unless in the key of middle "Clang", alas, my time and my health is not permitting. I must choose life and pick myself up, if I am to go on living, and <strong>really</strong> living, I need to forget about controlling every facet of "code". (Cool story.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Thu Feb 12, 2015 1:56 pm</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">Make It Stop - volume 2:<br>
+<br>
+SbieSRP8.dll is here for Vista feat. 64-bit. I suppose it works haha but I have both running globally, you want both for 32/64-bit processes. Process Explorer no longer reckons they're suspicious (adding friendly section names = no more purple highlight and "Image is probably packed" rubbish).<br>
+<br>
+Btw, do too need to hook LoadLibraryExA, tests showed me! <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> And it would be wrong to <em>only</em> hook something [(still) not doing this] at the deepest level at the user mode border, there could have been preparations on account of those flags, you never know.<br>
+<br>
+=== === ===<br>
+Edit 2015/05/03:<br>
+64-BIT NEVER DID ANYTHING.<br>
+Does not pass initialization!<br>
+rcx,rdx,r8,r9; Too lazy to fix.<br>
+=== === ===<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>; Toggle build architecture
+PtrSize fix 4 ; 32-bit
+;PtrSize fix 8 ; 64-bit
+;
+
+PtrSizeAsc='0'+PtrSize
+SbieSRP_dll equ 'SbieSRP',PtrSizeAsc,'.dll'
+
+match =4,PtrSize{format PE GUI 4.0 DLL}
+match =8,PtrSize{format PE64 GUI 5.0 DLL}
+entry DllEntryPoint
+
+match =4,PtrSize{include 'WIN32AX.INC'}
+match =8,PtrSize{include 'WIN64AX.INC'}
+
+!LOAD_IGNORE_CODE_AUTHZ_LEVEL=not 0x10
+!SANDBOX_INERT=not 0x2
+!SAFER_TOKEN_MAKE_INERT=not 0x4
+
+macro m_lp [m]
+{
+if PtrSize=4
+	m dd ?
+else if PtrSize=8
+	m dq ?
+end if
+}
+
+macro mioli op1*
+{
+if PtrSize=4
+	mov op1,eax
+else if PtrSize=8
+	mov op1,rax
+end if
+}
+
+macro sioli op1*
+{
+if PtrSize=4
+	mov eax,op1
+else if PtrSize=8
+	mov rax,op1
+end if
+}
+
+macro tioli
+{
+if PtrSize=4
+	test eax,eax
+else if PtrSize=8
+	test rax,rax
+end if
+}
+
+struc kernel32_
+{
+	m_lp .LoadLibraryExA,.LoadLibraryExW
+}
+
+struc advapi32_
+{
+	m_lp .CreateRestrictedToken,.SaferComputeTokenFromLevel
+}
+
+struc SbieDll_
+{
+	m_lp .Hook
+}
+
+section '.data' data readable writeable
+
+kernel32 kernel32_
+advapi32 advapi32_
+SbieDll SbieDll_
+
+section '.text' code executable readable
+
+proc DllEntryPoint hinstDLL,fdwReason,lpvReserved
+	invoke DisableThreadLibraryCalls,[hinstDLL]
+	sioli TRUE
+	ret
+endp
+
+proc detour_LoadLibraryExA lpFileName,hFile,dwFlags
+	and [dwFlags],!LOAD_IGNORE_CODE_AUTHZ_LEVEL
+	invoke kernel32.LoadLibraryExA,[lpFileName],[hFile],[dwFlags]
+	ret
+endp
+
+proc detour_LoadLibraryExW lpFileName,hFile,dwFlags
+	and [dwFlags],!LOAD_IGNORE_CODE_AUTHZ_LEVEL
+	invoke kernel32.LoadLibraryExW,[lpFileName],[hFile],[dwFlags]
+	ret
+endp
+
+proc detour_CreateRestrictedToken ExistingTokenHandle,Flags,DisableSidCount,SidsToDisable,DeletePrivilegeCount,PrivilegesToDelete,RestrictedSidCount,SidsToRestrict,NewTokenHandle
+	and [Flags],!SANDBOX_INERT
+	invoke advapi32.CreateRestrictedToken,[ExistingTokenHandle],[Flags],[DisableSidCount],[SidsToDisable],[DeletePrivilegeCount],[PrivilegesToDelete],[RestrictedSidCount],[SidsToRestrict],[NewTokenHandle]
+	ret
+endp
+
+proc detour_SaferComputeTokenFromLevel LevelHandle,InAccessToken,OutAccessToken,dwFlags,lpReserved
+	and [dwFlags],!SAFER_TOKEN_MAKE_INERT
+	invoke advapi32.SaferComputeTokenFromLevel,[LevelHandle],[InAccessToken],[OutAccessToken],[dwFlags],[lpReserved]
+	ret
+endp
+
+proc InjectDllMain hSbieDll,UnusedParameter
+	invoke GetProcAddress,[hSbieDll],SbieDll_dll.SbieDll_Hook
+	mioli [SbieDll.Hook]
+	tioli
+	jz @f
+	invoke SbieDll.Hook,'LoadLibraryExA',[LoadLibraryExA],detour_LoadLibraryExA
+	mioli [kernel32.LoadLibraryExA]
+	invoke SbieDll.Hook,'LoadLibraryExW',[LoadLibraryExW],detour_LoadLibraryExW
+	mioli [kernel32.LoadLibraryExW]
+	invoke SbieDll.Hook,'CreateRestrictedToken',[CreateRestrictedToken],detour_CreateRestrictedToken
+	mioli [advapi32.CreateRestrictedToken]
+	invoke SbieDll.Hook,'SaferComputeTokenFromLevel',[SaferComputeTokenFromLevel],detour_SaferComputeTokenFromLevel
+	mioli [advapi32.SaferComputeTokenFromLevel]
+@@:
+	ret
+endp
+
+struc SbieDll_dll_
+{
+	.SbieDll_Hook db 'SbieDll_Hook',0
+}
+SbieDll_dll SbieDll_dll_
+
+section '.idata' data readable import
+library kernel32_dll,'kernel32.dll',advapi32_dll,'advapi32.dll'
+
+import kernel32_dll,\
+DisableThreadLibraryCalls,'DisableThreadLibraryCalls',GetProcAddress,'GetProcAddress',\
+LoadLibraryExA,'LoadLibraryExA',LoadLibraryExW,'LoadLibraryExW'
+
+import advapi32_dll,\
+CreateRestrictedToken,'CreateRestrictedToken',SaferComputeTokenFromLevel,'SaferComputeTokenFromLevel'
+
+section '.edata' data readable export
+export SbieSRP_dll,InjectDllMain,'InjectDllMain'
+
+section '.reloc' data discardable readable fixups
+
+postpone
+{
+display '@',10
+display ':: INSTALL FROM AN ELEVATED COMMAND PROMPT',10
+display 'COPY /B /Y "',SbieSRP_dll,'" "C:\',SbieSRP_dll,'"',10
+display '@',10
+display 'ATTRIB +R "C:\',SbieSRP_dll,'"',10
+display '@',10
+display 'SET "Sbie=%ProgramFiles%\Sandboxie"',10
+display 'SET "SbieIni="%Sbie%\SbieIni.exe""',10
+if PtrSize=4
+display '%SbieIni% append GlobalSettings InjectDll C:\SbieSRP4.dll',10
+else if PtrSize=8
+display '%SbieIni% append GlobalSettings InjectDll64 C:\SbieSRP8.dll',10
+end if
+display '@'
+}
+</code></pre></div>
+Edit 2015/05/08:<br>
+Removed binaries archive.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Mon Mar 16, 2015 11:05 am</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content">BUCKAROO, DR_LaRRY_PEpPeR,<br>
+Any update on the topic?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Sun May 03, 2015 12:54 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">Corrected 64-bit support... (for fun...)<br>
+I hope I am not forgetting something this time<br>
+(apart from the doctor's approved implementation - not happening).<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>; Toggle build architecture
+PtrSize fix 4 ; 32-bit
+;PtrSize fix 8 ; 64-bit
+
+; Toggle
+OutputDebug equ 0
+;OutputDebug equ 1
+
+PtrSizeAsc='0'+PtrSize
+SbieSRP_dll equ 'SbieSRP',PtrSizeAsc,'.dll'
+
+match =4,PtrSize{format PE GUI 4.0 DLL}
+match =8,PtrSize{format PE64 GUI 5.0 DLL}
+entry DllEntryPoint
+
+match =4,PtrSize{include 'WIN32WXP.INC'}
+match =8,PtrSize{include 'WIN64WXP.INC'}
+
+; BUCKAROO's trivial customization to fasmw17122\INCLUDE\MACRO\*
+; Macroinstructions for making import section (32-bit or 64-bit)
+
+macro import name,[label,string]
+{
+common
+	if PtrSize=4
+		rb (- rva $) and 3
+	else if PtrSize=8
+		rb (- rva $) and 7
+	end if
+	if defined name#.referred
+name#.lookup:
+forward
+		if used label
+			if string eqtype ''
+				local _label
+				if PtrSize=4
+					dd RVA _label
+				else if PtrSize=8
+					dq RVA _label
+				end if
+			else
+				if PtrSize=4
+					dd 80000000h + string
+				else if PtrSize=8
+					dq 8000000000000000h + string
+				end if
+			end if
+		end if
+common
+		if $ &gt; name#.lookup
+			name#.redundant = 0
+			if PtrSize=4
+				dd 0
+			else if PtrSize=8
+				dq 0
+			end if
+		else
+			name#.redundant = 1
+		end if
+name#.address:
+forward
+		if used label
+			if string eqtype ''
+				if PtrSize=4
+					label dd RVA _label
+				else if PtrSize=8
+					label dq RVA _label
+				end if
+			else
+				if PtrSize=4
+					label dd 80000000h + string
+				else if PtrSize=8
+					label dq 8000000000000000h + string
+				end if
+			end if
+		end if
+common
+		if ~ name#.redundant
+			if PtrSize=4
+				dd 0
+			else if PtrSize=8
+				dq 0
+			end if
+		end if
+forward
+		if used label &amp; string eqtype ''
+			_label dw 0
+label#.ansi:
+			db string,0
+			rb RVA $ and 1
+		end if
+common
+	end if
+}
+
+match =4,PtrSize
+{
+dbz equ dd
+wax equ eax
+}
+match =8,PtrSize
+{
+dbz equ dq
+wax equ r10
+}
+
+macro mioli op1*
+{
+if PtrSize=4
+	mov op1,eax
+else if PtrSize=8
+	mov op1,rax
+end if
+}
+
+macro sioli op1*
+{
+if PtrSize=4
+	mov eax,op1
+else if PtrSize=8
+	mov rax,op1
+end if
+}
+
+macro tioli
+{
+if PtrSize=4
+	test eax,eax
+else if PtrSize=8
+	test rax,rax
+end if
+}
+
+macro m_lp [m]
+{
+	m dbz ?
+}
+
+struc kernel32_
+{
+	m_lp .LoadLibraryExA,.LoadLibraryExW
+}
+
+struc advapi32_
+{
+	m_lp .CreateRestrictedToken,.SaferComputeTokenFromLevel
+}
+
+struc SbieApi_
+{
+	m_lp .QueryProcess
+}
+
+struc SbieDll_
+{
+	m_lp .Hook
+}
+
+struc SbieDll_dll_
+{
+	.SbieApi_QueryProcess db 'SbieApi_QueryProcess',0
+	.SbieDll_Hook db 'SbieDll_Hook',0
+}
+
+!LOAD_IGNORE_CODE_AUTHZ_LEVEL=not 0x10
+!SANDBOX_INERT=not 0x2
+!SAFER_TOKEN_MAKE_INERT=not 0x4
+
+section '.data' data readable writeable
+
+SbieSRP_err_fail db SbieSRP_dll,' inject stage fail. - BUCKAROO',0
+
+;[pid]
+; [session_id] app [box_name] "image_name" ProcName "FileName" (flags was flags)
+;[5592] [1] SbieSRP8 [DefaultBox] "AutoHotkeyU64.exe" CreateRestrictedToken "" (0x00000000 was 0x00000002)
+szDbgFmt du '[%d] %hs [%ls] "%ls" %hs "%hs%ls" (0x%08X was 0x%08X)',0
+
+szSbieSRP db 'SbieSRP',PtrSizeAsc,0
+
+align 8
+lpBuffer dbz ?
+
+process_id dbz ?
+box_name rw 34
+image_name rw 96
+sid_string rw 96
+session_id dd ?
+
+kernel32 kernel32_
+advapi32 advapi32_
+SbieApi SbieApi_
+SbieDll SbieDll_
+
+SbieDll_dll SbieDll_dll_
+
+section '.text' code executable readable
+
+proc DllEntryPoint hinstDLL,fdwReason,lpvReserved
+if PtrSize=8
+	mov [hinstDLL],rcx
+end if
+	invoke DisableThreadLibraryCalls,[hinstDLL]
+	match =1,OutputDebug{invoke OutputDebugStringA,szSbieSRP}
+	sioli TRUE
+	ret
+endp
+
+proc detour_LoadLibraryExA lpFileName,hFile,dwFlags
+if PtrSize=4
+	mov wax,[dwFlags]
+else if PtrSize=8
+	mov [lpFileName],rcx
+	mov [hFile],rdx
+	mov [dwFlags],r8
+	mov wax,r8
+end if
+	and [dwFlags],!LOAD_IGNORE_CODE_AUTHZ_LEVEL
+match =0,OutputDebug
+{
+	cmp [dwFlags],wax
+	je @f
+}
+	cinvoke wsprintfW,[lpBuffer],szDbgFmt,[session_id],szSbieSRP,box_name,image_name,LoadLibraryExA.ansi,[lpFileName],NULL,[dwFlags],wax
+	invoke OutputDebugStringW,[lpBuffer]
+@@:
+	invoke kernel32.LoadLibraryExA,[lpFileName],[hFile],[dwFlags]
+	ret
+endp
+
+proc detour_LoadLibraryExW lpFileName,hFile,dwFlags
+if PtrSize=4
+	mov wax,[dwFlags]
+else if PtrSize=8
+	mov [lpFileName],rcx
+	mov [hFile],rdx
+	mov [dwFlags],r8
+	mov wax,r8
+end if
+	and [dwFlags],!LOAD_IGNORE_CODE_AUTHZ_LEVEL
+match =0,OutputDebug
+{
+	cmp [dwFlags],wax
+	je @f
+}
+	cinvoke wsprintfW,[lpBuffer],szDbgFmt,[session_id],szSbieSRP,box_name,image_name,LoadLibraryExW.ansi,NULL,[lpFileName],[dwFlags],wax
+	invoke OutputDebugStringW,[lpBuffer]
+@@:
+	invoke kernel32.LoadLibraryExW,[lpFileName],[hFile],[dwFlags]
+	ret
+endp
+
+proc detour_CreateRestrictedToken ExistingTokenHandle,Flags,DisableSidCount,SidsToDisable,DeletePrivilegeCount,PrivilegesToDelete,RestrictedSidCount,SidsToRestrict,NewTokenHandle
+if PtrSize=4
+	mov wax,[Flags]
+else if PtrSize=8
+	mov [ExistingTokenHandle],rcx
+	mov [Flags],rdx
+	mov [DisableSidCount],r8
+	mov [SidsToDisable],r9
+	mov wax,rdx
+end if
+	and [Flags],!SANDBOX_INERT
+match =0,OutputDebug
+{
+	cmp [Flags],wax
+	je @f
+}
+	cinvoke wsprintfW,[lpBuffer],szDbgFmt,[session_id],szSbieSRP,box_name,image_name,CreateRestrictedToken.ansi,NULL,NULL,[Flags],wax
+	invoke OutputDebugStringW,[lpBuffer]
+@@:
+	invoke advapi32.CreateRestrictedToken,[ExistingTokenHandle],[Flags],[DisableSidCount],[SidsToDisable],[DeletePrivilegeCount],[PrivilegesToDelete],[RestrictedSidCount],[SidsToRestrict],[NewTokenHandle]
+	ret
+endp
+
+proc detour_SaferComputeTokenFromLevel LevelHandle,InAccessToken,OutAccessToken,dwFlags,lpReserved
+if PtrSize=4
+	mov wax,[dwFlags]
+else if PtrSize=8
+	mov [LevelHandle],rcx
+	mov [InAccessToken],rdx
+	mov [OutAccessToken],r8
+	mov [dwFlags],r9
+	mov wax,r9
+end if
+	and [dwFlags],!SAFER_TOKEN_MAKE_INERT
+match =0,OutputDebug
+{
+	cmp [dwFlags],wax
+	je @f
+}
+	cinvoke wsprintfW,[lpBuffer],szDbgFmt,[session_id],szSbieSRP,box_name,image_name,SaferComputeTokenFromLevel.ansi,NULL,NULL,[dwFlags],wax
+	invoke OutputDebugStringW,[lpBuffer]
+@@:
+	invoke advapi32.SaferComputeTokenFromLevel,[LevelHandle],[InAccessToken],[OutAccessToken],[dwFlags],[lpReserved]
+	ret
+endp
+
+proc InjectDllMain hSbieDll,UnusedParameter
+if PtrSize=8
+	mov [hSbieDll],rcx
+end if
+	invoke GetProcAddress,[hSbieDll],SbieDll_dll.SbieDll_Hook
+	mioli [SbieDll.Hook]
+	tioli
+	jz @f
+	invoke GetProcAddress,[hSbieDll],SbieDll_dll.SbieApi_QueryProcess
+	mioli [SbieApi.QueryProcess]
+	tioli
+	jz @f
+	invoke VirtualAlloc,NULL,2045,MEM_COMMIT+MEM_RESERVE,PAGE_READWRITE
+	mioli [lpBuffer]
+	tioli
+	jz @f
+	invoke GetCurrentProcessId
+	mioli [process_id]
+	invoke SbieApi.QueryProcess,[process_id],box_name,image_name,sid_string,session_id
+	tioli
+	jnz @f
+	invoke SbieDll.Hook,LoadLibraryExA.ansi,[LoadLibraryExA],detour_LoadLibraryExA
+	mioli [kernel32.LoadLibraryExA]
+	tioli
+	jz @f
+	invoke SbieDll.Hook,LoadLibraryExW.ansi,[LoadLibraryExW],detour_LoadLibraryExW
+	mioli [kernel32.LoadLibraryExW]
+	tioli
+	jz @f
+	invoke SbieDll.Hook,CreateRestrictedToken.ansi,[CreateRestrictedToken],detour_CreateRestrictedToken
+	mioli [advapi32.CreateRestrictedToken]
+	tioli
+	jz @f
+	invoke SbieDll.Hook,SaferComputeTokenFromLevel.ansi,[SaferComputeTokenFromLevel],detour_SaferComputeTokenFromLevel
+	mioli [advapi32.SaferComputeTokenFromLevel]
+	tioli
+	jz @f
+	ret
+@@:
+	invoke OutputDebugStringA,SbieSRP_err_fail
+	ret
+endp
+
+section '.idata' data readable import
+library kernel32_dll,'kernel32.dll',advapi32_dll,'advapi32.dll',user32_dll,'user32.dll'
+
+import kernel32_dll,\
+DisableThreadLibraryCalls,'DisableThreadLibraryCalls',GetCurrentProcessId,'GetCurrentProcessId',GetProcAddress,'GetProcAddress',\
+LoadLibraryExA,'LoadLibraryExA',LoadLibraryExW,'LoadLibraryExW',\
+OutputDebugStringA,'OutputDebugStringA',OutputDebugStringW,'OutputDebugStringW',\
+VirtualAlloc,'VirtualAlloc'
+
+import advapi32_dll,\
+CreateRestrictedToken,'CreateRestrictedToken',SaferComputeTokenFromLevel,'SaferComputeTokenFromLevel'
+
+import user32_dll,\
+wsprintfW,'wsprintfW'
+
+section '.edata' data readable export
+export SbieSRP_dll,InjectDllMain,'InjectDllMain'
+
+section '.reloc' data discardable readable fixups
+
+postpone
+{
+display '@',10
+display ':: INSTALL FROM AN ELEVATED COMMAND PROMPT',10
+display 'COPY /B /Y "SbieSRP.dll" "%CommonProgramFiles%\',SbieSRP_dll,'"',10
+display '@',10
+display 'ATTRIB +R "%CommonProgramFiles%\',SbieSRP_dll,'"',10
+display '@',10
+display 'SET "Sbie=%ProgramFiles%\Sandboxie"',10
+display 'SET "SbieIni="%Sbie%\SbieIni.exe""',10
+if PtrSize=4
+display '%SbieIni% append GlobalSettings InjectDll "%CommonProgramFiles%\SbieSRP4.dll"',10
+else if PtrSize=8
+display '%SbieIni% append GlobalSettings InjectDll64 "%CommonProgramFiles%\SbieSRP8.dll"',10
+end if
+display '@'
+}
+</code></pre></div>
+
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file1ff61ff6.png?id=281" class="postimage" alt="SbieSRP_OutputDebug.png" onclick="viewableArea(this);" /></dt>
+						<dd>SbieSRP_OutputDebug.png (56.07 KiB) Viewed 1654 times</dd>
+		</dl>
+		
+		
+		
+			</div>
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file24392439.png?id=282" class="postimage" alt="SbieSRP.png" onclick="viewableArea(this);" /></dt>
+						<dd>SbieSRP.png (11.14 KiB) Viewed 1654 times</dd>
+		</dl>
+		
+		
+		
+			</div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: SandBoxIE to harden SRP (software restriction policy)?</h3>
+				<div class="date">Posted: <strong>Wed May 06, 2015 1:41 pm</strong></div>
+				<div class="author">by <strong>catBot</strong></div>
+				<div class="content"><blockquote><div><cite>BUCKAROO wrote:</cite>...<br>
+I hope I am not forgetting something this time</div></blockquote>
+Will this library work on winXP-SP3 and how to use it?<br>
+<br>
+Thank you in advance.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=19811&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:46:21 GMT -->
+</html>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/18465" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2014-11-26T19:54:13-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/18465</id>
+
+		<entry>
+		<author><name><![CDATA[Buster]]></name></author>
+		<updated>2014-11-26T19:54:13-04:00</updated>
+
+		<published>2014-11-26T19:54:13-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=105034#p105034</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=105034#p105034"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=105034#p105034"><![CDATA[
+<blockquote><div><cite>Sahand wrote:</cite>Thanks for this great BSA tool. I'm studying on malware detection rules. I studied on this software and found about 200 different behavioral rules in it. All of them are based on API calls? checking Security softwares is based on checking their Running proccesses? Is their any public and classified source for gathering them?  and if its possible introduce me some sources to study in this field. Thank U!</div></blockquote>Not all are API based. They can be related to the creation of specific files/file types/file creation on certain locations, related to specific registry keys in certain locations, stuff related to processes, internet connections on specific ports, ...<br><br>There is not any public source for gathering them. There are articles published here and there but there is not a good and serious compilation as far as I know. Many of the malware behaviors I included in BSA I found them while developing the tool and doing malware analyses.<br><br>To find for sources I used "malware behaviors" in Google but as I told, there is not anything really good out there.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=904">Buster</a> — Wed Nov 26, 2014 6:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sahand]]></name></author>
+		<updated>2014-11-26T10:46:10-04:00</updated>
+
+		<published>2014-11-26T10:46:10-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=105032#p105032</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=105032#p105032"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=105032#p105032"><![CDATA[
+Thanks for this great BSA tool. I'm studying on malware detection rules. I studied on this software and found about 200 different behavioral rules in it. All of them are based on API calls? checking Security softwares is based on checking their Running proccesses? Is their any public and classified source for gathering them?  and if its possible introduce me some sources to study in this field. Thank U!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=25219">Sahand</a> — Wed Nov 26, 2014 9:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Buster]]></name></author>
+		<updated>2014-04-22T19:43:52-04:00</updated>
+
+		<published>2014-04-22T19:43:52-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100574#p100574</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100574#p100574"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100574#p100574"><![CDATA[
+I finally was able to reproduce the problem.<br><br>The issue is not really in BSA. VirusTotal changed the way it works: some time ago you could check a virus report using directly the MD5 hash of the file, but not anymore.<br><br>I will make a change in BSA and will release a new update.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=904">Buster</a> — Tue Apr 22, 2014 7:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Buster]]></name></author>
+		<updated>2014-03-28T12:24:00-04:00</updated>
+
+		<published>2014-03-28T12:24:00-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100113#p100113</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100113#p100113"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100113#p100113"><![CDATA[
+<blockquote><div><cite>operat0r2 wrote:</cite>* maybe you could send your entire BSA setup with Sandboxie ini maybe im missing something some how ?</div></blockquote>There is no relation between BSA and Sandboxie when it comes to retrieve results from VirusTotal. And the code which BSA uses to retrieve results from VirusTotal is pretty simple, so I can not imagine what the problem could be.  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"><br><br>This is the first time I receive a bug report like this. I will try to reproduce the problem on a Windows 7 64 but I am afraid I will be unable.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=904">Buster</a> — Fri Mar 28, 2014 12:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[operat0r2]]></name></author>
+		<updated>2014-03-28T11:37:30-04:00</updated>
+
+		<published>2014-03-28T11:37:30-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100112#p100112</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100112#p100112"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100112#p100112"><![CDATA[
+Yup ... thats the same one I am running <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br><br>* closed BSA<br>* removed the config folder<br>* started BSA <br>* set the correct path..<br>* running win7 64bit no firewall no AV <br>* same thing inside of windows XP image..<br>* maybe you could send your entire BSA setup with Sandboxie ini maybe im missing something some how ?<br><br>winxp run... :<div class="codebox"><p>CODE: </p><pre><code> Report generated with Buster Sandbox Analyzer 1.88 at 11:34:49 on 28/03/2014 [ General information ]   * File name: C:\WINDOWS\System32\cmd.exe [ Changes to filesystem ]   * Creates file (hidden) C:\WINDOWS\SbiePst.dat     VirusTotal detections:       Could not connect to Virus Total   * Modifies file (hidden) C:\Documents and Settings\Administrator\Local Settings\Temporary Internet Files\Content.IE5\index.dat   * Modifies file (hidden) C:\Documents and Settings\Administrator\Local Settings\History\History.IE5\index.dat   * Creates hidden folder C:\Documents and Settings\Administrator\Local Settings\History\History.IE5\MSHist012014031720140324   * Creates file (hidden) C:\Documents and Settings\Administrator\Local Settings\History\History.IE5\MSHist012014031720140324\index.dat     VirusTotal detections:       Could not connect to Virus Total   * Creates hidden folder C:\Documents and Settings\Administrator\Local Settings\History\History.IE5\MSHist012014032820140329   * Creates file (hidden) C:\Documents and Settings\Administrator\Local Settings\History\History.IE5\MSHist012014032820140329\index.dat     VirusTotal detections:       Could not connect to Virus Total   * Creates file C:\Documents and Settings\Administrator\Local Settings\Application Data\Microsoft\Internet Explorer\Recovery\Active\RecoveryStore.{8F78DBED-B68E-11E3-AF35-0800271871C1}.dat     VirusTotal detections:       Could not connect to Virus Total   * Creates file C:\Documents and Settings\Administrator\Local Settings\Application Data\Microsoft\Internet Explorer\Recovery\Active\{8F78DBEE-B68E-11E3-AF35-0800271871C1}.dat     VirusTotal detections:       Could not connect to Virus Total   * Creates file C:\Documents and Settings\Administrator\Desktop\quickclean.exe     VirusTotal detections:       Could not connect to Virus Total [ Changes to registry ]   * Deletes Registry key HKEY_LOCAL_MACHINE\software\Classes\clsid\{761497BB-D6F0-462C-B6EB-D4DAF1D92D43}   * Deletes Registry key HKEY_LOCAL_MACHINE\software\Classes\clsid\{DBC80044-A445-435B-BC74-9C25C1C588A9}   * Deletes Registry key HKEY_LOCAL_MACHINE\software\Classes\CompressedFolder\shell\open\ddeexec   * Modifies value "EnableDCOM=4E000000" in key HKEY_LOCAL_MACHINE\software\microsoft\ole          old value "EnableDCOM=59000000"   * Modifies value "NukeOnDelete=00000001" in key HKEY_LOCAL_MACHINE\software\microsoft\Windows\CurrentVersion\Explorer\BitBucket          old value empty   * Creates value "SymbolicLinkValue=\REGISTRY\USER\Sandbox_Administrator_DefaultBox\user\current_classes" in key HKEY_CURRENT_USER\software\classes                          binary data=5C00520045004700490053005400520059005C0055005300450052005C00530061006E00640062006F0078005F00410064006D0069006E006900730074007200610074006F0072005F00440065006600610075006C00740042006F0078005C0075007300650072005C00630075007200720065006E0074005F0063006C0061007300730065007300   * Modifies value "IE8RunOnceLastShown_TIMESTAMP=0A7B09539B4ACF01" in key HKEY_CURRENT_USER\software\Microsoft\Internet Explorer\Main          old value "IE8RunOnceLastShown_TIMESTAMP=DE4118132345CF01"   * Creates value "BrowseNewProcess=yes" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Explorer\BrowseNewProcess                         binary data=7900650073000000   * Modifies value "a=IEXPLORE.EXEC:\Documents and Settings\Administrator\Desktop" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedMRU           binary data=49004500580050004C004F00520045002E00450058004500000043003A005C0044006F00630075006D0065006E0074007300200061006E0064002000530065007400740069006E00670073005C00410064006D0069006E006900730074007200610074006F0072005C004400650073006B0074006F0070000000          old value "a=IEXPLORE.EXE\\10.0.2.2\c$\delete"           binary data=49004500580050004C004F00520045002E0045005800450000005C005C00310030002E0030002E0032002E0032005C00630024005C00640065006C006500740065000000   * Modifies value "b=C:\Documents and Settings\Administrator\Desktop\quickclean.exe" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU\*           binary data=43003A005C0044006F00630075006D0065006E0074007300200061006E0064002000530065007400740069006E00670073005C00410064006D0069006E006900730074007200610074006F0072005C004400650073006B0074006F0070005C0071007500690063006B0063006C00650061006E002E006500780065000000          old value "b=C:\Documents and Settings\Administrator\Desktop\tzxt.txt"           binary data=43003A005C0044006F00630075006D0065006E0074007300200061006E0064002000530065007400740069006E00670073005C00410064006D0069006E006900730074007200610074006F0072005C004400650073006B0074006F0070005C0074007A00780074002E007400780074000000   * Modifies value "MRUList=bajihgfedc" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU\*                 binary data=620061006A0069006800670066006500640063000000          old value "MRUList=ajihgfedcb"                 binary data=61006A00690068006700660065006400630062000000   * Creates value "d=C:\Documents and Settings\Administrator\Desktop\quickclean.exe" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU\exe          binary data=43003A005C0044006F00630075006D0065006E0074007300200061006E0064002000530065007400740069006E00670073005C00410064006D0069006E006900730074007200610074006F0072005C004400650073006B0074006F0070005C0071007500690063006B0063006C00650061006E002E006500780065000000   * Modifies value "MRUList=dcba" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU\exe                 binary data=64006300620061000000          old value "MRUList=cba"                 binary data=6300620061000000   * Modifies value "Count=0000005A" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Ext\Stats\{761497BB-D6F0-462C-B6EB-D4DAF1D92D43}\iexplore          old value "Count=00000059"   * Modifies value "Time=DE07030005001C000F0023001200B602" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Ext\Stats\{761497BB-D6F0-462C-B6EB-D4DAF1D92D43}\iexplore          old value "Time=DE070300050015001000350038002B00"   * Modifies value "Count=0000000A" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Ext\Stats\{CFBFAE00-17A6-11D0-99CB-00C04FD64497}\iexplore          old value "Count=00000009"   * Modifies value "Time=DE07030005001C000F00230011004602" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Ext\Stats\{CFBFAE00-17A6-11D0-99CB-00C04FD64497}\iexplore          old value "Time=DE0702000200190014003A000B002301"   * Modifies value "Count=0000005A" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Ext\Stats\{DBC80044-A445-435B-BC74-9C25C1C588A9}\iexplore          old value "Count=00000059"   * Modifies value "Time=DE07030005001C000F0023001200B602" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Ext\Stats\{DBC80044-A445-435B-BC74-9C25C1C588A9}\iexplore          old value "Time=DE070300050015001000350038002B00"   * Modifies value "LoadTime=00000007" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Ext\Stats\{DBC80044-A445-435B-BC74-9C25C1C588A9}\iexplore          old value "LoadTime=00000009"   * Modifies value "Count=00000056" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Ext\Stats\{E2E2DD38-D088-4134-82B7-F2BA38496583}\iexplore          old value "Count=00000055"   * Modifies value "Time=DE07030005001C000F00230011004103" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Ext\Stats\{E2E2DD38-D088-4134-82B7-F2BA38496583}\iexplore          old value "Time=DE0703000500150010001E002900A800"   * Modifies value "Count=00000056" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Ext\Stats\{FB5F1910-F110-11D2-BB9E-00C04F795683}\iexplore          old value "Count=00000055"   * Modifies value "Time=DE07030005001C000F00230011004103" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Ext\Stats\{FB5F1910-F110-11D2-BB9E-00C04F795683}\iexplore          old value "Time=DE0703000500150010001E002900B200"   * Deletes Registry key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\MSHist012014022420140303   * Deletes Registry key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\MSHist012014031720140318   * Creates value "CachePath=%USERPROFILE%\Local Settings\History\History.IE5\MSHist012014031720140324" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\MSHist012014031720140324                  binary data=25005500530045005200500052004F00460049004C00450025005C004C006F00630061006C002000530065007400740069006E00670073005C0048006900730074006F00720079005C0048006900730074006F00720079002E004900450035005C004D00530048006900730074003000310032003000310034003000330031003700320030003100340030003300320034000000   * Creates value "CachePrefix=:2014031720140324: " in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\MSHist012014031720140324                    binary data=3A0032003000310034003000330031003700320030003100340030003300320034003A0020000000   * Creates value "CacheLimit=00002000" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\MSHist012014031720140324   * Creates value "CacheOptions=0000000B" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\MSHist012014031720140324   * Deletes Registry key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\MSHist012014031820140319   * Deletes Registry key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\MSHist012014032120140322   * Creates value "CachePath=%USERPROFILE%\Local Settings\History\History.IE5\MSHist012014032820140329" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\MSHist012014032820140329                  binary data=25005500530045005200500052004F00460049004C00450025005C004C006F00630061006C002000530065007400740069006E00670073005C0048006900730074006F00720079005C0048006900730074006F00720079002E004900450035005C004D00530048006900730074003000310032003000310034003000330032003800320030003100340030003300320039000000   * Creates value "CachePrefix=:2014032820140329: " in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\MSHist012014032820140329                    binary data=3A0032003000310034003000330032003800320030003100340030003300320039003A0020000000   * Creates value "CacheLimit=00002000" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\MSHist012014032820140329   * Creates value "CacheOptions=0000000B" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\MSHist012014032820140329   * Modifies value "SavedLegacySettings=460000002F030000010000003B000000687474703D3132372E302E302E313A383038303B6674703D3132372E302E302E313A383038303B736F636B733D3132372E302E302E313A3830383000000000000000000000000000000000C02E43C5DC71CC0100000000000000000000000001000000020000000A00020F0000000000000000010000000500000088D01A0058E31B000000000010010000FFFFFFFF000000000C00000000000000010000000000000000000000000000000000000003A8020000000000C000000000000046409D05229E7ECF11AE5A00AA00A7112B770069006E0064006F0077007300000000000000" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections          old value "SavedLegacySettings=460000002C030000010000003B000000687474703D3132372E302E302E313A383038303B6674703D3132372E302E302E313A383038303B736F636B733D3132372E302E302E313A3830383000000000000000000000000000000000C02E43C5DC71CC0100000000000000000000000001000000020000000A00020F0000000000000000010000000500000088D01A0058E31B000000000010010000FFFFFFFF000000000C00000000000000010000000000000000000000000000000000000003A8020000000000C000000000000046409D05229E7ECF11AE5A00AA00A7112B770069006E0064006F0077007300000000000000"   * Creates value "(Default)=31" in key HKEY_CURRENT_USER\software\SandboxAutoExec   * Deletes Registry key HKEY_CURRENT_USER\software\classes\*\shell\sandbox [ Network services ]   * Looks for an Internet connection.   * Queries DNS "rmccurdy.com".   * C:\Program Files\Internet Explorer\IEXPLORE.EXE Connects to "54.212.205.151" on port 80 (TCP - HTTP).   * Downloads file from "rmccurdy.com/scripts/quickclean.exe". [ Process/window/string information ]   * Keylogger functionality.   * Gets user name information.   * Gets input locale identifiers.   * Gets volume information.   * Gets computer name.   * Checks for debuggers.   * Deletes activity traces.   * Creates a mutex "CTF.LBES.MutexDefaultS-1-5-21-436374069-1343024091-1708537768-500".   * Creates a mutex "CTF.Compart.MutexDefaultS-1-5-21-436374069-1343024091-1708537768-500".   * Creates a mutex "CTF.Asm.MutexDefaultS-1-5-21-436374069-1343024091-1708537768-500".   * Creates a mutex "CTF.Layouts.MutexDefaultS-1-5-21-436374069-1343024091-1708537768-500".   * Creates a mutex "CTF.TMD.MutexDefaultS-1-5-21-436374069-1343024091-1708537768-500".   * Creates a mutex "CTF.TimListCache.FMPDefaultS-1-5-21-436374069-1343024091-1708537768-500MUTEX.DefaultS-1-5-21-436374069-1343024091-1708537768-500".   * Creates an event named "SBIE_BOXED_ServiceInitComplete_RpcSs".   * Creates process "c:\Program Files\Internet Explorer\iexplore.exe, "c:\Program Files\Internet Explorer\iexplore.exe" rmccurdy.com/scripts/quickclean.exe, C:\Program Files\Sandboxie".   * Injects code into process "C:\Program Files\Internet Explorer\IEXPLORE.EXE".   * Creates a mutex "Local\_!MSFTHISTORY!_".   * Creates a mutex "Local\c:!documents and settings!administrator!local settings!temporary internet files!content.ie5!".   * Creates a mutex "Local\c:!documents and settings!administrator!cookies!".   * Creates a mutex "Local\c:!documents and settings!administrator!local settings!history!history.ie5!".   * Creates a mutex "Local\!IETld!Mutex".   * Creates a mutex "Local\!BrowserEmulation!SharedMemory!Mutex".   * Creates an event named "Isolation Signal Registry Event (8F78DBEB-B68E-11E3-AF35-0800271871C1, 0)".   * Creates a mutex "RasPbFile".   * Lists all entry names in a remote access phone book.   * Opens a service named "RASMAN".   * Opens a service named "Sens".   * Creates a mutex "ConnHashTable&lt;2396&gt;_HashTable_Mutex".   * Creates a mutex "Local\ZoneAttributeCacheCounterMutex".   * Creates a mutex "Local\ZonesCacheCounterMutex".   * Creates a mutex "Local\ZonesLockedCacheCounterMutex".   * Enables privilege SeLoadDriverPrivilege.   * Enables privilege SeUndockPrivilege.   * Creates a mutex "Local\ZonesCounterMutex".   * Creates process "null, "C:\Program Files\Internet Explorer\IEXPLORE.EXE" SCODEF:2396 CREDAT:14337, C:\Documents and Settings\Administrator\Desktop".   * Creates an event named "Isolation Signal Registry Event (8F78DBEF-B68E-11E3-AF35-0800271871C1, 0)".   * Creates a mutex "MSCTF.Shared.MUTEX.ANH".   * Creates a mutex "Local\c:!documents and settings!administrator!local settings!application data!microsoft!feeds cache!".   * Creates an event named "IEFrame.EventCheckDefaultBrowser".   * Creates an event named "Local\e5c_29".   * Creates a mutex "CritOpMutex".   * Opens a service named "LanmanServer".   * Creates a mutex "MSCTF.Shared.MUTEX.EHK".   * Creates an event named "MSCTF.SendReceive.Event.EHK.IC".   * Creates an event named "MSCTF.SendReceiveConection.Event.EHK.IC".   * Creates an event named "ShellCopyEngineRunning".   * Creates an event named "ShellCopyEngineFinished".   * Creates a mutex "_!SHMSFTHISTORY!_".   * Creates a mutex "Local\c:!documents and settings!administrator!local settings!history!history.ie5!mshist012014031720140318!".   * Creates a mutex "Local\c:!documents and settings!administrator!local settings!history!history.ie5!mshist012014031720140324!".   * Creates a mutex "Local\c:!documents and settings!administrator!local settings!history!history.ie5!mshist012014031820140319!".   * Creates a mutex "Local\c:!documents and settings!administrator!local settings!history!history.ie5!mshist012014032120140322!".   * Creates a mutex "Local\c:!documents and settings!administrator!local settings!history!history.ie5!mshist012014032820140329!".   * Opens a service named "AudioSrv".   * Creates a mutex "MidiMapper_modLongMessage_RefCnt".   * Creates a mutex "MidiMapper_Configure".   * Enables process privileges.   * Sleeps 1244 seconds.</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=21812">operat0r2</a> — Fri Mar 28, 2014 11:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Buster]]></name></author>
+		<updated>2014-03-28T07:49:29-04:00</updated>
+
+		<published>2014-03-28T07:49:29-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100102#p100102</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100102#p100102"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100102#p100102"><![CDATA[
+<a href="http://www.woodmann.com/virusbuster/bsa_188_update_1.rar" class="postlink">http://www.woodmann.com/virusbuster/bsa ... date_1.rar</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=904">Buster</a> — Fri Mar 28, 2014 7:49 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[operat0r2]]></name></author>
+		<updated>2014-03-27T23:04:42-04:00</updated>
+
+		<published>2014-03-27T23:04:42-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100089#p100089</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100089#p100089"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=100089#p100089"><![CDATA[
+Can you send me a link to the BSA binary you are using ? I am still getting "Could not connect to Virus Total" <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> I think its all setup prefect other wise .. I got portable sandboxie with BSA<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=21812">operat0r2</a> — Thu Mar 27, 2014 11:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Buster]]></name></author>
+		<updated>2014-03-16T13:19:59-04:00</updated>
+
+		<published>2014-03-16T13:19:59-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99757#p99757</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99757#p99757"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99757#p99757"><![CDATA[
+There are no proxy settings to connect to Virus Total.<br><br>I just checked and Virus Total information is included correctly in the report.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=904">Buster</a> — Sun Mar 16, 2014 1:19 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[operat0r2]]></name></author>
+		<updated>2014-03-16T13:05:33-04:00</updated>
+
+		<published>2014-03-16T13:05:33-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99756#p99756</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99756#p99756"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99756#p99756"><![CDATA[
+Herm same issue today.  I tried to force proxy the https request though burp but I could not get it to work.  Is there a proxy setting in BSA I can enable to tunnel though ? I plan on doing a nice video when I get most of the tool figured out... I have a Cuckoo Sandbox setup but I am trying to make it portable with eating binds from Security Onion that are unknown... I would like to have this on hand to compare with and test. <br><div class="codebox"><p>CODE: </p><pre><code> Report generated with Buster Sandbox Analyzer 1.88 at 13:00:44 on 16/03/2014 [ General information ]   * File name: C:\Windows\System32\cmd.exe   * MD5 hash: ad7b9c14083b52bc532fba5948342b98   * VirusTotal detections:       Could not connect to Virus Total [ Changes to filesystem ]   * Creates file (hidden) C:\Windows\SbiePst.dat     MD5 hash: 82812604797f843309bfc8e4a0985879     VirusTotal detections:       Could not connect to Virus Total   * Creates file C:\Users\admin\AppData\Local\Temp\quickvnc.exe     MD5 hash: b393889603ede50ab712eef4548b843e     VirusTotal detections:       Could not connect to Virus Total [ Changes to registry ]   * Creates Registry key HKEY_LOCAL_MACHINE\software\microsoft\SQMClient\Windows   * Modifies value "NukeOnDelete=00000001" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Explorer\BitBucket\Volume\{04dd247d-9de5-11e3-8bcc-fc15b4e931af}          old value empty   * Modifies value "NukeOnDelete=00000001" in key HKEY_CURRENT_USER\software\Microsoft\Windows\CurrentVersion\Explorer\BitBucket\Volume\{a7b37444-9da4-11e3-8cec-806e6f6e6963}          old value empty   * Creates value "(Default)=31" in key HKEY_CURRENT_USER\software\SandboxAutoExec   * Creates value "SandboxieRpcSs.exe=Sandboxie COM Services (RPC)" in key HKEY_CURRENT_USER\software\classes\Local Settings\Software\Microsoft\Windows\Shell\MuiCache\C:\temp2\SandboxiePortable\App\Sandboxie                           binary data=530061006E00640062006F00780069006500200043004F004D002000530065007200760069006300650073002000280052005000430029000000   * Creates value "Start.exe=Sandboxie Start" in key HKEY_CURRENT_USER\software\classes\Local Settings\Software\Microsoft\Windows\Shell\MuiCache\C:\temp2\SandboxiePortable\App\Sandboxie                  binary data=530061006E00640062006F007800690065002000530074006100720074000000   * Creates value "cmd.exe=Windows Command Processor" in key HKEY_CURRENT_USER\software\classes\Local Settings\Software\Microsoft\Windows\Shell\MuiCache\C:\Windows\System32                binary data=570069006E0064006F0077007300200043006F006D006D0061006E0064002000500072006F0063006500730073006F0072000000   * Creates value "wget.exe=wget.exe" in key HKEY_CURRENT_USER\software\classes\Local Settings\Software\Microsoft\Windows\Shell\MuiCache\C:\Windows\System32                 binary data=77006700650074002E006500780065000000 [ Network services ]   * Queries DNS "rmccurdy.com".   * C:\Windows\System32\wget.exe Connects to "54.212.205.151" on port 80 (TCP - HTTP).   * Downloads file from "rmccurdy.com/scripts/quickvnc.exe". [ Process/window/string information ]   * Gets volume information.   * Checks for debuggers.   * Creates process "C:\Windows\system32\wget.exe, wget  -U adsfad http://rmccurdy.com/scripts/quickvnc.exe , C:\Users\admin\AppData\Local\Temp".   * Injects code into process "C:\Windows\System32\wget.exe".   * Enumerates running processes.</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=21812">operat0r2</a> — Sun Mar 16, 2014 1:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Buster]]></name></author>
+		<updated>2014-03-16T06:34:06-04:00</updated>
+
+		<published>2014-03-16T06:34:06-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99747#p99747</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99747#p99747"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99747#p99747"><![CDATA[
+"Could not connect to Virus Total" should mean BSA did net get a response from host.<br><br>Maybe a temporal problem? Virus Total is often down.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=904">Buster</a> — Sun Mar 16, 2014 6:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[operat0r2]]></name></author>
+		<updated>2014-03-15T22:15:53-04:00</updated>
+
+		<published>2014-03-15T22:15:53-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99745#p99745</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99745#p99745"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99745#p99745"><![CDATA[
+Thanks!<br><br>Looks like Virustotal changed something can't seem to get anything to connect. <br>* if I goto the redirected url I get <br><br><br>* working: <a href="https://www.virustotal.com/en/file/17f746d82695fa9b35493b41859d39d786d32b23a9d2e00f4011dec7a02402ae/analysis/" class="postlink">https://www.virustotal.com/en/file/17f7 ... /analysis/</a><br>* what we get forwarded in BSA to (broken?) <a href="https://www.virustotal.com/file/ad7b9c14083b52bc532fba5948342b98/analysis/" class="postlink">https://www.virustotal.com/file/ad7b9c1 ... /analysis/</a><br>* looks like you send a MD5 and get redirected to a SHA1 or someshit ? <br><div class="codebox"><p>CODE: </p><pre><code> [ General information ]   * File name: C:\Windows\System32\cmd.exe   * MD5 hash: ad7b9c14083b52bc532fba5948342b98   * VirusTotal detections:       Could not connect to Virus Total [ Changes to filesystem ]   * Creates file C:\usb\cmd_scripts\quickvnc.exe.1     MD5 hash: b393889603ede50ab712eef4548b843e     VirusTotal detections:       Could not connect to Virus Total   * Creates file (hidden) C:\Windows\SbiePst.dat     MD5 hash: 82812604797f843309bfc8e4a0985879     VirusTotal detections:       Could not connect to Virus Total</code></pre></div><br><br><br>wireshark<div class="codebox"><p>CODE: </p><pre><code>POST /file/ad7b9c14083b52bc532fba5948342b98/analysis/ HTTP/1.1Accept: */*Content-Length: 6Content-Type: application/x-www-form-urlencodedAccept-Encoding: gzip, deflateHost: http://www.virustotal.comUser-Agent: Mozilla/5.0 (Windows NT 5.1; rv:12.0) Gecko/20100101 Firefox/12.0Connection: Keep-Alivechain=HTTP/1.1 302 FoundLocation: https://www.virustotal.com/file/ad7b9c14083b52bc532fba5948342b98/analysis/Date: Sun, 16 Mar 2014 02:12:18 GMTContent-Type: text/htmlServer: Google FrontendContent-Length: 0Alternate-Protocol: 80:quic,80:quic</code></pre></div>if I goto the 301 I get :<div class="codebox"><p>CODE: </p><pre><code>https://www.virustotal.com/file/ad7b9c14083b52bc532fba5948342b98/analysis/GET /file/ad7b9c14083b52bc532fba5948342b98/analysis/ HTTP/1.1Host: www.virustotal.comUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8Accept-Language: en-US,en;q=0.5Accept-Encoding: gzip, deflateCookie: VT_PREFERRED_LANGUAGE=enConnection: keep-aliveHTTP/1.1 301 Moved PermanentlyCache-Control: no-cache, must-revalidateContent-Language: enContent-Length: 0Content-Type: text/html; charset=utf-8Date: Sun, 16 Mar 2014 02:14:06 GMTExpires: Fri, 01 Jan 1990 00:00:00 GMTLocation: https://www.virustotal.com/en/file/ad7b9c14083b52bc532fba5948342b98/analysis/Pragma: no-cacheServer: Google FrontendSet-Cookie: VT_PREFERRED_LANGUAGE=en; expires=Sun, 23-Mar-2014 02:14:06 GMT; Max-Age=604800; Path=/X-Frame-Options: DENYX-XSS-Protection: 1; mode=blockX-Firefox-Spdy: 3.1----------------------------------------------------------https://www.virustotal.com/en/file/ad7b9c14083b52bc532fba5948342b98/analysis/GET /en/file/ad7b9c14083b52bc532fba5948342b98/analysis/ HTTP/1.1Host: www.virustotal.comUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8Accept-Language: en-US,en;q=0.5Accept-Encoding: gzip, deflateCookie: VT_PREFERRED_LANGUAGE=enConnection: keep-aliveHTTP/1.1 403 ForbiddenContent-Language: enContent-Length: 0Content-Type: text/html; charset=utf-8Date: Sun, 16 Mar 2014 02:14:07 GMTServer: Google FrontendSet-Cookie: VT_PREFERRED_LANGUAGE=en; expires=Sun, 23-Mar-2014 02:14:07 GMT; Max-Age=604800; Path=/Vary: CookieX-Frame-Options: DENYX-XSS-Protection: 1; mode=blockX-Firefox-Spdy: 3.1----------------------------------------------------------</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=21812">operat0r2</a> — Sat Mar 15, 2014 10:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Buster]]></name></author>
+		<updated>2014-03-11T15:27:49-04:00</updated>
+
+		<published>2014-03-11T15:27:49-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99644#p99644</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99644#p99644"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99644#p99644"><![CDATA[
+The non-verbose DLL does not log file/registry operations.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=904">Buster</a> — Tue Mar 11, 2014 3:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[operat0r2]]></name></author>
+		<updated>2014-03-11T12:43:38-04:00</updated>
+
+		<published>2014-03-11T12:43:38-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99638#p99638</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99638#p99638"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99638#p99638"><![CDATA[
+Its seems to run fine on 32bit VM 32bit dll  and in my host windows 7 32bit dll   but it does not apper to have any info about reg changes etc.. missing data ..<br><br>Maybe somebody can post a working Sandboxie.ini I was reading about order of params etc ... maybe it has to do with that ? <br><br><br><br>32bit inject on windows XP VM working but missing registry data etc ..same with win7 32bit dll .. its doing stuff but not picking up registry changes.<br><br>here is my VM INI<div class="codebox"><p>CODE: </p><pre><code>[GlobalSettings]TemplateReject=RoboForm[DefaultBox]InjectDll=c:\bsa\LOG_API\LOG_API32.DLLConfigLevel=7Template=BlockPortsTemplate=LingerProgramsTemplate=Chrome_Phishing_DirectAccessTemplate=Firefox_Phishing_DirectAccessTemplate=AutoRecoverIgnoreBorderColor=#00FFFF,offEnabled=yOpenWinClass=TFormBSANotifyDirectDiskAccess=yBoxNameTitle=nCopyLimitKb=100152CopyLimitSilent=y[UserSettings_4BC00582]SbieCtrl_HideMEssage=*SbieCtrl_UserName=administratorSbieCtrl_BoxExpandedView=DefaultBoxSbieCtrl_NextUpdateCheck=1394640635SbieCtrl_UpdateCheckNotify=ySbieCtrl_ShowWelcome=nSbieCtrl_ReloadConfNotify=nSbieCtrl_AutoApplySettings=nSbieCtrl_SettingChangeNotify=nSbieCtrl_ExplorerWarn=nSbieCtrl_TerminateWarn=nSbieCtrl_WindowCoords=133,12,837,412SbieCtrl_ActiveView=40021</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=21812">operat0r2</a> — Tue Mar 11, 2014 12:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Buster]]></name></author>
+		<updated>2014-03-11T02:29:09-04:00</updated>
+
+		<published>2014-03-11T02:29:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99627#p99627</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99627#p99627"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99627#p99627"><![CDATA[
+Does it happen the same with the non-verbose version of LOGAPI?<br><br>Do you have the same problem in the host (not inside the VM)?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=904">Buster</a> — Tue Mar 11, 2014 2:29 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[operat0r2]]></name></author>
+		<updated>2014-03-10T17:01:09-04:00</updated>
+
+		<published>2014-03-10T17:01:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99618#p99618</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99618#p99618"/>
+		<title type="html"><![CDATA[Re: [Q] Buster Sandbox Analyzer]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=18465&amp;p=99618#p99618"><![CDATA[
+Oohh THANKS ! it ran that time .. but seems unstable with 64bit DLL notepad crashes on save  and wordpad wont even start ?<br>sandboxie 4.09 <br><br><a href="http://rmccurdy.com/scripts/videos/rmccurdy_com/BSA_issue2.mp4" class="postlink">http://rmccurdy.com/scripts/videos/rmcc ... issue2.mp4</a><br><br><a href="http://pastebin.ca/2653468" class="postlink">http://pastebin.ca/2653468</a> ( api VERBOSE  logs )<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=21812">operat0r2</a> — Mon Mar 10, 2014 5:01 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25545&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:00:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Windows 7 WITHOUT KB3033929 + Sbie5.24 -- C0000428 -- Service startup error level 9153 - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Windows 7 WITHOUT KB3033929 + Sbie5.24 -- C0000428 -- Service startup error level 9153</h2>
+		<p><a href="viewtopic98dd98dd.html?f=11&amp;t=25545">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25545</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>Re: Windows 7 + sbie5.24 -- C0000428 -- Service startup error level 9153</h3>
+				<div class="date">Posted: <strong>Tue Mar 13, 2018 1:10 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">All,<br>
+<br>
+Please provide the info I requested above at your best convenience. We are still investigating this issue. <br>
+I am setting up different VMs to see if I can repro the behavior, but I need more info to properly set up the environment. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 7 + sbie5.24 -- C0000428 -- Service startup error level 9153</h3>
+				<div class="date">Posted: <strong>Tue Mar 13, 2018 2:06 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">UPDATE:<br>
+<br>
+I can repro this issue on Win 7 x64 without SP1 or any updates.<br>
+The issue does not seem to affect up-to-date installations. <br>
+<br>
+This problem seems to be related to the fact that outdated versions of Windows 7 do not have the ability to use SHA 256:<br>
+<a href="https://docs.microsoft.com/en-us/security-updates/SecurityAdvisories/2015/3033929" class="postlink">https://docs.microsoft.com/en-us/securi ... 15/3033929</a><br>
+<br>
+We are still investigating and looking at options to address this. In the meantime, the workarounds would be to update your Windows installation as explained on the link above,  or use the beta we posted on a previous response to this thread. <br>
+<br>
+One more question:<br>
+Are you all using Clean installs of Win 7, or you have upgraded from Win XP to 7? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 7 + sbie5.24 -- C0000428 -- Service startup error level 9153</h3>
+				<div class="date">Posted: <strong>Tue Mar 13, 2018 2:30 pm</strong></div>
+				<div class="author">by <strong>guy213</strong></div>
+				<div class="content">I use <span style="text-decoration: underline">clean</span> install of Windows 7 ultimate 64 bit (<span style="text-decoration: underline">without</span> sp1)<br>
+<br>
+<span style="text-decoration: underline">Only</span> installed in Windows update the following: <br>
+Update for Windows (KB958488)<br>
+Windows Update Agent 7.6.7600.256<br>
+Windows Defender (Latest update)<br>
+<br>
+I don't use any anti-virus software.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 7 + sbie5.24 -- C0000428 -- Service startup error level 9153</h3>
+				<div class="date">Posted: <strong>Tue Mar 13, 2018 2:48 pm</strong></div>
+				<div class="author">by <strong>d09s4</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopica270a270.html?p=132748#p132748" data-post-id="132748" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Mar 13, 2018 2:06 pm</div></cite>
+<br>
+One more question:<br>
+Are you all using Clean installs of Win 7, or you have upgraded from Win XP to 7? 
+</div></blockquote>
+
+I use clean install of Windows 7 Home Basic x64 with SP1</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 7 NO SP1 + Sbie5.24 -- C0000428 -- Service startup error level 9153</h3>
+				<div class="date">Posted: <strong>Tue Mar 13, 2018 2:55 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Very strange to see people using "clean" Win 7 installs. That means you are wide open to a lot of publicly known OS vulnerabilities and exploits.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 7 NO SP1 + Sbie5.24 -- C0000428 -- Service startup error level 9153</h3>
+				<div class="date">Posted: <strong>Tue Mar 13, 2018 2:57 pm</strong></div>
+				<div class="author">by <strong>d09s4</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist52ea.html?mode=viewprofile&amp;u=20645">Curt@invincea</a> wrote: <a href="viewtopic21742174.html?p=132752#p132752" data-post-id="132752" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Mar 13, 2018 2:55 pm</div></cite>
+Very strange to see people using "clean" Win 7 installs. That means you are wide open to a lot of publicly known OS vulnerabilities and exploits.
+</div></blockquote>
+
+You are right but please fix this issue <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 7 NO SP1 + Sbie5.24 -- C0000428 -- Service startup error level 9153</h3>
+				<div class="date">Posted: <strong>Tue Mar 13, 2018 8:32 pm</strong></div>
+				<div class="author">by <strong>CPB</strong></div>
+				<div class="content">I experienced this issue too when I installed v5.24 earlier today, but found this thread and made a few updates referenced from the Microsoft link above, and now v5.24 installs and works fine.  Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 7 WITHOUT KB3033929 + Sbie5.24 -- C0000428 -- Service startup error level 9153</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 5:02 pm</strong></div>
+				<div class="author">by <strong>windyctyprog</strong></div>
+				<div class="content">Same here, can't get the new version to launch:<br>
+<br>
+Sandboxie Start<br>
+---------------------------<br>
+SBIE2331 Service start failed:  [22 / 5] Access is denied. <br>
+<br>
+Sandboxie Start<br>
+---------------------------<br>
+The Sandboxie driver (SbieDrv) is not available to sandbox programs. Make sure both the driver and Sandboxie service (SbieSvc) have started successfully.<br>
+<br>
+ <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> <br>
+<br>
+Win7, SP1 is not installed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 7 WITHOUT KB3033929 + Sbie5.24 -- C0000428 -- Service startup error level 9153</h3>
+				<div class="date">Posted: <strong>Fri Mar 16, 2018 5:09 pm</strong></div>
+				<div class="author">by <strong>windyctyprog</strong></div>
+				<div class="content">Ah, ha...<br>
+<br>
+The suggestion of installing 5.23.5 64 Bit worked, no issues.<br>
+<br>
+I have never, in all of the time I've been using Sandboxie for some 5 years now, had any installation issues, not one.<br>
+<br>
+Has been smooth sailing since Day 1... <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Unable to install latest version 5.24</h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2018 8:59 am</strong></div>
+				<div class="author">by <strong>Peter980</strong></div>
+				<div class="content">Today i tried to upgrade Sandboxie but after the upgrade i couldn't start Sandboxie. This is the error i get and i think it is because of unsigned driver that was not installed properly:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+</code></pre></div>
+
+<br>
+I am using Windows 7 x64. Reverted back to 5.22.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Unable to install latest version 5.24</h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2018 2:06 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Peter, you are having this issue because your W7 doesn't have Sp 1. Read this thread.<br>
+<br>
+<a href="viewtopic98dd98dd.html?f=11&amp;t=25545" class="postlink">viewtopic.php?f=11&amp;t=25545</a><br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Unable to install latest version 5.24</h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2018 2:32 pm</strong></div>
+				<div class="author">by <strong>Peter980</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistef77.html?mode=viewprofile&amp;u=2542">bo.elam</a> wrote: <a href="viewtopic58b258b2.html?p=132871#p132871" data-post-id="132871" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sat Mar 17, 2018 2:06 pm</div></cite>
+Peter, you are having this issue because your W7 doesn't have Sp 1. Read this thread.
+</div></blockquote>
+
+But i have Service Pack 1 installed. I have this version: 6.1.7601 Service Pack 1 Build 7601</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Unable to install latest version 5.24</h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2018 11:01 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Sorry, Peter, I dont know what to tell you other than perhaps try reinstalling Sandboxie. Use the installer to uninstall. Also, check as suggested by Barb the signatures of the SbieDrv.sys. Mine look proper in W7. Read this post.<br>
+<a href="viewtopic98dd98dd.html?f=11&amp;t=25545#p132736" class="postlink">viewtopic.php?f=11&amp;t=25545#p132736</a><br>
+<br>
+I have Sandboxie 5.24 in my W7, all looks and works good. I started my W7 to see if I could get a clue on what to suggest but the things I checked, like see if I had KB3033929, came out to nothing. I thought if I had KB3033929 and you dont, then perhaps installing it would solve your issue. But I dont have that package (according to search, and I dont have a problem).  Check the signatures and reinstall.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Major screw up with the update!</h3>
+				<div class="date">Posted: <strong>Mon Mar 19, 2018 5:38 am</strong></div>
+				<div class="author">by <strong>John connor</strong></div>
+				<div class="content">I had this same trouble with my other laptop. <br>
+<br>
+
+<blockquote class="uncited"><div>SBIE1102 Sandboxie driver (SbieDrv) unloading<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760<br>
+SBIE9234 Service startup error level 9153 status=C0000428 error=-1073740760
+</div></blockquote>
+
+<br>
+<br>
+What gives? I need this to work. It's my only defense against malware.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Major screw up with the update!</h3>
+				<div class="date">Posted: <strong>Mon Mar 19, 2018 5:49 am</strong></div>
+				<div class="author">by <strong>John connor</strong></div>
+				<div class="content">Got it to work with a link in the other topic for 5.23.5.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25545&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:00:28 GMT -->
+</html>

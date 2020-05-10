@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25032&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:51:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Forced Folders vs. Forced Programs, Pros &amp; Cons?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Forced Folders vs. Forced Programs, Pros &amp; Cons?</h2>
+		<p><a href="viewtopic89b289b2.html?f=17&amp;t=25032">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25032</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Forced Folders vs. Forced Programs, Pros &amp; Cons?</h3>
+				<div class="date">Posted: <strong>Fri Oct 27, 2017 9:49 am</strong></div>
+				<div class="author">by <strong>Special</strong></div>
+				<div class="content">Are there any reasons to do one vs. the other? Performance perhaps?<br>
+<br>
+Lets say I have 30 programs I want to sandbox, all under the same folder like "C\Programs", each program is in their own sub folder there, with many sub folders of their own, ect., basically hundreds of folders and thousands of files in total if I just Forced Folder "C\Programs". <br>
+<br>
+I'd imagine it takes time for SB to parse all this and there will be performance hits, correct? So I should go the tedious way and manually add each .exe to the Forced Program list instead, right?<br>
+<br>
+Also I guess this applies to Quick Recovery too, lets say 3 of my programs dump their settings to "C:\ProgramData\ProgramX(Y)(Z)" Would it be better to do one Quick Recovery Folder set to "C:\ProgramData"  to cover them all, or should I do each individual folder?<br>
+<br>
+Also is there a way to set up a Forced Folder (such as "C\Programs" but have SB only do .exe files and ignore all other fluff files like .ini files and .txt files?)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Folders vs. Forced Programs, Pros &amp; Cons?</h3>
+				<div class="date">Posted: <strong>Fri Oct 27, 2017 10:56 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Special,<br>
+<br>
+There are several threads about ForceFolder/ForceProcess. Here are some that might help you :<br>
+<a href="viewtopicc7d3c7d3.html?p=106682#p106682" class="postlink">viewtopic.php?p=106682#p106682</a><br>
+<a href="viewtopic4a88-24a88.html?p=117909#p117909" class="postlink">viewtopic.php?p=117909#p117909</a><br>
+<br>
+Regarding using one over the other due to performance concerns, I received this response from the devs:
+<blockquote class="uncited"><div>The Sandboxie driver decides (kernel based) to sandbox a process based on a number of factors: is the parent process sandboxed, is the process forced, is the path to the process forced ... and so on.  To do this Sandboxie needs to look at every process launch on the system to determine to sandbox or not to sandbox by checking all the factors. Thus, there is no more overhead using forced folders.  Technically, process folders will be a few microseconds faster since the path (forced folder) is checked before the process (forced process) is checked.  Only one trigger is used to this.</div></blockquote>
+
+ForceFolder is an all or nothing type of setting. You either Sandbox everything in the folder, or you don't (in which case you will need to use ForceProcess).  Depending on what you are trying to do, these threads might come in handy:<br>
+<a href="viewtopice743e743.html?p=63747#p63747" class="postlink">viewtopic.php?p=63747#p63747</a><br>
+<a href="viewtopicd93e-2d93e.html?p=84974#p84974" class="postlink">viewtopic.php?p=84974#p84974</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Folders vs. Forced Programs, Pros &amp; Cons?</h3>
+				<div class="date">Posted: <strong>Fri Oct 27, 2017 12:17 pm</strong></div>
+				<div class="author">by <strong>Special</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopicc0a2c0a2.html?p=130855#p130855" data-post-id="130855" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Oct 27, 2017 10:56 am</div></cite>
+Regarding using one over the other due to performance concerns, I received this response from the devs:
+<blockquote class="uncited"><div>The Sandboxie driver decides (kernel based) to sandbox a process based on a number of factors: is the parent process sandboxed, is the process forced, is the path to the process forced ... and so on.  To do this Sandboxie needs to look at every process launch on the system to determine to sandbox or not to sandbox by checking all the factors. Thus, there is no more overhead using forced folders.  Technically, process folders will be a few microseconds faster since the path (forced folder) is checked before the process (forced process) is checked.  Only one trigger is used to this.</div></blockquote>
+
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+This is interesting, I would've figure it was the other way around here since being more "precise" in telling SB where to look would make it more efficient, but it also makes sense that by being more "general" with the pathing also lets SB just stop sooner without looking deeper into it, if that makes any sense. Or am I off base here?<br>
+<br>
+EDIT: So I'm looking to revise my "Quick Recovery" setup, so would SB devs recommend just setting this location as "C:\Users\NAME\AppData" to cover any possible thing vs. a specific location like "C:\Users\NAME\AppData\Roaming\ProgramXYZ" where that is the folder your after?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Folders vs. Forced Programs, Pros &amp; Cons?</h3>
+				<div class="date">Posted: <strong>Fri Oct 27, 2017 12:42 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Special,<br>
+<br>
+Per the dev's explanation above, Sandboxie checks for the path first, but the process for checking is still the same. You are saving microseconds if using ForceFolder vs ForceProcess, so it should not be a noticeable difference. <br>
+<br>
+You can look at our documentation for Quick Recovery setups:<br>
+<a href="../RecoverFolder.html" class="postlink">https://www.sandboxie.com/RecoverFolder</a><br>
+<a href="../ShellFolders.html" class="postlink">https://www.sandboxie.com/ShellFolders</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Folders vs. Forced Programs, Pros &amp; Cons?</h3>
+				<div class="date">Posted: <strong>Fri Oct 27, 2017 12:56 pm</strong></div>
+				<div class="author">by <strong>Special</strong></div>
+				<div class="content">Okay, so basically just use whatever is easier and "cleaner" to setup.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Folders vs. Forced Programs, Pros &amp; Cons?</h3>
+				<div class="date">Posted: <strong>Fri Oct 27, 2017 4:27 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">In my opinion, is best to combine using both features and the sandboxed Windows explorer to sandbox all files and programs that run in your computer. For example, in my computers, all files that run, run sandboxed every time they run during their lifetime, in which sandbox and under which feature feature they run, depends where they are located. So, I dont choose using one feature over the other. Both have their place.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Forced Folders vs. Forced Programs, Pros &amp; Cons?</h3>
+				<div class="date">Posted: <strong>Fri Oct 27, 2017 8:47 pm</strong></div>
+				<div class="author">by <strong>nanana1</strong></div>
+				<div class="content">Like Bo said, I also used both to sandboxie my computer security, for example: I “forced program” run my browsers sandboxied and downloaded all files into my Downloads folder which I “forced folder”. Only when I am satisfied the downloaded files are cleaned with my anti-virus software do I move out of the “forced folder”. <br>
+Everything else run sandboxied.  <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25032&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:51:16 GMT -->
+</html>

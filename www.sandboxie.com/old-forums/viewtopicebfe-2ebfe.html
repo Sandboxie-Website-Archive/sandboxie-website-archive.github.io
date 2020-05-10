@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=23251&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:28:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Thanks but be prepared...</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Thanks but be prepared...</h2>
+		<p><a href="viewtopic6bad6bad.html?f=5&amp;t=23251">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=23251</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Thanks but be prepared...</h3>
+				<div class="date">Posted: <strong>Sat Aug 13, 2016 9:50 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">First off, I'd like to give you all a <span style="text-decoration: underline"><strong>HUGE thanks</strong></span> for the back to school sale. It was <em>perfect timing</em> and <span style="text-decoration: underline">very much</span> appreciated here! We grabbed another license and I'm currently working on integrating SBIE into the PC [PC in my wording being 'a' computer not necessarily a desktop] our kid(s) will be using shortly.<br>
+<br>
+I already ran into one hiccup regarding 'User Accounts' but managed to figure that one out just as I was writing a PM to <span style="text-decoration: underline">nag Craig</span> about it [my mistake there]. Be prepared though I may soon have thoughts or questions with areas or scenarios I haven't encountered on my own machine and of course I will desire <em>quick</em> aid! :P So yeah, end of this random rant... /yay 'Anything Else'<br>
+<br>
+P.S.:<br>
+First question:<br>
+I normally visit often [and hate auto-updates for anything in general (even windows), I like to control all that on my machine] and so I normally have auto-updates disabled.<br>
+<br>
+I currently have the SBIE beta on that PC <span style="text-decoration: underline">so will it still get an update alert for an official release with a beta installed</span>?<br>
+<br>
+Second Question:<br>
+I'm hoping to have the ability to delete certain sandboxes on close (which requires sbiectrl at this time) [along with quick recovery? maybe?] but want to avoid having the icon displayed/accessible in the tray for my kid(s) account.<br>
+<br>
+<span style="text-decoration: underline">Is there any type of /hide option where it could remain running and operational but not be in the notification area to be seen or messed with?</span><br>
+<br>
+I've already enabled the edit and admin only options for the ini so it can't be disabled/changed etc but would like to take it a tad further to the mostly 'invisible' but still fully operational sector. I'm tempted to loop back around to an old suggestion where I thought deletion should be handled by the primary sbie service anyway but for this instance I'd really be happy with <strong><em><span style="text-decoration: underline">just</span></em></strong> a way to prevent sbiectrl from being shown in the notification area on the initial start (logon for a specific user) through a simple option/flag/switch... eg altering a specific run link or adding a switch such as /hide:kid [kid being a username in this case] that could be appended to the startup shortcut or someplace in the ini that is later processed but still results in no tray sbiectrl for said user via that path. Obviously I'm not asking for anything that prevents them from launching sbiectrl manually and seeing it later but for kid(s) the age I'm talking about that's unlikely to happen anyway.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Thanks but be prepared...</h3>
+				<div class="date">Posted: <strong>Mon Aug 22, 2016 5:30 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">OK I ran into an issue in regards to SRP with dll rules enabled. I've worked around it for now but I'd appreciate any information in regards to why or how this occurs so that I can possibly figure out a better solution.<br>
+<br>
+This error pops up when the WizardGraphicalClient (actual game) for Wizard101 is launched and only when SRP dll rules are restricted with a default security level of Disallowed. The game folder is defined as 'Unrestricted'. So is Program Files where SBIE is installed...
+<blockquote class="uncited"><div>SBIE2327 Error in COM Server: [31 / 0]</div></blockquote>
+The game still functions but I wanted to 'fix' the issue rather than hide and ignore the Error...<br>
+I found that the Event Log also had an error at the same time,
+<blockquote class="uncited"><div>Event 1, UAC<br>
+The process failed to handle ERROR_ELEVATION_REQUIRED during the creation of a child process.</div></blockquote>
+
+The workaround I've applied for now was to add "C:\Program Files\Sandboxie" as Unrestricted which also fixes another quirk where SRP would block the Crypto.exe of SBIE.<br>
+<br>
+With that rule added it no longer issues any errors and nothing in the event log. It's working. It's weird because the default rule of Program Files being Unrestricted really should have allowed all that anyway....<br>
+<br>
+So I'm confused as to why it's happening but as I found that little quirk in SRP isn't limited to SBIE, (offtopic) I also had to add C:\Program Files\WindowsApps as a separate rule or Apps from the store wouldn't work.<br>
+<br>
+Is there something special with SBIE that might explain why SRP rules weren't being applied properly (as in how I expected) with just the default Program Files rule? The only thing I can come up with is related to ANONYMOUS LOGON/AppContainer....but then why do those new rules work? /headache<br>
+<br>
+P.S. The machine I'm setting up is Windows 10 Pro x64</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Thanks but be prepared...</h3>
+				<div class="date">Posted: <strong>Mon Aug 22, 2016 9:17 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Figured out the SRP issue finally. Turns out it was related to the 'default' SRP rules!<br>
+<br>
+Particularly the use of 'Registry Path Rules'<br>
+<br>
+Removing these and explicitly adding both Program Files paths and Windows solved all the above issues (without extra rules) with SBIE, AppX (Store apps) and even another one I only just noticed before testing this fix on a whim.<br>
+<br>
+<strong>Bad MS</strong> - Fix that [DEFAULT] reg path issue when dll restrictions are enabled!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Thanks but be prepared...</h3>
+				<div class="date">Posted: <strong>Tue Aug 23, 2016 12:31 am</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Geesh has it been that long? I can't edit the above post so here goes another random extra <strong>unrelated to SBIE</strong> but I felt like venting so here it goes...<br>
+<br>
+I found another issue, this time with the Windows Defender Network Inspection Service.<br>
+
+<blockquote class="uncited"><div>Event ID 3002, Windows Defender<br>
+Windows Defender Real-Time Protection feature has encountered an error and failed.<br>
+     Feature: Network Inspection System<br>
+     Error Code: 0x80004005<br>
+     Error description: Unspecified error<br>
+     Reason: The system is missing updates that are required for running Network Inspection System.  Install the required updates and restart the computer.</div></blockquote>
+
+Google didn't help and just about every page I landed on was in regards to MSE and the 'solution' was normally something along the lines of an uninstall and then reinstall of MSE. Welp, I'm working on Win 10 and it's integrated so there is no uninstall/reinstall option. The other ones suggesting that I remove certain .dat files also didn't help...<br>
+<br>
+Manually checking for updates didn't show anything odd either...<br>
+<br>
+After a bit of testing I found this error only popped up when the DLL SRP was enabled (Imagine that).<br>
+<br>
+It turns out that MS didn't take their own guidelines into account for Windows Defender and some needed files (dlls) live inside a ProgramData folder.<br>
+<br>
+"C:\ProgramData\Microsoft\Windows Defender\Definition Updates" hold dlls for updates and the 'Windows Defender Network Inspection Service' won't start correctly without (only at boot) it...resulting in the service not running at startup along with the above event log error. Oddly enough manually starting it or using a script to start it after login seemed to work just fine.... /NewHeadache<br>
+<br>
+Once I added the Definition Updates folder as Unrestricted the problem was solved upon reboot - no more errors and the service starts on boot!<br>
+<br>
+Either way, problem solved but shame on MS for not following their own guidelines with such an 'important' piece of the OS in Windows 10 and making me waste my time figuring this mess out... /MadFace? At least they altered the NTFS security permissions so that the location isn't a potential entry for malware via a LUA. /NotQuiteAsMadFace?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Thanks but be prepared...</h3>
+				<div class="date">Posted: <strong>Wed Aug 24, 2016 5:59 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Just a minor update/correction.<br>
+<br>
+The...
+<blockquote class="uncited"><div>
+Event 1, UAC<br>
+The process failed to handle ERROR_ELEVATION_REQUIRED during the creation of a child process.
+</div></blockquote>
+event still happens occasionally (not nearly as often) but I haven't bothered to investigate it further just yet as everything still works. I can confirm it only happens when I'm testing my kids setup and launching the games within SBIE. Never seen these on Win7 with the same games so it seems to be related to either Win10 or some global policy restriction that isn't present on my machine but active there.<br>
+If I get around to figuring it out I'll try to remember to update this thread further.<br>
+<br>
+yes, I realize at this point I'm talking to myself but that's nothing new :P</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=23251&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:28:42 GMT -->
+</html>

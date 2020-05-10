@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=19093&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:47:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Local templates for SRWare Iron v32 and later</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Local templates for SRWare Iron v32 and later</h2>
+		<p><a href="viewtopic0bf40bf4.html?f=5&amp;t=19093">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=19093</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Local templates for SRWare Iron v32 and later</h3>
+				<div class="date">Posted: <strong>Sat Jun 07, 2014 12:24 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">While investigating with "Boxed In" in <a href="viewtopice6cbe6cb.php?f=11&amp;t=19071" class="postlink">this post</a>, as to why the template for SRWare Iron does not save bookmarks out of the sandbox, this is what we found:<br>
+<br>
+For the last few versions (since approximately v32, to the current v35) SRWare Iron has been changed so that "iron.exe" is only used to start "chrome.exe".<br>
+Most of the Sandboxie templates for Iron will not work for these recent versions, because they specify "iron.exe" instead of "chrome.exe".<br>
+(Also, the templates for Chrome will not work because the Chrome profile files are not at the same hard drive location as the Iron profile files)<br>
+<br>
+The following are local templates that can be added to the sandboxie.ini configuration file.<br>
+At a bare minimum, users of the latest SRWare Iron versions should add the Local Phishing template to the sandbox settings for their Iron (v32 and later) sandbox. This will allow Iron to keep its unsandboxed Safe Browsing phishing files up to date, while you are running Iron sandboxed.<br>
+<br>
+Instructions on how to add a local template, and how to then apply the template to the settings for a sandbox, is described in the "Notes:" section at the bottom of this post. I suggest that you Copy/Paste the remainder of this post into a Notepad document, so that you can add the template(s) to your configuration file while you are off-line.<br>
+(These templates are NOT intended for use with any portable version of Iron)<br>
+--------------------------------<br>
+<br>
+[Template_Local_Iron_Phishing_DirectAccess]<br>
+Tmpl.Title=Allow direct access to Iron (v32 and later) phishing database<br>
+Tmpl.Class=Local<br>
+OpenFilePath=chrome.exe,%Local AppData%\Chromium\User Data\Safe Browsing*<br>
+<br>
+<br>
+[Template_Local_Iron_Bookmarks_DirectAccess]<br>
+Tmpl.Title=Allow direct access to Iron (v32 and later) bookmarks<br>
+Tmpl.Class=Local<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Bookmarks*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Favicons*<br>
+<br>
+<br>
+[Template_Local_Iron_History_DirectAccess]<br>
+Tmpl.Title=Allow direct access to Iron (v32 and later) bookmarks and history database files<br>
+Tmpl.Class=Local<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Bookmarks*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Favicons*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\History*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Current *<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Last *<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Top Sites*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Visited Links*<br>
+<br>
+<br>
+[Template_Local_Iron_Cookies_DirectAccess]<br>
+Tmpl.Title=Allow direct access to Iron (v32 and later) cookies<br>
+Tmpl.Class=Local<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Cookies*<br>
+<br>
+<br>
+[Template_Local_Iron_Passwords_DirectAccess]<br>
+Tmpl.Title=Allow direct access to Iron (v32 and later) passwords<br>
+Tmpl.Class=Local<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Login Data*<br>
+<br>
+<br>
+[Template_Local_Iron_Preferences_DirectAccess]<br>
+Tmpl.Title=Allow direct access to Iron (v32 and later) preferences and forms data<br>
+Tmpl.Class=Local<br>
+Comment=Iron's own settings should be saved in the Preferences file<br>
+Comment=Search engine choice, auto fill data, (and more?) are saved in Web Data<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Preferences*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Web Data*<br>
+<br>
+<br>
+[Template_Local_Iron_Profile_DirectAccess]<br>
+Tmpl.Title=Allow direct access to entire Iron (v32 and later) profile folder<br>
+Tmpl.Class=Local<br>
+Comment=Note: you still need to use the Phishing template if you use this template<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\*<br>
+<br>
+<br>
+[Template_Local_Iron_Force]<br>
+Tmpl.Title=Force SRWare Iron to run in this sandbox (Registered version only)<br>
+Tmpl.Class=Local<br>
+Comment=For SRWare Iron v32 and later, iron.exe starts chrome.exe<br>
+Comment=This template added here for convenience. The original Iron Forcing template still works<br>
+ForceProcess=iron.exe<br>
+<br>
+-----------------------------<br>
+Notes:<br>
+It's recommended that you add only those templates that you will use, because at some point Sandboxie Control will start prompting you that there are unused templates, and ask if you want to delete them. If you don't want the unused templates to be deleted, you would answer No to that prompt.<br>
+<br>
+To add one or more Local templates to your configuration file:<br>
+- Copy the text, from one of the above templates, to the Clipboard.<br>
+- In Sandboxie Control's window: right-click the sandbox name &gt; click Sandbox Settings.<br>
+- Then: Applications &gt; Local &gt; click the "Create New" button.<br>
+- Paste the Clipboard contents into the Create New window, then click OK.<br>
+- If you will be adding additional Local templates: Copy the template to the Clipboard; use the "Create New" button again; Paste the Clipboard contents into the window; then click OK.<br>
+<br>
+When you have finished adding the Local templates, you MUST then select each template in the list and click the "Add" button, to apply the template to the settings for that sandbox.<br>
+OK your way out when finished.<br>
+<br>
+Advanced users could copy multiple templates into the configuration file using Configure &gt; Edit Configuration, but they must still be applied to the sandbox using the Add button at Sandbox Settings &gt; Applications &gt; Local</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Local templates for SRWare Iron v32 and later</h3>
+				<div class="date">Posted: <strong>Sat Jun 07, 2014 2:31 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Invincea could revise templates.ini to work with the <strong>old and newer</strong> Iron versions.<br>
+Users: Do Not Add These To Your Sandboxie.ini file<br>
+The names are the same as templates in the templates.ini file and will therefore conflict with them.<br>
+<br>
+Something like:<br>
+<br>
+<br>
+[Template_Iron_Bookmarks_DirectAccess]<br>
+Tmpl.Title=#4356,SRWare Iron<br>
+Tmpl.Class=WebBrowser<br>
+OpenFilePath=iron.exe,%Tmpl.Iron%\Bookmarks*<br>
+OpenFilePath=iron.exe,%Tmpl.Iron%\Thumbnails*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Bookmarks*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Favicons*<br>
+<br>
+[Template_Iron_History_DirectAccess]<br>
+Tmpl.Title=#4336,SRWare Iron<br>
+Tmpl.Class=WebBrowser<br>
+OpenFilePath=iron.exe,%Tmpl.Iron%\Bookmarks*<br>
+OpenFilePath=iron.exe,%Tmpl.Iron%\Thumbnails*<br>
+OpenFilePath=iron.exe,%Tmpl.Iron%\*History*<br>
+OpenFilePath=iron.exe,%Tmpl.Iron%\Current *<br>
+OpenFilePath=iron.exe,%Tmpl.Iron%\Last *<br>
+OpenFilePath=iron.exe,%Tmpl.Iron%\Visited Links*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Bookmarks*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Favicons*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\History*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Current *<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Last *<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Top Sites*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Visited Links*<br>
+<br>
+[Template_Iron_Cookies_DirectAccess]<br>
+Tmpl.Title=#4328,SRWare Iron<br>
+Tmpl.Class=WebBrowser<br>
+OpenFilePath=iron.exe,%Tmpl.Iron%\Cookies*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Cookies*<br>
+<br>
+[Template_Iron_Passwords_DirectAccess]<br>
+Tmpl.Title=#4331,SRWare Iron<br>
+Tmpl.Class=WebBrowser<br>
+OpenFilePath=iron.exe,%Tmpl.Iron%\Login Data*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Login Data*<br>
+<br>
+[Template_Iron_Preferences_DirectAccess]<br>
+Tmpl.Title=#4339,SRWare Iron<br>
+Tmpl.Class=WebBrowser<br>
+OpenFilePath=iron.exe,%Tmpl.Iron%\Preferences*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Preferences*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\Web Data*<br>
+<br>
+[Template_Iron_Profile_DirectAccess]<br>
+Tmpl.Title=#4338,SRWare Iron<br>
+Tmpl.Class=WebBrowser<br>
+OpenFilePath=iron.exe,%Tmpl.Iron%\*<br>
+OpenFilePath=chrome.exe,%Tmpl.Iron%\*<br>
+<br>
+<br>
+[Template_Chrome_Phishing_DirectAccess]<br>
+Tmpl.Title=#4337,Google Chrome<br>
+Tmpl.Class=WebBrowser<br>
+ProcessGroup=&lt;ChromePrograms&gt;,chrome.exe,dragon.exe,iron.exe,opera.exe,maxthon.exe<br>
+OpenFilePath=&lt;ChromePrograms&gt;,%Local AppData%\Google\Chrome\User Data\Safe Browsing* <br>
+OpenFilePath=&lt;ChromePrograms&gt;,%Local AppData%\Google\Chrome\User Data\Certificate Revocation Lists<br>
+OpenFilePath=&lt;ChromePrograms&gt;,%Local AppData%\Chromium\User Data\Safe Browsing*</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=19093&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:47:37 GMT -->
+</html>

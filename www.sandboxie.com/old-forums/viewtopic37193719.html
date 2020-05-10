@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=19163&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:43:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Does and can SBIE4 protect against win32k.sys vulnerability?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Does and can SBIE4 protect against win32k.sys vulnerability?</h2>
+		<p><a href="viewtopic06fa06fa.html?f=5&amp;t=19163">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=19163</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Does and can SBIE4 protect against win32k.sys vulnerability?</h3>
+				<div class="date">Posted: <strong>Wed Jun 25, 2014 10:51 am</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content">Hello, everybody.<br>
+I have one question that tortures me for some time.<br>
+Big thank you to chris1341 and Malwar for the following informations.<br>
+Here it is:<br>
+<br>
+s far as I know, the exploit is win32k.sys-is it true that Google Chrome protects against this exploit, and SBIE4 does not protect against win32k.sys?<br>
+Ok, I know that this most likely patched long time ago, but I am asking you this, because I was told that win32k.sys is an exploit does not need to start/run, and that's why it is able to bypass SBIE4 protection?<br>
+<br>
+Here is my configuration in SBIE4:<br>
+ClosedFilePath=%Personal%\My Downloads\(block your personal info from malware)<br>
+ClosedFilePath=%Personal%\My Music\<br>
+ClosedFilePath=%Personal%\My Pictures\<br>
+ClosedFilePath=%My Video%\<br>
+ClosedFilePath=\Device\Mup\<br>
+ClosedFilePath=C:\WINDOWS\system\<br>
+ClosedFilePath=C:\WINDOWS\system32\kernel32.dll (It could say kernel64.dll instead of kernel32.dll depending on the operating system 32-bit or 64-bit)<br>
+ClosedFilePath=C:\WINDOWS\system32\t2embed.dll<br>
+ClosedFilePath=C:\WINDOWS\system32\win32k.sys<br>
+ClosedFilePath=!,InternetAccessDevices<br>
+ClosedIpcPath=!,*<br>
+<br>
+As you can see I blocked those vulnerable dlls, and also I blocked win32k.sys, but from what I've heard is that win32k.sys bypassses SBIE4 because the only attacks that beat SBIE3 and 4 are kernel-level exploits (that do not require to start/run/execute), but these same exploits beat Google Chrome as well.'' They beat Chrome but it can be patched unlike SBIE which cannot be patched against wins32k.sys exploito_O<br>
+Is this trueo_O<br>
+<br>
+I don't know if SBIE can fix this bypass or not, but I'm wondering if Google Chrome can be patched to protect against all kinds of exploits (including kernel-level exploits that do not need to start/run).<br>
+<br>
+Also, keep in mind that if the following is true that we're looking at a handful at most changes in SBIE and 980 CVEs in Chrome in the last 5 years. That's because they do different things.<br>
+<br>
+To look at how much work goes into Chrome to keep it safe take a look here:<br>
+<br>
+<a href="http://www.cvedetails.com/product/15031/Google-Chrome.html?vendor_id=1224" class="postlink">http://www.cvedetails.com/product/15031 ... or_id=1224</a><br>
+<br>
+I can't remember an ITW Chrome specific exploit but seem to remember some plug-ins were exploited because they run at higher integrity. I can think of 2 POCs that Tzuk issued security fixes for. What he was doing in the background regularly we'll never know.<br>
+Chrome had many fixes for security so was vulnerable to those attack vectors but how many were being used in actual exploits I'm not sure.<br>
+For it seems the only answer to this question is how many exploits (including kernel-level exploits that do not need to start/run) can Chrome block and be patched to protect against and against how many exploits (including kernel-level exploits that do not need to start/run) SBIE4 can be patched to protect against?<br>
+<br>
+This is why I decided to do what I think it's the best for me: I use SBIE4 for Mozilla Firefox and for Internet Explorer, but I do not use SBIE4 with Google Chrome, I use Chrome unsandboxed.<br>
+Is it true that no matter how tight you configure sbie 3 or 4 it can be bypassed by the win32k.sys exploit-the reason SBIE can not block win32k.sys is because win32k.sys does not need anything to run to access the kernel-is this true?<br>
+<br>
+Big thank you for your time and patience. <br>
+<br>
+<br>
+Also, is the following true, Fleischmann said:<br>
+"Exploit a Chrome tab and you have extremely restricted file-system and registry access (not even read and write for both in all cases), you can't <br>
+create new processes, can't read the clipboard and many other things. Exploit an Anti-Virus and you have admin rights, lol."<br>
+<br>
+Does and can SBIE protect the same?<br>
+<br>
+However like Rasheed said it would be interesting to see how many attacks Chrome would be able to block compared to all other web-browsers and SBIE.<br>
+<br>
+The reason Chrome does not have the start/run restrictions of sandboxie is because it does not need them because it has no read/write to the file system. Chrome protects against drive-by malware-what about SBiE?<br>
+<br>
+Also, Malwar said this:<br>
+I've been using sandboxie for about 3 years and still use it, but I use Chrome for browsing since it has a sandbox and sandboxie for everything I download. The reason Chrome is stronger then sandboxie is because it has NO read or write to the whole file system, also sandboxie relies on a driver and Chrome relies on Windows mechanisms.<br>
+<br>
+The reason Chrome does not have the start/run restrictions of sandboxie is because it does not need them because it has no read/write to the file system. Chrome protects against drive-by malware.<br>
+<br>
+<strong>Also, please not that Chrome broker runs at medium while SBIE broker runs at high integrity level. This could in theory be the reason why SBIE might fail and Chrome might pass when the exploit manages to escape out of the low right sandbox.<br>
+Honestly, I know SBIE has a incredible track record (and that's why I use it), so I doubt any vulnerabilities would not be patched by now.</strong><br>
+<br>
+Maybe Invincea can say something about this, since they have total review on how SBIE 3 and 4 work, and maybe they can say if SBIE has been patched against win32k.sys vulnerability?<br>
+Big thanks in advance, again.<br>
+<br>
+What is here true and what is a myth?<br>
+This is all I want to know, big thank you, in advance, for your expert opinions, and big thank you for your time and patience!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Fri Jun 27, 2014 12:15 am</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">I will clarify a few things.  kernel32.dll is always called kernel32.dll -- even in 64 bit Windows.  It is always loaded into every Windows app.  win32k.sys is a Windows kernel driver.  It contains the kernel side of the Windows session manager (you can look these up in wikipedia for more information).  Your ClosedFilePath settings in sandboxie.ini have no effect.  You can't block a driver with ClosedFilePath.<br>
+<br>
+Kernel exploits, Chrome, Sandboxie, etc. have been discussed in many forums.  You can start with this thread <a href="viewtopicb325b325.php?f=17&amp;t=18098" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 17&amp;t=18098</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Sat Jun 28, 2014 11:36 am</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>I will clarify a few things.  kernel32.dll is always called kernel32.dll -- even in 64 bit Windows.  It is always loaded into every Windows app.  win32k.sys is a Windows kernel driver.  It contains the kernel side of the Windows session manager (you can look these up in wikipedia for more information).  Your ClosedFilePath settings in sandboxie.ini have no effect.  You can't block a driver with ClosedFilePath.<br>
+<br>
+Kernel exploits, Chrome, Sandboxie, etc. have been discussed in many forums.  You can start with this thread <a href="viewtopicb325b325.php?f=17&amp;t=18098" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 17&amp;t=18098</a></div></blockquote>
+
+So, what you're saying is that if operating system is not patched, this win32k.sys cannot be protected by SBIE?<br>
+Than how can Chrome protect against win32k.sys vulnerability (yes I know it is patched, but what happens in the case if it is not patched), and SBIE can't?<br>
+Sure Chrome had far more vulnerabilities than SBIE and it needed to be patched much, much more than SBIE, but it truly depends how much Chrome and SBIE can be patched and than protect against all kinds of vulnerabilities, it seems to me that Chrome is in advantage over SBIE in that area (so far from what I know about both SBIE and Chrome), that's all, big thanks anyway.<br>
+<br>
+However, all this does not change my trust into Invincea and SBIE, I always prefer SBIE over Chrome, but that's just me, I can't talk about for others, although I can see many users of SBIE, if not all of them, will fully agree with me.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Thu Aug 28, 2014 2:22 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">I'm bringing this back up because there is still some confusion in various forums.<br>
+<br>
+The particular win32k.sys kernel exploit that Lumberjack is referring to is known as the TrueType Font vulnerability (<a href="https://technet.microsoft.com/library/security/ms11-087" class="postlink">https://technet.microsoft.com/library/security/ms11-087</a>).  The reason that Chrome was not affected by this is because Chrome had their own font parsing library from several years earlier (<a href="https://code.google.com/p/chromium/issues/detail?id=146254" class="postlink">https://code.google.com/p/chromium/issu ... ?id=146254</a>) that rejected these malformed fonts.  So, their code never ran into the vulnerability.  And from what I can tell from Chrome's  writeup, it looks like Firefox also used the Chrome library so they never hit the bug either.<br>
+<br>
+By the time this bug was made public, the problem had been fixed by Microsoft and a patch released.  What our competitor did for their report was to use an unpatched version of Windows.  Effectively, they exploited a kernel bug that no longer existed.<br>
+<br>
+So you cannot say that "Chrome can protect against a kernel vulnerability but Sandboxie can't".  It just so happens that in this case, they never hit the vulnerability.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Fri Aug 29, 2014 9:12 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Interesting Curt!<br>
+<br>
+From a quick look at that Chrome link, it sounds like they're referring to a library checking/validating fonts before finally passing them to Windows...? <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> From your post initially, I thought they were completely "handling" fonts themselves (whatever that entails).<br>
+<br>
+If just checking before passing to Windows, I wonder if this catches ANY sort of malformed fonts? (I'm not sure how it could, else Windows could/would be perfect?) Of course if it's a <em>complete</em> implementation, it wouldn't be affected by the same vulnerabilities as Windows' kernel, but other possible ones (but just in user-mode).<br>
+<br>
+When I thought I wouldn't have XP updates any longer, I was thinking I'd have to disable custom font downloads in Firefox to avoid these recurring font problems, but it seems that might not be necessary! Of course not an issue for myself now with the continued XP Embedded updates, but still curious for myself and others!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Thu Sep 18, 2014 5:06 pm</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>I'm bringing this back up because there is still some confusion in various forums.<br>
+<br>
+The particular win32k.sys kernel exploit that Lumberjack is referring to is known as the TrueType Font vulnerability (<a href="https://technet.microsoft.com/library/security/ms11-087" class="postlink">https://technet.microsoft.com/library/security/ms11-087</a>).  The reason that Chrome was not affected by this is because Chrome had their own font parsing library from several years earlier (<a href="https://code.google.com/p/chromium/issues/detail?id=146254" class="postlink">https://code.google.com/p/chromium/issu ... ?id=146254</a>) that rejected these malformed fonts.  So, their code never ran into the vulnerability.  And from what I can tell from Chrome's  writeup, it looks like Firefox also used the Chrome library so they never hit the bug either.<br>
+<br>
+By the time this bug was made public, the problem had been fixed by Microsoft and a patch released.  What our competitor did for their report was to use an unpatched version of Windows.  Effectively, they exploited a kernel bug that no longer existed.<br>
+<br>
+So you cannot say that "Chrome can protect against a kernel vulnerability but Sandboxie can't".  It just so happens that in this case, they never hit the vulnerability.</div></blockquote>
+
+Curt, allow me to ask you one more question I just saw on wilder security about Google Chrome:<br>
+My honest apology in advance, I truly hope yu will find some time to answer this (hopefully), big thanks in advance:<br>
+<br>
+The poster from Wilders security forums posted this:<br>
+"Exploit a Chrome tab and you have extremely restricted file-system and registry access (not even read and write for both in all cases), you can't create new processes, can't read the clipboard and and you cannot do many other things that are not mentioned (I wonder what things that might be). Exploit an Anti-Virus and you have admin rights-I wonder if, is newest version of Sandboxie 4 (when properly and tightly configured) is that tough?<br>
+What about Sandboxie 3.76?"<br>
+<br>
+I have the same questins here about SBIE4 as well-hopefully you can shed some light here Curt.<br>
+<br>
+So does SBIE4 and SBIE 3.76 protect the same as Google Chrome does, if not can SBIE be configured to protect exactly the same as Google Chrome does (by having extremely restricted file-system and registry access (not even read and write for both in all cases), you can't create new processes, can't read the clipboard and and you cannot do many other things)?<br>
+<br>
+In what way SBIE3 and 4 beat Google Chrome when it comes to security and protection?<br>
+<br>
+Also, an other poster wrote this about Google Chrome:<br>
+"It totally isolates the code you are running in your browser using the OS internal mechanism: simply brilliant.<br>
+Only coding errors (exploits) in the underlying WIndows OS or inside the components Chrome itself uses could cause intrusions, it is that strong.<br>
+It is a theoretical near 100% (practical 100% is impossible, because every man made software or product could have errors)."<br>
+<br>
+"Charle Miller quote on Chrome security: There are bugs in Chrome, but they’re very hard to exploit. I have a Chrome vulnerability right now but I don’t know how to exploit it. It’s really hard. They’ve got that sandbox model that’s hard to get out of. With Chrome, it’s a combination of things — you can’t execute on the heap, the OS protections in Windows and the Sandbox."<br>
+<br>
+Chrome's sandbox is indeed a strong security solution (especially with --safe-plugins), but not against all types of threats. You can't compare it to Sandboxie for example.<br>
+Chrome's sandboxing is very strong against exploits and drive-by downloads, but not against ordinary malware (trojans etc.) and phishing threats. Microsoft's SmartScreen filter is unmatched in that area.<br>
+That is why I have always hoped that Internet Explorer 9 would feature the same sandboxing techniques as Chrome does, however IE9 only partially sandboxes. Since the combination of Chrome's sandboxing and Microsoft's SmartScreen filter would be unbeatable. Combine that perfect browser with built-in security measures (Windows Firewall, operating system hardening with assistance from EMET), backup and a system image and an on-demand scanner (Hitman Pro is the perfect candidate) and you have have bulletproof protection."<br>
+<br>
+"Yes, it (Google Chrome) even has become better with LOW instead of UNTRUSTED as lowest integrity rights level and its own flash and PDF versions."<br>
+<br>
+So, I have just one question right now:<br>
+Is this all really true about Google Chrome and how hard is to exploit it?<br>
+Is SBiE4 that you are now working on so tough (you said nothing has been exploited while and independent security company tested SBIE4's code-whatever that means)?<br>
+Is SBIE4 right now equally tough to exploits and drive-by downloads as Google Chrome 37 and was it before the version 4 came out?<br>
+What can you tell right now about SBIE4 security and protection when you compare it with Google Chrome 37?<br>
+<br>
+It looks like that all those vulnerabilities of Google Chrome are totally useless when it to vulnerabilities from this website-<a href="http://web.nvd.nist.gov/view/vuln/search-results?query=chrome&amp;search_type=all&amp;cves=on" class="postlink">http://web.nvd.nist.gov/view/vuln/searc ... ll&amp;cves=on</a>, because none knows how to exploit any of those Google Chrome's vulnerabilities.<br>
+<br>
+So what is the story with SBIE4 when it comes to all of these mentioned questions?<br>
+Big thank you for all the answers you can give me Curt, and big thank you for the time if you find to read and answer these questions?<br>
+<br>
+In all of the posts I quoted here from Wilder security posters I quoted what is really true about Google Chrome's and SBIE4's protection and security and what is a myth, that is what I'd like to know (if you don't mind)?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Fri Sep 19, 2014 2:07 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked">  <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked">  wow that is a big one.  I am working up a response that hopefully will clarify the differences between Chrome sandbox &amp; Sandboxie.  So please be patient.<br>
+<br>
+In the meantime,  in regards to the TrueType Font vulnerability that is the subject of this thread, I post this from <a href="http://dev.chromium.org/developers/design-documents/sandbox/Sandbox-FAQ" class="postlink">http://dev.chromium.org/developers/desi ... andbox-FAQ</a><br>
+
+<blockquote class="uncited"><div>The sandbox cannot provide any protection against bugs in system components such as the kernel it is running on.</div></blockquote>
+
+Both Chrome sandbox and Sandboxie are vulnerable to kernel exploits.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Fri Sep 19, 2014 2:47 pm</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite><img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked">  <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked">  wow that is a big one.  I am working up a response that hopefully will clarify the differences between Chrome sandbox &amp; Sandboxie.  So please be patient.<br>
+<br>
+In the meantime,  in regards to the TrueType Font vulnerability that is the subject of this thread, I post this from <a href="http://dev.chromium.org/developers/design-documents/sandbox/Sandbox-FAQ" class="postlink">http://dev.chromium.org/developers/desi ... andbox-FAQ</a><br>
+
+<blockquote class="uncited"><div>The sandbox cannot provide any protection against bugs in system components such as the kernel it is running on.</div></blockquote>
+
+Both Chrome sandbox and Sandboxie are vulnerable to kernel exploits.</div></blockquote>
+
+Curt, I want to thank you for your upcoming response about the differences Google Chrome and Sandboxie4, again thank you for having enough time and patience for this.<br>
+You're the man.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Fri Oct 03, 2014 3:08 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">The largest and most important difference between Chrome sandbox and Sandboxie is Sandboxie is designed to protect any application.  Chrome sandbox only protects applications running under Chrome.   If you download an executable in Chrome (webmail attachment, installer, etc.) and execute it, it runs outside the Chrome sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Fri Oct 03, 2014 5:27 pm</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>The largest and most important difference between Chrome sandbox and Sandboxie is Sandboxie is designed to protect any application.  Chrome sandbox only protects applications running under Chrome.   If you download an executable in Chrome (webmail attachment, installer, etc.) and execute it, it runs outside the Chrome sandbox.</div></blockquote>
+
+I see, thanks for explanation.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Fri Oct 03, 2014 5:45 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Another major difference is that Sandboxie uses a kernel mode driver combined with user-mode hooks.  Chrome Sandbox only uses user-mode hooks -- it does not have a kernel mode driver.  User-mode hooks can easily be bypassed. Sandboxie uses the Windows kernel to ensure that system changes are made only inside the sandbox.<br>
+<br>
+I am unsure if Chrome can protect plugins that are running outside of Chrome as stand-alone applications (such as Java and Flash).  This is from the Chromium FAQ:<br>
+"(In Chromium, the renderer processes are sandboxed and have this protection. Plugins for Chromium do not yet run inside the sandbox, because many are designed with the assumption that they have full access to the local system. Also note that Chromium renderer processes are isolated from the system, but not yet from the web. Therefore, domain-based data isolation is not yet provided)."<br>
+ <br>
+List of Chrome vulnerabilities:<br>
+<a href="http://web.nvd.nist.gov/view/vuln/search-results?query=chrome&amp;search_type=all&amp;cves=on" class="postlink">http://web.nvd.nist.gov/view/vuln/searc ... ll&amp;cves=on</a><br>
+<br>
+Another difference is that the Chrome sandbox settings are all hard-coded inside Chrome.  Sandboxie has a rich set of user-customizable settings.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Sat Oct 04, 2014 12:34 pm</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Another major difference is that Sandboxie uses a kernel mode driver combined with user-mode hooks.  Chrome Sandbox only uses user-mode hooks -- it does not have a kernel mode driver.  User-mode hooks can easily be bypassed. Sandboxie uses the Windows kernel to ensure that system changes are made only inside the sandbox.<br>
+<br>
+I am unsure if Chrome can protect plugins that are running outside of Chrome as stand-alone applications (such as Java and Flash).  This is from the Chromium FAQ:<br>
+"(In Chromium, the renderer processes are sandboxed and have this protection. Plugins for Chromium do not yet run inside the sandbox, because many are designed with the assumption that they have full access to the local system. Also note that Chromium renderer processes are isolated from the system, but not yet from the web. Therefore, domain-based data isolation is not yet provided)."<br>
+ <br>
+List of Chrome vulnerabilities:<br>
+<a href="http://web.nvd.nist.gov/view/vuln/search-results?query=chrome&amp;search_type=all&amp;cves=on" class="postlink">http://web.nvd.nist.gov/view/vuln/searc ... ll&amp;cves=on</a><br>
+<br>
+Another difference is that the Chrome sandbox settings are all hard-coded inside Chrome.  Sandboxie has a rich set of user-customizable settings.</div></blockquote>
+
+I wonder if the following is true for Chrome:<br>
+Design principles<br>
+<br>
+<strong>Do not re-invent the wheel: It is tempting to extend the OS kernel with a better security model. Don't.</strong> Let the operating system apply its security to the objects it controls. On the other hand, it is OK to create application-level objects (abstractions) that have a custom security model.<br>
+Principle of least privilege: This should be applied both to the sandboxed code and to the code that controls the sandbox. In other words, the sandbox should work even if the user cannot elevate to super-user.<br>
+Assume sandboxed code is malicious code: For threat-modeling purposes, we consider the sandbox compromised (that is, running malicious code) once the execution path reaches past a few early calls in the main() function. In practice, it could happen as soon as the first external input is accepted, or right before the main loop is entered.<br>
+Be nimble: Non-malicious code does not try to access resources it cannot obtain. In this case the sandbox should impose near-zero performance impact. It's ok to have performance penalties for exceptional cases when a sensitive resource needs to be touched once in a controlled manner. This is usually the case if the OS security is used properly.<br>
+Emulation is not security: Emulation and virtual machine solutions do not by themselves provide security. The sandbox should not rely on code emulation, code translation, or patching to provide security.<br>
+<br>
+Sandbox windows architecture<br>
+<br>
+<strong>The Windows sandbox is a user-mode only sandbox. There are no special kernel mode drivers,</strong> and the user does not need to be an administrator in order for the sandbox to operate correctly. The sandbox is designed for 32-bit processes and has been tested on Windows 2000, Windows XP 32 bits, and Windows Vista 32 and 64 bits.<br>
+<br>
+Sandbox operates at process-level granularity. Anything that needs to be sandboxed needs to live on a separate process. The minimal sandbox configuration has two processes: one that is a privileged controller known as the broker, and one or more sandboxed processes known as the target. Throughout the documentation and the code these two terms are used with that precise connotation. The sandbox is provided as a static library that must be linked to both the broker and the target executables.<br>
+<br>
+<br>
+<strong>Other caveats<br>
+The operating system might have bugs. Of interest are bugs in the Windows API that allow the bypass of the regular security checks. If such a bug exists, malware will be able to bypass the sandbox restrictions and broker policy and possibly compromise the computer. Under Windows, there is no practical way to prevent code in the sandbox from calling a system service.</strong><br>
+<br>
+<br>
+Sandboxie in contrast, does reinvent the wheel and gives you kernel mode sandboxing which is more robust.<br>
+<br>
+Now if the following is correct for Sandboxie, things from than have changed, maybe:<br>
+How does Sandboxie protect me, technically?<br>
+<br>
+Sandboxie extends the operating system (OS) with sandboxing capabilities by blending into it. Applications can never access hardware such as disk storage directly, they have to ask the OS to do it for them. <strong>Since Sandboxie integrates into the OS, it can do what it does without risk of being circumvented.</strong><br>
+<br>
+The following classes of system objects are supervised by Sandboxie: Files, Disk Devices, Registry Keys, Process and Thread objects, Driver objects, and objects used for Inter-process communication: Named Pipes and Mailbox Objects, Events, Mutexs (Mutants in NT speak), Semaphores, Sections and LPC Ports. For some more information on this, see Sandbox Hierarchy.<br>
+<br>
+Sandboxie also takes measures to prevent programs executing inside the sandbox from hijacking non-sandboxed programs and using them as a vehicle to operate outside the sandbox.<br>
+<br>
+Sandboxie also prevents programs executing inside the sandbox from loading drivers directly. It also prevents programs from asking a central system component, known as the Service Control Manager, to load drivers on their behalf. In this way, drivers, and more importantly, rootkits, cannot be installed by a sandboxed program.<br>
+<br>
+What do you think, Curt?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Sat Oct 04, 2014 12:45 pm</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Another major difference is that Sandboxie uses a kernel mode driver combined with user-mode hooks.  Chrome Sandbox only uses user-mode hooks -- it does not have a kernel mode driver.  User-mode hooks can easily be bypassed. Sandboxie uses the Windows kernel to ensure that system changes are made only inside the sandbox.<br>
+<br>
+I am unsure if Chrome can protect plugins that are running outside of Chrome as stand-alone applications (such as Java and Flash).  This is from the Chromium FAQ:<br>
+"(In Chromium, the renderer processes are sandboxed and have this protection. Plugins for Chromium do not yet run inside the sandbox, because many are designed with the assumption that they have full access to the local system. Also note that Chromium renderer processes are isolated from the system, but not yet from the web. Therefore, domain-based data isolation is not yet provided)."<br>
+ <br>
+List of Chrome vulnerabilities:<br>
+<a href="http://web.nvd.nist.gov/view/vuln/search-results?query=chrome&amp;search_type=all&amp;cves=on" class="postlink">http://web.nvd.nist.gov/view/vuln/searc ... ll&amp;cves=on</a><br>
+<br>
+Another difference is that the Chrome sandbox settings are all hard-coded inside Chrome.  Sandboxie has a rich set of user-customizable settings.</div></blockquote>
+
+Also, regarding those vulnerabilities of Chrome, the real question if any of these Chrome's vulnerabilities mentioned on the link would be able to bypass Chrome's security mechanisms to completely disable Chrome or not?<br>
+Regarding plugins, I'm not even sure if it's possible to sandbox those plugins or not.<br>
+Also, it is not possible to as far as I know to isolate Chrome form the web either.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Sat Nov 08, 2014 12:04 pm</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>Another major difference is that Sandboxie uses a kernel mode driver combined with user-mode hooks.  Chrome Sandbox only uses user-mode hooks -- it does not have a kernel mode driver.  User-mode hooks can easily be bypassed. Sandboxie uses the Windows kernel to ensure that system changes are made only inside the sandbox.<br>
+<br>
+I am unsure if Chrome can protect plugins that are running outside of Chrome as stand-alone applications (such as Java and Flash).  This is from the Chromium FAQ:<br>
+"(In Chromium, the renderer processes are sandboxed and have this protection. Plugins for Chromium do not yet run inside the sandbox, because many are designed with the assumption that they have full access to the local system. Also note that Chromium renderer processes are isolated from the system, but not yet from the web. Therefore, domain-based data isolation is not yet provided)."<br>
+ <br>
+List of Chrome vulnerabilities:<br>
+<a href="http://web.nvd.nist.gov/view/vuln/search-results?query=chrome&amp;search_type=all&amp;cves=on" class="postlink">http://web.nvd.nist.gov/view/vuln/searc ... ll&amp;cves=on</a><br>
+<br>
+Another difference is that the Chrome sandbox settings are all hard-coded inside Chrome.  Sandboxie has a rich set of user-customizable settings.</div></blockquote>
+
+Curt, 2 very quick questions, first question: Does Sandboxie (3x and 4x versions) use a kernel mode driver combined with user-mode hooks <strong>on both 32-bit and 64-bit versions</strong>?<br>
+<br>
+Second very quick question: Does Sandboxie (3x and 4x versions) use the Windows kernel to ensure that system changes are made only inside the sandbox <strong>on both 32-bit and 64-bit versions</strong>?<br>
+Big thanks in advance.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Sun Nov 09, 2014 10:10 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Lumberjack wrote:</cite>
+<br>
+Curt, 2 very quick questions, first question: Does Sandboxie (3x and 4x versions) use a kernel mode driver combined with user-mode hooks <strong>on both 32-bit and 64-bit versions</strong>?<br>
+<br>
+Second very quick question: Does Sandboxie (3x and 4x versions) use the Windows kernel to ensure that system changes are made only inside the sandbox <strong>on both 32-bit and 64-bit versions</strong>?<br>
+Big thanks in advance.</div></blockquote>
+Yes to both questions.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=19163&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:43:43 GMT -->
+</html>

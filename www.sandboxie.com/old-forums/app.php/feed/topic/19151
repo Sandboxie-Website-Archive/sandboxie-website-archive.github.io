@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/19151" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2014-11-10T10:16:33-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/19151</id>
+
+		<entry>
+		<author><name><![CDATA[Mr.X]]></name></author>
+		<updated>2014-11-10T10:16:33-04:00</updated>
+
+		<published>2014-11-10T10:16:33-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104576#p104576</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104576#p104576"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104576#p104576"><![CDATA[
+@Julian<br>This is the right forum to post problems and questions regarding Sandboxie releases. <br>Look, by reading these two post of rpljhun:<br><a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?p=104563#p104563" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 63#p104563</a><br><a href="http://forums.sandboxie.com/phpBB3/viewtopic.php?p=104563#p104563" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 63#p104563</a> <br>and what I told you in my previous post you can easily workaround the issue.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16759">Mr.X</a> — Mon Nov 10, 2014 9:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Mr.X]]></name></author>
+		<updated>2014-11-07T21:29:51-04:00</updated>
+
+		<published>2014-11-07T21:29:51-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104539#p104539</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104539#p104539"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104539#p104539"><![CDATA[
+<blockquote><div><cite>Julian wrote:</cite><blockquote><div><cite>Buster wrote:</cite><blockquote><div><cite>Curt@invincea wrote:</cite>What are the APIs causing problems?</div></blockquote>It is a problem in Sandboxie but I have no idea where it is located. All I can do is send you a malware you can use for testing and you track down to the origin of the problem.<br><br>You know there is a bug because you already found one related to this issue. Somewhere in Sandboxie code there is still a problem.</div></blockquote>I see something similar with Internet Download Manager and Chrome 38 x64:<br>Chrome is started sandboxed, IDM too (or isn't running at all). But when IDM is started/accessed via Chrome's browser plug-in, another IDM session starts outside of Sandboxie and is able to write outside of the sandbox.<br>This happens although IDM compatibility is unchecked in Sandboxie.<br>Dangerous?</div></blockquote>I worked around the same issue by forcing IDM to run sandboxed but really don't know whether dangerous.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16759">Mr.X</a> — Fri Nov 07, 2014 8:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Julian]]></name></author>
+		<updated>2014-11-07T11:21:52-04:00</updated>
+
+		<published>2014-11-07T11:21:52-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104529#p104529</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104529#p104529"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104529#p104529"><![CDATA[
+<blockquote><div><cite>Buster wrote:</cite><blockquote><div><cite>Curt@invincea wrote:</cite>What are the APIs causing problems?</div></blockquote>It is a problem in Sandboxie but I have no idea where it is located. All I can do is send you a malware you can use for testing and you track down to the origin of the problem.<br><br>You know there is a bug because you already found one related to this issue. Somewhere in Sandboxie code there is still a problem.</div></blockquote>I see something similar with Internet Download Manager and Chrome 38 x64:<br>Chrome is started sandboxed, IDM too (or isn't running at all). But when IDM is started/accessed via Chrome's browser plug-in, another IDM session starts outside of Sandboxie and is able to write outside of the sandbox.<br>This happens although IDM compatibility is unchecked in Sandboxie.<br>Dangerous?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2862">Julian</a> — Fri Nov 07, 2014 10:21 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Dun]]></name></author>
+		<updated>2014-11-06T12:57:51-04:00</updated>
+
+		<published>2014-11-06T12:57:51-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104509#p104509</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104509#p104509"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104509#p104509"><![CDATA[
+Dropped rights for Chrome is a problem for a few months. Sandboxie fixes something then new Chrome version comes and dropped rights doesn't work again.<br>In my personal opinion latest Chrome x64 &amp; Sandboxie 4.14 works slower than first x64 Chrome releases and Sandboxie 4.13-3/4 beta. So I switched to pcxFirefox (x64 Firefox), however some sites are broken on Firefox.<br>Also Chrome with hardware acceleration and flash causes bluescreens for some systems. Not sure if it's the graphics drivers, Chrome itself or something else... I never had bluescreen using Firefox &amp; HTML5 youtube player<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=23338">Dun</a> — Thu Nov 06, 2014 11:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Stone]]></name></author>
+		<updated>2014-11-06T08:46:13-04:00</updated>
+
+		<published>2014-11-06T08:46:13-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104503#p104503</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104503#p104503"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104503#p104503"><![CDATA[
+Any update on the dropped rights issues? Running latest version and still get the following error when launching Chrome (38.0.2115.111 m) (on desktop and laptop) with drop rights box checked.<br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><img src="./../../.https://forums.sandboxie.com/phpBB3/download/file.php?id=159" class="postimage" alt="Screenshot.jpg" onclick="viewableArea(this);" /></dt></dl></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=24293">Stone</a> — Thu Nov 06, 2014 7:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nix]]></name></author>
+		<updated>2014-11-03T18:54:09-04:00</updated>
+
+		<published>2014-11-03T18:54:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104464#p104464</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104464#p104464"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104464#p104464"><![CDATA[
+<blockquote><div><cite>Curt@invincea wrote:</cite><blockquote><div><cite>Nix wrote:</cite>@Curt<br><br>Any update regarding compatibility issue with MalwareBytes Anti-Exploit?!</div></blockquote>The ball is in MB's court.  They are investigating why MBAE is not attempting to inject into Sandboxie.</div></blockquote><br>Thanks Curt..<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=17557">Nix</a> — Mon Nov 03, 2014 5:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Buster]]></name></author>
+		<updated>2014-11-03T16:26:39-04:00</updated>
+
+		<published>2014-11-03T16:26:39-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104461#p104461</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104461#p104461"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104461#p104461"><![CDATA[
+<blockquote><div><cite>Curt@invincea wrote:</cite>What are the APIs causing problems?</div></blockquote>It is a problem in Sandboxie but I have no idea where it is located. All I can do is send you a malware you can use for testing and you track down to the origin of the problem.<br><br>You know there is a bug because you already found one related to this issue. Somewhere in Sandboxie code there is still a problem.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=904">Buster</a> — Mon Nov 03, 2014 3:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2014-11-03T15:31:11-04:00</updated>
+
+		<published>2014-11-03T15:31:11-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104460#p104460</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104460#p104460"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104460#p104460"><![CDATA[
+<blockquote><div><cite>Buster wrote:</cite>What about the bug which causes Sandboxie to return the path to real folder instead sandbox folder?<br><br>You already fixed part of the problem, an issue coming from version 3.x times, but there is still a problem there, in version 4.x.</div></blockquote>What are the APIs causing problems?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Mon Nov 03, 2014 2:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Buster]]></name></author>
+		<updated>2014-11-03T14:10:35-04:00</updated>
+
+		<published>2014-11-03T14:10:35-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104459#p104459</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104459#p104459"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104459#p104459"><![CDATA[
+What about the bug which causes Sandboxie to return the path to real folder instead sandbox folder?<br><br>You already fixed part of the problem, an issue coming from version 3.x times, but there is still a problem there, in version 4.x.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=904">Buster</a> — Mon Nov 03, 2014 1:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2014-11-03T13:56:05-04:00</updated>
+
+		<published>2014-11-03T13:56:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104458#p104458</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104458#p104458"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104458#p104458"><![CDATA[
+<blockquote><div><cite>Nix wrote:</cite>@Curt<br><br>Any update regarding compatibility issue with MalwareBytes Anti-Exploit?!</div></blockquote>The ball is in MB's court.  They are investigating why MBAE is not attempting to inject into Sandboxie.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Mon Nov 03, 2014 12:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nix]]></name></author>
+		<updated>2014-11-03T10:22:41-04:00</updated>
+
+		<published>2014-11-03T10:22:41-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104454#p104454</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104454#p104454"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104454#p104454"><![CDATA[
+@Curt<br><br>Any update regarding compatibility issue with MalwareBytes Anti-Exploit?!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=17557">Nix</a> — Mon Nov 03, 2014 9:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Dun]]></name></author>
+		<updated>2014-11-01T06:22:02-04:00</updated>
+
+		<published>2014-11-01T06:22:02-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104431#p104431</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104431#p104431"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104431#p104431"><![CDATA[
+Chrome uses Segoe UI in settings tab etc. With dropped rights it tries to use it but for some reason  it can't so uses Times New Roman instead. If you copy the text and paste to Word then in both cases it's gonna be Segoe UI. If you look at screenshoot above with dropped rights you know it's Times New Roman. So looks like it can't render any other fonts<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=23338">Dun</a> — Sat Nov 01, 2014 6:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2014-10-31T17:36:39-04:00</updated>
+
+		<published>2014-10-31T17:36:39-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104425#p104425</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104425#p104425"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104425#p104425"><![CDATA[
+Please clarify "Font is broken"<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Fri Oct 31, 2014 5:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Dun]]></name></author>
+		<updated>2014-10-31T12:29:58-04:00</updated>
+
+		<published>2014-10-31T12:29:58-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104418#p104418</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104418#p104418"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104418#p104418"><![CDATA[
+Curt@: ~6 people, yes, so it's not just me. Things you mentioned were first thing I've tried lately and few sandboxie versions back.<br>Does any of your testing machines use non-english os/chrome locale?<br><br>I deleted all extensions and bring back default chrome configuration. After that disabled Bitdefender service in safe mode to prevent startup and renamed the main Bitdefender folder. Then disabled some third party services and started Windows in 'Diagnostic startup mode' to be sure nothing than basic windows services are running. Of course needed to start sandboxie service manually when rebooted. Nothing changed.<br><br><a href="http://iv.pl/images/62204468679361237166.jpg" class="postlink"><img src="http://iv.pl/images/62204468679361237166_thumb.jpg" class="postimage" alt="Image"></a><br><br>Font is broken like always when dropped rights are enabled. 3x chrome and 6x sandboxie processes. Chrome works fine if dropped rights option is unticked. the only one idea I have is to change Windows locale back to english but this shouldn't really matter<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=23338">Dun</a> — Fri Oct 31, 2014 12:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2014-10-31T12:26:23-04:00</updated>
+
+		<published>2014-10-31T12:26:23-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104417#p104417</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104417#p104417"/>
+		<title type="html"><![CDATA[Re: 4.13 Beta Available (Latest Version 4.13.7)]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=19151&amp;p=104417#p104417"><![CDATA[
+Dun, regarding the antivirus and other security programs that you are using, for testing to see if one of them is causing your issue, its probably better if you uninstall them instead of disabling.<br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Fri Oct 31, 2014 12:26 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

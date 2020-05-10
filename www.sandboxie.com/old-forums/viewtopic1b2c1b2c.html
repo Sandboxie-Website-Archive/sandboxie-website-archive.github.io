@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1026&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Problem with Adobe Acrobat Professional and SB</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Problem with Adobe Acrobat Professional and SB</h2>
+		<p><a href="viewtopic66006600.html?f=11&amp;t=1026">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=1026</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Problem with Adobe Acrobat Professional and SB</h3>
+				<div class="date">Posted: <strong>Thu Feb 01, 2007 4:17 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">Hi I have a major problem with Adome Acrobat Professional and SB, when I run it sandboxed it always shuts down aster a few secunds with an error message: <br>
+"Activation Requirers that you have administrative rights on this computer ... bla bla bla"<br>
+<br>
+Ofcause outside the SB it works without any problems...<br>
+Deleting SB's cintent does not solve the problem.<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 02, 2007 6:31 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Sandboxie drops only a few administrative rights, as described in<br>
+<br>
+<a href="http://sandboxie.com/phpbb/viewtopic.php?t=877" class="postlink">http://sandboxie.com/phpbb/viewtopic.php?t=877</a><br>
+<br>
+So my guess is that the Acrobat wants to start a driver, which is one of the rights that are dropped.<br>
+<br>
+Try setting<br>
+<br>
+BlockDrivers=n<br>
+<br>
+in Sandboxie.ini.  You should already have BlockDrivers=y as default, so just change that, and try again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 04, 2007 5:34 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">BlockDrivers=n <br>
+Does not helped, I still get this message and it shuts down<br>
+<br>
+btw: it should not realy be related to the admin rights as it usualy runs under a normal (restricted) user account.<br>
+It looks to me like SB changes something that causes Acrobat to think the activation is invalid and try to start the activation tool whitch requirers admin rights.<br>
+So the problem is in the first place why does the sandboxed acrobat reader think the activation is invalid in the first place?<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 04, 2007 2:35 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">That's a good question, but I don't have Adobe Acrobat Professional.  Is it possible Adobe installs a "helper" facility for the activation?  Maybe you can run a trace to see if any Adobe-related resources are blocked.  I don't know if it will help but why not try?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 05, 2007 2:26 pm</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">I found the problem, or better the solution:<br>
+OpenFilePath=Acrobat.exe,\Device\NamedPipe\Adobe LM Service0ECA17E3-C1AE-4b96-89EF-8F8F0D78AF81<br>
+<br>
+btw:<br>
+I noticed "FileTrace" traces a lot more stuff than only file access, <br>
+how about splitting this setting in 2 "FileTrace" for files and "SysTrace" or so for the rest?<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 05, 2007 7:43 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>I found the problem, or better the solution: <br>
+OpenFilePath=Acrobat.exe,\Device\NamedPipe\Adobe LM Service0ECA17E3-C1AE-4b96-89EF-8F8F0D78AF81</div></blockquote>
+
+Great work Owen!  I'm glad to see that the new trace feature is proving itself.<br>
+
+<blockquote class="uncited"><div>how about splitting this setting in 2 "FileTrace" for files and "SysTrace" or so for the rest? </div></blockquote>
+
+Well I prefer PipeTrace, but good idea nevertheless.   <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> <br>
+This will be available as soon as the next beta.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1026&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:41 GMT -->
+</html>

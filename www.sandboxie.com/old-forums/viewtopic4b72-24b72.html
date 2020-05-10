@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24879&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:24:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Symantec / Norton 360 - Unable to launch web browsers - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Symantec / Norton 360 - Unable to launch web browsers</h2>
+		<p><a href="viewtopic4f074f07.html?f=11&amp;t=24879">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24879</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>6</strong></div>
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Tue Sep 12, 2017 3:25 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello all,<br>
+<br>
+I installed Norton Security (trial) 22.10.1.10  on Windows 10 x64 CU.<br>
+I set Internet Explorer set as the default browser and I did not experience any issues launching it Sandboxed (either using the "Run Web  browser" option, or by dragging IE to Sandboxie). <br>
+<br>
+Can you please try creating a new Sandbox with default settings and see if the issue occurs there as well? (If not, delete the contents of your Sandbox and re-try).<br>
+<br>
+Also, try re-setting your Norton settings to default:<br>
+Open Norton, go to "Settings" ---&gt; Firewall Settings, hit "Use Defaults" at the top right. <br>
+Do the same for all of the other settings, reboot and re-try opening IE in a new Sandbox. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Tue Sep 12, 2017 4:40 pm</strong></div>
+				<div class="author">by <strong>Thomas.Weinreich</strong></div>
+				<div class="content">Hi Barb.-,<br>
+without time today, i quick tried two things:<br>
+<br>
+1. Workarround of "deugniet" (Norton Exploit Prevention-setting. Turned it OFF ) - <span style="text-decoration: underline">Result = IE and FF works fine in SB.</span>   <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+2. Setting everything in Norton Security to Firewall Default settings with reboot = This does not work  <img class="smilies" src="images/smilies/icon_neutral.gif" width="15" height="15" alt=":|" title="Neutral"> <br>
+<br>
+I will test on the weekend more....<br>
+<br>
+Regards<br>
+Tom</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Tue Sep 12, 2017 9:11 pm</strong></div>
+				<div class="author">by <strong>stonerd</strong></div>
+				<div class="content">My workaround worked for 2 days, then firefox stopped launching again.<br>
+<br>
+Disabled that norton firewall setting, posted on the previous page, browser is currently working again, no idea if it'll last.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Sep 13, 2017 2:55 am</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content">Did some further testing. Two laptops with the same software (IE11/Firefox 55.0.3/Sandboxie 5.20/Win10 1703 build 15063.608 x64/Norton Security v22.10.1.10): laptop A no problems sandboxing browsers with Norton Exploit Prevention ON and laptop B sandboxing browsers only works with Norton Exploit Prevention OFF.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Sep 13, 2017 2:58 pm</strong></div>
+				<div class="author">by <strong>Thomas.Weinreich</strong></div>
+				<div class="content">Make today a Norton Security Online "Live Update" and get after this a Norton Security Online patch. After i make a reboot and enable after the reboot Norton Exploit Prevention-settings - but it still does'nt work. <br>
+<br>
+-&gt; Disable Norton Exploit Prevention-settings again and all works fine  <img class="smilies" src="images/smilies/icon_neutral.gif" width="15" height="15" alt=":|" title="Neutral"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Sep 13, 2017 3:40 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello,<br>
+<br>
+I am still unable to reproduce the issue. Did you try setting everything to default and re-testing in a new Sandbox? (not just Firewall, but every other setting).<br>
+<br>
+I applied the live update (which included a patch), I rebooted the computer and ensured that Exploit Prevention was still set to "On" under Firewall --&gt; Intrusion and Browser Protection. I launched IE as well as Firefox without issues. <br>
+<br>
+Can I please get you to re-enable the Exploit Prevention option and post the results of the Resource Access Monitor? (Use the "&lt;/&gt;" button to format it).<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+Also, please provide a copy of your Sandboxie configuration file: Configure--&gt; Edit configuration<br>
+Copy-Paste the contents in your post (use the "&lt;/&gt;" to format it).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Thu Sep 14, 2017 5:44 am</strong></div>
+				<div class="author">by <strong>stonerd</strong></div>
+				<div class="content"><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\CdRom0
+(Drive)     \Device\CdRom1
+(Drive)     \Device\CdRom2
+(Drive)     \Device\HarddiskVolume22
+(Drive)     \Device\HarddiskVolume4
+(Drive)     \Device\HarddiskVolume5
+Clsid       -------------------------------
+Clsid       {DCB00C01-570F-4A9B-8D69-199FDBA5723B} NetworkListManager
+Clsid    O  {A47979D2-C419-11D9-A5B4-001185AD2B89} Network List Manager
+File/Key    -------------------------------
+Image       -------------------------------
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\__ComCatalogCache__
+Ipc         \BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \BaseNamedObjects\C__Program Files_Norton 360_NortonData_22.9.3.13_Definitions_IPSDefs_20170913.001
+Ipc         \BaseNamedObjects\CINJR
+Ipc         \BaseNamedObjects\RotHintTable
+Ipc         \BaseNamedObjects\SC_AutoStartComplete
+Ipc         \RPC Control\actkernel
+Ipc         \RPC Control\epmapper
+Ipc         \RPC Control\keysvc
+Ipc         \RPC Control\OLEAE8AA6A917D6F3799BFB57C113FF
+Ipc         \RPC Control\OLED986FB0670703024A841B2C7C437
+Ipc         \Sessions\1\BaseNamedObjects\__ComCatalogCache__
+Ipc         \Sessions\1\BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \Sessions\1\BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \Sessions\1\BaseNamedObjects\C__Program Files_Norton 360_NortonData_22.9.3.13_Definitions_IPSDefs_20170913.001
+Ipc         \Sessions\1\BaseNamedObjects\CINJR
+Ipc         \Sessions\1\BaseNamedObjects\ComPlusCOMRegTable
+Ipc         \Sessions\1\BaseNamedObjects\DbgEng_SqmUpload_Mutex
+Ipc         \Sessions\1\BaseNamedObjects\DbgEngEvent_0000110C
+Ipc         \Sessions\1\BaseNamedObjects\ebad916a-992f-11e7-83ca-448a5bee0cab
+Ipc         \Sessions\1\BaseNamedObjects\ef06b8b3-ab2c-11e5-82f1-448a5bee0cab
+Ipc         \Sessions\1\BaseNamedObjects\RotHintTable
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_10148
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_2652
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_4364
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_6908
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_7700
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_RPCSS_SXS_READY
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceCrypto_Mutex1
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_cryptsvc
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_DcomLaunch
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_Mutex1
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcEptMapper
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\1\BaseNamedObjects\SboxSession
+Ipc         \Sessions\1\BaseNamedObjects\SC_AutoStartComplete
+Ipc         \Sessions\1\BaseNamedObjects\ScmCreatedEvent
+Ipc         \Sessions\1\BaseNamedObjects\WERReportingForProcess10148
+Ipc         \Sessions\1\BaseNamedObjects\WERReportingForProcessComplete10148
+Ipc         \Sessions\1\BaseNamedObjects\windows_shell_global_counters
+Ipc      O  \BaseNamedObjects\CGSCE
+Ipc      O  \BaseNamedObjects\CNDIE
+Ipc      O  \BaseNamedObjects\CSECE
+Ipc      O  \BaseNamedObjects\IDS_STORAGE_MUTEX
+Ipc      O  \KernelObjects\LowMemoryCondition
+Ipc      O  \KernelObjects\MaximumCommitCondition
+Ipc      O  \KernelObjects\MemoryErrors
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\CRYPT32.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\IMM32.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\kernelbase.dll
+Ipc      O  \KnownDlls\MSASN1.dll
+Ipc      O  \KnownDlls\MSCTF.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\NSI.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\SspiCli.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\WLDAP32.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \RPC Control\{2E1A49C3-61E6-4493-86DB-0E758189CBD1}
+Ipc      O  \RPC Control\{99BC7C43-4E11-4904-9A1E-07B1A08754A0}
+Ipc      O  \RPC Control\dhcpcsvc
+Ipc      O  \RPC Control\dhcpcsvc6
+Ipc      O  \RPC Control\DNSResolver
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\LSARPC_ENDPOINT
+Ipc      O  \RPC Control\lsasspirpc
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \RPC Control\senssvc
+Ipc      O  \Security\LSA_AUTHENTICATION_INITIALIZED
+Ipc      O  \Sessions\1\Windows\ApiPort
+Ipc      O  \Sessions\1\Windows\SharedSection
+Ipc      O  \Sessions\1\Windows\Theme1309429082
+Ipc      O  \Sessions\1\Windows\ThemeSection
+Ipc      O  \ThemeApiPort
+Ipc      O  \Windows\Theme2301680200
+Pipe        -------------------------------
+Pipe        \Device\ccSet_{0C55C096-0F1D-4F28-AAA2-85EF591126E7}
+Pipe        \Device\CNG
+Pipe        \Device\Harddisk0\DR0
+Pipe        \Device\HarddiskVolume4
+Pipe        \Device\KsecDD
+Pipe        \Device\MountPointManager
+Pipe        \device\namedpipe\samr
+Pipe        \Device\Ndis
+Pipe        \Device\NDMP146
+Pipe        \Device\NDMP151
+Pipe        \Device\NDMP153
+Pipe        \Device\SYMEFASI
+Pipe     O  \Device\Afd
+Pipe     O  \Device\NetBT_Tcpip_{2E445583-A4A0-417D-8A86-3AF7C399B97D}
+Pipe     O  \Device\NetBT_Tcpip_{585591AA-E04D-4E5C-8139-0767DD4D1448}
+Pipe     O  \Device\NetBT_Tcpip_{773F96FA-7DBE-4A20-9C08-D06656E15E47}
+Pipe     O  \Device\Nsi
+WinCls      -------------------------------
+WinCls   O  Shell_TrayWnd
+WinCls   X  Progman
+</code></pre></div>
+
+^This is what I see in the Resources Access Monitor, when the norton setting is re-enabled, and the browser fails to launch.<br>
+<br>
+I can PM you my sandboxie configuration if you like as well. (its massive). However my firefox box has no special settings (force firefox and utorrent, and auto-delete box when processes terminate).... Only time I touch the configuration myself, is to specify locations of sandboxes on other drives (not browsers).<br>
+<br>
+I also tried disabling addons (ad blocker, youtube downloader) but it made no difference.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Thu Sep 14, 2017 11:17 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello stonerd,<br>
+<br>
+Please do provide the sandboxie configuration file, I am not seeing anything specific in the Res. Acc. Mon.  <br>
+Also, are you using the Norton templates in Sandboxie? (if yes, remove them, if no add them and see if that helps).<br>
+<br>
+I just re-tested and still did not receive any problems.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Thu Sep 14, 2017 11:52 am</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content">@Barb<br>
+<br>
+Do you want a WER.tmp.dmp of a failed sandboxed IE11?<br>
+<br>
+MERGED POST<br>
+If so DM me your mail.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Thu Sep 14, 2017 12:01 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello deugniet (and all) ,<br>
+<br>
+Please provide the info I requested above (Sandboxie config file as well as the Res. Acc. Mon output) so that I can compare the results. <br>
+<br>
+If possible, add a PML log to the mix:.<br>
+Download procmon.exe from <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procmon" class="postlink">https://docs.microsoft.com/en-us/sysint ... ds/procmon</a><br>
+Start procmon and reproduce the issue, then save the log and provide us the link (you will have to upload it to a file hosting website as they tend to be big files).<br>
+If you do not want to post the link here, you can send it to <a href="mailto:support@sandboxie.com">support@sandboxie.com</a> <br>
+<br>
+For the rest of the required information, please either post it in your response, or send me a PM.  <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Thu Sep 14, 2017 12:27 pm</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content">Sent you a mail via <a href="mailto:support@sandboxie.com">support@sandboxie.com</a>. PML-logfile is 14 megabyte. Hope this helps.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Fri Sep 15, 2017 4:13 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">deugniet, <br>
+<br>
+Thank you for your PMs and emails, the devs have been reviewing them and would like to request the wer.tmp file now (you can send it to <a href="mailto:support@sandboxie.com">support@sandboxie.com</a> if you do not want to post it here).<br>
+<br>
+The specific file/location they want is:<br>
+Drive:\Sandbox\&lt;username&gt;\DefaultBox\user\all\Microsoft\Windows\WER\Temp\WERDDA1.tmp.dmp<br>
+<br>
+We are still unable to reproduce the issue so any additional information will be appreciated.<br>
+<br>
+Also, if anybody gets a chance to reinstall Norton and see if that helps, it would be appreciated.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Sun Sep 17, 2017 12:54 pm</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content">@Barb<br>
+<br>
+Reinstalled NS v22.10.1.10. For now I can sandbox both browsers (Firefox 55.0.3 and IE11) with Norton Exploit Protection ON. Sandboxie v5.21.2.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Sun Sep 17, 2017 11:27 pm</strong></div>
+				<div class="author">by <strong>wanghong01</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopice6a3e6a3.html?p=130219#p130219" data-post-id="130219" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Sep 13, 2017 3:40 pm</div></cite>
+Hello,<br>
+<br>
+I am still unable to reproduce the issue. Did you try setting everything to default and re-testing in a new Sandbox? (not just Firewall, but every other setting).<br>
+<br>
+I applied the live update (which included a patch), I rebooted the computer and ensured that Exploit Prevention was still set to "On" under Firewall --&gt; Intrusion and Browser Protection. I launched IE as well as Firefox without issues. <br>
+<br>
+Can I please get you to re-enable the Exploit Prevention option and post the results of the Resource Access Monitor? (Use the "&lt;/&gt;" button to format it).<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+Also, please provide a copy of your Sandboxie configuration file: Configure--&gt; Edit configuration<br>
+Copy-Paste the contents in your post (use the "&lt;/&gt;" to format it).<br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+Hello, sorry I do not speak English, I am using Google Translator:<br>
+<br>
+My SEP also appeared on this issue, I found the problem is SEP updated the latest "LiveUpdate" after the emergence of this problem, only the common browser can not open, the other can.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Mon Sep 18, 2017 5:45 am</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content">@Barb<br>
+<br>
+I have another laptop with the same problem. So two laptops affected and one works fine. Maybe caused by (a corrupted?) Norton LiveUpdate? I'll reinstall NS asap.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>6</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24879&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:24:44 GMT -->
+</html>

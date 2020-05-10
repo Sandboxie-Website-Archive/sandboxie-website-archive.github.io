@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25269&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:29:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Chrome starts before SB services [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Chrome starts before SB services [SOLVED]</h2>
+		<p><a href="viewtopic53ec53ec.html?f=17&amp;t=25269">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25269</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Chrome starts before SB services [SOLVED]</h3>
+				<div class="date">Posted: <strong>Sat Dec 30, 2017 10:26 am</strong></div>
+				<div class="author">by <strong>Sam777</strong></div>
+				<div class="content">I installed Sandboxie on a friend's computer who has Win10. Then installed Chrome inside a sandbox (chrome is not installed outside of sandboxie). Every time Chrome is started it takes 4-5 seconds before SandboxieRpcSs.exe, SandboxieDcomLaunch.exe and SandboxieCrypto.exe initializes and there is no yellow border around Chrome during this time. <br>
+<br>
+I noticed on my Win 7 computer, Sandboxie's services start before or at the same time as Chrome, so I'm a little concern about my friend's security. Is the delay normal on a Win 10 machine?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome starts before SB services</h3>
+				<div class="date">Posted: <strong>Wed Jan 03, 2018 2:56 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Sam777,<br>
+<br>
+Is the Sandboxie service set to start automatically with Windows?<br>
+Is Sandboxie Control set to automatically start? <br>
+What are the antivirus, Chrome and Sandboxie versions involved? <br>
+<br>
+The border will not show if Sandboxie control is not running. Here's an example of that:<br>
+<a href="viewtopic06710671.html?f=17&amp;t=25259" class="postlink">viewtopic.php?f=17&amp;t=25259</a><br>
+
+<blockquote class="uncited"><div>Every time Chrome is started it takes 4-5 seconds before SandboxieRpcSs.exe, SandboxieDcomLaunch.exe and SandboxieCrypto.exe initializes </div></blockquote>
+You mean that those .exes do not show up in Sandboxie control, or ...?  <br>
+What are the exact repro steps you are following? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome starts before SB services</h3>
+				<div class="date">Posted: <strong>Wed Jan 03, 2018 5:55 pm</strong></div>
+				<div class="author">by <strong>Sam777</strong></div>
+				<div class="content">Hi Barb,<br>
+Sandboxie is setup to start with windows automatically and the control panel starts automatically, too.<br>
+Chrome - v61.0.3163.100 &amp; Comodo Internet Suite v10.0.2.6420 (anti-virus).<br>
+Chrome and Sandboxie are set as trusted applications. Nothing prevents them from running whatever they need to.<br>
+Chrome is installed inside a sandbox only and not outside of Sandboxie.<br>
+<br>
+Normally when something is ran inside a sandbox - SandboxieRpcSs.exe, SandboxieDcomLaunch.exe and SandboxieCrypto.exe, will initialize before any applications do. On my friend's machine however, Chrome will initialize first and after 4-5 seconds SB's 3 exe files (mentioned above) will start. <br>
+<br>
+So from watching the sandbox in SB's control panel - Chrome.exe starts and is listed. Then 4-5 seconds later, SandboxieRpcSs.exe, SandboxieDcomLaunch.exe and SandboxieCrypto.exe show up. While the three SB's files are not running there is no yellow border around Chrome. When those 3 files are listed in the sandbox, the yellow border is present. It appears as if Chrome starts without being sandboxed for 4-5 seconds. I don't think that's normal behavior but since I don't have Win10, I wasn't sure.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome starts before SB services</h3>
+				<div class="date">Posted: <strong>Wed Jan 03, 2018 6:33 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">Sandboxed processes are sandboxed before they start. It sounds like Chrome is hanging for a few seconds (for some reason) on your friend's machine right after it loads. I would investigate the Chrome extensions that are installed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome starts before SB services</h3>
+				<div class="date">Posted: <strong>Sat Jan 06, 2018 8:16 am</strong></div>
+				<div class="author">by <strong>Sam777</strong></div>
+				<div class="content">Chrome doesn't hang at all, it starts immediately. It's used for one website and there are no plugins installed</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome starts before SB services</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2018 9:59 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Sam777,<br>
+<br>
+Try disabling all the non-required startup applications, including the Antivirus, and see if that affects the behavior. If it does, then you can start re-enabling them one by one to see what may be causing the delay. <br>
+<br>
+As Curt mentioned, the program is Sandboxed, it doesn't start outside Sandboxie. You can test the steps I provided on my first response to see how it works.<br>
+<br>
+Also, what happens if you run a different program in the Sandbox (anything other than Chrome)? Do you see the same behavior? <br>
+Be sure to test using the latest beta and creating a new Sandbox with default settings.<br>
+<a href="viewtopicb0cbb0cb.html?f=64&amp;t=25114" class="postlink">viewtopic.php?f=64&amp;t=25114</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome starts before SB services</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2018 12:05 pm</strong></div>
+				<div class="author">by <strong>Sam777</strong></div>
+				<div class="content">I ran Firefox &amp; IE sandboxed - Sandboxie started right away. There wasn't any delay with the 3 exe files starting up. At this point I knew it had something to do with Chrome directly. I found out the problem but I don't know how to fix it.<br>
+<br>
+I couldn't get chrome to work inside a sandbox when I first installed it. It would start but no webpage would display and there wasn't any errors. I googled for a solution and someone said to append <strong>--no-sandbox</strong> to the target path of Chrome's shortcut. <br>
+<br>
+When Chrome's sandbox is disabled it says something about an unsupported commandline line but the webpage displays and one can surf the net. However, SB lags for 4-5 seconds. When Chrome's sandbox is enabled, SB's 3 exe files start right away but Chrome fails to display a webpage. I'm not sure what to do with this information.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome starts before SB services</h3>
+				<div class="date">Posted: <strong>Wed Jan 10, 2018 12:14 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Sam777 ,<br>
+<br>
+We have a dedicated thread for installing browsers inside Sandboxie.Here's the latest information we added regarding Chrome: <a href="viewtopic15281528.html?p=127365#p127365" class="postlink">viewtopic.php?p=127365#p127365</a><br>
+<br>
+As for the behavior you are reporting, aside from the small delay, are you experiencing any functionality issues? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome starts before SB services</h3>
+				<div class="date">Posted: <strong>Sat Mar 31, 2018 12:13 pm</strong></div>
+				<div class="author">by <strong>Sam777</strong></div>
+				<div class="content">The same problem started happening with Firefox, too (firefox starting before sandboxie). After additional troubleshooting I figured out what was happening and would like to share what I did.<br>
+<br>
+It actually doesn't have anything to do with Chrome or Firefox. Apparently, Comodo HIPS can cause Sandboxie itself to temporally delay on initializing a sandbox. HIPS is disabled by default when you install Comodo, so unless you enabled it this solution might not be for you. <br>
+<br>
+To fix it, go into HIPS settings and remove all instances of Sandboxie and click OK. For me there were 3 references. Then open HIPS again and click ADD to open a new rule. Then click on BROWSE - RUNNING PROCESSES. Another window will open. Click on <em>SbieCtrl.exe</em> and click OK. Under Ruleset select <em>allowed application</em> and click OK. Now the sandbox should start without being delayed.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25269&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:29:10 GMT -->
+</html>

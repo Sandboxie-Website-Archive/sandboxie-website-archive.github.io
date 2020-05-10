@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=412&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Automatic cleanup not working</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Automatic cleanup not working</h2>
+		<p><a href="viewtopic14251425.html?f=11&amp;t=412">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=412</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Automatic cleanup not working</h3>
+				<div class="date">Posted: <strong>Sat Jul 29, 2006 10:40 am</strong></div>
+				<div class="author">by <strong>Unknown_User_386</strong></div>
+				<div class="content">Hi Tzuk,<br>
+<br>
+I just did a clean XPPro SP2 Windows install.  I have a previous version of Sandboxie (v2.45-registered) - however, I decided to try the latest release (v2.49).  <br>
+<br>
+I set the Automatic Sandbox Clean-Up option to: When Sandboxie Closes.  The automatic feature will not run - however, I can still delete and recover files manually.<br>
+<br>
+I uninstalled v2.49 and reinstalled v2.45.  No change.  This feature did work with my previous installation.<br>
+<br>
+Other programs running:<br>
+<br>
+ZoneAlarm Free v6.5.731 - latest.  Note-this is a later version than I was using previously.  Perhaps this could be the problem?<br>
+<br>
+AVG Free v7.1.394<br>
+<br>
+Spyware Blaster v3.5.1<br>
+<br>
+There are no other memory-resident programs.<br>
+<br>
+Other programs: <br>
+<br>
+Registry Mechanic<br>
+A-Squared Free (not memory-resident)<br>
+Ad-Aware SE Personal<br>
+<br>
+Please let me know if you have any ideas?  Thanks.<br>
+<br>
+I always feel safer surfing with Sandboxie.<br>
+<br>
+Alan</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jul 29, 2006 5:50 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Has anything else changed?  Do you have the same sandbox top level folder as before, for example?<br>
+<br>
+Also, does automatic clean up work, when you set it to when-last-program-ends?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jul 29, 2006 9:35 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_386</strong></div>
+				<div class="content">Hi Tzuk,<br>
+<br>
+Sorry I got this message in the wrong forum - and thanks for answering anyway.<br>
+<br>
+I changed the cleanup option to: When Last Program Ends - and the Automatic cleanup feature now works.  <br>
+<br>
+I did not understand what the Top Level Folder was about - so I never made any changes to it.<br>
+<br>
+I hope it is okay to change the subject.  I had the issue with the Qurb anti-spam program.  There was one additional issue - outside of Sandboxie, Qurb automatically moves the emails which do not have matching addresses to the Qurb folder.  Inside of Sandboxie, I get a pop-up asking me where to place the messages.  <br>
+<br>
+I can easily do this manually - however, if you do have any ideas as to what the problem might be, I would be thankful.<br>
+<br>
+Thanks again for your help.<br>
+Alan</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 31, 2006 3:47 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Hi Alan, I tested the cleanup thing today.  It does work, at least for me, but I noticed a "little known feature"  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"><br>
+<br>
+If Sandboxie is configured to "Auto Delete When Sandboxie Closes", and there are any recoverable files in the folders listed for Quick Recovery, then auto-clean <em>will not occur</em>.<br>
+<br>
+For some reason -- I can't for the life of me remember what was I thinking -- recoverable items are not checked when "Auto Clean When Last Program Ends".  In this mode, the sandbox is always deleted.<br>
+<br>
+It would probably make more sense the other way around ... But changing this will have to wait for another day. <br>
+<br>
+Anyway -- perhaps this was your problem.  Try reverting to "Auto Delete When Sandboxie Closes" now that your Quick Recovery folders are empty, and see if that makes a difference for you.<br>
+
+<blockquote class="uncited"><div>outside of Sandboxie, Qurb automatically moves the emails which do not have matching addresses to the Qurb folder. Inside of Sandboxie, I get a pop-up asking me where to place the messages. </div></blockquote>
+
+I'll have to look into this and see what's confusing Qurb.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 31, 2006 5:09 pm</strong></div>
+				<div class="author">by <strong>Unknown_User_386</strong></div>
+				<div class="content">Hi Tzuk,<br>
+<br>
+I tried the "When Sandboxie Closes" option - and for me it still does NOT clean out the Sandbox.  Since it does work with the "When Last Program Ends" option, I will just continue to use that.<br>
+<br>
+Also - I should point out that with my previous XP setup, the "When Sandboxie Closes" option DID work correctly all the time - even if there were files to be recovered.  In fact, if I remember correctly, the "When Last Program Ends" option would not clean the Sandbox - just the opposite of what is happening now.<br>
+<br>
+That is why I tried to reinstall the older Sandboxie version to see if it would start working - but perhaps some components were still in the system from the new version and prevented it from working correctly.<br>
+<br>
+Hope you can find out what is going on with these 2 options.<br>
+<br>
+Question - I have File Sharing and several of the system services (services.msc) turned off/disabled.  Does Sandboxie need any system settings to be on/enabled to work correctly?<br>
+<br>
+Thanks for your quick reply.<br>
+<br>
+Best regards,<br>
+Alan</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 31, 2006 5:27 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Question - I have File Sharing and several of the system services (services.msc) turned off/disabled. Does Sandboxie need any system settings to be on/enabled to work correctly? </div></blockquote>
+
+No, it doesn't need any of those.<br>
+<br>
+Sandboxie doesn't use any services that aren't already required by Windows itself.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=412&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:44 GMT -->
+</html>

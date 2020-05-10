@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25415&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:01:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [5.23.5] Failed to record configuration setting in section UserSettings_1D2C031A:  C000000D</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[5.23.5] Failed to record configuration setting in section UserSettings_1D2C031A:  C000000D</h2>
+		<p><a href="viewtopic01780178.html?f=11&amp;t=25415">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25415</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[5.23.5] Failed to record configuration setting in section UserSettings_1D2C031A:  C000000D</h3>
+				<div class="date">Posted: <strong>Wed Feb 07, 2018 6:51 pm</strong></div>
+				<div class="author">by <strong>RadarNyan</strong></div>
+				<div class="content"><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>---------------------------
+Messages from Sandboxie
+---------------------------
+Failed to record configuration setting SbieCtrl_HideMessage in section UserSettings_1D2C031A:  C000000D
+---------------------------
+OK   
+---------------------------
+</code></pre></div>
+
+This message shows up when I'm trying to hide SBIE2217 (Request to run as Administrator was denied due to dropped rights.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [5.23.5] Failed to record configuration setting in section UserSettings_1D2C031A:  C000000D</h3>
+				<div class="date">Posted: <strong>Thu Feb 08, 2018 10:18 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello RadarNyan ,<br>
+<br>
+Is that the full message that you are receiving? <br>
+Are you able to make any other changes to your Sanbox settings? (For example, add a random template see if that goes thru). <br>
+If no, have you made any changes to your Sandboxie.ini file?  <br>
+<br>
+Please post a copy of your Sandboxie configuration file<br>
+Configure--&gt; Edit Configuration <br>
+Copy/paste the contents<br>
+Highlight them and click on the "&lt;/&gt;" button to format it in the forums.<br>
+<br>
+If you don't have any specific configuration that you want to save, try uninstalling Sandboxie and selecting "No" when asked to keep your settings, then re-install and re-test the behavior.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [5.23.5] Failed to record configuration setting in section UserSettings_1D2C031A:  C000000D</h3>
+				<div class="date">Posted: <strong>Thu Feb 08, 2018 3:51 pm</strong></div>
+				<div class="author">by <strong>RadarNyan</strong></div>
+				<div class="content">Here's part of my Sandboxie.ini<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>
+[GlobalSettings]
+
+ActivationPrompt=y
+TemplateReject=OfficeLicensing
+Template=7zipShellEx
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+
+[UserSettings_1D2C031A]
+
+SbieCtrl_UserName=misaki.m
+SbieCtrl_NextUpdateCheck=1518599921
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_WindowCoords=386,208,880,448
+SbieCtrl_ActiveView=40021
+SbieCtrl_EnableLogonStart=y
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=n
+SbieCtrl_AddQuickLaunchIcon=n
+SbieCtrl_AddContextMenu=y
+SbieCtrl_AddSendToMenu=n
+SbieCtrl_AutoApplySettings=y
+SbieCtrl_ExplorerNotify=n
+SbieCtrl_SettingChangeNotify=n
+SbieCtrl_EditConfNotify=n
+SbieCtrl_ExplorerWarn=n
+SbieCtrl_ReloadConfNotify=n
+SbieCtrl_HideWindowNotify=n
+
+[SBIE2217_TEST]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+DropAdminRights=y
+</code></pre></div>
+
+There are SBIE2219 &amp; SBIE2220 follows but I can hide those two from GUI normally. It's just I can't hide SBIE2217 from GUI for some reason, and if I edit Sandboxie.ini manually and add "SbieCtrl_HideMessage=2217" into [[UserSettings_1D2C031A] section, the message would be hidden properly.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [5.23.5] Failed to record configuration setting in section UserSettings_1D2C031A:  C000000D</h3>
+				<div class="date">Posted: <strong>Thu Feb 08, 2018 5:29 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello RadarNyan,<br>
+<br>
+I can repro. I have made the devs aware.<br>
+I will update this thread with any new information I receive. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25415&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:01:54 GMT -->
+</html>

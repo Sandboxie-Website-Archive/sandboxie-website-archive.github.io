@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25691&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:54:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; M.E.DOC, Network version, self update</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>M.E.DOC, Network version, self update</h2>
+		<p><a href="viewtopic91aa91aa.html?f=11&amp;t=25691">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25691</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>M.E.DOC, Network version, self update</h3>
+				<div class="date">Posted: <strong>Thu Apr 19, 2018 2:54 pm</strong></div>
+				<div class="author">by <strong>lexxai</strong></div>
+				<div class="content">I try to use isolate app M.E.DOC, Network version. <a href="https://medoc.ua/uk/distributive" class="postlink">https://medoc.ua/uk/distributive</a> <br>
+When it start in sandboxie they try connect to local net server for load executable update file to apps TEMP folder and try run for update himself.<br>
+But apps 'station.exe', that started in sandboxie,  show Warning message that can't update with problem with networks or antivirus blocking in folder  c:\programdata\medoc\staion\TEMP.<br>
+Next have waring that apps want administration rights, entered login, password and apps now started  w/o updating.<br>
+All users and ANONYMOUS LOGON have full  file access to c:\programdata\medoc.<br>
+<br>
+How investigate what access was blocked by sandboxie for apps 'station.exe' ? <br>
+I know that 'station.exe' should run external files ezvit.exe, ...Crypt... etc... It will be problem for nested sandboxie run?<br>
+<br>
+Registered version will to help ?<br>
+<br>
+sandboxie version 5.24 x64<br>
+os windows 7 pro x64<br>
+av ESET Endpoint protection ( off and on ) w/o changes result</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: M.E.DOC, Network version, self update</h3>
+				<div class="date">Posted: <strong>Thu Apr 19, 2018 3:22 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello lexxai,<br>
+<br>
+Please provide exact repro steps so that we can try to replicate the issue.<br>
+<br>
+Does the issue follow you to a new Sandbox with default settings? <br>
+What are the exact error messages you are presented with? <br>
+Are you using an Admin account? <br>
+Also be sure to provide the version of all the applications involved. <br>
+<br>
+Let's have a look at your Resource Access Monitor:<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+Ensure no apps are running in Sandboxie<br>
+Start the Resource Access Monitor<br>
+Reproduce the issue<br>
+Paste the output in the forums. Use the "&lt;/&gt;" button in the forums to format it.  <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: M.E.DOC, Network version, self update</h3>
+				<div class="date">Posted: <strong>Thu Apr 19, 2018 4:07 pm</strong></div>
+				<div class="author">by <strong>lexxai</strong></div>
+				<div class="content">&gt;Please provide exact repro steps so that we can try to replicate the issue.<br>
+1. By shortcut from desktop by right button run in sandbox.<br>
+2. Select DefaultBox<br>
+3. result :
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file5db45db4.png?id=1370" class="postimage" alt="medoc-02.PNG" onclick="viewableArea(this);" /></dt>
+						<dd>medoc-02.PNG (118.65 KiB) Viewed 158 times</dd>
+		</dl>
+		
+		
+		
+			</div>
+
+<br>
+&gt;Does the issue follow you to a new Sandbox with default settings?<br>
+yes<br>
+<br>
+&gt;Are you using an Admin account?<br>
+run as general user<br>
+but if try run as UAC Administrator same result<br>
+<br>
+Also be sure to provide the version of all the applications involved. <br>
+now OS Windows 10 Pro 1709 x64<br>
+M.E.DOC 10.01.223<br>
+Sandboxie 5.24 x64<br>
+<br>
+<br>
+<br>
+&gt;What are the exact error messages you are presented with?
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file5db45db4.png?id=1370" class="postimage" alt="medoc-02.PNG" onclick="viewableArea(this);" /></dt>
+						<dd>medoc-02.PNG (118.65 KiB) Viewed 158 times</dd>
+		</dl>
+		
+		
+		
+			</div>
+If click OK on previous message, and press esc when try run as administrator have:
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file95d695d6.png?id=1371" class="postimage" alt="medoc-01.PNG" onclick="viewableArea(this);" /></dt>
+						<dd>medoc-01.PNG (7.2 KiB) Viewed 158 times</dd>
+		</dl>
+		
+		
+		
+			</div>
+
+<br>
+Resource Access Monitor:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\HarddiskVolume2
+(Drive)     \Device\HarddiskVolume4
+(Drive)     \Device\HarddiskVolume5
+(Drive)     \Device\Mup\;LanmanRedirector\;Y:00000000014613b6\nas\homes
+(Drive)     \Device\Mup\DfsClient\;Z:00000000014613b6\server\dfs\home\******
+Clsid       -------------------------------
+File/Key    -------------------------------
+Image       -------------------------------
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\__ComCatalogCache__
+Ipc         \BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000002.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000002.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \BaseNamedObjects\RotHintTable
+Ipc         \BaseNamedObjects\SC_AutoStartComplete
+Ipc         \BaseNamedObjects\windows_shell_global_counters
+Ipc         \RPC Control\actkernel
+Ipc         \RPC Control\epmapper
+Ipc         \RPC Control\keysvc
+Ipc         \RPC Control\OLE8E609A750122243D5F73F8860AF0
+Ipc         \RPC Control\OLE9E777E750FF5D94A80F96AC6334C
+Ipc         \Sessions\1\BaseNamedObjects\.net clr networking
+Ipc         \Sessions\1\BaseNamedObjects\__ComCatalogCache__
+Ipc         \Sessions\1\BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \Sessions\1\BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000002.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000002.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users********AppData*Local*Microsoft*Windows*Caches*{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000005.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users********AppData*Local*Microsoft*Windows*Caches*cversions.1.ro
+Ipc         \Sessions\1\BaseNamedObjects\ComPlusCOMRegTable
+Ipc         \Sessions\1\BaseNamedObjects\ComTaskPool:10232
+Ipc         \Sessions\1\BaseNamedObjects\ComTaskPool:12124
+Ipc         \Sessions\1\BaseNamedObjects\Cor_Private_IPCBlock_10232
+Ipc         \Sessions\1\BaseNamedObjects\Cor_Public_IPCBlock_10232
+Ipc         \Sessions\1\BaseNamedObjects\CorDBIPCSetupSyncEvent_10232
+Ipc         \Sessions\1\BaseNamedObjects\netfxcustomperfcounters.1.0.net clr networking
+Ipc         \Sessions\1\BaseNamedObjects\NLS_00000422_Exception_Table_3_2
+Ipc         \Sessions\1\BaseNamedObjects\NLS_CodePage_1251_3_2_0_0
+Ipc         \Sessions\1\BaseNamedObjects\RotHintTable
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_10232
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_11568
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_12124
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_3772
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_7112
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_RPCSS_SXS_READY
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceCrypto_Mutex1
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_cryptsvc
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_DcomLaunch
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_Mutex1
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcEptMapper
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\1\BaseNamedObjects\SboxSession
+Ipc         \Sessions\1\BaseNamedObjects\SC_AutoStartComplete
+Ipc         \Sessions\1\BaseNamedObjects\ScmCreatedEvent
+Ipc         \Sessions\1\BaseNamedObjects\SessionImmersiveColorMutex
+Ipc         \Sessions\1\BaseNamedObjects\SessionImmersiveColorPreference
+Ipc         \Sessions\1\BaseNamedObjects\SM0:10232:120:WilError_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:10232:120:WilError_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:10232:120:WilError_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:10232:304:WilStaging_02
+Ipc         \Sessions\1\BaseNamedObjects\SM0:10232:304:WilStaging_02_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:10232:304:WilStaging_02_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:12124:120:WilError_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:12124:120:WilError_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:12124:120:WilError_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:12124:304:WilStaging_02
+Ipc         \Sessions\1\BaseNamedObjects\SM0:12124:304:WilStaging_02_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:12124:304:WilStaging_02_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:3772:304:WilStaging_02
+Ipc         \Sessions\1\BaseNamedObjects\SM0:3772:304:WilStaging_02_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:3772:304:WilStaging_02_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:7112:120:WilError_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:7112:120:WilError_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:7112:120:WilError_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:7112:304:WilStaging_02
+Ipc         \Sessions\1\BaseNamedObjects\SM0:7112:304:WilStaging_02_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:7112:304:WilStaging_02_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SyncRootManager
+Ipc         \Sessions\1\BaseNamedObjects\windows_shell_global_counters
+Ipc         \Sessions\1\BaseNamedObjects\zvit9stationupdate
+Ipc      O  \BaseNamedObjects\FontCachePort
+Ipc      O  \BaseNamedObjects\msctf.serverDefault1
+Ipc      O  \KernelObjects\LowMemoryCondition
+Ipc      O  \KernelObjects\MaximumCommitCondition
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\bcryptPrimitives.dll
+Ipc      O  \KnownDlls\cfgmgr32.dll
+Ipc      O  \KnownDlls\clbcatq.dll
+Ipc      O  \KnownDlls\combase.dll
+Ipc      O  \KnownDlls\COMDLG32.dll
+Ipc      O  \KnownDlls\CRYPT32.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\gdi32full.dll
+Ipc      O  \KnownDlls\IMAGEHLP.dll
+Ipc      O  \KnownDlls\IMM32.dll
+Ipc      O  \KnownDlls\kernel.appcore.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\kernelbase.dll
+Ipc      O  \KnownDlls\MSASN1.dll
+Ipc      O  \KnownDlls\MSCTF.dll
+Ipc      O  \KnownDlls\msvcp_win.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\NSI.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\powrprof.dll
+Ipc      O  \KnownDlls\profapi.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\sechost.dll
+Ipc      O  \KnownDlls\SHCORE.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\ucrtbase.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\win32u.dll
+Ipc      O  \KnownDlls\windows.storage.dll
+Ipc      O  \KnownDlls\WINTRUST.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \RPC Control\DNSResolver
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\LSARPC_ENDPOINT
+Ipc      O  \RPC Control\lsasspirpc
+Ipc      O  \RPC Control\samss lpc
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \Security\LSA_AUTHENTICATION_INITIALIZED
+Ipc      O  \Sessions\1\BaseNamedObjects\CTF.AsmListCache.FMPDefault1
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.Asm.MutexDefault1
+Ipc      O  \Sessions\1\Windows\ApiPort
+Ipc      O  \Sessions\1\Windows\SharedSection
+Ipc      O  \Sessions\1\Windows\Theme2080860199
+Ipc      O  \Sessions\1\Windows\ThemeSection
+Ipc      O  \ThemeApiPort
+Ipc      O  \Windows\Theme1360715175
+Pipe        -------------------------------
+Pipe        ?
+Pipe        \Device\CNG
+Pipe        \Device\Harddisk0\DR0
+Pipe        \Device\HarddiskVolume1
+Pipe        \Device\HarddiskVolume2
+Pipe        \Device\HarddiskVolume3
+Pipe        \Device\HarddiskVolume4
+Pipe        \Device\HarddiskVolume5
+Pipe        \Device\HarddiskVolume7
+Pipe        \Device\KsecDD
+Pipe        \Device\MountPointManager
+Pipe        \Device\Ndis
+Pipe        \Device\NDMP10
+Pipe        \Device\NDMP11
+Pipe        \Device\NDMP12
+Pipe        \Device\NDMP13
+Pipe        \Device\NDMP4
+Pipe        \Device\NDMP6
+Pipe        \Device\NDMP7
+Pipe        \Device\NDMP8
+Pipe        \Device\NDMP9
+Pipe     O  \Device\Afd
+Pipe     O  \Device\Nsi
+WinCls      -------------------------------
+WinCls   O  Shell_TrayWnd
+WinCls   X  MouseZ</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: M.E.DOC, Network version, self update</h3>
+				<div class="date">Posted: <strong>Thu Apr 19, 2018 4:35 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello lexxai,<br>
+<br>
+I am unable to download the program to test it. I tried different versions and they all get stuck at "starting" the download. One of the downloads has started and is showing 1 day left. Not sure I will be able to get this at all. <br>
+<br>
+Why do you need to run this program Sandboxed?<br>
+<br>
+Can you please update the software outside Sandboxie, and the re-try launching it after clearing the contents of your Sandbox?<br>
+You should be updating programs on your host for the most part.<br>
+<br>
+If the problem persists after updating the program outside Sandboxie, here are a few suggestions per your Resource Access monitor:  (Be sure to delete the contents of your Sandbox every time you test) <br>
+<br>
+Right-click on your Sandbox --&gt; Sandbox Settings--&gt; Resource Access--&gt; IPC Access --&gt; Direct Access <br>
+Click "Add Program"<br>
+Add station.exe <br>
+Hit "OK"<br>
+Hit "Edit/Add"<br>
+Paste  *\BaseNamedObjects*\zvit9stationupdate*<br>
+Apply the changes<br>
+Configure --&gt; Reload Configuration<br>
+Re-try your steps.<br>
+<br>
+You could also try to grant direct access to  c:\programdata\medoc\staion\TEMP to station.exe  by following these steps <br>
+Right-click on your Sandbox --&gt; Sandbox Settings--&gt; Resource Access--&gt; File Access --&gt; Direct Access <br>
+Click "Add Program"<br>
+Enter station.exe <br>
+Hit "OK"<br>
+Hit "Edit/Add"<br>
+Paste  C:\programdata\medoc\staion\TEMP<br>
+Apply the changes<br>
+Configure --&gt; Reload Configuration<br>
+Re-try your steps. <br>
+<br>
+I can't really tell what does the original error say.  But, keep in mind that those steps will open a hole in your Sandbox. If they do not work, revert the changes. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: M.E.DOC, Network version, self update</h3>
+				<div class="date">Posted: <strong>Thu Apr 19, 2018 4:48 pm</strong></div>
+				<div class="author">by <strong>lexxai</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Why do you need to run this program Sandboxed?</div></blockquote>
+<ul><li>Apps was source of great virus attack (ransomware) :  non-Petya <a href="https://blog.talosintelligence.com/2017/07/the-medoc-connection.html" class="postlink">https://blog.talosintelligence.com/2017 ... ction.html</a></li></ul>
+
+<ul><li>This apps used by fiances office (by woman mostly).</li></ul>
+
+<ul><li>Apps updated very often via new exe file.</li>
+</ul>
+
+<blockquote class="uncited"><div>Can you please update the software outside Sandboxie, and the re-try launching it after clearing the contents of your Sandbox?</div></blockquote>
+It updated outside of Sandboxie, but apps try check updates on every run.<br>
+<br>
+------MERGED POST ------------- <br>
+<br>
+Apply Direct Access not help ...<br>
+<br>
+OK, I will stop try, this app can't be run via your apps.<br>
+<br>
+Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: M.E.DOC, Network version, self update</h3>
+				<div class="date">Posted: <strong>Thu Apr 19, 2018 5:11 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello lexxai ,<br>
+<br>
+Let's try the opposite approach, instead of direct access just block that IPC. Perhaps it'll help:<br>
+<br>
+Right-click on your Sandbox --&gt; Sandbox Settings--&gt; Resource Access--&gt; IPC Access --&gt; Blocked Access <br>
+Click "Add Program"<br>
+Add station.exe <br>
+Hit "OK"<br>
+Hit "Edit/Add"<br>
+Paste *\BaseNamedObjects*\zvit9stationupdate*<br>
+Apply the changes<br>
+Configure --&gt; Reload Configuration<br>
+Re-try your steps.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: M.E.DOC, Network version, self update</h3>
+				<div class="date">Posted: <strong>Thu Apr 19, 2018 5:20 pm</strong></div>
+				<div class="author">by <strong>lexxai</strong></div>
+				<div class="content">now just message have:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Access to the path 'zvit9stationupdate' is denied.</code></pre></div>
+And after OK apps closed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: M.E.DOC, Network version, self update</h3>
+				<div class="date">Posted: <strong>Thu Apr 19, 2018 6:29 pm</strong></div>
+				<div class="author">by <strong>lexxai</strong></div>
+				<div class="content">I move app to D:\Station for tests.<br>
+May be it information give more :
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file4b264b26.jpg?id=1373" class="postimage" alt="medoc-03c.jpg" onclick="viewableArea(this);" /></dt>
+						<dd>medoc-03c.jpg (115.25 KiB) Viewed 137 times</dd>
+		</dl>
+		
+		
+		
+			</div></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25691&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:54:33 GMT -->
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25058&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:26:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxed program has crashed: splwow64.exe</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxed program has crashed: splwow64.exe</h2>
+		<p><a href="viewtopic69fb69fb.html?f=11&amp;t=25058">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25058</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxed program has crashed: splwow64.exe</h3>
+				<div class="date">Posted: <strong>Thu Nov 02, 2017 5:55 am</strong></div>
+				<div class="author">by <strong>Turboooo</strong></div>
+				<div class="content">Hi all! <br>
+<br>
+Windows Server 2016 Datacenter<br>
+Sandboxie 5.20<br>
+Apps: Microsoft Office Word 2007<br>
+AV: Symantec Endpoint Protection v. 12.1.6 build 7004<br>
+<br>
+I explain my error:<br>
+I have 4 containers(sandbox) where I run in each of them application named GDW (GDW is app created for my company ).<br>
+GDW creating WORD file (order to create word file is from website, we have 4 websites and each of the website is connected to one GDW), and then printing this file.<br>
+Everything is fine when order is going to GDW in one sandbox, when Im trying to create file in the same time on 2 sandboxes i have error like in subject.<br>
+I notice that for every sandbox is creating different spooler<br>
+<br>
+Please help<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed program has crashed: splwow64.exe</h3>
+				<div class="date">Posted: <strong>Thu Nov 02, 2017 5:15 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Turboooo,<br>
+<br>
+We do not support Windows Server, nor will we be able to test your company's proprietary software, but here are a few things that might help:<br>
+<br>
+-Are you receiving a message requesting that you double click on it to allow the print job to proceed? <br>
+-Please update to the latest version of Sandboxie (5.22).<br>
+-Running multiple instances of an application depends on whether that application supports it or not. Sandboxie is not meant to be used in order to bypass software limitations. <br>
+-Symantec is currently not supported, try the workarounds listed in this thread [<a href="viewtopic4f074f07.html?f=11&amp;t=24879" class="postlink">viewtopic.php?f=11&amp;t=24879</a>], or remove Symantec for testing purposes. <br>
+- You can also give this a try:<br>
+<a href="viewtopicf4a3f4a3.html?p=122765#p122765" class="postlink">viewtopic.php?p=122765#p122765</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed program has crashed: splwow64.exe</h3>
+				<div class="date">Posted: <strong>Fri Nov 03, 2017 6:17 am</strong></div>
+				<div class="author">by <strong>Turboooo</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+1. The error is SBIE2224 Sandboxed program has crashed: splwow64.exe and is not clickable. <br>
+2. I update SandBoxie to version 5.22 - still the same error<br>
+3. I removed Symantec - still the same error<br>
+4. I added OpenFilePath=c:\windows\system32\spool\printers\* to .ini and restart sandboxie - still the same error<br>
+<br>
+Best Regards<br>
+Turboooo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed program has crashed: splwow64.exe</h3>
+				<div class="date">Posted: <strong>Fri Nov 03, 2017 10:36 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Turbooo,<br>
+<br>
+Here's another thread to review:<br>
+<a href="viewtopic85ab-285ab.html?p=119854#p119854" class="postlink">viewtopic.php?p=119854#p119854</a><br>
+<br>
+You can try using the Resource Access Monitor to see if there's anything showing up there. Anything related to your proprietary software that might need to be opened or modified. <br>
+<br>
+Here's what you'll need:<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<a href="../ResourceAccessSettings.html#file" class="postlink">https://www.sandboxie.com/ResourceAccessSettings#file</a><br>
+<br>
+But , as stated before, using multiple versions of an application depends on the application itself, not Sandboxie.  <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25058&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:26:01 GMT -->
+</html>

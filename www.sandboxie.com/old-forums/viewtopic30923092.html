@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15542&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:38:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.013] There's an error when opening madVR settings</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.013] There's an error when opening madVR settings</h2>
+		<p><a href="viewtopic24eb24eb.html?f=38&amp;t=15542">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15542</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>4.01.08 - GUIPROXY_00000001</h3>
+				<div class="date">Posted: <strong>Wed May 22, 2013 4:39 pm</strong></div>
+				<div class="author">by <strong>nicknomo</strong></div>
+				<div class="content">Running W7 x64 with beta 4.01.08. <br>
+<br>
+I occasionally get the message:<br>
+<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [00000102]<br>
+<br>
+It appears to result in a temporary unresponsiveness with the browser.  It does not last long though.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 25, 2013 11:13 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I get this message too, very rarely.  Maybe once every couple of weeks.  I don't know yet how to trigger it intentionally.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>[.013] There's an error when opening madVR settings</h3>
+				<div class="date">Posted: <strong>Sun May 26, 2013 7:46 am</strong></div>
+				<div class="author">by <strong>Julian</strong></div>
+				<div class="content">Win 7 x64, 4.01.10<br>
+<br>
+When I try to open madVR's settings dialog via MPC HC active filters (rightclick at video picture), I always get this error at the first time:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2203 Fehler bei der Kommunikation mit dem Sandboxie-Dienst: *GUIPROXY_00000001 - madHcCtrl.exe [00000102]
+</code></pre></div>
+
+This doesn't happen when I open the settings via madVR's tray icon.<br>
+<br>
+Download:<br>
+<a href="http://madshi.net/madVR.zip" class="postlink">http://madshi.net/madVR.zip</a><br>
+<a href="http://mpc-hc.org/downloads/" class="postlink">http://mpc-hc.org/downloads/</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun May 26, 2013 4:37 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I just wrote in another topic that I was looking for a way to reliably trigger this error message.  So if this is a response to that post -- thanks!  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+I'll take a look at this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon May 27, 2013 9:34 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I am sorry, I can't figure this out.  I installed MPC HC, then unpacked the zip file and ran the installer batch.  Then I right click on the video picture and I just get a pop up menu with no mention of madVR anywhere.  Can you explain how to reproduce the problem?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon May 27, 2013 2:53 pm</strong></div>
+				<div class="author">by <strong>tuvalu.tt</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Then I right click on the video picture and I just get a pop up menu with no mention of madVR anywhere.</div></blockquote>
+You need to:<br>
+MPC HC &gt; View &gt; Options &gt; Output &gt; DirectShow video<br>
+select madVR and click OK.<br>
+<br>
+<br>
+If you have done that and no luck, then we need to wait what OP says.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu May 30, 2013 12:47 pm</strong></div>
+				<div class="author">by <strong>Julian</strong></div>
+				<div class="content">tuvalu.tt is right. Sorry, I should have described this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri May 31, 2013 1:45 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Turns out I installed the 64-bit edition of MPC HC which is incompatible with madVR.<br>
+<br>
+Switched to 32-bit MPC HC, but still don't see any problem when I right click on the MPC HC main window.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri May 31, 2013 11:35 am</strong></div>
+				<div class="author">by <strong>Julian</strong></div>
+				<div class="content">Odd, I just could reproduce it this very moment.<br>
+Did you click the "Edit settings" button of madVR?<br>
+If you have first entered madVR settings via tray icon you might need to delete sandbox content in order to reproduce the error when opening the settings via MPC HC filters.<br>
+<br>
+<a href="../abload.de/image651e651e.php?img=1q8j4l.jpg" class="postlink"><img src="../abload.de/thumb/1q8j4l.jpg" class="postimage" alt="Image"></a> <a href="../abload.de/imagec31ec31e.php?img=2u0jy7.jpg" class="postlink"><img src="../abload.de/thumb/2u0jy7.jpg" class="postimage" alt="Image"></a><br>
+<br>
+Edit: Btw. you have to play a video file meanwhile to make madVR appear in the filters list.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 02, 2013 2:26 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The missing piece of information was to click on Filters in right-click menu, then select madVR.  In the future please keep in mind that I am not always familiar with software you use and if you tell me a list of exact steps to follow then it can save me some time.<br>
+<br>
+Should be fixed in version 4.01.13.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 02, 2013 4:41 pm</strong></div>
+				<div class="author">by <strong>Julian</strong></div>
+				<div class="content">Can confirm the fix, thx. Sry for the inconvenience, next time I will be more precise.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jun 03, 2013 7:17 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> And thank you for the quick confirmation</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15542&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:38:06 GMT -->
+</html>

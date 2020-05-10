@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=625&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:16:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie-Engine for running programs on USB-Stick</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie-Engine for running programs on USB-Stick</h2>
+		<p><a href="viewtopic40664066.html?f=4&amp;t=625">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=625</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie-Engine for running programs on USB-Stick</h3>
+				<div class="date">Posted: <strong>Tue Oct 10, 2006 8:05 am</strong></div>
+				<div class="author">by <strong>Vittel</strong></div>
+				<div class="content">Hi there,<br>
+<br>
+here comes a request, not for a feature but more for an software wich uses the same base.<br>
+<br>
+I searched a while for a simple sandbox where i can install programs on, but wich is completely system-independent (not os independent)<br>
+<br>
+the best would be if all the fish is in one single file (so the whole virtual filesystem and all the data)<br>
+<br>
+so u can put it onto an usb-stick and run it from there<br>
+all the silly pay-ware would be dead and it would be sooo simple <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+in my mind is something like an wirtual desktop with its own window on the real desktop and all the apps are encapsulated within<br>
+ant when u put the usb-stick into u pc and autorun is active the window with ur very personal desctop pops up and u r free 2 work completely independent from the software on the host pc</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Oct 12, 2006 5:47 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Besides the requirement to make sure all Sandboxie settings are written to file (this may already be the case), handling this suggestion could be done rather simply by making a checkbox, "Run in open mode." When enabled, Sandboxie would work exactly the same except that write operations would be permitted to write to disk if the file did not exist within the Sandbox.  Thus, new files from the disk would never be added to the sandbox while in open mode.  Such a mode would not protect from Spyware and whatnot and a scary warning could pop up when turning it on (and a scary warning could display when starting SandBoxie in open mode, or you could just change the program's display icon).<br>
+<br>
+Then, users would run program install files from Sandboxie in closed mode to install programs into the sandbox, after which point the users would run Sandboxie in open mode to use the installed programs (after running it once in closed mode to make sure Sandboxie captured any errant preference files created upon first running the program).<br>
+<br>
+I do think this is a good thing to offer and it should be relatively easy to implement.  However, it would potentially cause you to get a new batch of users with different interests.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2006 2:21 pm</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">The software would have to be indipended from the Hardware... which IS often the case, but not always...<br>
+<br>
+This approach was also discussed for full Virtual machines. They have the same problem you would have: The VM or Sandboxie would have to isntall kerneldrivers.<br>
+Virtualisation without is not (yet?) possible.<br>
+<br>
+Greetings<br>
+Michael</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2006 3:46 pm</strong></div>
+				<div class="author">by <strong>Vittel</strong></div>
+				<div class="content">so how about "emulating" a windows system (copy the most important parts of the system, wich are software dependent, to the sandbox on the stick) and then run an emulated vm or sandbox by combining the filez on the stick and the files wich are on every windows system. in this vm u can install and use software completely independent by writing any userdata to the stick and so on ...<br>
+<br>
+i have the feeling of repeating myself <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+<br>
+sorry for my english, i know itÂ´s not the best <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2006 3:52 pm</strong></div>
+				<div class="author">by <strong>Vittel</strong></div>
+				<div class="content">plus:<br>
+<br>
+i think its no problem when cant install any software wich is not hardwareindependent<br>
+<br>
+it would be a little price for a such a feature<br>
+<br>
+the mainly used hardware coul be emulated by the sandbox and the signals woul only reached through when the hardware is realy there (sound or so)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 23, 2006 12:35 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>it would be a little price for a such a feature</div></blockquote>
+
+Too many suggestions, none of them simple.<br>
+<br>
+How about this:  Install Microsoft Virtual PC, and use Shared Folders if you want the guest system to modify the host system.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=625&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:16:03 GMT -->
+</html>

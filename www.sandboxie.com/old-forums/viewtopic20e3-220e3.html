@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25365&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:59:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Google Chrome Update 64.0.3282 Aw, Snap! / No internet access [Fixed since Beta 5.23.1] - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Google Chrome Update 64.0.3282 Aw, Snap! / No internet access [Fixed since Beta 5.23.1]</h2>
+		<p><a href="viewtopic03530353.html?f=11&amp;t=25365">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25365</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>Re: Google Chrome Update 64.0.3282 Aw, Snap! / No internet access [Fixed since Beta 5.23.1]</h3>
+				<div class="date">Posted: <strong>Wed Feb 28, 2018 10:09 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello plastic00,<br>
+<br>
+Please provide more info so that we can test this:<br>
+<a href="viewtopic633b633b.html?f=11&amp;t=19746" class="postlink">viewtopic.php?f=11&amp;t=19746</a><br>
+<br>
+Have you tried creating a new shortcut? <br>
+<br>
+Also, can you please post your Sandboxie configuration file?<br>
+Sbie Control --&gt; Configure---&gt; Edit Configuration<br>
+Copy/paste the output<br>
+Highlight the output in the forums and click on the "&lt;/&gt;" button to format it.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Update 64.0.3282 Aw, Snap! / No internet access [Fixed since Beta 5.23.1]</h3>
+				<div class="date">Posted: <strong>Wed Feb 28, 2018 4:12 pm</strong></div>
+				<div class="author">by <strong>plastic00</strong></div>
+				<div class="content">I've tried to launch it from a different shortcut but the same thing happens.<br>
+<br>
+Windows Version: Windows 10 x64 Pro N 1709 16299.248<br>
+Sandboxie Version: 5.23.6 x64<br>
+Chrome Version: 64.0.3282.186 (Official Build) (64-bit)<br>
+Antivirus: Kaspersky Free 18.0.0.405<br>
+Reproduce: Toggling the ( Applications -&gt; Web Browser -&gt; Google Chrome -&gt; Force Google Chrome to run under this sandbox ) option on makes Chrome running under the sandbox unable to connect to the internet. Turning the option off and manually opening Chrome in the sandbox will allow me to connect to webpages again.<br>
+<br>
+Configuration:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=Kaspersky
+Template=7zipShellEx
+Template=WindowsRasMan
+Template=WindowsLive
+Template=OfficeLicensing
+ActivationPrompt=n
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+
+[UserSettings_0CB2021F]
+
+SbieCtrl_UserName=dunkl
+SbieCtrl_NextUpdateCheck=1520420757
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_SettingChangeNotify=n
+SbieCtrl_WindowCoords=488,130,1022,736
+SbieCtrl_ActiveView=40021
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_BoxExpandedView=Browser,DefaultBox
+
+[Browser]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=Chrome_Force
+Template=Chrome_Profile_DirectAccess
+Template=Chrome_Sync_DirectAccess
+Template=Chrome_Preferences_DirectAccess
+Template=Chrome_Passwords_DirectAccess
+Template=Chrome_Cookies_DirectAccess
+Template=Chrome_History_DirectAccess
+Template=Chrome_Bookmarks_DirectAccess
+Template=AutoRecoverIgnore
+Template=Firefox_Phishing_DirectAccess
+Template=Chrome_Phishing_DirectAccess
+Template=LingerPrograms
+Template=BlockPorts
+Template=WindowsFontCache
+Template=qWave
+RecoverFolder=%Desktop%
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+BorderColor=#00FFFF,ttl
+Enabled=y
+NeverDelete=n
+AutoDelete=y
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Update 64.0.3282 Aw, Snap! / No internet access [Fixed since Beta 5.23.1]</h3>
+				<div class="date">Posted: <strong>Wed Feb 28, 2018 4:19 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello plastic00 ,<br>
+<br>
+This seems AV related:<br>
+<a href="searchf500f500.html?keywords=kaspersky&amp;t=21539&amp;sf=msgonly" class="postlink">search.php?keywords=kaspersky&amp;t=21539&amp;sf=msgonly</a><br>
+<br>
+I cannot reproduce it without the AV. If you can repro without Kaspersky (fully removed from your PC), please reply back here.<br>
+Otherwise, please refer to the post I provided.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Google Chrome Update 64.0.3282 Aw, Snap! / No internet access [Fixed since Beta 5.23.1]</h3>
+				<div class="date">Posted: <strong>Wed Feb 28, 2018 6:57 pm</strong></div>
+				<div class="author">by <strong>plastic00</strong></div>
+				<div class="content">It works without the AV installed.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25365&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:59:12 GMT -->
+</html>

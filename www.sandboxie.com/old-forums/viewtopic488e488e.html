@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=41&t=16752&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:46:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.02] Bluescreen with error &quot;PAGE_FAULT_IN_NONPAGED_ARE - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.02] Bluescreen with error &quot;PAGE_FAULT_IN_NONPAGED_ARE</h2>
+		<p><a href="viewtopica285a285.html?f=41&amp;t=16752">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=41&amp;t=16752</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Nov 16, 2013 7:40 am</strong></div>
+				<div class="author">by <strong>Crular</strong></div>
+				<div class="content">Same problem here running Windows 8.1 and Sandboxie 4.07.3. Crash happened while starting a downloaded program from inside a sandboxed Chrome.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Nov 18, 2013 4:06 pm</strong></div>
+				<div class="author">by <strong>explanoit</strong></div>
+				<div class="content">I know it's not much help but I was running into this as well. I haven't had it happen in a few days though and I've made quite a few system changes. Just letting you know.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Nov 19, 2013 12:23 pm</strong></div>
+				<div class="author">by <strong>DemonAk</strong></div>
+				<div class="content">launched steam and received Blue screen with error PAGE_FAULT_IN_NONPAGED_AREA, windows 8.1 x64<br>
+<br>
+<a href="http://rghost.net/private/50290096/12d13cc29b77b7cc94bb5235f957a1fb" class="postlink">Minidump</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>BSoD and a possible temporary workaround</h3>
+				<div class="date">Posted: <strong>Sat Nov 23, 2013 3:55 pm</strong></div>
+				<div class="author">by <strong>C. Kuma</strong></div>
+				<div class="content">I've experienced the BSoD many times while using Windows 8 and 8.1 and with Sandboxie 4.06 and earlier versions. I haven't tried the 4.07 betas yet, though. I have noticed the following behavior, and I hope this information will help while a solution is being sought. Of course, this is just my experience.<br>
+<br>
+1.  The BSoD problem doesn't not happen when I'm using an administrator account, only when I'm running a user account.<br>
+<br>
+2.  It happens when I start up the first program I try to run in Sandboxie. After I start that first one and it does not cause a BSoD, then I never subsequently experience one (until after the next re-boot, of course).<br>
+<br>
+3.  It does <strong>not</strong> happen (or hasn't yet) if the first program I start while signed into a user account is forced to require administrator privileges to run inside Sandboxie.<br>
+<br>
+So, it seems, for me anyway, that when I use a regular user account and require the first sandboxed program I run to seek administrator privileges, doing so "patches" the problem thus far. I don't experience a BSoD after the first program runs and I haven't experienced any when requiring administrator privileges for that first program.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: BSoD and a possible temporary workaround</h3>
+				<div class="date">Posted: <strong>Sun Nov 24, 2013 3:22 am</strong></div>
+				<div class="author">by <strong>balloonshark</strong></div>
+				<div class="content"><blockquote><div><cite>C. Kuma wrote:</cite>I've experienced the BSoD many times while using Windows 8 and 8.1 and with Sandboxie 4.06 and earlier versions. I haven't tried the 4.07 betas yet, though. I have noticed the following behavior, and I hope this information will help while a solution is being sought. Of course, this is just my experience.<br>
+<br>
+1.  The BSoD problem doesn't not happen when I'm using an administrator account, only when I'm running a user account.<br>
+<br>
+2.  It happens when I start up the first program I try to run in Sandboxie. After I start that first one and it does not cause a BSoD, then I never subsequently experience one (until after the next re-boot, of course).<br>
+<br>
+3.  It does <strong>not</strong> happen (or hasn't yet) if the first program I start while signed into a user account is forced to require administrator privileges to run inside Sandboxie.<br>
+<br>
+So, it seems, for me anyway, that when I use a regular user account and require the first sandboxed program I run to seek administrator privileges, doing so "patches" the problem thus far. I don't experience a BSoD after the first program runs and I haven't experienced any when requiring administrator privileges for that first program.</div></blockquote>
+For a workaround I wonder if we could start notepad.exe as admin in sandboxie as the first program to run sandboxed after boot. After that close notepad and delete the sandbox contents. Would everything work normally until the next boot?<br>
+<br>
+Would it matter which sandbox we would start notepad in? For example could I create a separate sandbox for notepad, close and delete the contents and then have my browser sandbox work normally afterwards?<br>
+<br>
+Edit: Just to be clear about the workaround I was talking about. Does the program only need to be run as admin and/or does Sandboxie's .exe's need to be running as admin? I want to make a shortcut and I'm not sure how to go about it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Reply</h3>
+				<div class="date">Posted: <strong>Sun Nov 24, 2013 6:20 pm</strong></div>
+				<div class="author">by <strong>C. Kuma</strong></div>
+				<div class="content">It has been my experience than any running program in any sandbox works. I haven't noticed any "preferences" for particular programs. As long as I start the first run sandboxed program as an administrator while using a regular user account, I don't suffer the BSoD. Of course, I would be interested in knowing if others experience the same. Also, it doesn't matter if I just start the program, exit it, and then continue on as I normally would using programs that do not run with administrator privileges. The effect seems to be the same--no BSoD problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Nov 25, 2013 1:27 am</strong></div>
+				<div class="author">by <strong>balloonshark</strong></div>
+				<div class="content">Thanks C. Kuma. If I can figure out how to make a shortcut to start notepad as admin sandboxed I will give a try for a while.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Nov 25, 2013 1:59 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I have another change in version 4.07.04 that will hopefully fix this problem.  Please let me know if it makes a difference.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Same bsod error</h3>
+				<div class="date">Posted: <strong>Wed Dec 04, 2013 7:12 am</strong></div>
+				<div class="author">by <strong>Carpz</strong></div>
+				<div class="content">Hello,<br>
+<br>
+Have same bsod with 4.06 i have crashdump that indicates the same sandboxie driver that other ppl here have said. Il try now 4.07 beta and well see if it works <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+I'l report back.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 22, 2013 9:03 am</strong></div>
+				<div class="author">by <strong>Carpz</strong></div>
+				<div class="content">Well it has been 2 weeks and not a single blue screen <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Guess that change that Tzuk did helped the issue.<br>
+<br>
+Gratz!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Dec 23, 2013 5:38 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks Carpz!  I am happy to hear this problem is finally fixed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 02, 2014 9:53 am</strong></div>
+				<div class="author">by <strong>Throwawayaccount123456</strong></div>
+				<div class="content">I finally spent yesterday following <a href="http://www.dedoimedo.com/computers/windows-bsod.html" class="postlink">this</a> guide at as research into the reasons for my frequent bluescreens.<br>
+<br>
+After that, I searched this forum and found two threads with persons having bluescreens.<br>
+<br>
+<br>
+Maybe the issue has been resolved with the recent beta versions but I figured it wouldn't hurt to submit my minidump analyses. The bluescreens happened using Windows 8.1 (64-bit) and Sandboxie 4.06 (64-bit).<br>
+You can download the analyses from <a href="http://www.filedropper.com/2014-01-01allminidumpfilesanalyzed" class="postlink">here</a>. The password for the archive file is "sandboxie tzuk" without quotation marks.<br>
+<br>
+Tzuk, I can provide you with the *.dmp files as well if you're interested.<br>
+<br>
+<br>
+I updated Sandboxie to the latest beta version yesterday and will report back in case a bluescreen happens again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 03, 2014 3:59 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Sorry for your trouble, but version 4.07.05 should hopefully fix the problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 03, 2014 7:51 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Sorry for your trouble, but version 4.07.05 should hopefully fix the problem.</div></blockquote>
+@tzuk<br>
+Hi, I think you should finish this 4.07.05 beta and release the final version before you go to paradise...   <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">  <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=41&t=16752&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:46:57 GMT -->
+</html>

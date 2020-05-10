@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25369&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:29:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Why change Sandbox Level 4 to 3/2/1/0</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Why change Sandbox Level 4 to 3/2/1/0</h2>
+		<p><a href="viewtopice524e524.html?f=17&amp;t=25369">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25369</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Why change Sandbox Level 4 to 3/2/1/0</h3>
+				<div class="date">Posted: <strong>Thu Jan 25, 2018 8:06 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">Hi
+<blockquote class="uncited"><div>by Barb@Invincea » Thu Aug 17, 2017 11:17 am<br>
+Also, you shouldn't need to turn off multi-process in Firefox, as it is currently supported by Sandboxie.<br>
+by Barb@Invincea » Tue Nov 14, 2017<br>
+There are some issues that come up if security.sandbox.content.level is set to 3. However, for me on Win 10 x64, it works fine with level 3. Seems to be "random" ...Still investigating.<br>
+by Barb@Invincea » Thu Jan 18, 2018 <br>
+Open Firefox outside Sandboxie type about:config and accept the risk search sandbox Switch security.sandbox.content.level to 2 ( if needed switch it to 1 or 0 ). Close Firefox Relaunch it Sandboxed and re-test. </div></blockquote>
+
+Why is it necessary for some Sandboxie users to allow web content more access to their system (by weakening Firefox built-in sandbox) by changing Sandbox Level 4 to 3/2/1/0. <br>
+<br>
+Just curious.  <br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Why change Sandbox Level 4 to 3/2/1/0</h3>
+				<div class="date">Posted: <strong>Thu Jan 25, 2018 8:31 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">I may not be a "very stable genius" but I do have a strange desire to second this request of info and hope for a few specifics on how/why internal changes like these can suddenly allow a SBIE protected instance to work without as many issues if inter-box processes are not being denied things to begin with. [/me braces for the inevitable it's their fault slight of hand ~ though I won't brush it off as also being a legit possibility!]</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Why change Sandbox Level 4 to 3/2/1/0</h3>
+				<div class="date">Posted: <strong>Fri Jan 26, 2018 11:28 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello all,<br>
+<br>
+Lowering the Firefox Sandbox security level is a workaround used in order to allow certain Firefox features to work with Sandboxie. For some users, a sandbox content level of 3 may trigger a crash, for others it causes audio/printing to not work. We have been seeing different behaviors per OS (I am unable to repro under Win 10, but I got the printing/audio issues when running Windows 8.1 and 7, so it is most likely a combination of OS + Firefox changes which explains why not all users need to make the changes).  <br>
+<br>
+The issue is still under investigation and we have not yet found a fix, that's why some users may need to lower the Firefox sandbox level in order to use it inside Sandboxie. Is not a fix, it's a workaround. <br>
+<br>
+There are several threads that discuss this which contain further explanations/information/scenarios: <br>
+<a href="viewtopicc8bbc8bb.html?f=11&amp;t=25095" class="postlink">viewtopic.php?f=11&amp;t=25095</a><br>
+<a href="viewtopic3a953a95.html?f=11&amp;t=24937" class="postlink">viewtopic.php?f=11&amp;t=24937</a><br>
+<a href="viewtopicad5aad5a.html?p=129898#p129898" class="postlink">viewtopic.php?p=129898#p129898</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Why change Sandbox Level 4 to 3/2/1/0</h3>
+				<div class="date">Posted: <strong>Fri Jan 26, 2018 9:42 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">So umm...not what I expected to read at all...!<br>
+<br>
+Did you <em>actually</em> just claim that no one there (on your end) can make heads or tails of why an <span style="text-decoration: underline"><span style="font-size: 150%; line-height: normal"><strong><em>open source</em></strong></span></span> browser runs into issues inside Sandboxie when in relation to various, increased, internal "Firefox Sandbox Levels" (and how suddenly using rule changes [to decrease its internal mechanisms] within that same program somehow aid in allowing it to function as expected when protected by Sandboxie?) beyond each point when you <strong><span style="text-decoration: underline">CAN</span></strong> literally, download, follow and read the related code prior to it being assembled? [No, I don't think that's what you just said..instead...I read a generic BOT type response to keywords (maybe searches?)...sigh]<br>
+<br>
+/Insert disbelief smiley here followed by quite a few coughs hiding some b and s of their own.<br>
+<br>
+I wasn't asking for an overnight fix [ok so this is months old] but I was actually curious as to why exactly this is so hard to understand and resolve. It just seems so silly that it remains a problem when the related source code is available publicly.<br>
+<br>
+Feel free to ask Curt to dazzle us with a brain squashing one line response that would make no sense to the layperson (like me). At least then I could pretend to 'nod and agree' while I quietly nudge Mr. X and go, "Whhaaaaaaatt did he just say?"<br>
+<br>
+If I was a programmer I'd read it myself and say something cool like that one doohicky expects to pass this other doohickey via the next doohickey but the recieveing doohickey gets confused when that one doohickey is altered by sandboxie and so it doesn't look the doohickey it's supposed to look like to this other doohickey so a stoopid flag is set and in turn the internal sandboxed security (of FF) rejects that other doohickeys doohickey because it doesn't match the expected doohickeys format but <span style="text-decoration: underline">that</span> is just because that other doohickey is actually as stoopid as the flag it just set so instead we have you lower the internal box level to avoid those bad routines but not because this is a totally insane drunken rant mean to go in circles.<br>
+<br>
+/me is totally legit (<strong>not</strong>) /insert TS song here</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Why change Sandbox Level 4 to 3/2/1/0</h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2018 11:28 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Syrinx,<br>
+
+<blockquote class="uncited"><div>I wasn't asking for an overnight fix [ok so this is months old] but I was actually curious as to why exactly this is so hard to understand and resolve. It just seems so silly that it remains a problem when the related source code is available publicly.</div></blockquote>
+
+If we knew exactly why is this so hard to figure out/resolve, we would have posted a fix already. On top of this issue being harder to fix than you would think, there were other priorities that delayed the investigation process (kernel patches, sbie updates to VS 2015, etc...) .  <br>
+<br>
+The workaround is the only option at the moment. But we have not given up on finding a solution, and we will post it once it is found.  <br>
+<br>
+What I can offer, once the solution/actual problem is found, is to update this thread with technical information that may help you further understand the problem (after we manage to understand it/fix it <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> ). <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Why change Sandbox Level 4 to 3/2/1/0</h3>
+				<div class="date">Posted: <strong>Mon Feb 05, 2018 6:37 pm</strong></div>
+				<div class="author">by <strong>RooJ</strong></div>
+				<div class="content">Maybe not connected but I noticed on the release notes for firefox 58.0.1 the following:<br>
+<br>
+<a href="https://www.mozilla.org/en-US/firefox/58.0.1/releasenotes/" class="postlink">https://www.mozilla.org/en-US/firefox/5 ... easenotes/</a>
+<blockquote class="uncited"><div><em>unresolved<br>
+Users running Firefox for Windows over a Remote Desktop Connection (RDP) may find that audio playback is disabled due to increased security restrictions. Learn how to mitigate this issue until it is corrected in an upcoming release.</em></div></blockquote>
+
+And in mitigation:<br>
+<br>
+<a href="https://support.mozilla.org/en-US/kb/i-cant-play-audio-remote-desktop-connection" class="postlink">https://support.mozilla.org/en-US/kb/i- ... connection</a>
+<blockquote class="uncited"><div><em>I can’t play audio on a Remote Desktop Connection<br>
+<br>
+If you are on a Remote Desktop Connection (RDP) on Windows, audio playback will be disabled due to increased security restrictions. This is a known issue since Firefox version 56 that we are working hard to fix.<br>
+<br>
+In the meantime, you can reduce the sandbox security level by following these steps:<br>
+<br>
+    In the address bar, type about:config and press EnterReturn.<br>
+        The about:config "This might void your warranty!" warning page may appear. Click I'll be careful, I promise!I accept the risk! to continue to the about:config page. <br>
+    Search for security.sandbox.content.level, double-click on the preference and set its value to 2.<br>
+    Restart Firefox on the remote device. <br>
+</em></div></blockquote>
+
+Fingers crossed Mozilla's RDP audio fix resolves the issue in sandboxie too.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Why change Sandbox Level 4 to 3/2/1/0</h3>
+				<div class="date">Posted: <strong>Tue Feb 06, 2018 11:05 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello RooJ ,<br>
+<br>
+Thanks for the update. There were also other Firefox bugs reported when using sandbox content levels higher than 2. They are posted in the original Firefox threads under Problem Reports, and we are monitoring them. <br>
+<br>
+This is going to be one of those issues that will take a while to tackle due to all of these scenarios. <br>
+The original posts will be updated as new information becomes available. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Why change Sandbox Level 4 to 3/2/1/0</h3>
+				<div class="date">Posted: <strong>Sun Feb 25, 2018 9:15 am</strong></div>
+				<div class="author">by <strong>martinr</strong></div>
+				<div class="content">For a long time I have had to run the Firefox sandbox at zero so it would run in Sandboxie.   Not a huge problem except it takes perhaps 2 minutes to fully open and settle down ready for browsing.    If I open Firefox outside Sandboxie, it comes up in an instant.<br>
+<br>
+I’ve always put up with this because of the protection Sandboxie gives me.     But I ought to ask: is it at all posdible to say how the Firefox sandbox compares with Sandboxie?     <br>
+<br>
+I’ve used Sandboxie since I think around 2001, unless memory fails me, and I feel exposed without it, as, on the odd occasion when I can only use Microsoft Edge in irder to fully access a website.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Why change Sandbox Level 4 to 3/2/1/0</h3>
+				<div class="date">Posted: <strong>Mon Mar 26, 2018 4:02 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">Application Basics<br>
+Name: Firefox<br>
+Version: 59.0.2<br>
+Build ID: 20180323154952<br>
+Update Channel: release<br>
+User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0<br>
+OS: Windows_NT 10.0<br>
+<br>
+Multiprocess Windows: 1/1 (Enabled by default)<br>
+Web Content Processes: 4/4<br>
+<br>
+Content Process Sandbox Level: 4<br>
+Effective Content Process Sandbox Level: 4</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25369&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:29:14 GMT -->
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="robots" content="index,follow">
+	<meta name="language" content="en">
+	<meta name="google-translate-customization" content="e0b0918ac010f34-ee72acc87a31fea6-gc7951f1948fb9449-11">
+	<meta name="description" content="Sandboxie - Sandbox security software for Windows. Install and run programs in a virtual sandbox environment without writing to the hard drive.">
+	<link rel="stylesheet" type="text/css" href="includes/style.css">
+	<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="includes/js/mobile-menu.js">
+	</script>
+	<script type="text/javascript">
+var onload_reposition_ie = 0;
+	</script>
+
+<!--[if IE]>
+<script type="text/javascript">
+onload_reposition_ie = 1;
+</script>
+<![endif]-->
+
+	<script type="text/javascript">
+function onload_reposition()
+{
+}
+	</script>
+
+	<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15566261-2', 'auto');
+ga('send', 'pageview');
+	</script>
+
+<title>Sandboxie - Detecting Key Loggers</title>
+<meta name="description" content="Detecting Key Loggers - Sandboxie, sandbox security and secure web browsing software for Windows">
+</head>
+<body onload="onload_reposition()">
+<a name="top"></a> 
+<div id="masthead">
+	<table class="masthead" width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td width="312" style="vertical-align:top;"><a href="index.html" title="Sandboxie.com"><img src="images/MastheadLogo.jpg" alt="" height="92" width="312"></a></td>
+			<td><span id="motto"><i>Trust&nbsp;No&nbsp;Program</i></span></td>
+		</tr>
+	</table>
+	<div id="submasthead">
+		<div id="drop-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="HelpTopics.html">Help &amp; FAQ</a></li>
+				<li><a href="https://forums.sandboxie.com/">Forum</a></li>
+				<li><a href="DownloadSandboxie.html">Download</a></li>
+				<li><a href="RegisterSandboxie.html">Buy</a>
+				<ul>
+					<li><a href="HomeUse.html">Home Use</a></li>
+				</ul>
+				</li>
+				<li><a href="SiteSearch.html">Search</a></li>
+				<li><a href="HowItWorks.html">How It Works</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container-menus">
+	<div class="one-menus">
+		<div id="google_translate_element">
+		</div>
+
+		<script type="text/javascript">
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,bg,cs,da,de,el,en,es,et,fi,fr,hr,hu,id,it,iw,jv,ko,mk,nl,pl,pt,ru,sk,sq,sv,tr,uk,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, gaTrack: true, gaId: 'UA-53196810-1'}, 'google_translate_element');
+}
+		</script>
+
+	</div>
+	<div class="two-menus">
+		<div id="nav-trigger">
+			<span>Menu</span>
+		</div>
+		<div id="nav-mobile"> 
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="HelpTopics.html">Help &amp; FAQ</a></li>
+			<li><a href="https://forums.sandboxie.com/">Forum</a></li>
+			<li><a href="DownloadSandboxie.html">Download</a></li>
+			<li><a href="RegisterSandboxie.html">Buy</a></li>
+			<li><a href="SiteSearch.html">Search</a></li>
+			<li><a href="HowItWorks.html">How It Works</a></li>
+		</ul>
+		</div> 
+	</div>
+</div><div id="wrapper">
+	<h1 style="margin:0;padding-top:.5em">
+		Detecting Key Loggers 
+	</h1>
+	<p>
+	<a name="top" id="top"></a> 
+	</p>
+	<table style="border: 1px solid #bba; background-color: #f7f8ff; padding: 0px; font-size: 95%; text-align: left; width: 90%;">
+		<tr>
+			<td> 
+			<p>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="DetectingKeyLoggers.html#overview">Overview</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="DetectingKeyLoggers.html#external">External Key-Loggers</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="DetectingKeyLoggers.html#rootkits">Rootkit Key-Loggers</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="DetectingKeyLoggers.html#hooks">Windows Hook Key-Loggers</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="DetectingKeyLoggers.html#msg">Windows Message Key-Loggers</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="DetectingKeyLoggers.html#script">Scripted Key-Loggers</a><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp; <a href="DetectingKeyLoggers.html#defend">Defending Against Key-Logger</a><br>
+			<br>
+			</p>
+			</td>
+		</tr>
+	</table>
+	<p>
+		Go to <a href="HelpTopics.html">Help&nbsp;Topics</a>, <a href="UsageTips.html">Usage&nbsp;Tips</a>.
+	</p>
+	<hr>
+	<h3>
+		<a name="overview" id="overview"></a>Overview 
+	</h3>
+	<p>
+		It is very difficult to reliably detect all classes of key-loggers. This section first explains why this is so, and concludes by offering a possible defense against them. 
+	</p>
+	<p>
+		First, a distinction must be made between several classes of key-loggers: 
+	</p>
+	<ul>
+		<li> external key-loggers 
+		<li> rootkit key-loggers 
+		<li> windows hook key-loggers 
+		<li> windows message key-loggers 
+		<li> scripted key-loggers 
+	</ul>
+	<h3>
+		<a name="external" id="external"></a>External Key-Loggers 
+	</h3>
+	<p>
+		External (or hardware) key-loggers are devices that connect to your computer in some way. Two examples are a small device plugged between the keyboard and the computer, or a device that snoops on radio signals transmitted by a wireless keyboard. 
+	</p>
+	<p>
+		The common principle of key-loggers in this class is that they are <em>external</em> to the Windows system on which they are spying. Software running within Windows cannot detect, remove or protect against external key-loggers. 
+	</p>
+	<p>
+		The other classes of key-loggers described here are software key-loggers which do operate within Windows. 
+	</p>
+	<h3>
+		<a name="rootkits" id="rootkits"></a>Rootkit Key-Loggers 
+	</h3>
+	<p>
+		Rootkit key-loggers record keystrokes at the lowest software level, typically by positioning themselves as a second keyboard hardware driver (a <em>filter</em> driver, in Windows terminology). 
+	</p>
+	<p>
+		Once installed, this class of key-loggers may provide the best logging facilities, and may be difficult to get rid of. But to be installed in the first place, this key-logger needs the explicit help of the operating system, and so is easily blocked by Sandboxie. 
+	</p>
+	<p>
+		If such a key-logger attempts to install, Sandboxie should report an informational message <a href="SBIE2103.html">SBIE2103</a>, unless the <a href="BlockDrivers.html">BlockDrivers</a> setting (see also <a href="RestrictionsSettings.html#lowlevel">Sandbox Settings &gt; Restrictions &gt; Low-Level Access</a>) was explicitly used to disable this protection.
+	</p>
+	<h3>
+		<a name="hooks" id="hooks"></a>Windows Hook Key-Loggers 
+	</h3>
+	<p>
+		These key-loggers don't masquerade as hardware drivers, but they still have to ask the operating system to load them (or <em>hook them</em>) into every program executing on the desktop. 
+	</p>
+	<p>
+		It is not uncommon for applications to install such hooks as part of normal operation, and blocking all of them would prevent some programs from running successfully inside the sandbox. 
+	</p>
+	<p>
+		<strong>Removed From Sandboxie - Block Hooks Command</strong> 
+	</p>
+	<p>
+		The approach Sandboxie takes is to honor the hook request partially, by applying the hook only to applications in the same sandbox as the requesting application. 
+	</p>
+	<p>
+		The <a href="BlockWinHooks.html">BlockWinHooks</a> setting (see also <a href="RestrictionsSettings.html#lowlevel">Sandbox Settings &gt; Restrictions &gt; Low-Level Access</a>) may be used to explicitly disable this protection.
+	</p>
+	<h3>
+		<a name="msg" id="msg"></a>Windows Message Key-Loggers 
+	</h3>
+	<p>
+		This class of key-loggers doesn't need any assistance from the operating system, and can only reliably record activity within one program. However, from the point of view of a supervisory program like Sandboxie, they don't do anything suspicious, and so cannot be stopped. 
+	</p>
+	<p>
+		In order for a program running on the desktop to actually process the keyboard input, the operating system sends that program a message describing the input. The message key-logger, which is likely running in the same process space as the program being logged, can snoop on these messages in a variety of ways, which don't raise suspicion. 
+	</p>
+	<p>
+		Typically this key-logger will be a secret Web browser plugin (or a secret component of a plugin), so it can easily record keyboard activity related to the Web browser. 
+	</p>
+	<h3>
+		<a name="script" id="script"></a>Scripted Key-Loggers 
+	</h3>
+	<p>
+		This class of key-loggers target and compromise the Web site you will be visiting. This is in contrast to the three other forms of key-loggers discussed here, which target and compromise your own computer. 
+	</p>
+	<p>
+		The JavaScript and VBScript languages offer facilities for a Web page to react to keystrokes. Legitimate uses of these facilities enable the creation of sophisticated Web pages. For example, consider how Google and Yahoo! searches react to the keys you type in order to suggest a possible search string. 
+	</p>
+	<p>
+		Exploiting security weaknesses in a Web site, a spy embeds a scripted key-logger into one of the pages in the site. These key-logger are practically indistinguishable from other scripts on the same site, and can use the same script facilities to react to your keystrokes, record them or transmit them to a third-party site. 
+	</p>
+	<h3>
+		<a name="defend" id="defend"></a>Defending Against Key-Logger 
+	</h3>
+	<p>
+		Sandboxie is not designed to detect or disable key-loggers, but it is designed to make sure that sandboxed software stays in the sandbox, that such software can't integrate into Windows, and that it can be completely discarded when you delete the sandbox. 
+	</p>
+	<p>
+		This means that if you take care to carry out all untrusted activity in the sandbox, you can always delete the sandbox to undo the effects of that activity, and restore your computer to a trusted state. 
+	</p>
+	<p>
+		The first step is to make sure your system is not infected by malicious key-loggers, prior to using Sandboxie. A system scan by an anti-virus or anti-malware tool should help here. 
+	</p>
+	<p>
+		Then carry out all untrusted activity -- such as browsing the Web, reading email, and testing unknown programs -- only in the restricted area of the sandbox. This doesn't mean you won't be infected by key-loggers, but it does mean you can get rid of them: 
+	</p>
+	<ul>
+		<li> You can make sure you stop all of them, by telling Sandboxie to stop all activity in all sandboxes. 
+		<ul>
+			<li> See also the <strong>Terminate All Programs</strong> command in the <a href="FileMenu.html#termall">File Menu</a> and the <a href="TrayIconMenu.html#termall">Tray Icon Menu</a>.
+		</ul>
+		<li> Once stopped, you can discard the traces of their program code, by deleting the contents of the sandbox. 
+		<ul>
+			<li> See also <a href="DeleteSandbox.html">Delete&nbsp;Sandbox</a>.
+		</ul>
+	</ul>
+	<p>
+		Once discarded, they can no longer record your keyboard activity, and you are safe to browse to trusted sites and enter your passwords. 
+	</p>
+	<p>
+		Note that if you don't like to regularly delete your sandbox, you can set aside one sandbox for trusted browsing, and delete just that sandbox before carrying out the trusted activity. But it is still important to first stop all sandboxed activity in all sandboxes, for maximum protection. 
+	</p>
+	<hr>
+	<p>
+		Another protection measure against a key-logger is to configure Sandboxie to deny access to the Internet for anything other than your Web browser, in an attempt to prevent the key-logger from sending out the recorded information. See the setting for "the only program that can access the Internet" in <a href="http://localhost/ProgramSettings#internet">Program Settings</a>. 
+	</p>
+	<p>
+		Note two caveats: 
+	</p>
+	<ul>
+		<li> The Internet access feature is neither a replacement for a proper firewall, nor was it designed as a mechanism to counter or hinder key-loggers. 
+	</ul>
+	<ul>
+		<li> Some key-loggers could possibly circumvent the Internet access restriction by hijacking the Web browser to be used as a vehicle through which to send out the recorded information. 
+	</ul>
+	<hr>
+	<p>
+		Go to <a href="HelpTopics.html">Help&nbsp;Topics</a>, <a href="UsageTips.html">Usage&nbsp;Tips</a>.
+	</p>
+</div>
+
+<p align="center" style="font-size:8pt; line-height:1.4em;">
+	<b>Sandboxie</b> is Copyright &copy; 2004-2019 by Sandboxie Holdings, LLC.&nbsp; All rights reserved. <br>
+	<b><a href="index.html">Sandboxie.com</a> | <a href="ContactAuthor.html">Contact Author</a></b> <br>
+</p>
+
+<script type="text/javascript" src="../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
+</body>
+</html>

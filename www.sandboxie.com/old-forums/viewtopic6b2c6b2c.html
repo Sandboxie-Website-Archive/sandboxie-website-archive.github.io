@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25364&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:05:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; After update to FF58 no audio in sandboxed browser [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>After update to FF58 no audio in sandboxed browser [SOLVED]</h2>
+		<p><a href="viewtopicb651b651.html?f=11&amp;t=25364">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25364</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>After update to FF58 no audio in sandboxed browser [SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Jan 24, 2018 3:31 pm</strong></div>
+				<div class="author">by <strong>Geordy</strong></div>
+				<div class="content">I just updated my Firefox to the new version 58.0 (in my unsandboxed firefox). That's all I do with Firefox outside the Sandbox in general. After the installation went through I quickly realised that Youtube videos, Twitch content, pretty much any media with audio doesnt play sound in my sandboxed browser anymore. In addition to that on Twitch all I see is the player practically showing a slideshow. No lowering of the resolution works in that case. YT videos run fine but also no audio.<br>
+<br>
+I was quick to blame Firefox itself because that's the only thing that has changed. But then I checked a YT video in the unsandboxed FF58 and you guessed it I had sound. Clearing the DefaultBox (I had Sandboxie create the sandboxed browser box for me when I first started using Sandboxie) and then restarting the sb.ed FF yielded the same issue. FF58 introduced volume controls to each tab - I made sure that is not the problem at hand here (muted the tab and umuted it). Also FF is unmuted in the Windows Mixer and its volume slider is at 85%. The soundcard/loudspeakers work in general: videos in vlc work fine, so does music in winamp.<br>
+<br>
+Im using WIndows 7, 64-bit. Sandboxie version is 5.22, 64-bit (auto-update enabled). FF is as stated above version 58.0, 64-bit.<br>
+<br>
+My <strong>guess </strong>is since FF58 is messing with volume controls and so forth that it now somehow requires access to resources that my Defaultbox currently cannot reach? What do you guys think does FF58 break Sandboxie audio?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: After update to FF58 no audio in sandboxed browser</h3>
+				<div class="date">Posted: <strong>Wed Jan 24, 2018 3:46 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Geordy,<br>
+<br>
+Have you applied this?:<br>
+<a href="viewtopice9bae9ba.html?p=130456#p130456" class="postlink">viewtopic.php?p=130456#p130456</a><br>
+<br>
+Regards,<br>
+Barb.-<br>
+<br>
+PS: If you are planning on updating Win 7 x64, you will need to use the latest beta:<br>
+<a href="viewtopicb0cbb0cb.html?f=64&amp;t=25114" class="postlink">viewtopic.php?f=64&amp;t=25114</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: After update to FF58 no audio in sandboxed browser</h3>
+				<div class="date">Posted: <strong>Wed Jan 24, 2018 4:17 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Hi Geordy,, if Barbs suggestion doesnt fix your sound issue, try toggling both preferences below in about:config to false:<br>
+<br>
+browser.tabs.remote.autostart<br>
+browser.tabs.remote.autostart.2<br>
+<br>
+I read someone in another forum who used to fix his sound issue by switching security.sandbox.content.level to 2 (Barbs suggestion), that now for Firefox 58, he has to disable Multiprocess (the alternate fix I suggested you try).<br>
+<br>
+....................<br>
+<br>
+FWIW. I dont have the sound issue but I disable Multiprocess. I have been doing it from day 1. In my W10, the update to version 58, reenabled Multiprocess automatically. I had to disable it afterward again. So, anyone who has been disabling MP as a workaround, should check to make sure it is still disabled after updating Firefox.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: After update to FF58 no audio in sandboxed browser</h3>
+				<div class="date">Posted: <strong>Wed Jan 24, 2018 4:26 pm</strong></div>
+				<div class="author">by <strong>Geordy</strong></div>
+				<div class="content">Thank you for providing the link, Barb! I've got to admit I feel a little dumb now seeing that there was a thread already discussing my problem.<br>
+<br>
+The sound is back now. Here is what I have done: <br>
+I went into the sandbox security levels and the browser.tab.remote settings and tried every combination. In the end the security levels were fine on default. What did the trick is a manual override to the <strong>browser.tabs.remote.autostart</strong> entry. Note there is no '2' in the title. The autostart2 entry is on false by default with the current SB version. <br>
+<br>
+I believe what the update to FF58 did was resetting the <strong>browser.tabs.remote.autostart</strong> entry back to 'true" by default. Toggling that back to false gave me the sound.<br>
+<br>
+So in summary:<br>
+browser.tabs.remote.autostart / <strong>modified </strong>/ <strong>false</strong> (&lt;~~ needed manual correction)<br>
+browser.tabs.remote.autostart.2 / <strong>modified </strong>/ <strong>false</strong> (&lt;~~was like that from the start)<br>
+security.sandbox.content.level / default / 4 (&lt;~~was like that from the start, new FF default, didnt matter at all in the end)<br>
+<br>
+The security levels are now at 4 by default but at least the YT videos dont seem to mind. Thanks again for your prompt assistance!<br>
+<br>
+<em>Edit:</em> Yes that was exactly it. Thank you, too, elam!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25364&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:05:58 GMT -->
+</html>

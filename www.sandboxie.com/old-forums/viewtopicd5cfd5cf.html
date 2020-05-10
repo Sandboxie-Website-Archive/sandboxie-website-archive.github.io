@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24952&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:29:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; security token</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>security token</h2>
+		<p><a href="viewtopic98359835.html?f=11&amp;t=24952">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24952</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>security token</h3>
+				<div class="date">Posted: <strong>Tue Oct 03, 2017 5:30 pm</strong></div>
+				<div class="author">by <strong>pantau</strong></div>
+				<div class="content">My USB cryptographic token (Watchdog) is not seen from within the sandbox by Firfox ESR, though both were installed in the same sandbox.<br>
+<br>
+Sandboxie 5.20 x64<br>
+Widnows 7 x64<br>
+GDATA Antivirus</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: security token</h3>
+				<div class="date">Posted: <strong>Wed Oct 04, 2017 10:42 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello pantau,<br>
+<br>
+Does the token work outside Sandboxie? <br>
+Are you receiving an error message when you try to use it? <br>
+<br>
+Try disabling your Antivirus and creating a new Sandbox to see if the problem persists. <br>
+<br>
+Maybe this workaround does the trick for you:<br>
+<a href="viewtopicf1eff1ef.html?p=128787#p128787" class="postlink">viewtopic.php?p=128787#p128787</a><br>
+<br>
+Last, but not least, give the latest beta a try:<br>
+<a href="viewtopic73f273f2.html?p=129389#p129389" class="postlink">viewtopic.php?p=129389#p129389</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: security token</h3>
+				<div class="date">Posted: <strong>Wed Oct 04, 2017 6:16 pm</strong></div>
+				<div class="author">by <strong>pantau</strong></div>
+				<div class="content">The token works when I install it outside the sandbox, but I'd like to install it inside a sandbox.<br>
+No error message.<br>
+Disabling Anti-Virus doesn't change anything.<br>
+I tried the new beta, same result.<br>
+As far as the threads are concerned, I don't find a USB device in the monitor:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Pipe        -------------------------------
+Pipe        \Device\KsecDD
+Pipe        \Device\NamedPipe\chrome.1328.7.159420133
+Pipe        \device\namedpipe\chrome.1328.7.159420133
+Pipe        \Device\NamedPipe\chrome.1328.8.30247384
+Pipe        \device\namedpipe\chrome.1328.8.30247384
+Pipe        \device\namedpipe\gdkbdpipe1
+Pipe        \Device\NamedPipe\GDKBDPipe1
+Pipe        \device\namedpipe\gdkbdpipe1
+Pipe        \device\namedpipe\gecko-crash-server-pipe.1328
+Pipe        \Device\NamedPipe\gecko-crash-server-pipe.1328
+Pipe        \device\namedpipe\gecko-crash-server-pipe.1328
+Pipe        \Device\NamedPipe\jpi2_pid620_pipe1
+Pipe        \device\namedpipe\jpi2_pid620_pipe1
+Pipe        \Device\NamedPipe\jpi2_pid620_pipe1
+Pipe        \device\namedpipe\jpi2_pid620_pipe1
+Pipe        \Device\NamedPipe\jpi2_pid620_pipe2
+Pipe        \device\namedpipe\jpi2_pid620_pipe2
+Pipe        \Device\NamedPipe\jpi2_pid620_pipe2
+Pipe        \device\namedpipe\jpi2_pid620_pipe2
+Pipe     O  \Device\Afd
+Pipe     O  \Device\NamedPipe
+Pipe     O  \Device\NamedPipe\
+Pipe     O  \device\namedpipe\
+Pipe     O  \Device\NamedPipe\
+Pipe     O  \device\namedpipe\
+Pipe     O  \Device\NamedPipe\
+Pipe     O  \Device\Nsi</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: security token</h3>
+				<div class="date">Posted: <strong>Thu Oct 05, 2017 12:43 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello pantau,<br>
+
+<blockquote class="uncited"><div>The token works when I install it outside the sandbox, but I'd like to install it inside a sandbox.</div></blockquote>
+What are you installing, exactly? Does it require a driver/service? If so, it will not install inside Sandboxie. <br>
+<br>
+Did you try a new Sandbox with default settings? <br>
+How about a different browser, sandboxed? <br>
+<br>
+Did you get a chance to try the workaround provided on my previous post?:<br>
+<a href="viewtopicf1eff1ef.html?p=128787#p128787" class="postlink">viewtopic.php?p=128787#p128787</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: security token</h3>
+				<div class="date">Posted: <strong>Thu Oct 05, 2017 6:31 pm</strong></div>
+				<div class="author">by <strong>pantau</strong></div>
+				<div class="content">Yes, the token requires a service. That means there is no point in installing it sandboxed?<br>
+<br>
+------ MERGED POST   -----<br>
+<br>
+I've installed the token now outside the Sandbox.<br>
+<br>
+Now it is seen by Firefox ESR, but accessing it I get a message "Certificate private key is not avaliable".<br>
+<br>
+You're workaround referes to the "Pipe \Device\00000064" and "Pipe \Device\USBPDO-0"? I don't have these in my resource monitor.<br>
+<br>
+With a new default sandbox, the problem remains.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: security token</h3>
+				<div class="date">Posted: <strong>Fri Oct 06, 2017 9:49 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello pantau,<br>
+<br>
+The workaround in the topic I provided reads as follows:<br>
+
+<blockquote class="uncited"><div>I found when using a sandboxed browser if I insert the key before its required i.e. at the username or password stage, then when it gets to the authentication stage the key will activate and function normally. However if the key is inserted when already on the authentication request page, then it doesn't work. On unsandboxed browsers it works both ways.</div></blockquote>
+
+I wonder if that works for you.  If it doesn't,  let's gather more info from your Resource Access Monitor, using a new Sandbox with default settings. Please see these steps (be sure to use the "&lt;/&gt;" option in the forum to format the output) to capture the results: <br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: security token</h3>
+				<div class="date">Posted: <strong>Sun Oct 08, 2017 8:41 am</strong></div>
+				<div class="author">by <strong>pantau</strong></div>
+				<div class="content">The workaround doesn't make a difference. I've created a new sandbox, same result. Please find the Resource Monitor below:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\CdRom0
+(Drive)     \Device\HarddiskVolume5
+(Drive)     \Device\HarddiskVolume6
+Clsid       -------------------------------
+File/Key    -------------------------------
+Image       -------------------------------
+Image       *:\users\user\appdata\local\scytl\icpbravoaccess.extension\icpbravoaccess.windows.chrome.app.exe
+Image       c:\program files\sandboxie\sbiedll.dll
+Image       c:\users\user\appdata\local\scytl\icpbravoaccess.extension\icpbravoaccess.windows.common.dll
+Image       c:\users\user\appdata\local\scytl\icpbravoaccess.extension\newtonsoft.json.dll
+Image       c:\users\user\appdata\local\scytl\icpbravoaccess.extension\nlog.dll
+Image       c:\users\user\appdata\local\scytl\icpbravoaccess.extension\scytl.icpbravo.dll
+Image       c:\windows\assembly\nativeimages_v4.0.30319_64\mscorlib\ae297c0391919d23b8eebc5c349edb67\mscorlib.ni.dll
+Image       c:\windows\assembly\nativeimages_v4.0.30319_64\system.configuration\b1a4e5fb7db27bf3740be36f347b4125\system.configuration.ni.dll
+Image       c:\windows\assembly\nativeimages_v4.0.30319_64\system.core\c492b244caac9c856b927dba120e188e\system.core.ni.dll
+Image       c:\windows\assembly\nativeimages_v4.0.30319_64\system.data\d9f7aa41913b8ab0f17caae5d1f9a1f0\system.data.ni.dll
+Image       c:\windows\assembly\nativeimages_v4.0.30319_64\system.numerics\3460a2d6d29218073fa19d562fd02ce1\system.numerics.ni.dll
+Image       c:\windows\assembly\nativeimages_v4.0.30319_64\system.runteb92aa12#\73d6b75a3c7db911aa7d69f169bfb1fb\system.runtime.serialization.ni.dll
+Image       c:\windows\assembly\nativeimages_v4.0.30319_64\system.servicemodel\375d9329aef6a25afbde6c2d95cb3db1\system.servicemodel.ni.dll
+Image       c:\windows\assembly\nativeimages_v4.0.30319_64\system.xml.linq\7ccbe78ef79c5287dac4a71875c927d3\system.xml.linq.ni.dll
+Image       c:\windows\assembly\nativeimages_v4.0.30319_64\system.xml\14ae6ad709f860da6220a1d3395df5ad\system.xml.ni.dll
+Image       c:\windows\assembly\nativeimages_v4.0.30319_64\system\114196eb67ce32fc45d498121285fa02\system.ni.dll
+Image       c:\windows\microsoft.net\assembly\gac_64\system.data\v4.0_4.0.0.0__b77a5c561934e089\system.data.dll
+Image       c:\windows\microsoft.net\framework64\v4.0.30319\clr.dll
+Image       c:\windows\microsoft.net\framework64\v4.0.30319\clrjit.dll
+Image       c:\windows\microsoft.net\framework64\v4.0.30319\mscoreei.dll
+Image       c:\windows\microsoft.net\framework64\v4.0.30319\nlssorting.dll
+Image       c:\windows\system32\advapi32.dll
+Image       c:\windows\system32\atl.dll
+Image       c:\windows\system32\bcrypt.dll
+Image       c:\windows\system32\certcli.dll
+Image       c:\windows\system32\cfgmgr32.dll
+Image       c:\windows\system32\crypt32.dll
+Image       c:\windows\system32\cryptbase.dll
+Image       c:\windows\system32\cryptnet.dll
+Image       c:\windows\system32\cryptsp.dll
+Image       c:\windows\system32\devobj.dll
+Image       c:\windows\system32\dsrole.dll
+Image       c:\windows\system32\gdi32.dll
+Image       c:\windows\system32\hid.dll
+Image       c:\windows\system32\iertutil.dll
+Image       c:\windows\system32\imm32.dll
+Image       c:\windows\system32\kernel32.dll
+Image       c:\windows\system32\kernelbase.dll
+Image       c:\windows\system32\lpk.dll
+Image       c:\windows\system32\msasn1.dll
+Image       c:\windows\system32\mscoree.dll
+Image       c:\windows\system32\msctf.dll
+Image       c:\windows\system32\msvcr120_clr0400.dll
+Image       c:\windows\system32\msvcrt.dll
+Image       c:\windows\system32\nsi.dll
+Image       c:\windows\system32\ntdll.dll
+Image       c:\windows\system32\ole32.dll
+Image       c:\windows\system32\oleaut32.dll
+Image       c:\windows\system32\profapi.dll
+Image       c:\windows\system32\psapi.dll
+Image       c:\windows\system32\rpcrt4.dll
+Image       c:\windows\system32\rsaenh.dll
+Image       c:\windows\system32\sechost.dll
+Image       c:\windows\system32\sensapi.dll
+Image       c:\windows\system32\setupapi.dll
+Image       c:\windows\system32\shell32.dll
+Image       c:\windows\system32\shlwapi.dll
+Image       c:\windows\system32\sspicli.dll
+Image       c:\windows\system32\urlmon.dll
+Image       c:\windows\system32\user32.dll
+Image       c:\windows\system32\userenv.dll
+Image       c:\windows\system32\usp10.dll
+Image       c:\windows\system32\version.dll
+Image       c:\windows\system32\watchdata\watchdata icp csp v1.0\tokenmgr.dll
+Image       c:\windows\system32\watchdata\watchdata icp csp v1.0\uirese3.dll
+Image       c:\windows\system32\watchdata\watchdata icp csp v1.0\wdalg.dll
+Image       c:\windows\system32\watchdata\watchdata icp csp v1.0\wdcsp03.dll
+Image       c:\windows\system32\watchdata\watchdata icp csp v1.0\wdcspui.dll
+Image       c:\windows\system32\watchdata\watchdata icp csp v1.0\wdkmgr.dll
+Image       c:\windows\system32\watchdata\watchdata icp csp v1.0\wdpkcs.dll
+Image       c:\windows\system32\watchdata\watchdata icp csp v1.0\wdsafe3.dll
+Image       c:\windows\system32\wininet.dll
+Image       c:\windows\system32\winscard.dll
+Image       c:\windows\system32\winspool.drv
+Image       c:\windows\system32\winsta.dll
+Image       c:\windows\system32\wldap32.dll
+Image       c:\windows\system32\ws2_32.dll
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\CLR_PerfMon_StartEnumEvent
+Ipc         \RPC Control\epmapper
+Ipc         \RPC Control\LSMApi
+Ipc         \RPC Control\protected_storage
+Ipc         \SBIE_DummyJob_firefox.exe_3
+Ipc         \SBIE_DummyJob_firefox.exe_4
+Ipc         \Sessions\1\BaseNamedObjects\Cor_Private_IPCBlock_v4_8464
+Ipc         \Sessions\1\BaseNamedObjects\Cor_Private_IPCBlock_v4_8588
+Ipc         \Sessions\1\BaseNamedObjects\CPFATE_8464_v4.0.30319
+Ipc         \Sessions\1\BaseNamedObjects\CPFATE_8588_v4.0.30319
+Ipc         \Sessions\1\BaseNamedObjects\NLS_CodePage_1252_3_2_0_0
+Ipc         \Sessions\1\BaseNamedObjects\NLS_CodePage_850_3_2_0_0
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_8464
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_8588
+Ipc         \Sessions\1\BaseNamedObjects\SboxSession
+Ipc         \Sessions\1\BaseNamedObjects\UrlZonesSM_****
+Ipc         \Sessions\1\BaseNamedObjects\Watchdata ICP CSP v1.0_BinFileShare
+Ipc         \Sessions\1\BaseNamedObjects\Watchdata ICP CSP v1.0_CSPNumStrin1
+Ipc         \Sessions\1\BaseNamedObjects\Watchdata ICP CSP v1.0_SharePageFile
+Ipc         \Sessions\1\BaseNamedObjects\windows_shell_global_counters
+Ipc         \Sessions\1\BaseNamedObjects\ZoneAttributeCacheCounterMutex
+Ipc         \Sessions\1\BaseNamedObjects\ZonesCacheCounterMutex
+Ipc         \Sessions\1\BaseNamedObjects\ZonesCounterMutex
+Ipc         \Sessions\1\BaseNamedObjects\ZonesLockedCacheCounterMutex
+Ipc      O  \...\Cor_SxSPublic_IPCBlock
+Ipc      O  \BaseNamedObjects\TermSrvReadyEvent
+Ipc      O  \KernelObjects\LowMemoryCondition
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\CFGMGR32.dll
+Ipc      O  \KnownDlls\CRYPT32.dll
+Ipc      O  \KnownDlls\DEVOBJ.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\IERTUTIL.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\kernelbase.dll
+Ipc      O  \KnownDlls\LPK.dll
+Ipc      O  \KnownDlls\MSASN1.dll
+Ipc      O  \KnownDlls\MSCTF.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\NSI.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\Setupapi.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\URLMON.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\USP10.dll
+Ipc      O  \KnownDlls\WININET.dll
+Ipc      O  \KnownDlls\WLDAP32.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \RPC Control\ConsoleLPC-0x0000000000002124-378449943-17290014841367315349-1956158870796987615-5305902461060697199-2096042535
+Ipc      O  \RPC Control\ConsoleLPC-0x000000000000219C-154243396011047636131071144817-136856048835932168414354817571967989125202799788
+Ipc      O  \RPC Control\DNSResolver
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\LSARPC_ENDPOINT
+Ipc      O  \RPC Control\lsasspirpc
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \RPC Control\senssvc
+Ipc      O  \Security\LSA_AUTHENTICATION_INITIALIZED
+Ipc      O  \Sessions\1\Windows\ApiPort
+Ipc      O  \Sessions\1\Windows\SharedSection
+Pipe        -------------------------------
+Pipe        \Device\KsecDD
+Pipe        \Device\NamedPipe\GDKBDPipe1
+Pipe        \device\namedpipe\gdkbdpipe1
+Pipe        \Device\NamedPipe\GDKBDPipe1
+Pipe        \device\namedpipe\gdkbdpipe1
+Pipe        \device\namedpipe\lsarpc
+Pipe        \device\namedpipe\subprocesspipe.6668.10
+Pipe        \Device\NamedPipe\SubProcessPipe.6668.10
+Pipe        \device\namedpipe\subprocesspipe.6668.10
+Pipe        \device\namedpipe\subprocesspipe.6668.11
+Pipe        \Device\NamedPipe\SubProcessPipe.6668.11
+Pipe        \device\namedpipe\subprocesspipe.6668.11
+Pipe        \Device\NamedPipe\SubProcessPipe.6668.6
+Pipe        \device\namedpipe\subprocesspipe.6668.6
+Pipe        \Device\NamedPipe\SubProcessPipe.6668.6
+Pipe        \device\namedpipe\subprocesspipe.6668.6
+Pipe        \Device\NamedPipe\SubProcessPipe.6668.7
+Pipe        \device\namedpipe\subprocesspipe.6668.7
+Pipe        \Device\NamedPipe\SubProcessPipe.6668.8
+Pipe        \device\namedpipe\subprocesspipe.6668.8
+Pipe        \device\namedpipe\subprocesspipe.6668.9
+Pipe        \Device\NamedPipe\SubProcessPipe.6668.9
+Pipe        \device\namedpipe\subprocesspipe.6668.9
+Pipe     O  \Device\Afd
+WinCls      -------------------------------
+WinCls   O  Shell_TrayWnd</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: security token</h3>
+				<div class="date">Posted: <strong>Mon Oct 09, 2017 2:55 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello pantau,<br>
+<br>
+Does it work in a different browser, sandboxed? <br>
+If you connect the device, does it show in Windows Explorer? (If yes, does it show in a Sandboxed windows explorer?) <br>
+<br>
+This looks like it may be related (is not Watchdog, but Watchdata):<br>
+\Sessions\1\BaseNamedObjects\Watchdata ICP CSP v1.0_*<br>
+<br>
+To test it, create a new Sandbox (or use the one you just created for the Res. Acc. Mon results)<br>
+Right click on the Sandbox --&gt; Sandbox Settings ---&gt;Resource Access ---&gt; IPC Access---&gt; Direct Access<br>
+Hit "Add"<br>
+Paste:<br>
+*\BaseNamedObjects\Watchdata ICP CSP v1.0_*<br>
+Hit Apply and Ok your way out.<br>
+Go to Configure --&gt; Reload Configuration<br>
+Delete the contents of your Sandbox and re-try<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: security token</h3>
+				<div class="date">Posted: <strong>Mon Oct 09, 2017 4:24 pm</strong></div>
+				<div class="author">by <strong>pantau</strong></div>
+				<div class="content">It doesn't work in Chrome either.<br>
+<br>
+The device shows up as CD-Drive in Explorer, also in a sandboxed one.<br>
+<br>
+Watchdata belongs indeed to the token, which is called Watchdog (the service it installs is also called Watchdata).<br>
+<br>
+I think we're on the right way, but unfortunately "*\BaseNamedObjects\Watchdata ICP CSP v1.0_*" didn't do the trick...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: security token</h3>
+				<div class="date">Posted: <strong>Tue Oct 10, 2017 1:46 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello pantau,<br>
+<br>
+One more thing you can try is giving direct access to your CD-ROM drive following these steps:<br>
+<a href="../ResourceAccessSettings.html#file" class="postlink">https://www.sandboxie.com/ResourceAccessSettings#file</a><br>
+<br>
+Once you are done making the changes:<br>
+Go to Configure --&gt; Reload Configuration<br>
+Delete the contents of your Sandbox and re-try<br>
+<br>
+Also, do try the workaround after applying the new settings.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: security token</h3>
+				<div class="date">Posted: <strong>Wed Oct 11, 2017 8:44 am</strong></div>
+				<div class="author">by <strong>pantau</strong></div>
+				<div class="content">Unfortunately no change.<br>
+<br>
+Just to be sure: I added "E:\*" as Resource Access/Direct Access at File and IPC, correct? (E ist the letter assigned to the CD-Drive).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: security token</h3>
+				<div class="date">Posted: <strong>Wed Oct 11, 2017 2:17 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello pantau,<br>
+<br>
+You can try Direct Access only (not IPC). If all fails, try full access. <br>
+<br>
+If that doesn't work, see if installing the stable version of Firefox makes any difference, or maybe try creating a different Firefox profile (be sure to delete the contents of your Sandbox after applying changes, or create new Sandboxes).<br>
+<br>
+I also noticed you are using an add-on for Firefox:<br>
+icpbravoaccess<br>
+I am not sure it works Sandboxed, I haven't found any information about it. <br>
+Is there a different add-on that you can test?  Or, can you try a different browser (after applying the changes we discussed before)?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: security token</h3>
+				<div class="date">Posted: <strong>Sun Oct 15, 2017 2:39 pm</strong></div>
+				<div class="author">by <strong>pantau</strong></div>
+				<div class="content">Full Access makes no difference.<br>
+<br>
+I've tested various versions of Firefox and Chrome. They are all stable versions (some were portable or Extended Support Release).<br>
+<br>
+icpbravoaccess allows access to the certificate without java. It works sandboxed (that is, it recognizes the certificate), but it can't access the private key. Other ways of access (with java) result in the same error.<br>
+<br>
+Maybe its just not possible...</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24952&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:29:25 GMT -->
+</html>

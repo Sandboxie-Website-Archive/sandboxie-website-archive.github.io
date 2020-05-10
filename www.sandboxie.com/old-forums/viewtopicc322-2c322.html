@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6557&start=915&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Buster Sandbox Analyzer - Page 62</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Buster Sandbox Analyzer</h2>
+		<p><a href="viewtopica7d3a7d3.html?f=22&amp;t=6557">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=6557</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>62</strong> of <strong>64</strong></div>
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Sun May 04, 2014 7:06 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Anyone up to collect executables containing misleading icons?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Tue May 06, 2014 10:50 am</strong></div>
+				<div class="author">by <strong>SandyBox</strong></div>
+				<div class="content">Hi Buster,<br>
+<br>
+glad to hear that you resumed your Analyzer project.<br>
+<br>
+Now I gave Sandboxie with the collaboration of BSA another try.<br>
+The configuration with LOG_API32.DLL works fine. But the injection of LOG_API64.DLL doesn't work when starting Windows Explorer sandboxed. Windows Explorer seems to crash because WerFault.exe starts as a process in Sandboxie.<br>
+Also programs such as notepad.exe crash when I try to save a text-file to disk. In contrast cmd.exe seems to work with LOG_API64.DLL.<br>
+<br>
+On my Windows 7 64-bit OS I have installed Sandboxie beta4.9.4 (64-bit version) and your BSA 1.88 with the fourth update.<br>
+<br>
+Please could you tell me if some functionality of BSA is missing while I can use LOG_API32.DLL only? Or is there a way to get the 64-bit DLL working?<br>
+<br>
+Thanks in advance and keep up the great work<br>
+best regards<br>
+Martin</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Tue May 06, 2014 12:01 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>SandyBox wrote:</cite>Now I gave Sandboxie with the collaboration of BSA another try.<br>
+The configuration with LOG_API32.DLL works fine. But the injection of LOG_API64.DLL doesn't work when starting Windows Explorer sandboxed. Windows Explorer seems to crash because WerFault.exe starts as a process in Sandboxie.<br>
+Also programs such as notepad.exe crash when I try to save a text-file to disk. In contrast cmd.exe seems to work with LOG_API64.DLL.<br>
+<br>
+On my Windows 7 64-bit OS I have installed Sandboxie beta4.9.4 (64-bit version) and your BSA 1.88 with the fourth update.</div></blockquote>
+
+Please install Sandboxie 3.76 and let me know if injection of LOG_API64.DLL crashes also Windows Explorer and notepad.exe.<br>
+<br>
+We need to know if it is a problem in Sandboxie or in the DLL.<br>
+
+<blockquote><div><cite>SandyBox wrote:</cite>Please could you tell me if some functionality of BSA is missing while I can use LOG_API32.DLL only?</div></blockquote>
+
+You will not miss anything when you analyze 32 bit applications. If you analyze 64 bit applications they may crash, so you could not analyze them.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Tue May 06, 2014 4:38 pm</strong></div>
+				<div class="author">by <strong>SandyBox</strong></div>
+				<div class="content">Hi Buster,<br>
+<br>
+thank you for the quick reply.<br>
+<br>
+So I reinstalled Sandboxie 3.76. But the problem persists. With injection of LOG_API64.DLL when I try opening Windows Explorer or saving a file in notepad the corresponding application crashes.<br>
+<br>
+Do you have and idea how the cause of this problem could be localized? It would be great being able to analyze 64-bit programs.<br>
+<br>
+By the way: Creating a text-file with Windows Explorer and using injection of LOG_API32.DLL results in a correct RegDiff-report.  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">  It's great but - what I don't understand - according to task-manager my Windows Explorer is 64-bit.  <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> <br>
+Edit: (censored) happens. At least that was the case in Sandboxie 4.9.4. Now even the injection of LOG_API32.DLL is prolematic. Now if BSA is loaded and analyzing a dialog box opens saying that access to destination folder was denied and clicking to continue with higher privileges doesn't work. What I have done wrong?<br>
+<br>
+Thank you very much in advance and best regards<br>
+Martin</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Wed May 07, 2014 3:37 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I can reproduce the problem under Windows 7 64 bit. I will try to contact the person who wrote the DLL.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Wed May 07, 2014 4:39 am</strong></div>
+				<div class="author">by <strong>SandyBox</strong></div>
+				<div class="content">Hi Buster,<br>
+<br>
+it's a great pleasure to hear that you pay attention to the 64-bit injection.<br>
+<br>
+And regarding the 32-bit injection: I identified the problem. The SandBoxie Folder (e.g. DefaultBox) has to be created by Sandboxie itself, not by BSA. So when starting an analysis the Sandbox must not be empty.<br>
+(Sandboxie runs as normal user whereas BSA runs with administrative privileges.)<br>
+<br>
+I hope the problem regarding 64-bit can be sorted out in a little while.<br>
+<br>
+best regards<br>
+Martin</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Wed May 07, 2014 6:53 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>SandyBox wrote:</cite>I hope the problem regarding 64-bit can be sorted out in a little while.</div></blockquote>
+
+I am afraid that will not happen. The person in charge of the DLL is not available at the moment.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Mon May 19, 2014 6:02 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I have news about LOG_API64 problems.<br>
+<br>
+After talking with the guy coding the dll and doing some tests we found Sandboxie version 4 (even version 4.10 RC) still has bugs in the dll injection mechanism. Injection mechanism works fine until version 3.76, but since version 4, even after the bug fixes done by Invincea team, is buggy.<br>
+<br>
+When LOG_API64 hooks NTDLL/Kernel32 dlls in version 4 the problems appears. These problems are not present in Sandboxie 3.76.<br>
+<br>
+Tests must be done with next version of LOG_API64 dll: <a href="http://www.woodmann.com/virusbuster/log_api64.rar" class="postlink">http://www.woodmann.com/virusbuster/log_api64.rar</a><br>
+<br>
+SandyBox: Please replace your log_api64.dll with that dll and make next test:<br>
+<br>
+Install Sandboxie 3.76 and sandbox Windows Explorer and try saving a file in notepad. Do you see any problem?<br>
+<br>
+Then install Sandboxie 4.10 RC beta version and do the same. Do you see any problem?<br>
+<br>
+Come back and post what you see after doing tests, please.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Mon May 19, 2014 6:32 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">And the problem with Sandboxie 4.x versions does not stop there. I also noticed that the API used to exchange information between LOG_API and BSA is not working. I mean SendMessage API.<br>
+<br>
+Sandboxie 3.76 64 bit and BSA works fine. API information is showed in BSA.<br>
+<br>
+Sandboxie 4.10 RC and BSA don´t work. API information is missed by BSA.<br>
+<br>
+Curt: Are you going to work to fix these problems?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Sat Jun 14, 2014 6:26 pm</strong></div>
+				<div class="author">by <strong>Coldblackice</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>And the problem with Sandboxie 4.x versions does not stop there. I also noticed that the API used to exchange information between LOG_API and BSA is not working. I mean SendMessage API.<br>
+<br>
+Sandboxie 3.76 64 bit and BSA works fine. API information is showed in BSA.<br>
+<br>
+Sandboxie 4.10 RC and BSA don´t work. API information is missed by BSA.<br>
+<br>
+Curt: Are you going to work to fix these problems?</div></blockquote>
+
+Would it be helpful if I did the tests that you mentioned above for SandyBox? Or is it a matter of waiting for Invincea to iron out the API issues first?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Mon Jun 16, 2014 11:39 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Coldblackice wrote:</cite>Would it be helpful if I did the tests that you mentioned above for SandyBox? Or is it a matter of waiting for Invincea to iron out the API issues first?</div></blockquote>
+
+Curt commented that the problem of communication (SendMessage API) and the issues between BSA and Sandboxie 4.x may be related so it is a matter of waiting for Invincea to find out what is going on.<br>
+<br>
+Thanks anyway for offering your help to test!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Wed Jun 18, 2014 1:54 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">I believe BSA will be back in business in the near future.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Wed Jun 18, 2014 2:21 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Curt: It would be nice if you post here your findings about the incompability issues you are finding.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Mon Jun 23, 2014 2:22 am</strong></div>
+				<div class="author">by <strong>Coldblackice</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite>I believe BSA will be back in business in the near future.</div></blockquote>
+
+Fantastic news! A number of colleagues will be elated to hear this.<br>
+
+<blockquote><div><cite>Buster wrote:</cite>Curt: It would be nice if you post here your findings about the incompability issues you are finding.</div></blockquote>
+
+Agreed -- this would be curiously helpful to know.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Thu Jun 26, 2014 4:52 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Curt: In what are you working actually to get BSA in business?<br>
+<br>
+I mean, what is necessary to change in Sandboxie to get BSA working fine?</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>62</strong> of <strong>64</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6557&start=915&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:59:27 GMT -->
+</html>

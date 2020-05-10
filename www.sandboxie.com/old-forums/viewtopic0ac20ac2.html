@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=988&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SB not working with &quot;Altiris Software Virtualization&qu</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SB not working with &quot;Altiris Software Virtualization&qu</h2>
+		<p><a href="viewtopic63016301.html?f=11&amp;t=988">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=988</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>SB not working with &quot;Altiris Software Virtualization&qu</h3>
+				<div class="date">Posted: <strong>Sun Jan 21, 2007 1:13 pm</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">Hi,<br>
+I got a free copy of "Altiris Software Virtualization" and unfortunatly it won't work together with Sandbixie, when I load some "layer" I can't use Sandboxed programy anymore, with a few exceptions all app's seems to have file access problems, for example on C thay see only what is in the SB no read accesss to the real drive, sometimes even the icons for the file open/safe fialog are not loaded. <br>
+When I unload all Virtual Software layers Sandboxed apps work again.<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 21, 2007 6:22 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Seems a bit like running two kinds of anti-virus ...  SVS does its redirection, Sandboxie does its redirection ... Somewhere along the line you're bound to experience a conflict.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 22, 2007 4:26 am</strong></div>
+				<div class="author">by <strong>street011</strong></div>
+				<div class="content">i'm experiencing the same problems, my sandboxie is messedup badly, wont even run with svs uninstalled or disabled...<br>
+<br>
+anyway, i think sandboxie can learn a few things from svs, for example the very functional 'layers' sandboxie can use more then one sandboxes, but it's not so user friendly, disable / enable / reset layer etc<br>
+<br>
+tzuk, maybe you can look at it and see what features can be intergrated into sandboxie...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 22, 2007 4:38 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">I know that SB and SVS works in a simmilar way, but never the less what it does is completly different.<br>
+SVS isn't a sandbox it is a software management solution. And it provides only verry small protection, it allows the software to do everythink except it intercepts all file and registry operations.<br>
+<br>
+Sandboxie could be modifyed to provide a major part of SVS's functionality when the user could specify for particular Sandboxes to not protect the system only virtualise files and registry.<br>
+<br>
+So we would need an sb...ini obtion DontProtect=y that causes SB to dissable all protection except the file &amp; registry<br>
+<br>
+and as street011 wrote this layers thing from SVS would be realy cool.<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 22, 2007 6:55 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>I know that SB and SVS works in a simmilar way, but never the less what it does is completly different. </div></blockquote>
+
+<a href="http://groups-beta.google.com/group/alt.comp.freeware/browse_thread/thread/e7d258d65c0ed6c3/8ea3038bea8d3f63?lnk=gst&amp;rnum=1#8ea3038bea8d3f63" class="postlink">This thread</a> is a review that says otherwise.<br>
+<br>
+Though I must admit, I haven't tried SVS myself.<br>
+
+<blockquote class="uncited"><div>So we would need an sb...ini obtion DontProtect=y that causes SB to dissable all protection except the file &amp; registry </div></blockquote>
+
+You can say OpenIpcPath=* and achieve pretty much the same result.  But I really don't recommend it.  And if you try it, and it breaks something, don't complain.   <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 23, 2007 3:59 am</strong></div>
+				<div class="author">by <strong>street011</strong></div>
+				<div class="content">tzuk;<br>
+<br>
+what exactly is an IPC port? i've tried google, i don't get much info on it, only forums with problems <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+where would a program gain access, in which way does it compromise security?<br>
+<br>
+sometimes i just want to install an application for testing purpose, not so much for security, but when i'm done testing i don't want to use uninstall because it leaves a lot of junk behind... so sandboxie would be a solution i think.<br>
+<br>
+For example, a new photoshop version or beta version...<br>
+it just won't run in sandboxie, starts complaining about no administrative rights and not being able to write configurationfiles, under SVS however everything works, and when done testing i delete the layer.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 23, 2007 7:56 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">What excepted IPC, Filesystem, registry and loading drivers privileg, is protected by the current version of sandboxie?<br>
+This is I think an quite important information.<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 23, 2007 7:22 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>street011 wrote:</cite>what exactly is an IPC port</div></blockquote>
+
+Not an IPC port, but IPC objects.  Sandboxie treats the following classes of NT objects collectively as IPC objects:<br>
+<br>
+Event<br>
+Mutant<br>
+Section<br>
+Semaphore<br>
+Port (renamed "ALPC Port" in Windows Vista)<br>
+<br>
+It doesn't matter which specific class of NT object it is, OpenIpcPath and ClosedIpcPath work the same.<br>
+
+<blockquote class="uncited"><div>What excepted IPC, Filesystem, registry and loading drivers privileg, is protected by the current version of sandboxie?</div></blockquote>
+
+What I wrote above.<br>
+<br>
+There is also separation of processes (so sandboxed process can't inject into or terminate processes outside its sandbox), and separation of window objects.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 24, 2007 12:34 pm</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>
+There is also separation of processes (so sandboxed process can't inject into or terminate processes outside its sandbox), and separation of window objects.</div></blockquote>
+And this works under vista without signing the code?<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jan 24, 2007 5:34 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>And this works under vista without signing the code? </div></blockquote>
+
+Yes, it does.  I think only the x64 variant of Windows Vista is blocking unsigned code.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 25, 2007 9:21 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">I ment the question: do the current SB beta still uses kernel code or would it work on a vista that requirers kernel codes to be signed?<br>
+<br>
+never the leess...<br>
+how about the feature requests in this thread?<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 26, 2007 6:35 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>do the current SB beta still uses kernel code</div></blockquote>
+
+Yes, there is still a driver, and it runs in kernel mode.  In principle it should not work an OS where drivers must be signed.<br>
+
+<blockquote class="uncited"><div>how about the feature requests in this thread?</div></blockquote>
+
+Disabling protection except for files and registry keys?  No, it's not that simple.  For this to be possible, more and more exceptions would have to be made, and I don't like this idea.<br>
+<br>
+Consider:  if you sandbox just files and keys, then the sandbox program can talk to the real Windows COM server.  (Which SandboxieRpcss replaces.)  Now, you install a program into such a limited sandbox.  It installs a new COM component, this involves creating new files and updating the registry.  These changes occur in the sandbox.<br>
+<br>
+Next, the installed program tries to use that COM component, but the real Windows COM server has no idea about this new sandboxed component.<br>
+<br>
+There are probably more examples (services would also be a problem).<br>
+<br>
+A better approach is to improve Sandboxie, for example, improve the sandboxed service manager, so sandboxed services can be properly installed and managed.  There is nothing inherently problematic about this.  It's only a matter of when I get around to it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jan 27, 2007 4:48 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">Ok, I see the point, without having the SBxed keys appear in the system as real this won't work.<br>
+<br>
+But how about the layers think like in SVS, dissabling all protection and mapping keys and files into the real system works, could this be added? So that you could specify for particular sandboxes to be "integrated into the os" (Inntegrate=y) what would implicate no protection excepted registry and file writes.<br>
+<br>
+<strong>Back to the primary toppic: </strong><br>
+I have tested SVS with SB 2.64 and it seems to work OK, so it is possible to have SVS and SB running side by side, so that it won't work with 2.76 is a bug and should be fixed.<br>
+<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jan 27, 2007 6:57 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div> have tested SVS with SB 2.64 and it seems to work OK, so it is possible to have SVS and SB running side by side, so that it won't work with 2.76 is a bug and should be fixed. </div></blockquote>
+
+I agree, but it isn't necessarily a <em>bug</em>.  Because the way Sandboxie is doing stuff has drastically changed in 2.7 over the way it was done in 2.64, perhaps there is now a <em>conflict</em>, rather than a bug.<br>
+<br>
+I'll look into this, but not immediately (sorry to say it isn't the most important problem on the table), and, I'm not sure I can promise a solution.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 28, 2007 4:01 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">Could you add an obtion to make SB us the old way of doing things when the user needs it?<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=988&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:38 GMT -->
+</html>

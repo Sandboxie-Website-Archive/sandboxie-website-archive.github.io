@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6557&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:58:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Buster Sandbox Analyzer</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Buster Sandbox Analyzer</h2>
+		<p><a href="viewtopica7d3a7d3.html?f=22&amp;t=6557">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=6557</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>64</strong></div>
+					<div class="post">
+				<h3>Buster Sandbox Analyzer</h3>
+				<div class="date">Posted: <strong>Fri Oct 30, 2009 3:17 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I edit the first post to include information about where to download the tool.<br>
+<br>
+Official site is:<br>
+<br>
+<a href="http://bsa.isoftware.nl/" class="postlink">http://bsa.isoftware.nl</a><br>
+<br>
+And the tool can be downloaded from:<br>
+<br>
+<a href="http://bsa.novirusthanks.org/downloads/bsa.rar" class="postlink">http://bsa.novirusthanks.org/downloads/bsa.rar</a><br>
+<a href="http://www.woodmann.com/virusbuster/bsa.rar" class="postlink">http://www.woodmann.com/virusbuster/bsa.rar</a><br>
+<br>
+Actual version: 1.88<br>
+<br>
+MD5: 32d92812f399da48e61ca810b09f11fc<br>
+<br>
+Version: 1.88 Update 4 [Released 24/04/2014]<br>
+<br>
+<a href="http://www.woodmann.com/virusbuster/bsa_188_update_4.rar" class="postlink">http://www.woodmann.com/virusbuster/bsa ... date_4.rar</a><br>
+<br>
+--- x --- x --- x --- x --- x --- x --- x --- x --- x --- x --- x --- x --- x --- x --- x --- x --- x --- x --- x --- x --- x --- x ---<br>
+<br>
+Hi.<br>
+<br>
+As commented already I decided to change the name of my tool because the purpose of it changed.<br>
+<br>
+The tool will now be named <strong>Buster Sandbox Analyzer</strong> or BSA to short it.<br>
+<br>
+The main goal of the tool will be to analyze the behaviour of sandboxed processes and decide if the the changes made to system may be malware suspicious. <br>
+<br>
+It can also be used just to check what changes (files and registry) were made in the system.<br>
+<br>
+<br>
+<br>
+<em>Instructions to run BSA</em>:<br>
+<br>
+Of course, in order to run BSA Sandboxie must be installed and running properly.<br>
+<br>
+BSA does not require installation. Just create a folder and copy BSA.EXE and BSA.DAT inside.<br>
+<br>
+When you run BSA you can see this:<br>
+<br>
+<img src="../img413.imageshack.us/img413/292/38465994.jpg" class="postimage" alt="Image"><br>
+<br>
+To start working with the tool you just need to specify with what Sandbox folder you will work. You must specify the complete path to the sandbox folder. e.g. for the DefaultBox would be something like:<br>
+<br>
+C:\Sandbox\ExampleUser\DefaultBox<br>
+<br>
+You only will have to specify the sandbox path one time. When you close BSA the program automatically will remember the used sandboxes. This information will be stored under \CONFIG folder with the name BSA.INI.<br>
+<br>
+The <strong>sandbox folder must exist and must be empty</strong>. BSA will check that both conditions are accomplished and if any of them is not BSA will warn about it.<br>
+<br>
+When you are ready to start working with the tool press "Start" button. If the sandbox folder exists and the folder is empty BSA will be ready for next step.<br>
+<br>
+After pressing "Start" two buttons get enabled.<br>
+<br>
+Now it´s the <strong>moment to sandbox whatever you want</strong>.<br>
+<br>
+If you are interested in getting port differences press "Check Ports" button if not just skip it.<br>
+<br>
+When you are done <strong>terminate all sandboxed processes</strong> and then click "Find Differences".<br>
+<br>
+If Sandboxie is still in use BSA will warn about that.<br>
+<br>
+At this point if you are only interested in getting the changes made to system you can quit BSA. You will find FileDiff.TXT, RegDiff.TXT and PortDiff.TXT (when available) at BSA´s folder.<br>
+<br>
+You can open those files with any text editor because they are in plain text.<br>
+<br>
+If you are interested in the malware analysis click the button.<br>
+<br>
+BSA will perform several checks to the changes made to system looking for malware behaviour.<br>
+<br>
+At the moment some of the checks are not available.<br>
+<br>
+When you close malware analyser results of the analysis will be saved to ANALISIS.TXT.<br>
+<br>
+On next message I will explain the exclusion list, the BSA.DAT format and the file differences format.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 30, 2009 4:08 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><em>Exclusion list</em>:<br>
+<br>
+The exclusion list is a set of strings that the user wants to be excluded from results. All lines containing a string that appears in the exclusion list will be removed from reports.<br>
+<br>
+You can define exclusions for file, registry and ports. There is an exclusion list editor included in BSA but files can be directly edited with any text editor.<br>
+<br>
+File exclusion strings are not sandbox path relative. This mean <strong>you must specify the path or file as it will appear in the real disk</strong>. e.g.:<br>
+<br>
+C:\pagefile.sys would be ok<br>
+<br>
+C:\SandBox\ExampleUser\DefaultBox\drive\C\pagefile.sys would not be ok.<br>
+<br>
+Registry exclusion list uses relative strings. Sandboxie will "translate" HKEY_CURRENT_USER to user\current\ and HKEY_LOCAL_MACHINE to machine\.<br>
+<br>
+To avoid mistakes you should take strings directly from RegDiff.TXT an include them in exclusion list.<br>
+<br>
+<strong>Exclusion list is case insensitive</strong>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 30, 2009 4:22 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><em>File differences format</em>:<br>
+<br>
+There are 3 difference files: FileDiff.TXT, RegDiff.TXT and PortDiff.TXT<br>
+<br>
+In FileDiff.TXT there are 4 symbols as first char in every line.<br>
+<br>
+"+" represents a new file: A file that is not present in real disk so it´s created.<br>
+<br>
+"-" represents a deleted file: A file that being present in real disk and that was deleted.<br>
+<br>
+"~" represents a modified file: A file that was changed.<br>
+<br>
+"=" represents a copied file: Sandboxie copied a file inside the sandbox. This doesn´t represent any change.<br>
+<br>
+Temporal files (files that are created and later deleted) can not be represented at the moment. Probably it would be necessary the use of an injected DLL to catch that kind of files.<br>
+<br>
+<br>
+<br>
+In RegDiff.TXT you can find next information:<br>
+<br>
+"created registry key": The registry key was created.<br>
+<br>
+"deleted registry key": The registry key was deleted.<br>
+<br>
+"empty value key": The value of a key was removed.<br>
+<br>
+"deleted value key": The value of a key was deleted.<br>
+<br>
+When the content of a value changes you get something like:<br>
+<br>
+user\current\software\Microsoft\Windows\CurrentVersion\Applets\Regedit\FindFlags = 0E000000<br>
+<br>
+<br>
+Important: Some registry and value keys are modified by Sandboxie not by sandboxed processes. I suggest running CALC.EXE (or any other program that does not modify the registry) and add strings from resulting RegDiff.TXT to exclusion list.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 30, 2009 4:38 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><em>BSA.DAT format</em>:<br>
+<br>
+The malware analyzer module is a bit flexible and can be customized by the user.<br>
+<br>
+[File_Types_Copied_Windows]: Here the user defines what file types (extensions) that get copied into Windows folder must raise an alert.<br>
+<br>
+By default .exe, .dll and .sys are watched. Other interesting file types to watch could be .VBS e.g.<br>
+<br>
+Why this? Many malwares copy their components in Windows folder.<br>
+<br>
+<br>
+[File_Types_Modified]: Here the user defines what file types that are modified must be watched.<br>
+<br>
+By default .exe and .dll files are watched.<br>
+<br>
+Why this? Modify an .exe is a typical action of viruses.<br>
+<br>
+<br>
+[File_Types_Copied_AutoStart]: Here we define what file types must be watched when copied to AutoStart locations.<br>
+<br>
+AutoStart location is e.g. startup folder.<br>
+<br>
+By default .exe and .dll files are watched.<br>
+<br>
+Why this? It´s typical of malwares to get their components included in autostart locations so they run when Windows loads.<br>
+<br>
+<br>
+[AutoStart_Files_Added_or_Modified]: Here we define what autostart files must be watched when added to disk or modified.<br>
+<br>
+By default the list of autostart files is:<br>
+<br>
+win.ini<br>
+system.ini<br>
+wininit.ini<br>
+winstart.bat<br>
+dosstart.bat<br>
+autoexec.nt<br>
+config.nt<br>
+autoexec.bat<br>
+config.sys<br>
+autorun.inf<br>
+<br>
+Why this? Other method of malwares to get running when Windows loads is adding theirself to one of those files.<br>
+<br>
+<br>
+[AutoStart_Registry_Created_or_Modified]: Here we define what registry autostart locations to watch.<br>
+<br>
+The list is a bit large so I will not put it here. Just as example:<br>
+<br>
+\software\microsoft\windows\currentversion\run<br>
+<br>
+Why this? It´s very typical of malwares to add theirself into a registry autostart location so they get loaded when Windows boots.<br>
+<br>
+If you want to include new file types to watch or registry autostart locations or whatever feel free to do it. You can also remove or edit actual values.<br>
+<br>
+You just need to know that after a section "[blablabla]" you must include all the values and there can not be an empty space between them.<br>
+<br>
+<strong>An empty line must be included between the last value and the next section</strong>.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[File_Types_Copied_AutoStart]
+.exe
+.dll
+.sys
+
+[AutoStart_Files_Added_or_Modified]</code></pre></div>
+
+That´s fine.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[File_Types_Copied_AutoStart]
+.exe
+.dll
+.sys
+[AutoStart_Files_Added_or_Modified]</code></pre></div>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[File_Types_Copied_AutoStart]
+.exe
+
+.dll
+.sys
+
+[AutoStart_Files_Added_or_Modified]</code></pre></div>
+
+<br>
+That´s wrong and malware analyzer module will not work properly.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 30, 2009 4:42 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I´m open to feature requests, suggestions and bug reports. Just post here and let me know.<br>
+<br>
+When tzuk adds the feature I requested I will release BSA 1.0 final version. Meanwhile I plan to betatest actual version.<br>
+<br>
+People like raid may help to improve malware detection rules.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Oct 30, 2009 8:13 pm</strong></div>
+				<div class="author">by <strong>Mark_</strong></div>
+				<div class="content">a download link would be nice, for starters ^^,<br>
+<br>
+also, it might be usefull to have a config editor, and to remove the needed empty line.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 31, 2009 2:53 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I plan to release 1.0 beta this weekend. <br>
+<br>
+I still must do some checkings under Windows 7.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 31, 2009 5:59 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Hi Buster,<br>
+<br>
+Actually you would implement the features tzuk somehow considered unnecessary... I do think he's wrong, but might be me too.<br>
+With a tool like this one can actually see what's going on at his favorite sandbox)<br>
+The only question could be about host processes reading attempts and possible realtime-warning like.
+<blockquote class="uncited"><div>--------------------- <strong>BSA WARNING</strong> ---------------------<br>
+Sandboxie &lt;<strong>ANALYSIS</strong>&gt;<br>
+Process &lt;c:\windows\<strong>Explorer.exe</strong>&gt; <br>
+Details (PID=3888, size=15368KB, ran by Admin)<br>
+is trying to <strong>write</strong> data at a restricted area\path &lt;<strong>c:\</strong>&gt;.<br>
+&lt;<strong>A</strong>&gt;llow &lt;<strong>D</strong>&gt;eny &lt;<strong>T</strong>&gt;erminate</div></blockquote>
+
+Keep up</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Oct 31, 2009 2:53 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I´m afraid I can not do that from outside the sandbox or at least I don´t know how to code such thing.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Nov 01, 2009 7:34 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Buster Sandbox Analyzer 1.0 beta has been released. You can get it from here:<br>
+<br>
+<a href="http://bsa.qnea.de/bsa.rar" class="postlink">http://bsa.qnea.de/bsa.rar</a><br>
+<br>
+I edited the previous posts to reflect some changes I did since I wrote the information.<br>
+<br>
+Ideas, suggestions, bug reports, ... are welcome!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Nov 02, 2009 3:31 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Additional notes:<br>
+<br>
+<strong>BSA reflects the changes that would be made to system. Temporal changes are not showed</strong>. e.g. if a file is created inside the sandbox and later is deleted before processes are terminated. The same for registry entries.<br>
+<br>
+If a registry value is changed and then changed again and finally the value is the same than the entry from real registry, the change will be reflected anyway. <br>
+<br>
+I´m considering to don´t show that kind of entry. Should I show it even if finally it´s equal to the value from real registry or should I skip it? Any thoughts about this? <br>
+<br>
+Even if the primary goal of BSA is to analyze if sandboxed processes behaviour like a malware, tzuk gave me an interesting idea: BSA could be used to "undo" the effects of malware.<br>
+<br>
+And as mentioned already, BSA can be used just to see what changes to system were done.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Nov 02, 2009 10:09 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">BSA 1.0 beta 2 released. Download link remains the same.<br>
+<br>
+Changes:<br>
+<br>
+Added rules for empty/deleted value keys in registry.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Nov 02, 2009 10:32 am</strong></div>
+				<div class="author">by <strong>Mark_</strong></div>
+				<div class="content">you should list those items imo, maybe some kinda exploit is used to hide the modifications (example: embedded null in registry keys)<br>
+<br>
+also, this item is listed while it is from sandboxie itself:<br>
+<br>
+Defined registry entry added to AutoStart location: machine\software\microsoft\windows nt\currentversion\winlogon\Shell = x</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Nov 02, 2009 10:46 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Mark_ wrote:</cite>also, this item is listed while it is from sandboxie itself:<br>
+<br>
+Defined registry entry added to AutoStart location: machine\software\microsoft\windows nt\currentversion\winlogon\Shell = x</div></blockquote>
+
+I wrote about that:<br>
+<br>
+Important: Some registry and value keys are modified by Sandboxie not by sandboxed processes. I suggest running CALC.EXE (or any other program that does not modify the registry) and add strings from resulting RegDiff.TXT to exclusion list.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Nov 02, 2009 4:10 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Buster, I tried your tool, very nice.  Now I understand what you plan to do with the message log file.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>64</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6557&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:58:47 GMT -->
+</html>

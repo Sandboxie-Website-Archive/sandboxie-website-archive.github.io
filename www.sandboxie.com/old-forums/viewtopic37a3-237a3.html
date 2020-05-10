@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25227&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:13:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; firefox portable not using direct access config [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>firefox portable not using direct access config [SOLVED]</h2>
+		<p><a href="viewtopic78927892.html?f=11&amp;t=25227">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25227</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>firefox portable not using direct access config [SOLVED]</h3>
+				<div class="date">Posted: <strong>Fri Dec 15, 2017 5:59 pm</strong></div>
+				<div class="author">by <strong>darchon</strong></div>
+				<div class="content">i use firefox portable and have setup direct access to E:\program files\firefoxportable* where all my instances of firefoxportable reside. the weird thing is i have about 20+ instances in different directories (E:\program files\firefoxportable1, E:\program files\firefoxportable2...) but for some reason E:\program files\firefoxportable19 refuses to use direct access to read and write to its directory and upon startup, the quick recovery window appears every single time i start it up. no other instance has this problem. and when i rename E:\program files\firefoxportable19 to say E:\program files\firefoxportable1900, it works perfectly. so something must be wrong with my config that seems to exclude E:\program files\firefoxportable19 and not any other E:\program files\firefoxportable*.<br>
+<br>
+here's my config file, can anyone find a problem with it?<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>
+[GlobalSettings]
+
+Template=WindowsRasMan
+Template=OfficeClickToRun
+Template=AdobeLicensing
+Template=SystemAudioStream
+Template=Listary
+Template=nVidia_Stereoscopic3D
+Template=OfficeLicensing
+Template=WindowsLive
+Template=7zipShellEx
+Template=LogitechSetPoint
+Template=FinePrint
+Template=Evernote
+ActivationPrompt=n
+FileRootPath=E:\Sandbox\%USER%\%SANDBOX%
+TemplateReject=RoboForm
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+Template=IExplore_Favorites_DirectAccess
+Template=RoboForm
+Template=Office_Outlook_Copernic_Desktop_Search
+Template=Office_Outlook
+Template=Chrome_Profile_DirectAccess
+Template=Chrome_Sync_DirectAccess
+Template=Chrome_Preferences_DirectAccess
+Template=Chrome_Passwords_DirectAccess
+Template=Chrome_Cookies_DirectAccess
+Template=Chrome_History_DirectAccess
+Template=Chrome_Bookmarks_DirectAccess
+Template=Firefox_Profile_DirectAccess
+Template=Firefox_Session_DirectAccess
+Template=Firefox_Passwords_DirectAccess
+Template=Firefox_Cookies_DirectAccess
+Template=Firefox_Bookmarks_DirectAccess
+Template=BlockPorts
+Template=LingerPrograms
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=\\QNAP\sw\WEB TEMPLATES\wordpress plugins
+RecoverFolder=F:\jav
+RecoverFolder=F:\backup
+RecoverFolder=\\DISKSTATION\photo
+RecoverFolder=G:\pvcrwork
+RecoverFolder=\\seraph\e$
+RecoverFolder=\\seraph
+RecoverFolder=D:\Program Files
+RecoverFolder=F:\mp3
+RecoverFolder=F:\ebooks
+RecoverFolder=\\diskstation
+RecoverFolder=F:\Downloads
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+OpenFilePath=&lt;firefoxprograms&gt;,D:\Program Files\
+OpenFilePath=&lt;firefoxprograms&gt;,E:\Program Files\
+OpenFilePath=firefoxportable.exe,D:\Program Files\
+OpenFilePath=firefoxportable.exe,E:\Program Files\
+OpenFilePath=firefox.exe,D:\Program Files\
+OpenFilePath=firefox.exe,%{374DE290-123F-4565-9164-39C4925E467B}%\
+OpenFilePath=firefox.exe,D:\My Documents\My RoboForm Data\
+OpenFilePath=firefox.exe,F:\Downloads\
+OpenFilePath=firefox.exe,E:\Program Files\
+OpenFilePath=robotaskbaricon.exe,%Personal%\My RoboForm Data\
+OpenFilePath=robotaskbaricon.exe,C:\Program Files (x86)\Siber Systems\AI RoboForm\
+OpenFilePath=iexplore.exe,%History%\
+OpenFilePath=iexplore.exe,%Favorites%\
+OpenFilePath=iexplore.exe,%Personal%\My RoboForm Data\
+OpenFilePath=qbittorrent.exe,%AppData%\qBittorrent\
+OpenFilePath=qbittorrent.exe,%Local AppData%\qBittorrent\
+OpenFilePath=explorer.exe,%{374DE290-123F-4565-9164-39C4925E467B}%\
+OpenFilePath=utorrent.exe,%AppData%\uTorrent\
+OpenFilePath=dap.exe,F:\Downloads\
+OpenFilePath=itunes.exe,%My Music%\iTunes\
+OpenFilePath=outlook.exe,D:\outlook\
+OpenFilePath=operaportable.exe,D:\Program Files\
+OpenFilePath=opera.exe,D:\Program Files\
+OpenFilePath=chrome.exe,D:\Program Files\
+OpenFilePath=maxthon.exe,D:\Program Files\
+OpenFilePath=maxthonportable.exe,D:\Program Files\
+OpenFilePath=googlechromeportable.exe,D:\Program Files\
+CopyLimitKb=4154637
+OpenPipePath=C:\Program Files (x86)\iTunes\
+OpenPipePath=qbittorrent.exe,%{374DE290-123F-4565-9164-39C4925E467B}%\
+OpenPipePath=outlook.exe,E:\outlook\
+OpenClsid={063D34A4-BF84-4B8D-B699-E8CA06504DDE}
+
+[UserSettings_11C20289]
+
+SbieCtrl_UserName=dwayne
+SbieCtrl_NextUpdateCheck=1513919284
+SbieCtrl_UpdateCheckNotify=y
+SbieCtrl_ShowWelcome=n
+SbieCtrl_AutoApplySettings=y
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_ActiveView=40021
+SbieCtrl_RecoverTarget=F:\Downloads
+SbieCtrl_SaveRecoverTargets=y
+SbieCtrl_ExplorerWarn=n
+SbieCtrl_WindowCoords=105,67,600,515
+SbieCtrl_ProcessViewColumnWidths=250,70,310
+SbieCtrl_BoxExpandedView=DefaultBox
+
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: firefox portable not using direct access config</h3>
+				<div class="date">Posted: <strong>Mon Dec 18, 2017 10:32 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello darchon ,<br>
+<br>
+What are you Antivirus, OS and Sandboxie versions? <br>
+Have you tried creating a new Sandbox with default settings + E:\program files\firefoxportable* direct access to see if that works for your 19th instance? <br>
+<br>
+Maybe that particular instance is saving its data to a different location?  <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: firefox portable not using direct access config</h3>
+				<div class="date">Posted: <strong>Mon Dec 18, 2017 12:48 pm</strong></div>
+				<div class="author">by <strong>darchon</strong></div>
+				<div class="content">spoke too soon, i reset the settings and added it again like you suggested but it didn't work.<br>
+<br>
+Windows 10 v1709 b16299.64, sandboxie 5.22 (64-bit), no antivirus except windows defender</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: firefox portable not using direct access config</h3>
+				<div class="date">Posted: <strong>Mon Dec 18, 2017 1:50 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello darchon,<br>
+
+<blockquote class="uncited"><div>spoke too soon, i reset the settings and added it again like you suggested but it didn't work.</div></blockquote>
+So you created a new Sandbox with default settings, and then added just E:... direct access, and you are still receiving an Auto-recovery window when launching the app?<br>
+Do the other Firefox instances work fine? Maybe there's an addon involved? <br>
+Where is it trying to recover the files to? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: firefox portable not using direct access config</h3>
+				<div class="date">Posted: <strong>Mon Dec 18, 2017 4:21 pm</strong></div>
+				<div class="author">by <strong>darchon</strong></div>
+				<div class="content">yes i created a new sandbox with default settings, added E:\Program Files to Direct Access and also Quick Recovery so that the popup will appear when a sandboxed browser cannot direct access files. then when i start E:\Program Files\FirefoxPortable19\FirefoxPortable.exe, the Quick Recovery window popups up and shows it is attempting to write to E:\Program Files\FirefoxPortable19. this does not happen to the other instances and they open fine without triggering Quick Recovery and when i do go into it, it only shows a single file inside eg E:\Program Files\FirefoxPortable18\Data\settings\FirefoxPortablesettings.ini and nothing else.<br>
+<br>
+you mention maybe there's an addon doing this, but i mentioned that if i rename the folder to eg E:\Program Files\FirefoxPortable190 then everything works as expected. for some reason its just  E:\Program Files\FirefoxPortable19 that seems to be cursed.<br>
+
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/filea1d8a1d8.jpg?id=1310" class="postimage" alt="Clipboard01.jpg" onclick="viewableArea(this);" /></dt>
+						<dd>Clipboard01.jpg (34.37 KiB) Viewed 441 times</dd>
+		</dl>
+		
+		
+		
+			</div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: firefox portable not using direct access config</h3>
+				<div class="date">Posted: <strong>Mon Dec 18, 2017 5:21 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello darchon,<br>
+<br>
+I am not able to reproduce the issue with Firefox Protable and Direct Access. <br>
+From the picture that you posted, it seems that Firefox may be trying to update. Could that be the case? If so, you need to do that outside Sandboxie.<br>
+<br>
+If you make a copy of one of the instances that do work (say, FirefoxPortable10),  and then rename it to FirefoxPortable19... Does it work?<br>
+How are your instances configured? Are you using multiple profiles? <br>
+What is different about your instance 19? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: firefox portable not using direct access config</h3>
+				<div class="date">Posted: <strong>Fri Jan 05, 2018 3:11 pm</strong></div>
+				<div class="author">by <strong>darchon</strong></div>
+				<div class="content">it was trying to update for some reason but i did what you suggested and wiped out 19, then copied from another instance over to 19 and reran, and it STILL won't follow Direct Access rules! i'm at wit's end. are there logs that sandboxie creates?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: firefox portable not using direct access config</h3>
+				<div class="date">Posted: <strong>Fri Jan 05, 2018 3:48 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello darchon,<br>
+<br>
+What is the Full path of the location ( s) that the files are showing when you are presented with Quick Recovery message?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: firefox portable not using direct access config</h3>
+				<div class="date">Posted: <strong>Fri Jan 05, 2018 4:21 pm</strong></div>
+				<div class="author">by <strong>darchon</strong></div>
+				<div class="content">now the 4th instance has started misbehaving out of the blue. it refuses to access direct access and is causing Quick Recovery to explode...<br>
+<br>
+i tried the latest beta 5.23.3, same result...<br>
+<br>
+have attached the view from quick recovery.<br>
+<br>
+i don't know what's going on with sandboxie, its so unstable now.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: firefox portable not using direct access config</h3>
+				<div class="date">Posted: <strong>Fri Jan 05, 2018 4:29 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello darchon, <br>
+<br>
+What is the full path ? Program Files where? Perhaps is pointing somewhere else. (A different Program Files folder, I noticed you have multiple drives, that's why I am asking this). <br>
+<br>
+Also, again, it looks as if it is trying to update. That is something you need to do outside the Sandbox, then delete the contents of sbie prior to re-launching the app. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: firefox portable not using direct access config</h3>
+				<div class="date">Posted: <strong>Fri Jan 05, 2018 5:08 pm</strong></div>
+				<div class="author">by <strong>darchon</strong></div>
+				<div class="content">you were right, it was attempting to update itself. even when i i set it to not check updates it was seemingly attempting to update itself. so i launched it outside of the sandbox and set it to never update, and relaunched it several times to make sure the option stuck. then i made sure the sandbox contents were deleted. and hallelujah, it worked. did it for 19 and its now behaving as it should!<br>
+<br>
+thanks again for your patience.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25227&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:13:02 GMT -->
+</html>

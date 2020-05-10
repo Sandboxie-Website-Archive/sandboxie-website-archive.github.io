@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=39&t=15837&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:41:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.01] Changes to OpenWinClass=*</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.01] Changes to OpenWinClass=*</h2>
+		<p><a href="viewtopic74537453.html?f=39&amp;t=15837">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=39&amp;t=15837</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.01] Changes to OpenWinClass=*</h3>
+				<div class="date">Posted: <strong>Tue Jun 25, 2013 5:34 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">As you may know, in version 4, the process in the sandbox is confined into a "job" concept which prevents interacting with window objects outside the sandbox.<br>
+<br>
+This has two major implications:<br>
+<br>
+- All interactions with window objects outside the sandbox have to go through a SbieSvc proxy process.<br>
+<br>
+- Lower level requests such as simulating keyboard input, registering a hotkey or changing system parameters are not supported.<br>
+<br>
+Version 4.03 revises this by treating the OpenWinClass=* case as a special case.  In version 4.03, when the sandbox settings include OpenWinClass=*, the process is not put into a job, which means normal access to window objects, and the lower level requests are permitted.<br>
+<br>
+This new special case is intended primarily at people who want to take advantage of filesystem/registry isolation when installing trusted programs into the sandbox.<br>
+<br>
+<strong>To enable:</strong>  Sandbox Settings &gt; Resource Access &gt; Window Access &gt; Click Add, enter * (a single wildcard star), click OK.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 25, 2013 5:38 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Some problems which should be fixed with the new OpenWinClass=* setting are discussed in these topics:<br>
+<br>
+<a href="../phpbb/viewtopica1f7.php?t=15709" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15709</a><br>
+<br>
+<a href="../phpbb/viewtopicacf0.php?t=15750" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15750</a><br>
+<br>
+<a href="../phpbb/viewtopic2e78.php?t=15767" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15767</a><br>
+<br>
+<a href="../phpbb/viewtopic4c4d.php?t=15806" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15806</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 02, 2013 5:13 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Quoting BUCKAROO from another topic:<br>
+
+<blockquote><div><cite>BUCKAROO wrote:</cite>Decreased security? Not that I've found. This setting is purported to allow "full communication with all windows outside the sandbox" but Sandboxie v4 processes can't so much as (directly) show/hide an existing window outside... I don't know if that's a bug.</div></blockquote>
+
+Not really a bug, more like an oversight.  The process in the sandbox is still running at untrusted integrity level even when OpenWinClass=* so the UAC/UIPI mechanism prevents it from accessing window objects that have a higher integrity level.  And most window objects outside the sandbox should have at least medium integrity level.<br>
+<br>
+This means that on systems where UAC is enabled, OpenWinClass=* doesn't really mean the process in the sandbox has more access to window objects.  However it can "see" and "read" window objects outside the sandbox directly without going through SbieSvc.  Whereas without OpenWinClass=*, it cannot see or read window objects outside the sandbox directly, and has to go through the SbieSvc helper process.<br>
+<br>
+If UAC is disabled, and on Windows XP, integrity levels don't come into play for window objects, and OpenWinClass=* does give the process in the sandbox full access to window objects outside the sandbox.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=39&t=15837&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:41:22 GMT -->
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=21274&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:39:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Limiting Processor frequency within Sandboxie possible?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Limiting Processor frequency within Sandboxie possible?</h2>
+		<p><a href="viewtopic90e690e6.html?f=5&amp;t=21274">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=21274</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Limiting Processor frequency within Sandboxie possible?</h3>
+				<div class="date">Posted: <strong>Fri Jun 12, 2015 8:56 pm</strong></div>
+				<div class="author">by <strong>some_guy123</strong></div>
+				<div class="content">Hi. So I know very little about Sandboxie so please forgive me if this is an ignorant question. <br>
+<br>
+I have a really old video game called Close Combat V, and the scroll speed is somehow tied to the CPU speed, so even on the slowest cursor speed settings it's impossible to scroll the screen side to side on a modern computer, the slightest touch of the mouse cursor against the side of the screen sends you to the opposite side of the map. Arrow key movement is works but just isn't the same. So is it possible to have Sanboxie limit the processing speed of programs run in the sandbox ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Limiting Processor frequency within Sandboxie possible?</h3>
+				<div class="date">Posted: <strong>Sat Jun 13, 2015 1:06 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content"><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>;
+/*
+Close Combat(tm)V: Invasion Normandy Demo
+
+A fixed map scroll speed and
+a necessary adjusted margin.
+
+http://ahkscript.org/
+*/
+
+#NoEnv
+#SingleInstance force
+
+SetTitleMatchMode,RegEx
+
+Global NULL:=0
+
+Global WinTitle:="Close Combat ahk_class TBX3AppWindow"
+
+Global RECT
+VarSetCapacity(RECT,16)
+
+Global Margin:=5 ; original margin; touch it, you break it
+Global NewMargin:=5 ; tacked onto original margin
+
+CoordMode,Mouse,Client
+
+;SendMode Input
+
+Loop
+{
+	Sleep,50 ; adjust DelayInMilliseconds
+	
+	WinWaitActive,%WinTitle%
+	hWnd:=WinExist()
+	DllCall("GetClientRect","UPtr",hWnd,"UPtr",&amp;RECT)
+	NumPut(BorderLeft:=NumGet(RECT,0,"Int")+Margin,RECT,0,"Int")
+	NumPut(BorderTop:=NumGet(RECT,4,"Int")+Margin,RECT,4,"Int")
+	NumPut((BorderRight:=NumGet(RECT,8,"Int")-Margin)-1,RECT,8,"Int")
+	NumPut((BorderBottom:=NumGet(RECT,12,"Int")-Margin)-1,RECT,12,"Int")
+	DllCall("ClientToScreen","UPtr",hWnd,"UPtr",&amp;RECT)
+	DllCall("ClientToScreen","UPtr",hWnd,"UPtr",&amp;RECT+8)
+	DllCall("ClipCursor","UPtr",&amp;RECT)
+	MouseGetPos,CX,CY
+;ToolTip,CursorX:%CX%`nCursorY:%CY%
+	BorderLeft+=NewMargin,BorderTop+=NewMargin
+	BorderRight-=NewMargin,BorderBottom-=NewMargin
+;ToolTip,%BorderLeft%`n%BorderTop%`n%BorderRight%`n%BorderBottom%`n
+	
+	Left:=CX&lt;=BorderLeft,Top:=CY&lt;=BorderTop
+	Right:=CX&gt;=BorderRight,Bottom:=CY&gt;=BorderBottom
+	
+	if(Left&amp;&amp;Top)
+		Send,{Numpad7}
+	else if(Top&amp;&amp;Right)
+		Send,{Numpad9}
+	else if(Left&amp;&amp;Bottom)
+		Send,{Numpad1}
+	else if(Bottom&amp;&amp;Right)
+		Send,{Numpad3}
+	else if(Left)
+		Send,{Numpad4}
+	else if(Top)
+		Send,{Numpad8}
+	else if(Right)
+		Send,{Numpad6}
+	else if(Bottom)
+		Send,{Numpad2}
+}
+
+return
+
+~LButton::
+IfWinNotActive,%WinTitle%
+{
+	DllCall("ClipCursor","UPtr",NULL)
+}
+return
+
+/*
+	if(CX&lt;=BorderLeft)
+		Send,{Left}
+	if(CY&lt;=BorderTop)
+		Send,{Up}
+	if(CX&gt;=BorderRight)
+		Send,{Right}
+	if(CY&gt;=BorderBottom)
+		Send,{Down}
+*/
+;
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Limiting Processor frequency within Sandboxie possible?</h3>
+				<div class="date">Posted: <strong>Sat Jun 13, 2015 10:31 am</strong></div>
+				<div class="author">by <strong>some_guy123</strong></div>
+				<div class="content">Ok, I'm not a coder but I think I can understand what is going on in that script, thanks, I'll try and get this going.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=21274&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:39:09 GMT -->
+</html>

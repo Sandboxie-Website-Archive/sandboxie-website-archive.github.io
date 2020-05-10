@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15022&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:37:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.05] Things that don't work in 4.01 - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.05] Things that don't work in 4.01</h2>
+		<p><a href="viewtopic22be22be.html?f=38&amp;t=15022">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15022</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed May 29, 2013 9:40 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Oh, I didn't realize a match is what makes it go through SbieSvc... even if the destination is still in the sandbox. So, what's happening with $:explorer.exe, what matches that? I've never fully understood the $: convention! Is that opening any windows created/owned by Explorer, thus more matches...? Since like the EMET Template with $:EMET_notifier.exe doesn't make any difference.<br>
+<br>
+Still, something weird must be going on here, since shouldn't global Open=* and Open=iexplore.exe,* give the same results for iexplore.exe?? Which is of course what you got...<br>
+<br>
+It's just a bit frustrating trying/wanting to figure this out. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I just used my XP install disc-&gt;files-&gt;ISO with most updates integrated from Feb. (last time I updated it) to install fresh into VirtualBox. Everything is slower overall there (expected), but still same differences!<br>
+<br>
+Forced IE 6 with one already running ("active" sandbox):<br>
+1.68 - Default settings <br>
+2.4 - Open=$:explorer.exe <br>
+2.9 - Open=iexplore.exe,* <br>
+1.28 - Open=*<br>
+<br>
+0.45 - UNsandboxed<br>
+<br>
+1.05 - SBIE 3.76 (or 0.98 with <em>global</em> Open=*, so it's not the same with prefix...)<br>
+<br>
+<br>
+Anyway, just more info -- I'd think you'd have reproducible results with "same" VirtualBox system...? I can upload any of my files if you want them for any reason.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu May 30, 2013 3:36 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Yes, the $:program.exe convention means any window class created by program.exe.  That means additional checks to get the program name <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+And yes I am seeing the same AppTimer numbers when OpenWinClasss=* and OpenWinClass=iexplore.exe,*.<br>
+<br>
+Anyway I think we're spending too much with this.  I didn't even notice any performance difference until I checked with AppTimer.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri May 31, 2013 9:30 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Sorry if you couldn't notice a half-second difference. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Maybe I couldn't feel 0.2s difference if it's a small percentage, but when it's double (like &lt; 0.2 unsandboxed to 0.4 with 3.76), that's easily noticeable to me. But I could live with that for Sandboxie's benefits! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> (Maybe because I don't want to run anything on my systems to slow anything down, so I'm used to fast. Also why I didn't want to run any other security software that affects the system -- Sandboxie is great because zero effect on anything else! <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool">)<br>
+<br>
+Also, I'm not hung up on the numbers at all. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I can easily describe the differences I feel/notice, and I did in the original slowness topic (thanks again for the other GUI optimization change!). It's just that I/we have to bring out some numbers for objective proof, etc... And again, I'm not trying to waste your time right now when you're trying to fix functionality stuff for release <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed">, but I would still like it if we/you can figure out why I'm seeing these differences sometime.<br>
+<br>
+BTW, did you try Open=$:explorer.exe to see how that compares for you? Also, are you sure you're using the same version us users download? <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"><br>
+<br>
+If I'm understanding you right, a global Open=* should be the <em>slowest</em>, is that correct? And it seems the same can be said for <em>prefix</em> program with <em>prefix</em>,* if your equal results are what you'd expect. Well, if nothing should be slower than *, that would be GREAT!! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Can we figure out the reason why for me, in every case, * with/without prefix are opposite extremes? (Really, any of these differences seem relatively massive for changing such a setting: <em>more</em> of a difference from one thing than the entire sandboxing process as a whole?)<br>
+<br>
+After your reply yesterday, wondering if this was just an XP thing, and I could possibly use 3.76 if there aren't issues for XP's last year (but I really want to stay on the latest anyway <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">), I decided to finally check Windows 7. And... no matter the system, the results are always the same! So it seems like anyone else should be able to reproduce my results -- so I wonder how your system is different?!<br>
+<br>
+First, 32-bit 7 SP1 in VirtualBox. I'm using Aero with the VBox driver, which might be the cause of slowness overall, but whatever it is, it sure magnifies the differences! <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"><br>
+<br>
+Forced IE 8 with one already running:<br>
+3.3 - Default settings <br>
+8.5 - Open=$:explorer.exe <br>
+<strong>11.1</strong> - Open=iexplore.exe,* (How can prefix add &gt; 8s?!)<br>
+2.4 - Open=* <br>
+<br>
+1.25 - UNsandboxed<br>
+<br>
+<br>
+Then on 64-bit 7 SP1 (no updates) other real system, with 32-bit IE 8:<br>
+1.48 - Default settings <br>
+2.65 - Open=$:explorer.exe <br>
+3.22 - Open=iexplore.exe,* <br>
+1.37 - Open=* <br>
+<br>
+0.51 - UNsandboxed<br>
+<br>
+1.12 - SBIE 3.76 (1.04 with Open=*)<br>
+<br>
+<br>
+So that's why I wonder if you have a special build <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">, different/special hardware/software...? 3 different systems, plus VirtualBox, different Windows versions, default installs with nothing else really, and the results are always definitive!<br>
+<br>
+Again, the most obvious thing to figure out is why the presence of a prefix, or not, gives opposing times for me but not you... <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Bug in Flashnote with all SB 4.x</h3>
+				<div class="date">Posted: <strong>Sat Jun 01, 2013 6:02 am</strong></div>
+				<div class="author">by <strong>Dossy</strong></div>
+				<div class="content">There is some sort of hotkeys-bug in the notes manager called: Flashnote ( <a href="http://softvoile.com/flashnote/" class="postlink">http://softvoile.com/flashnote/</a> ) with every SB 4.x Beta x64, Win7 x64.<br>
+Every time I start Flashnote, that program gives me an error called: Error with registration of the hotkeys, please use another combination). But no matter what combination, everytime this message appears. Even if I turn off the hotkey thing in Flashnote.<br>
+<br>
+Outside SB all works fine.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 02, 2013 6:58 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Like I said I think we're spending too much time at this point trying to shave off a few milliseconds.<br>
+On top of that I do not have a clear idea what the problem is because I can't reproduce it.<br>
+I don't rule out looking into this again in the future, but for now I am asking you to leave it at that.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Bitdefender-SearchAdvisor and Google-SSL-Search with Firefox</h3>
+				<div class="date">Posted: <strong>Sun Jun 02, 2013 11:53 am</strong></div>
+				<div class="author">by <strong>Gast</strong></div>
+				<div class="content">There is an incompatibility with Bitdefender and Firefox under Sandboxie 4.01. (tested with 11 and 12):<br>
+<br>
+Search Advisor Icons are not shown if Google SSL search is used. This is only with sandboxed Firefox (also without add-ons), not with sandboxed Internet Explorer 10. Outside of Sandboxie the search advisor icons are shown with Firefox and Google SSL search.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Bug in Flashnote with all SB 4.x</h3>
+				<div class="date">Posted: <strong>Mon Jun 03, 2013 2:21 pm</strong></div>
+				<div class="author">by <strong>Dossy</strong></div>
+				<div class="content"><blockquote><div><cite>Dossy wrote:</cite>There is some sort of hotkeys-bug in the notes manager called: Flashnote ( <a href="http://softvoile.com/flashnote/" class="postlink">http://softvoile.com/flashnote/</a> ) with every SB 4.x Beta x64, Win7 x64.<br>
+Every time I start Flashnote, that program gives me an error called: Error with registration of the hotkeys, please use another combination). But no matter what combination, everytime this message appears. Even if I turn off the hotkey thing in Flashnote.<br>
+<br>
+Outside SB all works fine.</div></blockquote>
+
+<br>
+@ Tzuk: Bug still present in SB x.013</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 04, 2013 2:21 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I am sorry Dossy but I will not look into this before releasing official version 4.<br>
+I will split your posts into a new topic so I can track this problem report for future versions.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jun 04, 2013 7:10 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Like I said I think we're spending too much time at this point trying to shave off a few milliseconds.<br>
+On top of that I do not have a clear idea what the problem is because I can't reproduce it.<br>
+I don't rule out looking into this again in the future, but for now I am asking you to leave it at that.</div></blockquote>
+
+Again, trying to not be a bother or anything too much right now while you're concentrating on other stuff! Understood, etc... <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+I don't know how much time, if any, you've spent on this, other than the quick AppTimer tests, and of course reading over my posts. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> But maybe you have... I was just trying to get some extra clarification for now about YOUR setup; and that you're stating Open=* should be slowest (not sure how $:prog.exe should fit in speed-wise), so by that definition, something is way wrong in all my scenarios. I've certainly been spending "too much" time on this, but I don't mind doing everything I can to help improve anything for myself or others. Like my other reports -- and I consider this at an equal level, especially after my later findings. Like I said, I don't really even see a reason to run v4, unless I'm forgetting something improved, since I think for now, 3.76 seems like it would run OK, more stuff works, and it's faster. But as I also said, I know it's the future and always like the "latest," so I began using it ASAP to be able to provide feedback and fix/improve stuff.<br>
+<br>
+<br>
+Second, this is definitely not just "a few milliseconds!" I wouldn't even notice that, much less report it. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> This is, at minimum, multiple <em>tenths</em>. Like I said, if we (your work <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">) can get things down to the <em>supposed-to-be</em>-slowest * that is great! (Really, without * Open, stuff would presumably be a bit faster, or a lot in your case, without going through SbieSvc -- so even better.) In other words, if * is truly the biggest hit, while only slightly off 3.76 (as it is for me), that would be SUPERB!<br>
+<br>
+Looking at those real Windows 7 numbers, I mean only Open=$:explorer.exe adds OVER a <em>second</em>? (Sandy Bridge CPU) Just seems crazy... And in all cases, as I said, simply adding $:explorer.exe adds MORE time to launching IE than the ENTIRE difference between unsandboxed and default sandboxed? <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> If that was "a few milliseconds," it would mean the entire sandboxed launch adds <em>less than</em> "a few milliseconds" otherwise, which certainly isn't the case. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+I'm trying to give everything I can so you can reproduce, but if you can't, can you help ME reproduce your results...? But what could there be for me to do...? <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> I tried using Start.exe instead of Forced, and switched the XP theme from Classic back to the default XP Style -- same differences.<br>
+<br>
+You haven't said anything about a virtual machine, but I think you have in the past... Shouldn't an install in a certain VM be an "identical" system? I said Virtual Box... should I try another where you are getting your results? You take my VM install, I take yours... Want remote access to any of my systems (if I can set that up), let me know. Or I to yours... And so on.<br>
+<br>
+Anything obscure -- all my processors are Intel, are you getting your results with AMD? <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"> Trying to be relentlessly thorough!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Bitdefender-SearchAdvisor and Google-SSL-Search with Fir</h3>
+				<div class="date">Posted: <strong>Tue Jun 04, 2013 1:50 pm</strong></div>
+				<div class="author">by <strong>Gast</strong></div>
+				<div class="content"><blockquote><div><cite>Gast wrote:</cite>
+Search Advisor Icons are not shown if Google SSL search is used. This is only with sandboxed Firefox (also without add-ons), not with sandboxed Internet Explorer 10. Outside of Sandboxie the search advisor icons are shown with Firefox and Google SSL search.</div></blockquote>
+
+This is only when Googles ssl-search is used. With non-ssl Google search, the search advisor icons of Bitdefender are shown. It looks as if there is a problem with the certificate of Bitdefender under Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 10, 2013 8:18 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Since it's been <a href="../phpbb/viewtopic0215.php?p=89910#89910" class="postlink">almost 2 months</a>, just wanted to let you know that the remaining Firefox/Pale Moon focus issue is still there on XP:<br>
+
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>Firefox is mostly fixed, and seemed good for awhile, but found another scenario where it's not refocusing. <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> Focus: unsandboxed; sandboxed Firefox; and another unsandboxed. Minimize that last unsandboxed window, and then Firefox -- the next unsandboxed window is there, but not focused. (That's what would happen before if any other sandboxed windows were already minimized.)</div></blockquote>
+
+<br>
+<br>
+About the speed differences with different OpenWinClass settings... (BTW, I wondered if the global Open=* change in 4.03.01 would change its speed at all, but seems the same (just info; it was/is already fastest...)).<br>
+<br>
+Just last week I came up with an excellent and simple test that I'll post sometime soon, that others can easily check differences with (online and/or download). (Since I find AppTimer can give results that are "off" if not used carefully.) Not sure why I didn't come up with this sooner -- I had even been thinking about making some other timing program (ugh) just for this for people to check with, since it's so annoying... I still have to check the script on my other combinations of Windows/IE to make sure it works right.<br>
+<br>
+Besides timing launching (results look like "right" AppTimer ones), I also have a version that shows the big differences creating windows in the already open IE (or any browser I guess, but I haven't timed anything but IE so far), which is really most of the difference with launching...<br>
+<br>
+I would say the differences shown are about proportional to the differences I feel in some other windowing-related areas... Anyway, more on that later (just replied for Firefox issue), assuming there's no other findings/explanation/improvement coming yet. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 11, 2013 3:53 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">You don't have to keep bringing this up, and I would suggest against spending your time developing ways to test this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 11, 2013 7:56 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Keep bringing this up? The Firefox thing? So 2 months and several releases isn't long enough before letting you know, since it seemed to be forgotten about? Or it's not fixable or you don't want to fix it...? I said that's why I replied, and this is "Things that don't work..."<br>
+<br>
+Or you mean about the speed stuff? Well, you're the one that started posting about it in <em>this</em> topic instead of the other one <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink">, so I just mentioned something else quick... I figured I'd wait at least a month, since you're busy with other stuff, and then I didn't have anything else to say anyway until I came up with this benchmark/test (which I'd post later, and still only replied for Firefox).<br>
+<br>
+So I don't see how waiting patiently forever is "keeping" bringing something up. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> What, has it been almost 9-10 months since the EMET crashes with Firefox that Sandboxie consistently and constantly keeps causing? It's been about 6 months since I posted any more details about that (might again soon, after seeing some other user comments), since I gave tons of info, but I don't know if you tried to look into it much -- and I asked about any tools I could use to help debug, etc.....<br>
+<br>
+Also not sure why you keep telling me about MY time, haha. <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> I have many different things to spend time on, and try to allocate it as best I can. It's a pretty small amount on this (and more of that was to give YOU info), but it had to be done. It's not like I can forget about it, since I'm stuck with either: 1) [Additional] slowness, or 2) Not configured to my liking. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+Are you going to tell me about how I THINK about spending time also (vs actual time used)? That was a couple months ago I <em>thought</em> about making some tool specifically for this (it's that bad, and want to get others' results), but never spent a single minute on anything...<br>
+<br>
+Then I woke up last week and magically thought of this idea (think flux capacitor!). Within 30 minutes of getting up, I had it working and haven't touched it since (want to tweak before "release"). Is that a small enough time?? <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"> Maybe you don't want a simple (superb/indisputable/dramatic) way for people to check? I just want to know what others are seeing with different settings, and this is easy and reliable.<br>
+<br>
+I just checked it on Firefox (window creation, not launching), and got the same relative results. Although everything takes a lot less time overall, which is probably why I've hardly ever "felt" anything with Firefox.<br>
+<br>
+<br>
+BTW, after buying the license last Sep., I wanted to post a Positive Review, but never got around to it before the end of the year. Then I decided to wait after version 4 came out. Now I think everything is good functionality-wise (so I'm generally satisfied! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">), but I cannot post said review until I see what's up with this (as long as there are conflicts between logic, your explanations, and my results)... Then I'd have the review within 30 days (even letting the EMET issue slide) -- that <em>would be</em> a promise, but I have to watch how I spend my time!!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 11, 2013 9:41 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I mean the speed stuff.  As a general rule I don't feel that v4 is slower than v3.  I don't think it is a good use of my time to find out why AppTimer thinks program are starting half a second slower.  I feel like at this point I've said this several times already.<br>
+<br>
+I will look into the Firefox minimize thing.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 11, 2013 10:10 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">I know you've said that several times. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Sorry I even mentioned it here again instead of waiting to post my new benchmark... (Didn't feel like it last week.) Yeah, AppTimer and "thinking" (it's accurate as long as it's used carefully), so I wanted to completely remove it from the equation. Looks foolproof when done with Windows/browser and a few lines of JavaScript! I just want my results to match either your results, or your explanation(s), and you did say you could come back and look at it again sometime (I understand time on other stuff is a better use as I've said). I'm just curious to see others' results.<br>
+<br>
+<br>
+<br>
+OK, thanks if you get a chance to check Firefox. <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15022&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:37:28 GMT -->
+</html>

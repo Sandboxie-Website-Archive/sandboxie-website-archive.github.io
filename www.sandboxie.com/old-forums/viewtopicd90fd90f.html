@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15417&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:39:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.08] Problems with AutoExec</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.08] Problems with AutoExec</h2>
+		<p><a href="viewtopic6d0a6d0a.html?f=38&amp;t=15417">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15417</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.08] Problems with AutoExec</h3>
+				<div class="date">Posted: <strong>Tue May 07, 2013 6:00 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">I had never tried to use <a href="../index0b59.html?AutoExec" class="postlink">AutoExec</a> before yesterday... I see no special instructions, but I couldn't get it to work (in my usual "active" sandbox, new one, nothing with 4.01.07). So had to investigate. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Worked right away with 4.01.07 on the other XP system! Here's what I found, testing with:<br>
+<br>
+AutoExec=reg add HKCU\Software\Test123<br>
+<br>
+First, it appears that in 3.76 and 4.01, an AutoExec (when it works), is <em>only</em> executed when a sandbox first becomes active -- is that the intended behavior, I guess? Although the SandboxieAutoExec key itself is recreated, if deleted, with each new process.....<br>
+<br>
+It looks like AutoExec in 3.76 ONLY works when using Run Sandboxed, etc. (Start.exe stuff). With Forced Programs, the command <em>will be</em> logged under SandboxieAutoExec, but it doesn't actually <em>run</em>. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> Assuming this won't be fixed if there are no more 3.x releases...<br>
+<br>
+In 4.01, AutoExec ONLY works when using Forced Programs. So that explains why I couldn't get it to work, since using Run Sandboxed, Run... whatever with Start.exe never does anything. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Problems with AutoExec</h3>
+				<div class="date">Posted: <strong>Tue May 07, 2013 8:42 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>In 4.01, AutoExec ONLY works when using Forced Programs. So that explains why I couldn't get it to work, since using Run Sandboxed, Run... whatever with Start.exe never does anything. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div></blockquote>I can confirm this one, when sandboxing notepad.exe on 4.01.07, with:<br>
+AutoExec=reg add HKCU\Software\Test123<br>
+<br>
+It works when notepad.exe is forced, but not when 'Run Sandboxed'.<br>
+(I didn't try the AutoExec command on 3.76)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue May 07, 2013 4:27 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks, I will check it in a day or two and post an update.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun May 12, 2013 2:27 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">This should be fixed in version 4.01.08.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 18, 2013 11:00 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">I think it all looked OK in my quick testing. Thanks! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Is that the expected behavior where an AutoExec doesn't run once the sandbox is active...? I assume so, and that's fine. Just wondering since the SandboxieAutoExec key is recreated <strong>anytime</strong> a program starts. Plus, the <a href="../indexb786.html?AutoExecAutoExec" class="postlink">AutoExec page</a> says:<br>
+<br>
+"... they are executed again <strong>the next time any sandboxed program starts</strong> in that sandbox. But it is also possible to get them to <strong>execute again, by manually deleting the command</strong> from that sandboxed registry key."<br>
+<br>
+Which doesn't say after the sandboxed becomes <em>inactive</em>, but that's what's needed, thus my curiosity. <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 18, 2013 1:32 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>Which doesn't say after the sandboxed becomes <em>inactive</em>, but that's what's needed, thus my curiosity.</div></blockquote>A question, since I'm not sure that I correctly follow the discussion...<br>
+When the sandbox becomes inactive the sandbox reghive is unmounted, so if you wanted to remove the sandbox autoexec key at that time wouldn't you need to modify the reghive file in some way?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 18, 2013 1:52 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">I'm not sure why you're asking (what the difference is <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">), but... It's really about deleting the <em>values</em> in SandboxieAutoExec, but I was just simply deleting the whole key, when I saw that launching a program recreates it, though nothing else AutoExec-related happens.<br>
+<br>
+If what you're asking about is having the key gone when/after the sandbox becomes inactive, without deleting contents, the SandboxieAutoExec key can be deleted, and then close any remaining programs without opening anything new, and it should stay deleted. As far as modifying the RegHive without Sandboxie, sure, File-&gt;Load Hive in Regedit or whatever (under HKEY_USERS, if it matters), name it whatever, make changes, Unload Hive. I've never done that...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun May 19, 2013 11:07 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">There is a similar StartProgram command which could also be useful.<br>
+<br>
+<a href="../phpbb/viewtopic8b1d.php?t=7512" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=7512</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun May 19, 2013 11:07 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">There is a similar StartProgram command which could also be useful.<br>
+<br>
+<a href="../phpbb/viewtopic8b1d.php?t=7512" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=7512</a></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15417&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:39:24 GMT -->
+</html>

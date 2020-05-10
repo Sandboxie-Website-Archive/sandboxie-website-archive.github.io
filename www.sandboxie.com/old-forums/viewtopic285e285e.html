@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24660&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:04:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Is it normal for the 64 bit version of Sandboxie to have 1.5 gigs of space?[SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Is it normal for the 64 bit version of Sandboxie to have 1.5 gigs of space?[SOLVED]</h2>
+		<p><a href="viewtopicdc64dc64.html?f=17&amp;t=24660">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24660</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Is it normal for the 64 bit version of Sandboxie to have 1.5 gigs of space?[SOLVED]</h3>
+				<div class="date">Posted: <strong>Tue Jul 18, 2017 7:43 am</strong></div>
+				<div class="author">by <strong>Lightcalm7</strong></div>
+				<div class="content">I thought this was quite odd, as I don't remember seeing Sandboxie having this much memory before when re-installing it. Is this normal for the 5.20 64 bit version of Sandboxie?<br>
+<br>
+I thought that maybe it was taking over a gig and a half because of older program information that the software retained from before when overwriting an install a few times in the past. I'm not sure if that could even be possible or not? <br>
+<br>
+So I completely uninstalled Sandboxie version 5.20 twice, the first time while keeping my config.ini file intact, the second time erasing the config file and after installation, the program still read 1.53 gigs on Iobit uninstaller after installation again. <br>
+<br>
+On ccleaner uninstall, the exact program name is "Sandboxie 5.20 (64-bit)". No file size is given on Ccleaner but on Iobit uninstaller it reads "Sandboxie 5.20 (64-bit) (x64)" and has a file size listed of 1.53 gigs and a install date of 2/10/2011. Even though I had just installed the 5.20 version of the program before checking on Iobit uninstaller on 7/18 2017. Perhaps Iobit just has outdated information?<br>
+<br>
+The total size that the program seemed to be taking up after installation in the Sandboxie folder in "program files" was less than 6 megabytes!<br>
+<br>
+Thanks in advance for any help on this!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Is it normal for the 64 bit version of Sandboxie to have 1.5 gigs of space?</h3>
+				<div class="date">Posted: <strong>Tue Jul 18, 2017 11:06 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Lightcalm7,<br>
+<br>
+Perhaps the uninstaller is picking up the size of your Sandbox folder (your container folder) ? Typically, it is located under C:\Sandbox  <br>
+<br>
+Can you provide more information regarding how are you seeing this behavior in Iobit? What OS are you using?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Is it normal for the 64 bit version of Sandboxie to have 1.5 gigs of space?</h3>
+				<div class="date">Posted: <strong>Wed Jul 19, 2017 8:31 am</strong></div>
+				<div class="author">by <strong>Lightcalm7</strong></div>
+				<div class="content">Hello Barb,<br>
+<br>
+I have checked the Sandboxie container folder in drive C and it was only using 540 kilobytes of memory.<br>
+I'm using Windows 7 Professional. <br>
+<br>
+Here is what Iobit uninstaller is showing me..</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Is it normal for the 64 bit version of Sandboxie to have 1.5 gigs of space?</h3>
+				<div class="date">Posted: <strong>Wed Jul 19, 2017 10:30 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Lightcalm7,<br>
+<br>
+I installed IObit uninstaller, it is showing 980mbs for Sandboxie (which is not correct). I right-clicked on the Sandboxie entry  and selected "Open File location", it took me to the Windows Installer folder,which contains several files, not only Sandboxie (and it more or less matches the size). So it looks like the program is not properly finding locations.<br>
+<br>
+This does not seem to be a Sandboxie issue. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Is it normal for the 64 bit version of Sandboxie to have 1.5 gigs of space?</h3>
+				<div class="date">Posted: <strong>Wed Jul 19, 2017 12:13 pm</strong></div>
+				<div class="author">by <strong>Lightcalm7</strong></div>
+				<div class="content">Hmm, I just did this as well! I didn't notice this option before. So apparently Sandboxie is placed in a hidden windows system folder along with a lot of other programs saved installer data and packages, which on my computer comes to my 1.5 gigs. So Sandboxie is not taking up 1.5 gigs alone in this hidden system folder, it's getting a lot of help from other programs data! <br>
+<br>
+So yes, this doesn't appear to be a Sandboxie issue, although, it is bizarre to me that Sandboxie is one of the only programs being counted along with a bunch of other software installer data files, according to Iobit uninstaller. Other programs on Iobit uninstaller take me to their own folders accounted for, when I click to show the programs location. Very strange. <br>
+<br>
+I hope that Sandboxie isn't infected or corrupted again, which has happened before. The malware was so bad that to get rid of it, I had to do a full uninstall and re-install of Sandboxie one time. Example, when I just deleted my Sandbox folder container before, I would still get redirects from the malware in the Sandbox environment! <br>
+<br>
+Or this could just be a issue with Iobit uninstaller in the registry or something. Who knows. At least everything is working fine. <br>
+I think I will clean my windows temp files and old program installer data to try and free up some space, and see if that helps Sandboxie show a file installer size much less than 1.5 gigs! <br>
+<br>
+Thank you!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Is it normal for the 64 bit version of Sandboxie to have 1.5 gigs of space?</h3>
+				<div class="date">Posted: <strong>Wed Jul 19, 2017 12:16 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Lightcalm7,<br>
+
+<blockquote class="uncited"><div>I hope that Sandboxie isn't infected or corrupted again</div></blockquote>
+The fact that we are both seeing the same behavior is probably a good indicator that this is not a malware related issue, but a problem with the Iobit application. You should contact their support team for further information regarding how is it gathering the data.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Is it normal for the 64 bit version of Sandboxie to have 1.5 gigs of space?[SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed Jul 19, 2017 5:31 pm</strong></div>
+				<div class="author">by <strong>Lightcalm7</strong></div>
+				<div class="content">Yes, you make a good point Barb! I will contact Iobit with further questions to determine the cause of the issue. Thank you for looking into it on Sandboxie's end! I wanted to make sure first that the problem wasn't with Sandboxie itself. <br>
+<br>
+Thank you guys for making such an excellent product!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24660&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:04:23 GMT -->
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24574&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:04:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Missing folders within Resource Access [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Missing folders within Resource Access [SOLVED]</h2>
+		<p><a href="viewtopicb0f4b0f4.html?f=17&amp;t=24574">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24574</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Missing folders within Resource Access [SOLVED]</h3>
+				<div class="date">Posted: <strong>Thu Jun 22, 2017 7:06 am</strong></div>
+				<div class="author">by <strong>Veace</strong></div>
+				<div class="content">Sorry, but it's hard for me to find the right information on the forum, because my english bad. My problem is that when you set up direct access in explorer, there are no disks except the desktop, that is, I can not store my sands anywhere except the disk on which the system and the folder created by the program itself is installed. This happened after installation a new version of the sand, but now any version I downloaded has this problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disks access</h3>
+				<div class="date">Posted: <strong>Thu Jun 22, 2017 10:27 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Veace,<br>
+<br>
+You can create your Sandbox anywhere you like. <br>
+Access Sandboxie Control ---&gt; Sandbox --&gt; Set Container Folder <br>
+Choose the desired location.<br>
+<br>
+Regarding Direct Access, can you please provide more details about what have you set up and what are you trying to do? <br>
+<br>
+What are your OS, Antivirus and Sandboxie versions?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disks access</h3>
+				<div class="date">Posted: <strong>Thu Jun 22, 2017 12:21 pm</strong></div>
+				<div class="author">by <strong>Veace</strong></div>
+				<div class="content">How i did it before, i created sand, storage folder was the C:\Sandbox\%USER%\%SANDBOX% ,then i go to the sandbox settings - resources access - file access - direct access and add a folder with the software on the disk D to save disk space on ssd, but now when i try add a folder to direct access i can specify files only from desktop, stop showing up all disks. <br>
+<br>
+Win10 x64, Eset internet Security, 5.20</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disks access</h3>
+				<div class="date">Posted: <strong>Thu Jun 22, 2017 12:47 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Veace,<br>
+<br>
+Is this what you are seeing? (Check the first post)<br>
+<a href="viewtopic58bc58bc.html?f=17&amp;t=23860&amp;p=125807&amp;hilit=missing+folders#p125496" class="postlink">viewtopic.php?f=17&amp;t=23860&amp;p=125807&amp;hil ... rs#p125496</a><br>
+<br>
+If so, can you try fully removing Sandboxie with the Sandboxie installer, then re-installing it? <br>
+<br>
+Can you navigate your folders (outisde SBIE) in Windows Explorer?  Are you using any special permissions for your drives , or any third party software? <br>
+<br>
+If all fails, try disabling your Antivirus protection and reinstall Sandboxie, see if that allows the folders to show up. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disks access</h3>
+				<div class="date">Posted: <strong>Thu Jun 22, 2017 2:07 pm</strong></div>
+				<div class="author">by <strong>Veace</strong></div>
+				<div class="content">Yes, the situation is identical to the post you wrote. I removed the sand, rebooted, disconnected all the antivirus protection, and installed the sand again. The problem has not disappeared, seems to be there are no special permissions for disks, and I can safely navigate through folders.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disks access</h3>
+				<div class="date">Posted: <strong>Thu Jun 22, 2017 3:07 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Veace,<br>
+<br>
+What else changed when the issue started happening?  Any driver updates? Resolution changes? <br>
+Try to right-click on "Desktop" and see if you can you select "Collapse" and/or "Expand" to make folders re-appear. <br>
+What happens if you click on "Make Folder"?<br>
+Does the issue occur for other Windows accounts? Is your account admin? <br>
+<br>
+Can you make sure that when you remove Sandboxie completely, you also rename the Sandboxie folder in Program Files to Sandboxie.old. Also, when you reinstall, do not import your old settings. <br>
+<br>
+In the meantime, you can manually add the Direct Access folders by modifying the Sandboxie.ini file (Sandbox Control --&gt; Configure --&gt; Edit configuration)<br>
+<a href="../index413b.html?OpenFilePath" class="postlink">https://www.sandboxie.com/index.php?OpenFilePath</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disks access</h3>
+				<div class="date">Posted: <strong>Sat Jun 24, 2017 5:51 pm</strong></div>
+				<div class="author">by <strong>Veace</strong></div>
+				<div class="content">Sorry for the long delay, diploma) I did everything on your advice, but the problem did not disappear, and editing the sandboxie.ini is not very convenient. As a result, I found a recovery point for windows where everything is alright with version 5.18, but the point itself is very broken, so tell me all the program files that I need to back up.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disks access</h3>
+				<div class="date">Posted: <strong>Sun Jun 25, 2017 5:14 am</strong></div>
+				<div class="author">by <strong>Veace</strong></div>
+				<div class="content">I finally fixed it, you know how? Returned Windows to its original state, now it all works</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disks access</h3>
+				<div class="date">Posted: <strong>Sun Jun 25, 2017 12:52 pm</strong></div>
+				<div class="author">by <strong>Veace</strong></div>
+				<div class="content">UPD: The real reason why the sandboxie explorer not correctly displayed files is too many icons on the desktop and that's all, god... You can close the topic, it's trully works like that. You can see for yourself.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disks access</h3>
+				<div class="date">Posted: <strong>Mon Jun 26, 2017 1:22 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Veace,<br>
+<br>
+I have narrowed it down to 79 Desktop icons (or more). You can have up to 78 and still see the list (at least on Windows 10 CU x64) .<br>
+I am not sure if this is Windows related, still need to check other resolutions, etc... or Sandboxie related, I made the devs aware.<br>
+<br>
+I'll update this thread if new info becomes available.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Disks access</h3>
+				<div class="date">Posted: <strong>Mon Jul 17, 2017 7:36 pm</strong></div>
+				<div class="author">by <strong>gdtv</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist947e.html?mode=viewprofile&amp;u=33898">Veace</a> wrote: <a href="viewtopic837d837d.html?p=128820#p128820" data-post-id="128820" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sun Jun 25, 2017 12:52 pm</div></cite>
+UPD: The real reason why the sandboxie explorer not correctly displayed files is too many icons on the desktop and that's all, god... You can close the topic, it's trully works like that. You can see for yourself.
+</div></blockquote>
+
+Thank you. I have the similar problem. I have fiexd it by your way.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24574&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:04:25 GMT -->
+</html>

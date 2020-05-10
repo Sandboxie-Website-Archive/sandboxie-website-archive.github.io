@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=18694&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:47:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie Isolation Demonstration: Cryptoplocker - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie Isolation Demonstration: Cryptoplocker</h2>
+		<p><a href="viewtopicc141c141.html?f=5&amp;t=18694">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=18694</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Wed Jun 11, 2014 4:16 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">We are unable to repro this in-house because CryptoLocker has evolved and we no longer have the original version used in the demo. But, we have been testing other APIs and I think I know what CryptoLocker was doing.<br>
+<br>
+The issue here is that any app in the sandbox can see the actual sandbox folder if it traverses down the directory tree using FindFirstFile/FindNextFile.<br>
+<br>
+E.g. if an app goes searching through the disk, they can go right into C:\Sandbox\admin\DefaultBox, and see everything that is in there. CryptoLocker goes through the entire HD looking for documents and pics. So eventually it will make its way into the real sandbox folder.<br>
+<br>
+We could prevent this from happening by hooking FindFirstFile/FindNextFile, and blocking the app from seeing into the sandbox folder. But I am not sure how much effort this would require and it could easily be thwarted by unhooking.  As it is now, it is harmless.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Wed Jun 11, 2014 6:32 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I understand what you mean. The malware starts at root of C drive and starts traversing all folders in hard disk. Then it shows all files being a pic or a document. Therefore the malware did not see sandbox folder but just found it.<br>
+<br>
+If you find an easy method to implement which allows hiding sandbox container folder without creating incompatibilites then I would go for it. If not, just keep it as it is.<br>
+<br>
+Thanks for taking care of the issue and finding out what was going on!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie Isolation Demonstration: Cryptoplocker</h3>
+				<div class="date">Posted: <strong>Wed Jun 18, 2014 9:27 am</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">@Curt<br>
+<br>
+Now that it's cleared, can you guys create a new video demo with regards to "Cryptowall"...</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=18694&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:47:35 GMT -->
+</html>

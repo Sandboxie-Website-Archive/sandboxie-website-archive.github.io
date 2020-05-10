@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=20821&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:42:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Direct Registry Access</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Direct Registry Access</h2>
+		<p><a href="viewtopic175e-2175e.html?f=5&amp;t=20821">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=20821</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Direct Registry Access</h3>
+				<div class="date">Posted: <strong>Mon Mar 09, 2015 1:51 pm</strong></div>
+				<div class="author">by <strong>samuelhm</strong></div>
+				<div class="content">how to enable direct ALL registry ? or use a non sandboxed reg??? sorry my bad english</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Direct Registry Access</h3>
+				<div class="date">Posted: <strong>Mon Mar 09, 2015 4:18 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">The next links are related for what you want to achieve:<br>
+<a href="../indexbccb.html?ResourceAccessSettings#key" class="postlink">http://www.sandboxie.com/index.php?Reso ... ttings#key</a><br>
+<a href="../indexf1ed.html?OpenKeyPath" class="postlink">http://www.sandboxie.com/index.php?OpenKeyPath</a><br>
+<br>
+You're Sandboxie.ini file might look like this regards this setting:<br>
+OpenKeyPath=program.exe,HKEY_CLASSES_ROOT<br>
+OpenKeyPath=program.exe,HKEY_CURRENT_USER<br>
+OpenKeyPath=program.exe,HKEY_LOCAL_MACHINE<br>
+OpenKeyPath=program.exe,HKEY_USERS<br>
+OpenKeyPath=program.exe,HKEY_CURRENT_CONFIG<br>
+<br>
+Where the program.exe is the one you actually need to access the complete registry. Don't allow "All programs" to direct access the registry for security reasons.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Direct Registry Access</h3>
+				<div class="date">Posted: <strong>Thu Apr 09, 2015 1:25 am</strong></div>
+				<div class="author">by <strong>wandajohnson</strong></div>
+				<div class="content">You can enable direct registry access in sandboxie using the following:<br>
+Sandboxie Control &gt; Sandbox Settings &gt; Resource Access &gt; Registry Access &gt; Direct Access<br>
+Remember that direct access exclusions do not apply when the program itself resides in the sandbox. Then you have to manipulate the openkeypath codes.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=20821&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:42:35 GMT -->
+</html>

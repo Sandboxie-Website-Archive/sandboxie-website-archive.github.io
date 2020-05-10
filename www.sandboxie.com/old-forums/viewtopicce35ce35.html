@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25025&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:51:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Question about Messages</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Question about Messages</h2>
+		<p><a href="viewtopic1ec91ec9.html?f=17&amp;t=25025">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25025</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Question about Messages</h3>
+				<div class="date">Posted: <strong>Wed Oct 25, 2017 12:23 pm</strong></div>
+				<div class="author">by <strong>Miadyya</strong></div>
+				<div class="content">Good afternoon all,<br>
+For my setup I have been using the <strong>SbieCtrl_HideMessage=-1</strong> entry in the config file to hide all the messages. This has been working great; however, the one message that I miss is the immediate recovery prompt after a download.<br>
+<br>
+Is there any config tweak/setting that would allow me to continue hiding all the messages <em>except</em> the immediate recovery one ? Right now I either close the browser and go through the prompts and/or go through the tray icon and do a recovery from there.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Question about Messages</h3>
+				<div class="date">Posted: <strong>Wed Oct 25, 2017 1:23 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Miadyya,<br>
+<br>
+I added that entry to my configuration and it did not affect the Immediate Recovery popup.<br>
+<br>
+Please have a look at the immediate recovery settings and ensure it is properly set up:<br>
+<a href="../ImmediateRecovery.html" class="postlink">https://www.sandboxie.com/ImmediateRecovery</a><br>
+<a href="../QuickRecovery.html" class="postlink">https://www.sandboxie.com/QuickRecovery</a><br>
+<br>
+If you are still experiencing issues,  please post your configuration file so I can have a look at it.<br>
+Configure --&gt; Edit configuration<br>
+Paste the contents here, highlight them and click the "&lt;/&gt;" button to format it<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Question about Messages</h3>
+				<div class="date">Posted: <strong>Wed Oct 25, 2017 2:30 pm</strong></div>
+				<div class="author">by <strong>Miadyya</strong></div>
+				<div class="content">Thank you for the quick test and reply. I verified that my settings are correct. If I remove the SbieCtrl_HideMessage=-1 entry and reload the config, I am prompted again to recover as soon as a download is done. Maybe I have the entry in the wrong location, I have it directly under my [UserSettings...] heading :<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[UserSettings_1EC0035F]
+
+SbieCtrl_HideMessage=-1
+</code></pre></div>
+
+I also verified the AutoRecover=y is under my [Browsers] heading. I am currently using Vivaldi, SB 5.21.7 (64-bit) (Registered) on Windows FU (latest build and patches).<br>
+<br>
+I'll send you my full file via PM since it contains names, paths, etc.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Question about Messages</h3>
+				<div class="date">Posted: <strong>Wed Oct 25, 2017 2:50 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Miadyya ,<br>
+<br>
+You are correct, I missed the " - " before the 1. I updated it and I see the same behavior that you reported. <br>
+This is an all or nothing type of setting. You can always manually hide the messages that you don't want, as they show up. <br>
+<br>
+Looks like Immediate Recovery is handled by  SbieCtrl_HideMessage:<br>
+<a href="viewtopicffa7ffa7.html?p=90696#p90696" class="postlink">viewtopic.php?p=90696#p90696</a><br>
+<br>
+You can use Hide All Tips instead? (not sure what are you trying to do exactly):<br>
+<a href="../ConfigureMenu.html#tips" class="postlink">https://www.sandboxie.com/ConfigureMenu#tips</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Question about Messages</h3>
+				<div class="date">Posted: <strong>Wed Oct 25, 2017 3:07 pm</strong></div>
+				<div class="author">by <strong>Miadyya</strong></div>
+				<div class="content">Thank you for the confirmation. Funny thing, I got the setting from that very same post; however, I didn't read the last part (which answered my question) - DOH !<br>
+<br>
+I may end up turning it off and then hide the messages as they appear. I originally looked for this setting because I think my Chrome was getting a little message heavy and I didn't think the Hide was working.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Question about Messages</h3>
+				<div class="date">Posted: <strong>Wed Oct 25, 2017 3:28 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi Miadyya ,<br>
+<br>
+We can try to fix the Chrome issue that is causing those popups (for the most part, they can be corrected). <br>
+If you want to give it a go, please create a problem report following these guidelines:<br>
+<a href="viewtopic03920392.html?p=104180#p104180" class="postlink">viewtopic.php?p=104180#p104180</a><br>
+<br>
+Problem reports section:<br>
+<a href="viewforum8a838a83.html?f=11" class="postlink">viewforum.php?f=11</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25025&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:51:32 GMT -->
+</html>

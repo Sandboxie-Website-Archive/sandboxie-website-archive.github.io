@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=9281&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:00:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Anti Keylogger and Clipboard monitor</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Anti Keylogger and Clipboard monitor</h2>
+		<p><a href="viewtopicc003c003.html?f=22&amp;t=9281">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=9281</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Anti Keylogger and Clipboard monitor</h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 4:31 am</strong></div>
+				<div class="author">by <strong>rcbblgy</strong></div>
+				<div class="content">Thank tzuk for lots of help <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+<br>
+SbieAKL is a dll used to block the keylogger and clipboard monitor which are sandboxed<br>
+<br>
+<strong>Requires sandboxie versions: v3.46 or higher (both of 32bit and 64bit)</strong><br>
+<br>
+<br>
+<br>
+How to use it:<br>
+1、Put the dlls and ini file at same place, for example C:\SbieAKL<br>
+2、Edit the "sandboxie.ini" file, and add the following content for 32bit
+<blockquote class="uncited"><div>InjectDll=C:\SbieAKL\SbieAKL.dll</div></blockquote>
+     or this for 64bit
+<blockquote class="uncited"><div>InjectDll=C:\SbieAKL\SbieAKL.dll<br>
+InjectDll64=C:\SbieAKL\SbieAKL_64.dll</div></blockquote>
+the content should be added under the sandbox which you want to use the dll<br>
+<br>
+<br>
+<br>
+About the ini file:<br>
+<br>
+you should put the ini file at the same folder with the two dlls<br>
+<br>
+In the ini file , you could see the content like below
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[OPTION]
+;when LearnMode=1, please allow the sandboxed programs access the current ini file directly or fully
+LearnMode=0
+
+
+[ALLOW]
+
+
+[CONTROL]
+GetKeyState=1
+GetAsyncKeyState=1
+GetKeyboardState=1
+WH_KEYBOARD_LL=1
+WH_KEYBOARD=1
+WH_JOURNALRECORD=1
+GetRawInputData=1
+GetRawInputBuffer=1
+RegisterHotKey=1
+AttachThreadInput=1
+RegisterRawInputDevices=1
+SetClipboardViewer=1
+GetClipboardData=1
+
+
+[EXCEPTION]</code></pre></div>
+
+1、About the "CONTROL" section -----<strong>Global rule</strong><br>
+All of APIs are hooked in the dll are put under the "CONTROL" section, you could set value to "0" to turn off an API hook, if all of hooks are turned off, the sandboxed programs would not be injected by the dll<br>
+Notice:All the sandboxed programs use this control, so if you turn off an API hook, the API hook of all the sandboxed programs is turn off <br>
+<br>
+2、About "EXCEPTION" section -----<strong>Exception rule</strong><br>
+Here, you could turn off an(or some) API hook for a (or some) program, other sandboxed programs are not affected by these rules<br>
+for example:<br>
+C:\Program Files\Internet Explorer\iexplore.exe = GetKeyState,GetKeyboardState<br>
+GetKeyState and GetKeyboardState are not hooked if the injected program is iexplore.exe<br>
+Notice:if you want to add an exception rule, you should use the full path of the program<br>
+<br>
+<br>
+<br>
+3、About "ALLOW" section -----<strong>White list</strong><br>
+If a program is put here, it would not be injected by the dll, so there is no hook for it, Usually, you could put your trusted programs here<br>
+for example:<br>
+C:\Program Files\Internet Explorer\iexplore.exe = 1<br>
+Now IE is a trusted program<br>
+Notice:Require full path, and the value should be "1"<br>
+<br>
+<br>
+<br>
+<br>
+4、LearnMode -----<strong>Same with learn mode of HIPS</strong><br>
+If you set it value to "1", the dll would record all of APIs used by a program, the dll will write a rule in the ini file when the program exits, when the program runs next time, the dll will not hook these APIs, So, "LearnMode" could help you make a trusted program works correctly<br>
+Notice:If you turn on the "LearnMode", please allow the sandboxed access the current ini file directly or fully<br>
+<br>
+<br>
+Download:<br>
+<a href="http://www.opendrive.com/files/7704526_W58pZ_d922/SbieAKL.7z" class="postlink"><strong>SbieAKL</strong></a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 4:48 am</strong></div>
+				<div class="author">by <strong>rcbblgy</strong></div>
+				<div class="content">About priority<br>
+[ALLOW] &gt; [EXCEPTION] &gt; [CONTROL]<br>
+<br>
+<br>
+when the dll is injected into a process, it will get the full path of the process, then it will read the ini file<br>
+<br>
+step 1<br>
+if the dll find the path under "ALLOW" section, it will make the process unload itself<br>
+<br>
+step 2<br>
+if the dll can't find the path under "ALLOW" section, it will get the rules under "CONTROL" section and "OPTION"<br>
+<br>
+step3<br>
+the dll will try to find the path under "EXCEPTION" section, if find, it gets the rule<br>
+<br>
+step4<br>
+now the dll gets all the rules in the ini file, then it begin to judge whether there is any API is hooked, if there is ,  the process is injected, if there isn't, the process will not be injected<br>
+<br>
+step5<br>
+if the process is injected and "LearnMode" is turn on, the dll will record which API has been used and add an exception rule when the process exits, if "LearnMode" is turn off, the dll will block the process call the APIs which are hooked.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 5:02 am</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content">This sounds interesting.  Does it block screen-shot logging too?  Might be worth testing it out against Zemana's and SpyShelter's test programs etc.  I might test it out myself if I find time.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 5:10 am</strong></div>
+				<div class="author">by <strong>rcbblgy</strong></div>
+				<div class="content"><blockquote><div><cite>ssj100 wrote:</cite>This sounds interesting.  Does it block screen-shot logging too?  Might be worth testing it out against Zemana's and SpyShelter's test programs etc.  I might test it out myself if I find time.</div></blockquote>
+It can't block screen-shot logger. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> <br>
+<br>
+It could block SpyShelter's test tool and AKLT<br>
+<br>
+About the Zemana's test tool, if you use sbie v3.5 and win7 64bit, the dll could block it, otherwise, can't</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 5:19 am</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content">When I try to put <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>C:\SbieAKL\SbieAKL.dll</code></pre></div> in the "Sandboxie.ini" file (for 32-bit), I get an error.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 5:21 am</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content"><blockquote><div><cite>rcbblgy wrote:</cite>It can't block screen-shot logger. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> <br>
+<br>
+About the Zemana's test tool, if you use sbie v3.5 and win7 64bit, the dll could block it, otherwise, can't</div></blockquote>
+
+Right, any reason why it can't block it on other Windows platforms?  Or is that still in development?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 5:23 am</strong></div>
+				<div class="author">by <strong>rcbblgy</strong></div>
+				<div class="content"><blockquote><div><cite>ssj100 wrote:</cite>When I try to put <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>C:\SbieAKL\SbieAKL.dll</code></pre></div> in the "Sandboxie.ini" file (for 32-bit), I get an error.</div></blockquote>
+Error ? Could you give me some more information ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 5:26 am</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content">Never mind, I think I worked it out - I think you meant this:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>InjectDll=C:\SbieAKL\SbieAKL.dll</code></pre></div>
+
+Simply putting:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>C:\SbieAKL\SbieAKL.dll</code></pre></div>
+won't do anything.  In your instructions above, you make it sound like that's all you need to input for 32-bit.<br>
+<br>
+By the way, just tested it with the Spyshelter tool and it works against keylogging and clipboard monitoring.  Nice work.<br>
+<br>
+EDIT: but come to think of it, simply denying execution of the program with Sandboxie's start/run restrictions is probably more effective?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 5:28 am</strong></div>
+				<div class="author">by <strong>rcbblgy</strong></div>
+				<div class="content"><blockquote><div><cite>ssj100 wrote:</cite><blockquote><div><cite>rcbblgy wrote:</cite>It can't block screen-shot logger. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> <br>
+<br>
+About the Zemana's test tool, if you use sbie v3.5 and win7 64bit, the dll could block it, otherwise, can't</div></blockquote>
+
+Right, any reason why it can't block it on other Windows platforms?  Or is that still in development?</div></blockquote>
+
+I don't know how it gets the key stroke <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> <br>
+<br>
+I use Defensewall to test it, and Defensewall shows me that the tool uses RegisterRawInputDevices to get the key stroke,  but I have hooked this function in my dll, I don't know why it can't be blocked</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 5:34 am</strong></div>
+				<div class="author">by <strong>rcbblgy</strong></div>
+				<div class="content"><blockquote><div><cite>ssj100 wrote:</cite>Never mind, I think I worked it out - I think you meant this:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>InjectDll=C:\SbieAKL\SbieAKL.dll</code></pre></div>
+
+Simply putting:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>C:\SbieAKL\SbieAKL.dll</code></pre></div></div></blockquote>
+
+This is my mistake <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> <br>
+
+<blockquote class="uncited"><div>EDIT: but come to think of it, simply denying execution of the program with Sandboxie's start/run restrictions is probably more effective?</div></blockquote>
+so would you deny all unknown programs <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 5:40 am</strong></div>
+				<div class="author">by <strong>ssj100</strong></div>
+				<div class="content"><blockquote><div><cite>rcbblgy wrote:</cite><blockquote class="uncited"><div>EDIT: but come to think of it, simply denying execution of the program with Sandboxie's start/run restrictions is probably more effective?</div></blockquote>
+so would you deny all unknown programs <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div></blockquote>
+
+Yes, all my internet facing sandboxes only allow certain programs to start/run and access the internet.  In fact, I have execution of everything unknown blocked by default system-wide with SRP too.  If I want to play with a program or malware, I run it in a sandboxed VirtualBox.<br>
+<br>
+But regardless, it looks like you have done some good work here.  I'm sure if you kept developing it, it could prove to be a very valuable addition for many people.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 5:57 am</strong></div>
+				<div class="author">by <strong>rcbblgy</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Yes, all my internet facing sandboxes only allow certain programs to start/run and access the internet.  In fact, I have execution of everything unknown blocked by default system-wide with SRP too.  If I want to play with a program or malware, I run it in a sandboxed VirtualBox.</div></blockquote>
+I know , the dll is useless for most of people <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> <br>
+<br>
+but for me, I use sbie only, so it would be a little useful when I test an unknown program<br>
+<br>
+And most of trusted programs will use these API which I hook in the dll, so it is also inconvenient <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Anti Keylogger and Clipboard monitor</h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 7:33 am</strong></div>
+				<div class="author">by <strong>Mark_</strong></div>
+				<div class="content"><blockquote><div><cite>rcbblgy wrote:</cite>The dll needs  <a href="http://www.microsoft.com/downloads/details.aspx?familyid=A5C84275-3B97-4AB7-A40D-3802B2AF5FC2&amp;displaylang=en" class="postlink"><strong>vc++ 2008 sp1</strong></a> to work, and the version of sandboxie it requires is <strong>v3.46 or higher (both of 32bit and 64bit)</strong></div></blockquote>
+
+check this topic for a very nice explanation how to remove the visual studio runtime: <a href="http://www.uc-forum.com/forum/c-and-c/60900-remove-visual-studio-runtime.html" class="postlink">http://www.uc-forum.com/forum/c-and-c/6 ... ntime.html</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Anti Keylogger and Clipboard monitor</h3>
+				<div class="date">Posted: <strong>Thu Nov 04, 2010 9:52 pm</strong></div>
+				<div class="author">by <strong>rcbblgy</strong></div>
+				<div class="content"><blockquote class="uncited"><div>
+check this topic for a very nice explanation how to remove the visual studio runtime: <a href="http://www.uc-forum.com/forum/c-and-c/60900-remove-visual-studio-runtime.html" class="postlink">http://www.uc-forum.com/forum/c-and-c/6 ... ntime.html</a></div></blockquote>
+
+thanks, I have updated it</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Nov 08, 2010 1:53 pm</strong></div>
+				<div class="author">by <strong>mikkie</strong></div>
+				<div class="content">Does anyone have any further info regarding the method to capture data the Spyshelters test-tool uses? I am very curious but i suffer from a great lack of time to analyze it in depth at the moment. I have a small sense of feeling that the purpose of the tool is rather to market their product under abit of false or misleading info, but i could be wrong.  This tool has been around for quite awhile and if i am not misstaken it has not gone through any greater changes since atleast 18+ months back.<br>
+<br>
+The current FUD keyloggers around at current date uses rather sophisticated methods to remain so. All "logical" and oldschool documented methods are useless today. A wealthy host of security products have focused alot on defeating keylogging since the wildspree of (specifically Russian, Ukraine, Chinese, Vietnamese and Brazilian) RAT´s with logging capabilities that swept the globe like wildfire 2 years ago. Many of these products are now so touchy that they will generate false positives to such an extent that users may find them a pain in the ar*e to have installed.<br>
+<br>
+Yet the spyshelter tool bypasses an ridiculous amount of these security products with ease, including some of the ones prone to generate an FP on keylogger detection as soon as u fire up notepad and type anything. Not even the behavioural based scanners or application control monitors  found anything irregular about the test tool.  Cant help but find this abit odd. The new breed of java based malware is extremely difficult to detect but i doubt theres any obfuscated java code being executed with their tool.  It would be very interesting to test S-Shelters real effectiveness against any in the wild malware with logging.  If i had time i would but im already hooked on too many similar projects. If anyone could pass me a shortcut i would be most thankful.<br>
+<br>
+Zemana on the other hand im already familiar with, its a pretty good product too. Their test tool is also more believable and also easier to detect since it uses mostly known methods.<br>
+<br>
+Sorry if i unintentionally hijacked the topic abit. This is a great tool for people like me who daily analyze unknown and/or suspicious activity and runtimes. Thanks for your effort and contribution. Much appreciated!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=9281&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:00:38 GMT -->
+</html>

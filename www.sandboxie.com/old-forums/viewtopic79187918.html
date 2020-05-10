@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1011&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SB 2.76 loosing data sometimes</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SB 2.76 loosing data sometimes</h2>
+		<p><a href="viewtopic33db33db.html?f=11&amp;t=1011">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=1011</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>SB 2.76 loosing data sometimes</h3>
+				<div class="date">Posted: <strong>Sat Jan 27, 2007 8:30 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">SB 2.76 loosing data sometimes,<br>
+Since i test the beta version on my nativ system I expirienced a atrange bahavioute it appreats that since the beta IE is looging temporary data form time to time, like all logins an all webpages so that i have to reenter username and password.<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jan 27, 2007 6:59 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"> <br>
+<br>
+Can you find a way to reproduce this?...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 28, 2007 4:03 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">As ot now all this incidents appeared to be purly rundom.<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2007 1:43 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">It happens again directly after PC was rebooted<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Suspect cause of problem is not version-dependent?</h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2007 10:16 am</strong></div>
+				<div class="author">by <strong>RonC</strong></div>
+				<div class="content">I don't think this is a <span style="color: darkblue"><em>[Sandboxie]</em></span> version-dependent problem.  <span style="color: darkblue"><em>[But possibly an IE version-dependent problem?]</em></span><br>
+<br>
+Interesting to see <a href="http://sandboxie.com/phpbb/viewtopic.php?t=768&amp;highlight=" class="postlink">this topic</a> opened again, because I have an idea what's happening but never consistently overcame it.  Perhaps the second time is a charm, I hope?<br>
+<br>
+I think it's a cookie retention and recognition problem.  The automatic log-on requires a cookie and a pointer to the cookie in the index.dat file.<br>
+<br>
+OwenBurnett doesn't give us his Sandboxie settings, so I can't be sure what is happening when he exits sandboxed programs.  I have have Sandboxie set to clear the box when all sandboxed programs teminate, so I'll assume this is the case.  Or, OwenBurnett may be getting the problem in some other way.<br>
+<br>
+It is possible to retain log-on ID cookes, but not the pointers in the index.dat file.  You can save it, but without effect, because this is a locked file.  You would have to stop Windows to save it.  So without the pointer pointing to the log-on cookie, I believe, even if you saved the cookie it would do no good.<br>
+<br>
+To go farther, I THINK (don't hold me to this, unless Tzuk verifies it) if you did manage to overwrite the index.dat file, the one from the sandbox may only contain pointers to the cookies received during that session.  Unless you could concatenate the existing and new index.dat files, you (possibly) could lose all that went before, causing other problems.<br>
+<br>
+As a work-around, (see Tzuk's suggestion, link to prior thread) I have tried copying the URL of the log-on page, and opening an unsandboxed instance of MSIE, doing the log-on, trying to get the right cookie into the cookie folder and get its pointer into the "real" index.dat file, then getting out of the unsandboxed IE and returning to the safe one.<br>
+<br>
+ <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> So, the result?  It doesn't work consistently -- I am still manually re-entering my log-on details.  I have given up for now, so perhaps there will be further insight the second time around, from others?<br>
+<br>
+As per Tzuk's suggestion (see link), I did get it to work for Google preferences, but for some other sites, it fails.  No idea why.  Maybe there's a special sequence that must be followed?<br>
+<br>
+If losing automatic log-ons is the price to pay for hours of disinfecting the operating system with half a dozen utilities, so be it.  <br>
+ <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> But I would really love to get the automatic log-ins back, if possible.  Any ideas??<br>
+<br>
+<span style="color: darkblue"><em>P.S.:  When going back-and-forth between sandboxed-unsandboxed instances of the browser to set desired log-on cookies and update the index.dat file, it may work better if the sandboxed browser is completely terminated, and not left running.  I may not have always been doing this.</em></span></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2007 11:53 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">I don't have enabled any auto delete obtion.<br>
+I never had this problem with the old version.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+ConfigLevel=1
+BoxRootFolder=%APPDATA%
+
+
+
+FileTrace=.
+KeyTrace=.
+IpcTrace=.
+
+[DefaultBox]
+Enabled=yes
+CopyLimitKb=32768
+
+OpenFilePath=msimn.exe,%AppData%\Identities
+OpenFilePath=msimn.exe,%Local AppData%\Identities
+OpenFilePath=msimn.exe,%AppData%\Microsoft\Address Book
+OpenFilePath=outlook.exe,%AppData%\Microsoft\Outlook
+OpenFilePath=outlook.exe,%Local AppData%\Microsoft\Outlook
+OpenKeyPath=msimn.exe,HKEY_CURRENT_USER\Identities
+OpenKeyPath=msimn.exe,HKEY_CURRENT_USER\Software\Microsoft\Outlook Express
+OpenKeyPath=msimn.exe,HKEY_CURRENT_USER\Software\Microsoft\Internet Account Manager
+OpenKeyPath=msimn.exe,HKEY_LOCAL_MACHINE\Software\Microsoft\Outlook Express
+OpenKeyPath=msimn.exe,HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Outlook Express
+OpenKeyPath=outlook.exe,HKEY_CURRENT_USER\Software\Microsoft\Office
+OpenKeyPath=outlook.exe,HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows Messaging Subsystem\Profiles\Outlook
+
+#ClosedIpcPath=\RPC Control\AudioSrv
+
+#OpenFilePath=iexplore.exe,%Favorites% 
+OpenFilePath=D:\Downloads
+OpenFilePath=R:\
+
+ClosedFilePath=C:\Programme\Microsoft ActiveSync
+
+ForceProcess=iexplore.exe
+
+LingerProcess=acrord32.exe
+LingerProcess=jusched.exe
+LingerProcess=syncor.exe
+LingerProcess=rapimgr.exe
+LingerProcess=wcescomm.exe
+
+RecoverFolder=%Favorites%
+RecoverFolder=%Personal%
+RecoverFolder=%Desktop%
+#RecoverFolder=D:\Downloads
+
+BlockDrivers=y
+
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2007 3:24 pm</strong></div>
+				<div class="author">by <strong>Johnincal</strong></div>
+				<div class="content">I have the same issue. My settings are set at the default ones. I first noticed this when I would check "SiteAdvisor" (<a href="http://www.siteadvisor.com/" class="postlink">www.siteadvisor.com</a>). When McAfee bought them, they started putting a nagging web page trying to get you to upgrade to the paid version before you can get info on the site you were looking up.<br>
+<br>
+It says on the nag page that if you have cookies enabled, you will only see this page once. I noticed I was seeing it time after time.<br>
+<br>
+I also all other auto-login places like Yahoo Mail and forums (yes, even here) I have to log in everytime, if I empty my sandbox and come back to the site.<br>
+<br>
+My solution was what was suggested before. I use Firefox, but it works the same with IE. I just launch Firefox outside the sandbox and log into my sites. The cookies then are retained and if you launch the browser within the sandbox, it will auto-login within those forums and sites.<br>
+<br>
+What may be the issue of inconsistency of this is the fact that some cookies are set to expire at different times. An example of this is Yahoo Mail, where the cookie is set to expire 24 hours after login. So I have to re-set the cookie after that time if I don't want to relogin every time I empty my sandbox.<br>
+<br>
+I just assumed this is the way Sandboxie is supposed to work. One of the outstanding components of Sandboxie is privacy. I want the cookies that I accumulated during a sandbox session to go away when I empty the sandbox.<br>
+<br>
+I saw an article about several websites that were storing information such as login and credit card information on plain text non-encrypted cookies, leaving the user vulnerable to their information being stolen.<br>
+<br>
+I like the idea that privacy issues are deleted with the sandbox.<br>
+<br>
+What I may mention is that I have, in scanning with AVG Anti-Spyware, picked up some tracking cookies, but I am not sure if those are retained from the sandbox, or some I picked up outside the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2007 3:50 pm</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">No offence but this is irrelevant.<br>
+I dont have any auto delete enabled and I also dont clear the content of the SB.<br>
+<br>
+With the previuse version (2.64) I never hed such problems.<br>
+The beta version is for some reason causing this strange problem.<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2007 3:57 pm</strong></div>
+				<div class="author">by <strong>Johnincal</strong></div>
+				<div class="content"><blockquote><div><cite>OwenBurnett wrote:</cite>No offence but this is irrelevant.<br>
+I dont have any auto delete enabled and I also dont clear the content of the SB.<br>
+<br>
+With the previuse version (2.64) I never hed such problems.<br>
+The beta version is for some reason causing this strange problem.<br>
+<br>
+Owen</div></blockquote>
+No offense taken Owen.   <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+I did not see that part of the post. I will however check it out to see if I can duplicate that.<br>
+<br>
+My bad...   <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 29, 2007 4:15 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">So this is just for cookie then?  Is it IE6/7/Firefox?  Do you think I would see this within a day of logging into any forum I can think of.  I mean, by the end of the day, do you think I would this information be lost?  Or does it happen over a longer time frame?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jan 30, 2007 1:52 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">It hapend again and again after the PC was shut down for the night,<br>
+its not only th ecookiet, all temporary internet files seems mest up, all icons for the favourite links are gone.<br>
+<br>
+I use IE 7 final <br>
+<br>
+Question when avving a file outside the SB and a copy inside SB always choices the local copy it never updates it with the outside one even if the outside have a newver last modification daten, right?<br>
+<br>
+Owen.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Feb 01, 2007 1:25 pm</strong></div>
+				<div class="author">by <strong>Johnincal</strong></div>
+				<div class="content">Well for the past couple of days I have powered down and rebooted a bunch of times (including overnight). <br>
+<br>
+I cannot seem to reproduce the data loss issue that Owen has.<br>
+<br>
+I have been using Firefox to try this, but I am going to now experiment with IE 7.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 05, 2007 7:24 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>OwenBurnett wrote:</cite>
+since the beta IE is looging temporary data form time to time, like all logins an all webpages so that i have to reenter username and password.
+</div></blockquote>
+
+That just happened to me now.  In my case, this was related to the SbieSvc being temporarily stopped.<br>
+<br>
+Perhaps this is the cause of the problem also in your case.<br>
+
+<blockquote class="uncited"><div>Question when avving a file outside the SB and a copy inside SB always choices the local copy it never updates it with the outside one even if the outside have a newver last modification daten, right? </div></blockquote>
+
+Right.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 09, 2007 5:26 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">It happend again and again after reboot,<br>
+I looked into my task Info app. and the SbieSvc was running already since some minute. It wasn't stopped! An restart of the service also didn't helped the datas ware gone.<br>
+The files in the samdboxe like coocies looks ok (there are there and are not empty).<br>
+I tryed to reproduce the data lost by fastly restarrting the service and starting IE and even starting IF when the service was stopped, after error messages satrting the service, and after this using the IE.<br>
+Nothing i can't reproduce the data lost this way.<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 19, 2007 8:54 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Is this still a problem with recent versions?</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1011&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:35 GMT -->
+</html>

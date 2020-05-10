@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24335&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:19:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxed browser as Windows default [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxed browser as Windows default [SOLVED]</h2>
+		<p><a href="viewtopicb1dfb1df.html?f=17&amp;t=24335">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24335</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxed browser as Windows default [SOLVED]</h3>
+				<div class="date">Posted: <strong>Sat Apr 22, 2017 8:16 am</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content">Is it possible to assign sandbox installed Firefox as the system default browser?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed browser as Windows default</h3>
+				<div class="date">Posted: <strong>Sat Apr 22, 2017 8:16 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">If you are comfortable with manually editing the registry [and familiar with cmd lines] it should be fairly simple. Generally all you need to do is find the original entries and alter them to use the Sandboxie Start.exe along with a few other pieces of info such as /box:<em>SandboxName</em>. Obviously using a registered version of SBIE to force it after setting the browser as default would be the simplest solution.<br>
+<br>
+Here's a <a href="viewtopic3f433f43.php?f=17&amp;t=23342&amp;p=123021#p123026" class="postlink">post where I explained this before</a>.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed browser as Windows default</h3>
+				<div class="date">Posted: <strong>Sun Apr 23, 2017 3:20 am</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content">Unfortunately I am not very experienced in editing the registry...  <img class="smilies" src="images/smilies/icon_neutral.gif" width="15" height="15" alt=":|" title="Neutral">  Is there a GUI solution for this issue?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed browser as Windows default</h3>
+				<div class="date">Posted: <strong>Sun Apr 23, 2017 4:47 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Creave wrote:</cite>Is there a GUI solution for this issue?</div></blockquote>
+Yes there is. If you purchase a Sandboxie license, you ll be able to force programs like browsers, PDF readers, office programs, email clients, etc, to run sandboxed automatically when you click files or their icon.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed browser as Windows default</h3>
+				<div class="date">Posted: <strong>Mon Apr 24, 2017 9:46 am</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content">Thanks, it works! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Is there a way Firefox can update itself outside the Sandbox but always run inside one? <br>
+Unfortunately I get the same error message when auto updating although I only sandbox-forced one application "firefox.exe"(<a href="viewtopic60b460b4.php?f=11&amp;t=24333" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=24333</a>).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed browser as Windows default</h3>
+				<div class="date">Posted: <strong>Mon Apr 24, 2017 12:46 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Creave,<br>
+<br>
+Here's how you can manually open Firefox outside Sandboxie in order to update it (while still having it set to Forced in a Sandbox):<br>
+Right Click on the program --&gt; Run Sandboxed --&gt; Run outside Sandbox<br>
+OR<br>
+Right click on the Sandboxie tray icon --&gt; Disable Forced Programs<br>
+OR<br>
+Sbie Control --&gt; File --&gt; Disable Forced Programs (this allows you to set the amount of time that you want them disabled for). <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed browser as Windows default</h3>
+				<div class="date">Posted: <strong>Mon Apr 24, 2017 1:30 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Creave wrote:</cite>Is there a way Firefox can update itself outside the Sandbox but always run inside one? Unfortunately I get the same error message when auto updating although I only sandbox-forced one application "firefox.exe"(<a href="viewtopic60b460b4.php?f=11&amp;t=24333" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=24333</a>).</div></blockquote>
+Things work better if you set Firefox to Never check for updates. And when is time to update, you do it manually via the updater from within the browser. Do it after disabling Forced programs. Doing it like this eliminates the message and smooths the updating process.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxed browser as Windows default</h3>
+				<div class="date">Posted: <strong>Tue Apr 25, 2017 5:06 am</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content">Alright then, I will manually take care of updates. Thanks for the help!  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24335&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:19:13 GMT -->
+</html>

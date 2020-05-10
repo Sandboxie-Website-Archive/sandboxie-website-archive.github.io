@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15995" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-07-18T07:43:39-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15995</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-18T07:43:39-04:00</updated>
+
+		<published>2013-07-18T07:43:39-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=92007#p92007</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=92007#p92007"/>
+		<title type="html"><![CDATA[[.01] Opera Mail not able to send or receive when sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=92007#p92007"><![CDATA[
+Version 4.05.01 unfortunately does not fix the problem, but points you to the Known Conflicts page.<br><br>Related topics:<br><br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=14839" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=14839</a><br><br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=15747" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15747</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Jul 18, 2013 7:43 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sope]]></name></author>
+		<updated>2013-07-12T07:33:18-04:00</updated>
+
+		<published>2013-07-12T07:33:18-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91819#p91819</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91819#p91819"/>
+		<title type="html"><![CDATA[[.01] Opera Mail not able to send or receive when sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91819#p91819"><![CDATA[
+Yes, I have Avast 8.0.1489 installed.<br><br>So that would be it then.<br>I may give Sandboxie 4.04 another try with Avast Mail Shield disabled.  I virtually always run Opera in a sandbox so I guess the Avast Mail Shield is not really necessary.<br><br>Thanks for the reply, much appreciated.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2670">Sope</a> — Fri Jul 12, 2013 7:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-12T03:56:18-04:00</updated>
+
+		<published>2013-07-12T03:56:18-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91809#p91809</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91809#p91809"/>
+		<title type="html"><![CDATA[[.01] Opera Mail not able to send or receive when sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91809#p91809"><![CDATA[
+Do you use avast?  I know it blocks email from a sandboxed Thunderbird.  Perhaps the same also happens with TheBat and Opera?<br><br>For more information please see the posts at the bottom of this topic: <br><br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=15747" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15747</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Jul 12, 2013 3:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sope]]></name></author>
+		<updated>2013-07-11T15:51:05-04:00</updated>
+
+		<published>2013-07-11T15:51:05-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91792#p91792</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91792#p91792"/>
+		<title type="html"><![CDATA[[.01] Opera Mail not able to send or receive when sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91792#p91792"><![CDATA[
+Thanks clint!<br><br>I've just reverted to Sandboxie v3.76 and Opera Mail is working again.  <br><br>I should have tried this sooner.  What confused me was that Opera's RSS Feed was still working after I'd installed v4.04 the previous day so at a glance it looked like I was receiving messages ok after the upgrade (both emails and RSS messages arrive together in the Opera inbox).  I only noticed the problem today when I tried to send an email unsuccessfully.<br><br>Looks like Sandboxie v4 still has a few bugs with email that need sorting out.  I'll just wait for the fix to be released, I would imagine tzuk is already on the case.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2670">Sope</a> — Thu Jul 11, 2013 3:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[clint751]]></name></author>
+		<updated>2013-07-11T14:40:09-04:00</updated>
+
+		<published>2013-07-11T14:40:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91791#p91791</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91791#p91791"/>
+		<title type="html"><![CDATA[[.01] Opera Mail not able to send or receive when sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91791#p91791"><![CDATA[
+I had to downgrade to v3.76 because I can't send or receive email with The Bat! sandboxed under 4.04. I went back to 3.76 and it works fine. I tried 4.04 again and the same problem, so I am back to 3.76 for now.<br><br>Windows XP 32 bit<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=4904">clint751</a> — Thu Jul 11, 2013 2:40 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sope]]></name></author>
+		<updated>2013-07-11T05:23:40-04:00</updated>
+
+		<published>2013-07-11T05:23:40-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91762#p91762</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91762#p91762"/>
+		<title type="html"><![CDATA[[.01] Opera Mail not able to send or receive when sandboxed]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15995&amp;p=91762#p91762"><![CDATA[
+Windows 7 x64<br>Sandboxie 4.04<br>Opera 12.16 (Build 1860)<br><br>Opera mail was working as normal when sandboxed, until yesterday when I noticed that emails were only being sent/received when Opera was not sandboxed.<br><br>This problem could possibly have started after applying yesterday's MS Windows updates.  It was a big update so I'm reluctant to uninstall all of them to test the theory.  <br>I'm guessing that MS may have made some OS changes which have affected the way Sandboxie works under Windows 7 64 bit.<br>I was wondering if anyone else was experiencing the same issue?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2670">Sope</a> — Thu Jul 11, 2013 5:23 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

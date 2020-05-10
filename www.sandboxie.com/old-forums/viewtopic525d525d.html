@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24879&start=60&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:24:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Symantec / Norton 360 - Unable to launch web browsers - Page 5</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Symantec / Norton 360 - Unable to launch web browsers</h2>
+		<p><a href="viewtopic4f074f07.html?f=11&amp;t=24879">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24879</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>5</strong> of <strong>6</strong></div>
+					<div class="post">
+				<h3>Re: Chrome &amp; Firefox not opening in Sanboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 31, 2017 3:28 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello EXILE,<br>
+<br>
+Did you delete the contents of your Sandbox after updating your browsers? <br>
+Does the issue occur in a new Sandbox with default settings?<br>
+Is there any antivirus/security software involved? <br>
+Do other applications (not web browsers) launch sandboxed?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome &amp; Firefox not opening in Sanboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 31, 2017 4:08 pm</strong></div>
+				<div class="author">by <strong>EXILE</strong></div>
+				<div class="content">1. Yes I have automatically delete sandbox contacts when ending program.<br>
+2. Yes it happens in new sandbox with default settings.<br>
+3. No AV or security software involved.<br>
+4. Yes I tried 6 other programs and they all work fine.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome &amp; Firefox not opening in Sanboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 31, 2017 4:55 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello EXILE,<br>
+<br>
+There aren't any reported major issues with web browsers at the moment (unless you are using Norton), your browsers should launch just fine.<br>
+Are there any extensions installed on your browsers? Does Internet Explorer launch Sandboxed?<br>
+<br>
+Please post your Sandboxie configuration file and the output of the Resource Access Monitor (using a new sandbox), so that I can review them.<br>
+For the Sandboxie config file go to Configure--&gt; Edit configuration<br>
+Copy/paste the contents to your response, highlight them and click on the "&lt;/&gt;" button to format it. <br>
+<br>
+For the Resource Access Monitor, please follow these guidelines, then post the output here following the same formatting requirements listed above.<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome &amp; Firefox not opening in Sanboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 31, 2017 5:43 pm</strong></div>
+				<div class="author">by <strong>EXILE</strong></div>
+				<div class="content">No Iexplore.exe will not run either.<br>
+<br>
+config file:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=RoboForm
+Template=WindowsRasMan
+Template=WindowsLive
+Template=InternetDownloadManager
+Template=OfficeLicensing
+ActivationPrompt=n
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=RoboForm
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+AutoDelete=y
+NeverDelete=n
+OpenPipePath=\Device\NamedPipe\{9A04C483-2EDC-40CE-B4F9-D9809ADA75E1}*
+CopyLimitKb=222890
+
+[UserSettings_2F780455]
+
+SbieCtrl_UserName=keysersoze
+SbieCtrl_NextUpdateCheck=1510034632
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_SettingChangeNotify=n
+SbieCtrl_WindowCoords=775,329,1278,718
+SbieCtrl_ActiveView=40022
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_RecoverTarget=D:\Downloads\qBittorrent
+SbieCtrl_SaveRecoverTargets=y
+SbieCtrl_BoxExpandedView=,</code></pre></div>
+
+Resource Access Monitor: Trying to run Web Browser sandboxed Chrome is set as default browser...
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\CdRom0
+(Drive)     \Device\CdRom1
+(Drive)     \Device\HarddiskVolume1
+(Drive)     \Device\HarddiskVolume5
+(Drive)     \Device\HarddiskVolume6
+(Drive)     \Device\HarddiskVolume7
+(Drive)     \Device\HarddiskVolume9
+Clsid       -------------------------------
+File/Key    -------------------------------
+Image       -------------------------------
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\__ComCatalogCache__
+Ipc         \BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000008.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000002.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \BaseNamedObjects\C__ProgramData_Symantec_Symantec Endpoint Protection_14.0.2332.0100.105_Data_Definitions_IPSDefs_20171030.021
+Ipc         \BaseNamedObjects\CGSCE
+Ipc         \BaseNamedObjects\CINJR
+Ipc         \BaseNamedObjects\CNDIE
+Ipc         \BaseNamedObjects\CSECE
+Ipc         \BaseNamedObjects\IDS_STORAGE_MUTEX
+Ipc         \BaseNamedObjects\RotHintTable
+Ipc         \BaseNamedObjects\SC_AutoStartComplete
+Ipc         \BaseNamedObjects\windows_shell_global_counters
+Ipc         \RPC Control\{0F1E7397-F5DE-48B8-9247-5A688C98745A}
+Ipc         \RPC Control\{753228DA-A726-4219-A184-F3FEFD871E4D}
+Ipc         \RPC Control\actkernel
+Ipc         \RPC Control\epmapper
+Ipc         \RPC Control\OLE429B370D6D0379DA9C714F0265D4
+Ipc         \Sessions\1\BaseNamedObjects\__ComCatalogCache__
+Ipc         \Sessions\1\BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \Sessions\1\BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \Sessions\1\BaseNamedObjects\80fba9a2-318f-4cae-b8d1-095c3a18101e
+Ipc         \Sessions\1\BaseNamedObjects\AmiSharedMutex_15332
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000008.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000002.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users************AppData*Local*Microsoft*Windows*Caches*{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x000000000000002c.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users************AppData*Local*Microsoft*Windows*Caches*cversions.1.ro
+Ipc         \Sessions\1\BaseNamedObjects\C__ProgramData_Symantec_Symantec Endpoint Protection_14.0.2332.0100.105_Data_Definitions_IPSDefs_20171030.021
+Ipc         \Sessions\1\BaseNamedObjects\CGSCE
+Ipc         \Sessions\1\BaseNamedObjects\CINJR
+Ipc         \Sessions\1\BaseNamedObjects\CNDIE
+Ipc         \Sessions\1\BaseNamedObjects\ComPlusCOMRegTable
+Ipc         \Sessions\1\BaseNamedObjects\ComTaskPool:16104
+Ipc         \Sessions\1\BaseNamedObjects\CSECE
+Ipc         \Sessions\1\BaseNamedObjects\DbgEngEvent_00003BE4
+Ipc         \Sessions\1\BaseNamedObjects\IDS_STORAGE_MUTEX
+Ipc         \Sessions\1\BaseNamedObjects\RotHintTable
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_15332
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_15576
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_16104
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_2780
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_8244
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_RPCSS_SXS_READY
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_DcomLaunch
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_Mutex1
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcEptMapper
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\1\BaseNamedObjects\SboxSession
+Ipc         \Sessions\1\BaseNamedObjects\SC_AutoStartComplete
+Ipc         \Sessions\1\BaseNamedObjects\ScmCreatedEvent
+Ipc         \Sessions\1\BaseNamedObjects\SM0:15332:120:WilError_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:15332:120:WilError_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:15332:120:WilError_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:15332:232:WilStaging_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:15332:232:WilStaging_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:15332:232:WilStaging_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:15576:120:WilError_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:15576:120:WilError_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:15576:120:WilError_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SM0:16104:120:WilError_01
+Ipc         \Sessions\1\BaseNamedObjects\SM0:16104:120:WilError_01_p0
+Ipc         \Sessions\1\BaseNamedObjects\SM0:16104:120:WilError_01_p0h
+Ipc         \Sessions\1\BaseNamedObjects\SyncRootManager
+Ipc         \Sessions\1\BaseNamedObjects\WERReportingForProcess2780
+Ipc         \Sessions\1\BaseNamedObjects\WERReportingForProcessComplete2780
+Ipc         \Sessions\1\BaseNamedObjects\windows_shell_global_counters
+Ipc         \WindowsErrorReportingServicePort
+Ipc      O  \KernelObjects\MaximumCommitCondition
+Ipc      O  \KernelObjects\MemoryErrors
+Ipc      O  \KernelObjects\SystemErrorPortReady
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\bcryptPrimitives.dll
+Ipc      O  \KnownDlls\cfgmgr32.dll
+Ipc      O  \KnownDlls\clbcatq.dll
+Ipc      O  \KnownDlls\combase.dll
+Ipc      O  \KnownDlls\COMDLG32.dll
+Ipc      O  \KnownDlls\CRYPT32.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\gdi32full.dll
+Ipc      O  \KnownDlls\IMM32.dll
+Ipc      O  \KnownDlls\kernel.appcore.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\kernelbase.dll
+Ipc      O  \KnownDlls\MSASN1.dll
+Ipc      O  \KnownDlls\MSCTF.dll
+Ipc      O  \KnownDlls\msvcp_win.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\powrprof.dll
+Ipc      O  \KnownDlls\profapi.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\sechost.dll
+Ipc      O  \KnownDlls\SHCORE.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\ucrtbase.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\win32u.dll
+Ipc      O  \KnownDlls\windows.storage.dll
+Ipc      O  \KnownDlls\WINTRUST.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\LSARPC_ENDPOINT
+Ipc      O  \RPC Control\lsasspirpc
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \Security\LSA_AUTHENTICATION_INITIALIZED
+Ipc      O  \Sessions\1\Windows\ApiPort
+Ipc      O  \Sessions\1\Windows\SharedSection
+Ipc      O  \Sessions\1\Windows\Theme648516517
+Ipc      O  \Sessions\1\Windows\ThemeSection
+Ipc      O  \ThemeApiPort
+Ipc      O  \Windows\Theme359632789
+Pipe        -------------------------------
+Pipe        ?
+Pipe        \Device\00000037
+Pipe        \Device\00000089
+Pipe        \Device\ccSet_{F6FBFD9D-BB3C-4199-A773-4963F756FDF6}
+Pipe        \Device\CNG
+Pipe        \Device\HarddiskVolume1
+Pipe        \Device\HarddiskVolume2
+Pipe        \Device\HarddiskVolume5
+Pipe        \Device\HarddiskVolume6
+Pipe        \Device\HarddiskVolume7
+Pipe        \Device\HarddiskVolume9
+Pipe        \Device\KsecDD
+Pipe        \Device\MountPointManager
+Pipe        \Device\Ndis
+Pipe        \Device\NDMP6
+Pipe        \Device\NDMP7
+Pipe        \Device\SYMEFASI
+WinCls      -------------------------------
+WinCls   O  Shell_TrayWnd
+WinCls   X  Progman</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Chrome &amp; Firefox not opening in Sanboxie</h3>
+				<div class="date">Posted: <strong>Wed Nov 01, 2017 9:47 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello EXILE,<br>
+<br>
+According to the Resource Access Monitor, Symantec Endpoint Protection is installed.<br>
+<br>
+Ipc         \BaseNamedObjects\C__ProgramData_Symantec_Symantec Endpoint Protection_14.0.2332.0100.105_Data_Definitions_IPSDefs_20171030.021<br>
+<br>
+We have an ongoing thread about Norton and how it is not working with Sandboxie (especially when trying to launch Web browsers).<br>
+Please see:<br>
+<a href="viewtopic4f074f07.html?f=11&amp;t=24879" class="postlink">viewtopic.php?f=11&amp;t=24879</a><br>
+<br>
+Regards,<br>
+Barb.-<br>
+<br>
+Merging this thread with the Norton one.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Nov 01, 2017 1:02 pm</strong></div>
+				<div class="author">by <strong>EXILE</strong></div>
+				<div class="content">Barb,<br>
+Thanks for getting back to me, I read a lot of the post in the Norton 360 - Unable to launch web browsers topic.<br>
+ I am running Symantec Endpoint Protection and cannot find any workarounds other then to disable Symantec Endpoint Protection am I missing something? <br>
+Is their anything I can do to get it to work?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Nov 01, 2017 1:12 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello EXILE,<br>
+<br>
+All the possible workarounds are listed in this thread.  I recommend that you read all the posts to see if any of them work for you.<br>
+Otherwise, you may need to remove Symantec.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Wed Nov 01, 2017 1:30 pm</strong></div>
+				<div class="author">by <strong>EXILE</strong></div>
+				<div class="content">I found the specific item in Symantec Endpoint Protection causing the problem, Generic Exploit Mitigation.<br>
+Go to Network and Host Exploit Mitigation &gt; Click Configure Settings &gt; Generic Exploit Mitigation Tab uncheck Enable Generic Exploit Mitigation.<br>
+<br>
+All browsers Chrome, Firefox and Internet Explorer will now open sandboxed. Maybe this will help you solve the issue.<br>
+<br>
+I also tried disabling Generic Exploit Mitigation starting chrome sandboxed then re enabling Generic Exploit Mitigation after trying to go to a website get this error  SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - WerFault.exe [FF000000]<br>
+<br>
+Hope all this helps to resolve this issue.<br>
+ <br>
+If you could contact me via PM when there is a more permanent solution I would appreciate it,</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - [Supported in Sandboxie 5.22]</h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2017 12:39 pm</strong></div>
+				<div class="author">by <strong>brw11</strong></div>
+				<div class="content">I've upgraded to 5.22 and am still unable to run any Web browsers in Sandboxie (IE, Chrome and Firefox) in either Windows 8.1 or Windows 10 (no problem with Windows 7). These have all the latest Windows updates. In all cases I briefly see Sandboxie running several programs, but these quickly disappear and no browser comes up. Neither do any error messages pop up. Until the October Windows updates for both 8.1 and 10 Sandboxie ran fine. Here's what briefly shows up but then disappear so I'm unable to click on any of them:<br>
+
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/file155e155e.jpg?id=1282" class="postimage" alt="Sandboxie Problem.jpg" onclick="viewableArea(this);" /></dt>
+						<dd>Sandboxie Problem.jpg (41.26 KiB) Viewed 886 times</dd>
+		</dl>
+		
+		
+		
+			</div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - [Supported in Sandboxie 5.22]</h3>
+				<div class="date">Posted: <strong>Sat Nov 04, 2017 5:21 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistc5de.html?mode=viewprofile&amp;u=31735">brw11</a> wrote: <a href="viewtopicff75ff75.html?p=130985#p130985" data-post-id="130985" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sat Nov 04, 2017 12:39 pm</div></cite>
+I've upgraded to 5.22 and am still unable to run any Web browsers in Sandboxie (IE, Chrome and Firefox) in either Windows 8.1 or Windows 10 (no problem with Windows 7). </div></blockquote>
+APMichael already advised you on what to do in the thread below. You must uninstall Norton, thats your fix. Norton has been problematic with Sandboxie for years, and it seems its gotten worse lately.<br>
+<a href="viewtopic7c1f7c1f.html?f=11&amp;t=24879&amp;p=130725#p130744" class="postlink">viewtopic.php?f=11&amp;t=24879&amp;p=130725#p130744</a><br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Error Opening Chrome and Firefox browser Sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Nov 10, 2017 4:08 am</strong></div>
+				<div class="author">by <strong>marioB</strong></div>
+				<div class="content">Sandboxie 5.22 in Windows 10.13.1 Fall Update won't start with the message "The application was unable to start correctly (0x000007b). Click OK to close the application". However it can sandbox programs but not browswers. <br>
+<br>
+Windows 10.13.1 (64-bit)<br>
+Firefox 56.0.2 (64-bit)<br>
+Norton 360<br>
+Sandboxie 5.22 (64-bit)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Error Opening Chrome and Firefox browser Sandboxed</h3>
+				<div class="date">Posted: <strong>Fri Nov 10, 2017 3:23 pm</strong></div>
+				<div class="author">by <strong>deugniet</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistfcaf.html?mode=viewprofile&amp;u=34807">marioB</a> wrote: <a href="viewtopic92be92be.html?p=131034#p131034" data-post-id="131034" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Nov 10, 2017 4:08 am</div></cite>
+Sandboxie 5.22 in Windows 10.13.1 Fall Update won't start with the message "The application was unable to start correctly (0x000007b). Click OK to close the application". However it can sandbox programs but not browswers. <br>
+<br>
+Windows 10.13.1 (64-bit)<br>
+Firefox 56.0.2 (64-bit)<br>
+Norton 360<br>
+Sandboxie 5.22 (64-bit)
+</div></blockquote>
+
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlista247.html?mode=viewprofile&amp;u=2236">deugniet</a> wrote: <a href="viewtopic4aca-24aca.html?p=130164#p130164" data-post-id="130164" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Sep 12, 2017 4:39 am</div></cite>
+Foud the problem: Norton Exploit Prevention-setting. Turned it OFF and FF and IE11 started sandboxed without a problem.<br>
+<br>
+Norton &gt; Settings &gt; Firewall &gt; Intrusion and Browser Protection &gt; Exploit Prevention set to OFF.
+</div></blockquote></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Sat Nov 11, 2017 9:05 am</strong></div>
+				<div class="author">by <strong>marioB</strong></div>
+				<div class="content">I tried turning off Intrusion and browser protection but still Sandboxie fails to run.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Sat Nov 11, 2017 2:50 pm</strong></div>
+				<div class="author">by <strong>brw11</strong></div>
+				<div class="content">Disabling Norton Exploit Prevention also resolved the problem for me in Norton Security with Backup with Firefox, Chrome and IE in Windows 10. I'm coing to contact Norton about this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Norton 360 - Unable to launch web browsers</h3>
+				<div class="date">Posted: <strong>Sat Nov 11, 2017 6:10 pm</strong></div>
+				<div class="author">by <strong>brw11</strong></div>
+				<div class="content">I went ahead and contacted Norton. Spent a great deal of time providing screenshots, data, etc. Turns out it's blocking sbiecsvc.exe. I submitted a "false positive" report at <a href="https://submit.symantec.com/false_positive/" class="postlink">https://submit.symantec.com/false_positive/</a> so hopefully this will get cleared up since disabling the Norton Exploit Prevention feature severely limits the protection provided by all the Norton products. I encourage anyone else having similar problem to submit this as well.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>5</strong> of <strong>6</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24879&start=60&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:24:57 GMT -->
+</html>

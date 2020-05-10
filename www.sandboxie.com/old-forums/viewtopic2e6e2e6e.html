@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=18898&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:00:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Secure Delete and Shutdown.</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Secure Delete and Shutdown.</h2>
+		<p><a href="viewtopic45294529.html?f=22&amp;t=18898">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=18898</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Secure Delete and Shutdown.</h3>
+				<div class="date">Posted: <strong>Wed May 07, 2014 1:27 pm</strong></div>
+				<div class="author">by <strong>pjpj</strong></div>
+				<div class="content">I regularly see requests for this or something similar so thought I would post my simple code for people to copy and paste into notepad, edit as necessary and use. You will need to download and install the secure delete program of your choice. <br>
+<br>
+As we all know, secure deleting files can take a long time and you really don't want to be sitting in front of your PC whilst it is deleting just so you can shutdown the computer. This code will do that for you. I have a shortcut link to my desktop which I use.<br>
+<br>
+Tested on Windows 7 Ultimate. It may not work on all Windows OS's without slight modification to some commands.<br>
+<br>
+You will need to edit the location of your secure delete program and the sandbox name on both :deleteonly and :deleteandshutdown and make sure 'Automatically Delete Sandbox' is not ticked for the appropriate sandbox in Sandboxies configuration.<br>
+<br>
+A couple of small things to note, it will not delete the actual folder if you have that folder open in explorer although all the contents are deleted. A logfile is written so most errors can be seen the next time you startup, this is overwritten at each delete.<br>
+<br>
+Hope it helps some of you that have been asking for something like this.<br>
+<br>
+Maybe Invincea could at some point add the selection of a shutdown after deleting a sandbox or maybe a request to shutdown before the deletion process starts.<br>
+<br>
+:: Program to secure delete files from a sandbox and shutdown the computer at the end.<br>
+<br>
+@ECHO off<br>
+<br>
+endlocal<br>
+<br>
+setlocal enableextensions enabledelayedexpansion<br>
+<br>
+:: Date<br>
+set dd=%date%<br>
+FOR %%A IN (%dd:/=%) DO SET dd=%%A<br>
+<br>
+:: Time<br>
+set tt=%time:~0,5%<br>
+FOR %%C IN (%tt::=%) DO SET tt=%%C<br>
+<br>
+echo.<br>
+echo.<br>
+<br>
+<br>
+:: Request from user to shutdown after delete.<br>
+<br>
+    set /p delbox=Would You Like To Shutdown After Deleting Sandbox. [y/n]?: <br>
+    if "!delbox!"=="y" (<br>
+        GOTO deleteandshutdown<br>
+    ) else (<br>
+        GOTO deleteonly<br>
+    )<br>
+<br>
+<br>
+:: Delete and shutdown code.<br>
+<br>
+:deleteandshutdown<br>
+<br>
+	::Delete existing logfile.	<br>
+	del "delete*.txt"<br>
+	echo.<br>
+	@echo Delete and Shutdown &gt;&gt; delete_%dd%%tt%.txt<br>
+	echo.<br>
+<br>
+		:: Request Sandboxie start.exe to terminate all programs in any sandbox.<br>
+		"C:\Program Files\Sandboxie\Start.exe" /silent /terminate_all<br>
+<br>
+			:: Use Sdelete to secure delete the appropriate sandbox.<br>
+			"C:\SDelete\sdelete.exe" -p 1 -s C:\Sandbox\Paul\Browser &gt;&gt; delete_%dd%%tt%.txt<br>
+<br>
+				:: Use Sandboxie start.exe to delete folder remenants that Sdelete is not authorised to.<br>
+				"C:\Program Files\Sandboxie\Start.exe" /box:Browser /silent delete_sandbox<br>
+				<br>
+					:: Shutdown computer.<br>
+					"c:\windows\system32\shutdown.exe" -s		<br>
+<br>
+					echo.<br>
+					@echo Ta-Ra Chuck! &gt;&gt; delete_%dd%%tt%.txt<br>
+					pause &gt;nul<br>
+					endlocal<br>
+					exit<br>
+<br>
+:: Delete only code.<br>
+<br>
+:deleteonly<br>
+<br>
+	::Delete existing logfile.<br>
+	del "delete*.txt"<br>
+	echo.<br>
+	@echo Delete Only &gt;&gt; delete_%dd%%tt%.txt<br>
+	echo.<br>
+	<br>
+		:: Request Sandboxie start.exe to terminate programs only in the appropriate sandbox.<br>
+		"C:\Program Files\Sandboxie\Start.exe" /box:Browser /terminate<br>
+<br>
+			:: Use Sdelete to secure delete the appropriate sandbox.<br>
+			"C:\SDelete\sdelete.exe" -p 1 -s C:\Sandbox\Paul\Browser &gt;&gt; delete_%dd%%tt%.txt<br>
+<br>
+				:: Use Sandboxie start.exe to delete folder remenants that Sdelete is not authorised to.<br>
+				"C:\Program Files\Sandboxie\Start.exe" /box:Browser delete_sandbox<br>
+<br>
+				echo.<br>
+				@echo Press Any Key<br>
+				pause &gt;nul<br>
+				endlocal<br>
+				exit</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=18898&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:00:11 GMT -->
+</html>

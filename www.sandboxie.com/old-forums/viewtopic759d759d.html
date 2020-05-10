@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9622&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie config and data file locations</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie config and data file locations</h2>
+		<p><a href="viewtopic3fff3fff.html?f=4&amp;t=9622">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=9622</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie config and data file locations</h3>
+				<div class="date">Posted: <strong>Sun Dec 26, 2010 8:19 am</strong></div>
+				<div class="author">by <strong>xerces8</strong></div>
+				<div class="content">To use C:\WINDOWS for the ini file and C: for data file is Windoiws 3.x style.<br>
+Since 1995 (with Windows NT 4.0 and 95) the location for data  and config files is the "Documents and Settings" folder.<br>
+<br>
+Why has Sandboxie opted for the "ancient" file locations?<br>
+<br>
+Is there a chance of change?<br>
+<br>
+Regards,<br>
+David</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 26, 2010 11:25 am</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content">Maybe tzuk is just old school? <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Dec 26, 2010 12:14 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The settings are specific to any one user account,<br>
+and I didn't think the Documents and Settings folder was appropriate.<br>
+There is a possible alternate location, move Sandboxie.ini to the Sandboxie installation folder, and immediately go to Sandboxie Control, Configure menu, and reload configuration.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Dec 27, 2010 4:06 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">At one time, Sandboxie created the Sandbox folder under the user's "Documents and Settings\(user)\" folder on XP.<br>
+<br>
+Unfortunately, when some sandboxed programs saved their files inside of the sandbox folder, some very long paths\filenames were created by those programs, and Windows was having a problem with that.<br>
+So the default location for the Sandbox folder was moved to C:\Sandbox, to alleviate that problem.<br>
+Of course, the Sandbox folder can be moved with:<br>
+Sandbox &gt; Set Container Folder</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Dec 28, 2010 8:51 am</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content">Out of curiousity, do writes to sandboxie.ini ever get redirected by <a href="http://windowsteamblog.com/windows/b/developers/archive/2009/08/04/user-account-control-data-redirection.aspx" class="postlink">UAC virtualization</a> to <em>%LocalAppData%\VirtualStore</em>? For example, what happens for users who don't have write permissions for the Windows or Program Files directories?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 29, 2010 6:31 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The SbieSvc service does the actual writing, so UAC virtualization does not apply, and permissions are not a problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 29, 2010 6:17 pm</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content">Makes sense. Thanks for the info, tzuk.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9622&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:58:28 GMT -->
+</html>

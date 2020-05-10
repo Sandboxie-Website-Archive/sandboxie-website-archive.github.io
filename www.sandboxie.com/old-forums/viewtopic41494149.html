@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=14934&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.06] Could not execute SandboxieRpcSs.exe - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.06] Could not execute SandboxieRpcSs.exe</h2>
+		<p><a href="viewtopicd1e5d1e5.html?f=38&amp;t=14934">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=14934</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 22, 2013 6:34 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Version 4.01.06 turns the "I'm a sandbox, don't apply SRP/AppLocker rules on me" flag for programs running in the sandbox.<br>
+<br>
+I'm afraid this is the only possible solution as SRP/AppLocker uses the security context of the process in its security checks, and in Sandboxie v4, this security context is very limited and will fail all security checks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Apr 25, 2013 5:14 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">That post made me panic a bit <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked">, so I immediately downloaded and installed .06 in a fit of rage <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> the other day. <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+Can you explain/clarify what you mean by "I'm a sandbox, don't apply ..." <strong>flag</strong>? What's that? (Hope it's not what I'm thinking of with "SANDBOX"...)<br>
+<br>
+I checked and observed no differences on XP or 64-bit 7 HP as far as [manually configured] SRP (path rules) blocking stuff: both programs and DLLs. Nothing seems to have changed for SRP, and everything still seems to function correctly and as I'd expect. Since this has seemed correct since the first 4.01 beta, I sure hope SRP stuff stays like this! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+<br>
+Now, did you mean to only say AppLocker...? I wouldn't call anything SRP does (all <em>in</em> a process) using the "security context of the process in its security checks," so maybe you've just changed something for the more kernel-mode AppLocker... While I guess that's unfortunate for them (higher Windows edition for the "better" AppLocker), if that's what has to be done, obviously better that it only affects AppLocker and allows SRP to still function as expected.<br>
+<br>
+Unless you are checking that the edition of Windows (can that be checked...?) has AppLocker available/enabled, and <em>then</em> SRP is disabled as well... That would be really unfortunate for users of those editions! <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"> <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"><br>
+<br>
+I could check SRP in <a href="http://www.modern.ie/en-us/virtualization-tools#downloads" class="postlink">VirtualBox with an Enterprise edition</a> and/or try to set up AppLocker... But figured I'd see if I could get any more info first. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Apr 25, 2013 6:43 am</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content">I had some AppLocker rules allowing execution in a sandbox folder, by hash rules. I deleted them, but I wasn't able to execute the program anymore. I suppose this implementation isn't working as expected. Maybe because the program was/is already installed in the sandbox? It did work as expected with newest apps installed in the sandboxes, though.<br>
+<br>
+Is a bit of a concern what was implemented, though. As mentioned, I was allowing execution by hash rule, because I'm dealing with way too many executable to create access rules in the sandbox settings. The execution of any process inside that sandbox would be allowed (it would be a pain in my neck to create access rules to all those *.exes and *.ddls in the settings; AppLocker is a much faster solution).<br>
+<br>
+<img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 26, 2013 4:23 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I am sorry fanish but I don't follow what you are trying to say.<br>
+Do you still see errors from Sandboxie about executing SandboxieRpcSs even with version 4.01.06 ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 26, 2013 8:53 am</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>I am sorry fanish but I don't follow what you are trying to say.<br>
+Do you still see errors from Sandboxie about executing SandboxieRpcSs even with version 4.01.06 ?</div></blockquote>
+
+No, I don't see those errors. But, from what you mentioned in your other post, it made me believe that AppLocker wouldn't prevent execution from the sandboxes folders any longer? I cannot execute an application I had previously installed in a sandbox; I had to reenable the AppLocker rules again to be able to execute it.<br>
+<br>
+Maybe I misunderstood the previous post.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 26, 2013 9:25 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I think what I wrote above does not apply to your use case.  Sorry about the confusion.  Let me try to clarify.<br>
+<br>
+What I wrote earlier only applies to program A in the sandbox trying to start program B.  For example Start.exe in the sandbox trying to start SandboxieRpcSs.exe.  Or IExplore.exe in the sandbox trying to start SandboxieRpcSs.exe.  In this case program A can ask AppLocker to not bother with program B.<br>
+<br>
+What you have here is Explorer.exe starting a forced program (either forced by name, or folder, or forced due to being in the sandbox folder).  In this case Sandboxie can not yet affect AppLocker, so AppLocker rules should apply.  And of course this applies to any program outside the sandbox that is starting a program in the sandbox -- not just Explorer.exe.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 26, 2013 9:28 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>Can you explain/clarify what you mean by "I'm a sandbox, don't apply ..." flag? What's that? (Hope it's not what I'm thinking of with "SANDBOX"...) </div></blockquote>
+
+Sorry, I missed your post earlier.  If you mean SANDBOX_INERT, that's correct and that's all I changed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Apr 26, 2013 11:30 am</strong></div>
+				<div class="author">by <strong>barny</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Version 4.01.06 turns the "I'm a sandbox, don't apply SRP/AppLocker rules on me" flag for programs running in the sandbox.<br>
+<br>
+I'm afraid this is the only possible solution as SRP/AppLocker uses the security context of the process in its security checks, and in Sandboxie v4, this security context is very limited and will fail all security checks.</div></blockquote>4.01.06 now works without problem when AppLocker is enabled. Thanks tzuk!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>[0.6]</h3>
+				<div class="date">Posted: <strong>Fri Apr 26, 2013 12:44 pm</strong></div>
+				<div class="author">by <strong>Sadeghi85</strong></div>
+				<div class="content">Hi<br>
+<br>
+I use default AppLocker rules. "Run As UAC Administrator" doesn't bypass AppLocker rules in v4.01.06, it doesn't prompt for elevation.<br>
+With or without "Run As UAC Administrator" setting, it gives this error: <a href="http://www.wilderssecurity.com/attachment.php?attachmentid=237715&amp;d=1365962064" class="postlink">image</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [0.6]</h3>
+				<div class="date">Posted: <strong>Fri Apr 26, 2013 1:40 pm</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content"><blockquote><div><cite>Sadeghi85 wrote:</cite>Hi<br>
+<br>
+I use default AppLocker rules. "Run As UAC Administrator" doesn't bypass AppLocker rules in v4.01.06, it doesn't prompt for elevation.<br>
+With or without "Run As UAC Administrator" setting, it gives this error: <a href="http://www.wilderssecurity.com/attachment.php?attachmentid=237715&amp;d=1365962064" class="postlink">image</a></div></blockquote>
+
+Does the executable in question have an UAC icon? That would mean it has an embedded manifest file saying it needs administrator privileges. If it doesn't have it, then that's why you're seeing that error message. I also experienced it with executables lacking that UAC icon/manifest.<br>
+<br>
+Can you confirm that it also happens with other files that don't have the manifest (lacks the UAC icon)?<br>
+<br>
+@ tzuk<br>
+<br>
+Thank you for clarifying it. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> It makes me wonder about something, though. Sometime ago Microsoft released an hotfix for the SANDBOX_INERT "bypass". -<a href="http://support.microsoft.com/kb/2532445" class="postlink">http://support.microsoft.com/kb/2532445</a><br>
+<br>
+I got that hotfix applied, but clearly what you did to Sandboxie made the errors go away. Shouldn't AppLocker + Hotfix prevent it (program A from starting program B)? Strange stuff. lol</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [0.6]</h3>
+				<div class="date">Posted: <strong>Sat Apr 27, 2013 1:52 am</strong></div>
+				<div class="author">by <strong>Sadeghi85</strong></div>
+				<div class="content"><blockquote><div><cite>fanish wrote:</cite>
+<br>
+Can you confirm that it also happens with other files that don't have the manifest (lacks the UAC icon)?</div></blockquote>
+
+This is what I discovered:<br>
+<br>
+<strong>v4.01.06:</strong>
+<ol style="list-style-type: decimal">
+<li>If the executable has manifest, it prompts for elevation, no need for "Run As UAC Administrator" setting.</li>
+<li>If it doesn't have manifest, it gets blocked, "Run As UAC Administrator" setting doesn't help either.</li></ol>
+<strong>v3.76:</strong>
+<ol style="list-style-type: decimal">
+<li>If the executable has manifest, it prompts for elevation, no need for "Run As UAC Administrator" setting.</li>
+<li>If it doesn't have manifest, it gets blocked, <strong>BUT</strong> "Run As UAC Administrator" setting prompts for elevation.</li></ol></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 28, 2013 1:16 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Sorry, I missed your post earlier.  If you mean SANDBOX_INERT, that's correct and that's all I changed.</div></blockquote>
+
+OK, yeah, and I meant for Sandboxie's sake, rather than mine (that you didn't mean that), because of the AppLocker fix fanish posted. I assume you know about that...? <em>Perhaps</em> it's not an issue, however (behavior fanish reports), because if this is the SbieSvc program we're talking about, that SYSTEM process can still use SANDBOX_INERT even with the AppLocker fix installed. <em>But</em>... (see below)<br>
+<br>
+
+<blockquote><div><cite>tzuk wrote:</cite>What I wrote earlier only applies to program A in the sandbox trying to start program B.  For example Start.exe in the sandbox trying to start SandboxieRpcSs.exe.  Or IExplore.exe in the sandbox trying to start SandboxieRpcSs.exe.  In this case program A can ask AppLocker to not bother with program B.</div></blockquote>
+
+Is this only when the "target" is SandboxieRpcSs that the changes apply.....?? And one of the recent changes is that RpcSs is now launched by SbieSvc... And stuff running as SYSTEM is already supposed to ignore <strong>SRP</strong>, but I guess that part (SYSTEM being excluded from restrictions) <em>does not</em> apply to <strong>AppLocker</strong>, is that right...? *shrug*<br>
+<br>
+<br>
+Because like I said, I can't find a scenario, from in or out of the sandbox, programs or DLLs, where SRP is being ignored, which is good and as 4.01 has been. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Just trying to fully understand where/how the change is applied (just RpcSs?).<br>
+<br>
+Is the SANDBOX_INERT flag used on all platforms unconditionally, or just on editions where AppLocker is available or active?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Apr 28, 2013 5:56 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">That sandbox inert flag is enabled by kernel mode code so I don't think that KB update makes a difference.  I mean, evidently it works, right?..<br>
+<br>
+The flag is enabled for all processes in the sandbox regardless of version or edition of Windows.<br>
+<br>
+Finally:<br>
+
+<blockquote><div><cite>Sadeghi85 wrote:</cite>I use default AppLocker rules. "Run As UAC Administrator" doesn't bypass AppLocker rules in v4.01.06, it doesn't prompt for elevation.  With or without "Run As UAC Administrator" setting, it gives this error: </div></blockquote>
+
+I don't see the error.  On my end I see that with or without the "Run As UAC Administrator" setting, it starts the program the same:  No error from AppLocker, and no elevation either.<br>
+<br>
+I fixed the "Run As UAC Administrator" setting, which is not related to AppLocker, and looks like it wasn't working in any version 4 release so far.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 6:30 am</strong></div>
+				<div class="author">by <strong>fanish</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>That sandbox inert flag is enabled by kernel mode code so I don't think that KB update makes a difference.  I mean, evidently it works, right?..<br>
+<br>
+The flag is enabled for all processes in the sandbox regardless of version or edition of Windows.</div></blockquote>
+
+Evidently, what you did is working. But, according to security researcher Didier Stevens, the actions his PoC performs were blocked by AppLocker, once he applied the patch. See: hxxp://blog.didierstevens.com/2011/11/17/hotfix-for-srpapplocker-bypass/<br>
+<br>
+There's a comment by him where he states it.<br>
+<br>
+Everything is so odd, indeed. So, apparently this hotfix is nothing but placebo? <img class="smilies" src="images/smilies/icon_evil.gif" width="15" height="15" alt=":evil:" title="Evil or Very Mad"><br>
+<br>
+Can anyone compile this code in his blog and see what happens?<br>
+<br>
+Code is here hxxp://blog.didierstevens.com/2011/01/25/circumventing-srp-and-applocker-to-create-a-new-process-by-design/<br>
+<br>
+It would, for sure, be interesting to see what results you'll find.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 29, 2013 7:01 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Ah, so this KB isn't actually a mandatory update.  I assumed the update was already installed (on your systems and mine) so that if turning the sandbox inert flag works then evidently it works with this KB applied.  Which I now understand was an incorrect assumption.<br>
+<br>
+So then it is possible I guess that having this KB would break this AppLocker fix in Sandboxie.  In that case I don't think I would be able to find another solution to the problem.  On the other hand it is possible the KB would not interfere with kernel mode code that turns on this bit.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=14934&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:40:08 GMT -->
+</html>

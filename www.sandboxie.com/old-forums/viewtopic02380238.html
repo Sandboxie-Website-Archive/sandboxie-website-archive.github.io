@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25080&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:24:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Networked printing no longer working in Firefox in Windows 10</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Networked printing no longer working in Firefox in Windows 10</h2>
+		<p><a href="viewtopic17f917f9.html?f=11&amp;t=25080">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25080</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Networked printing no longer working in Firefox in Windows 10</h3>
+				<div class="date">Posted: <strong>Thu Nov 09, 2017 3:12 am</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">In Windows 10 recently sometime within the last month or two I guess my networked printer stopped printing properly in sandboxed Firefox. I was using Sandboxie 5.20 and upgraded to 5.22 today but it hasn't made a difference. Right now I'm running Windows 10 "Version 1703 (OS Build 15063.674)" and Sandboxie 5.22 64-bit and Firefox 56.0 32-bit. Chrome still works fine. Both Firefox and Chrome still work fine to print in Windows 8.1.<br>
+<br>
+Nothing in my configuration has changed. I have a global OpenFilePath=C:\Windows\Temp and the Firefox section looks like this:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[Firefox]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+Template=Firefox_Force
+Template=BlockPorts
+Template=LingerPrograms
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,off
+BoxNameTitle=n
+ForceProcess=&lt;FirefoxPrograms&gt;
+DropAdminRights=y</code></pre></div>
+
+On some pages I see "An error occurred while printing". On other pages it appears to work to print but nothing is actually printed and the file size has some weird amount like 223 bytes or 334 bytes or something. It will say "Printing" in the queue but then it errors, I think because the data is corrupt. For example take this file which prints fine in Windows 8.1 Chrome and Firefox, and Windows 10 Chrome but not Firefox:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/downloads/cms1490s-english.pdf</code></pre></div>
+
+Is anyone running sandboxed Firefox in Windows 10 able to print that PDF form to a networked printer?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Networked printing no longer working in Firefox in Windows 10</h3>
+				<div class="date">Posted: <strong>Thu Nov 09, 2017 6:11 am</strong></div>
+				<div class="author">by <strong>APMichael</strong></div>
+				<div class="content">Printing in Firefox needs the following:<br>
+<br>
+1) Add to your Sandboxie.ini (Firefox section):
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=firefox.exe,%UserProfile%\AppData\LocalLow\Mozilla\temp-*</code></pre></div>
+
+2) Open Firefox outside Sandboxie,<br>
+type "about:config" and accept the risk,<br>
+search "sandbox",<br>
+switch "security.sandbox.content.level" from 3 to 2,<br>
+close Firefox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Networked printing no longer working in Firefox in Windows 10</h3>
+				<div class="date">Posted: <strong>Fri Nov 10, 2017 12:20 am</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">Thanks I will try that. I would prefer not to open my mozilla temp directory because I run multiple sandboxes with Firefox and I don't want them to get crisscrossed. Do you know why is that necessary now in Windows 10?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Networked printing no longer working in Firefox in Windows 10</h3>
+				<div class="date">Posted: <strong>Fri Nov 10, 2017 9:57 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello cornflake,<br>
+<br>
+This is not a Windows 10 issue, but a compatibility issue between Firefox and Sandboxie. <br>
+You can find more info here:<br>
+<a href="viewtopic2a752a75.html?f=11&amp;t=23902&amp;start=75" class="postlink">viewtopic.php?f=11&amp;t=23902&amp;start=75</a><br>
+<br>
+The workaround should allow you to print.  <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Networked printing no longer working in Firefox in Windows 10</h3>
+				<div class="date">Posted: <strong>Sun Nov 12, 2017 3:31 pm</strong></div>
+				<div class="author">by <strong>cornflake</strong></div>
+				<div class="content">The line APMichael gave did allow me to print. I did not have to change security.sandbox.content.level.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>OpenFilePath=firefox.exe,%UserProfile%\AppData\LocalLow\Mozilla\temp-*</code></pre></div>
+
+I don't understand why that is required now in Windows 10 but not Windows 8.1 if it is not a Windows 10 issue. Also I think you should fix it so that I can keep my sandboxes separate. In other words I don't think I should have to open up file paths.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Networked printing no longer working in Firefox in Windows 10</h3>
+				<div class="date">Posted: <strong>Mon Nov 13, 2017 10:47 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello cornflake,<br>
+<br>
+This is a known-issue and once a fix is found, it will be added to a beta/release.  <br>
+Until then, if you want to print from Firefox, you'll need to use the workaround.  <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25080&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:24:03 GMT -->
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=21989&start=90&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:28:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Firefox crashes after downloading files[LOCKED] - Page 7</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Firefox crashes after downloading files[LOCKED]</h2>
+		<p><a href="viewtopic7e017e01.html?f=11&amp;t=21989">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=21989</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>7</strong> of <strong>8</strong></div>
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Wed Jan 20, 2016 10:14 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">Download button moved off Toolbar....
+<div class="inline-attachment"><!-- ia0 -->Sandboxie Not Responding 5.07.5.png<!-- ia0 --></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Thu Jan 21, 2016 6:42 pm</strong></div>
+				<div class="author">by <strong>JoeHood</strong></div>
+				<div class="content">@bjm - would you mind testing OpenWinClass=* in your Fx sandbox? I'm trying to narrow it down.<br>
+Joe</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Fri Jan 22, 2016 2:15 am</strong></div>
+				<div class="author">by <strong>JoeHood</strong></div>
+				<div class="content">@bjm. forget that last post - that is not the solution.<br>
+Joe</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Sat Feb 06, 2016 5:16 pm</strong></div>
+				<div class="author">by <strong>FredF2</strong></div>
+				<div class="content">It sounds like youre having the exact same issue as me... just thought ild throw in some specs and what i'm running to see what we might have in common thats causing this fn headache.<br>
+w8.1 64 bit, avira, mbae, WFC, Firefox44.0/extensions... <img src="../s2.postimg.org/4ebio1m11/ffext6d696d69.jpg?noCache=1454796785" class="postimage" alt="Image"><br>
+<br>
+Its funny because i got po'd and tried comodos fw/sandbox, and ff crashed in that too.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Sat Feb 06, 2016 5:27 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Try FF without any extensions. Like we've posted before. We only test the core browser. However, we do also test certain Add-ons, such as lastpass.<br>
+<br>
+Disable Avira<br>
+Disable MBAE<br>
+Run the newest SBIE Beta. (Note. Beta does not address any downloading issues, as we have not noticed any in testing, nor can we reproduce it.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Mon Feb 08, 2016 8:38 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite>Try FF without any extensions. Like we've posted before. We only test the core browser. However, we do also test certain Add-ons, such as lastpass.<br>
+<br>
+Disable Avira<br>
+Disable MBAE<br>
+Run the newest SBIE Beta. (Note. Beta does not address any downloading issues, as we have not noticed any in testing, nor can we reproduce it.)</div></blockquote>
+and I can only random reproduce "Not Responding" with FF sandbox'd.....just when I think I've found the offending extension....random occurs randomly....No Biggy.... Cheers</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Tue Feb 09, 2016 4:10 pm</strong></div>
+				<div class="author">by <strong>Bertus</strong></div>
+				<div class="content"><blockquote><div><cite>bjm wrote:</cite>
+..just when I think I've found the offending extension....random occurs randomly....</div></blockquote>
+
+I also experience random crashes after downloading files (as I reported before). The problem is that the crash randomly occurs. After I close FF when it crashed and download the same file again FF will download the file without a problem.<br>
+In my case FF crashes after downloading a few files (it ranges from 4 to 10 file downloads). Tried to find if an extension in FF was the reason for the crash.<br>
+<br>
+Tested with Cyberfox 44.0 x86 <br>
+- Cyberfox portable clean install<br>
+- No addons or extensions installed<br>
+- I let Cyberfox "Always ask me where to save files"<br>
+- I disabled shockwave flash 20.0.0.286 protection mode<br>
+- I disabled shockwave flash  20.0.0.286 plugin (never active)<br>
+- I disabled JavaScript in Cyberfox settings (not by an extension)<br>
+<br>
+After downloading several files Cyberfox did crash again. So in my situation the crash in cyberfox has nothing to do with any addon/extension installed<br>
+<br>
+system info:<br>
+-Windows 8.1<br>
+-I do not have any anti virus software installed<br>
+-Blue Ridge appguard 4.2.8.1 installed<br>
+-Sandboxie 5.07.7 64bit installed</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Tue Feb 09, 2016 7:08 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content"><blockquote><div><cite>Bertus wrote:</cite><blockquote><div><cite>bjm wrote:</cite>
+..just when I think I've found the offending extension....random occurs randomly....</div></blockquote>
+
+I also experience random crashes after downloading files (as I reported before). The problem is that the crash randomly occurs. After I close FF when it crashed and download the same file again FF will download the file without a problem.<br>
+In my case FF crashes after downloading a few files (it ranges from 4 to 10 file downloads). Tried to find if an extension in FF was the reason for the crash.<br>
+system info:<br>
+-Windows 8.1<br>
+-I do not have any anti virus software installed<br>
+-Blue Ridge appguard 4.2.8.1 installed<br>
+-Sandboxie 5.07.7 64bit installed</div></blockquote>
+Yep, this glitch is random with a cherry on top.  <br>
+Thanks for feedback.   Since, Invincea cannot see/reproduce.....it's just peer to peer.  <br>
+I've done some iterations too with observe that Not Responding randomly occurs sandbox'd. <br>
+Not sandbox'd downloads cannot reproduce Not Responding.  <br>
+W8.1x64<br>
+FF44.0.1x64 <br>
+v5.07.7<br>
+Interesting that Not Responding occurs sans AV and sans extensions/plugins. <br>
+I've done new Profile and new default Sandbox.<br>
+I've tested downloads from IE11 sandbox'd.  No Not Responding from IE11 yet.... <br>
+I was gonna' remove security to test....but, I don't want to run Invincea favored Windows Defender. I run with Windows Update Off and I don't want to mess with Windows Firewall Advanced Rules.   <br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Wed Feb 10, 2016 12:08 am</strong></div>
+				<div class="author">by <strong>FredF2</strong></div>
+				<div class="content">Just throwing out ideas... could it be related to 64 vs 32 bitbit architecture of FF?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Wed Feb 10, 2016 11:52 am</strong></div>
+				<div class="author">by <strong>Bertus</strong></div>
+				<div class="content"><blockquote><div><cite>FredF2 wrote:</cite> could it be related to 64 vs 32 bitbit architecture of FF?</div></blockquote>
+
+Do you mean FF 64 or 32 bit in relation to sandboxie 64 or 32bit? In my case Cyberfox 32 and 64 bit crash in sandboxie 64bit.<br>
+Is it possible to install sandboxie 32bit on windows 8.1 64bit without resorting to any windows compatibility setting?<br>
+<br>
+Maybe the crash is related to Windows 8.1 64bit? Or are there sandboxie users that experience the crash on other version of windows?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Wed Feb 10, 2016 11:53 am</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content"><blockquote><div><cite>FredF2 wrote:</cite>Just throwing out ideas... could it be related to 64 vs 32 bitbit architecture of FF?</div></blockquote>
+Well, Bertus reports Cyberfox44 x86 and I'm FF44 x64.<br>
+You tell me.<br>
+When I can break from habit.  I'll download in IE11 sandbox....as work-around.  <br>
+Regards</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Thu Feb 11, 2016 9:10 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">We are monitoring this thread, but at the moment..it's nothing me nor Curt can reproduce......  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Thu Feb 11, 2016 5:35 pm</strong></div>
+				<div class="author">by <strong>FredF2</strong></div>
+				<div class="content">Re: "Do you mean FF 64 or 32 bit in relation to sandboxie 64 or 32bit? In my case Cyberfox 32 and 64 bit crash in sandboxie 64bit.<br>
+Is it possible to install sandboxie 32bit on windows 8.1 64bit without resorting to any windows compatibility setting?<br>
+Maybe the crash is related to Windows 8.1 64bit? Or are there sandboxie users that experience the crash on other version of windows?"<br>
+<br>
+As I said before, I am just throwing out ideas for thos more knowlegable than me to consider (or not). <br>
+<br>
+My situation is this... I discovered after seeing the dl crash problem for a long time that I had 32 and 64 bit FF installed... I think it was from doing a manual update accidentally using the standard windows installer instead of the 64 bit which I had already installed.  I started to wonder if there might be a connection.<br>
+<br>
+Another thing I noticed was after reapplying a Paragon image the problem seemed to clear up for while. Seeing as how the page file isnt saved in those images it would be rebuilding at that point... could there be a clue there?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Thu Feb 11, 2016 8:39 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Re: "Do you mean FF 64 or 32 bit in relation to sandboxie 64 or 32bit? In my case Cyberfox 32 and 64 bit crash in sandboxie 64bit.</div></blockquote>
+
+Either.<br>
+<br>
+
+<blockquote class="uncited"><div>Is it possible to install sandboxie 32bit on windows 8.1 64bit without resorting to any windows compatibility setting?</div></blockquote>
+
+You should install the recommend version for your OS. 64 bit for 64 bit, etc.<br>
+
+<blockquote class="uncited"><div>Maybe the crash is related to Windows 8.1 64bit? Or are there sandboxie users that experience the crash on other version of windows?"
+</div></blockquote>
+What you see here is what is reported. We address issues that have similarities or are affecting a serious amount of users.. We then look for reproducible instances. Usually, it'a one of 4 things. Not deleting the contents of the SB, An extension/Addon, Antivirus or anti-malware or something unrelated to any of those 3.<br>
+
+<blockquote class="uncited"><div>My situation is this... I discovered after seeing the dl crash problem for a long time that I had 32 and 64 bit FF installed... I think it was from doing a manual update accidentally using the standard windows installer instead of the 64 bit which I had already installed.  I started to wonder if there might be a connection.</div></blockquote>
+
+Remove all instances of FF and start again. Make sure you delete the contents of your sandbox too. Or create separate SB for 64b and 32b.
+<blockquote class="uncited"><div>
+Another thing I noticed was after reapplying a Paragon image the problem seemed to clear up for while. Seeing as how the page file isnt saved in those images it would be rebuilding at that point... could there be a clue there?</div></blockquote>
+
+Sure. We've seen issues related to that. Not directly related to SBIE, but just random "issues" that users had. (I've personally seen odd behavior in Windows and Mac OS with saved drive images and cloned drives..)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox crashes after downloading files</h3>
+				<div class="date">Posted: <strong>Thu Feb 11, 2016 11:19 pm</strong></div>
+				<div class="author">by <strong>FredF2</strong></div>
+				<div class="content">Re: You should install the recommend version for your OS. 64 bit for 64 bit, etc.<br>
+<br>
+I did that no joy.<br>
+<br>
+Another thing I noticed was after reapplying a Paragon image the problem seemed to clear up for while. Seeing as how the page file isnt saved in those images it would be rebuilding at that point... could there be a clue there?<br>
+<strong>Sure. We've seen issues related to that. Not directly related to SBIE, but just random "issues" </strong>that users had. (I've personally seen odd behavior in Windows and Mac OS with saved drive images and cloned drives..)<br>
+<br>
+Doesn't inspire confidence... sorry.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>7</strong> of <strong>8</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=21989&start=90&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:28:31 GMT -->
+</html>

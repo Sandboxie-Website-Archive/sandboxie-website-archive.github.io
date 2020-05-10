@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=11087&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:54:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Delete the &quot;in wich sandbox start&quot; window</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Delete the &quot;in wich sandbox start&quot; window</h2>
+		<p><a href="viewtopic45384538.html?f=4&amp;t=11087">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=11087</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Delete the &quot;in wich sandbox start&quot; window</h3>
+				<div class="date">Posted: <strong>Fri Aug 12, 2011 8:07 am</strong></div>
+				<div class="author">by <strong>swhtmw</strong></div>
+				<div class="content">Can you put a checkbox in the window, ask in wich sandbox the programm start:<br>
+<a href="../www.abload.de/img/sandboxie28qqi.jpg" class="postlink">http://www.abload.de/img/sandboxie28qqi.jpg</a><br>
+Can you put a checkbox "don't ask again" for all users with the DefaultBox only? The window is needless for all user with  the DefaultBox only and sucks a little bit.<br>
+<br>
+For users with more than one sandbox: Can you creat the menue with right click on a programm with all sandboxes (for example right click on firefox.exe):<br>
+<a href="../www.abload.de/img/sandboxie4d782.jpg" class="postlink">http://www.abload.de/img/sandboxie4d782.jpg</a><br>
+<br>
+<br>
+<br>
+Maybe I will buy the full version of sandboxie. Than I can creat more than one Sandbox. But my DefaultBox is on Z:\ RamDisk (all content delete after closed all programms). <br>
+If I creat "Sandbox 2" I would to have the Sandbox 2 Container not on RamDisk. The Sandbox (Sandbox 2 - Container) must be on Harddisk (C:\) an don't delete after closed all programms in Sandbox 2.<br>
+<br>
+Can you plan Sandboxie, that i can do DefaultBox Sandboxie Conainer on Z:\  and Sandboxie Box 2 - Container on C:\ ?<br>
+<br>
+If I buy the full version, can I use the full version on my pc AND on my laptop?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Delete the &quot;in wich sandbox start&quot; window</h3>
+				<div class="date">Posted: <strong>Fri Aug 12, 2011 8:40 am</strong></div>
+				<div class="author">by <strong>SnDPhoenix</strong></div>
+				<div class="content"><blockquote><div><cite>swhtmw wrote:</cite>Can you plan Sandboxie, that i can do DefaultBox Sandboxie Conainer on Z:\  and Sandboxie Box 2 - Container on C:\ ?</div></blockquote>
+You can already do this using <a href="../index11dd.html?FileRootPath" class="postlink">FileRootPath</a>.<br>
+To do this, just open Sandboxie Control, click Configure -&gt; Edit Configuration and scroll down til you see your second sandbox listed, such as [Sandbox2].<br>
+Below that enter a FileRootPath location, in your case it would be something like FileRootPath=C:\%SANDBOX%, then save the file. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Delete the &quot;in wich sandbox start&quot; window</h3>
+				<div class="date">Posted: <strong>Fri Aug 12, 2011 9:34 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>swhtmw wrote:</cite>Can you put a checkbox in the window, ask in wich sandbox the programm start:</div></blockquote>If you hold down the Ctrl key on the keyboard when you click on "Run Sandboxed", then DefaultBox should be the sandbox that is used.<br>
+If you are using a recent version.<blockquote><div><cite>swhtmw wrote:</cite>For users with more than one sandbox: Can you creat the menue with right click on a programm with all sandboxes </div></blockquote>This sounds like what we already have?<blockquote><div><cite>swhtmw wrote:</cite>Maybe I will buy the full version of sandboxie. Than I can creat more than one Sandbox. But my DefaultBox is on Z:\ RamDisk (all content delete after closed all programms). <br>
+If I creat "Sandbox 2" I would to have the Sandbox 2 Container not on RamDisk. The Sandbox (Sandbox 2 - Container) must be on Harddisk (C:\) an don't delete after closed all programms in Sandbox 2.</div></blockquote>All versions of Sandboxie can create new sandboxes. You can create as many as you want, but you need a registered version of Sandboxie to use more than one of them at a time.<br>
+Add the line shown below, using Configure &gt; Edit Configuration, <span style="text-decoration: underline">after</span> you create the new sandbox "Sandbox_2".<br>
+<br>
+[Sandbox_2]<br>
+<br>
+<strong>FileRootPath=C:\Sandbox\%SANDBOX%</strong><br>
+...<br>
+...<br>
+...<br>
+
+<blockquote><div><cite>swhtmw wrote:</cite>If I buy the full version, can I use the full version on my pc AND on my laptop?</div></blockquote>Yes.<br>
+<br>
+[Edit] You can also use Sandboxie Control to create a Desktop shortcut that will run a program using the sandbox you select.<br>
+Use the menu: Configure &gt; Windows Shell Integration<br>
+and look for the button "Add Shortcut Icons".<br>
+<a href="../indexa72b.html?ConfigureMenu#shell" class="postlink">http://www.sandboxie.com/index.php?ConfigureMenu#shell</a><br>
+Select the sandbox to use and then select the program to run sandboxed, from the Sandboxie Start Menu that opens.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 17, 2011 8:09 pm</strong></div>
+				<div class="author">by <strong>swhtmw</strong></div>
+				<div class="content">Thanks for the answers <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+
+<blockquote class="uncited"><div>Guest10: If you hold down the Ctrl key on the keyboard when you click on "Run Sandboxed", then DefaultBox should be the sandbox that is used. </div></blockquote>
+
+Yes, but I think with a right click on a programm it is better you can direct click the direct Sandboxie in which Sandbox the programm starts:<br>
+<a href="../www.abload.de/img/sandboxie4d782.jpg" class="postlink">http://www.abload.de/img/sandboxie4d782.jpg</a> <br>
+(Without the Message where you can hold down the Ctrl key on the keyboard).<br>
+So you can direct click: start in Sandbox_2 (without a new Window and without a new klick on Sandbox_2 and than OK).<br>
+<br>
+<br>
+--------------------------<br>
+<br>
+I have buy Sandboxie Full Version <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+Thank you, I have find it with FileRootPath=C:\Sandbox\%SANDBOX%  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile"><br>
+But I don't find where I can add programms which start with windows in sandboxie (autorun).<br>
+<br>
+<br>
+If I add a Shortcut Icon, I see the message:<br>
+<a href="../www.abload.de/img/sandboxie72ump.jpg" class="postlink">http://www.abload.de/img/sandboxie72ump.jpg</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 18, 2011 7:06 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">We are discussing the 740 errors in another topic so let's not mix things up.<br>
+
+<blockquote><div><cite>swhtmw wrote:</cite>Yes, but I think with a right click on a programm it is better you can direct click the direct Sandboxie in which Sandbox the programm starts: </div></blockquote>
+
+You have that in the Send To context menu.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 18, 2011 7:19 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>swhtmw wrote:</cite>But I don't find where I can add programms which start with windows in sandboxie (autorun).<br>
+If I add a Shortcut Icon, I see the message: ...</div></blockquote>To start a sandboxed program when Windows starts, the best way is to make a shortcut to run the program sandboxed, and then move that shortcut to your Windows Start Menu &gt; Startup list.<br>
+<br>
+I don't know how you made the shortcut icon that you tried to use. You should not have a shortcut that asks which sandbox to use if you used the button called "Create Shortcut Icons".<br>
+Did you use that button to make the shortcut?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 18, 2011 12:35 pm</strong></div>
+				<div class="author">by <strong>swhtmw</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>You have that in the Send To context menu.</div></blockquote>
+
+Oh, this is good! I see it now <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Thanks.<br>
+<br>
+
+<blockquote><div><cite>Guest10 wrote:</cite>Did you use that button to make the shortcut?</div></blockquote>
+Yes, than the message come:<br>
+<a href="../h7.abload.de/img/sandboxie72ump.jpg" class="postlink">http://h7.abload.de/img/sandboxie72ump.jpg</a><br>
+We talk this problem in "Open Issues". Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 18, 2011 6:40 pm</strong></div>
+				<div class="author">by <strong>swhtmw</strong></div>
+				<div class="content">The problem is gone, I can use that button to make the shortcut. Now my programms start with windows in sandboxie (autostart) <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile"> Thank you!<br>
+<br>
+Can I do something more with Sandboxie Full Version?<br>
+I know until now:<br>
+- more Sandboxes<br>
+- start programs with windows in sandboxie (shortcut) <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile"><br>
+<br>
+Thank you for your help!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=11087&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:54:11 GMT -->
+</html>

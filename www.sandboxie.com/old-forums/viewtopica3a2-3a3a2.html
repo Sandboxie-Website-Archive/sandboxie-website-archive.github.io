@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24440&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:16:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; IDM somehow breaks sandbox..Security issue? [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>IDM somehow breaks sandbox..Security issue? [SOLVED]</h2>
+		<p><a href="viewtopic798a798a.html?f=17&amp;t=24440">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24440</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>IDM somehow breaks sandbox..Security issue? [SOLVED]</h3>
+				<div class="date">Posted: <strong>Wed May 17, 2017 7:54 am</strong></div>
+				<div class="author">by <strong>downloaderfan</strong></div>
+				<div class="content">Ok, I have internet download manager installed on my main PC. Till now, I thought that any program I ran from a sandboxed window would also start inside the sandbox as I have seen that it's the general behavior of programs across sandboxie.  I noticed that when I run Firefox inside sandboxie and press the 'Download video'  button of IDM while watching a video, the video in loaded in the unsandboxed version of IDM and not the sandboxed version of IDM as I expected. Same applies to Internet Explorer. I installed sandboxie mainly to open suspicious word, PowerPoint &amp; excel documents that I might receive via email. So in theory, just like how IDM broke sandbox, could a word document with a malicious macro also break sandbox and infect my main PC even if I run it inside sandboxie? Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: IDM somehow breaks sandbox..Security issue?</h3>
+				<div class="date">Posted: <strong>Wed May 17, 2017 9:52 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello downloaderfan,<br>
+<br>
+Can you please provide your OS, Browser and Sandboxie versions?<br>
+What are the exact steps to reproduce the issue? <br>
+What are your Sandbox settings? Do you have any templates or open paths?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: IDM somehow breaks sandbox..Security issue?</h3>
+				<div class="date">Posted: <strong>Wed May 17, 2017 10:59 am</strong></div>
+				<div class="author">by <strong>downloaderfan</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>Hello downloaderfan,<br>
+<br>
+Can you please provide your OS, Browser and Sandboxie versions?<br>
+What are the exact steps to reproduce the issue? <br>
+What are your Sandbox settings? <br>
+<br>
+Regards,<br>
+Barb.-</div></blockquote>
+
+I tested it on Windows 10 which is my host &amp; also Windows 7 inside VMware, so i don't think this problem is OS dependent.<br>
+Browser as I have mentioned already, Firefox &amp; Internet explorer.<br>
+Sandboxie v 5.18 64 bit<br>
+<br>
+How to reproduce? Install internet download manager on your PC (unsandboxed) &amp; allow its 'IDM integration module' addon inside Firefox by launching Firefox after IDM installation.(Again unsandboxed). Then, open Firefox inside sandbox and play any youtube video. IDM's download panel would show up and you click on it. When you do click on it, the video will open in an unsandboxed window of IDM instead of it being sandboxed, since I'm clicking on the download panel from a sandboxed firefox window. The video will be then downloaded to an unsandboxed file explorer, since IDM itself is unsandboxed at this point.<br>
+<br>
+Configuration:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+KnownConflicts={BD71D245-1A8B-4FB3-83E4-74F77FB39267},{77E7AE5C-181C-4CAF-ADBF-946F11C1CE26}
+Template=OfficeClickToRun
+Template=WindowsRasMan
+Template=Evernote
+Template=WindowsLive
+Template=AdobeAcrobatReader
+Template=Kaspersky
+Template=InternetDownloadManager
+Template=OfficeLicensing
+ActivationPrompt=n
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=OfficeClickToRun
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+Enabled=y,downloaderfan
+BoxNameTitle=-
+BorderColor=#0080FF
+AutoDelete=y
+NeverDelete=n
+
+[UserSettings_2DC00426]
+
+SbieCtrl_UserName=downloaderfan
+SbieCtrl_ShowWelcome=n
+SbieCtrl_NextUpdateCheck=1489572033
+SbieCtrl_UpdateCheckNotify=y
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_WindowCoords=47,134,873,449
+SbieCtrl_ActiveView=40021
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_EnableLogonStart=n
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=y
+SbieCtrl_AddQuickLaunchIcon=y
+SbieCtrl_AddContextMenu=y
+SbieCtrl_AddSendToMenu=y
+SbieCtrl_ExplorerNotify=n
+SbieCtrl_BoxExpandedView=DefaultBox,Office_2016
+
+[Office_2016]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF
+BoxNameTitle=-
+AutoDelete=y
+NeverDelete=n</code></pre></div>
+
+<blockquote class="uncited"><div>Do you have any templates or open paths?</div></blockquote>
+I don't remember doing anything like that, I would personally never download a sandbox program and then <strong>knowingly</strong> configure it to allow an open path to my main OS, without that path being read only from within the sandbox. Although I wouldn't know if sandboxie has done that for me automatically so I have included my configuration file in this post.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: IDM somehow breaks sandbox..Security issue?</h3>
+				<div class="date">Posted: <strong>Wed May 17, 2017 1:32 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello downloaderfan,<br>
+<br>
+I was able to test and reproduce the behavior. <br>
+Talked the devs and it seems to be that that is expected if using the template  for IDM.  <br>
+<br>
+See if this helps:<br>
+<a href="viewtopicba3aba3a.php?t=9860" class="postlink">http://forums.sandboxie.com/phpBB3/viewtopic.php?t=9860</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: IDM somehow breaks sandbox..Security issue?</h3>
+				<div class="date">Posted: <strong>Wed May 17, 2017 2:40 pm</strong></div>
+				<div class="author">by <strong>downloaderfan</strong></div>
+				<div class="content"><blockquote><div><cite>Barb@Invincea wrote:</cite>Hello downloaderfan,<br>
+<br>
+I was able to test and reproduce the behavior. <br>
+Talked the devs and it seems to be that that is expected if using the template  for IDM.  <br>
+<br>
+See if this helps:<br>
+<a href="viewtopicba3aba3a.php?t=9860" class="postlink">http://forums.sandboxie.com/phpBB3/viewtopic.php?t=9860</a><br>
+<br>
+Regards,<br>
+Barb.-</div></blockquote>
+
+Ok, could you also talk to the devs about this doubt of mine please? <br>
+I see that Microsoft Office Click to Run is also a template inside sandboxie, so does it also have some vector which a malicious macro might exploit &amp; escape sandbox? Are these templates compromising with the security level of sandboxie? The main question is, can I feel safe opening any suspicious office document inside sandboxie? I'm no security expert, but there is a general consensus that any such sandbox escape vector made for legit reasons could also be exploited by a malicious program....That's why I look at these things with a grain of salt.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: IDM somehow breaks sandbox..Security issue?</h3>
+				<div class="date">Posted: <strong>Wed May 17, 2017 3:06 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello downloaderfan,<br>
+<br>
+If you do not grant them access to work outside the Sandbox (via a template or opening a path), applications running inside Sbie will be contained in the Sandbox.<br>
+Templates often punch small holes (which are tested before hand...) in order to allow applications to communicate with the host (or make modifications when needed). <br>
+<br>
+Here's more information regarding how Sandboxie protects you:<br>
+<a href="../index290e.html?FrequentlyAskedQuestions#HowItWorks" class="postlink">https://www.sandboxie.com/index.php?Fre ... HowItWorks</a><br>
+<br>
+If you are interested in making your Sandbox more secure, you may find this thread useful:<br>
+<a href="viewtopic3c903c90.php?f=17&amp;t=24305&amp;p=127477&amp;hilit=sandbox+separation#p127477" class="postlink">http://forums.sandboxie.com/phpBB3/view ... on#p127477</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: IDM somehow breaks sandbox..Security issue?</h3>
+				<div class="date">Posted: <strong>Wed May 17, 2017 6:12 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">IDM installs a service that runs in your host to monitor for downloads coming from browsers. The service intercepts downloads coming from sandboxed browsers the same way it does from host browsers. Nothing is escaping or breaking the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: IDM somehow breaks sandbox..Security issue?</h3>
+				<div class="date">Posted: <strong>Thu May 18, 2017 6:23 am</strong></div>
+				<div class="author">by <strong>downloaderfan</strong></div>
+				<div class="content">Ok, thanks for your quick replies &amp; clarification, Barb &amp; Curt, appreciate that <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24440&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:16:26 GMT -->
+</html>

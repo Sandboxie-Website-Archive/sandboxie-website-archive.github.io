@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24987&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:27:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Flash problems with Firefox 64bit</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Flash problems with Firefox 64bit</h2>
+		<p><a href="viewtopic4e144e14.html?f=11&amp;t=24987">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24987</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Flash problems with Firefox 64bit</h3>
+				<div class="date">Posted: <strong>Sat Oct 14, 2017 7:02 pm</strong></div>
+				<div class="author">by <strong>PiwPi</strong></div>
+				<div class="content">Flash has problems with Sandboxie + Firefox 64bit versions. Depending on the flash version I have installed it either fails to play completely or has no audio. The latest version of Flash (27.0.0.159) will not play flash at all, it waits awhile then pops up a message saying there was a problem and asks if I want to wait or continue. The previous flash version 27.0.0.130 will play the video but no audio.<br>
+<br>
+When running Firefox outside of Sandboxie I have no problems. I have tried changing the "security.sandbox.content.level" to 0, 1, and 2 without success. I have e10s disabled. Running Firefox 32bit sandboxed I have no problems. I'd rather not go back to 32bit since 64bit has better performance for me. <br>
+<br>
+Any solutions to this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Flash problems with Firefox 64bit</h3>
+				<div class="date">Posted: <strong>Mon Oct 16, 2017 11:40 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello PiwPi,<br>
+<br>
+Does the issue occur in a new Sandbox with default settings?<br>
+<br>
+Could you provide website examples that trigger the issue ?<br>
+Also, please provide the required info so that I can test the scenario:<br>
+<a href="viewtopic03920392.html?p=104180#p104180" class="postlink">viewtopic.php?p=104180#p104180</a><br>
+ <br>
+Just to double check, you disabled Firefox sandbox and e10s outside Sandboxie, correct? (Otherwise, please re-try disabling the settings outside Sandboxie, then delete the contents of your Sandbox and try again).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Flash problems with Firefox 64bit</h3>
+				<div class="date">Posted: <strong>Tue Oct 17, 2017 1:54 am</strong></div>
+				<div class="author">by <strong>PiwPi</strong></div>
+				<div class="content">I'm using Win7 64bit, SBIE 5.20, FF 56 64bit, Avast anti-virus with all real-time monitoring disabled<br>
+<br>
+Yes it occurs in a new sandbox with default settings.<br>
+<br>
+Go to <a href="nba.com/video.html" class="postlink">nba.com/video</a> and pick any video to play.  Or you can try <a href="http://wechoosethemoon.org/" class="postlink">http://wechoosethemoon.org/</a> , the  beginning tutorial may or may not play, press the Start button and it fails to load.<br>
+<br>
+Yes I disabled Firefox sandbox and e10s outside Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Flash problems with Firefox 64bit</h3>
+				<div class="date">Posted: <strong>Tue Oct 17, 2017 3:11 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello PiwPi ,<br>
+<br>
+I tested nba.com/videos as well as wechoosethemon.org,  on Win 7 x 64 + FF 64 + Sbie latest beta and experienced no issues using Flash latest version 27.0.0.170<br>
+If you can, try removing flash from your computer (including older versions), and then do a fresh install and re-test. <br>
+<br>
+Also, please give the latest beta a go (make sure to create a new Sandbox to test):<br>
+<a href="viewtopic73f273f2.html?p=129389#p129389" class="postlink">viewtopic.php?p=129389#p129389</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Flash problems with Firefox 64bit</h3>
+				<div class="date">Posted: <strong>Tue Oct 17, 2017 7:03 pm</strong></div>
+				<div class="author">by <strong>PiwPi</strong></div>
+				<div class="content">Were you using FF v.56? <br>
+<br>
+I installed Sandboxie beta, uninstalled/reinstalled Flash 27.0.0.170, and tested in a new FF profile but it didn't fix it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Flash problems with Firefox 64bit</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 2:46 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">FWIW, I also tested nba.com/video and wechoosethemon.org,and was able to watch videos and the rocket.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Flash problems with Firefox 64bit</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 4:45 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello  PiwPi ,<br>
+
+<blockquote class="uncited"><div>Were you using FF v.56? </div></blockquote>
+Yes. I Was using Firefox 56.0.1 64 bits<br>
+<br>
+Did you have a chance to test it inside a new Sandbox with default settings? <br>
+Can you please post your configuration file so that I can have a look? <br>
+Configure--&gt; Edit configuration<br>
+Copy-paste the contents here, highlight them and use the &lt;/&gt; button to format it. <br>
+<br>
+Another suggestion would be to completely remove Avast for testing purposes and see if that makes a difference (if everything else fails).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Flash problems with Firefox 64bit</h3>
+				<div class="date">Posted: <strong>Fri Oct 20, 2017 12:30 am</strong></div>
+				<div class="author">by <strong>PiwPi</strong></div>
+				<div class="content">Yes I tested it inside a new sandbox with default settings.<br>
+<br>
+Here's the configuration file:<br>
+<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=RadeonPro
+Template=WindowsLive
+Template=WindowsRasMan
+Template=LastPass
+Template=Logitech_G15_Keyboard
+Template=InternetDownloadManager
+Template=Avast_Antivirus
+Template=OfficeLicensing
+Template=ObjectDock
+Template=7zipShellEx
+Template=LogitechSetPoint
+Template=Volumouse
+Template=nVidia_Stereoscopic3D
+ExperimentalProtection64Bit=y
+FileRootPath=Z:\Sandbox\%USER%\%SANDBOX%
+KnownConflicts=avast
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+Template=Opera_Bookmarks_DirectAccess
+Template=Firefox_Session_DirectAccess
+Template=Firefox_Passwords_DirectAccess
+Template=Firefox_Bookmarks_DirectAccess
+Template=NitroPDF6
+Template=NitroPDF5
+Template=HP_UniversalPrintDriver
+Template=AdobeAcrobat
+Template=Opera_Force
+Template=PaleMoon_Profile_DirectAccess
+Template=IntelliTypePro
+Template=Intel_HD_Graphics
+Template=WindowsDefender
+Template=BlockPorts
+Template=LingerPrograms
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=Z:
+RecoverFolder=I:\My Files
+RecoverFolder=Y:
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#FF00FF
+Enabled=y
+CopyLimitKb=200000
+BoxNameTitle=y
+OpenWinClass=palemoon.exe,pale moonmessagewindow
+OpenWinClass=firefox.exe,FirefoxMessageWindow
+LingerProcess=FlashPlayerPlugin_11_9_900_170.exe
+LingerProcess=idmbroker.exe
+LingerProcess=IEMonitor.exe
+LingerProcess=plugin-container.exe
+LingerProcess=fdm.exe
+BlockFakeInput=y
+BlockNetParam=y
+OpenFilePath=Y:\
+OpenFilePath=%Desktop%\
+OpenFilePath=I:\My Files\
+OpenFilePath=X:\
+OpenFilePath=C:\Program Files (x86)\mIRC\
+OpenFilePath=Z:\
+OpenFilePath=C:\Windows\Web\Wallpaper\Wallpapers\
+OpenFilePath=Z:\Program Files\Free Download Manager
+OpenFilePath=Z:\Program Files\Free Download Manager\Data\
+OpenFilePath=%AppData%\mIRC\
+OpenFilePath=H:\
+OpenFilePath=G:\
+OpenFilePath=Z:\Program Files\FastStone thumbnail database\
+OpenFilePath=J:\
+OpenFilePath=C:\Program Files\Logitech Gaming Software\LCore.exe
+OpenFilePath=W:\Regular\
+OpenFilePath=%AppData%\IDM\
+OpenFilePath=C:\Program Files (x86)\MSI Afterburner\
+OpenFilePath=C:\Program Files (x86)\RivaTuner Statistics Server\
+OpenFilePath=PDFXCview.exe,C:\Program Files\PDF-XChange Viewer\PDF Viewer\PDFXCview.exe
+ClosedFilePath=*\avast\*snx*
+ClosedFilePath=\Device\Mup\
+OpenClsid={D713F357-7920-4B91-9EB6-49054709EC7A}
+
+[UserSettings_084001A3]
+
+SbieCtrl_UserName=dude
+SbieCtrl_NextUpdateCheck=1555555555
+SbieCtrl_UpdateCheckNotify=y
+SbieCtrl_ShowWelcome=n
+SbieCtrl_WindowCoords=548,132,894,712
+SbieCtrl_ActiveView=40021
+SbieCtrl_ProcessViewColumnWidths=250,70,300
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_ExplorerWarn=n
+SbieCtrl_SaveRecoverTargets=n
+SbieCtrl_EnableLogonStart=y
+SbieCtrl_EnableAutoStart=y
+SbieCtrl_AddDesktopIcon=y
+SbieCtrl_AddQuickLaunchIcon=y
+SbieCtrl_AddContextMenu=y
+SbieCtrl_AddSendToMenu=y
+SbieCtrl_ShouldDeleteNotify=n
+SbieCtrl_BoxExpandedView=2ndSandbox,DefaultBox
+
+[TemplateSettings]
+
+Tmpl.PaleMoon.dude=Z:\Program Files\Firefox Profiles\Win7 Palemoon profile
+Tmpl.Firefox.dude=Z:\Program Files\Firefox Profiles\Win7 profile
+
+[2ndSandbox]
+
+Enabled=y
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Flash problems with Firefox 64bit</h3>
+				<div class="date">Posted: <strong>Fri Oct 20, 2017 11:52 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello PiwPi, <br>
+<br>
+I still cannot repro the issue.<br>
+<br>
+---&gt; KnownConflicts=avast<br>
+<br>
+Have you tried removing Avast to see if it made a difference? It may help us narrow down the issue.<br>
+<br>
+I also noticed you have a lot of Global Templates, maybe try removing them one at a time to see if anything is conflicting? (Not sure it will make a difference, but won't hurt to try) <br>
+Configure --&gt; Software Compatibility <br>
+Disable one at a time.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Flash problems with Firefox 64bit</h3>
+				<div class="date">Posted: <strong>Fri Oct 20, 2017 10:46 pm</strong></div>
+				<div class="author">by <strong>PiwPi</strong></div>
+				<div class="content">I haven't removed Avast yet because I don't know if it's worth the hassle for Flash. I might do it to to test an issue I have with a different program. If I do I'll report back here. I'll try removing the global templates too. Thanks for helping me try to resolve this problem. It's much appreciated.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Flash problems with Firefox 64bit</h3>
+				<div class="date">Posted: <strong>Sat Oct 21, 2017 3:34 pm</strong></div>
+				<div class="author">by <strong>sand_widget</strong></div>
+				<div class="content">I have same problem with FF 56.0 (32bit) and win7. flash content plays perfectly when unsandboxed. Run FF in sandbox and videos either freeze or have no sound, also online radio wont play.<br>
+for example.... <a href="http://www.surfmusic.de/radio-station/n-joy-radio,970.html" class="postlink">http://www.surfmusic.de/radio-station/n ... o,970.html</a><br>
+freezes at time 0:00. but unsandboxed works fine.<br>
+<br>
+Everything was ok until sandbox update 5.2 about a week ago.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Flash problems with Firefox 64bit</h3>
+				<div class="date">Posted: <strong>Mon Oct 23, 2017 11:43 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello sand_widget,<br>
+<br>
+Did you try the troubleshooting steps provided at the beginning of this post? (Turning sandbox content level to 2 [<a href="viewtopicad5aad5a.html?p=129898#p129898" class="postlink">viewtopic.php?p=129898#p129898</a>], deleting the contents of your Sandbox,  removing Flash and installing a fresh copy of it... ) <br>
+<br>
+Please confirm, and if the issue persists, please provide the required info:<br>
+<a href="viewtopic03920392.html?p=104180#p104180" class="postlink">viewtopic.php?p=104180#p104180</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24987&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:27:56 GMT -->
+</html>

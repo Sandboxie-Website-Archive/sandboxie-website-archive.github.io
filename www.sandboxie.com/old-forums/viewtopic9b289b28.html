@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=13791&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:32:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; I cannot run a  program called &quot;My Lockbox&quot; with S</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>I cannot run a  program called &quot;My Lockbox&quot; with S</h2>
+		<p><a href="viewtopicb9d9-2b9d9.html?f=11&amp;t=13791">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=13791</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>I cannot run a  program called &quot;My Lockbox&quot; with S</h3>
+				<div class="date">Posted: <strong>Fri Oct 05, 2012 9:52 pm</strong></div>
+				<div class="author">by <strong>ProfessorNelson54</strong></div>
+				<div class="content">Hi there Mr. Tzur and everyone,<br>
+<br>
+I cannot run a  program called "My Lockbox" with Sandboxie (version 3.74, 64-bit). I'm including the "Resource Acess Monitor" data below.  FYI, my OS is Windows 7 64-bit, and Sandboxie's "Experimental Protection 64-bit" option is enabled. Thank so much for your help!<br>
+<br>
+PS. The "My Lockbox" program can be found here:  <a href="http://fspro.net/my-lockbox/" class="postlink">http://fspro.net/my-lockbox/</a><br>
+<br>
+<em>snipped. --tzuk</em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Oct 07, 2012 5:34 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Haven't looked at the program in question yet, but I saw something in your log.<br>
+<br>
+I have to point out that I assume that <strong>c:\program files (x86)\shield\idle64.dll</strong> is part of your lockbox software.<br>
+<br>
+Please open Sandboxie Control &gt; Sandbox menu &gt; Sandbox Settings,<br>
+expand Resource Access &gt; IPC Access &gt; Direct Access,<br>
+click add and paste:<br>
+<br>
+<strong>*\BaseNamedObjects*\shdidlesdata*</strong><br>
+<br>
+Click OK all the way back and restart the program under Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 08, 2012 2:05 am</strong></div>
+				<div class="author">by <strong>ProfessorNelson54</strong></div>
+				<div class="content">Hi Tzuk,<br>
+<br>
+The <strong>c:\program files (x86)\shield\idle64.dll</strong> is <strong><span style="color: red">NOT part of the lockbox software</span></strong>, but is a component of a program called RollBack Rx -- which is a system restore utility: <br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>http://www.horizondatasys.com/169614.ihtml</code></pre></div>
+
+<br>
+Having clarified the idle64.dll file, I still went ahead and followed your copy/paste instructions: The My Lockbox software will not launch, sorry.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 08, 2012 2:34 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I see.  But I don't see any other resources in your log that might be relevant.  Are you trying to run the Lockbox program in the sandbox?  Because the log doesn't show that.<br>
+<br>
+Or alternatively perhaps you expect some functionality from Lockbox to be available for programs in the sandbox?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 08, 2012 6:30 pm</strong></div>
+				<div class="author">by <strong>ProfessorNelson54</strong></div>
+				<div class="content">Thanks again for your help, Tzuk.<br>
+<br>
+I was attempting to both install <span style="text-decoration: underline">AND</span> launch the Lockbox program in the sandbox. Perhaps this is the wrong approach? I've successfully ran other applications in the same manner (install then run via Sandboxie) without issue so I thought that it would be Ok to run the Lockbox software the same way.<br>
+<br>
+Actually, I've only had one other problem with a different application  that wouldn't run immediately after I had installed it with Sandboxie, but that was a unique problem altogether because it required a 'system reboot' in order for the install changes to apply: The app in question would not launch at all unless the reboot was done first.  However, the Lockbox program doesn't need an 'immediate' system restart to function after it is installed. I know this because I did a *test install* without Sandboxie's protection and things worked fine.<br>
+<br>
+Anyway, in case I encounter similar problems in the future I would like to know how to resolve them myself instead of bothering you with this mess.  LOL!!!   <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing">  <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz">  <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed">  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink">  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+This is why this particular incident is so important to me, Tzuk.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 09, 2012 5:01 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The Resource Access Monitor log, and any follow up experiments with the Sandbox Settings &gt; Resource Access settings, are specifically about making it possible for programs in the sandbox to talk to their components outside the sandbox.<br>
+<br>
+When you install the program in the sandbox, then everything about the program is in the sandbox, and the Resource Access stuff is not applicable.<br>
+<br>
+From a brief look at this program, it seems it might want to install a filesystem component into Windows so that it can manage folders as they are accessed by programs.  That can't of integration into Windows is not something that Sandboxie can allow.  That is probably why your program doesn't run under Sandboxie, and you might have to use virtual machine software to test a program like this in isolation.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 09, 2012 5:59 pm</strong></div>
+				<div class="author">by <strong>ProfessorNelson54</strong></div>
+				<div class="content">Thank you so much for that explanation, Tzurk, I now understand!!!  So from what I'm learned so far, every piece of software on the market cannot be ran under the protection of Sandboxie for testing purposes (which I somehow erroneously thought so), and this can only be discovered through <em>'trial-and-error'</em>. And this rule still applies even if I configure the Resource Access Monitor to allow *every* single filesystem component [of a sandboxed program] to have access during the install process...<br>
+<br>
+Anyway, you have a very nice product my friend -- keep up the good work. Thanks again for your time and assistance!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Oct 10, 2012 3:33 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>ProfessorNelson54 wrote:</cite>every piece of software on the market cannot be ran under the protection of Sandboxie for testing purposes</div></blockquote>
+
+That's not really accurate.  Most programs run fine under Sandboxie.  Perhaps you mean to say that <em>not every piece of software can run under Sandboxie.</em><br>
+<br>
+In any case, Sandboxie is a solution at the application level.  System level software, like filesystem enhancement drivers, try to tie into the operating system, this occurs below the application level, and is blocked by Sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Oct 10, 2012 8:07 pm</strong></div>
+				<div class="author">by <strong>ProfessorNelson54</strong></div>
+				<div class="content">Thanks for the correction/s, you are spot on!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=13791&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:32:31 GMT -->
+</html>

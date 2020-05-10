@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24841&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:59:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; AVG - Web Browsers - Could not hook CoGetObject - [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>AVG - Web Browsers - Could not hook CoGetObject - [SOLVED]</h2>
+		<p><a href="viewtopic24632463.html?f=11&amp;t=24841">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24841</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>AVG - Web Browsers - Could not hook CoGetObject - [SOLVED]</h3>
+				<div class="date">Posted: <strong>Sun Sep 03, 2017 9:21 am</strong></div>
+				<div class="author">by <strong>cafe_cyber</strong></div>
+				<div class="content">Hi, hope someone can help me with this issue as I am desperate after trying to fix it for hours.  <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> <br>
+<br>
+<strong>PROBLEM</strong><br>
+All my programs work fine in Sandboxie except (suddenly) Internet Explorer and Chrome. When starting sandboxed browsers, I receive the following error messages:<br>
+- for Internet Explorer:<br>
+SBIE2303 Could not hook CoGetObject (1)<br>
+<br>
+- for Google Chrome:<br>
+SBIE2303 Could not hook CoGetObject (1)<br>
+SBIE2303 Could not hook CoGetObject (1)<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000002]<br>
+<br>
+<strong>CONFIG</strong>
+<ul><li>Windows 7 64 bit</li></ul>
+<ul><li>Sandboxie Version 5.20 (64 bit) registered and licence activated until 2018</li></ul>
+<ul><li>Internet Explorer 11 without ad-blocker</li></ul>
+<ul><li>Google Chrome Version 60.0.3112.113 (Official Build) (64-bit) without ad-blocker</li></ul>
+<ul><li>AVG AntiVirus Free 17.6.30.29</li> </ul>
+<ul><li>Windows Firewall</li></ul>
+<ul><li>CryptoPrevent = disabled</li></ul>
+
+<br>
+<strong>TRIALS AND ERRORS</strong><br>
+None of the following tricks worked:
+<ul><li>uninstalling and reinstalling Sandboxie</li></ul>
+<ul><li>uninstalling and reinstalling Sandboxie in a different folder</li></ul>
+<ul><li>deleting the content of the sandbox</li></ul>
+<ul><li>creating a new sandbox</li></ul>
+<ul><li>adding Sandboxie to the Windows firewall exception list</li></ul>
+<ul><li>adding the Sandboxie Program Files folder to the AVG Resident Shield exceptions</li></ul>
+
+<br>
+<strong>MY ANALYSIS</strong><br>
+Sandboxie was working fine before, and still works fine for all non-browsing programs (File Explorer, Audacity, VLC, etc.). Both IE and Chrome work fine when not sandboxed. So my Sandboxie install is OK, I guess. However something is blocking all sandboxed browsers from opening correctly. Is there a Sandboxie log that would show what is happening when I try to start IE or Chrome?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Web browsers (only) not working</h3>
+				<div class="date">Posted: <strong>Tue Sep 05, 2017 12:41 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">For AVG, tested on 17.6.3029 along with chrome.<br>
+You can add this in the boxes you are having problems with alongside the new version of AVG to prevent the crash.
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>ClosedFilePath=*avg*snxhk*.dll</code></pre></div>
+
+or via the GUI Sandbox Settings &gt; Resource Access &gt; File Access &gt; Blocked Access &gt; Add &gt; 
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>*avg*snxhk*.dll</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Web browsers (only) not working</h3>
+				<div class="date">Posted: <strong>Tue Sep 05, 2017 1:43 pm</strong></div>
+				<div class="author">by <strong>Jimmy888</strong></div>
+				<div class="content">Worked great.<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Web browsers (only) not working</h3>
+				<div class="date">Posted: <strong>Thu Sep 07, 2017 7:53 pm</strong></div>
+				<div class="author">by <strong>KevinRt66</strong></div>
+				<div class="content">I just started having this problems today though it's worked fine every day in the past <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+It's very vague &amp; unclear what's meant by "add this in the boxes" <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+When I goto AVG settings, exceptions I added "ClosedFilePath=*avg*snxhk*.dll" there &amp; it didn't work <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+via the GUI Sandbox Settings &gt; Resource Access &gt; File Access &gt; Blocked Access &gt; Add &gt; <br>
+<br>
+I can't add "*avg*snxhk*.dll" it's asking me to select a directory/path<br>
+<br>
+Any help with the needed details is appreaciate. Thx!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Web browsers (only) not working</h3>
+				<div class="date">Posted: <strong>Fri Sep 08, 2017 4:25 am</strong></div>
+				<div class="author">by <strong>cafe_cyber</strong></div>
+				<div class="content">It worked! Thanks Syrinx  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Web browsers (only) not working</h3>
+				<div class="date">Posted: <strong>Fri Sep 08, 2017 11:08 am</strong></div>
+				<div class="author">by <strong>KevinRt66</strong></div>
+				<div class="content">I'm having this problem too<br>
+"Could not hook CoGetObject (1)"<br>
+"Sandboxed program has crashed: firefox.exe"<br>
+<br>
+Windows 7 64bit<br>
+Sandboxie 5.20<br>
+FF 55.0.3<br>
+AVG 17.6 (latest)<br>
+<br>
+I tried <br>
+"add this in the boxes you are having problems with alongside the new version of AVG to prevent the crash.<br>
+ClosedFilePath=*avg*snxhk*.dll<br>
+<br>
+though that's very vague &amp; unclear where we put it. Can you clarify incase I did it wrong?<br>
+<br>
+I tried<br>
+" via the GUI Sandbox Settings &gt; Resource Access &gt; File Access &gt; Blocked Access &gt; Add &gt;<br>
+*avg*snxhk*.dll<br>
+<br>
+though it won't let me enter that &amp; wants me to select folder/path. I entered 3 that have AVG DLL's in them &amp; it didn't help <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+Will there be a fix in the next release so others don't have this problem &amp; incase we can't get it resolved &amp; I have to wait?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Web browsers (only) not working</h3>
+				<div class="date">Posted: <strong>Fri Sep 08, 2017 12:45 pm</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">Try Edit/Add rather than Add?<br>
+<br>
+Personally, I put "ClosedFilePath=*avg*snxhk*.dll" in the config manually under Global Settings (Configure/Edit Configuration) but it depends what you want.<br>
+<br>
+Good luck.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AVG - Web Browsers - Could not hook CoGetObject - [SOLVED]</h3>
+				<div class="date">Posted: <strong>Mon Sep 18, 2017 9:53 am</strong></div>
+				<div class="author">by <strong>utmuk</strong></div>
+				<div class="content">Reinstall helped me. I don't have AVG.<br>
+<br>
+PS. I also restored the same Sandboxie.ini from old installation. So I doubt this has to do with settings.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24841&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:59:39 GMT -->
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=24012&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:59:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; File Access Exceptions</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>File Access Exceptions</h2>
+		<p><a href="viewtopic14031403.html?f=4&amp;t=24012">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=24012</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>File Access Exceptions</h3>
+				<div class="date">Posted: <strong>Sun Feb 12, 2017 7:47 am</strong></div>
+				<div class="author">by <strong>Iggiz</strong></div>
+				<div class="content">Currently it doesn't seem to be possible to add exceptions, I had to add each path manually to sandboxie.ini to get google chrome working. <br>
+It took me 123 lines to archive a full "block", with exceptions I could have done the same with a lot less lines. Also, if I install a new program then I have to open sandboxie.ini again and add the path manually to each sandbox, it's a lot of work sadly.<br>
+A exception list could be added on top, I think the implementation would be very easy. It also doesn't break existing sandboxie.ini setups since it's fully optional. <br>
+It doesn't need GUI either, just allow us adding it to the .ini file manually, I'm sure a lot people would be using it since it saves a lot time.<br>
+<br>
+<br>
+<strong>If exceptions would be possible my sandboxie.ini could be looking the following way:</strong><br>
+<br>
+<span style="text-decoration: underline">Basic block I would have in all my sandboxes:</span><br>
+<br>
+WriteFilePath=C:\<br>
+WriteFilePathException=%SystemRoot%\<br>
+<br>
+<br>
+<span style="text-decoration: underline">Let's make google chrome working:</span><br>
+<br>
+WriteFilePathException=chrome.exe,%Local AppData%\Google\Chrome\<br>
+WriteFilePathException=chrome.exe,C:\Program Files (x86)\Google\Chrome\<br>
+<br>
+Thats it! Much easier to setup, very user friendly<br>
+<br>
+<br>
+<br>
+<strong>Here is how I make google chrome working currently:</strong><br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>WriteFilePath=C:\Program Files (x86)\Random Program 1\
+WriteFilePath=C:\Program Files (x86)\Random Program 2\
+WriteFilePath=C:\Program Files (x86)\Random Program 3\
+WriteFilePath=C:\Program Files (x86)\Random Program 4\
+WriteFilePath=C:\Program Files (x86)\Random Program 5\
+WriteFilePath=C:\Program Files (x86)\Random Program 6\
+WriteFilePath=C:\Program Files (x86)\Random Program 7\
+WriteFilePath=C:\Program Files (x86)\Random Program 8\
+WriteFilePath=C:\Program Files (x86)\Random Program 9\
+... 49 other programs inside C:\Program Files (x86)
+
+WriteFilePath=C:\Users\Nutzer\AppData\Local\Random Program 1\
+WriteFilePath=C:\Users\Nutzer\AppData\Local\Random Program 2\
+WriteFilePath=C:\Users\Nutzer\AppData\Local\Random Program 3\
+WriteFilePath=C:\Users\Nutzer\AppData\Local\Random Program 4\
+WriteFilePath=C:\Users\Nutzer\AppData\Local\Random Program 5\
+WriteFilePath=C:\Users\Nutzer\AppData\Local\Random Program 6\
+WriteFilePath=C:\Users\Nutzer\AppData\Local\Random Program 7\
+WriteFilePath=C:\Users\Nutzer\AppData\Local\Random Program 8\
+WriteFilePath=C:\Users\Nutzer\AppData\Local\Random Program 9\
+... 15 other folders in C:\Users\Nutzer\AppData\Local\
+
+WriteFilePath=C:\Users\Nutzer\AppData\Low\
+WriteFilePath=C:\Users\Nutzer\AppData\Roaming\
+WriteFilePath=C:\Users\Nutzer\Videos\
+WriteFilePath=C:\Users\Nutzer\Searches\
+WriteFilePath=C:\Users\Nutzer\Saved Games\
+WriteFilePath=C:\Users\Nutzer\Pictures\
+WriteFilePath=C:\Users\Nutzer\OneDrive\
+WriteFilePath=C:\Users\Nutzer\Music\
+WriteFilePath=C:\Users\Nutzer\Links\
+WriteFilePath=C:\Users\Nutzer\Intel\
+WriteFilePath=C:\Users\Nutzer\Google Drive\
+WriteFilePath=C:\Users\Nutzer\Favorites\
+WriteFilePath=C:\Users\Nutzer\Downloads\
+WriteFilePath=C:\Users\Nutzer\Documents\
+WriteFilePath=C:\Users\Nutzer\Desktop\
+WriteFilePath=C:\Users\Nutzer\Contacts\
+WriteFilePath=C:\Users\Nutzer\3D Objects\
+WriteFilePath=C:\Users\Nutzer\.Random Program 1\
+WriteFilePath=C:\Users\Nutzer\.Random Program 2\
+WriteFilePath=C:\Users\Nutzer\.Random Program 3\
+WriteFilePath=C:\Users\Nutzer\.Random Program 4\
+WriteFilePath=C:\Users\Nutzer\.Random Program 5\
+WriteFilePath=C:\Users\Nutzer\.Random Program 6\
+WriteFilePath=C:\Users\Nutzer\.Random Program 7\
+WriteFilePath=C:\Users\Nutzer\.Random Program 8\
+WriteFilePath=C:\Users\Nutzer\.Random Program 9\
+WriteFilePath=C:\Users\Public\
+WriteFilePath=C:\Users\Default.migrated\
+WriteFilePath=C:\Users\Default User\
+WriteFilePath=C:\Users\Default\
+WriteFilePath=C:\Random Program 1\
+WriteFilePath=C:\Random Program 2\
+WriteFilePath=C:\Random Program 3\
+WriteFilePath=C:\Program Files\
+WriteFilePath=C:\System Volume Information\
+WriteFilePath=C:\Recovery\
+WriteFilePath=C:\ProgramData\
+WriteFilePath=C:\PerfLogs\
+WriteFilePath=C:\Logs\
+WriteFilePath=C:\Intel\
+WriteFilePath=C:\Config.Msi\</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: File Access Exceptions</h3>
+				<div class="date">Posted: <strong>Wed Feb 15, 2017 5:40 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Iggiz,<br>
+<br>
+Is there any particular reason why you are blocking everything? What are you trying to setup, exactly? <br>
+By default, applications can run in the Sandbox without any need to open paths or block locations (unless you are trying to do a specific thing?). <br>
+<br>
+Maybe you could try blocking Program files instead of the entire C: drive? <br>
+<br>
+The devs have been made aware of this request. At this point it would involve a lot of work, but they will keep it mind maybe for the future (no promises right now). <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: File Access Exceptions</h3>
+				<div class="date">Posted: <strong>Thu Feb 16, 2017 8:06 am</strong></div>
+				<div class="author">by <strong>Iggiz</strong></div>
+				<div class="content">Hi Barb!<br>
+<br>
+<br>
+Let me explain you what I'm trying to do here, by default Sandboxie protects your system from modifications but it doesn't protect you from data theft.<br>
+Many applications store sensitive data inside of your appdata folder, a good example is FileZilla. FileZilla stores the passwords of all servers you connected to in plain text inside of the appdate folder, if I don't block/hide all files inside C:\Users\ then any applications could in theory steal my passwords. <br>
+Blocking C:\Users\ is a must, however, I can't just block the whole C:\Users\ folder since the application I'm trying to run won't be able to access its own data files. My example above shows that I blocked all folder except the data folder of the example application google chrome (%Local AppData%\Google\Chrome\ was excluded from my list).<br>
+<br>
+<br>
+The reason why I hide/block the Program Files folder is mainly about privacy, some program like to scan your system to collect information about you.<br>
+<br>
+A good example about that can be found in your forums (see the links below). A new game came out but people were afraid to install it since the application is known to collect data about your installed programs and other things.<br>
+<br>
+<a href="viewtopic7b4e7b4e.php?t=11460" class="postlink">http://forums.sandboxie.com/phpBB3/view ... hp?t=11460</a><br>
+<a href="viewtopicdf60df60.php?f=5&amp;t=11807" class="postlink">http://forums.sandboxie.com/phpBB3/view ... =5&amp;t=11807</a><br>
+<a href="viewtopicdbcfdbcf.php?f=17&amp;t=19060" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 17&amp;t=19060</a><br>
+<br>
+<br>
+<br>
+Also, I think sandboxie should show a warning message after the installation and tell people about the problems with data theft, people should be aware of this problem.<br>
+<br>
+<br>
+<br>
+Thanks for taking your time and reviewing my request. Even if you can't make any promises right now, I'm still glad that there is a little hope!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: File Access Exceptions</h3>
+				<div class="date">Posted: <strong>Mon Feb 20, 2017 12:18 pm</strong></div>
+				<div class="author">by <strong>SkyLink</strong></div>
+				<div class="content">Not ideal but you may be able to get around this by re-installing Chrome into a custom folder instead of program files. Tutorials from a google search suggest you can achieve this by using symbolic links as by default Chrome doesn't prompt you for the installation directory.<br>
+<br>
++1 for the request though, exceptions would come in useful.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Block whole drive but with exemptions</h3>
+				<div class="date">Posted: <strong>Sat Feb 25, 2017 11:17 am</strong></div>
+				<div class="author">by <strong>JoSchu</strong></div>
+				<div class="content">Hi<br>
+<br>
+let's say I want to block access to my whole drive X: but allow access to the tree X:\temp\*.<br>
+With sandboxie 3.x, I had to explicitly block everything around X:\temp to accomplish that.<br>
+Is there a way with version 5.x to combine a minimal set of ClosedFilePath and Open[File|Pipe]Path statements (like 2 or 3) to do that?<br>
+You could also say that I would like to have a whitelist, not a blacklist.<br>
+The documentation still states that ClosedFilePath always wins (or has precedence), so I'm hoping for a trick <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+<br>
+(The above is just a minimal example. I actually want to profile all resource access of a specific program with procmon, use its' count occurrences function to build a path-whitelist and have everything else blocked...)<br>
+<br>
+Thanks for any help and hints, SB is great!!<br>
+Regards</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: File Access Exceptions</h3>
+				<div class="date">Posted: <strong>Mon Feb 27, 2017 1:16 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello JoSchu,<br>
+<br>
+I have merged your post with this one.<br>
+Please see above for some options/ideas.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Allow file access to certain folders</h3>
+				<div class="date">Posted: <strong>Sun Apr 23, 2017 5:22 am</strong></div>
+				<div class="author">by <strong>Rasheed187</strong></div>
+				<div class="content">I currently have blocked access to all data on on my E drive, but I want to allow access to only certain folders. Of course I can make blocking rules for most folders on the drive, but that would be very unhandy. So a "block all except" feature per sandbox or system-wide would be cool.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: File Access Exceptions</h3>
+				<div class="date">Posted: <strong>Mon Apr 24, 2017 12:26 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Rahseed187,<br>
+<br>
+I have merged your post with this one.<br>
+Please see above for some options/ideas.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: File Access Exceptions</h3>
+				<div class="date">Posted: <strong>Tue Jun 13, 2017 8:25 pm</strong></div>
+				<div class="author">by <strong>DanM</strong></div>
+				<div class="content">Adding this here per Barb. Would make Sandboxie the best virus program there is. My thread <a href="viewtopic38783878.html?f=17&amp;t=24529" class="postlink">viewtopic.php?f=17&amp;t=24529</a><br>
+<br>
+
+<blockquote class="uncited"><div>
+By default, Sandboxie does not block Read access to files and folders. But, the restriction options (like Write-Only Access) should allow you to block a lot of things.<br>
+Here's an example of a user that blocked pretty much everything, except for Google Chrome:<br>
+viewtopic.php?f=4&amp;t=24012&amp;p=126526&amp;hilit=chrome#p126368 </div></blockquote>
+
+Wow, I think that poster wanted exactly what I do. Wouldn't Sandboxie be much more powerful if all folders were by default Write only access enabled? Then as per the description all files and folders "will appear empty to programs running in the sandbox"? If said program needs access, Sandboxie would tell us exactly what it wants to read. <br>
+<br>
+Most programs only need to "create new files within the folders" and have no need or business reading other files on my computer. So why give programs so much freedom? With that restriction, Sandboxie would be pretty much key logger proof. Any plans on doing that? <br>
+<br>
+So if I am understanding correctly, Sandboxie by default allows a program to read whatever it wants in my drive, to make a duplicate virtual drive in Sandboxie. However, no change is made to my external. If that is correct, restricting internet should be enough but as I said above, most programs have no need or businesses reading any of my drives. Restrict write access by default would be a great addition to Sandboxie. If it can be done, I can see this being a software every household would need. However, I am sure it is much harder than I am making it.<br>
+<br>
+THIS------------------------------------------<br>
+P.S From reading the forum, I noticed a lot of people misunderstood like I did due to the way it was worded, the difference between read only and write only access. Most of us assumed if "read only access" is left blank nothing can be read but that is what "write only access" is. Read only means "excludes the effects of sandboxing on a file" which should probably be called something clearer IMO.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: File Access Exceptions</h3>
+				<div class="date">Posted: <strong>Tue Aug 01, 2017 1:22 pm</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content"><strong>+1!</strong> <br>
+<br>
+I bought Sandboxie for privacy reasons in the first place! I was looking for a Windows alternative to Androids <a href="https://github.com/M66B/XPrivacy" class="postlink">XPrivacy</a>. <br>
+<br>
+And the only reason I still don't recommend Sandboxie to coworkers, friends and family although I want to is because of the difficulty to maintain a secure configuration!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=24012&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:59:10 GMT -->
+</html>

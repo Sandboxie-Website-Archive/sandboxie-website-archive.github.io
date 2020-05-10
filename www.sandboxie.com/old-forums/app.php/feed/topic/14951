@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14951" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-03-19T00:05:54-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/14951</id>
+
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2013-03-19T00:05:54-04:00</updated>
+
+		<published>2013-03-19T00:05:54-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=88149#p88149</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=88149#p88149"/>
+		<title type="html"><![CDATA[[.04] XP SP3, Drop Rights/Forced programs issue]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=88149#p88149"><![CDATA[
+Yes, its fixed for all programs in my computer except Excel and Word.<br><br>When I click a Word or Excel file, this is what I see for either program:<br><br> <a href="http://img291.imagevenue.com/img.php?image=59323_Office1_122_591lo.JPG" class="postlink"><img src="http://img291.imagevenue.com/loc591/th_59323_Office1_122_591lo.JPG" class="postimage" alt="Image"></a><br><br>I ll use Word as an example. Sandboxie doesn't give messages when I click on a Word file, Word runs in the sandbox. The funny thing is that if I navigate to a Word file (File&gt;Open) from the UI in the picture, the file runs sandboxed in the Office sandbox and it gets displayed as it should.<br><br>So, I think, Word and Excel are working forced somewhat but something is keeping the file from being displayed properly when it is a forced program. XP SP3 32Bits. Microsoft Office Professional Edition 2003.<br><br>Tzuk, this version feels great, no messages from SBIE whatsoever.<img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Tue Mar 19, 2013 12:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-03-18T12:27:51-04:00</updated>
+
+		<published>2013-03-18T12:27:51-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=88118#p88118</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=88118#p88118"/>
+		<title type="html"><![CDATA[[.04] XP SP3, Drop Rights/Forced programs issue]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=88118#p88118"><![CDATA[
+Related topic:<br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=14826" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=14826</a><br><br>Fixed in version 4.01.04.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Mon Mar 18, 2013 12:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2013-03-13T21:49:23-04:00</updated>
+
+		<published>2013-03-13T21:49:23-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87948#p87948</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87948#p87948"/>
+		<title type="html"><![CDATA[[.04] XP SP3, Drop Rights/Forced programs issue]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87948#p87948"><![CDATA[
+Nice, thanks.<br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Wed Mar 13, 2013 9:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-03-13T17:49:56-04:00</updated>
+
+		<published>2013-03-13T17:49:56-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87943#p87943</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87943#p87943"/>
+		<title type="html"><![CDATA[[.04] XP SP3, Drop Rights/Forced programs issue]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87943#p87943"><![CDATA[
+I fixed this problem and this will be corrected in the next beta I release.  Apologize about the inconvenience.  This was caused due to some special handling for Drop Rights on Vista and later, which was incorrectly applied on XP as well.  So just a minor bug, not related to the effect that Drop Rights has on security.<br><br>There was a similar problem report here:<br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=14826" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=14826</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Mar 13, 2013 5:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2013-03-12T15:43:58-04:00</updated>
+
+		<published>2013-03-12T15:43:58-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87909#p87909</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87909#p87909"/>
+		<title type="html"><![CDATA[[.04] XP SP3, Drop Rights/Forced programs issue]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87909#p87909"><![CDATA[
+Hi Larry, about if I tried Forced Programs with Drop Rights on something that does NOT try to connect to the Internet, yes,  I tried most programs that I sandbox and force, including some that I don't allow to connect:  KMPlayer, WMP, Foxit, Word and Excel. I don't allow internet on any of their respective sandboxes and they all gave me message 2203 when I close the sandbox. In my case, all programs give me the message. If I don't enable Drop rights, all programs work well as forced except Excel and Word. <br><br>About whether this issue exist on other systems, I can tell you that up to beta .02, on my W7 32 bits, I did not experience this issue. There were other issues but I haven't tried .03 on it yet to see if its better now.<br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Tue Mar 12, 2013 3:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DR_LaRRY_PEpPeR]]></name></author>
+		<updated>2013-03-12T15:20:45-04:00</updated>
+
+		<published>2013-03-12T15:20:45-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87908#p87908</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87908#p87908"/>
+		<title type="html"><![CDATA[[.04] XP SP3, Drop Rights/Forced programs issue]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87908#p87908"><![CDATA[
+Drop Rights <a href="http://www.sandboxie.com/phpbb/viewtopic.php?p=87517#87517" class="postlink">doesn't even do anything</a> anyway, at least for file/reg. permissions (as far as <strong>Deny</strong>ing the Administrators group). Although it must change things in other ways, since it breaks/freezes stuff trying to connect to the Interent (crashing SbieSvc), causes total denial-of-service in certain circumstances (run Process Explorer sandboxed) that can only be fixed by restarting the computer, etc.<br><br>Did you try Forced Programs with Drop Rights on something that does NOT try to connect to the Internet? (I didn't.) Also, I believe you'll get the same 2203 message (I think that's what it was, after SbieSvc crashes) with Drop Rights if you manually do Run Sandboxed (e.g. not forced)...<br><br><br>I don't know if this stuff is just on XP (I've done very limited testing on 64-bit 7), but I can't believe the people that are using it "for real" and say that everything works like before...  <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"> <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> I think I'm going to try to work around the issues (if I'm not forgetting anything) and try to carefully run it "in production" soon (on XP of course) to evaluate further, like my sandboxed Firefox+EMET issues.<br><br>Dropping rights with <strong>SRP</strong> seems to work fine when launching Forced sandboxed programs (<em>not</em> via Run Sandboxed though), so that should still allow me to have dropped rights I guess, if there's not something else being missed by not enabling it in SBIE. It seems to be equivalent in 3.x.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11108">DR_LaRRY_PEpPeR</a> — Tue Mar 12, 2013 3:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bo.elam]]></name></author>
+		<updated>2013-03-12T13:21:46-04:00</updated>
+
+		<published>2013-03-12T13:21:46-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87906#p87906</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87906#p87906"/>
+		<title type="html"><![CDATA[[.04] XP SP3, Drop Rights/Forced programs issue]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=14951&amp;p=87906#p87906"><![CDATA[
+Hi tzuk, I noticed since the first beta for version 4 that the only way to get Forced programs to work in my XP SP3 is to disable Drop rights. If Drop rights is enabled, I get SBIE message 2203. <br><br>Thanks<br><br>Bo<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2542">bo.elam</a> — Tue Mar 12, 2013 1:21 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

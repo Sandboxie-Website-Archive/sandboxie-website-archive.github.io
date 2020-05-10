@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25062&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:26:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Network printer problems</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Network printer problems</h2>
+		<p><a href="viewtopicea68ea68.html?f=11&amp;t=25062">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25062</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Network printer problems</h3>
+				<div class="date">Posted: <strong>Thu Nov 02, 2017 10:52 am</strong></div>
+				<div class="author">by <strong>TriStarGod</strong></div>
+				<div class="content">I have two types of printers (Samsung and Brother).<br>
+For both, I keep facing issues on a Sandboxed Chrome. Right now, I'm focusing on resolving the Brother printers issues.<br>
+Both printers are networked (ie I setup the printer connection by saving a local path to the shared printers).<br>
+Usually I don't have issues printing from the printers that are connected directly to the computer. However, I almost always have an issue with connecting via the network.<br>
+<br>
+Both computers are Windows 10 Pro. One is x64 (the computer I am trouble shooting from) and the other x86.<br>
+<br>
+For testing purposes, I added <br>
+OpenFilePath=*<br>
+OpenKeyPath=*<br>
+OpenWinClass=*<br>
+OpenClsid=*<br>
+<br>
+I also tried OpenIPCPath=* but that just crashes chrome.<br>
+<br>
+Even with all this access, the print jobs fail with error. However, any time I close sandboxie, the print jobs pass on to the printer successfully.<br>
+<br>
+Usually I would debug with the help of the Event Viewer but sandboxie normally blocks it (which sucks). However, it finally gave me the following error:<br>
+The document Print Document, owned by xxxuser, failed to print on printer Brother DCP-7065DN Printer. Try to print the document again, or restart the print spooler. <br>
+Data type: NT EMF 1.008. Size of the spool file in bytes: 15715560. Number of bytes printed: 0. Total number of pages in the document: 1. Number of pages printed: 0. Client computer: \\XXX-PC. Win32 error code returned by the print processor: 5. Access is denied.<br>
+<br>
+Is this error because a sandboxed chrome is ANONYMOUS LOGON?<br>
+<br>
+I also tried using the Resource Access Monitor but it doesn't seem helpful. I get the following whenever I try to print via chrome to the networked Brother printer.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\HarddiskVolume2
+Clsid       -------------------------------
+File/Key    -------------------------------
+Image       -------------------------------
+Ipc         -------------------------------
+Ipc         \RPC Control\epmapper
+Ipc         \SBIE_DummyJob_chrome.exe_17
+Ipc         \Sessions\2\BaseNamedObjects\2DefaultTIPSharedMemory
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_03a7ffec9b3df62a883daff11ec8ddf25eae08101bd8436a102fef1d560fafcf
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_0a9560006734ac5937b4ebb3d0e2bf8f6964cfc53366baacff2c743e91ff7c93
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_0cb96b16917e5fa258c2810f9462c2154a965b555074e88efb51e389eaf2765f
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_16cc7ed06717e47b73e7a053a1781f7463e8b2a7390d4b6ffee9da19b519e9a2
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_341134bef9283083ac2240377d7f5098ecce8f52d0a635f6a58f98038aa6eb8f
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_3b95fe54054cf141d3eee2dc6268463dd1b5d5eb5af15c44781c1ee6cf38a0d0
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_44bfda3ad97c3ef53f9d72e05f95f9e554a3176740f3634fc159f51163d91174
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_4a55485234135e80a93f3e5a7f0fec29dd1a092abdddee114f2ff7b17252dade
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_5f422267f110131f474ef873a54e151479953d51bbf0fb3a9945942bc6f361fb
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_7cb33def82c28eba8b6877c4657ac3bd5aca5f5ccb66e9d026a18dfacf1c011e
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_82a7fe639436dcd8d866a689fe0e1ea94230aec2ae8d43a0303fc8461fc0841e
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_db4585cfb2eb858d874c852a978a4f4958276eb7742f99c0d36c5b0618cef2bf
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_dddea8f0aec65a1e850fc3c2b91eb46b825bc7b3b2ec741e369166a0fbec9956
+Ipc         \Sessions\2\BaseNamedObjects\CrSharedMem_e0f9bdf8562ee31197c7c151a85182b17c59a367de262d1215b0b0b24e12e958
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_9116
+Ipc         \Sessions\2\BaseNamedObjects\SboxSession
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\bcryptPrimitives.dll
+Ipc      O  \KnownDlls\cfgmgr32.dll
+Ipc      O  \KnownDlls\combase.dll
+Ipc      O  \KnownDlls\COMDLG32.dll
+Ipc      O  \KnownDlls\CRYPT32.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\gdi32full.dll
+Ipc      O  \KnownDlls\IMM32.dll
+Ipc      O  \KnownDlls\kernel.appcore.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\KERNELBASE.dll
+Ipc      O  \KnownDlls\MSASN1.dll
+Ipc      O  \KnownDlls\msvcp_win.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\powrprof.dll
+Ipc      O  \KnownDlls\profapi.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\sechost.dll
+Ipc      O  \KnownDlls\shcore.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\ucrtbase.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\win32u.dll
+Ipc      O  \KnownDlls\windows.storage.dll
+Ipc      O  \KnownDlls\WINTRUST.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \Sessions\2\Windows\ApiPort
+Ipc      O  \Sessions\2\Windows\SharedSection
+Ipc      O  \Sessions\2\Windows\Theme3498021060
+Ipc      O  \Sessions\2\Windows\ThemeSection
+Ipc      O  \ThemeApiPort
+Ipc      O  \Windows\Theme213654814
+Pipe        -------------------------------
+Pipe        ?
+Pipe        \Device\CNG
+Pipe        \Device\KsecDD
+Pipe        \Device\NamedPipe\crashpad_12552_HTHQTIPKJEPHGVBH
+Pipe        \device\namedpipe\crashpad_12552_hthqtipkjephgvbh
+Pipe        \device\namedpipe\mojo.12552.13456.10769024495526079879
+Pipe        \Device\NamedPipe\mojo.12552.13456.10769024495526079879
+Pipe        \device\namedpipe\mojo.12552.13456.10769024495526079879
+Pipe        \device\namedpipe\mojo.12552.13456.4355111064526869814
+Pipe        \Device\NamedPipe\mojo.12552.13456.4355111064526869814
+Pipe        \device\namedpipe\mojo.12552.13456.4355111064526869814
+WinCls      -------------------------------
+WinCls   X  Progman
+</code></pre></div>
+How do I resolve this problem?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Network printer problems</h3>
+				<div class="date">Posted: <strong>Thu Nov 02, 2017 4:47 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello TriStarGod,<br>
+<br>
+Are you able to print from other sandboxed applications? <br>
+What is your Sandboxie version?<br>
+Is there any antivirus installed?<br>
+Any other security software, or policies in place?<br>
+<br>
+Here are similar threads (different printers, but same situation. You may need to give direct access to the network location for that printer) that might help :<br>
+<a href="viewtopic21152115.html?p=130400#p130400" class="postlink">viewtopic.php?p=130400#p130400</a><br>
+<a href="viewtopic85ab-285ab.html?p=119854#p119854" class="postlink">viewtopic.php?p=119854#p119854</a><br>
+<br>
+Regarding OpenClsid=*, please go ahead and remove that setting to avoid getting a BSOD in Windows 10. That option is for testing purposes only, and it is currently not supported in Win 10. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25062&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:26:14 GMT -->
+</html>

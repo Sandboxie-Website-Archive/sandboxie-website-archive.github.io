@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<link rel="canonical" href="StartCommandLine.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="robots" content="index,follow">
+	<meta name="language" content="en">
+	<meta name="google-translate-customization" content="e0b0918ac010f34-ee72acc87a31fea6-gc7951f1948fb9449-11">
+	<meta name="description" content="Sandboxie - Sandbox security software for Windows. Install and run programs in a virtual sandbox environment without writing to the hard drive.">
+	<link rel="stylesheet" type="text/css" href="includes/style.css">
+	<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="includes/js/mobile-menu.js">
+	</script>
+	<script type="text/javascript">
+var onload_reposition_ie = 0;
+	</script>
+
+<!--[if IE]>
+<script type="text/javascript">
+onload_reposition_ie = 1;
+</script>
+<![endif]-->
+
+	<script type="text/javascript">
+function onload_reposition()
+{
+}
+	</script>
+
+	<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15566261-2', 'auto');
+ga('send', 'pageview');
+	</script>
+
+<title>Sandboxie - Start Command Line</title>
+<meta name="description" content="Start Command Line - Sandboxie, sandbox security and secure web browsing software for Windows">
+</head>
+<body onload="onload_reposition()">
+<a name="top"></a> 
+<div id="masthead">
+	<table class="masthead" width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td width="312" style="vertical-align:top;"><a href="index.html" title="Sandboxie.com"><img src="images/MastheadLogo.jpg" alt="" height="92" width="312"></a></td>
+			<td><span id="motto"><i>Trust&nbsp;No&nbsp;Program</i></span></td>
+		</tr>
+	</table>
+	<div id="submasthead">
+		<div id="drop-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="HelpTopics.html">Help &amp; FAQ</a></li>
+				<li><a href="https://forums.sandboxie.com/">Forum</a></li>
+				<li><a href="DownloadSandboxie.html">Download</a></li>
+				<li><a href="RegisterSandboxie.html">Buy</a>
+				<ul>
+					<li><a href="HomeUse.html">Home Use</a></li>
+				</ul>
+				</li>
+				<li><a href="SiteSearch.html">Search</a></li>
+				<li><a href="HowItWorks.html">How It Works</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container-menus">
+	<div class="one-menus">
+		<div id="google_translate_element">
+		</div>
+
+		<script type="text/javascript">
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,bg,cs,da,de,el,en,es,et,fi,fr,hr,hu,id,it,iw,jv,ko,mk,nl,pl,pt,ru,sk,sq,sv,tr,uk,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, gaTrack: true, gaId: 'UA-53196810-1'}, 'google_translate_element');
+}
+		</script>
+
+	</div>
+	<div class="two-menus">
+		<div id="nav-trigger">
+			<span>Menu</span>
+		</div>
+		<div id="nav-mobile"> 
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="HelpTopics.html">Help &amp; FAQ</a></li>
+			<li><a href="https://forums.sandboxie.com/">Forum</a></li>
+			<li><a href="DownloadSandboxie.html">Download</a></li>
+			<li><a href="RegisterSandboxie.html">Buy</a></li>
+			<li><a href="SiteSearch.html">Search</a></li>
+			<li><a href="HowItWorks.html">How It Works</a></li>
+		</ul>
+		</div> 
+	</div>
+</div><div id="wrapper">
+	<h1 style="margin:0;padding-top:.5em">
+		Start Command Line 
+	</h1>
+	<p>
+		The Sandboxie Start program can do any of the following, depending on command line parameters specified to it. 
+	</p>
+	<ul>
+		<li><a href="StartCommandLine.html#start">Start</a> programs under the supervision of Sandboxie
+		<li><a href="StartCommandLine.html#stop">Stop</a> sandboxed programs
+		<li><a href="StartCommandLine.html#list">List</a> sandboxed programs
+		<li><a href="StartCommandLine.html#delete">Delete</a> the contents of a sandbox
+		<li><a href="StartCommandLine.html#reload">Reload</a> Sandboxie configuration
+		<li> Initiate the <a href="StartCommandLine.html#disableforce">Disable Forced Programs</a> mode
+		<li><a href="StartCommandLine.html#related">Related</a> reading material
+	</ul>
+	<hr>
+	<h3>
+		<a name="start" id="start"></a>Start Programs 
+	</h3>
+	<p>
+		This is the default behavior. By specifying a full or partial path to a program executable file, Sandboxie Start will launch that program under the supervision of Sandboxie: 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  c:\windows\system32\calc.exe
+  "C:\Program Files\Sandboxie\Start.exe"  calc.exe
+	</pre>
+	<p>
+		Two special program names are allowed: 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  default_browser
+  "C:\Program Files\Sandboxie\Start.exe"  mail_agent	
+	</pre>
+	<p>
+		Sandboxie Start can also display the Run Any Program dialog window, or the Sandboxie Start Menu, depending on parameters specified: 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  run_dialog
+  "C:\Program Files\Sandboxie\Start.exe"  start_menu	
+	</pre>
+	<p>
+		In all forms, the parameter <em>/box:SandboxName</em> is applicable, and may be specified between Start.exe and the parameter, to indicate a sandbox name other than the default of <em>DefaultBox</em>. For example: 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  /box:TestBox  run_dialog	
+	</pre>
+	<p>
+		A special form of the /box parameter is <em>/box:_<strong>_ask_</strong>_</em> and causes Start.exe to display the sandbox selection dialog box. 
+	</p>
+	<p>
+		The parameter <em>/nosbiectrl</em> can be used to make sure Start.exe does not try to run <a href="SandboxieControl.html">Sandboxie&nbsp;Control</a> before running the sandboxed program.
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  /nosbiectrl calc.exe	
+	</pre>
+	<p>
+		The parameter <em>/silent</em> can be used to eliminate some pop-up error messages. For example: 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  /silent  no_such_program.exe
+	</pre>
+	<p>
+		In both silent and normal operation, Start.exe exits with a zero exit code on success, or non-zero on failure. In batch files, the exit code can be examined using the <em>IF ERRORLEVEL</em> condition. 
+	</p>
+	<p>
+		The parameter <em>/elevate</em> can be used to run a program with Administartor privileges on a system where User Account Control (UAC) is enabled. For example: 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  /elevate cmd.exe	
+	</pre>
+	<p>
+		The parameter <em>/env</em> can be used to pass an environment variable: 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  /env:VariableName=VariableValueWithoutSpace
+  "C:\Program Files\Sandboxie\Start.exe"  /env:VariableName="Variable Value With Spaces"	
+	</pre>
+	<p>
+		The parameter <em>/hide_window</em> can be used to signal that the starting program should not display its window: 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  /hide_window cmd.exe /c automated_script.bat	
+	</pre>
+	<p>
+		The parameter <em>/wait</em> can be used to run a program, wait for it to finish, and return the exit status from the program: 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  /wait cmd.exe	
+	</pre>
+	<p>
+		Note that Start.exe is a Win32 application and not a console application, so the system "start" command is useful here to force the system to wait for Start.exe to finish: 
+	</p>
+<pre>
+  start /wait "C:\Program Files\Sandboxie\Start.exe" /wait cmd /c exit 9
+  echo %ERRORLEVEL%
+  9	
+	</pre>
+	<p>
+		The system waits for Start.exe to finish, which in turn waits for "cmd /c exit 9" to finish, and then the exit status 9 is returned all the way back. 
+	</p>
+	<p>
+		Parameters can be combined in any order. For example: 
+	</p>
+<pre>
+   "C:\Program Files\Sandboxie\Start.exe"  /box:CustomBox /silent /nosbiectrl MyProgram.exe	
+	</pre>
+	<h3>
+		<a name="stop" id="stop"></a>Stop Programs 
+	</h3>
+	<p>
+		Terminate all programs running in a particular sandbox. Note that the request is transmitted to the Sandboxie service SbieSvc, which actually carries out the termination. 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  /terminate
+  "C:\Program Files\Sandboxie\Start.exe"  /box:TestBox  /terminate
+  "C:\Program Files\Sandboxie\Start.exe"  /terminate_all
+	</pre>
+	<p>
+		If the parameter <em>/box:SandboxName</em> is omitted, programs running in the default sandbox, <em>DefaultBox</em>, will be stopped. 
+	</p>
+	<p>
+		The form <em>/terminate_all</em> terminates all programs in all sandboxes. 
+	</p>
+	<hr>
+	<h3>
+		<a name="list" id="list"></a>List Programs 
+	</h3>
+	<p>
+		List the system process ID numbers for all programs running in a particular sandbox. 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  /listpids
+  "C:\Program Files\Sandboxie\Start.exe"  /box:TestBox  /listpids	
+	</pre>
+	<p>
+		If the parameter <em>/box:SandboxName</em> is omitted, programs running in the default sandbox, <em>DefaultBox</em>, will be listed. 
+	</p>
+	<p>
+		The output is formatted as one number per line. The first line contains the number of programs, followed by one process ID per line. Example output: 
+	</p>
+<pre>
+    "C:\Program Files\Sandboxie\Start.exe"  /listpids | more
+    3
+    3036
+    2136
+    384	
+	</pre>
+	<p>
+		Note that Start.exe is not a console applications, so the output does not appear in a command prompt window unless you pipe the output using a construct such as <em>| more</em>. 
+	</p>
+	<hr>
+	<h3>
+		<a name="delete" id="delete"></a>Delete Contents of Sandbox 
+	</h3>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  delete_sandbox
+  "C:\Program Files\Sandboxie\Start.exe"  delete_sandbox_silent	
+	</pre>
+	<p>
+		The <em>/box:SandboxName</em> parameter may be specified between Start.exe and the delete command. 
+	</p>
+	<p>
+		The <em>_silent</em> suffix on the delete command, indicates Sandboxie Start should silently ignore any errors and not display any error messages. 
+	</p>
+	<p>
+		The delete operation occurs in two phases: 
+	</p>
+	<ul>
+		<li> Phase 1 scans the contents of the sandbox and processes files which could pose a problem during the second phase: 
+		<ul>
+			<li> Junctions (also known as reparse points) are removed. 
+			<li> Read-only files and directories are made fully accessible. 
+			<li> Files and directories that have very long names are renamed to shorter names. 
+			<li> Renames the sandbox to the format _<em></em>_Delete_<em>(sandbox name)</em>_<em>(some random number)</em>_. For example, if the sandbox is DefaultBox, it could be renamed to __Delete_DefaultBox_01C4012345678912. 
+		</ul>
+	</ul>
+	<ul>
+		<li> Phase 2 deletes any sandboxes that were processed in phase 1. 
+		<ul>
+			<li> Sandboxes that were processed in phase 1 are those that have been renamed as described above. 
+			<li> More than one sandbox may be deleted in phase 2. 
+			<li> By default, the standard system command RMDIR is used to delete the renamed sandbox folder. 
+			<li> Alternatively, a third-party delete utility may used. See <a href="SecureDeleteSandbox.html">Secure&nbsp;Delete&nbsp;Sandbox</a>.
+		</ul>
+	</ul>
+	<p>
+		Issuing the <em>delete_sandbox</em> command causes Start.exe to invoke phase 1 followed by phase 2. Start.exe also accepts these commands to invoke a specific phase: 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  delete_sandbox_phase1
+  "C:\Program Files\Sandboxie\Start.exe"  delete_sandbox_phase2
+  "C:\Program Files\Sandboxie\Start.exe"  delete_sandbox_silent_phase1
+  "C:\Program Files\Sandboxie\Start.exe"  delete_sandbox_silent_phase2	
+	</pre>
+	<hr>
+	<h3>
+		<a name="reload" id="reload"></a>Reload Configuration 
+	</h3>
+	<p>
+		This command reloads the Sandboxie configuration in SandboxieIni into the active Sandboxie driver. Typically useful after manually editing the Sandboxie.ini file. 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  /reload	
+	</pre>
+	<p>
+		Note that reloading the configuration does not take effect on sandboxed programs that are already running when this command is issued. 
+	</p>
+	<hr>
+	<h3>
+		<a name="disableforce" id="disableforce"></a>Disable Forced Programs 
+	</h3>
+	<p>
+		The following command runs a program outside the sandox, even if the program is forced. It is similar to using the Run Outside Sandbox option from the sandbox selection window of the Run Sandboxed command. 
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  /dfp            c:\path\to\program.exe
+  "C:\Program Files\Sandboxie\Start.exe"  /disable_force  c:\path\to\program.exe	
+	</pre>
+	<p>
+		Note that /dfp and /disable_force are identical. 
+	</p>
+	<p>
+		An older form of this command can temporarily disable the forced programs mode, for all programs. It is similar in function to using the Disable Forced Programs command from the <a href="TrayIconMenu.html#disableforce">Tray Icon Menu</a> in Sandboxie Control (and not the <a href="FileMenu.html#disableforce">File Menu</a>).
+	</p>
+<pre>
+  "C:\Program Files\Sandboxie\Start.exe"  disable_force	
+	</pre>
+	<p>
+		Note the missing slash in this command syntax. Note also that this command is not a toggle. It always puts the Disable Forced Programs mode into effect and always restarts the countdown timer. At this time, Start.exe does not offer a way to request the cancelation of this mode. 
+	</p>
+	<hr>
+	<h3>
+		<a name="related" id="related"></a>Related Reading Material 
+	</h3>
+	<p>
+		See also: <a href="InjectDll.html">InjectDll</a> and <a href="SBIE_DLL_API.html">SBIE&nbsp;DLL&nbsp;API</a>
+	</p>
+	<p>
+		Go to <a href="HelpTopics.html">Help&nbsp;Topics</a>.
+	</p>
+</div>
+
+<p align="center" style="font-size:8pt; line-height:1.4em;">
+	<b>Sandboxie</b> is Copyright &copy; 2004-2019 by Sandboxie Holdings, LLC.&nbsp; All rights reserved. <br>
+	<b><a href="index.html">Sandboxie.com</a> | <a href="ContactAuthor.html">Contact Author</a></b> <br>
+</p>
+
+<script type="text/javascript" src="../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
+</body>
+</html>

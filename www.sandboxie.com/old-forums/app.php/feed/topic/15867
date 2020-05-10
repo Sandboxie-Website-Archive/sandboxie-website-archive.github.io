@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15867" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-07-31T10:39:02-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15867</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-31T10:39:02-04:00</updated>
+
+		<published>2013-07-31T10:39:02-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92452#p92452</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92452#p92452"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92452#p92452"><![CDATA[
+Good point.  Sandboxie treats the two forms the same way, but Local AppData with a space is the canonical one<br>from the User Shell Folders registry key.  I will use Local AppData with a space for this new setting.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Jul 31, 2013 10:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-07-31T10:03:19-04:00</updated>
+
+		<published>2013-07-31T10:03:19-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92448#p92448</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92448#p92448"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92448#p92448"><![CDATA[
+<blockquote><div><cite>tzuk wrote:</cite>%LocalAppData%\Microsoft\Internet Explorer\DOMStore\*</div></blockquote>Personally, I find it confusing to see references to %LocalAppData% and %Local AppData%.<br>Since %LocalAppData% works here, is it the same variable as %Local AppData% ?<br><br>%Local AppData% appears through-out templates.ini.<br>%LocalAppData% does not.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Wed Jul 31, 2013 10:03 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-31T07:12:54-04:00</updated>
+
+		<published>2013-07-31T07:12:54-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92433#p92433</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92433#p92433"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92433#p92433"><![CDATA[
+According to my tests, it is necessary to add one more Direct File Access setting to solve this problem.<br><br>Sandbox Settings &gt; Resource Access &gt; File Access &gt; Direct Access<br>Click Edit/Add and paste:<br><strong>%LocalAppData%\Microsoft\Internet Explorer\DOMStore\*</strong><br><br>This is only necessary if you already enabled the following setting:<br><br>Sandbox Settings &gt; Applications &gt; Web Browser &gt; Internet Explorer &gt; Allow direct access to Internet Explorer cookies<br><br>I am going to revise the "Allow direct access to Internet Explorer cookies" setting to include this change<br>so there is no need to add this manually.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Jul 31, 2013 7:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tes]]></name></author>
+		<updated>2013-07-29T00:05:54-04:00</updated>
+
+		<published>2013-07-29T00:05:54-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92358#p92358</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92358#p92358"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92358#p92358"><![CDATA[
+Bingo!!<br><br>The setting<br><br>[+] Allow direct access to Internet Explorer Cookies<br><br>was turned on.  When turned off, the web page loads properly.  I had turned it on a while back when I first loaded Windows 8 to try to fix the cookie issue prior to your fix.<br><br>Thank you very much.<br><br>-using-<br>- ie10 desktop version <br>- 4.05.02 sandboxie (registered and activated) <br>- win 8 / 32-bit <br>- no other software<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=12945">tes</a> — Mon Jul 29, 2013 12:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-28T16:27:52-04:00</updated>
+
+		<published>2013-07-28T16:27:52-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92352#p92352</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92352#p92352"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92352#p92352"><![CDATA[
+Two things seem interesting:<br><br>First, it looks like you have some settings enabled in<br>Sandbox Settings &gt; Applications &gt; Web Browser &gt; Internet Explorer<br><br>Is this correct?  What happens if you turn those settings off?<br><br>Second, you have some Office plugins in Internet Explorer, it seems.<br>Can you try to disable them to see if it makes a difference?<br><br>Thanks!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun Jul 28, 2013 4:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tes]]></name></author>
+		<updated>2013-07-28T12:33:14-04:00</updated>
+
+		<published>2013-07-28T12:33:14-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92346#p92346</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92346#p92346"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92346#p92346"><![CDATA[
+Here it is....<br>________________________________________________<br><br><br><em>snipped. --tzuk</em><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=12945">tes</a> — Sun Jul 28, 2013 12:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-28T03:25:27-04:00</updated>
+
+		<published>2013-07-28T03:25:27-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92335#p92335</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92335#p92335"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92335#p92335"><![CDATA[
+I understand, thanks.  Do you want to post a Resource Access Monitor log?  Might not help but certainly can't hurt.<br><br><a href="http://www.sandboxie.com/index.php?ResourceAccessMonitor" class="postlink">http://www.sandboxie.com/index.php?Reso ... essMonitor</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun Jul 28, 2013 3:25 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tes]]></name></author>
+		<updated>2013-07-27T08:16:40-04:00</updated>
+
+		<published>2013-07-27T08:16:40-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92318#p92318</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92318#p92318"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92318#p92318"><![CDATA[
+if a screen cap says a thousand words...<br><br><a href="http://postimg.org/image/6mwgl1a2v/full/" class="postlink">http://postimg.org/image/6mwgl1a2v/full/</a><br><a href="http://s7.postimg.org/a6ieaucsr/New_Bitmap_Image.gif" class="postlink">http://s7.postimg.org/a6ieaucsr/New_Bitmap_Image.gif</a><br><br><br>and the spinning thing in the middle just spins...<br><br><br>.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=12945">tes</a> — Sat Jul 27, 2013 8:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-26T03:22:39-04:00</updated>
+
+		<published>2013-07-26T03:22:39-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92278#p92278</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92278#p92278"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92278#p92278"><![CDATA[
+Can you first tell me what do you mean the site doesn't come up?  What happens in the browser?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Fri Jul 26, 2013 3:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tes]]></name></author>
+		<updated>2013-07-25T10:30:10-04:00</updated>
+
+		<published>2013-07-25T10:30:10-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92260#p92260</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92260#p92260"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92260#p92260"><![CDATA[
+hmm....<br><br>Thank you for checking...<br><br>Any ideas what I can try next?<br><br>(only internet/security software is Microsoft Security Essentials AV)<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=12945">tes</a> — Thu Jul 25, 2013 10:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-25T09:18:30-04:00</updated>
+
+		<published>2013-07-25T09:18:30-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92251#p92251</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92251#p92251"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92251#p92251"><![CDATA[
+Tested on Windows 8, both 32-bit and 64-bit, <a href="http://www.qz.com" class="postlink">www.qz.com</a> seem to load correctly for me with IE 10 under Sandboxie.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Jul 25, 2013 9:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-21T04:17:53-04:00</updated>
+
+		<published>2013-07-21T04:17:53-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92096#p92096</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92096#p92096"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92096#p92096"><![CDATA[
+OK, I will check on Windows 8.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun Jul 21, 2013 4:17 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tes]]></name></author>
+		<updated>2013-07-20T09:46:19-04:00</updated>
+
+		<published>2013-07-20T09:46:19-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92068#p92068</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92068#p92068"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=92068#p92068"><![CDATA[
+- ie10 desktop version<br>- 4.05.01 sandboxie (registered and activated)<br>- win 8 / 32-bit<br>- no other software<br><br><a href="http://www.qz.com" class="postlink">www.qz.com</a>  --&gt; still does not load<br><br>but unsandboxed loads fine<br><br><br>Thank you,<br>T<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=12945">tes</a> — Sat Jul 20, 2013 9:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nanana1]]></name></author>
+		<updated>2013-06-27T22:23:52-04:00</updated>
+
+		<published>2013-06-27T22:23:52-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=91241#p91241</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=91241#p91241"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=91241#p91241"><![CDATA[
+using ie10 desktop version<br>win7<br>64-bit<br>registered and activated 4.02<br>no other software in use<br><br><br><a href="http://www.qz.com" class="postlink">www.qz.com</a> --&gt; loads properly<br><br><a href="http://postimg.org/image/kyuvveu0v/" class="postlink"><img src="http://s11.postimg.org/kyuvveu0v/image.jpg" class="postimage" alt="Image"></a><br><br>unsandboxed --&gt; ie10 also loads fine<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=8321">nanana1</a> — Thu Jun 27, 2013 10:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tes]]></name></author>
+		<updated>2013-06-27T21:29:27-04:00</updated>
+
+		<published>2013-06-27T21:29:27-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=91240#p91240</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=91240#p91240"/>
+		<title type="html"><![CDATA[[.03] Blank IE window with Direct Access to Cookies]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15867&amp;p=91240#p91240"><![CDATA[
+- using ie10 desktop version<br>- win8 <br>- 32 bit <br>- registered and activated 4.03.02 sandboxie<br>- no other software in use<br><br><br><a href="http://www.qz.com" class="postlink">www.qz.com</a>  --&gt;  fails to load<br><br>unsandboxed --&gt;  in ie10 loads fine<br><br><br><br>Thank you for developing and ongoing support of this software.<br>T<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=12945">tes</a> — Thu Jun 27, 2013 9:29 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

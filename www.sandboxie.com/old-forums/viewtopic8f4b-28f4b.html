@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13583&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:31:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Allowing Sandboxed Program Access to SQL Server</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Allowing Sandboxed Program Access to SQL Server</h2>
+		<p><a href="viewtopic6a9c6a9c.html?f=17&amp;t=13583">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=13583</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Allowing Sandboxed Program Access to SQL Server</h3>
+				<div class="date">Posted: <strong>Sun Sep 02, 2012 2:37 pm</strong></div>
+				<div class="author">by <strong>NMEVA</strong></div>
+				<div class="content">I have a program that I need to run sandboxed so it cannot write its entries to the registry, program data etc, however this program creates and utilizes SQL Databases. I have an SQL Instance installed and setup that I need my program to be able to communicate with so it can use the database files it has, but still keep the rest of the program sandboxed. <br>
+<br>
+I tried setting the Resource Access Direct Access as well as Full Access options to include C:\ProgramFiles(x86)\Microsoft SQL Server\, but it still seems to be failing to communicate with the SQL Instance. I tried searching the forums but didn't find anything that seemed applicable. Can anyone shed some light on this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 02, 2012 3:58 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Communicating with an unsandboxed program typically involves things like IPC Access and Window Access settings along with Direct or Full Access for folders or files, so allowing just Direct or Full Access to folders and files won't do it.<br>
+<br>
+These resources are usually identified by using the Resource Access Monitor, but there's still guesswork involved in trying to identify which resources to allow in the settings.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 02, 2012 4:34 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Maybe you could set up an ODBC connection to the SQL server and have the connection go through TCP/IP.  Just an idea.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 03, 2012 3:31 am</strong></div>
+				<div class="author">by <strong>NMEVA</strong></div>
+				<div class="content">Is it possible to setup a sandbox to allow all connections, then explicitly block Program Data, Program Files, and registry entries?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 03, 2012 11:00 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Not really.  One more thing you can try is to enable Sandbox Settings &gt; Applications &gt; Accessibility &gt; Screen Readers.  This weakens the boundary of the sandbox and might get the SQL connections working.  That is if the SQL connections run through COM.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13583&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:31:46 GMT -->
+</html>

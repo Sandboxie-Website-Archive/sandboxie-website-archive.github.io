@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/12937" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2016-12-20T10:11:21-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/12937</id>
+
+		<entry>
+		<author><name><![CDATA[RockyTDR]]></name></author>
+		<updated>2016-12-20T10:11:21-04:00</updated>
+
+		<published>2016-12-20T10:11:21-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=125125#p125125</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=125125#p125125"/>
+		<title type="html"><![CDATA[Re: DUTCH Translation Status]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=125125#p125125"><![CDATA[
+<blockquote><div><cite>Curt@invincea wrote:</cite>There have been several messages added since tzuk's original post back in 2012.</div></blockquote>The updated translations can be found at my dropbox, same url as before:<br><a href="https://dl.dropboxusercontent.com/u/92233384/Text-Dutch-1043-20160921.txt" class="postlink">https://dl.dropboxusercontent.com/u/922 ... 160921.txt</a> <br><br>Please let me know if there are updated strings that need translation!<br><br>Remark: some translated strings don't fit into the UI. Is it possible to provide bigger text spaces on some menus?<br><br>Regards!<br><br>Thomas<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32023">RockyTDR</a> — Tue Dec 20, 2016 9:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2016-10-07T13:23:13-04:00</updated>
+
+		<published>2016-10-07T13:23:13-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=123667#p123667</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=123667#p123667"/>
+		<title type="html"><![CDATA[Re: DUTCH Translation Status]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=123667#p123667"><![CDATA[
+There have been several messages added since tzuk's original post back in 2012. Here is a list of the msgs that are missing in your new translation.<br><div class="codebox"><p>CODE: </p><pre><code>*==========* Missing Messages in Text-Dutch-1043.txt*==========1316;pop;inf;01SBIE1316 Blocked request to generate device event in the sandbox.1319;pop;inf;01SBIE1319 Blocked spooler print to file, %2 %3.1320;pop;wrn;01SBIE1320 To allow print spooler to write outside the sandbox for this process, please double-click on this message line.2224;pop;wrn;01SBIE2224 Sandboxed program has crashed: %2.3457;txt;01&amp;Sandboxie Forum (Web).3458;txt;01Allow direct access to Windows Font Cache.3459;txt;01Allow direct access to qWave driver (Google Hangouts).3950;txt;01Print Spooler.3951;txt;01The Windows Print Spooler runs outside of Sandboxie's supervision.  A sandboxed application that requests the Print Spooler print to a file will be blocked, because this file will be written outside the sandbox..3952;txt;01If you wish to allow the Print Spooler to print to a file, you can enable this setting. It is recommended that you enable this option only when needed..3953;txt;01Allow the Windows Print Spooler to print to file..3955;txt;01Network Files.3956;txt;01Network files and folders are normally visible to sandboxed applications..3957;txt;01If you wish to block sandboxed applications from accessing files and folders on your network, you can enable this setting. Individual files and folders can be opened for sandboxed applications by adding them under Resource Access -&gt; File Access..3958;txt;01Block network files and folders unless specifically opened..</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Fri Oct 07, 2016 1:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Curt@invincea]]></name></author>
+		<updated>2016-10-07T12:22:23-04:00</updated>
+
+		<published>2016-10-07T12:22:23-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=123666#p123666</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=123666#p123666"/>
+		<title type="html"><![CDATA[Re: DUTCH Translation Status]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=123666#p123666"><![CDATA[
+Thank you for your work on this. We appreciate it. We will get this into a Beta release in the near future as soon as we can solve several Win 10 Anniv. Update issues.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=20645">Curt@invincea</a> — Fri Oct 07, 2016 12:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[RockyTDR]]></name></author>
+		<updated>2016-10-06T10:26:47-04:00</updated>
+
+		<published>2016-10-06T10:26:47-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=123651#p123651</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=123651#p123651"/>
+		<title type="html"><![CDATA[DUTCH Translation Status]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=123651#p123651"><![CDATA[
+Hello all,<br><br>I completely reworked and updated the Dutch translations of Sandboxie with the help of a friend.<br><br>I am a translation manager in Dutch for e.g. VLC Media Player, Audacity, WinMerge, Aegisub,... (my username is RockyTDR on Transifex)<br><br>I shared the translation file on my dropbox: <a href="https://dl.dropboxusercontent.com/u/92233384/Text-Dutch-1043-20160921.txt" class="postlink">https://dl.dropboxusercontent.com/u/922 ... 160921.txt</a><br><br>Is it possible to apply the translations?<br><br>I tried to send a mail to Sandboxie support and PM a board member without any results, so i'm trying it here... <br><br>Regards!<br><br>Thomas De Rocker<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32023">RockyTDR</a> — Thu Oct 06, 2016 10:26 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Exaken]]></name></author>
+		<updated>2013-03-24T17:04:09-04:00</updated>
+
+		<published>2013-03-24T17:04:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=88377#p88377</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=88377#p88377"/>
+		<title type="html"><![CDATA[DUTCH Translation Status]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=88377#p88377"><![CDATA[
+I've even more!<br><br>3909;txt;01<br>De bestands verplaatsing-instelling beperkt de maximale grootte van een bestand dat gekopieërd kan worden in de sandbox.<br><br>Deze instelling is momenteel ingesteld op %3 kilobytes in sandbox '%2'.<br>klik OK om deze aan te veranderen in %4 kilobytes.<br><br>Je kan deze limiet ook wijzigen door het sandbox-instellingen menu te openen en naar de bestand-verhuizen instellingen pagina te gaan.<br>.<br><br>3421;txt;01<br>&amp;Beeld<br>.<br><br>3446;txt;01<br>&amp;Instellingen Bewerken<br>.<br><br>3447;txt;01<br>&amp;Instellingen Herladen<br>.<br><br>3502;txt;01<br>&amp;Instellingen Vergrendelen<br>.<br><br>3453;txt;02<br>Aan de slag &amp;Handleiding<br>.<br><br>3454;txt;01<br>Check voor &amp;Updates<br>.<br><br>3455;txt;01<br>&amp;Registreer Sandboxie<br>.<br><br>3471;txt;01<br>&amp;Beëindig Programma's<br>.<br><br>3495;txt;01<br>Maak een bureaublad snelkoppeling<br>.<br><br><br>3529;txt;01<br>Weet je zeker dat je sandbox %2 wilt verwijderen?<br>.<br><br>3532;txt;01<br>In vervolg beëindig processen zonder te vragen<br>.<br><br>3533;txt;01<br>Je kan bestanden knippen of kopieëren vanuit een gesandboxte Windows verkenner venster met map weergave<br>en je kan ze direct in een niet gesandboxte map plakken.<br>.<br><br>3539;txt;01<br>Sandbox '%2' werd gemaakt %3 dagen geleden.<br><br>Houd er rekening mee om af en toe de inhoud van je sandbox te verwijderen .<br><br>Om automatische verwijdering in te stellen, gebruik het instelling commando <br>van het Sandbox menu in Sandboxie Controle.<br>.<br><br>3540;txt;01<br>Het Sandboxie.ini configuratiebestand kan niet worden aangepast omdat er<br>een wachtwoord bescherming op zit. Om het toch aan te passen, gebruik het <br>Lock-Configuratie commando om dit wachtwoord uit te schakelen.<br>.<br><br># 3605;txt;01<br># <br># Sandboxie draait uw toepassingen in een beschermde geïsoleerde ruimte,<br># genaamd een sandbox (zandbak).<br># <br># Applicaties gevangen in de sandbox hebben geen toegang tot wijzigen <br># of beschadigen van je PC.<br># <br># Je kan ook deze zandbak gebruiken om nieuwe dingen te installeren en <br># uit te testen.<br># .<br><br># 3606;txt;01<br># Als je nog niet bekend bent met Sandboxie,<br># neem dan even de tijd om het 'Om te beginnen' handboek te lezen.<br># .<br><br>3621;txt;01<br>Controleer op Updates<br>.<br><br>3626;txt;01<br>In het vervolg, check voor updates zonder te vragen.<br>.<br><br>3627;txt;01<br>Privacy Beleid: Uw persoonlijke informatie word niet verzonden aan, noch verzameld door Sandboxie.<br>.<br><br>3628;txt;01<br>Update controle is reeds bezig, even geduld.<br>.<br><br><strong>Edit: More improved translations.</strong><br><br>3667;txt;01<br>Fout:  Ongeldige naam ingevoerd. Gebruik enkel letters en cijfers.  Spaties en andere speciale tekens zijn niet toegestaan. De lengte van de naam mag niet langer zijn dan 32 karakters.<br>.<br><br>3668;txt;01<br>Fout: De naam bestaat al, geef een nog niet gebruikte naam(door sandbox.)<br>.<br><br>3669;txt;01<br>Kopieër instellingen van bestaande sandbox:<br>.<br><br>4665;txt;01<br>Fout: Bestaande naam ingevoerd. De naam is al in gebruik door een verborgen sandbox. Gebruik het "Onthul verborgen Sandbox" commando uit het Sandbox menu.<br>.<br><br>3689;txt;01<br>Snelkoppel pictogram<br>.<br><br>3696;txt;01<br>Toevoegen sandboxen als doelen bij "Zend naar" actie<br>.<br><br>3697;txt;01<br>De Sandboxie Startmenu wordt nu getoond.  Kies een toepassing uit het menu,<br>en Sandboxie zal een nieuwe snelkoppeling op je bureaublad maken om dat programma te starten onder toezicht van sandboxie.<br>.<br><br>3712;txt;01<br>De bestanden hieronder zijn geschikt voor snel-herstel uit de sandbox.  Selecteer een bestand of map en klik op een van de herstel koppen hieronder om het geselecteerde betsand te herstellen.<br>.<br><br>3713;txt;01<br>Klik op wis inhoud om elk proces dat draait in de sandbox te beëindigen, en zijn inhoud te verwijderen.<br>.<br><br>3716;txt;02<br>De volgende bestanden zijn geschikt voor direct herstel, en kunnen verplaats worden buiten de sandbox.<br>.<br><br>3719;txt;01<br>Niet opnieuw vragen voor direct herstel, tot alle programmas in deze box zijn beëindigt.<br>.<br><br>3723;txt;01<br>Selecteer een map waarin het bestand of de map zal worden teruggezet.<br>.<br><br>3727;txt;01<br>De map werd toegevoegd aan de lijst van snel-herstel mappen.<br><br>Echter zijn er op dit moment geen bestanden die herstelt kunnen worden vanuit de map.<br>.<br><br>3728;txt;01<br>Geen bestand gekozen voor herstel.<br>.<br><br>3729;txt;01<br>Herstellen gefaald. Het volgende bestand kon niet worden verplaatst uit de sandbox:<br>.<br><br>3731;txt;01<br>Sommige sandboxed programmas konden niet gestopt worden. De inhoud van de sandbox zal niet worden verwijderd.<br>.<br><br>3732;txt;01<br>Er zijn geen bestanden om te herstellen op dit moment.<br>.<br><br>3733;txt;01<br>Bestand kan niet worden hersteld omdat de naam van bestemmingsmap te lang is.<br>Kies aub een andere bestemmingsmap.<br>.<br><br>3987;txt;01<br>De volgende bestanden waren reeds hersteld en verplaatst buiten de sandboxes.<br>.<br><br>3763;txt;01<br>Programma's die kunnen verbinden met het internet in deze sandbox:<br>.<br><br>3764;txt;01<br>Zet beperkingen aan, maar sta dit programma toe te verbinden met het Internet.<br>.<br><br>3770;txt;01<br>De nieuwe instellingen zijn niet geldig voor de reeds draaiende sandboxed-programmas. De instellingen zullen toegepast worden de volgende keer als dit programma start.<br>.<br><br>3771;txt;01<br>(Deze optie is enkel beschikbaar in de geregistreerde versie van Sandboxie)<br>.<br><br>3772;txt;02<br>Weet je zeker dat je %2 als gedwongen programma wilt instellen?<br>.<br><br>3773;txt;02<br>Weet je zeker dat je %2 als gedwongen map wilt instellen?<br>.<br><br># 3774;txt;02<br># Weet je zeker dat je %2 als gedwongen gebruiker wilt instellen?<br># .<br><br>3775;txt;02<br>Je hebt een wijziging aangebracht die niet makkelijk ongedaan gemaakt kan worden.<br>.<br><br>3802;txt;01<br>Deze pagina is met opzet blank gelaten<br>.<br><br>3803;txt;01<br>Je moet de wijzigingen op dit blad eerst toepassen voordat je verder kan gaan.<br>.<br><br>3804;txt;01<br>Pas wijzigingen toe wanner er van pagina veranderd word.<br>.<br><br>3805;txt;01<br>Alle Programma's<br>.<br><br>3809;txt;01<br>Bewerk bronnaam<br>.<br><br>3552;txt;01<br>Keer betekenis van huidige de selectie om<br>.<br>[/b]<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=14589">Exaken</a> — Sun Mar 24, 2013 5:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-03-24T16:29:11-04:00</updated>
+
+		<published>2013-03-24T16:29:11-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=88376#p88376</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=88376#p88376"/>
+		<title type="html"><![CDATA[DUTCH Translation Status]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=88376#p88376"><![CDATA[
+Thanks!<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun Mar 24, 2013 4:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Exaken]]></name></author>
+		<updated>2013-03-25T18:56:58-04:00 </updated>
+
+		<published>2013-03-24T16:25:52-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=88375#p88375</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=88375#p88375"/>
+		<title type="html"><![CDATA[DUTCH Translation Status]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=88375#p88375"><![CDATA[
+I came across some translations which I think can be better.<br><br>1101;evt;inf;01<br>SBIE1101 Sandboxie driver (SbieDrv) versie %2 geïnitialiseerd<br>.<br><br>1102;evt;inf;01<br>SBIE1102 Sandboxie driver (SbieDrv) uitpakken<br>.<br><br>1103;evt;err;01<br>SBIE1103 Sandboxie driver (SbieDrv) versie %2 kan niet gestart worden<br>.<br><br>1104;evt;err;01<br>SBIE1104 Onvoldoende systeembronnen voor de aanvangsinstelling<br>.<br><br>1105;evt;err;01<br>SBIE1105 Onbekend besturingssysteem versie:  %2<br>.<br><br>.<br><br># 1107;evt;err;01<br># SBIE1107 Geen toegang tot LokaalSysteem account %2<br># .<br><br>1108;evt;err;01<br>SBIE1108 Procedure %2 kon niet worden geanalyseerd<br>.<br><br><br>1110;evt;err;01<br>SBIE1110 Kan type %3 niet onderscheppen, fout %2<br>.<br><br>1111;evt;err;01<br>SBIE1111 System DLL %3 kan niet worden geladen %2<br>.<br><br>1153;evt;pop;err;01<br>SBIE1153 Sandboxie initializatie gefaald.  Sluit alle programma's en her installeer OF herstart je PC.<br>.<br><br>2223;pop;wrn;01<br>SBIE2223 Om de bestansgrootte limiet te verhogen van het kopieëren van bestanden, klik aub op dit bericht<br>.<br><br>2102;pop;inf;01<br>SBIE2102 Bestand is te groot om in de sandbox te kopieëren - %2<br>.<br><br>2193;pop;inf;01<br>SBIE2193 Zorg ervoor om de sandbox te wissen na het voltooien van de update proces.<br>.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=14589">Exaken</a> — Sun Mar 24, 2013 4:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2012-08-16T10:32:16-04:00</updated>
+
+		<published>2012-08-16T10:32:16-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=80116#p80116</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=80116#p80116"/>
+		<title type="html"><![CDATA[DUTCH Translation Status]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=80116#p80116"><![CDATA[
+*==========<br>* Missing Messages in Text-Dutch-1043.txt<br>*==========<br><br>There are no missing messages.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Aug 16, 2012 10:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2012-05-13T11:28:27-04:00</updated>
+
+		<published>2012-05-13T11:28:27-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=80115#p80115</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=80115#p80115"/>
+		<title type="html"><![CDATA[DUTCH Translation Status]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=12937&amp;p=80115#p80115"><![CDATA[
+Translation package (Compressed): <br><a href="http://www.sandboxie.com/i18n/SbieText.zip" class="postlink">http://www.sandboxie.com/i18n/SbieText.zip</a> <br><br>Contains: <br>Text-English-1033.txt <br>Text-Dutch-1043.txt<br>Parse.exe <br><br>* * *<br><br>The command used to generate the report below:<br><div class="codebox"><p>CODE: </p><pre><code>parse.exe Text-English-1033.txt Text-Dutch-1043.txt &gt; Report.txt 2&gt;&amp;1</code></pre></div><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun May 13, 2012 11:28 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

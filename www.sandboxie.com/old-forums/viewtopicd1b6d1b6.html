@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25001&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:48:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Windows 10 - Fall Update - [Supported in Sandboxie 5.22]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Windows 10 - Fall Update - [Supported in Sandboxie 5.22]</h2>
+		<p><a href="viewtopic40184018.html?f=11&amp;t=25001">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25001</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>3</strong></div>
+					<div class="post">
+				<h3>Windows 10 - Fall Update - [Supported in Sandboxie 5.22]</h3>
+				<div class="date">Posted: <strong>Mon Oct 16, 2017 1:07 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">All,<br>
+<br>
+Please try the latest beta 5.21.7 for full support for Windows 10 - Fall Update. <br>
+<br>
+Here's a list issues that have been addressed:<br>
+<br>
+- ReplaceFileW windows API function is causing a leak into the host.  For example, Chrome extensions may leak outside the Sandbox and corrupt the host ones when trying to update them inside Sandboxie. <strong>[Fixed in Beta 5.21.6]</strong><br>
+<br>
+-Right-clicking on sandboxed Windows Explorer files/folders crashes explorer for 5 minutes (after 5 minutes or so, the right-click action starts working).<strong> Fixed in beta 5.21.7</strong><br>
+<br>
+-"SBIE2101 OpenProcess(C0000022) access=001FFFFF initialized=1" when using "OpenWith" via a Sandboxed Explorer --&gt; Related to Windows Defender. <strong>Fixed in Beta 5.21.7 </strong><br>
+<br>
+Please feel free to reply with any new issues you encounter while using the latest Windows Insider v17017 (Fast Ring), or once you receive the Fall Update and the latest Sandboxie beta.<br>
+<strong>Before posting a problem, be sure to test it in a new Sandbox with default settings + Sandboxie latest beta. If the issue persists, provide this information:</strong><br>
+<a href="viewtopic03920392.html?p=104180#p104180" class="postlink">viewtopic.php?p=104180#p104180</a><br>
+<br>
+For questions regarding betas (as well as download links), please see:<br>
+<a href="viewtopic95959595.html?f=62&amp;t=24741" class="postlink">viewtopic.php?f=62&amp;t=24741</a><br>
+<br>
+Regards,<br>
+Barb.-<br>
+<br>
+<strong>PS: Off-topic messages will be deleted. This thread is for windows Creator's Fall Update issues + Sandboxie latest beta ONLY. </strong></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 2:13 am</strong></div>
+				<div class="author">by <strong>vgishmasters</strong></div>
+				<div class="content">I can confirm this -"SBIE2101 OpenProcess(C0000022) access=001FFFFF initialized=1" when launching certain apps.  on sandboxie 5.20 with portable application ( firefox. opera. teamviewer) on windows 1703 Creators update(i stayed on it till you will release 5.21 for windows 1709)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 2:16 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistbbc9.html?mode=viewprofile&amp;u=34530">vgishmasters</a> wrote: <a href="viewtopicd272-2d272.html?p=130686#p130686" data-post-id="130686" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Oct 18, 2017 2:13 am</div></cite>
+I can confirm this -"SBIE2101 OpenProcess(C0000022) access=001FFFFF initialized=1" when launching certain apps.  on sandboxie 5.20 with portable application ( firefox. opera. teamviewer) on windows 1703 Creators update(i stayed on it till you will release 5.21 for windows 1709)
+</div></blockquote>
+You need to update to latest beta 5.21.4.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 2:39 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Hi Barb, I upgraded my W10 64 bits laptop to FCU. I am glad to report that despite Sandboxie not officially supporting the Fall Creators Update as of yet, all programs and functions I run sandboxed work excellent in my laptop. I tested Firefox 32 bits, Internet explorer 11, Libre Office portable, Foxit portable, 7Zip, KMPlayer, Irfan view and Windows media player. Also, forcing my Download folder and forcing USB drives worked as good as ever.<br>
+<br>
+Regarding the 2 known issues you reported in the opening post, I cant test Chrome as I dont install it in my real system but I can confirm the problem sandboxing Windows explorer. I dont open sandboxed Windows explorer by right clicking it but by clicking on a sandboxed shortcut. I waited about 25 seconds, and it didn't open. Thats really the only poblem I found using SBIE in W10 after updating to the FCU.<br>
+<br>
+Let me point out something that might give the developers a clue for fixing the Windows explorer problem. I tested forcing my USB drives, it worked as good as ever. And lets remember, when you force USB drives, and you plug in one, the USB folder pops up open using a sandboxed version of Windows explorer. So, when forcing USB folders, Windows explorer runs sandboxed automatically with no delay. Maybe knowing that gives a ckue.<br>
+<br>
+I saw this message below when using File explorer while navigating folders when running Firefox sandboxed. It can be hidden and doesn't cause any issues. Is a new message, I never seen it before. I discovered it while saving videos in YouTube. Easy to reproduce.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 10:25 am</strong></div>
+				<div class="author">by <strong>lopezgreat</strong></div>
+				<div class="content">unluckily i missed this thread and update to the latest win10 update<br>
+now sandboxie is useless, SBIE2101 for firefox, chrome, media player classic, basically any app<br>
+so folks dun be so silly to update your windows unless u dont need sandboxie <img class="smilies" src="images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 10:36 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello lopezgreat,<br>
+<br>
+Please follow the guidance in the original post and provide the info required so that I can test your issue.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 10:46 am</strong></div>
+				<div class="author">by <strong>lopezgreat</strong></div>
+				<div class="content">os: win10 x64 1709 home edition<br>
+sandboxie: 5.20 64bit<br>
+firefox: 56.0 64bit<br>
+chrome: 61.0.3163 64bit<br>
+media player classic: 1.7.11.24<br>
+<br>
+all showed SBIE2101 when run inside sandboxie, then quitted itself</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 10:49 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello lopezgreat ,<br>
+<br>
+Please see the original post, you need to use the latest beta.<br>
+Sandboxie 5.20 was released on June 2017, so it will not work with major Windows 10 updates released after that time.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 10:54 am</strong></div>
+				<div class="author">by <strong>lopezgreat</strong></div>
+				<div class="content">unfortunately same result</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Wed Oct 18, 2017 11:02 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello lopezgreat ,<br>
+<br>
+UPDATE---&gt; Still unable to repro with latest beta + Creator's Fall Update <br>
+-----------------------------------------------------------------------------------------------------------------------------------------------<br>
+I am unable to repro the issue in the Fast Ring, I am currently updating my stable Win 10 to 1709  and will re-test then.<br>
+<br>
+Do you have any security software installed?<br>
+Is the issue occurring in a new Sandbox with default settings + Sandboxie's latest beta? <br>
+<br>
+Please post a copy of your Sandboxie configuration file: Configure--&gt; Edit Configuration <br>
+Paste the contents here and edit them using the "&lt;/&gt;" button. <br>
+<br>
+I'll recreate your settings to see if that helps me reproduce the problem.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Thu Oct 19, 2017 5:08 am</strong></div>
+				<div class="author">by <strong>K3344MM0014</strong></div>
+				<div class="content">If you "register" your Google Account in Chrome (sandboxied) you get also a registered chrome outside of the sandboxie.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Thu Oct 19, 2017 8:59 am</strong></div>
+				<div class="author">by <strong>vgishmasters</strong></div>
+				<div class="content">it's a little sadly that we still doesn't have new stable version, and most disgusting that developers has not ETA. Good program, but with new windows redstone 3, it is incompatible. So we hope that devs will make all faster for compatibility problem solution.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [work in progress]</h3>
+				<div class="date">Posted: <strong>Thu Oct 19, 2017 11:43 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">All,<br>
+<br>
+Beta 5.21.6 is out . It addresses the leak issues, please give it a go. <br>
+See original post for more information.<br>
+<br>
+Beta section:<br>
+<a href="viewtopic95959595.html?f=62&amp;t=24741" class="postlink">viewtopic.php?f=62&amp;t=24741</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [Almost there...]</h3>
+				<div class="date">Posted: <strong>Thu Oct 19, 2017 12:43 pm</strong></div>
+				<div class="author">by <strong>northch</strong></div>
+				<div class="content">2nd Problem with Sandboxie 5.21.4 Beta and Windows 10 Pro 64-bit v 1709.  Got Windows Blue Screen after I tried to create a new sandbox.  Webroot was not running.  <br>
+<br>
+* Windows 10 Pro 64-bit, v 1709, build 16299.19<br>
+* Sandboxie 5.21.4 64-bit Beta<br>
+* Chrome 62.0.3202.62, 64-bit<br>
+* Webroot SecureAnywhere 9.0.18.38 (not running)<br>
+<br>
+Blue Screen Problem: <br>
+* Stop Code: Page Fault in a non-paged area<br>
+* What Failed: SbieDrv.sys</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Windows 10 - Fall Update - Not yet supported [Almost there...]</h3>
+				<div class="date">Posted: <strong>Thu Oct 19, 2017 1:07 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello northch,<br>
+<br>
+I am trying to get Webroot, but after using 2 different email addresses, both codes they sent me are incorrect. Running out of ideas (will give it a go again tomorrow).<br>
+<br>
+Regarding the bsod, please provide the crash dump so the devs can have a look (Typically found under C:\Windows --&gt;memory.dmp)<br>
+<br>
+Are you able to reproduce it again? Does it occur if you uninstall your Antivirus software (disabling sometimes doesn't help). <br>
+Also, please try the latest beta (5.21.6).<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>3</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25001&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:48:10 GMT -->
+</html>

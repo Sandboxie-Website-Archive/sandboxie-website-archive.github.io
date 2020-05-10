@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16100&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Win class performance, cause (NEW), and a test for all - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Win class performance, cause (NEW), and a test for all</h2>
+		<p><a href="viewtopicba5aba5a.html?f=40&amp;t=16100">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=16100</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>6</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 05, 2013 3:20 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Here, you can try the revised DLL for version 4.05.03.  32-bit only.<br>
+<a href="../SbieDll.dll" class="postlink">http://www.sandboxie.com/SbieDll.dll</a></div></blockquote>
+So that it doesn't reveal itself at some other juncture, I'm just reporting an obscure window bug that is now probably being, well, further obscured by this revised DLL. This DLL worked around a dialog bug with <a href="http://vice-emu.sourceforge.net/index.html#download" class="postlink">WinVICE-2.4-x86</a>.zip\x64.exe # Settings -&gt; Joystick settings... (Dialog 122) what's window Width was 32767 and the positive Left offset of controls within BS_GROUPBOX were somewheres beyond the right edge of my screen.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 05, 2013 5:47 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Not sure I understand your language.  Are you saying this WinVICE works better or worse with the new DLL ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 05, 2013 6:12 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">I didn't really have time to test the new DLL yesterday, but I couldn't resist <img class="smilies" src="images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz">, and had to wait to reply...<br>
+
+<blockquote><div><cite>tzuk wrote:</cite>Alright, I withdraw my objections to your invalid handle test, and I apologize.</div></blockquote>
+
+No prob. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+
+<blockquote class="uncited"><div>About CreateWindow, very little code there was candidate for being a time sink in the first place.<br>
+One thing was going through the SbieSvc GUI process, for window handles in the sandbox, so I changed that now.<br>
+Hopefully that change goes well without any surprise problems.</div></blockquote>
+
+Ahh, that makes sense that it was going through GuiProxy even for stuff in the sandbox. It seems like that would have been a clue when I said with CreateWindow the SbieSvc CPU usage is the same as when attempting to "access" non-sandboxed handles. <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"><br>
+<br>
+
+<blockquote class="uncited"><div>Here, you can try the revised DLL for version 4.05.03.  32-bit only.<br>
+<a href="../SbieDll.dll" class="postlink">http://www.sandboxie.com/SbieDll.dll</a></div></blockquote>
+
+My initial reaction: <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"><br>
+<br>
+Good news: Compared to default settings before, this improved CreateWindow almost 20x! That's about 3x better than 3.76. Superb. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> That should of course be plenty fast, and much better than the 100x slower than UNsandboxed/* I mentioned (~46x).<br>
+<br>
+Also, using the different OpenWinClass settings have no effect on performance now -- same as defaults. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+BUT the bad news: Those excellent CreateWindow results only occur with just GUI Bench running in the sandbox! Open up just 1 IE 6 window with it, and it's barely 2x faster than previous default settings. <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> Open 10 IE windows and it's over 2x slower than before!<br>
+<br>
+What's going on with extra window handles/objects having such an impact?<br>
+<br>
+If you notice the "access" benchmark, accessing a sandboxed handle (or not for that matter), the performance is not affected by how much stuff is open. The time remains constant. Shouldn't CreateWindow be the same...?<br>
+<br>
+Also, like in 3.76, instead of SbieSvc CPU usage, now CreateWindow causes some CPU usage in the other sandboxed process(es)... Again, that doesn't happen with the "access" benchmark -- just GUIBench.exe itself maxed out.<br>
+<br>
+<br>
+In conclusion, vs old defaults, it's probably a wash at best in practice, and can easily be slower with the rapid slowdown... <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> But at least we're getting somewhere, thanks! If you can get that initial performance to remain constant (like "access"), it would be mission accomplished! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 05, 2013 6:57 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Not sure I understand your language.</div></blockquote>The dialog box displays correctly with the performance revised DLL. I suspect the SbieSvc GUI process, or some code in the new DLL which now bypassed the bug, still carries this obscure bug, that's me jumping to conclusions.
+<blockquote><div><cite>tzuk wrote:</cite>Are you saying this WinVICE works better or worse with the new DLL ?</div></blockquote>Better ! <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Aug 05, 2013 11:06 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">BUCKAROO, well if the new DLL fixes a problem then so much the better!  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+DR_LaRRY_PEpPeR, not sure I understand your complicated number scheme.<br>
+Slower x100 than X but faster x46 than Y but slower x2 than Z.<br>
+<br>
+How long does it take you to start PowerArchiver with the new DLL, and open the configuration window?<br>
+For me the new DLL makes the configuration window open in half the time for me, around one second, I think.<br>
+Startup time is unchanged at 3 seconds.<br>
+<br>
+When a window is created, CreateWindow tells all other windows about it.  This is part of the emulation of<br>
+some other API which tracks open windows.  Makes sense that with more open windows, it would take longer,<br>
+but that's just the way it is.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 07, 2013 4:05 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The updated DLL is included in version 4.05.04.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 08, 2013 3:04 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Sorry didn't reply sooner! Nothing yesterday, but the previous 2 days, I thought I had some extra feedback, and then shortly later I realized something else or that I was wrong... Anyway, so not much different to report than my last post, although there is one big mistake (or not) I made with my CreateWindow benchmark!<br>
+<br>
+I guess you didn't see my code, but I realized Tuesday when checking something else. This was the benchmark code:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>HWND dummy = CreateWindowA("Static", "Dummy test", WS_CHILD, 0, 0, 128, 64, NULL, NULL, NULL, NULL);
+DestroyWindow(dummy);</code></pre></div>
+
+I said any CreateWindow call seemed to behave the same in Sandboxie -- didn't matter if custom class or standard Static/Edit/etc., or what the other parameters were. So I was just using 0s everywhere. Except I noticed if I didn't use WS_CHILD, it was much slower UNsandboxed, so I figured it needed some style flag. BUT I've now realized that WS_CHILD without a parent HWND is also invalid which is why it runs SO FAST UNsandboxed! (10^6 in 1.3s). I've updated it with a parent param.<br>
+<br>
+Updated <a href="http://voidmain.realplain.com/sbie_winbench/GUIBench.zip" class="postlink"><strong>GUIBench.zip</strong></a> and <a href="http://voidmain.realplain.com/sbie_winbench/GUIBench.c" class="postlink">source</a>/<a href="http://voidmain.realplain.com/sbie_winbench/GUIBench-src.zip" class="postlink">package</a>.<br>
+<br>
+Oops, sorry! <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> Now what I realized doesn't really change anything in Sandboxie, it's just that the UNsandboxed result was way off, and made Sandboxie look bad with a lot of overhead that's not really there! e.g. Sandboxed is actually only a few times slower than UNsandboxed (expected) up to <strong>10's</strong> of times slower at worst, NOT 100s or 1000s of times slower. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"><br>
+<br>
+<br>
+The bigger speed difference I saw with CreateWindow in API Monitor (before creating "supporting" benchmark) must be coming from other stuff within the CreateWindow calls, rather than only the CreateWindow function itself...<br>
+<br>
+BTW, I also verified the slowness I see using API Monitor itself is not related to CreateWindow (not that I thought it was).<br>
+<br>
+<br>
+PowerArchiver: I was only checking laptop before, which hasn't had PA installed for a long while. I've since upgraded to the latest betas on main system to check my 2011 PA version. The results are about what I expected (like the IE window opening speed).<br>
+<br>
+In my main active sandbox (with OE, 2 IEs, Pale Moon running), Configuration window took just over <strong>3 seconds</strong> to open with old DLL (defaults). Just over <strong>2 seconds</strong> with new DLL -- and no OpenWinClass settings make it slower, so no 50 second extreme. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+However, in a sandbox by itself, it's right around <strong>1 second</strong> (about half-second UNsandboxed). So those few other things open in other sandbox add a second. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"><br>
+<br>
+<br>
+CreateWindow benchmark, 10^<strong>3</strong> iterations on main system takes 1.25s UNsandboxed, ~10s with old DLL, and ~6s new DLL (main active sandbox; ~2s on its own). So instead of adding 0.01s I mentioned, old DLL was "just" 0.009s and new DLL adds 0.005 per call. Savings of 0.004 reflects the times I see: PA Configuration, 270 CreateWindow calls * 4ms is about a second saved.<br>
+<br>
+IE window opening: from 0.7s to 0.58, which again is right for 30-ish CreateWindows.<br>
+<br>
+<br>
+Now, about those drastic slowdowns I see with the new DLL (using hopefully valid CreateWindow calls <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">). 10^<strong>4</strong> iterations on laptop takes ~1.5s UNsandboxed. I guess there is a slight slowdown in Windows since the slower laptop is doing 10x more calls in almost the same time as main system with a lot more window stuff open...<br>
+<br>
+Same 10^<strong>4</strong> iterations:<br>
+- 3.76<br>
+4.6s alone<br>
+6.4s with 1 IE window<br>
+17.8s with 10 IE windows<br>
+<br>
+- 4.05.03<br>
+15.8s alone<br>
+19.6s with 1 IE window<br>
+42.6s with 10 IE windows<br>
+<br>
+- 4.05.04<br>
+~4s alone<br>
+7.5~10s with 1 IE window<br>
+44~49 with 10 IE windows<br>
+<br>
+<br>
+Besides the rapid degradation itself, something doesn't seem right that it becomes slower than the previous DLL/version if the same "window notification" stuff is happening, but without the GuiProxy overhead? The new version can beat 3.76 initially. It would be nice if the algorithm, etc. performance could stay with it. <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 09, 2013 4:14 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Alright, reading between the numbers, I think you're fairly happy with the new version and we can put this subject behind us.<br>
+At least I hope so.<br>
+I'm glad you kept at it, and spending time to investigate and develop these benchmarks.<br>
+Thanks!<br>
+<br>
+* * *<br>
+<br>
+Here's a possible explanation for the "faster at first and then slower" scenario.<br>
+<br>
+The "job" wrapper with its Win32 restrictions has the effect that it checks and re-checks access rights to every window handle.<br>
+This probably contributes to some performance degradation, once the number of handles grow and the checks take more time.<br>
+<br>
+Where there are few windows in the sandbox, CreateWindow v4 sees fewer total handles than v3.76,<br>
+and the handle checks are still fast.<br>
+Result is faster than v3.76.<br>
+<br>
+As the number of windows in the sandbox grows, and makes the number of windows outside the sandbox negligible,<br>
+to the point that we can say that CreateWindow v4 sees a similar number of total handles as version 3.76,<br>
+but now the handle checks are slow.<br>
+Result is slower than v3.76.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 09, 2013 6:30 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Yeah, the <em>ideal potential</em> improvement is nice, but I'm just trying to make some sense of the slowdown that's occurring now (which you tried to explain). <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I had kinda thought of something along the line of what you describe...<br>
+<br>
+You're talking about the Job Object and its "USER Handles" restriction (_UILIMIT_HANDLES), right? And Windows' mechanism checking access rights to window handles...?<br>
+<br>
+<br>
+I just included v3.76 for reference, but really looking at the difference compared to the previous DLL and use of GuiProxy -- if the same stuff is happening (notifications about CreateWindow, etc.) as before, shouldn't the times be the same, <em>minus</em> X amount of overhead from skipping GuiProxy now??<br>
+<br>
+e.g. On laptop IE window opening test, I see the expected small improvement with 1 window open, but with 10 windows (1 iexplore process), the old DLL/GuiProxy method is a hair faster than after your change! <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> (As the posted Create bench numbers show.) I'd be REALLY happy to hold onto the improvement, instead of losing it and then some with the new version. <img class="smilies" src="images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"><br>
+<br>
+<br>
+BTW, I notice there's still a spike in SbieSvc CPU (both processes) when opening IE windows (<em>closing</em> also), for one example. (Doesn't happen with Create bench or PowerArchiver Configuration...) So can you see if <em>something else</em> is still going through GuiProxy that shouldn't be when you get a chance? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 09, 2013 7:42 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I was indeed referring to UILIMIT_HANDLES which checks handles at both the application level (USER32.DLL) and the kernel level (WIN32K.SYS).  To emphasize this, there is one more system call (NtUserValidateHandleSecure) that happens for each Win32 handle access by a program in a restricted job.<br>
+<br>
+Perhaps as the number of windows in the sandbox grows, it is cheaper to make a single call to SbieSvc GuiProxy (which is outside the job) to get a list of windows, than to get the list from inside the job.  Perhaps a little counter-intuitive but it's the only guess I have.  In any case I don't think it is interesting to look into a 2-6 second slowdown over 10,000 calls because this doesn't happen outside your benchmarks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 09, 2013 10:46 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">It's actually the 30+ seconds I'm talking about 1 vs 10 IE windows -- if you mean 2-6s between old and new DLLs, well that's not an improvement, thus my curiosity. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> With PA's Configuration window, it seems an awful lot that running with just a few other usual things (OE +  Pale Moon + 2x IE) adds a solid second before the window appears (compared to having only PA in a sandbox). And it adds over 1/8th to IE window opening (0.45 to 0.58 ).<br>
+<br>
+<br>
+Anyway here, I don't think the explanation about Windows' handle checks is right! I just tried <strong>4.02</strong> with OpenWinClass=* which still keeps the "USER Handles" restricted Job. And I already knew 4.02, with that setting, let GUI Bench's CreateWindow run as fast as UNsandboxed (just by itself). So I opened 12 IE windows in 2 IE processes, plus UNsandboxed and sandboxed GUI Bench.<br>
+<br>
+Result? Whether sandboxed or not, they both run 10^4 in 2.8 seconds! So it looks like there's NO measurable overhead from the restricted Job itself or Windows' checking. I would expect that Windows' mechanisms are very optimized and wouldn't have a severe degradation like that...<br>
+<br>
+<br>
+That's why I was thinking (and it appears the case), that <em>something</em> in SbieDll is adding a ton of extra time (maybe before your change also, but whatever). Even in 3.76 for that matter, just not as much...<br>
+<br>
+Obviously without Open=* SbieDll or such will add some amount of overhead (understandable), but what is IT doing that adds <strong>40</strong> more seconds with just 10 IE windows?<br>
+<br>
+Actually it seems even less would need to be done than in 3.76, if the Job restrictions (<em>zero overhead</em>!?) are already protecting stuff...<br>
+<br>
+<br>
+It's only SbieDll I guess now (as in 3.76) that is causing CPU usage in <em>other</em> sandboxed processes (instead of SbieSvc). That doesn't happen with only the restricted Job (4.02's Open=*).<br>
+<br>
+You had mentioned "emulation of some other API which tracks open windows," so I figured that was some Sandboxie thing, and thus might not be performing/scaling optimally. <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Aug 10, 2013 2:17 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I haven't looked into your findings but I think we can say that for the normal case, there is some improvement in version 4.05.04.  Greater improvements might have to involve reworking some aspects of the new GUI logic in Sandboxie and I'm not going to do that.  Even this minor change had a side effect as BUCKAROO reported, and while it seems to be a positive side effect, the point is that every minor change has the potential to break stuff.  And for performance gains which cannot be measured in a practical sense, I don't think it is worth to keep spending time on this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Aug 10, 2013 5:00 pm</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">Hopefully you understand that the restricted Job and Windows are NOT an issue with performance. I did some other checking after our posts yesterday and thinking about the logic of stuff. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> I am now VERY confident that Sandboxie (SbieDll I guess) is doing some <em>completely unnecessary</em> stuff with only CreateWindow! That's my logical conclusion anyway. I REALLY think CreateWindow can basically be as fast as UNsandboxed (yes, the Job has effectively no impact), and that would obviously be a HUGE improvement over what we have now! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+I obviously believed what you said about the Windows Job object access checks on window handles, but wanted to know more myself (besides using 4.02 with Open=*). Yes, there IS an overhead from the checks, but they are so small that it cannot be measured with CreateWindow -- a few milliseconds at most over 10,000 calls -- might as well be zero. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+BTW, as I have said previously (before your change), Sandboxie doesn't have much effect on [resource-based] dialog boxes. Why is that? Creating and "case WM_INITDIALOG: EndDialog(...)" with the GUI Bench dialog (13 controls) is WAY faster than the CreateWindow function. And it does NOT slow down! It's only about 1.6-2x slower than UNsandboxed, which is fine (although I think even it may have unneeded overhead; see below). So again, why are dialogs unaffected by the possibilties you were explaining...? <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"><br>
+<br>
+<br>
+I stuck GUI Bench into a Job myself (with UILIMIT_HANDLES of course) and it was interesting what I observed. The window "access" benchmark ("THIS window's handle") was ~12x slower than no Job. Hmm, Sandboxie is ~24x slower accessing sandboxed handles. <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"> (So yes, with much faster functions like IsWindowVisible, the Job/Windows access checks are measurable, FYI, but nothing to worry about here...)<br>
+<br>
+<br>
+How I WAS thinking Sandboxie works with window "accessing" functions like IsWindowVisible: Try it; if it "fails," go through GuiProxy...<br>
+<br>
+But then I added IsWindow with IsWindowVisible before running in the Job, and..... The "access" time was about equal to Sandboxie! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+SO now I wonder if the logic is thus:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if (IsWindow(some_HWND)) // Fails for non-sandboxed handle
+{
+	IntendedWinFunc(... some_HWND ...);
+}
+else
+{
+	// Go through GuiProxy
+}</code></pre></div>
+
+Which would make sense... Is that close to correct? Anyway, the "access" time would suggest yes; OK cool, that's all good, should be fine performance.<br>
+<br>
+<br>
+<strong>Those details to say/ask</strong>: Why can't CreateWindow work like that?? As a "blind outsider," I can't understand anything else it needs to do which is really slowing it down. Maybe you can help me "see" if I'm wrong. In other words, just let CreateWindow run "naturally," as you do with IsWindowVisible, et al. Massive, massive performance increase!! <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"><br>
+<br>
+I hope you can explain and/or look into it (maybe a simple oversight, etc.). Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>thanks</h3>
+				<div class="date">Posted: <strong>Sat Aug 10, 2013 8:07 pm</strong></div>
+				<div class="author">by <strong>pastuch</strong></div>
+				<div class="content">I have low performance problem with SBIE 4 too.<br>
+DR_LaRRY_PEpPeR, thank you very much for your hard detective work <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 11, 2013 3:12 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">While I am glad to see that DR_LaRRY_PEpPeR is having fun investigating job objects, it does not seem that he is going to fix anyone's performance problems as he is focused on the wrong stuff.<br>
+<br>
+Other than DR_LaRRY_PEpPeR, who is going into way too much detail, my impression is the three or so other people who reported performance issues just make a "me too" style of post, and don't give any details at all, and never follow up on anything.<br>
+<br>
+I think I've had enough of this non-issue for the time being.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>6</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16100&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:01 GMT -->
+</html>

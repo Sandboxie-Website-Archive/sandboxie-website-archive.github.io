@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9564&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:57:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Disallow sandboxed files from executing</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Disallow sandboxed files from executing</h2>
+		<p><a href="viewtopic661a661a.html?f=4&amp;t=9564">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=9564</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Disallow sandboxed files from executing</h3>
+				<div class="date">Posted: <strong>Wed Dec 15, 2010 5:36 pm</strong></div>
+				<div class="author">by <strong>AgentSmith</strong></div>
+				<div class="content">Maybe this option exists, but I'm looking around the Start/Run options, and I'd like to ONLY disallow objects in the sandbox.  Now it looks like this will occur if I also use a white list, but I really don't want to restrict any software already on my computer... I just want to restrict executables from the sandbox.<br>
+<br>
+I tried to use SRP for this, but Sandboxie is apparently transparent to SRP... blocking c;\sandbox\ does nothing, as SRP appears to think the processes are launched from the temp folder (or wherever else they are redirected from).  I'm guessing because SRP is just running in user mode, and the sandboxie driver is doing all the magic at a lower level.<br>
+<br>
+Oddly enough, Faronics AE works with it, but oddly enough I can't run purely with a blacklist.  <br>
+<br>
+I know running just a blacklist is not as secure as whitelisting (I myself run SRP in a rather locked down config), but I'm trying to set regular users up with stronger protection...  one big security hole is the ability of foreign software to gain read access, and I'm trying to close that hole in a way that makes it easy for a regular user.  If they want to open up word, adobe reader, or whatever program they desire, I still want them to be able to do that.  I don't want anything outside the system executing from the sandbox though.<br>
+<br>
+Is this currently possible?  If not, is this something you might consider implementing in the future?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Dec 15, 2010 7:30 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Experiment with this:<br>
+Sandbox Settings &gt; Restrictions &gt; Start/Run Access<br>
+On versions 3.51:<br>
+Click the "Add Program" button &gt; put <strong>*</strong> ( a single star) in the "Select or enter a program" box" &gt; OK<br>
+This will put '<strong>*.exe</strong>' in the large box<br>
+<br>
+(read the note at the bottom of that window. * is a wild card character and will match any name)<br>
+OK your way out.<br>
+If your version doesn't have the "Add Program" button and the "Select or enter a program" box, use the "Edit/Add" button and put<br>
+<strong>*.exe</strong><br>
+in the window.<br>
+<br>
+"Run Sandboxed" a program like Notepad - that exists outside of that sandbox - and choose that sandbox.<br>
+(This is just to create a directory structure inside of the sandbox, for the tests that follow)<br>
+Copy some .exe files into that sandbox using an unsandboxed Windows Explorer.<br>
+<br>
+Try running the .exe files that are inside the sandbox.<br>
+I've never tried adding other executables, like *.com<br>
+I don't know how that would work out.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>that works for .exe's</h3>
+				<div class="date">Posted: <strong>Thu Dec 16, 2010 11:35 am</strong></div>
+				<div class="author">by <strong>AgentSmith</strong></div>
+				<div class="content">Thanks!  That seemed to work for .exe's.  Sadly, it didn't work for .com files, or any other type of file.. it is better than nothing..<br>
+<br>
+I also figured out that for a regular home user, who is running XP as an administrator, I still could use SRP (and just exempt administrator).  Esentially, SRP will only apply to sandboxie if it is using drop my rights.  Using a standard SRP setup, I can whitelist program files and windows.. Any drive by execution can't write to these folders.. The sandboxed process isn't exempt from SRP because it is not run as an admin, like the user's regular processes. <br>
+<br>
+While this will blacklist more than just the items in the sandbox, it should still allow the user to run everything they need (word, adobe reader, etc) and still stop any other forms drive by malware.    <br>
+<br>
+I'm at a loss for a more complete solution with windows vista/7 though.  Since you are not an administrator by default, if you implement SRP or Applocker, then SRP applies to the user even when they are not in the sandbox.  I can't use the above trick to have SRP only apply to the sandbox or sandboxed processes.  <br>
+<br>
+I could turn off UAC completely, but then in some ways I'd be making it less secure.  Then again, they'd be in the same situation as the XP users. <br>
+<br>
+Have any clever tricks that might let a more comprehensive execution blocker that ONLY applies to the sandboxed files or processes?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 16, 2011 12:18 pm</strong></div>
+				<div class="author">by <strong>nicknomo</strong></div>
+				<div class="content">finally found my login again... <br>
+<br>
+Is there any intention to improve the anti-executable portion of the code?  Sandboxie is pretty airtight for writes, but reads have always been a threat.<br>
+<br>
+If Sandboxie had the capability of not running anything downloaded into the sandbox, it would pretty much be a perfect security measure.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 16, 2011 7:03 pm</strong></div>
+				<div class="author">by <strong>Mike</strong></div>
+				<div class="content"><blockquote><div><cite>AgentSmith wrote:</cite>Have any clever tricks that might let a more comprehensive execution blocker that ONLY applies to the sandboxed files or processes?</div></blockquote>
+Similar to what I suggested in the recent <a href="../phpbb/viewtopic3342.php?t=9894" class="postlink">cmd.exe thread</a>, if you really don't want something to execute, you can try a <a href="../indexbccb.html?ResourceAccessSettings#file" class="postlink">ClosedFilePath</a> (aka Blocked Access): <em>ClosedFilePath=*.com</em><br>
+I can't guarantee that this won't impact any of your other sandboxed programs, but I would think that if you're going to block execution of .com files, taking it a step further and blocking read/write access probably won't make things any worse.<br>
+<br>
+If you want to take a more gentle approach, and simply prevent <em>new</em> .com files from being created and run in the sandbox, you can use a <a href="../indexbccb.html?ResourceAccessSettings#file" class="postlink">ReadFilePath</a> (aka Read-Only Access) instead: <em>ReadFilePath=*.com</em><br>
+This will still allow existing .com files on your real system to execute sandboxed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 16, 2011 9:09 pm</strong></div>
+				<div class="author">by <strong>nicknomo</strong></div>
+				<div class="content">That is a clever trick... I personally hadn't thought of doing that, and I can see how it could be effective.<br>
+<br>
+Unfortunately, a lot of malware seems to learn how to execute without proper extensions.  I often see .tmp files running in explorer, and are usually a form of executable (probably natively an EXE)...<br>
+<br>
+I think this is a popular trick to get around the A/V's...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>I actually got this to work..</h3>
+				<div class="date">Posted: <strong>Wed May 04, 2011 12:14 pm</strong></div>
+				<div class="author">by <strong>nicknomo</strong></div>
+				<div class="content">I have found that while blacklisting C:\Sadnbox\* does NOT work with SRP... It works with Applocker. I'm guessing that this is because SRP operates as a user level process, while applocker runs at kernel mode.<br>
+<br>
+In other words, if you have Windows 7 Pro or Ultimate, you can use gepdit.msc to make an Applocker path rule that disallows anything in C:\Sandbox\* .  You have to do this for executables, windows installer files, scripts and DLL's (you have to check a box in applocker properties to allow for dll filtering).  <br>
+<br>
+This works GREAT, and nothing that is saved to the sandbox will execute.  You can still use all the programs that exist outside the sandbox (excel, adobe reader, etc)... <br>
+<br>
+The benefit of this is obviously that no drive by malware will be able to launch and transfer any of your data...</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9564&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:57:57 GMT -->
+</html>

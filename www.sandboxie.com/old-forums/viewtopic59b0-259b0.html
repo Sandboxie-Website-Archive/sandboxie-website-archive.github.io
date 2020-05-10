@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=11091&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:32:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Using CCleaner sandboxed</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Using CCleaner sandboxed</h2>
+		<p><a href="viewtopic0f470f47.html?f=11&amp;t=11091">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=11091</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Using CCleaner sandboxed</h3>
+				<div class="date">Posted: <strong>Sat Aug 13, 2011 1:11 pm</strong></div>
+				<div class="author">by <strong>wondersz1</strong></div>
+				<div class="content">I do a lot of installations in Sandboxie. Thus I have a sandbox with a bunch of applications. When the application is no longer needed I feel I need to delete it from a sandbox without deleting the whole contents of the sandbox. To do this I run CCleaner sandboxed so that I can remove the application and then clean up all the garbage left behind in the sandbox (including registry modifications left behind uninstalling software). <br>
+However, the recent experience has been that a sandboxed instance of CCleaner hangs up while running garbage removal or cleaning up registry. The application simply freezes, my first guess was that it might be downloading some file into the sandbox, but I couldn't find any trace of that. Any help would be appreciated.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Using CCleaner sandboxed</h3>
+				<div class="date">Posted: <strong>Sat Aug 13, 2011 6:02 pm</strong></div>
+				<div class="author">by <strong>Kind</strong></div>
+				<div class="content"><blockquote><div><cite>wondersz1 wrote:</cite> ( ... ) and then clean up all the garbage left behind in the sandbox (<span style="text-decoration: underline">including registry modifications left behind uninstalling software</span>). <br>
+However, the recent experience has been that <span style="text-decoration: underline">a sandboxed instance of CCleaner hangs up while running garbage removal or cleaning up registry</span>. The application simply freezes,  ( ... )</div></blockquote>
+When you uses registry app. sandboxed, a looping issue could comes out. <br>
+<br>
+Please see this topic to understand better the issue: <a href="../phpbb/viewtopicf139.php?t=9834&amp;highlight=" class="postlink">http://www.sandboxie.com/phpbb/viewtopi ... highlight=</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Aug 13, 2011 6:21 pm</strong></div>
+				<div class="author">by <strong>CPB</strong></div>
+				<div class="content">I'm sure you know that if you buy Sandboxie you can create individual sandboxes for each program and then delete them when you're done.  That alone made it worth it to me.  I didn't want to deal with having all kinds of programs installed in the same sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 16, 2011 11:45 am</strong></div>
+				<div class="author">by <strong>wondersz1</strong></div>
+				<div class="content">OK, seems like I'm getting it. Registry and garbage cleaning utilities are not likely to run sandboxed. However, if I went along with 'one program - one sandbox' approach, I would definitely be at around 50+ now. That's the reason I've got to maintain sandboxes with quite a few installs in them which I need on permanent basis, not just for testing. <br>
+Even though all the changes are limited to a sandbox, it is quite a good idea to keep the sandbox cleaned up from garbage (like backup files, re-installation staff and any other junk software abounds in). Doing so manually is definitely a tedious task, therefore an automation  cleaning tool would come in handy. Does anyone know if there's a utility of any kind (possibly, any of the contributed ones?) that does that? Thanks in advance!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Aug 16, 2011 12:02 pm</strong></div>
+				<div class="author">by <strong>Kind</strong></div>
+				<div class="content">Since you use e.g. CCleaner (sandboxed) to delete garbage files it seems your issue is solved (no looping issues comes out); don't use it to clean registry garbage - to avoid freezes problems.<br>
+<br>
+You can uninstall software inside CCleaner sandboxed also.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 17, 2011 12:37 am</strong></div>
+				<div class="author">by <strong>bs1</strong></div>
+				<div class="content">wondersz1, <br>
+<br>
+I have CCleaner (slim version) installed on my real system.  Then I use CCleaner's settings "Options" &gt; "Include" &gt; "Add" to identify specific sandboxes and files within those sandboxes to clean.  In other words, you can use those settings to completely empty the contents of a sandbox, or to just empty certain files in a sandbox while leaving the rest of the contents intact.  Is that what you are interested in doing?<br>
+<br>
+(Edited 8/17/11)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Aug 20, 2011 3:09 am</strong></div>
+				<div class="author">by <strong>wondersz1</strong></div>
+				<div class="content">@ Kind<br>
+No, it is not, just because CCleaner (sandboxed) also hangs up whenever I try to run garbage removal only (without cleaning the registry). Looping issue only pertains to the registry, not cleaning files if I get it correctly, right?<br>
+<br>
+@bs1<br>
+Thanks, sounds like a good option. Yeah, that's exactly what I need.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=11091&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:32:26 GMT -->
+</html>

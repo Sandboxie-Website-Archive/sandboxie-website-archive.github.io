@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=3208&start=75&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Border sandboxed indicator - Page 6</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Border sandboxed indicator</h2>
+		<p><a href="viewtopic015e015e.html?f=22&amp;t=3208">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=3208</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>6</strong> of <strong>8</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jan 17, 2009 11:11 pm</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content">I guess I'm the fool, and you proved it!<br>
+<br>
+Yes, I can do that. Please let me know more about:<br>
+<br>
+_SbieApi_EnumBoxes@8     -     This might be a better way to get the boxes. I assume it will return the currently used sandbox list, wherever they may be located.<br>
+<br>
+_SbieApi_EnumProcessEx@16<br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 18, 2009 12:47 pm</strong></div>
+				<div class="author">by <strong>Mark_</strong></div>
+				<div class="content"><blockquote><div><cite>Micahs wrote:</cite>I guess I'm the fool, and you proved it!<br>
+<br>
+Yes, I can do that. Please let me know more about:<br>
+<br>
+_SbieApi_EnumBoxes@8     -     This might be a better way to get the boxes. I assume it will return the currently used sandbox list, wherever they may be located.<br>
+<br>
+_SbieApi_EnumProcessEx@16<br>
+<br>
+Thanks!</div></blockquote>
+
+int __stdcall SbieApi_EnumBoxes(int num, wchar_t *name)<br>
+name can be max 32 chars, so atleast malloc( 32*2+2 ) <br>
+<br>
+<br>
+first call, for num use -1<br>
+after that, use for num the return of the previous call,<br>
+until num == -1</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 18, 2009 4:19 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">The following function enumerates the list of sandboxes, one at a time.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>LONG SbieApi_EnumBoxes(
+    LONG index,    // initialize to -1
+    WCHAR *box_name)    // WCHAR [34]
+</code></pre></div>
+
+Returns the index number to use for the next call.  Sample code:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>WCHAR name[34];
+int index = -1;
+while (1) {
+        index = SbieApi_EnumBoxes(index, name);
+        if (index == -1)
+            break;
+        SandboxNames_StringArray.add(name);
+}
+</code></pre></div>
+
+* * *<br>
+<br>
+The following function gets the list of sandboxed programs for a specific sandbox in the current, in some other, or in all logon sessions.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>LONG SbieApi_EnumProcessEx(
+    const WCHAR *box_name,    // WCHAR [34]
+    BOOLEAN all_sessions,
+    ULONG which_session,    // -1 for current session
+    ULONG *boxed_pids)    // ULONG [512]
+</code></pre></div>
+
+Parameters:<br>
+<br>
+box_name – the sandbox name<br>
+all_sessions – if TRUE, collects information from all logon sessions while ignoring the which_session parameter.  If FALSE, the which_session parameter selects the session.<br>
+which_session – if all_sessions is FALSE, specified the session number.  Can specify -1 for the current session.<br>
+boxed_pids – an array of 512 ULONGs.  On return, the first ULONG specifies the number of processes returned in the rest of array.  The second ULONG specifies the process ID of the first sandboxed process.  The third ULONG specifies the process ID of the second sandboxed process.  And so on.<br>
+<br>
+Returns zero on success.  On failure, boxed_pids[0] is set to zero.  Note that boxed_pids[0] can also be set to zero on successful completion, if there are no sandboxed processes matching the parameters.<br>
+<br>
+* * *<br>
+<br>
+This description is no guarantee that the API will never change.  Use at your own risk.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jan 18, 2009 10:04 pm</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content">Thanks for the info! I'll look into incorporating it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jan 19, 2009 2:58 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">For giggles, some sample AutoIt code (should be pretty close to AHK):
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>$SBDLL = DllOpen("C:\Program Files\Sandboxie\SbieDll.dll")
+
+$index = -1
+While 1
+	; enum boxes
+	$ret = DllCall($SBDLL, "long", "_SbieApi_EnumBoxes@8", "long", $index, "wstr", "")
+	If $ret[0] == -1 Then ExitLoop
+	ConsoleWrite("Box: " &amp; $ret[2] &amp; @CRLF)
+	; next box
+	$index = $ret[0]
+	
+	; enum processes in each box
+	$pids = 0
+	$pids = DllStructCreate("ulong[512]")
+	DllCall($SBDLL, "long", "_SbieApi_EnumProcessEx@16", "wstr", $ret[2], "int", 0, "ulong", -1, "ptr", DllStructGetPtr($pids))
+	$numpids = DllStructGetData($pids, 1, 1)
+	If $numpids Then ConsoleWrite(@TAB &amp; "PIDs:" &amp; @CRLF)
+	For $i = 2 To ($numpids + 1)
+		$hProc = DllCall("kernel32.dll", "ptr", "OpenProcess", "dword", 0x0410, "int", 0, "dword", DllStructGetData($pids, 1, $i))
+		$name = DllCall("psapi.dll", "dword", "GetModuleBaseNameW", "ptr", $hProc[0], "ptr", 0, "wstr", "", "dword", 260)
+		DllCall("kernel32.dll", "int", "CloseHandle", "ptr", $hProc[0])
+		ConsoleWrite(@TAB &amp; DllStructGetData($pids, 1, $i) &amp; @TAB &amp; "::" &amp; @TAB &amp; $name[3] &amp; @CRLF)
+	Next
+WEnd
+
+DllClose($SBDLL)</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 22, 2009 1:10 am</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content">I'm giggling like a schoolgirl. Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 22, 2009 12:16 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">n/m<br>
+<br>
+fixed above</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 22, 2009 1:22 pm</strong></div>
+				<div class="author">by <strong>Mark_</strong></div>
+				<div class="content"><blockquote><div><cite>wraithdu wrote:</cite>Not sure if you noticed, but I made one change in calling the EnumProcessEx function.  tzuk said the which_session parameter is a ULONG.  But to use a value of -1 (current session) it has to be a regular signed LONG.</div></blockquote>
+not entirely true,<br>
+you can stick with ULONG, and use 0xffffffff instead of -1 <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+<br>
+-1 (signed) == 0xffffffff(unsigned)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 22, 2009 1:42 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Well yes, but he specifically said -1.  What does that value become when assigned to a ULONG variable?  Is it converted to 0xffffffff or 1 or fails with an error?<br>
+<br>
+EDIT - -1 gets converted to 0xffffffff when assigned to a ULONG variable.  I suppose it doesn't matter, it works either way (I'll edit my code above anyway).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 03, 2009 3:28 am</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content">Here is the new version which supports multiple borders: <a href="http://www.autohotkey.net/~Micahs/borderguard/borderGuard_multi.zip" class="postlink">borderGuard_multi</a><br>
+<br>
+<img src="../www.autohotkey.net/_Micahs/borderguard/screenshots/borderguard%20multi2.gif" class="postimage" alt="Image"><br>
+<br>
+New features:<ul><li>Multiple borders</li>
+<li>Borders are positioned behind the sandboxed window (except when window touches screen edge)</li>
+<li>Automatic restart to apply changes to ini file (good idea Ausonius)</li>
+<li>Active and Inactive windows' borders can have different transparency</li>
+<li>Borders will stay within screen (good idea Guest_X)</li>
+<li>Reverse sandboxed windows (Experimental)</li>
+<li>Did I mention multiple borders?</li></ul>
+I have not added the api calls to the dll yet.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 03, 2009 5:54 am</strong></div>
+				<div class="author">by <strong>Mark_</strong></div>
+				<div class="content">looks nice,<br>
+but:<br>
+<br>
+&gt;&gt;Reverse sandboxed windows (Experimental) <br>
+what does it mean?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 03, 2009 5:56 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Thanks Micahs, but this one isn't working for me.<br>
+<br>
+I don't see any colored borders with it at all.<br>
+<br>
+Oddly enough, reversed windows work fine (if I manually enable them) - but colored borders themselves are a no go.<br>
+<br>
+If I back-level to the previous borderGuard release (with an EXE dated 2008-11-05), the borders work fine again.<br>
+<br>
+I'm using Sandboxie 3.34 and the default borderGuard.ini file you included with the new "multi" package.<br>
+<br>
+Any other info you would need?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 03, 2009 6:41 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Micahs, per the <a href="../phpbb/viewtopic9051.php?t=4892" class="postlink">discussion here</a>, there is a new <a href="../index4d6e.html?ContributedUtilities" class="postlink">Contributed Utilities page</a>.  Let me know if you want to add your utility there.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 04, 2009 12:21 am</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content">@Guest<br>
+I'm not sure what the problem could be. What os are you using? The new version uses SetWindowPos to size, move, and position the borders. This is really the only major change in the way it does its thing. If you are using Vista it may have an issue with this api call. My dad has a Vista laptop, so I can do some testing. Anyone else having this issue?<br>
+<br>
+@Mark_<br>
+"Reverse sandboxed windows"<br>
+<img src="../www.autohotkey.net/_Micahs/borderguard/screenshots/borderguard%20reverse.gif" class="postimage" alt="Image"><br>
+Just what it sounds like! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy">  I have to say that this be more of a novelty than a useful feature because of focus issues. But it looks cool!<br>
+<br>
+@tzuk<br>
+Yeah, if you think it's good enough, sure. Thanks! (Assuming I can get the bugs out!)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 04, 2009 2:15 am</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content"><a href="http://www.autohotkey.net/~Micahs/borderguard/borderGuard_multi.zip" class="postlink">HERE</a> is a new version that uses the SWP_FRAMECHANGED flag to (hopefully) force the window update. If this does not work, I can try some other things instead. I will borrow my dad's computer with Vista to do some testing.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>6</strong> of <strong>8</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=3208&start=75&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:23 GMT -->
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16181&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.03] Command Line /wait Parameter Doesn't Work</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.03] Command Line /wait Parameter Doesn't Work</h2>
+		<p><a href="viewtopic5f935f93.html?f=40&amp;t=16181">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=16181</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.03] Command Line /wait Parameter Doesn't Work</h3>
+				<div class="date">Posted: <strong>Wed Jul 31, 2013 9:01 pm</strong></div>
+				<div class="author">by <strong>sycondaman</strong></div>
+				<div class="content">OS: Windows 7 64-bit Enterprise<br>
+Sandboxie Version: 4.04 64-bit<br>
+<br>
+This is a relatively freshly installed machine with UAC disabled.<br>
+<br>
+I opened a command prompt to C:\Program Files\Sandboxie and executed the following command to test:<br>
+<br>
+Start.exe /wait cmd.exe<br>
+<br>
+The result was an opened command prompt but Start.exe returned immediately.<br>
+<br>
+Let me know if you can repro or have any debugging ideas, thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 31, 2013 10:37 pm</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">Doesn't work for me. It was recently that I tried /wait with a box designation, can't work it with or without.<br>
+<br>
+CHDIR /D "%ProgramFiles%\Sandboxie"<br>
+SET "CHOICE=(ECHO.)&amp;CHOICE /M "EXIT"&amp;(IF !ERRORLEVEL!==1 PAUSE&amp;EXIT)&amp;PAUSE"<br>
+".\Start.exe" <strong>/wait /box:DefaultBox</strong> "%ComSpec%" /T:6E /E:ON /V:ON /K "%CHOICE%"<br>
+".\Start.exe" <strong>/box:DefaultBox /wait</strong> "%ComSpec%" /T:E6 /E:ON /V:ON /K "%CHOICE%" <br>
+ECHO echo echo<br>
+@<br>
+<br>
+To sidetrack, pasting that into a cmd prompt <em>sometimes</em> spat the following error for one missing console:<br>
+SBIE2205 Service not implemented:  ConsoleInit (C00000D4)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 01, 2013 5:02 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks for pointing it out.  Will be fixed in version 4.05.03.<br>
+<br>
+Remember that you also need the built-in Start command to wait for Start.exe if you want completely sequential execution.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>start /wait Start.exe /wait cmd.exe</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 01, 2013 6:44 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">Thanks. And it all works as expected if BOXED. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+@<br>
+"%ComSpec%" /E:ON /V:OFF<br>
+<br>
+SET "SbieExec=START "" /WAIT "%ProgramFiles%\Sandboxie\Start.exe" /wait"<br>
+SET "CHOICE=(ECHO.)&amp;CHOICE /M "EXIT"&amp;(IF !ERRORLEVEL!==1 TIMEOUT /T 5&amp;EXIT)&amp;PAUSE"<br>
+<br>
+PUSHD path common to the following programs<br>
+%SbieExec% /box:DefaultBox "%ComSpec%" /T:6E /E:ON /V:ON /K "%CHOICE%"<br>
+%SbieExec% /box:DefaultBox "%ComSpec%" /T:E6 /E:ON /V:ON /K "%CHOICE%"<br>
+ECHO echo echo<br>
+POPD<br>
+<br>
+EXIT<br>
+@</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 01, 2013 7:00 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">And with version 4.05.03 that I just released, it should once again work outside the sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 01, 2013 12:55 pm</strong></div>
+				<div class="author">by <strong>sycondaman</strong></div>
+				<div class="content">Thanks so much!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=16181&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:53 GMT -->
+</html>

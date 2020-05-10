@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=22351&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:32:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandboxie 5.06 no reaction</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandboxie 5.06 no reaction</h2>
+		<p><a href="viewtopic69ab69ab.html?f=5&amp;t=22351">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=22351</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sandboxie 5.06 no reaction</h3>
+				<div class="date">Posted: <strong>Fri Jan 08, 2016 1:46 pm</strong></div>
+				<div class="author">by <strong>borku</strong></div>
+				<div class="content">I uninstalled an old version of Sandboxie and did empty all the current sandboxes before the time. Reboot and installed the current version (64-bit), running on Win7 Pro 64-bit.<br>
+With the old version everything worked fine, I installed and removed many progs.<br>
+<br>
+Now I do not get any reaction from Sandboxie, when I select the "Sandboxed Web Browser" I see a pop-up stating that I've installed Sandboxie more than 30 days ago and when I select Click to close this window and continue all's gone, just no reaction at all from Sandboxie. No error pop-ups or anything.<br>
+<br>
+Surely I'm doing something wrong or some hidden setting not applied?<br>
+<br>
+Any advice or suggestions most welcome.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie 5.06 no reaction</h3>
+				<div class="date">Posted: <strong>Fri Jan 08, 2016 1:52 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Was the old version 32bit?<br>
+What is your default browser in Windows? (clicking on run browser sandboxed uses your default Windows browser)<br>
+Have you tried running another browser 'as sandboxed" (Right clicking on the icon)<br>
+..or running a program from the sandboxie icon in the task manager tray (by your clock..?)<br>
+<strong>The 30 day reminder indicates that the new installation of SBIE has noticed that's how long it has been since your deleted the contents on your sandbox. I recommend you do that first.</strong> You should routinely delete the contents of your sandboxes.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie 5.06 no reaction</h3>
+				<div class="date">Posted: <strong>Fri Jan 08, 2016 3:20 pm</strong></div>
+				<div class="author">by <strong>borku</strong></div>
+				<div class="content">Thanks Craig<br>
+The old version was 4.08 and installed to C:\Program Files\Sandboxie and therefore I guess it was a 64-bit version? Normally a 32-bit prog will install to C:\Program Files (x86)?<br>
+My default browser is Firefox  v43.0.2 and set as the default browser although I have IE 11 also installed (fully patched) and not set as default browser. Very very seldom use it.<br>
+I've not tried another browser via sandboxie fearing I may screw some settings? In the past I fully installed Pale Moon within its own sandbox and that ran fine.<br>
+<br>
+Have not yet tried running another program via the sandboxie icon because I've not yet managed to install anything with this version, in the past I had about 7 progs installed (within their own sandboxes) at one time and they always ran without any issues. I installed and removed progs regularly.<br>
+<br>
+The 30 day reminder I cannot figure because I installed this latest version today and it's empty but for the single entry "Sandbox DefaultBox".<br>
+There I can also select it &gt; Run Sandboxed &gt; Run Web Browser but just nothing.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie 5.06 no reaction</h3>
+				<div class="date">Posted: <strong>Fri Jan 08, 2016 3:57 pm</strong></div>
+				<div class="author">by <strong>borku</strong></div>
+				<div class="content">Hi Craig<br>
+New development, now received a whole lot of pop ups and I selected within Program Settings, View Page 2&gt; <br>
+Programs that can connect to the Internet in this sandbox: firefox.exe <br>
+Ticked - Enable restrictions and allow this program to connect to the Internet<br>
+and<br>
+Programs that can be started in this sandbox: firefox.exe<br>
+Ticked - Enable restrictions and allow this program to start<br>
+<br>
+Still no go and the final pop up reads:<br>
+SBIE2204 Cannot start sandboxed service RpcSs (-1)<br>
+<br>
+I've given full access rights via my firewall for sandboxiedcomlaunch.exe, sandboxierpcss.exe and sbiectrl.exe.<br>
+<br>
+All greek for me but may make sense to you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie 5.06 no reaction</h3>
+				<div class="date">Posted: <strong>Fri Jan 08, 2016 4:34 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Hi Craig
+<blockquote class="uncited"><div>New development, now received a whole lot of pop ups and I selected within Program Settings, View Page 2&gt; <br>
+Programs that can connect to the Internet in this sandbox: firefox.exe <br>
+Ticked - Enable restrictions and allow this program to connect to the Internet<br>
+and<br>
+Programs that can be started in this sandbox: firefox.exe<br>
+Ticked - Enable restrictions and allow this program to start</div></blockquote>
+
+Is this in Sandboxie Control? By default under restrictions&gt;Internet access&gt; ALL PROGRAMS should have access to the internet. You should not have to change that.
+<blockquote class="uncited"><div>
+SBIE2204 Cannot start sandboxed service RpcSs (-1)</div></blockquote>
+<strong><br>
+This can be caused by various things. My question is.. Are you running any antivirus or antimalware programs?</strong><br>
+
+<blockquote class="uncited"><div>I've given full access rights via my firewall for sandboxiedcomlaunch.exe, sandboxierpcss.exe and sbiectrl.exe.</div></blockquote>
+What firewall are you running? Software or hardware?<br>
+
+<blockquote class="uncited"><div>The old version was 4.08 and installed to C:\Program Files\Sandboxie and therefore I guess it was a 64-bit version? Normally a 32-bit prog will install to C:\Program Files (x86)?</div></blockquote> Yes, that's correct.
+<blockquote class="uncited"><div>My default browser is Firefox v43.0.2 and set as the default browser although I have IE 11 also installed (fully patched) and not set as default browser. Very very seldom use it.</div></blockquote> So FF is your Windows default browser? What happens with you Right Click on Firefox icon and run as Sandboxed? What happens when you FORCE Firefox in Sandboxie control to run in a sandbox?
+<blockquote class="uncited"><div>
+I've not tried another browser via sandboxie fearing I may screw some settings? In the past I fully installed Pale Moon within its own sandbox and that ran fine.</div></blockquote>
+While you can run pale moon. And browsers can be installed directly into a sandbox, sometimes it's based to install them on your host and then run them as sandboxed to make sure everything is working.<br>
+
+<blockquote class="uncited"><div>Have not yet tried running another program via the sandboxie icon because I've not yet managed to install anything with this version, in the past I had about 7 progs installed (within their own sandboxes) at one time and they always ran without any issues. I installed and removed progs regularly.</div></blockquote>
+
+Not every program will install within a sandbox. We recommend that known, good programs be installed on your host and run as sandboxed. There is significant improvement in v5 of SBIE. But, again, it depends on the type of programs you are running and installing directly into a sandbox.<br>
+<br>
+The 30 day reminder I cannot figure because I installed this latest version today and it's empty but for the single entry "Sandbox DefaultBox".<br>
+There I can also select it &gt; Run Sandboxed &gt; Run Web Browser but just nothing.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie 5.06 no reaction</h3>
+				<div class="date">Posted: <strong>Fri Jan 08, 2016 4:45 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite>
+The 30 day reminder I cannot figure because I installed this latest version today and it's empty but for the single entry "Sandbox DefaultBox".</div></blockquote>
+If he is using the free version and I think he is, after Sandboxie has been installed for more than 30 days, the user gets a pop up the first time a program runs sandboxed (after each restart of he PC) reminding the user that purchasing a license is  <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool">.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie 5.06 no reaction</h3>
+				<div class="date">Posted: <strong>Fri Jan 08, 2016 5:54 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">@Bo...Ya, That crossed my mind while in traffic that could be it... and not "this sandboxe was created X days ago.." and that the lic info may be needed again.<br>
+<br>
+@borku, is that 30 day window more of a "nag" screen? Can you verify in Sandboxie Control that your version of SBIE is registered? If not, enter your key again. If you copied over your sandbox settings from the previous install, and that involves multiple sandboxed, then that could be the problem.<br>
+<br>
+So once your register again (if that is the case) let us know what happens next.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandboxie 5.06 no reaction</h3>
+				<div class="date">Posted: <strong>Sat Jan 09, 2016 8:17 am</strong></div>
+				<div class="author">by <strong>borku</strong></div>
+				<div class="content">Sorry, definitely my mistake I should have mentioned it, it's the free version and I now understand that Sandboxie need to remind the user, that's normal.<br>
+Because the old Sandboxie version ran fine two days (and years) previously I didn't imagine that the latest version will not function with Avast &amp; Privatefirewall because I've not upgraded either or excluding virus definitions.<br>
+Both of these progs still the same version.<br>
+<br>
+As a test I uninstalled Sandboxie 5.06 and reinstalled 4.08, not a good idea because I'm sure that with all the improvements 5.06 more secure and safe.<br>
+All back to near normal, Firefox 43.04 started immediately when I selected run "Sandboxed Web Browser".<br>
+<br>
+This is where there's now a hiccup because I can only do it once and there after no more, I use Firefox and surf around, no problems and pretty fast, no lagging.<br>
+When I close sandboxed Firefox my sytem closes out with a BSOD. I've traced that to the option within Firefox "Clear history when Firefox closes". I can no longer use the shortcut "Sandboxed Web Browser" because it will attempt to start Firefox and then again immediately BSOD.<br>
+<br>
+Selecting iexplore.exe and then "run sandboxed" still fine without any issues. Now I must find a way to force Sandboxie to run IE 11 by default but also keep Firefox as my normal default browser outside of Sandboxie. Tried to amend the Sandboxie shortcut (Sandboxed Web Browser) to "C:\Program Files\Sandboxie\Start.exe" default_browser "C:\Program Files (x86)\Internet Explorer\iexplore.exe" but that's a no go. <br>
+<br>
+Plan B is to install another Firefox or even Pale Moon into Sandboxie with its own sandboxed profile and disable "Clear history when Firefox closes". That defeats the purpose of Sandboxie?<br>
+<br>
+Sandboxiie now becoming very complicated for me even worse than Win 10 Pro which I'm successfully running virtual and blocked MS from giving it free to me.<br>
+<br>
+If all of above outside the scenario of this forum I'll accept, thanks in any case for the quick responses, much appreciated.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=22351&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:32:02 GMT -->
+</html>

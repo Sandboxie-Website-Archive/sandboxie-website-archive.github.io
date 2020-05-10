@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=23342&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:53:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sanboxie system default browser in Windows registry?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sanboxie system default browser in Windows registry?</h2>
+		<p><a href="viewtopicdde2dde2.html?f=17&amp;t=23342">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=23342</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Sanboxie system default browser in Windows registry?</h3>
+				<div class="date">Posted: <strong>Tue Aug 30, 2016 2:21 pm</strong></div>
+				<div class="author">by <strong>jacekalex</strong></div>
+				<div class="content">Hi<br>
+The problem is that in order to launch anything in the sandbox you have to command:<br>
+Code:<br>
+"C: \\ Program Files \\ sandbox \ start.exe / box: cage" C: \\ Program Files (x86) \ Mozilla Firefox \ firefox.exe<br>
+<br>
+But when some in the link in the email or IM, it opens without the sandbox.<br>
+Where in the system you can set the path for the default browser?<br>
+Because I can only see some GUI where I can set the FF or Chrome or any rubbish from the supermarket,<br>
+and that's it.<br>
+<br>
+How to register sandboxie  "start.exe browser" as the default browser system according to the documentation:<br>
+<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/cc144154(v=vs.85).aspx" class="postlink">https://msdn.microsoft.com/en-us/librar ... s.85).aspx</a> ?<br>
+<br>
+Cheers</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sanboxie system default browser in Windows registry?</h3>
+				<div class="date">Posted: <strong>Tue Aug 30, 2016 6:11 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Before I got the full version for my kids PC I had played with this very question. I managed to get it to mostly work by using regedit and doing a manual search for all the firefox.exe entries then identified if they were related to opening a document type and replacing them with a start string similar to what you have posted. It worked but I eventually undid it all and grabbed another license so that I could just force and separate programs into different boxes at the same time along with applying more specific rules.<br>
+<br>
+I did a quick install of an older version of firefox in a VM and grabbed a list of the more obvious entries:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\FirefoxHTML\shell\open\command]
+@="\"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\FirefoxURL\shell\open\command]
+@="\"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\FIREFOX.EXE\shell\open\command]
+@="\"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\FIREFOX.EXE\shell\properties\command]
+@="\"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -preferences"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\FIREFOX.EXE\shell\safemode\command]
+@="\"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -safe-mode"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\StartMenuInternet\FIREFOX.EXE\shell\open\command]
+@="\"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\StartMenuInternet\FIREFOX.EXE\shell\properties\command]
+@="\"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -preferences"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\StartMenuInternet\FIREFOX.EXE\shell\safemode\command]
+@="\"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -safe-mode"
+
+[HKEY_CURRENT_USER\Software\Classes\FirefoxHTML\shell\open\command]
+@="\"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\FirefoxURL\shell\open\command]
+@="\"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\ftp\shell\open\command]
+@="\"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\http\shell\open\command]
+@="\"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\https\shell\open\command]
+@="\"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""</code></pre></div>
+There might be a couple others but if you have similar entries in these locations you *might* edit those to use start though if you aren't familiar with or comfortable messing with the registry I wouldn't suggest you try it. It could just result in breaking stuff if the wrong entries are altered or the wrong strings are inserted. Also there's a good chance the next time firefox updates it'll restore the original entries and undo the work so you may want to export them once you get them working.<br>
+<br>
+I did a quick test in the VM and this seemed to do the trick but I can't be sure it covers everything (or doesn't break something) especially if called directly by another program. If they just pass the string found in one of the entries below, it has a good chance of working.
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\FirefoxHTML\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\FirefoxURL\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\FIREFOX.EXE\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\FIREFOX.EXE\shell\properties\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -preferences"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\FIREFOX.EXE\shell\safemode\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -safe-mode"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\StartMenuInternet\FIREFOX.EXE\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\StartMenuInternet\FIREFOX.EXE\shell\properties\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -preferences"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\StartMenuInternet\FIREFOX.EXE\shell\safemode\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -safe-mode"
+
+[HKEY_CURRENT_USER\Software\Classes\FirefoxHTML\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\FirefoxURL\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\ftp\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\http\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\https\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""</code></pre></div>
+
+The VM I tested it on was Win7 x64 so there might be more or other entries in a diff OS. I just opened a saved .html page and it loaded in SBIE frees DefaultBox to test it. Other tweaking may be required and the paths will only be good if that's where each program is installed on your system....blahblah...use the one above and mess with your registry at YOU OWN RISK! eg, don't blame me!<br>
+<br>
+Obviously with the paid version you can just force firefox and any other software and not need to alter shortcuts or reg entries.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sanboxie system default browser in Windows registry?</h3>
+				<div class="date">Posted: <strong>Fri Sep 02, 2016 4:38 pm</strong></div>
+				<div class="author">by <strong>jacekalex</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Obviously with the paid version you can just force firefox and any other software and not need to alter shortcuts or reg entries.</div></blockquote>
+
+I have a commercial version Sandboxie, thanks You  for the tip  to enable force sandboxing in box configuration options . <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> <br>
+<br>
+Cheers<br>
+ <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sanboxie system default browser in Windows registry?</h3>
+				<div class="date">Posted: <strong>Wed Aug 30, 2017 9:51 am</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlistd9ad.html?mode=viewprofile&amp;u=29518">Syrinx</a> wrote: <a href="viewtopic7e927e92.html?p=123026#p123026" data-post-id="123026" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Aug 30, 2016 6:11 pm</div></cite>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\FirefoxHTML\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\FirefoxURL\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\FIREFOX.EXE\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\FIREFOX.EXE\shell\properties\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -preferences"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\FIREFOX.EXE\shell\safemode\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -safe-mode"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\StartMenuInternet\FIREFOX.EXE\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\StartMenuInternet\FIREFOX.EXE\shell\properties\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -preferences"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\StartMenuInternet\FIREFOX.EXE\shell\safemode\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -safe-mode"
+
+[HKEY_CURRENT_USER\Software\Classes\FirefoxHTML\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\FirefoxURL\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\ftp\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\http\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\https\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe\" -osint -url \"%1\""</code></pre></div>
+</div></blockquote>
+
+This works perfectly! Would you kindly to do the same for Thunderbird? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sanboxie system default browser in Windows registry?</h3>
+				<div class="date">Posted: <strong>Thu Aug 31, 2017 2:10 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist0d19.html?mode=viewprofile&amp;u=33295">Creave</a> wrote: <a href="viewtopicae6c-2ae6c.html?p=129906#p129906" data-post-id="129906" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Aug 30, 2017 9:51 am</div></cite>
+This works perfectly! Would you kindly to do the same for Thunderbird? :)
+</div></blockquote>Gave it a quick drunken once over in a VM. /crossfingers<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Thunderbird.Url.mailto\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -osint -compose \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Thunderbird.Url.news\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -osint -mail \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\ThunderbirdEML\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Wow6432Node\CLSID\{29F458BE-8866-11D5-A3DD-00B0D0F3BAA7}\LocalServer32]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" /MAPIStartup"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\Mail\Mozilla Thunderbird\Protocols\mailto\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -osint -compose \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\Mail\Mozilla Thunderbird\shell\properties\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -options"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\Mail\Mozilla Thunderbird\shell\safemode\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -safe-mode"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\News\Mozilla Thunderbird\Protocols\news\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -osint -mail \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\News\Mozilla Thunderbird\Protocols\nntp\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -osint -mail \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\News\Mozilla Thunderbird\Protocols\snews\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -osint -mail \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\News\Mozilla Thunderbird\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -mail"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\Mail\Mozilla Thunderbird\Protocols\mailto\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -osint -compose \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\Mail\Mozilla Thunderbird\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -mail"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\Mail\Mozilla Thunderbird\shell\properties\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -options"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\Mail\Mozilla Thunderbird\shell\safemode\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -safe-mode"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\News\Mozilla Thunderbird\Protocols\news\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -osint -mail \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\News\Mozilla Thunderbird\Protocols\nntp\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -osint -mail \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\News\Mozilla Thunderbird\Protocols\snews\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -osint -mail \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Clients\News\Mozilla Thunderbird\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -mail"
+
+[HKEY_CURRENT_USER\Software\Classes\mailto\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -osint -compose \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\Thunderbird.Url.mailto\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" -osint -compose \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\ThunderbirdEML\shell\open\command]
+@="\"C:\\Program Files\\Sandboxie\\Start.exe\" /box:DefaultBox \"C:\\Program Files (x86)\\Mozilla Thunderbird\\thunderbird.exe\" \"%1\""
+
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sanboxie system default browser in Windows registry?</h3>
+				<div class="date">Posted: <strong>Thu Aug 31, 2017 3:33 pm</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content">Thank you for your effort! But unfortunately I get this error:</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sanboxie system default browser in Windows registry?</h3>
+				<div class="date">Posted: <strong>Thu Aug 31, 2017 3:56 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">This is likely due to something related to the email software check I have never understood inside SBIE. [I don't use them myself]<br>
+Have you set up the box you are going to run it in (the reg file was set to DefaultBox) up for the email reader in the Sandbox Settings &gt; Applications &gt; Email Reader ?<br>
+Let me know if not and I'll set up a VM to test it with though why not just use the Forced Program option?<br>
+Also, how did you launch it when that popped up?<br>
+<br>
+Update: This whole email software check is horrible. Why is this one particular class of software treated differently than any other when they all use files and registry entries just like the rest?<br>
+<br>
+It simply does not start without the process name. (<strong><span style="text-decoration: underline">BLOCKED by SBIE itself</span></strong>) eg If I just copy the entire template to the sandboxie.ini and paste it to a box then remove the thunderbird.exe, &amp; thunde~1.exe parts I get the same error.<br>
+<br>
+eg<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Tmpl.Thunderbird=%Local AppData%\Thunderbird
+Tmpl.Thunderbird:ExpectFile=localstore.rdf
+OpenFilePath=%Tmpl.Thunderbird%
+OOpenFilePath=thunderbird.exe,%Tmpl.Thunderbird%
+OpenFilePath=thunderbird.exe,%AppData%\Thunderbird
+OpenFilePath=thunderbird.exe,%Local AppData%\Thunderbird
+OpenKeyPath=thunderbird.exe,HKEY_LOCAL_MACHINE\SOFTWARE\Clients\*\Mozilla Thunderbird*
+OpenKeyPath=thunderbird.exe,HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Mozilla Thunderbird*
+OpenFilePath=thunde~1.exe,%Tmpl.Thunderbird%
+OpenFilePath=thunde~1.exe,%AppData%\Thunderbird
+OpenFilePath=thunde~1.exe,%Local AppData%\Thunderbird
+OpenKeyPath=thunde~1.exe,HKEY_LOCAL_MACHINE\SOFTWARE\Clients\*\Mozilla Thunderbird*
+OpenKeyPath=thunde~1.exe,HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Mozilla Thunderbird*</code></pre></div>
+works<br>
+<br>
+but this doesn't:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Tmpl.Thunderbird=%Local AppData%\Thunderbird
+Tmpl.Thunderbird:ExpectFile=localstore.rdf
+OpenFilePath=%Tmpl.Thunderbird%
+OOpenFilePath=%Tmpl.Thunderbird%
+OpenFilePath=%AppData%\Thunderbird
+OpenFilePath=%Local AppData%\Thunderbird
+OpenKeyPath=HKEY_LOCAL_MACHINE\SOFTWARE\Clients\*\Mozilla Thunderbird*
+OpenKeyPath=HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Mozilla Thunderbird*
+OpenFilePath=%Tmpl.Thunderbird%
+OpenFilePath=%AppData%\Thunderbird
+OpenFilePath=%Local AppData%\Thunderbird
+OpenKeyPath=HKEY_LOCAL_MACHINE\SOFTWARE\Clients\*\Mozilla Thunderbird*
+OpenKeyPath=HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Mozilla Thunderbird*</code></pre></div>
+
+Renaming Thunderbird.exe to NotEmail.exe works however....<br>
+Renaming notepad.exe to thunderbird.exe results in the same block without the template containing the name.<br>
+<br>
+Please either improve or simply remove <span style="text-decoration: underline">this horribly implemented check</span>, or at least the <em>related internal block</em>. What is the point? What have I missed?<br>
+<br>
+At this point I guess renaming the thunderbird.exe and updating the .reg entries to the renamed file might be the best bet for you Creave though using ForcedProgram with the registered version of sandboxie would still be far more ideal/certain.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sanboxie system default browser in Windows registry?</h3>
+				<div class="date">Posted: <strong>Fri Sep 01, 2017 11:22 am</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content">Then I will use the ForcedProgram function. I appreciate the effort! Thanks!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=23342&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:53:12 GMT -->
+</html>

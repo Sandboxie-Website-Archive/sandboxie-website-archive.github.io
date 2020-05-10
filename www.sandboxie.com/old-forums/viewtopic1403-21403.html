@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25419&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:56:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; AnyDesk remote desktop - no network connection</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>AnyDesk remote desktop - no network connection</h2>
+		<p><a href="viewtopic43574357.html?f=11&amp;t=25419">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25419</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>AnyDesk remote desktop - no network connection</h3>
+				<div class="date">Posted: <strong>Thu Feb 08, 2018 7:10 am</strong></div>
+				<div class="author">by <strong>majokey</strong></div>
+				<div class="content">Hi,<br>
+<br>
+While TeamViewer works fine in Sandboxie (see my Positive Review), AnyDesk <a href="https://anydesk.com/does" class="postlink">https://anydesk.com/does</a> not. AnyDesk is also a remote desktop solution, the company allegedly run by former TeamViewer engineers.<br>
+<br>
+I tested in Windows 7 Pro and Sandboxie 5.23.3<br>
+<br>
+AnyDesk starts in Sandboxie, all its elements work and settings save, but it says "Could not connect to the AnyDesk network". The connection works fine when run without Sandboxie.<br>
+<br>
+Their KB talks about issues that break SSL <a href="http://support.anydesk.com/knowledgebase/articles/441856-anydesk-cannot-connect" class="postlink">http://support.anydesk.com/knowledgebas ... ot-connect</a><br>
+I doubt that's the case here.<br>
+<br>
+Also about Firewall <a href="http://support.anydesk.com/knowledgebase/articles/1135291-firewall-settings-for-anydesk" class="postlink">http://support.anydesk.com/knowledgebas ... or-anydesk</a><br>
+But again, since it works outside Sanboxie, we can disregard that.<br>
+<br>
+Any ideas? Why would a network connection not be available from within Sandboxie? Should perhaps some of the Sandboxie executable files be allowed through the Windows firewall?<br>
+<br>
+What do you think?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AnyDesk remote desktop - no network connection</h3>
+				<div class="date">Posted: <strong>Thu Feb 08, 2018 12:18 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello majokey,<br>
+<br>
+The app crashes immediately when I try to run it Sandboxed so I cannot test the behavior. (Are you using any specific settings for your Sandbox?) <br>
+Is there any other security software involved? <br>
+<br>
+Please post the output of Resource Access Monitor so that I can have a look:<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+Copy paste the output <br>
+Highlight it and click on the "&lt;/&gt;" button to format it in the forums. <br>
+<br>
+Also, I noticed (outside Sandboxie) that the app has connection settings (Any Desk ---&gt; Settings---&gt; Connection).  See if switching to "Never use a proxy server" , or changing the Local port helps in any way.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AnyDesk remote desktop - no network connection</h3>
+				<div class="date">Posted: <strong>Fri Feb 09, 2018 7:57 am</strong></div>
+				<div class="author">by <strong>majokey</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+Thank you for your reply! I did try to change the network settings to No Proxy, but it produced no change. I'm testing it in a fresh new sandbox created by copying the settings from the Default one, which I never changed. I will test it with the Sandboxie Resource Monitor over the weekend when I'm able to close everything and use my colleague's PC as a counterpart.<br>
+<br>
+Two more observations:<br>
+Windows 7 Pro and Sandboxie 5.23.3 - I'm able to both just run the downloaded file inside the sandbox and install the program in there. I had to disable the Drop Rights checkbox in order to install. It shows unable to connect to AnyDesk network and while it runs, it crashes upon trying to initiate a connection.<br>
+<br>
+Windows 10 Home w/ latest updates and Sandboxie 5.23.3 as a counterpart - exactly the same, except it doesn't crash when connection is attempted. It just never connects to the AnyDesk network and as a result, to the other machine.<br>
+<br>
+I'll supply more details over the weekend,<br>
+majokey</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AnyDesk remote desktop - no network connection</h3>
+				<div class="date">Posted: <strong>Fri Feb 09, 2018 10:51 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello majokey,<br>
+
+<blockquote class="uncited"><div>I'm able to both just run the downloaded file inside the sandbox and install the program in there.</div></blockquote>
+I cannot run  the installed version, nor install it inside Sandboxie. The only thing I can do is launch the installer (which opens AnyDesk, but doesn't install it). From that step, I opened a bunch of IPC paths and was able to establish a connection between my host and my VM (both inside the Sandbox).<br>
+<br>
+Here's what I opened:<br>
+Configure--Edit configuration <br>
+Copy paste this under DefaultBox<br>
+OpenIpcPath=anydesk.exe,*ad_connect_queue_*<br>
+OpenIpcPath=anydesk.exe,*ad_lsystem*<br>
+OpenIpcPath=anydesk.exe,*ad_mailbox*<br>
+OpenIpcPath=anydesk.exe,*ad_trace_mtx*<br>
+OpenPipePath=anydesk.exe,*\Device\Ide\IdeDeviceP1T0L0-*<br>
+Save the file<br>
+Configure---&gt;Reload configuration (may need to delete the Sandbox contents as well). <br>
+Try establishing a remote session.<br>
+You may get COM errors, go ahead and Hide them.  (Choose the "Hide" button, don't hit "close" or they will keep coming). <br>
+<br>
+I have not tested this against every scenario so I cannot assure you will be 100% secure, since we are opening a lot of holes to allow Anydesk to communicate.  I have also tested it inside the same network only, I don't know this will work for every case.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: AnyDesk remote desktop - no network connection</h3>
+				<div class="date">Posted: <strong>Sat Mar 24, 2018 12:24 pm</strong></div>
+				<div class="author">by <strong>majokey</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+Well, it took me a lot longer than I anticipated! But below is the record from Resource Access Monitor.<br>
+<br>
+Just in case, here's my config again:
+<ul><li>Win 7 Pro SP1, fully updated<br>
+Sandboxie 5.24 (updated since the start of this thread)<br>
+Only Win Defender as AV<br>
+Intel i7, 16 GB RAM<br>
+AnyDesk connects to its network when started outside Sandboxie<br>
+Doesn't connect when started inside Sandboxie (same PC, no other changes, tens of seconds apart)</li></ul>
+
+STEPS TESTED
+<ul><li>PC rebooted<br>
+Started only Sandboxie Control<br>
+Started Resource Access Monitor<br>
+Started AnyDesk from Tray Icon &gt; Sandbox &gt; Run Any Program (Drop Rights not checked)<br>
+Anydesk immediately show that it can't connect<br>
+Waited a little<br>
+Clicked Copy and Close in Resource Access Monitor<br>
+Exited AnyDesk<br>
+Waited for the program to fully quit in Sandboxie<br>
+Opened Notepad, pasted the Resource Access Monitor content in it, saved<br>
+Started "naked" AnyDesk without Sandboxie, it showed as connected to the AnyDesk network</li></ul>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\CdRom0
+(Drive)     \Device\HarddiskVolume2
+(Drive)     \Device\HarddiskVolume3
+(Drive)     \Device\SftVol
+Clsid       -------------------------------
+Clsid       {00000341-0000-0000-C000-000000000046} ?
+Clsid       {00021401-0000-0000-C000-000000000046} Shortcut
+Clsid       {26A28DD1-D23A-43A0-A495-F1C3F75C49E2} ?
+Clsid       {53BD6B4E-3780-4693-AFC3-7161C2F3EE9C} MruLongList
+Clsid    O  {8BC3F05E-D86B-11D0-A075-00C04FB68820} Windows Management and Instrumentation
+File/Key    -------------------------------
+Image       -------------------------------
+Image       *:\program files\sandboxie\sandboxiedcomlaunch.exe
+Image       *:\program files\sandboxie\sandboxierpcss.exe
+Image       *:\program files\sandboxie\start.exe
+Image       *:\users\user1\desktop\anydesk.exe
+Image       *:\windows\syswow64\dllhost.exe
+Image       c:\program files (x86)\acronis\trueimagehome\ti_managers_proxy.dll
+Image       c:\program files (x86)\acronis\trueimagehome\tishell64.dll
+Image       c:\program files\acer\acer epower management\syshook.dll
+Image       c:\program files\internet explorer\ieproxy.dll
+Image       c:\program files\sandboxie\32\sbiedll.dll
+Image       c:\program files\sandboxie\sbiedll.dll
+Image       c:\users\user1\appdata\roaming\dropbox\bin\dropboxext.19.0.dll
+Image       c:\users\user1\appdata\roaming\dropbox\bin\dropboxext64.19.0.dll
+Image       c:\windows\system32\actxprxy.dll
+Image       c:\windows\system32\advapi32.dll
+Image       c:\windows\system32\api-ms-win-core-synch-l1-2-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-advapi32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-advapi32-l2-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-normaliz-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-shell32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-shlwapi-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-shlwapi-l2-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-user32-l1-1-0.dll
+Image       c:\windows\system32\api-ms-win-downlevel-version-l1-1-0.dll
+Image       c:\windows\system32\apphelp.dll
+Image       c:\windows\system32\atl.dll
+Image       c:\windows\system32\cfgmgr32.dll
+Image       c:\windows\system32\clbcatq.dll
+Image       c:\windows\system32\comdlg32.dll
+Image       c:\windows\system32\credssp.dll
+Image       c:\windows\system32\crypt32.dll
+Image       c:\windows\system32\cryptbase.dll
+Image       c:\windows\system32\cryptsp.dll
+Image       c:\windows\system32\cscapi.dll
+Image       c:\windows\system32\cscdll.dll
+Image       c:\windows\system32\cscui.dll
+Image       c:\windows\system32\davclnt.dll
+Image       c:\windows\system32\davhlpr.dll
+Image       c:\windows\system32\dbghelp.dll
+Image       c:\windows\system32\devobj.dll
+Image       c:\windows\system32\dhcpcsvc.dll
+Image       c:\windows\system32\dhcpcsvc6.dll
+Image       c:\windows\system32\dnsapi.dll
+Image       c:\windows\system32\drprov.dll
+Image       c:\windows\system32\dui70.dll
+Image       c:\windows\system32\duser.dll
+Image       c:\windows\system32\dwmapi.dll
+Image       c:\windows\system32\ehstorapi.dll
+Image       c:\windows\system32\ehstorshell.dll
+Image       c:\windows\system32\explorerframe.dll
+Image       c:\windows\system32\fwpuclnt.dll
+Image       c:\windows\system32\gdi32.dll
+Image       c:\windows\system32\iconcodecservice.dll
+Image       c:\windows\system32\ieframe.dll
+Image       c:\windows\system32\iertutil.dll
+Image       c:\windows\system32\imm32.dll
+Image       c:\windows\system32\iphlpapi.dll
+Image       c:\windows\system32\kernel32.dll
+Image       c:\windows\system32\kernelbase.dll
+Image       c:\windows\system32\linkinfo.dll
+Image       c:\windows\system32\lpk.dll
+Image       c:\windows\system32\mpr.dll
+Image       c:\windows\system32\msasn1.dll
+Image       c:\windows\system32\msctf.dll
+Image       c:\windows\system32\msftedit.dll
+Image       c:\windows\system32\msimg32.dll
+Image       c:\windows\system32\msls31.dll
+Image       c:\windows\system32\msvcp120.dll
+Image       c:\windows\system32\msvcr120.dll
+Image       c:\windows\system32\msvcrt.dll
+Image       c:\windows\system32\mswsock.dll
+Image       c:\windows\system32\napinsp.dll
+Image       c:\windows\system32\netapi32.dll
+Image       c:\windows\system32\netutils.dll
+Image       c:\windows\system32\networkexplorer.dll
+Image       c:\windows\system32\nlaapi.dll
+Image       c:\windows\system32\normaliz.dll
+Image       c:\windows\system32\nsi.dll
+Image       c:\windows\system32\ntdll.dll
+Image       c:\windows\system32\ntdsapi.dll
+Image       c:\windows\system32\ntlanman.dll
+Image       c:\windows\system32\ntmarta.dll
+Image       c:\windows\system32\ntshrui.dll
+Image       c:\windows\system32\ole32.dll
+Image       c:\windows\system32\oleaut32.dll
+Image       c:\windows\system32\photometadatahandler.dll
+Image       c:\windows\system32\pnrpnsp.dll
+Image       c:\windows\system32\portabledeviceapi.dll
+Image       c:\windows\system32\profapi.dll
+Image       c:\windows\system32\propsys.dll
+Image       c:\windows\system32\psapi.dll
+Image       c:\windows\system32\pstorec.dll
+Image       c:\windows\system32\rasadhlp.dll
+Image       c:\windows\system32\rpcepmap.dll
+Image       c:\windows\system32\rpcrt4.dll
+Image       c:\windows\system32\rpcrtremote.dll
+Image       c:\windows\system32\rpcss.dll
+Image       c:\windows\system32\rsaenh.dll
+Image       c:\windows\system32\samcli.dll
+Image       c:\windows\system32\samlib.dll
+Image       c:\windows\system32\searchfolder.dll
+Image       c:\windows\system32\sechost.dll
+Image       c:\windows\system32\secur32.dll
+Image       c:\windows\system32\setupapi.dll
+Image       c:\windows\system32\shdocvw.dll
+Image       c:\windows\system32\shell32.dll
+Image       c:\windows\system32\shlwapi.dll
+Image       c:\windows\system32\slc.dll
+Image       c:\windows\system32\srvcli.dll
+Image       c:\windows\system32\sspicli.dll
+Image       c:\windows\system32\structuredquery.dll
+Image       c:\windows\system32\sxs.dll
+Image       c:\windows\system32\thumbcache.dll
+Image       c:\windows\system32\user32.dll
+Image       c:\windows\system32\usp10.dll
+Image       c:\windows\system32\uxtheme.dll
+Image       c:\windows\system32\version.dll
+Image       c:\windows\system32\wbem\fastprox.dll
+Image       c:\windows\system32\wbem\wbemprox.dll
+Image       c:\windows\system32\wbem\wbemsvc.dll
+Image       c:\windows\system32\wbemcomn.dll
+Image       c:\windows\system32\webio.dll
+Image       c:\windows\system32\windowscodecs.dll
+Image       c:\windows\system32\winhttp.dll
+Image       c:\windows\system32\winmm.dll
+Image       c:\windows\system32\winnsi.dll
+Image       c:\windows\system32\winrnr.dll
+Image       c:\windows\system32\winspool.drv
+Image       c:\windows\system32\winsta.dll
+Image       c:\windows\system32\wintrust.dll
+Image       c:\windows\system32\wkscli.dll
+Image       c:\windows\system32\wldap32.dll
+Image       c:\windows\system32\wpdshext.dll
+Image       c:\windows\system32\ws2_32.dll
+Image       c:\windows\system32\wship6.dll
+Image       c:\windows\system32\wshtcpip.dll
+Image       c:\windows\system32\wtsapi32.dll
+Image       c:\windows\system32\xmllite.dll
+Image       c:\windows\system32\zipfldr.dll
+Image       c:\windows\syswow64\advapi32.dll
+Image       c:\windows\syswow64\cfgmgr32.dll
+Image       c:\windows\syswow64\clbcatq.dll
+Image       c:\windows\syswow64\crypt32.dll
+Image       c:\windows\syswow64\cryptbase.dll
+Image       c:\windows\syswow64\cryptsp.dll
+Image       c:\windows\syswow64\devobj.dll
+Image       c:\windows\syswow64\gdi32.dll
+Image       c:\windows\syswow64\kernel32.dll
+Image       c:\windows\syswow64\kernelbase.dll
+Image       c:\windows\syswow64\lpk.dll
+Image       c:\windows\syswow64\msasn1.dll
+Image       c:\windows\syswow64\msctf.dll
+Image       c:\windows\syswow64\msvcrt.dll
+Image       c:\windows\syswow64\nsi.dll
+Image       c:\windows\syswow64\ntdll.dll
+Image       c:\windows\syswow64\ole32.dll
+Image       c:\windows\syswow64\oleaut32.dll
+Image       c:\windows\syswow64\photometadatahandler.dll
+Image       c:\windows\syswow64\profapi.dll
+Image       c:\windows\syswow64\psapi.dll
+Image       c:\windows\syswow64\rpcrt4.dll
+Image       c:\windows\syswow64\rpcrtremote.dll
+Image       c:\windows\syswow64\sechost.dll
+Image       c:\windows\syswow64\setupapi.dll
+Image       c:\windows\syswow64\shell32.dll
+Image       c:\windows\syswow64\shlwapi.dll
+Image       c:\windows\syswow64\sspicli.dll
+Image       c:\windows\syswow64\sxs.dll
+Image       c:\windows\syswow64\thumbcache.dll
+Image       c:\windows\syswow64\user32.dll
+Image       c:\windows\syswow64\userenv.dll
+Image       c:\windows\syswow64\usp10.dll
+Image       c:\windows\syswow64\wldap32.dll
+Image       c:\windows\syswow64\ws2_32.dll
+Image       c:\windows\winsxs\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\comctl32.dll
+Image       c:\windows\winsxs\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7601.23894_none_145eb2808b8d6928\gdiplus.dll
+Image       c:\windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\comctl32.dll
+Image       c:\windows\winsxs\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7601.23894_none_5c0be957a009922e\gdiplus.dll
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\__ComCatalogCache__
+Ipc         \BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{363384BA-86B8-42D1-B703-8FC842308E3C}.2.ver0x0000000000000001.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{54A6DCF4-AB17-4416-8FDE-802F410523EB}.2.ver0x0000000000000001.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x000000000000001b.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000002.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{F2A52D7E-D798-43A7-8D55-BEA52BACB1AD}.2.ver0x0000000000000001.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \BaseNamedObjects\RotHintTable
+Ipc         \BaseNamedObjects\windows_shell_global_counters
+Ipc         \RPC Control\actkernel
+Ipc         \RPC Control\epmapper
+Ipc         \RPC Control\OLE17E85B0416314785BBF2467538F0
+Ipc         \RPC Control\OLE1E95DC3103FD4EDC81290A84CE65
+Ipc         \RPC Control\OLE220B95225FE94A54917FA4C1A7C4
+Ipc         \RPC Control\plugplay
+Ipc         \Sessions\1\BaseNamedObjects\__ComCatalogCache__
+Ipc         \Sessions\1\BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \Sessions\1\BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \Sessions\1\BaseNamedObjects\1\ad_connect_queue_3144_3138312435_evt
+Ipc         \Sessions\1\BaseNamedObjects\1\ad_connect_queue_3144_3138312435_mtx
+Ipc         \Sessions\1\BaseNamedObjects\1\ad_connect_queue_3144_3138312435_shm
+Ipc         \Sessions\1\BaseNamedObjects\ad_lsystem_evt
+Ipc         \Sessions\1\BaseNamedObjects\ad_lsystem_mtx
+Ipc         \Sessions\1\BaseNamedObjects\ad_lsystem_shm
+Ipc         \Sessions\1\BaseNamedObjects\ad_mailbox_2032_3130200421_0_evt
+Ipc         \Sessions\1\BaseNamedObjects\ad_mailbox_2032_3130200421_0_mtx
+Ipc         \Sessions\1\BaseNamedObjects\ad_mailbox_2032_3130200421_0_shm
+Ipc         \Sessions\1\BaseNamedObjects\ad_mailbox_2032_3130200421_1_evt
+Ipc         \Sessions\1\BaseNamedObjects\ad_mailbox_2032_3130200421_1_mtx
+Ipc         \Sessions\1\BaseNamedObjects\ad_mailbox_2032_3130200421_1_shm
+Ipc         \Sessions\1\BaseNamedObjects\ad_mailbox_3344_3138468436_0_evt
+Ipc         \Sessions\1\BaseNamedObjects\ad_mailbox_3344_3138468436_0_mtx
+Ipc         \Sessions\1\BaseNamedObjects\ad_mailbox_3344_3138468436_0_shm
+Ipc         \Sessions\1\BaseNamedObjects\ad_mailbox_3344_3138468436_1_evt
+Ipc         \Sessions\1\BaseNamedObjects\ad_mailbox_3344_3138468436_1_mtx
+Ipc         \Sessions\1\BaseNamedObjects\ad_mailbox_3344_3138468436_1_shm
+Ipc         \Sessions\1\BaseNamedObjects\ad_trace_mtx
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{363384BA-86B8-42D1-B703-8FC842308E3C}.2.ver0x0000000000000001.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{54A6DCF4-AB17-4416-8FDE-802F410523EB}.2.ver0x0000000000000001.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x000000000000001b.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000002.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{F2A52D7E-D798-43A7-8D55-BEA52BACB1AD}.2.ver0x0000000000000001.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users********AppData*Local*Microsoft*Windows*Caches*{AFBF9F1A-8EE8-4C77-AF34-
+
+C647E37CA0D9}.1.ver0x000000000000000e.db
+Ipc         \Sessions\1\BaseNamedObjects\C:*Users********AppData*Local*Microsoft*Windows*Caches*cversions.1.ro
+Ipc         \Sessions\1\BaseNamedObjects\C::Users:******:AppData:Local:Microsoft:Windows:Explorer:thumbcache_1024.db!dfMaintainer
+Ipc         \Sessions\1\BaseNamedObjects\C::Users:******:AppData:Local:Microsoft:Windows:Explorer:thumbcache_256.db!dfMaintainer
+Ipc         \Sessions\1\BaseNamedObjects\C::Users:******:AppData:Local:Microsoft:Windows:Explorer:thumbcache_32.db!dfMaintainer
+Ipc         \Sessions\1\BaseNamedObjects\C::Users:******:AppData:Local:Microsoft:Windows:Explorer:thumbcache_96.db!dfMaintainer
+Ipc         \Sessions\1\BaseNamedObjects\C::Users:******:AppData:Local:Microsoft:Windows:Explorer:thumbcache_idx.db!rwReaderRefs
+Ipc         \Sessions\1\BaseNamedObjects\C::Users:******:AppData:Local:Microsoft:Windows:Explorer:thumbcache_idx.db!rwWriterEvent
+Ipc         \Sessions\1\BaseNamedObjects\C::Users:******:AppData:Local:Microsoft:Windows:Explorer:thumbcache_idx.db!rwWriterMutex
+Ipc         \Sessions\1\BaseNamedObjects\C::Users:******:AppData:Local:Microsoft:Windows:Explorer:thumbcache_idx.db!ThumbnailCacheInit
+Ipc         \Sessions\1\BaseNamedObjects\C::Users:******:AppData:Local:Microsoft:Windows:Explorer:thumbcache_sr.db!dfMaintainer
+Ipc         \Sessions\1\BaseNamedObjects\ComPlusCOMRegTable
+Ipc         \Sessions\1\BaseNamedObjects\RotHintTable
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_2032
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_3144
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_3344
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_3776
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_4960
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_5068
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_DummyEvent_5760
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_RPCSS_SXS_READY
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_DcomLaunch
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_Mutex1
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcEptMapper
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_ProtectedStorage_Mutex
+Ipc         \Sessions\1\BaseNamedObjects\SBIE_ProtectedStorage_Section
+Ipc         \Sessions\1\BaseNamedObjects\SboxSession
+Ipc         \Sessions\1\BaseNamedObjects\ScmCreatedEvent
+Ipc         \Sessions\1\BaseNamedObjects\Shell.CMruPidlList
+Ipc         \Sessions\1\BaseNamedObjects\windows_ie_global_counters
+Ipc         \Sessions\1\BaseNamedObjects\windows_shell_global_counters
+Ipc      O  \BaseNamedObjects\msctf.serverDefault1
+Ipc      O  \KernelObjects\MaximumCommitCondition
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-advapi32-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-normaliz-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-shlwapi-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-user32-l1-1-0.dll
+Ipc      O  \KnownDlls\api-ms-win-downlevel-version-l1-1-0.dll
+Ipc      O  \KnownDlls\CFGMGR32.dll
+Ipc      O  \KnownDlls\clbcatq.dll
+Ipc      O  \KnownDlls\COMDLG32.dll
+Ipc      O  \KnownDlls\CRYPT32.dll
+Ipc      O  \KnownDlls\DEVOBJ.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\IERTUTIL.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\KERNELBASE.dll
+Ipc      O  \KnownDlls\LPK.dll
+Ipc      O  \KnownDlls\MSASN1.dll
+Ipc      O  \KnownDlls\MSCTF.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\NORMALIZ.dll
+Ipc      O  \KnownDlls\NSI.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\profapi.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\Setupapi.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\USP10.dll
+Ipc      O  \KnownDlls\WINTRUST.dll
+Ipc      O  \KnownDlls\WLDAP32.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \KnownDlls32\advapi32.dll
+Ipc      O  \KnownDlls32\CFGMGR32.dll
+Ipc      O  \KnownDlls32\clbcatq.dll
+Ipc      O  \KnownDlls32\CRYPT32.dll
+Ipc      O  \KnownDlls32\CRYPTBASE.dll
+Ipc      O  \KnownDlls32\DEVOBJ.dll
+Ipc      O  \KnownDlls32\gdi32.dll
+Ipc      O  \KnownDlls32\kernel32.dll
+Ipc      O  \KnownDlls32\KERNELBASE.dll
+Ipc      O  \KnownDlls32\LPK.dll
+Ipc      O  \KnownDlls32\MSASN1.dll
+Ipc      O  \KnownDlls32\MSCTF.dll
+Ipc      O  \KnownDlls32\MSVCRT.dll
+Ipc      O  \KnownDlls32\NSI.dll
+Ipc      O  \KnownDlls32\ole32.dll
+Ipc      O  \KnownDlls32\OLEAUT32.dll
+Ipc      O  \KnownDlls32\profapi.dll
+Ipc      O  \KnownDlls32\PSAPI.DLL
+Ipc      O  \KnownDlls32\rpcrt4.dll
+Ipc      O  \KnownDlls32\Setupapi.dll
+Ipc      O  \KnownDlls32\SHELL32.dll
+Ipc      O  \KnownDlls32\SHLWAPI.dll
+Ipc      O  \KnownDlls32\SspiCli.dll
+Ipc      O  \KnownDlls32\user32.dll
+Ipc      O  \KnownDlls32\USERENV.dll
+Ipc      O  \KnownDlls32\USP10.dll
+Ipc      O  \KnownDlls32\WLDAP32.dll
+Ipc      O  \KnownDlls32\WS2_32.dll
+Ipc      O  \RPC Control\dhcpcsvc
+Ipc      O  \RPC Control\dhcpcsvc6
+Ipc      O  \RPC Control\DNSResolver
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\LSARPC_ENDPOINT
+Ipc      O  \RPC Control\lsasspirpc
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \Security\LSA_AUTHENTICATION_INITIALIZED
+Ipc      O  \Sessions\1\BaseNamedObjects\CTF.AsmListCache.FMPDefault1
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.Asm.MutexDefault1
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.AsmCacheReady.Default1
+Ipc      O  \Sessions\1\BaseNamedObjects\MSCTF.CtfActivated.Default1
+Ipc      O  \Sessions\1\Windows\ApiPort
+Ipc      O  \Sessions\1\Windows\SharedSection
+Pipe        -------------------------------
+Pipe        \Device\DfsClient
+Pipe        \Device\HarddiskVolume1
+Pipe        \Device\HarddiskVolume2
+Pipe        \Device\HarddiskVolume3
+Pipe        \Device\Ide\IAAStorageDevice-0
+Pipe        \Device\KsecDD
+Pipe        \Device\MountPointManager
+Pipe        \device\namedpipe\dav rpc service
+Pipe        \Device\NamedPipe\DropboxDataPipe
+Pipe        \device\namedpipe\dropboxdatapipe
+Pipe        \Device\NamedPipe\DropboxDataPipe
+Pipe        \device\namedpipe\dropboxdatapipe
+Pipe        \device\namedpipe\dropboxpipe_1
+Pipe        \device\namedpipe\DropboxPipe_1
+Pipe        \device\namedpipe\dropboxpipe_1
+Pipe        \device\namedpipe\DropboxPipe_1
+Pipe        \device\namedpipe\dropboxpipe_1
+Pipe        \device\namedpipe\samr
+Pipe        \device\namedpipe\srvsvc
+Pipe        \device\namedpipe\wkssvc
+Pipe        \Device\Ndis
+Pipe        \Device\NDMP10
+Pipe        \Device\NDMP11
+Pipe        \Device\NDMP12
+Pipe        \Device\NDMP13
+Pipe        \Device\NDMP3
+Pipe        \Device\NDMP4
+Pipe        \Device\NDMP6
+Pipe        \Device\NDMP7
+Pipe        \Device\NDMP8
+Pipe        \Device\NDMP9
+Pipe     O  \Device\Afd
+Pipe     O  \Device\NamedPipe
+Pipe     O  \Device\NamedPipe\
+Pipe     O  \Device\NetBT_Tcpip_{B0BCF2FB-1545-4F42-9C6F-8160A8B30C5C}
+Pipe     O  \Device\NetBT_Tcpip_{C3EBD509-7E0A-40F3-A6D4-A22D2EFB9EE9}
+Pipe     O  \Device\NetBT_Tcpip_{D2687003-FDB7-48CF-B6D6-5F4D5FB326C1}
+Pipe     O  \Device\Nsi
+Pipe     X  \Device\Mup
+WinCls      -------------------------------
+WinCls   O  Shell_TrayWnd
+WinCls   X  Progman
+</code></pre></div>
+
+I haven't yet tried opening the resources that you suggested. I wanted to first wait for your assessment of the Resource Access Monitor record.<br>
+<br>
+And to try to offer something in return:<br>
+zoom.us desktop sharing works even when installed directly in Sandboxie, even changing sides works (used by Google Adwords support)<br>
+GoToWebinar works even when installed directly in Sandboxie<br>
+<a href="https://www.blackboard.com/index.html" class="postlink">https://www.blackboard.com/index.html</a> works even when installed directly in Sandboxie<br>
+<br>
+Looking forward for your ideas!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25419&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:56:36 GMT -->
+</html>

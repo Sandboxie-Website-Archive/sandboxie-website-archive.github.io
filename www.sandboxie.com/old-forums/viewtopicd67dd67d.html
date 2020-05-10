@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9853&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:47:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Open sandboxed if matches xyz file extension</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Open sandboxed if matches xyz file extension</h2>
+		<p><a href="viewtopicc7c3c7c3.html?f=4&amp;t=9853">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=9853</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Open sandboxed if matches xyz file extension</h3>
+				<div class="date">Posted: <strong>Sat Feb 05, 2011 11:11 am</strong></div>
+				<div class="author">by <strong>_is_m00nbl00d</strong></div>
+				<div class="content">My suggestion comes in the line of what is suggested <a href="../phpbb/viewtopica1ee.php?t=9803" class="postlink">here</a>.<br>
+<br>
+Currently, I download files to an unsandboxed folder, where nothing gets execution rights. In this scenario I got no reasons to have this folder sandboxed.<br>
+But, I do have different sandboxes for different applications, such as for Adobe Reader. So, if I open a PDF file saved in this folder, it will be opened in the Adobe Reader sandbox.<br>
+<br>
+I do not force Office processes to run sandboxed, though. I run them sandboxed, manually.<br>
+<br>
+What I'd like for Sandboxie to offer is a feature to allow to add certain file extensions to be forced to run in a specified sandbox. For example, I want to force *.doc files to automatically run sandboxed when I double-click them.<br>
+<br>
+What do you guys think, and obviously Tzuk lol ? Worthy to have under consideration for a future release?<br>
+<br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Feb 05, 2011 2:14 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>For example, I want to force *.doc files to automatically run sandboxed when I double-click them. </div></blockquote>
+
+Document files [which is anything that is not a .exe or .com] are not programs, and cannot be directly intercepted by Sandboxie.  You should force the corresponding program to the sandbox you want.  In this case, WINWORD.EXE handles .doc files.<br>
+<br>
+As for clicking documents/programs in a sandbox folder but actually opening them in another sandbox, I don't think I will offer this feature directly.  But there have been requests to be able to specify a list of programs to be excluded from running in a sandbox.  So you when that feature is available you may be able to specify WINWORD.EXE as excluded in one sandbox, and as a forced program in another sandbox.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Feb 05, 2011 3:16 pm</strong></div>
+				<div class="author">by <strong>_is_m00nbl00d</strong></div>
+				<div class="content">I know a document file is not a program, but I was wondering if Sandboxie could ever work that way, by intercepting the file type and then open the respective process, that actually handles the file, in a specified sandbox.<br>
+<br>
+But, what you mentioned sure is a great feature. Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Feb 10, 2011 11:09 am</strong></div>
+				<div class="author">by <strong>Username</strong></div>
+				<div class="content"><blockquote class="uncited"><div>intercepting the file type</div></blockquote><strong>First</strong>, it's rather lame approach IMO (although SBIE doesn't really care ATM <strong>which</strong> file to intercept but its name).<br>
+<strong>Second</strong>, SBIE injects the <span style="text-decoration: underline">executable</span> to comply with the restrictions, no mempatching.<br>
+<strong>Third</strong>, could you please define 'opening XYZ file'? Ain't it opening XYZ via some application (executable or plug-in/add-on)?<br>
+<strong>Fourth</strong>... what are you trying to get after all? Because it seems to be a wrong way <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 11, 2011 10:19 am</strong></div>
+				<div class="author">by <strong>_is_m00nbl00d</strong></div>
+				<div class="content"><blockquote><div><cite>Username wrote:</cite><blockquote class="uncited"><div>intercepting the file type</div></blockquote><strong>First</strong>, it's rather lame approach IMO (although SBIE doesn't really care ATM <strong>which</strong> file to intercept but its name).<br>
+<strong>Second</strong>, SBIE injects the <span style="text-decoration: underline">executable</span> to comply with the restrictions, no mempatching.<br>
+<strong>Third</strong>, could you please define 'opening XYZ file'? Ain't it opening XYZ via some application (executable or plug-in/add-on)?<br>
+<strong>Fourth</strong>... what are you trying to get after all? Because it seems to be a wrong way <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"></div></blockquote>
+
+<strong>First</strong> - You misunderstood me. I never talked about file names, but rather file types, or simply putting it: extensions (*.exe, *.doc, *.txt, etc).<br>
+<br>
+<strong>Second</strong> - Correct; which is why I suggested what I suggested (Tzuk mentioning something different is in the making, allowing the same; just a different, and better approach. I just didn't think of it, I guess I just let my imagination flow ;D )<br>
+<br>
+<strong>Third</strong> - Obviously, when a file type is opened, it is opened by an application/process. Considering I haven't thought of the easy way - what Tzuk mentioned - I let my imagination bring something else.<br>
+<br>
+But, the file is opened by the predefined application. (Unless the user opens the file with some other application.) Considering that, I had in mind Sandboxie could be changed to allow the user to have a sandbox set to open only certain file types stored in a folder, with this folder being forced into the sandbox, but only files matching certain extensions (*.doc, etc) would be opened in this sandbox, while every other wouldn't, despite the whole folder being forced to run sandboxed.<br>
+<br>
+As I explained in my first post, I have folder where I download files to. Nothing in the folder has execution rights. I have other sandboxes where I forced my PDF reader to run in it. When I open a PDF file stored in the downloads folder, it will be forced to open in PDF reader's own sandbox; but, if I force the folder to run sandboxed, then if I open the PDF file, it will be open in this forced folder respective sandbox and not PDF. There's no way to exclude this, which is why I suggested what I suggested. I didn't remember of suggesting the option to exclude processes from sandboxes. lol</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Feb 26, 2011 12:09 pm</strong></div>
+				<div class="author">by <strong>yasuo</strong></div>
+				<div class="content">hi there,<br>
+<br>
+just associate the extension with sandboxie's start.exe - it will run the sandbox and the windows "inside" the sandbox will decide wich porogram to start.<br>
+<br>
+Im used this for .pdf and .pps files and it worked fine<br>
+<br>
+blabla.doc =&gt; rightclick =&gt; open with =&gt; c:\...\sandboxie\start.exe  or whereever it is</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Open sandboxed if matches xyz file extension</h3>
+				<div class="date">Posted: <strong>Sun Apr 05, 2015 1:04 pm</strong></div>
+				<div class="author">by <strong>i@mJONNY</strong></div>
+				<div class="content">I tried following the advice here alas couldn't work out what blah.doc and start.exe meant. tried modifying the key created by defaultprograms.exe so .pdf had an 'AcrobatSB' application registered... didn't work. <br>
+<br>
+Tried opening with start.exe... didn't work.<br>
+<br>
+In the end the solution was painfully obvious. Open with acrobat. End of. <br>
+<br>
+<img src="../i.imgur.com/6YLYpnS.png" class="postimage" alt="Image"><br>
+<br>
+<img src="../i.imgur.com/tEDVGxS.png" class="postimage" alt="Image"><br>
+<br>
+so now chromeportable is a universal fileviewer (and default pdf viewer <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> and acrobat is there (sandboxed:) if I'm sifting through war&amp;peace<br>
+<br>
+hope this helps someone!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=9853&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:47:19 GMT -->
+</html>

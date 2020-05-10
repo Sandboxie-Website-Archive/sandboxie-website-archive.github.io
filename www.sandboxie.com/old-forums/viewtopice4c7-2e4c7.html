@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24434&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:55:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Firefox Pegging CPU Usage On Max [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Firefox Pegging CPU Usage On Max [SOLVED]</h2>
+		<p><a href="viewtopic87bc87bc.html?f=11&amp;t=24434">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24434</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Firefox Pegging CPU Usage On Max [SOLVED]</h3>
+				<div class="date">Posted: <strong>Tue May 16, 2017 10:57 am</strong></div>
+				<div class="author">by <strong>LongTymeFan</strong></div>
+				<div class="content">I have a four core system (i5-2500k).  I have used Sandboxie for years.  Perhaps about the time of Firefox 45, I noticed that after much running, it would start to slow down.  Portions of any webpage would go black.  This might happen after a couple of days, or very quickly.  Often, it would crash.  Often, Adobe Flash was blamed.  So, I disabled Flash.  Same stuff kept happening.  About the time it would slow and portions of pages would show up black (they would often redisplay right if I scrolled the screen, but things by that point were always destined to get worse), I would look at the CPU usage, and it would usually peg on 25% - that is, one core using CPU to the max (in spite of e10s, and with or without).  I've just made a thorough review of browser sandboxes, and unless I switch to Chromium, Safari or Opera, there's nothing like SBIE- not to mention the ability to do test installs of dubious programs.  Java is on "Ask to activate," so, since it's never loaded, it's not Java.  There's something very bad going on with SBIE, and it's a stopper for me.  Restarting FF usually clears things up for a while, but it has been getting more and more frequent.  It has been happening in earlier versions of both FF and SBIE.  I think this problem is probably prevalent for its users, but blamed on other things here.  I have tried the same browser under the same stress tests outside of the sandbox (and crossing my fingers that I don't get malware, as I haven't been doing antiviruses, just SBIE and Hostsman). The stress tests consisted of loading pages with Flash and lots of content, and leaving many tabs open for about a day.  When done in SBIE, I'd inevitably start seeing slower response, and other, non-sandboxed applications would sometimes start showing slowing effects.  When done outside of SBIE, no such problems developed.  In SBIE, sometimes I get memory errors, or, "unable to write profile" (as I have FF's Session Manager add-on installed).  It happens with four tabs open, or many.  Once I get to really using 4-5 webpages, it happens pretty dependably.  I think all these problems may be related to the same bug, causing CPU and possibly memory or other resources to get chewed up.<br>
+<br>
+I hope you can fix it, because Opera these days is just Chromium, Safari doesn't even let you set your search engine without some hacking, much less letting you select it, and Chromium is made by Google, which is, of course, in the privacy invasion vanguard.  I guess I could just open up a Linux virtual machine every time I want to use a browser, and try Firejail, or Browser in a Box, but, gah.  SBIE seems really unique, configurable, and as restrictive or not as you want it to be.  Shade is much more restrictive than I'd like, and far less sophisticated.  It may not be perfect, but it's kept me malware free for a few years now; and the last one was due to an incautious install without SBIE.  This<br>
+<br>
+I'm using SBIE 5.18, FF 52.1.0 ESR, on Win7 SP1 32-bit.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox Pegging CPU Usage On Max</h3>
+				<div class="date">Posted: <strong>Tue May 16, 2017 1:21 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello LongTymeFan ,<br>
+<br>
+Does the issue occur if using the latest stable Firefox version?  Do you have any crash logs from Firefox? <br>
+Are there any specific websites triggering the issue?<br>
+There was a video codec issue that was fixed in the latest beta, maybe give it a shot? :<br>
+<a href="viewtopic99029902.html?f=61&amp;t=24329#p127601" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 29#p127601</a><br>
+<br>
+Can you try creating a new Sandbox + New Firefox profile (no addons) and see if that helps. If not, can you post the results of Resource Access Monitor?<br>
+<a href="../index9970.html?ResourceAccessMonitor" class="postlink">https://www.sandboxie.com/index.php?Res ... essMonitor</a><br>
+<br>
+See if the suggestions from this thread help you:<br>
+<a href="viewtopic24792479.php?f=11&amp;t=24169&amp;p=127821&amp;hilit=firefox+cpu#p127821" class="postlink">http://forums.sandboxie.com/phpBB3/view ... pu#p127821</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox Pegging CPU Usage On Max</h3>
+				<div class="date">Posted: <strong>Tue May 16, 2017 6:46 pm</strong></div>
+				<div class="author">by <strong>LongTymeFan</strong></div>
+				<div class="content">I forgot to mention that this is FF portable.  You never know what may be related to the prob.  I have some stuff to be taking care of for about two days.  I'll try these tests after that.  A crash log may take some doing, since it is comparatively rare.  I can tell you that sometimes Flash is blamed, but the slowdown happens with Flash disabled.  It might not necessarily help.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox Pegging CPU Usage On Max</h3>
+				<div class="date">Posted: <strong>Fri May 19, 2017 4:52 am</strong></div>
+				<div class="author">by <strong>LongTymeFan</strong></div>
+				<div class="content">I've also verified that the problems persist when running both the normally installable and the PortableApps versions of Firefox.<br>
+<br>
+Anyway, here's a crash report from when Adobe Flash was enabled, which blames the crash on Flash.  I've attached it as a zipped text file: <div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="download/file1ee81ee8.php?id=1160">Firefox with Flash, SBIE Crash.zip</a></dt>
+						<dd>(4.54 KiB) Downloaded 25 times</dd>
+		</dl>
+		
+		
+			</div>
+Here's a crash report from when Flash was completely uninstalled: <div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="download/filee2cae2ca.php?id=1161">Firefox without Flash, SBIE Crash.zip</a></dt>
+						<dd>(4.28 KiB) Downloaded 24 times</dd>
+		</dl>
+		
+		
+			</div>
+Note that I've removed the URL field in both reports.  There is a Flash Switcher plugin in both reports, but in the latter case, having Flash Switcher installed does not imply Flash was installed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox Pegging CPU Usage On Max</h3>
+				<div class="date">Posted: <strong>Mon May 22, 2017 12:03 am</strong></div>
+				<div class="author">by <strong>LongTymeFan</strong></div>
+				<div class="content">Ok.  It turns out I had the exact same problem in SHADE Sandbox.  I'm starting to suspect that this is a FF problem; although I am loathe to run it without a sandbox.  I'm starting to think this is a FF issue in general.  I'll try a more extensive test some time in the not too distant future.  I've got other things to attend to, for the time being.  I figure its either an issue with sandboxes in general, or with FF in general, or when both are used.  As much as I prefer the idea of Firefox, I'm going to use the Iron browser (de-googlized Chromium fork) for a while.  I don't see similar kinds of problems with it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Firefox Pegging CPU Usage On Max</h3>
+				<div class="date">Posted: <strong>Sun Apr 08, 2018 2:23 am</strong></div>
+				<div class="author">by <strong>LongTymeFan</strong></div>
+				<div class="content">I've had a similar situation to this recur again, and I thought I'd share the solution with you guys, in case anyone else was having the same problem.  I got it down to the point where I'd bring up a certain bugzilla report page and a Yahoo finance chart, and within about 30 secs, I'd see my CPU usage peg at ~25% - one core for my system.  It was not happening with just FF itself opened.<br>
+<br>
+Since my initial post, I had been using FF 57 (Quantum) portable, and updated it to 59.0.2.  At first, things seemed like they ran a lot smoother, but after time, the performance would degrade - just not as soon nor as reliable as it had previously, after leaving the browser up for a few days with over a dozen tabs open.  Upon opening tasgmanager, and watching my CPU, however, I noticed that it would peg at the aforementioned ~30 secs.  I hadn't emptied my sandbox out in some time, so I decided that I should make sure it's not that.  In fact, it was that.  There was some damnable maleware that was pegging my CPU after about 30 secs. pretty reliably, and it doesn't appear that it mattered much just what web page was open; so long as any one was.  I can't say yet that FF doesn't see deteriorating performance after being left open with over a dozen tabs over several days, as I've just figured this out.  (This would make a good FAQ, BTW.)  What I can say, is that FF Quantum with it's new core rewritten in the Rust language, and with multi-processing, is much more responsive, and is supposedly rendering well faster than it was.<br>
+<br>
+I can also say it took a while to come to terms with just how much I hate Chrome - especially the way it and all its plug-ins do tabs.<br>
+<br>
+Vivaldi shows great promise, but with over a dozen tabs open, when I start it, lazy loading does NOT work (whereas on FF, it does), and it takes an inordinate time to become responsive.  It's vertical tabs are pretty nice, but there's yet still a lot to do to make it as convenient as FF.  The worst thing about it, however, is it goes completely unresponsive at unpredictable intervals with over a dozen tabs open.  It would seem that even though it is based on the svelte Chrome core written in C++, they've introduced some really brutal garbage collection.<br>
+<br>
+I even tried IE11 again, but there're no decent plugins for it.<br>
+<br>
+I'm now very happy to be running in FF again.  All the plugins that matter to me (I haven't tried for a speech one that uses the M$ Speech API yet, tho) have been re-written for the new addon format.  True, they are also busily making it look and act like Chrome, so the first things I do is bring back the menu and bookmarks toolbar, the search bar, and disable the anti-phishing privacy eliminating features.  With some effort however, I can get back to what a browser should look and act like.  Between Sandboxie and HostsMan, I haven't caught any malware in a very long time; except for a downloaded attachment from mIRC that I really should have known better to try (a .txt file that installed malware by running like a screen-saver!!!).  I especially use Malware Domain List, HostsFile.org, and HPHosts files, especially the Malware, Exploits and Hijack lists.<br>
+<br>
+Hope any or all of this help somebody else.  FWIW: Firefox just got a whole lot better, again.<br>
+<br>
+PS: I am pretty sure deleted my sandbox and certainly started using a fresh FF portable since starting this thread; so I don't think this <em>per se</em> the same problem at all.  However, it was similar enough that I thought I'd put it in a reply on this thread.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24434&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:55:27 GMT -->
+</html>

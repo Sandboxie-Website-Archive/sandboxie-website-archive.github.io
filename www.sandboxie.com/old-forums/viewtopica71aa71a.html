@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=22266&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:32:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Complete Sandbox delete/empty?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Complete Sandbox delete/empty?</h2>
+		<p><a href="viewtopic1dd91dd9.html?f=5&amp;t=22266">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=22266</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Complete Sandbox delete/empty?</h3>
+				<div class="date">Posted: <strong>Mon Dec 21, 2015 11:31 am</strong></div>
+				<div class="author">by <strong>robbnj</strong></div>
+				<div class="content">Is there a way to wipe out the<strong> entire</strong> contents of the sandbox other than the auto-delete command or the manual delete command?<br>
+I ask because even after using these commands, I still see the effects of adware/malware that I got hit with during a Sandboxed 'net browsing session.<br>
+To verify that the sandbox has not been completely empties, I tried to reinstall some try-before-buy software that I had used in the past, and it tells me that the trial period expired (thus, SOMETHING is getting stored within the sandbox, or OUTSIDE of it that saves the trial expiration info.).<br>
+If nothing gets "written to the drive", and the 'box gets emptied with each session, where is the adware/malware coming from, and how does it know a trial period has expired?<br>
+<br>
+I tried searching here and using Google to search for the answer, but no love.<br>
+<br>
+Rob</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Complete Sandbox delete/empty?</h3>
+				<div class="date">Posted: <strong>Mon Dec 21, 2015 12:16 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">When you installed the trial software, did you install it DIRECTLY into a sandbox? <br>
+<br>
+If so, when installed did it trigger a Windows UAC window? IF it did, and you agreed to that, it most likely (cached) outside of the sandbox. Agreeing to that thus permits a program to do just that.<br>
+<br>
+You can also create a new sandbox, and install the trial software as well, however if that software triggers a Windows UAC.....you risk having it write outside of the SB.  (As in the link here <a href="../index6b1b.html?PrivacyConcerns" class="postlink">http://www.sandboxie.com/index.php?PrivacyConcerns</a> )</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Complete Sandbox delete/empty?</h3>
+				<div class="date">Posted: <strong>Mon Dec 21, 2015 12:23 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">How is this possible? <br>
+Afaik, when an installer is run sandboxed any child and spawned processes and files are still sandboxed, aren't they? Hence nothing even if UAC is prompted can escape of sandboxing protection.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Complete Sandbox delete/empty?</h3>
+				<div class="date">Posted: <strong>Mon Dec 21, 2015 1:27 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Mr X, perhaps the trialed program fingerprints the PC when it gets installed for the first time. And whether the program is installed in a sandbox or not, it doesn't matter, the trialed program would still know that the trial has been used previously, it could also be that the program knows the IPs of computers where the program was installed before. By the way, there are things that get  recorded by Windows even when you dont allow anything to get out of the sandbox, maybe thats how they know the trial was used before. Read the link below.<br>
+<a href="../index6b1b.html?PrivacyConcerns" class="postlink">http://www.sandboxie.com/index.php?PrivacyConcerns</a><br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Complete Sandbox delete/empty?</h3>
+				<div class="date">Posted: <strong>Mon Dec 21, 2015 1:42 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite>Mr X, perhaps the trialed program fingerprints the PC when it gets installed for the first time. And whether the program is installed in a sandbox or not, it doesn't matter, the trialed program would still know that the trial has been used previously</div></blockquote>
+Bo I already know this but I was replying to Craig's comment. That UAC behavior or "function" that Craig states is completely strange to my knowledge.<br>
+
+<blockquote><div><cite>bo.elam wrote:</cite>By the way, there are things that get  recorded by Windows even when you dont allow anything to get out of the sandbox, maybe thats how they know the trial was used before. Read the link below.<br>
+<a href="../index6b1b.html?PrivacyConcerns" class="postlink">http://www.sandboxie.com/index.php?PrivacyConcerns</a><br>
+<br>
+Bo</div></blockquote>
+None of them seem to me to be the cause of OP's problem, although I could be wrong (some specific clarification needed for me if the case  <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> )<br>
+Besides, I have 2 programs installed and running in their sandbox in a perpetual trial mode.<br>
+<br>
+Most likely to me that happened, it's your first comment that OP run the program unsandboxed or IP recognition.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Complete Sandbox delete/empty?</h3>
+				<div class="date">Posted: <strong>Mon Dec 21, 2015 2:26 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Mr X, I was speaking in general terms. If you're unsure of the software and your acknowledged the UAC and continue running at the elevated Admin level, you're lowering you defenses.<br>
+<br>
+Yes, You're still under the supervision of SBIE when it comes to that install (from within the sb.)<br>
+<br>
+As for the "knowing" about a previous install, Bo makes a good point on how that is tracked. More so when you're granted the UAC as an Admin. And the link Bo referenced to is what I was mentioning. I should have been more clear.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Complete Sandbox delete/empty?</h3>
+				<div class="date">Posted: <strong>Mon Dec 21, 2015 3:17 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">See this thread: <a href="viewtopic58b858b8.php?f=11&amp;t=20841" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=20841</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Complete Sandbox delete/empty?</h3>
+				<div class="date">Posted: <strong>Fri Jan 01, 2016 2:02 pm</strong></div>
+				<div class="author">by <strong>robbnj</strong></div>
+				<div class="content">I was only using the trial software as an example of the fact that it doesn't seem SBie is fully flushing everything that happens inside it.<br>
+I guess not a great example as the UAC may mess with that.<br>
+<br>
+On the other hand, it doesn't explain why adware/etc. seems to hang in there and work it's magic after sandboxed browsers have been shut down (and supposedly flushed by having the option to auto-delete on exit).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Complete Sandbox delete/empty?</h3>
+				<div class="date">Posted: <strong>Fri Jan 01, 2016 6:10 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">SBIE is not trial. It's shareware. There is a difference.<br>
+It does not expire. Shareware is a fully functional program minue features that are only available to paid members. You can see those features here. <a href="../index60c1.html?RegisterSandboxie" class="postlink">http://www.sandboxie.com/index.php?RegisterSandboxie</a><br>
+If your system is infected with malware/virus before you installed SBIE, then you're infected. SBIE doesn't detect nor remove that.<br>
+To confirm delete, you can always invoke delete contents manually. If you're using a browsers / and it's using a SBIE template to allow it to write and save cookies, then that's your issue. <a href="../index2e93.html?FirefoxTips" class="postlink">http://www.sandboxie.com/index.php?FirefoxTips</a><br>
+As for programs remember things, they can do that in other ways. Please read here: <a href="../index710e.html?PrivacyConcerns%5Bi" class="postlink">http://www.sandboxie.com/index.php?PrivacyConcerns<em></em></a><em><br>
+<strong>"..One who makes the incorrect assumption of extreme concern for privacy on the part of Sandboxie might be surprised to find several kinds of traces and logs in Windows that record which programs have been running, even inside the sandbox.<br>
+This page will explain the various known mechanisms that record information about the programs you run, either inside or outside the supervision of Sandboxie... " (From the Creator of SBIE))</strong></em></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Complete Sandbox delete/empty?</h3>
+				<div class="date">Posted: <strong>Fri Jan 01, 2016 9:11 pm</strong></div>
+				<div class="author">by <strong>robbnj</strong></div>
+				<div class="content">No, I was talking about a trial software that I installed in a sandboxed environment, not a trial version of sandboxie.<br>
+I noticed that if I tried to run that trial software again in a c=sandbox (many months after the 21 day trial period), I got the message that it had expired.<br>
+I was using this as the benchmark that sandboxie was not deleting all files/changes/etc.<br>
+<br>
+It was pointed out that I may have agreed to allow activity outside of the sandbox, so that software is not a good benchmark.<br>
+<br>
+On the other hand, the adware was not on the system prior to sandboxie. <br>
+I install sandboxie after I do a full system restore and never surf "un-sandboxed". The adware affects browsing within the sandbox, even after a full system shutdown/restart.<br>
+This indicates to me that not all files get dumped when sanboxie is shut down, otherwise, how would my browsing be affected each time?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Complete Sandbox delete/empty?</h3>
+				<div class="date">Posted: <strong>Fri Jan 01, 2016 10:03 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">I notice you never gave the programs name. Perhaps by sharing that we can better understand what might have happened. Sharing your sandboxie.ini config may help as well.<br>
+<br>
+In the mean time, go to C:\Sandbox when you have no programs running inside of SBIE [blank yellow box] then rename the Sandbox folder to something else (eg OLD.sandbox) and reboot.<br>
+<br>
+This will ensure that anything that ever ran in sandboxie previously will not be found by anything you run next in sandboxie. It will re-create a new sandbox folder on reboot and the launch of another program sandboxed...<br>
+<br>
+If the trial info or whatever is still there the next time you reboot then it's likely something saved to a remote site for trial info. For adware, etc remaining, it's already on your host and not saved any which way inside a sandbox and you were likely 'tricked' or 'infected' somehow outside of sandboxie (social engineering?) to start with.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Complete Sandbox delete/empty?</h3>
+				<div class="date">Posted: <strong>Fri Jan 01, 2016 10:06 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>robbnj wrote:</cite>No, I was talking about a trial software that I installed in a sandboxed environment, not a trial version of sandboxie.
+</div></blockquote>
+robbnj, I think you should read the thread below. The link had been posted by Curt a few days ago and is about trial software in a sandbox.<br>
+<a href="viewtopic58b858b8.php?f=11&amp;t=20841" class="postlink">http://forums.sandboxie.com/phpBB3/view ... 11&amp;t=20841</a><br>
+<br>
+And this one too. Reading this one gives you an idea of some of the things that are recorded by Windows, even if you run programs sandboxed.<br>
+<a href="../index6b1b.html?PrivacyConcerns" class="postlink">http://www.sandboxie.com/index.php?PrivacyConcerns</a><br>
+<br>
+What is the adware you are seeing in your computer?<br>
+<br>
+If you tick anything in Sandbox settings&gt;Applications&gt;Browsers, there is information that will be stored in the real system. For example, if you allow Firefox bookmarks to be saved out of the sandbox, not only bookmarks get saved but browsing history gets saved as well.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=22266&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:32:06 GMT -->
+</html>

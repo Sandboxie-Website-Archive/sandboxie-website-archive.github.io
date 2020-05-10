@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25243&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:49:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Restrict program from reading my files</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Restrict program from reading my files</h2>
+		<p><a href="viewtopicbdf9bdf9.html?f=17&amp;t=25243">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25243</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Restrict program from reading my files</h3>
+				<div class="date">Posted: <strong>Fri Dec 22, 2017 4:04 pm</strong></div>
+				<div class="author">by <strong>jeffdunham</strong></div>
+				<div class="content">If I'm not mistaken, when I run a program in sandboxie, it can still read my files, right? For example, when I installed and ran firefox from a sandbox, it still used my preferences, bookmarks and plugins from my actual firefox installation, what if I wanted a completely isolated copy of firefox to run in sandboxie, is this possible?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Restrict program from reading my files</h3>
+				<div class="date">Posted: <strong>Sat Dec 23, 2017 9:07 am</strong></div>
+				<div class="author">by <strong>Sam777</strong></div>
+				<div class="content">As you learned, programs can see outside of a sandbox. A work around to what you want is to have FF always in a sandbox and not installed outside of Sandboxie. I currently have 30+ sandboxes with FF and none of them see the settings of another, even when running at the same time.<br>
+<br>
+If you need FF outside of a sandbox for some reason, the other option is to use <em>Blocked Process Access</em> created by wraithdu. Implementing this, will block programs from seeing outside of its own sandbox. This is listed in <em>Contributed Utilities &amp; Templates</em> on the main forum page. <br>
+<br>
+<a href="viewtopic7fcb7fcb.html?f=22&amp;t=4885" class="postlink">viewtopic.php?f=22&amp;t=4885</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Restrict program from reading my files</h3>
+				<div class="date">Posted: <strong>Sat Dec 23, 2017 10:37 am</strong></div>
+				<div class="author">by <strong>jeffdunham</strong></div>
+				<div class="content">Thanks for your reply. That's a great idea to have multiple firefox isntallation inside sandboxie. Although I would prefer a real one. I was playing with the File access options. If I add my whole AppData folder to "Blocked access", firefox refuses to install at all, and if I add AppData to "Write only access", it installs fine, but the tabs keep crashing (maybe it can't read from appdata? which seems odd).</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Restrict program from reading my files</h3>
+				<div class="date">Posted: <strong>Sat Dec 23, 2017 12:16 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">When installing Firefox in a sandbox you can hide the current Firefox files that are outside of the sandbox.<br>
+That way nothing from that install will be included in the sandboxed install.<br>
+<br>
+Hide those items using Sandboxie's "File Access &gt; Write-Only Access" setting:<br>
+<a href="../ResourceAccessSettings.html#file" class="postlink">https://www.sandboxie.com/ResourceAccessSettings#file</a><br>
+<br>
+Sandbox Settings &gt; Resource Access &gt; File Access &gt; Write-Only Access<br>
+This setting makes the folders that you select appear to be empty, when the Firefox install program runs in the sandbox.<br>
+Those folders will then be created inside of the sandbox, and the files in them will be used by the sandboxed Firefox.<br>
+<br>
+1) Create the necessary sandbox for Firefox<br>
+2) <strong>Either</strong> Add the Write-Only Access settings needed to hide the Firefox folders outside of the sandbox, using the Sandbox Settings as listed above (assuming that this is where the current files are located):<br>
+<br>
+C:\Program Files\Mozilla Firefox\ <br>
+%AppData%\Mozilla\Firefox\<br>
+%Local AppData%\Mozilla\Firefox\<br>
+<br>
+<strong>OR</strong>, just add the following lines to the configuration settings for that sandbox, using:<br>
+Sandboxie Control menu &gt; Configure &gt; Edit Configuration<br>
+(again, assuming that this is where the current files are located)
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>WriteFilePath=C:\Program Files\Mozilla Firefox\
+WriteFilePath=%AppData%\Mozilla\Firefox\
+WriteFilePath=%Local AppData%\Mozilla\Firefox\</code></pre></div>
+
+3) Save the sandbox settings, then right-click the Firefox installer file and "Run Sandboxed" - selecting the appropriate sandbox from the list, to install Firefox.<br>
+<br>
+4) If you want, you can also use the Write-Only Access setting to prevent programs using that sandbox from reading the files in your computer's Documents folder. Programs will still be allowed to write to a Documents folder that's located inside of the sandbox, and the default Quick Recovery setting for the sandbox will allow you to recover those files to the Documents folder outside of the sandbox. I always uncheck Immediate Recovery for my sandboxes.<br>
+<br>
+WriteFilePath=%Personal%\</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Restrict program from reading my files</h3>
+				<div class="date">Posted: <strong>Sat Dec 23, 2017 12:37 pm</strong></div>
+				<div class="author">by <strong>jeffdunham</strong></div>
+				<div class="content">Thank you. I tried this, adding Firefox appdata to the Write only access list, firefox installs fine and opens, but every tab crashes within about 1 second of loading the website. :/</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Restrict program from reading my files</h3>
+				<div class="date">Posted: <strong>Sun Dec 24, 2017 7:03 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist7a48.html?mode=viewprofile&amp;u=35052">jeffdunham</a> wrote: <a href="viewtopic59155915.html?p=131560#p131560" data-post-id="131560" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Sat Dec 23, 2017 12:37 pm</div></cite>
+Thank you. I tried this, adding Firefox appdata to the Write only access list, firefox installs fine and opens, but every tab crashes within about 1 second of loading the website. :/
+</div></blockquote>Did you start with a newly created sandbox, with only the default settings, and then add the suggested settings?<br>
+<br>
+WriteFilePath=C:\Program Files\Mozilla Firefox\<br>
+WriteFilePath=%AppData%\Mozilla\Firefox\<br>
+WriteFilePath=%Local AppData%\Mozilla\Firefox\<br>
+<br>
+I just tried it again, and it works fine for me.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Restrict program from reading my files</h3>
+				<div class="date">Posted: <strong>Wed Dec 27, 2017 11:52 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello jeffdunham, <br>
+<br>
+Adding to what Guest10 explained:<br>
+<br>
+Regarding Firefox crashing, have a look at this thread:<br>
+<a href="viewtopic891e891e.html?p=131074#p131074" class="postlink">viewtopic.php?p=131074#p131074</a><br>
+<br>
+Regards, <br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25243&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 07:49:00 GMT -->
+</html>

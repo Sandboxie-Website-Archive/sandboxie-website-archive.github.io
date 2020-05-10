@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=3208&start=90&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Border sandboxed indicator - Page 7</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Border sandboxed indicator</h2>
+		<p><a href="viewtopic015e015e.html?f=22&amp;t=3208">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=3208</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>7</strong> of <strong>8</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 04, 2009 3:10 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content"><blockquote><div><cite>Micahs wrote:</cite>@Guest<br>
+I'm not sure what the problem could be. What os are you using? The new version uses SetWindowPos to size, move, and position the borders. This is really the only major change in the way it does its thing. If you are using Vista it may have an issue with this api call. My dad has a Vista laptop, so I can do some testing. Anyone else having this issue?</div></blockquote>
+Duh...  Can't believe I didn't think to reference the OS...   <img class="smilies" src="images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> <br>
+<br>
+I'm just on XP SP3.  No Vista.  And nothing funny in Sandboxie either - just using the default config with it.<br>
+<br>
+No funny video stuff either.  Just a standard ATI adapter using production drivers.<br>
+<br>
+FYI, the problem still continues with the new version you just posted (that uses the SWP_FRAMECHANGED flag).<br>
+<br>
+Just so you don't think I'm crazy, here's a shot with that latest version:<br>
+<br>
+<img src="../img26.imageshack.us/img26/8256/borderguarddg6.png" class="postimage" alt="Image"><br>
+<br>
+Based on borderGuard.ini, I should also be seeing 0x00FF00 color borders with a thickness of 6 and a transparency of 200.<br>
+<br>
+But as you can see, borderGuard is definitely working because reversed windows display fine (though that causes my CPU to spike too much).<br>
+<br>
+No borders regardless of the settings I try though.  And again, the previous pre-multi borderGuard releases always worked fine and - probably more importantly - still do.<br>
+<br>
+Whether or not the sandboxed window is in focus also doesn't make any difference.  Neither does thickness, transparency, or overlap settings.  I've also tried other colors and using words for the color parameter (like "red").<br>
+<br>
+Anything else I can try or any other info you want?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 04, 2009 2:57 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote><div><cite>Micahs wrote:</cite>Yeah, if you think it's good enough, sure. Thanks! (Assuming I can get the bugs out!)</div></blockquote>
+
+I'm going to take that as a yes.  Updated:<br>
+<br>
+<a href="../index4d6e.html?ContributedUtilities" class="postlink">http://www.sandboxie.com/index.php?ContributedUtilities</a><br>
+<br>
+Note that in this case I did not copy the file to this server, instead I linked to it, because it seems that you're still working on it.  Let me know if/when you want me to host the file here.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 04, 2009 7:13 pm</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content"><a href="http://www.autohotkey.net/~Micahs/borderguard/borderGuard_multi.zip" class="postlink">HERE</a> is another version. I changed something or other. See if that made any diff. BTW, is your sandbox at the default location? (Application Data folder)<br>
+<br>
+@tzuk<br>
+Thanks! I'll let you know when it has my toothy grin of approval.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Feb 05, 2009 2:50 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content"><blockquote><div><cite>Micahs wrote:</cite><a href="http://www.autohotkey.net/~Micahs/borderguard/borderGuard_multi.zip" class="postlink">HERE</a> is another version. I changed something or other. See if that made any diff. BTW, is your sandbox at the default location? (Application Data folder)</div></blockquote>
+
+Yippe! Lovely bright green borders again with this version.  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+<br>
+Thanks very much for the quick fix!<br>
+<br>
+If you're still interested: Yes, I was/am using the default sandbox location.<br>
+<br>
+Out of curiosity, now knowing this released fixed the problem for me, what was the issue?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Feb 05, 2009 3:27 pm</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content"><blockquote><div><cite>Guest wrote:</cite>what was the issue?</div></blockquote>You weren't trying hard enough!<br>
+<br>
+Just kidding. I changed the way it handles the variables that contain the border information. I think it was related to your having just one sandbox. I have many, so the problem never manifested itself for me. Glad it works! The latest version has the added feature of being able to work even if it can't find the sandbox "nest" (keep in mind that I have not added the api stuff yet.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Feb 06, 2009 3:18 am</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content"><a href="http://www.autohotkey.net/~Micahs/borderguard/borderGuard_multi_bg.zip" class="postlink">This version</a> is a beta with support for background images for the borders.<br>
+<img src="../www.autohotkey.net/_Micahs/borderguard/screenshots/borderguard%20imagebg.gif" class="postimage" alt="Image"><br>
+I am not happy with it yet, but I thought I would post it for the triggerhappy. I am still working on this - looks promising so far though. <br>
+<br>
+The default image is "Caution Tape" but it can be changed in the ini file. The entry "borderBackground" is valid for either the global or per-sandbox sections. In per-sandbox sections, specify "none" to disable the global setting for that sandbox.<br>
+<br>
+The main problem right now is that when I change the region setting to match size changes, the image flickers and the background color shows momentarily. This is not the best way to do it, so another method will be used instead later. I just wanted to show what is coming... (Hopefully!)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Feb 07, 2009 2:55 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">Yes, I use Sandboxie in a very basic way.  Just one sandbox used to safely run software I download before attempting to install it live.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+The latest version looks even better.  I love that black and yellow caution tape border.<br>
+<br>
+Thanks again for your help - and for the awesome utility!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 08, 2009 5:29 pm</strong></div>
+				<div class="author">by <strong>Mark_</strong></div>
+				<div class="content">out of curiosity, do you create layered windows where you set a key transparency color?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Feb 11, 2009 3:21 pm</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content">Yes to the layered windows.<br>
+No to the trans colors for now (can't figure it out. Might have something to do with my images.)<br>
+<br>
+I started using an image control the same dimensions as the border, but the background color flashed through when it was resized. Then I blitting the background directly to the border, but retention was an issue (the background color still blinked through when the window was redrawn and if a window moved over the border, it erased the image leaving the background color.) I switched to using UpdateLayeredWindow and that works great, but just a little slow (keep in mind my computer is only 950mhz.) <br>
+<br>
+I'm still having issues with it, I broke one thing trying to fix something else!  <img class="smilies" src="images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes"> Also, the transparency with UpdateLayeredWindow is not working. Not a huge deal, but annoying. When I get something worthwhile, I'll post again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Apr 20, 2009 6:20 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">This is a great script! Thank you so much!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed May 06, 2009 3:00 am</strong></div>
+				<div class="author">by <strong>Guest</strong></div>
+				<div class="content">This is a great script. Unfortunately it doesn't work on my dual monitor setup.<br>
+<br>
+I have two 1280-1024 monitors. Monitor 1 is on the left and Monitor 2 is on the right. Monitor 2 is designated as main monitor (so the start menu is on the right hand side).<br>
+<br>
+BorderGuard_multi (v1.1.1) displays borders only on Monitor 2. There are no borders on Monitor 1.<br>
+<br>
+Any idea what could be the problem?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri May 08, 2009 3:16 pm</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content">I only have one monitor, so I'll have to look at the code and see where the problem could be. I'll get back to you.<br>
+<br>
+BTW, does the orig version work on multiple monitors?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 16, 2009 2:59 pm</strong></div>
+				<div class="author">by <strong>User</strong></div>
+				<div class="content">1. I have a problem with the exe. The border goes out of line when I maximize the window.<br>
+I use the default setting.<br>
+I have dual monitors. Is it the cause of problem?<br>
+<br>
+<a href="../img161.imagevenue.com/img7e217e21.php?image=70404_badborder_122_424lo.jpg" class="postlink"><img src="../img161.imagevenue.com/loc424/th_70404_badborder_122_424lo.jpg" class="postimage" alt="Image"></a> Click to see a larger image.<br>
+<br>
+2. I would like to put the border inside the window not outside. This is how sandboxie looks in the appearance setting but it works in the active window only. I would like to see borders for all sandboxed windows. Is it possible?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jul 25, 2009 7:12 pm</strong></div>
+				<div class="author">by <strong>greensnowy</strong></div>
+				<div class="content">I like this utility since it draws borders for all sandboxed windows instead of only on the active window. <br>
+<br>
+BorderGuard_Multi v1.1.1 (Feb 5)<br>
+Sandboxie services start with Windows<br>
+BorderGuard shortcut in user\Start Menu\Programs\Startup<br>
+<br>
+I have a few different sandboxes, and each of them is configured to a different color in borderGuard.ini. After starting up Windows, the borders are always drawn with the default border color, no matter which sandbox they belong in. The only way I can get it to redraw the correct color is a manual save in borderGuard.ini with no changes to the file.<br>
+<br>
+Thanks for your help.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 23, 2009 6:58 pm</strong></div>
+				<div class="author">by <strong>Micahs</strong></div>
+				<div class="content">Sorry for the delay. Without the notification feature it's hard to keep track without checking every once in a while. I forgot to check back. I'll look into this. I only have one monitor so I can't test directly. I'll look at the code.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>7</strong> of <strong>8</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=3208&start=90&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:25 GMT -->
+</html>

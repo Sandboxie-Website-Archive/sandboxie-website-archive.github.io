@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/23307" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2016-08-23T10:22:16-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/23307</id>
+
+		<entry>
+		<author><name><![CDATA[Mr.X]]></name></author>
+		<updated>2016-08-23T10:22:16-04:00</updated>
+
+		<published>2016-08-23T10:22:16-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23307&amp;p=122906#p122906</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23307&amp;p=122906#p122906"/>
+		<title type="html"><![CDATA[Re: AppLocker w rules for specific users &amp; SBIE 4.x+]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23307&amp;p=122906#p122906"><![CDATA[
+Thanks a lot for this contribution my friend.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=16759">Mr.X</a> — Tue Aug 23, 2016 10:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Syrinx]]></name></author>
+		<updated>2016-08-22T13:59:26-04:00</updated>
+
+		<published>2016-08-22T13:59:26-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23307&amp;p=122891#p122891</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23307&amp;p=122891#p122891"/>
+		<title type="html"><![CDATA[AppLocker w rules for specific users &amp; SBIE 4.x+]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23307&amp;p=122891#p122891"><![CDATA[
+I remember messing with AppLocker before and not getting far alongside SBIE. I decided to look at it again and after I finally got far enough along to recreate the problems I had before I took a look at the Event Log. It took me a while to figure out what my issues were because at first the exe rules were playing quite well alongside SBIE. It turns out my primary issues were mainly related to DLL rules though I expect there may be occasions to use this workaround with other areas as well.<br><br>Specifically, my issues started when I wanted to create rules for a <em>certain user</em> instead of an entire group.<br><br>Here's an example of a dll being blocked from the apps install directory once SBIE takes control(path/program name Xx'd Out)<blockquote class="uncited"><div> <br>- UserData <br>  - RuleAndFileData <br>   PolicyName DLL  <br>   RuleId {00000000-0000-0000-0000-000000000000}  <br>   RuleName - <br>   RuleSddl - <br>   TargetUser S-1-5-7 <br>   TargetProcessId 2080 <br>   FilePath XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\MSVCR110.DLL <br>   FileHash <br>   Fqbn O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US\MICROSOFT® VISUAL STUDIO® 2012\MSVCR110.DLL\11.0.51106.01</div></blockquote>Here's another example of a dll being blocked from inside an app already sandboxed. (drive x'd out)<blockquote class="uncited"><div>PolicyName DLL <br>   RuleId {00000000-0000-0000-0000-000000000000} <br>   RuleName - <br>   RuleSddl - <br>   TargetUser S-1-5-7 <br>   TargetProcessId 3400  <br>   FilePath x:\%SANDBOX%\MINECRAFT\USER\CURRENT\APPDATA\ROAMING\.MINECRAFT\VERSIONS\1.10.2\1.10.2-NATIVES-1635160112806\LWJGL.DLL </div></blockquote>Normally you could create a rule for 'everyone' or another group and not run into this issue. However with SBIE in the mix, once the app is under its control, it identifies as ANONYMOUS LOGON so if you have rules for <em>specific users</em> like I did, you end up with blocks like those shown above and normally a program that doesn't function correctly if at all.<br><br>When attempting to add NT AUTHORITY\ANONYMOUS LOGON via the GUI in AppLocker I was greeted with an alert<br>"The following object is not from a domain listed in the Select Location dialog box, and is therefore not valid:<br>NT AUTHORITY\ANONYMOUS LOGON"<br><br>This made it 'impossible' to add rules for ANONYMOUS LOGON via the gui. So I thought we couldn't use DLL rules or add other rules for exes etc when needed and still have rules defined per user so I gave up on using AppLocker alongside SBIE. Well, it turns out there is a way! I found a workaround in my setup though I needed a few duplicates so as to retain the original rules and still have seperate ones for ANONYMOUS LOGON...<br><br>1) Create similar rules (I used everyone instead of the specific user and I also suggest naming them so they are easily identifiable when looking through the xml)<br><br>2) Use the export function of AppLocker and save the policy someplace.<br><br>3) Open up the XML and manually replace the existing User SID with the Universal SID of NT AUTHORITY\ANONYMOUS LOGON: (S-1-5-7) in the xml for needed entries.<br><br>4) Save the changes (I suggest a different name in case you mess something up so you still have the original to work from or re-import if needed)<br><br>5) Re-import the altered ruleset.<br><br><span style="text-decoration: underline"><em>6) Be sure to stop/start the AppID Service (or reboot) after importing the altered xml or it may not apply the new ruleset <strong>right away</strong> and appear not to make a difference.</em></span><br><br>7) Re-Test your app and re-check the Event Log for any other needed changes.<br><br>AppLocker will now handle NT AUTHORITY\ANONYMOUS LOGON and you can set up whatever rules you want, even for specific users, alongside SBIE. The best part is the altered rules can also be edited without losing the SID info or seeing the error again.<br><br>How helpful all this will be in general is questionable but it's something I wanted to play with before and finally can thanks to a little manual editing of the exported AL policy.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=29518">Syrinx</a> — Mon Aug 22, 2016 1:59 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

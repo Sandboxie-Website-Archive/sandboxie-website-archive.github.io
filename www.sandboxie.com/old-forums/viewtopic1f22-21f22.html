@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15471&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:39:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.09] Adding software compatibility: how???</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.09] Adding software compatibility: how???</h2>
+		<p><a href="viewtopic7e7b7e7b.html?f=38&amp;t=15471">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=38&amp;t=15471</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.09] Adding software compatibility: how???</h3>
+				<div class="date">Posted: <strong>Wed May 15, 2013 2:27 am</strong></div>
+				<div class="author">by <strong>Scoox</strong></div>
+				<div class="content">Sandboxie did a great job at detecting certain apps that needed software compatibility to work normally.<br>
+<br>
+I use Lingoes, a dictionary that pops up a small window at the mouse pointer when placed over a word. Lingoes v2.8.1 worked fine but it was recently updated to v2.9.1 which Sandboxie fails to detect. By the way, Lingoes runs OUTSIDE Sandboxie. So I would like to know what I need to change to get this to work again. I realise that each app will be different so is there any documentation or in-depth tutorial explaining how one would go about adding software compatibility manually? And if not, can someone kindly give me some pointers here?<br>
+<br>
+Any help will be greatly appreciated, thanks <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed May 15, 2013 3:12 am</strong></div>
+				<div class="author">by <strong>Scoox</strong></div>
+				<div class="content">The file templates.ini contains the following code:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[Template_Lingoes]
+Tmpl.Title=Lingoes Translator
+Tmpl.Class=Desktop
+Tmpl.Url=http://www.lingoes.net/
+Tmpl.Scan=i
+OpenIpcPath=*\BaseNamedObjects*\OpenText_ZWFilter_GlobaData
+OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_GlobaData
+OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_Mutex
+OpenWinClass=$:lingoes.exe</code></pre></div>
+
+Where did all that come from and how do I know what I need to type?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed May 15, 2013 12:25 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">You can use Resource Access Monitor to log the system objects/resources that are accessed.<br>
+<br>
+Instructions here:<br>
+<a href="../index9970.html?ResourceAccessMonitor" class="postlink">http://www.sandboxie.com/index.php?Reso ... essMonitor</a><br>
+<br>
+Post your log data here in your reply and we'll see how we can ammend the compatibility settings for Lingoes.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed May 15, 2013 12:49 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">In the meantime, I checked the program for myself.<br>
+It appears that they have changed the names of some of the program's resources.<br>
+<br>
+I tested the program on XP (with Sandboxie 4.01.08 ) and had to <span style="color: red"><strong>change</strong></span> some of the resource names that are used in Sandboxie's template:<br>
+OpenIpcPath=*\BaseNamedObjects*\OpenText_ZWFilter_GlobaData<strong><span style="color: red">32</span></strong><br>
+OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_GlobaData<strong><span style="color: red">32</span></strong><br>
+OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_Mutex<strong><span style="color: red">32</span></strong><br>
+<br>
+It seems likely that the <strong><span style="color: red">32</span></strong> that I added to the above settings are the result of using a 32-bit OS, so I would recommend using a wild card character there, instead:<br>
+<br>
+OpenIpcPath=*\BaseNamedObjects*\OpenText_ZWFilter_GlobaData<span style="color: red"><strong>*</strong></span><br>
+OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_GlobaData<span style="color: red"><strong>*</strong></span><br>
+OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_Mutex<span style="color: red"><strong>*</strong></span><br>
+There's no guarantee that a 64-bit OS would have <strong><span style="color: red">64</span></strong> at the end of those settings, but using a wild card character there should be OK.<br>
+<br>
+You have a couple of choices.<br>
+1) You can revise the Lingoes template settings in templates.ini to add the wild card (*) character to the end of those 3 lines. Be advised though, that any changes in the templates.ini file will be overwritten if you install or re-install any Sandboxie version - at least, until these changes are made in a future Sandboxie release.<br>
+<br>
+2) You could copy/paste those 3 lines into the settings for the sandbox where you use Lingoes:<br>
+<br>
+[(sandbox_name)]<br>
+...<br>
+... (&lt;- your existing settings, for the sandbox)<br>
+...<br>
+OpenIpcPath=*\BaseNamedObjects*\OpenText_ZWFilter_GlobaData*<br>
+OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_GlobaData*<br>
+OpenIpcPath=*\BaseNamedObjects*\OpenText_GrabText_Mutex*<br>
+<br>
+If the template in templates.ini gets updated, you can come back here and remove those 3 settings.<br>
+<br>
+3) You could use the Sandbox Settings GUI to enter those settings for each sandbox:<br>
+Sandbox Settings &gt; Resource Access &gt; IPC Access &gt; Direct Access<br>
+Click the "<strong>Add</strong>" button and paste these settings into the window, one line at a time:<br>
+<strong>*\BaseNamedObjects*\OpenText_ZWFilter_GlobaData*</strong><br>
+<strong>*\BaseNamedObjects*\OpenText_GrabText_GlobaData*</strong><br>
+<strong>*\BaseNamedObjects*\OpenText_GrabText_Mutex*</strong><br>
+OK your way out.<br>
+<br>
+Please report back with your results if you try this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat May 25, 2013 10:27 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thank you Guest10, I included the changes you propose in version 4.01.09.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=38&t=15471&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:39:06 GMT -->
+</html>

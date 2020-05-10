@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25711&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:50:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h2>
+		<p><a href="viewtopic67eb67eb.html?f=11&amp;t=25711">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25711</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Wed May 02, 2018 3:08 pm</strong></div>
+				<div class="author">by <strong>Skidrow</strong></div>
+				<div class="content">I've been having Windows compatibility issues for some time, to the point I just gave up.  It was working at some point and then stopped.  I figured something probably got corrupt and left it for quite a while.  Now I've installed 5-6 different versions including 2 bets versions and I can't get anything to work.  <br>
+The most recent beta install is 5.25.2 (each time I uninstalled the previous before installing).<br>
+Windows 7 Pro Service Pack 1, 8GB Ram, 64 bit, intel Core i7 CPU.<br>
+MSE running and Malwarebytes.<br>
+Nothing seems to open at all.  With previous versions the install was halted due to Compatibility Issues<br>
+Beta versions are throwing specific errors for example:<br>
+I right click on the Notepad shortcut on the desktop and then click "Run Sandboxed" and I get this: <br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)<br>
+Same error for other apps.<br>
+Right now Task Manager shows running:  Start.exe, Start.exe (twice), SandboxieRpcSs.exy, SbieCtrl.exe, SbieSvc.exe<br>
+<br>
+the previous version thew error 2203.<br>
+It would seem that there is an issue with the OS.<br>
+<br>
+Thanks,<br>
+<br>
+Andrew</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Wed May 02, 2018 3:28 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Skidrow,<br>
+<br>
+Regarding the OS: <br>
+Is Windows up-to-date? If not, please run a Windows update to ensure you have the needed kbs to run Sandboxie (more info here: <a href="viewtopic98dd98dd.html?f=11&amp;t=25545" class="postlink">viewtopic.php?f=11&amp;t=25545</a>)<br>
+<br>
+Is applocker enabled? <br>
+Are there any GPO policies in place? <br>
+<br>
+Does the issue occur in a new Sandbox with default settings? (And does it affect anything you try to run?) .<br>
+<br>
+The next thing to check is your AV protection, as SBIE2204 is related to Sandboxie not being able to start some of its helper programs:<br>
+<a href="../SBIE2204.html" class="postlink">https://www.sandboxie.com/SBIE2204</a><br>
+<br>
+Does the issue occur if you disable or remove your Antivirus protection? <br>
+<br>
+Please let me know the results. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Wed May 02, 2018 6:32 pm</strong></div>
+				<div class="author">by <strong>Skidrow</strong></div>
+				<div class="content">Hi,<br>
+<br>
+Thanks for the response.<br>
+Windows is up to date as of yesterday, and has been updating daily.  Last update was:<br>
+Definition Update for Microsoft Security Essentials - KB2310138 (Definition 1.267.704.0)<br>
+<br>
+I didn't even know App Locker existed until 5 minutes ago.  No rules set up, all blank.<br>
+Same for Group Policies.<br>
+<br>
+I have not set up a new sandbox, only use the default.  I just installed it and wanted to see if anything worked since the Compatibility issues disabled me from installing any of the regular releases.  Only the 2 betas installed at all.<br>
+<br>
+So, I've turned off real time monitoring in MSE and Malewarebytes.  I can kill MWB all together, but I've never been able to completely deactivate MSE.<br>
+I right clicked on notepad and "ran sandboxed".  Nothing happened.  I watched in task manager and Start.exe opened twice again and SbieSvc.exe started, but no messages or feedback at all.  Then I double clicked the "Sandboxed Webbrowser" on the desktop and the 2 Start.exe tasks restarted, but now one was under the user "Anonymous", previously both were "Owner", but regualar login name and SbieSvc.exe remained.  Still no messages or feedback, it's as if I did nothing.  Next I right clicked on WinAmp on the desktop and "Run Sandboxed", this time I checked "Run as UAC Administrator" and this time the 2 "Start.exe" tasks disappeared and only "SbieSvc.exe" is running.  I tried Notepad again and the 2 Start.exe's came back.  Still no messages or anything.  This behavior is different then before.  <br>
+<br>
+I terminated MWB completely and double clicked the "Sandboxed Web Browser" and There were 4 instances of Start.exe for a while then they went away but now SandboxieDcomLaunch.exe, SandboxieRpcSs.exe, SbieCtrl.exe are running and all instances of Start.exe are gone and I got 2 error windows.  <br>
+The first says: <br>
+"The application was unable to start correctly (0xc0000022). Click OK to close the application" <br>
+and the other is:<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)<br>
+<br>
+After clicking "OK" only SbieCtril.exe and SbieSve.exe are running.<br>
+<br>
+Not sure what else to do.<br>
+<br>
+Thanks,<br>
+<br>
+Andrew</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Thu May 03, 2018 10:00 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Skidrow ,<br>
+<br>
+You can try this:<br>
+<a href="viewtopic43cd43cd.html?p=124938#p124938" class="postlink">viewtopic.php?p=124938#p124938</a><br>
+<br>
+If all fails, the next thing to test would be to completely remove the AV protection (I would start with MWBS, and go from there), reboot the machine, create a new Sandbox with default settings and re-try. <br>
+<br>
+Please let us know the outcome.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Thu May 03, 2018 5:06 pm</strong></div>
+				<div class="author">by <strong>Skidrow</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+No luck at all <img class="smilies" src="images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br>
+<br>
+I added all the mentioned programs to MSE Exceptions as well as the folder itself and still have Real Time Protection enabled.<br>
+I unistalled MWB completely and rebooted the machine.<br>
+SbieCtrl.exe was loaded by default after boot up.<br>
+<br>
+I followed the same routines trying to run Notepad sandboxed, Sandboxed Web Browser, a GIF, WinAmp and got nothing at all.  Those same programs started in task manager but there was no feedback, no errors no messages, just nothing.  I ran Notepad sandboxed and then chose to Run outside of Default box and it did run.<br>
+<br>
+Not really sure where to go from here.<br>
+<br>
+Andrew</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Thu May 03, 2018 5:33 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Skidrow, <br>
+<br>
+Did you also uninstall MSE?  Please let me know what are the results if you remove that as well.<br>
+<br>
+If the problem persist, let's have a look at the output of the resource access monitor:<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+Ensure no apps are running in Sandboxie<br>
+Start the Resource Access Monitor<br>
+Reproduce the issue<br>
+Paste the output here. <br>
+Use the "&lt;/&gt;" button in the forums to format it.  <br>
+<br>
+Also, copy-paste your sbie configuration file<br>
+Configure --&gt; Edit configuration<br>
+Copy/paste the output<br>
+Highlight it and click the "&lt;/&gt;" button to format it. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Thu May 03, 2018 10:28 pm</strong></div>
+				<div class="author">by <strong>Skidrow</strong></div>
+				<div class="content">I have not removed MSE.  I am not able to disable it, even through task manager.  I don't see it in the task manager for the user name that I use all the time.  My system is set up weird from a long time ago, so I'm not in the default user, that does show mesecs.exe, but that user is always logged off and the system doesn't allow me to terminate the service.  I'm concerned about uninstalling it because I'm not sure I can get it installed back again and running properly and I don't want to leave my system unprotected.<br>
+<br>
+So, I did run the Resource Access Monitor.  Once it started up it listed a bunch of stuff and then an error message popped up right away.  Below are both<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\CdRom0
+(Drive)     \Device\CdRom1
+(Drive)     \Device\HarddiskVolume10
+(Drive)     \Device\HarddiskVolume11
+(Drive)     \Device\HarddiskVolume12
+(Drive)     \Device\HarddiskVolume13
+(Drive)     \Device\HarddiskVolume14
+(Drive)     \Device\HarddiskVolume15
+(Drive)     \Device\HarddiskVolume16
+(Drive)     \Device\HarddiskVolume18
+(Drive)     \Device\HarddiskVolume19
+(Drive)     \Device\HarddiskVolume2
+(Drive)     \Device\HarddiskVolume20
+(Drive)     \Device\HarddiskVolume21
+(Drive)     \Device\HarddiskVolume22
+(Drive)     \Device\HarddiskVolume23
+(Drive)     \Device\HarddiskVolume3
+(Drive)     \Device\HarddiskVolume4
+(Drive)     \Device\HarddiskVolume5
+(Drive)     \Device\HarddiskVolume6
+(Drive)     \Device\HarddiskVolume7
+(Drive)     \Device\HarddiskVolume8
+(Drive)     \Device\HarddiskVolume9
+Clsid       -------------------------------
+File/Key    -------------------------------
+Image       -------------------------------
+Image       *:\program files\sandboxie\sandboxierpcss.exe
+Image       c:\program files\common files\microsoft shared\ink\tiptsf.dll
+Image       c:\program files\sandboxie\sbiedll.dll
+Image       c:\windows\system32\advapi32.dll
+Image       c:\windows\system32\api-ms-win-core-synch-l1-2-0.dll
+Image       c:\windows\system32\credssp.dll
+Image       c:\windows\system32\cryptbase.dll
+Image       c:\windows\system32\cryptsp.dll
+Image       c:\windows\system32\dwmapi.dll
+Image       c:\windows\system32\gdi32.dll
+Image       c:\windows\system32\imm32.dll
+Image       c:\windows\system32\kernel32.dll
+Image       c:\windows\system32\kernelbase.dll
+Image       c:\windows\system32\lpk.dll
+Image       c:\windows\system32\msctf.dll
+Image       c:\windows\system32\msvcrt.dll
+Image       c:\windows\system32\nsi.dll
+Image       c:\windows\system32\ntdll.dll
+Image       c:\windows\system32\ole32.dll
+Image       c:\windows\system32\oleaut32.dll
+Image       c:\windows\system32\propsys.dll
+Image       c:\windows\system32\psapi.dll
+Image       c:\windows\system32\rpcepmap.dll
+Image       c:\windows\system32\rpcrt4.dll
+Image       c:\windows\system32\rpcrtremote.dll
+Image       c:\windows\system32\rpcss.dll
+Image       c:\windows\system32\rsaenh.dll
+Image       c:\windows\system32\sechost.dll
+Image       c:\windows\system32\secur32.dll
+Image       c:\windows\system32\shell32.dll
+Image       c:\windows\system32\shlwapi.dll
+Image       c:\windows\system32\sspicli.dll
+Image       c:\windows\system32\sxs.dll
+Image       c:\windows\system32\user32.dll
+Image       c:\windows\system32\usp10.dll
+Image       c:\windows\system32\uxtheme.dll
+Image       c:\windows\system32\ws2_32.dll
+Ipc         -------------------------------
+Ipc         \RPC Control\actkernel
+Ipc         \RPC Control\epmapper
+Ipc         \Sessions\2\BaseNamedObjects\2TIPSharedMemory
+Ipc         \Sessions\2\BaseNamedObjects\ComPlusCOMRegTable
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_1296
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_1676
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_7788
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_8228
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_8716
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_RPCSS_SXS_READY
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_DcomLaunch
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_Mutex1
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcEptMapper
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\2\BaseNamedObjects\SboxSession
+Ipc         \Sessions\2\BaseNamedObjects\windows_shell_global_counters
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\kernelbase.dll
+Ipc      O  \KnownDlls\LPK.dll
+Ipc      O  \KnownDlls\MSCTF.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\NSI.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\USP10.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\lsasspirpc
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \Security\LSA_AUTHENTICATION_INITIALIZED
+Ipc      O  \Sessions\2\Windows\ApiPort
+Ipc      O  \Sessions\2\Windows\SharedSection
+Ipc      O  \ThemeApiPort
+Pipe        -------------------------------
+Pipe        \Device\KsecDD
+Pipe        \Device\Ndis
+Pipe        \Device\NDMP10
+Pipe        \Device\NDMP11
+Pipe        \Device\NDMP12
+Pipe        \Device\NDMP13
+Pipe        \Device\NDMP4
+Pipe        \Device\NDMP5
+Pipe        \Device\NDMP7
+Pipe        \Device\NDMP8
+Pipe        \Device\NDMP9
+WinCls      -------------------------------
+WinCls   O  Shell_TrayWnd</code></pre></div>
+
+<br>
+And this is the error popup<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)
+SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)
+SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)
+SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</code></pre></div>
+
+And the configuration file is:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=WindowsRasMan
+Template=Avast_Antivirus
+Template=WindowsLive
+Template=AdobeAcrobatReader
+Template=WacomTablet
+Template=nVidia_Stereoscopic3D
+Template=OfficeLicensing
+Template=Microsoft_Security_Essentials
+FileRootPath=C:\Sandbox\%USER%\%SANDBOX%
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+
+[UserSettings_0D24022C]
+
+SbieCtrl_UserName=owner
+SbieCtrl_NextUpdateCheck=1525887490
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_BoxExpandedView=,
+SbieCtrl_HideMessage=2203,RPCSS_SXS - Start.exe [C0000034]
+SbieCtrl_HideMessage=2204,RpcSs (C0000022)
+SbieCtrl_HideMessage=2204,DcomLaunch (-4)
+SbieCtrl_WindowCoords=199,120,825,648
+SbieCtrl_ActiveView=40022</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Thu May 03, 2018 10:37 pm</strong></div>
+				<div class="author">by <strong>Skidrow</strong></div>
+				<div class="content">I wasn't sure I did that correct so I started all over again and this time it didn't throw the message right away.  I tried to open notepad sandboxed and then it threw the error popup.  All that is here:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\CdRom0
+(Drive)     \Device\CdRom1
+(Drive)     \Device\HarddiskVolume10
+(Drive)     \Device\HarddiskVolume11
+(Drive)     \Device\HarddiskVolume12
+(Drive)     \Device\HarddiskVolume13
+(Drive)     \Device\HarddiskVolume14
+(Drive)     \Device\HarddiskVolume15
+(Drive)     \Device\HarddiskVolume16
+(Drive)     \Device\HarddiskVolume18
+(Drive)     \Device\HarddiskVolume19
+(Drive)     \Device\HarddiskVolume2
+(Drive)     \Device\HarddiskVolume20
+(Drive)     \Device\HarddiskVolume21
+(Drive)     \Device\HarddiskVolume22
+(Drive)     \Device\HarddiskVolume23
+(Drive)     \Device\HarddiskVolume3
+(Drive)     \Device\HarddiskVolume4
+(Drive)     \Device\HarddiskVolume5
+(Drive)     \Device\HarddiskVolume6
+(Drive)     \Device\HarddiskVolume7
+(Drive)     \Device\HarddiskVolume8
+(Drive)     \Device\HarddiskVolume9
+Clsid       -------------------------------
+File/Key    -------------------------------
+Image       -------------------------------
+Image       *:\program files\sandboxie\sandboxierpcss.exe
+Image       c:\program files\common files\microsoft shared\ink\tiptsf.dll
+Image       c:\program files\sandboxie\sbiedll.dll
+Image       c:\windows\system32\advapi32.dll
+Image       c:\windows\system32\api-ms-win-core-synch-l1-2-0.dll
+Image       c:\windows\system32\credssp.dll
+Image       c:\windows\system32\cryptbase.dll
+Image       c:\windows\system32\cryptsp.dll
+Image       c:\windows\system32\dwmapi.dll
+Image       c:\windows\system32\gdi32.dll
+Image       c:\windows\system32\imm32.dll
+Image       c:\windows\system32\kernel32.dll
+Image       c:\windows\system32\kernelbase.dll
+Image       c:\windows\system32\lpk.dll
+Image       c:\windows\system32\msctf.dll
+Image       c:\windows\system32\msvcrt.dll
+Image       c:\windows\system32\nsi.dll
+Image       c:\windows\system32\ntdll.dll
+Image       c:\windows\system32\ole32.dll
+Image       c:\windows\system32\oleaut32.dll
+Image       c:\windows\system32\propsys.dll
+Image       c:\windows\system32\psapi.dll
+Image       c:\windows\system32\rpcepmap.dll
+Image       c:\windows\system32\rpcrt4.dll
+Image       c:\windows\system32\rpcrtremote.dll
+Image       c:\windows\system32\rpcss.dll
+Image       c:\windows\system32\rsaenh.dll
+Image       c:\windows\system32\sechost.dll
+Image       c:\windows\system32\secur32.dll
+Image       c:\windows\system32\shell32.dll
+Image       c:\windows\system32\shlwapi.dll
+Image       c:\windows\system32\sspicli.dll
+Image       c:\windows\system32\sxs.dll
+Image       c:\windows\system32\user32.dll
+Image       c:\windows\system32\usp10.dll
+Image       c:\windows\system32\uxtheme.dll
+Image       c:\windows\system32\ws2_32.dll
+Ipc         -------------------------------
+Ipc         \RPC Control\actkernel
+Ipc         \RPC Control\epmapper
+Ipc         \Sessions\2\BaseNamedObjects\2TIPSharedMemory
+Ipc         \Sessions\2\BaseNamedObjects\ComPlusCOMRegTable
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_10100
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_1748
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_3300
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_5804
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_6532
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_9740
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_9824
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_RPCSS_SXS_READY
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_DcomLaunch
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_Mutex1
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcEptMapper
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\2\BaseNamedObjects\SboxSession
+Ipc         \Sessions\2\BaseNamedObjects\windows_shell_global_counters
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\kernelbase.dll
+Ipc      O  \KnownDlls\LPK.dll
+Ipc      O  \KnownDlls\MSCTF.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\NSI.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\USP10.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\lsasspirpc
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \Security\LSA_AUTHENTICATION_INITIALIZED
+Ipc      O  \Sessions\2\Windows\ApiPort
+Ipc      O  \Sessions\2\Windows\SharedSection
+Ipc      O  \ThemeApiPort
+Pipe        -------------------------------
+Pipe        \Device\KsecDD
+Pipe        \Device\Ndis
+Pipe        \Device\NDMP10
+Pipe        \Device\NDMP11
+Pipe        \Device\NDMP12
+Pipe        \Device\NDMP13
+Pipe        \Device\NDMP4
+Pipe        \Device\NDMP5
+Pipe        \Device\NDMP7
+Pipe        \Device\NDMP8
+Pipe        \Device\NDMP9
+WinCls      -------------------------------
+WinCls   O  Shell_TrayWnd
+
+</code></pre></div>
+
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)
+SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)
+SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)
+SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</code></pre></div>
+
+Config file:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=WindowsRasMan
+Template=Avast_Antivirus
+Template=WindowsLive
+Template=AdobeAcrobatReader
+Template=WacomTablet
+Template=nVidia_Stereoscopic3D
+Template=OfficeLicensing
+Template=Microsoft_Security_Essentials
+FileRootPath=C:\Sandbox\%USER%\%SANDBOX%
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+
+[UserSettings_0D24022C]
+
+SbieCtrl_UserName=owner
+SbieCtrl_NextUpdateCheck=1525887490
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_BoxExpandedView=,
+SbieCtrl_HideMessage=2203,RPCSS_SXS - Start.exe [C0000034]
+SbieCtrl_HideMessage=2204,RpcSs (C0000022)
+SbieCtrl_HideMessage=2204,DcomLaunch (-4)
+SbieCtrl_WindowCoords=199,120,825,648
+SbieCtrl_ActiveView=40022</code></pre></div>
+
+I hope this helps.  Thank you.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Fri May 04, 2018 1:42 am</strong></div>
+				<div class="author">by <strong>Skidrow</strong></div>
+				<div class="content">Not sure if this helps at all but I just saw a popup error message from Sandboxie DcomLaunch:  "! Could not instrument service functions"  unprompted.  Just happened to see it, wasn't doing anything.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Fri May 04, 2018 9:53 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Skidrow,<br>
+
+<blockquote class="uncited"><div>My system is set up weird from a long time ago, so I'm not in the default user, that does show mesecs.exe, but that user is always logged off and the system doesn't allow me to terminate the service</div></blockquote>
+I am not really sure what do you mean, but with an admin account you should be able to stop / remove the software (or search google for alternatives of how to stop it). If you did not set up the machine, then there are perhaps other settings (policies) in place that may be blocking Sandboxie. <br>
+ <br>
+Did you add the executables to the exclusions list as suggested on the previous post? <br>
+The messages that you are receiving are usually related to AV software or policies blocking the sandboxie processes.<br>
+<a href="searchd112d112.html?keywords=Could+not+instrument+service+functions" class="postlink">search.php?keywords=Could+not+instrumen ... +functions</a> <br>
+<br>
+Based on your posts :<br>
+<br>
+The Avast AV template is added to Sandboxie. Do you have Avast running as well? :<br>
+---&gt; Template=Avast_Antivirus<br>
+<br>
+If not, go to Sandboxie Control --&gt; Configure ---&gt; Software Compatibility and remove the Avast template.<br>
+<br>
+Also, we are probably not seeing the full error message. I noticed there are hidden messages set up:<br>
+SbieCtrl_HideMessage=2203,RPCSS_SXS - Start.exe [C0000034]<br>
+SbieCtrl_HideMessage=2204,RpcSs (C0000022)<br>
+SbieCtrl_HideMessage=2204,DcomLaunch (-4)<br>
+<br>
+Go to Configure -- &gt; Forget Hidden messages<br>
+<br>
+After making those changes, create a new Sandbox with default settings and let us know the results. <br>
+<br>
+Another thing to try is disabling the MSE template (same as where Avast was) to see if that helps. But, otherwise, you need to uninstall the software so that we can conduct clean tests. <br>
+<br>
+If the problem persists after trying the above mentioned, let's gather a PML :<br>
+Download procmon.exe from  <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procmon" class="postlink">https://docs.microsoft.com/en-us/sysint ... ds/procmon</a><br>
+Start procmon and reproduce the issue .<br>
+Save the log and provide us the link (you will have to upload it to a file hosting website as they tend to be big files).<br>
+Please do not filter the output. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Fri May 04, 2018 3:08 pm</strong></div>
+				<div class="author">by <strong>Skidrow</strong></div>
+				<div class="content">I set up this computer with an alternate user where I did all my work and stored data when I was in an environment where my computer could be accessed by other people.  This was an added layer of protection for me.  Since then I have privacy so I gave that use admin rights and just kept it as it was.  The machine boots up to the original admin account, but I just log off and switch the one I use.  FYI: many years ago I did have Sandboxie running on this computer and then it just stopped working.  There should not be anything blocking Sandboxie from functioning.<br>
+<br>
+AVG was installed on this computer a very long time ago.  It's been uninstalled and there was a ghost stills howing up that it was on the system.  I've run various cleaning programs to try to get rid of all references to it in the registry and even manually went in and deleted registry references and made sure all files on the system were gone.  I thought it was AVG-free for quite some time now until this one instance here.  <br>
+*I have removed the AVG template.<br>
+<br>
+*I have set --&gt; Forget Hidden messages.<br>
+<br>
+*I entered all the exececutables mentioned in the MSE Excluded files and locations:  See attached screen shot:<br>
+<br>
+&lt;MSE Screenshot&gt; MSE_Excluded.Files.jpg<br>
+<br>
+I would really prefer not to uninstall MSE.  Even if I did and SB works, wouldn't that mean If I reinstalled it SB would stop again?  I need to have some protection.<br>
+<br>
+* I'm trying to start clean so I exited SB and SbieSvc.exe is still running in Task Manager.  I tried to terminate the process and I got an error "Access Denied"<br>
+Just to be sure I had full admin control I switched to the other user as well to terminate MSE.  I was able to terminate mseces.exe but MsMpEng.exe gave me an "Access Denied" error message. I was, however, able to terminate SbieSvc.exe.<br>
+<br>
+* I also decided to try SB on that other user as well, so I ran it and went through the intro screens.  I verified that AVG templates were off and Forget Hidden messages and then opened Notepad as Sandboxed and got the following error messages: <br>
+
+<blockquote class="uncited"><div>SBIE2204 Cannot start sandboxed service RpcSs (80000003)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (-4)<br>
+<br>
+SBIE2203 Failed to communicate with Sandboxie Service:  RPCSS_SXS - Start.exe [C0000034]<br>
+SBIE2204 Cannot start sandboxed service RpcSs (80000003)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (-4)<br>
+<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (80000003)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (80000003)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (80000003)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (80000003)</div></blockquote>
+
+* Now back to my regular user, not SB processed running, MSE real time monitoring off, all excetions confirmed.<br>
+Clicked the SB quick launch icon to start the program and got a Sandboxie Start error: "! SBIE2331 Service start failed:  [22 / 5] Access is denied" followed by "! The Sandbox driver (SbieDrv) is not available to sandbox programs.  Make sure both the driver and Sandboxie service (SbieSvc) have stated successfully."<br>
+<br>
+* Executed Sandbocie Control from program files menu (I usually neve use this).  New sandbox created "BoxOne" copied from DefaultBox.  Ran Resource Access Monitor.  Right click on Notepad,, run Sandboxed, in BoxOne.<br>
+<br>
+Threw errors: 
+<blockquote class="uncited"><div>SBIE2204 Cannot start sandboxed service RpcSs (80000003)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (-4)<br>
+<br>
+SBIE2204 Cannot start sandboxed service RpcSs (80000003)<br>
+SBIE2204 Cannot start sandboxed service DcomLaunch (-4)</div></blockquote>
+
+Output of RAM:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\CdRom0
+(Drive)     \Device\CdRom1
+(Drive)     \Device\HarddiskVolume10
+(Drive)     \Device\HarddiskVolume11
+(Drive)     \Device\HarddiskVolume12
+(Drive)     \Device\HarddiskVolume13
+(Drive)     \Device\HarddiskVolume14
+(Drive)     \Device\HarddiskVolume15
+(Drive)     \Device\HarddiskVolume16
+(Drive)     \Device\HarddiskVolume18
+(Drive)     \Device\HarddiskVolume19
+(Drive)     \Device\HarddiskVolume2
+(Drive)     \Device\HarddiskVolume20
+(Drive)     \Device\HarddiskVolume21
+(Drive)     \Device\HarddiskVolume22
+(Drive)     \Device\HarddiskVolume23
+(Drive)     \Device\HarddiskVolume3
+(Drive)     \Device\HarddiskVolume4
+(Drive)     \Device\HarddiskVolume5
+(Drive)     \Device\HarddiskVolume6
+(Drive)     \Device\HarddiskVolume7
+(Drive)     \Device\HarddiskVolume8
+(Drive)     \Device\HarddiskVolume9
+Clsid       -------------------------------
+File/Key    -------------------------------
+Image       -------------------------------
+Image       *:\program files\sandboxie\sandboxierpcss.exe
+Image       c:\program files\alwil software\avast5\snxhk64.dll
+Image       c:\program files\sandboxie\sbiedll.dll
+Image       c:\windows\system32\advapi32.dll
+Image       c:\windows\system32\gdi32.dll
+Image       c:\windows\system32\kernel32.dll
+Image       c:\windows\system32\kernelbase.dll
+Image       c:\windows\system32\lpk.dll
+Image       c:\windows\system32\msvcrt.dll
+Image       c:\windows\system32\nsi.dll
+Image       c:\windows\system32\ntdll.dll
+Image       c:\windows\system32\psapi.dll
+Image       c:\windows\system32\rpcrt4.dll
+Image       c:\windows\system32\sechost.dll
+Image       c:\windows\system32\user32.dll
+Image       c:\windows\system32\usp10.dll
+Image       c:\windows\system32\ws2_32.dll
+Ipc         -------------------------------
+Ipc         \RPC Control\epmapper
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_11964
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_12828
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_12960
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_RPCSS_SXS_READY
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \WindowsErrorReportingServicePort
+Ipc      O  \KernelObjects\SystemErrorPortReady
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\kernelbase.dll
+Ipc      O  \KnownDlls\LPK.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\NSI.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\USP10.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \Sessions\2\Windows\ApiPort
+Ipc      O  \Sessions\2\Windows\SharedSection
+Pipe        -------------------------------
+WinCls      -------------------------------
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Fri May 04, 2018 3:40 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Skidrow,<br>
+
+<blockquote class="uncited"><div>I would really prefer not to uninstall MSE. Even if I did and SB works, wouldn't that mean If I reinstalled it SB would stop again? I need to have some protection.</div></blockquote>
+I am asking you to remove it for testing purposes not forever, I agree you don't want to be without an AV protection. But, if we can determine that removal works, then we have at least found the culprit. <br>
+<br>
+I am not sure why you mentioned AVG, the template I asked you to remove was Avast. In fact, per your latest Resource output, Avast is still running:<br>
+Image  c:\program files\alwil software\avast5\snxhk64.dll<br>
+Please be sure to remove it as having multiple AV solutions on one computer will cause problems. <br>
+<br>
+Do you have several hard drives as well? I am seeing a lot, but it could virtual units, etc. Let me know if there's anything "non-typical" about that as well please. <br>
+<br>
+Per your other comments, there seems to be some sort of permissions issue going on, since you are getting Access Denied and the drivers are not loading. If you send us the Procmon log as requested, the devs will have a look. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Fri May 04, 2018 4:23 pm</strong></div>
+				<div class="author">by <strong>Skidrow</strong></div>
+				<div class="content">I'm sorry, I totally didn't see the Procman request.  I will do that.<br>
+<br>
+I meant Avast, I must have thought it was the same.  I will look into getting rid of that, but like I said I thought I had done everything I could to remove it, but that was years ago.  I never see anything related to it in the Task Manager.<br>
+<br>
+I've got 3 phystical drives in the machine, partitioned, and 3 external drives as well.  I am always running out of space.  Months ago my C drive had no space left and ultimately I ran CCleaner and some other software and freed up 150gb of crap.  I really need to replace this computer.  I also have my old XP box attached to the network, just so much stuff to re-organize.<br>
+<br>
+Andrew</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Fri May 04, 2018 4:51 pm</strong></div>
+				<div class="author">by <strong>Skidrow</strong></div>
+				<div class="content">I appear to have some serious issues on this machine.  I have 3 user accounts, the original admin account, which I've renamed, so not really sure exactly what is what, but 2 of them do list as Administrator accounts in users list.  Avast is nowhere to be found anywhere, in program files, 'scan with" context menus, uninstall or change programs etc...  I tried to delete all the files in Program Files directory and I keep getting messages that Access is denied, requiring Administrator Permission.  I did this in all 3 accounts just to be sure.  I've had that Administrator Permission pop up many times in the past and have deleted plenty of program files directories, but not now and I have no idea why or even where to look.  I'm going to check the registry for any Avast entries, other than that I have no idea what to do next.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Win 7 x64 - SBIE2204 Cannot start sandboxed service DcomLaunch (C0000022)</h3>
+				<div class="date">Posted: <strong>Fri May 04, 2018 4:55 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hey Skidrow,<br>
+<br>
+If you are having issues with your host, there isn't much we are going to be able to do from the Sandboxie side.  There are some MS tools that you can use to fix your permissions, I recommend you do a google search for those (I can't provide more info unfortunately).<br>
+<br>
+Also, see if you can enable the local admin account (if you haven't already), which may help you correct these problems as well.<br>
+<br>
+Keep us posted.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25711&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 01:50:15 GMT -->
+</html>

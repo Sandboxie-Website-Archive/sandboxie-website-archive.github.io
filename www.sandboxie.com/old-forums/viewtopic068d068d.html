@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13428&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:32:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; can i export / inport settings?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>can i export / inport settings?</h2>
+		<p><a href="viewtopice71ae71a.html?f=17&amp;t=13428">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=13428</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>can i export / inport settings?</h3>
+				<div class="date">Posted: <strong>Thu Aug 09, 2012 11:01 am</strong></div>
+				<div class="author">by <strong>gibson58</strong></div>
+				<div class="content">Hi,<br>
+I want install sandboxie on my second pc(Windows Ultimate 7x32),but i was make many settings in first PC(Windows Ultimate 7x64).Can i export them and just import in sandboxie  in second pc ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 09, 2012 1:33 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Copy Sandboxie.ini from Windows folder to other PC.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 09, 2012 2:01 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">In my view, you're better off not copying the <span style="text-decoration: underline">entire</span> configuration file from the old computer.<br>
+The [GlobalSettings] settings will likely be incorrect unless you have identical programs installed on both computers.<br>
+<br>
+There's a [UserSettings] section in the sandboxie.ini file that records the user name (Windows logon name) that you use on the computer.<br>
+[UserSettings_XXXXXXXX]<br>
+<br>
+SbieCtrl_<strong>UserName</strong>=xxxxxxx<br>
+<br>
+If your logon name on the new computer is different from the logon name used on the other computer, you will likely wind up with 2 [UserSettings...] sections after you use your previous configuration file with Sandboxie on the new computer.<br>
+<br>
+Except for those two sections, the rest of the file should be OK to copy into sandboxie.ini on the new computer.<br>
+If you don't use Configuration &gt; Edit Configuration to paste lines into the new computer's configuration file, be sure to use Sandboxie Control's menu:<br>
+Configuration &gt; Reload Configuration<br>
+after the editing is done.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 09, 2012 3:44 pm</strong></div>
+				<div class="author">by <strong>gibson58</strong></div>
+				<div class="content">Thanks , i make the all settings again <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 15, 2012 6:27 am</strong></div>
+				<div class="author">by <strong>Gator</strong></div>
+				<div class="content"><blockquote><div><cite>Guest10 wrote:</cite>In my view, you're better off not copying the <span style="text-decoration: underline">entire</span> configuration file from the old computer.<br>
+The [GlobalSettings] settings will likely be incorrect unless you have identical programs installed on both computers.<br>
+<br>
+There's a [UserSettings] section in the sandboxie.ini file that records the user name (Windows logon name) that you use on the computer.<br>
+[UserSettings_XXXXXXXX]<br>
+<br>
+SbieCtrl_<strong>UserName</strong>=xxxxxxx<br>
+<br>
+If your logon name on the new computer is different from the logon name used on the other computer, you will likely wind up with 2 [UserSettings...] sections after you use your previous configuration file with Sandboxie on the new computer.<br>
+<br>
+Except for those two sections, the rest of the file should be OK to copy into sandboxie.ini on the new computer.<br>
+If you don't use Configuration &gt; Edit Configuration to paste lines into the new computer's configuration file, be sure to use Sandboxie Control's menu:<br>
+Configuration &gt; Reload Configuration<br>
+after the editing is done.</div></blockquote>
+
+Ok i'm lost...how do I backup my settings/sandboxes? where do I find the ini file?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 15, 2012 9:08 am</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content"><blockquote><div><cite>Gator wrote:</cite>Ok i'm lost...how do I backup my settings/sandboxes? where do I find the ini file?</div></blockquote>
+
+Backup the Sandboxie.ini file from C:\Windows or C:\Program Files\Sandboxie.<br>
+<br>
+To backup the sandboxes, just make copies of them (free or archived) from wherever you store them to wherever you want to back them up.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Aug 15, 2012 7:39 pm</strong></div>
+				<div class="author">by <strong>Gator</strong></div>
+				<div class="content"><blockquote><div><cite>MichaelS wrote:</cite><blockquote><div><cite>Gator wrote:</cite>Ok i'm lost...how do I backup my settings/sandboxes? where do I find the ini file?</div></blockquote>
+
+Backup the Sandboxie.ini file from C:\Windows or C:\Program Files\Sandboxie.<br>
+<br>
+To backup the sandboxes, just make copies of them (free or archived) from wherever you store them to wherever you want to back them up.</div></blockquote>
+
+<br>
+If I backup the ini and put it on another computer my sandboxes will or won't be there?<br>
+how do I copy a sandbox when it's empty? I don't install in sandboxes I just run my browsers mainly but have separate sandboxes for each browser.<br>
+<br>
+screens would be helpful</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 16, 2012 4:03 am</strong></div>
+				<div class="author">by <strong>MichaelS</strong></div>
+				<div class="content">Gator, the Sandboxie.ini just holds the settings. It's a configuration file. If you move it to a different computer and load it in Sandboxie, it will give you the same settings you had on the computer you copied the file from.<br>
+<br>
+You do not have to move empty sandbox folders, those are created when you run an application in a sandbox.<br>
+<br>
+The only folders you have to move are those that contain applications installations or modified files. You just copy those folders to the same location on the other computers, or if you change their location, you need to edit the settings file as well to let it know of the sandbox's new location.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 16, 2012 8:01 am</strong></div>
+				<div class="author">by <strong>Gator</strong></div>
+				<div class="content">It's not working, I copied it to my VM where sandboxie is installed and nothing changed</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Aug 16, 2012 8:03 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>Gator wrote:</cite>It's not working, I copied it to my VM where sandboxie is installed and nothing changed</div></blockquote>
+
+Did you reload configuration?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 17, 2012 9:27 am</strong></div>
+				<div class="author">by <strong>Gator</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite><blockquote><div><cite>Gator wrote:</cite>It's not working, I copied it to my VM where sandboxie is installed and nothing changed</div></blockquote>
+
+Did you reload configuration?</div></blockquote>
+
+Nope, is that how you do it?<br>
+which ini file do I use? windows or in program files?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Aug 17, 2012 2:03 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Windows.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Aug 19, 2012 3:46 am</strong></div>
+				<div class="author">by <strong>Gator</strong></div>
+				<div class="content"><blockquote><div><cite>Buster wrote:</cite>Windows.</div></blockquote>
+
+Gotcha   <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=13428&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:32:15 GMT -->
+</html>

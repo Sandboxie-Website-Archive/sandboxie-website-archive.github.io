@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:51:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Block Process Access</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Block Process Access</h2>
+		<p><a href="viewtopic7fcb7fcb.html?f=22&amp;t=4885">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=4885</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>15</strong></div>
+					<div class="post">
+				<h3>Block Process Access</h3>
+				<div class="date">Posted: <strong>Thu Jan 29, 2009 6:45 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content"><strong>Note:</strong> You'll need the Microsoft Visual C++ 2010 Runtimes for the DLL to work:<br>
+<a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a7b7a05e-6de6-4d3a-a423-37bf0912db84&amp;displaylang=en" class="postlink"><strong>x86</strong></a><br>
+<a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=bd512d9e-43c8-4655-81bf-9350143d5867&amp;displaylang=en" class="postlink"><strong>x64</strong></a><br>
+<br>
+Using information from this post<br>
+<br>
+<a href="../phpbb/viewtopicd47e.php?p=26778#26778" class="postlink">http://www.sandboxie.com/phpbb/viewtopi ... 6778#26778</a><br>
+<br>
+sbiextra<br>
+======<br>
+<br>
+I've created a DLL to block sandboxed processes from accessing information about processes running outside the sandbox, and to prevent them from reading the memory of any process not running in their same sandbox. This is accomplished by hooking several API functions:<br>
+<br>
+- NtOpenProcess<br>
+- NtQuerySystemInformation<br>
+- NtReadVirtualMemory<br>
+- CreateToolhelp32Snapshot<br>
+- BlockInput<br>
+- InternalGetWindowText<br>
+- GetWindowTextA/W<br>
+- SendMessageA/W<br>
+	&gt; WM_GETTEXT<br>
+<br>
+The effects of using this DLL on sandboxed processes are as follows:<br>
+<br>
+- block system-wide enumeration of running processes and threads (includes Toolhelp32 and PSAPI functions)<br>
+- block access to unsandboxed processes - cannot open processes, or read their memory<br>
+- prevent sandboxed processes from calling the BlockInput function (blocks mouse and keyboard input)<br>
+- prevent sandboxed processes from reading window titles or control text<br>
+<br>
+To use it, download the DLL and save it somewhere. Then insert this line in your Sandboxie.ini file under the sandbox you want to use the DLL.<br>
+<br>
+32-bit platforms:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>InjectDll=C:\some\path\to\sbiextra.dll</code></pre></div>
+
+64-bit platforms add both:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>InjectDll=C:\some\path\to\sbiextra.dll
+InjectDll64=C:\some\path\to\sbiextra_x64.dll</code></pre></div>
+
+On x64 platforms, both DLLs and directives should be used.  Sandboxie will inject the proper DLL depending on whether the target process is 32-bit or 64-bit.<br>
+<br>
+The DLL will be injected into any process running in the sandbox. That's it!<br>
+<br>
+<br>
+Optional INI File:<br>
+============<br>
+<br>
+To control which of the above functions are hooked in a sandboxed process, copy the provided 'sbiextra.ini' file to the same directory as 'sbiextra.dll'.  For each function you want to hook, set the value to 1, for each function you don't want hooked, set the value to 0.<br>
+<br>
+Additionally, the DLL can output some debug information so you can see some of what is going on.  To output this information, set the value of 'ShowDebugInfo' to 1.  To see the debug output, install and run Dbgview from Sysinternals before starting a sandboxed process.<br>
+<br>
+<br>
+Test Program:<br>
+=============<br>
+<br>
+Also included in the archive is a small test program. First it will attempt a system-wide process snapshot using the Toolhelp32 API, then it will attempt to read 16 bytes from the base address of 'kernel32.dll' from the process whose PID you provide on the command line, and finally it will attempt a process module snapshot of the provided PID using the Toolhelp32 API. To test, run 'injtest.exe' in the sandbox where you're injecting the DLL and provide the PID of a sandboxed or unsandboxed process on the command line. The system snapshot should fail (return a handle of 0xFFFFFFFF). If the target process is unsandboxed, 'injtest.exe' will not be able to read it's memory or take a snapshot. If it is sandboxed, the functions will succeed.<br>
+<br>
+Next it will take a snapshot of all the windows on the system and try to get their titles via three different methods: InternalGetWindowText, GetWindowTextW, and directly via SendMessageW with the WM_GETTEXT message.  Most of the window titles should remain blank for all three tests.<br>
+<br>
+<a href="http://zer0dev.com/dld/download.php?id=5" class="postlink"><strong>sbiextra v1.0.0.17</strong></a><br>
+(md5: 4b1705e8cb98ffddb970b8426bfdc772)<br>
+*Requires Sandboxie 3.51 beta or higher.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 29, 2009 7:23 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Oh, forgot to mention, you can see the debug output using DbgView. You will also need the Microsoft VC++ 2008 SP1 runtimes.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 29, 2009 8:44 pm</strong></div>
+				<div class="author">by <strong>MitchE323</strong></div>
+				<div class="content">Nice work wraithdu, lots of effort. Do you foresee any issues if also running Returnil alongside Sandboxie?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 29, 2009 9:13 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">I don't think so.  Sandboxie injects my DLL into any sandboxed process.  I believe Returnil runs at the filesystem level.  If Returnil doesn't conflict with Sandboxie in general, there's nothing about this method that would change that compatibility.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jan 29, 2009 10:35 pm</strong></div>
+				<div class="author">by <strong>soccerfan</strong></div>
+				<div class="content">Thank you wraithdu!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 30, 2009 2:20 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I run cmd.exe unsandboxed and then your test program sandboxed and seems like your test is able to read the 16 bytes.<br>
+<br>
+I think I´m not doing anything wrong. Anyone else with same result?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 30, 2009 9:21 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Buster, run DbgView with your test.  Do you see my debug output?  It should print lots of information about the function pointers, when the ReadProcessMemory function is intercepted, the enumeration of modules in cmd.exe, and whether the call is blocked or allowed.<br>
+<br>
+If you don't see anything, then I suspect you're missing the MS VC++ 2008 SP1 runtimes, and the DLL fails to load when injected, or your INI entry is wrong.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 30, 2009 10:02 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Sample DbgView output:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>*** cmd already runing unsandboxed, starting injtest sandboxed
+[3272] Injected into process
+[3272] Pointers:
+[3272] SbieDll_Hook: 7D22B9C0
+[3272] pReadProcessMemory: 003F0C50
+[3272] DLL_PROCESS_ATTACH finished
+[3272] ReadProcessMemory intercepted
+[3272] Target PID: 2204
+[3272] Snapshot handle: 388
+[3272] module: cmd.exe
+[3272] module: ntdll.dll
+[3272] module: kernel32.dll
+[3272] module: ADVAPI32.dll
+[3272] module: RPCRT4.dll
+[3272] module: msvcrt.dll
+[3272] SbieDll not found, blocking function
+
+*** starting cmd sandboxed
+[1224] Injected into process
+[1224] Pointers:
+[1224] SbieDll_Hook: 7D22B9C0
+[1224] pReadProcessMemory: 000701F0
+[1224] DLL_PROCESS_ATTACH finished
+
+*** starting injtest sandboxed
+[4020] Injected into process
+[4020] Pointers:
+[4020] SbieDll_Hook: 7D22B9C0
+[4020] pReadProcessMemory: 003F0C50
+[4020] DLL_PROCESS_ATTACH finished
+[4020] ReadProcessMemory intercepted
+[4020] Target PID: 1224
+[4020] Snapshot handle: 388
+[4020] module: cmd.exe
+[4020] module: ntdll.dll
+[4020] module: kernel32.dll
+[4020] module: SbieDll.dll
+[4020] Found SbieDll, allowing ReadProcessMemory</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 30, 2009 10:23 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>wraithdu wrote:</cite>If you don't see anything, then I suspect you're missing the MS VC++ 2008 SP1 runtimes, and the DLL fails to load when injected</div></blockquote>
+
+Yeah, very probably I don´t have the runtimes.<br>
+<br>
+Do you know the file names of the required runtimes?<br>
+<br>
+btw... I don´t receive any error message about missed runtimes. Usually they are showed.  <img class="smilies" src="images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> <br>
+<br>
+Let´s wait until anyone else make a test and comment results.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 30, 2009 12:46 pm</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content">Running as advertised here on Vista SP1 and XP SP3. I did not have the necessary runtimes, so I used the installer provided at the link in wraithdu's first post. The only problem I ran into was my own fault...I initially forgot to reload the config. Thank you wraithdu for your work.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 30, 2009 1:11 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">You won't get any errors about missing runtimes because the DLL is remotely injected. If it fails, it's up to the loading application (Sandboxie) to notify you.<br>
+<br>
+You could also check 'injtest' while runing with Process Explorer to see if the DLL is in fact loaded.<br>
+<br>
+The required runtime is 'msvcr90.dll'.  You need to run the installer to properly install these runtimes.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 30, 2009 1:58 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">wraithdu: Installing the Microsoft Visual C++ 2008 SP1 Runtimes the DLL will be injected correctly.<br>
+<br>
+You should explain why you created the DLL and what´s its purpose.<br>
+<br>
+tzuk: Only one DLL can be injected. At the moment I don´t have the need of loading 2 or more DLLs but maybe it could be a feature request to consider.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jan 30, 2009 5:04 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Why did I create it?  I was curious from the post about WoW and the Warden client.  I still hope that guy tests it, cause I wanna know if Warden freaks out.  My other reasons... it was a challenge. <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+The purpose is pretty clearly stated.  It blocks sandboxed processes from using the ReadProcessMemory function (search MSDN) to read the memory of unsandboxed processes.  Incidentally it also blocks the EnumProcessModules function (and perhaps others) of PSAPI.dll, since that function internally seems to use ReadProcessMemory.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jan 31, 2009 11:31 pm</strong></div>
+				<div class="author">by <strong>raid</strong></div>
+				<div class="content">What is the returnnil option? Another dll plugin? <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Feb 01, 2009 2:03 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Umm, no.<br>
+<br>
+<a href="http://www.returnil.com/" class="postlink">www.returnil.com</a></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>15</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:51:56 GMT -->
+</html>

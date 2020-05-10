@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=15970&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:46:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [.02] Minecraft</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[.02] Minecraft</h2>
+		<p><a href="viewtopic2981-22981.html?f=40&amp;t=15970">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=15970</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[.02] Minecraft</h3>
+				<div class="date">Posted: <strong>Mon Jul 08, 2013 9:15 pm</strong></div>
+				<div class="author">by <strong>Glen</strong></div>
+				<div class="content">Just to let everyone know.  Minecraft won't run in the version 4.02 and 4.04.<br>
+Something to do with opengl I think.<br>
+Going back to 3.76 gets things working again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 09, 2013 12:10 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content"><span style="font-size: 75%; line-height: normal">Windows 8 Pro (64-bit)</span><br>
+<br>
+<span style="font-size: 75%; line-height: normal">Sbie 3.76</span><br>
+<br>
+No ERRORS.<br>
+<br>
+<span style="font-size: 75%; line-height: normal">Sbie 4.03.04</span><br>
+<span style="font-size: 75%; line-height: normal">Sbie 4.04</span><br>
+<br>
+Google Chrome ... OK<br>
+Java Setup ... OK<br>
+Minecraft Launcher ... OK<br>
+Minecraft 1.6.2 ... OK (WINDOWED)<br>
+<br>
+On change to FULLSCREEN via WINDOWED MODE GUI
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 9/07/13 11:31 AM
+Description: Updating screen events
+
+java.lang.IllegalStateException: Mouse must be created before you can read events
+	at org.lwjgl.input.Mouse.next(Mouse.java:444)
+	at awb.m(SourceFile:106)
+	at ats.k(SourceFile:1158)
+	at ats.S(SourceFile:663)
+	at ats.d(SourceFile:619)
+	at net.minecraft.client.main.Main.main(SourceFile:101)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at org.lwjgl.input.Mouse.next(Mouse.java:444)
+	at awb.m(SourceFile:106)
+
+-- Affected screen --
+Details:
+	Screen name: awl
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total;
+	Chunk stats: MultiplayerChunkCache: 441
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-32,64,256), Chunk: (at 0,4,0 in -2,16; contains blocks -32,0,256 to -17,255,271), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 1457 game time, 1457 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 113 total;
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at bda.a(SourceFile:284)
+	at ats.b(SourceFile:1761)
+	at ats.d(SourceFile:628)
+	at net.minecraft.client.main.Main.main(SourceFile:101)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.6.2
+	Operating System: Windows 8 (x86) version 6.2
+	Java Version: 1.7.0_25, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode), Oracle Corporation
+	Memory: 83796592 bytes (79 MB) / 262803456 bytes (250 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 1 total; -Xmx1G
+	AABB Pool Size: 7 (392 bytes; 0 MB) allocated, 2 (112 bytes; 0 MB) used
+	Suspicious classes: No suspicious classes found.
+	IntCache: cache: 0, tcache: 0, allocated: 3, tallocated: 63
+	Launched Version: 1.6.2
+	LWJGL: 2.9.0
+	OpenGL: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Is Modded: Probably not. Jar signature remains and client brand is untouched.
+	Type: Client (map_client.txt)
+	Resource Pack: Default
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 50 (2800 bytes; 0 MB) allocated, 16 (896 bytes; 0 MB) used
+</code></pre></div>
+
+On initialization to FULLSCREEN (remembered setting) after first Play
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>---- Minecraft Crash Report ----
+// Quite honestly, I wouldn't worry myself about that.
+
+Time: 9/07/13 11:33 AM
+Description: Unexpected error
+
+java.lang.IllegalStateException: Cannot determine close requested state of uncreated window
+	at org.lwjgl.opengl.Display.isCloseRequested(Display.java:549)
+	at ats.S(SourceFile:647)
+	at ats.d(SourceFile:619)
+	at net.minecraft.client.main.Main.main(SourceFile:101)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.6.2
+	Operating System: Windows 8 (x86) version 6.2
+	Java Version: 1.7.0_25, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode), Oracle Corporation
+	Memory: 34641208 bytes (33 MB) / 69873664 bytes (66 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 1 total; -Xmx1G
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Suspicious classes: No suspicious classes found.
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Launched Version: 1.6.2
+	LWJGL: 2.9.0
+	OpenGL: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Is Modded: Probably not. Jar signature remains and client brand is untouched.
+	Type: Client (map_client.txt)
+	Resource Pack: Default
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: ~~ERROR~~ NullPointerException: null
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 09, 2013 3:42 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Try the OpenWinClass=* setting if you want to run games under Sandboxie.<br>
+<br>
+<a href="../phpbb/viewtopic8a29.php?t=15837" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15837</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 09, 2013 6:02 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content"><blockquote><div><cite>Sandboxie.ini wrote:</cite>[_Minecraft]<br>
+<br>
+Enabled=y<br>
+ConfigLevel=7<br>
+AutoRecover=y<br>
+Template=BlockPorts<br>
+Template=LingerPrograms<br>
+Template=Firefox_Phishing_DirectAccess<br>
+Template=AutoRecoverIgnore<br>
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%<br>
+RecoverFolder=%Personal%<br>
+RecoverFolder=%Favorites%<br>
+RecoverFolder=%Desktop%<br>
+BorderColor=#00FFFF,ttl<br>
+<strong>OpenWinClass=*</strong>
+</div></blockquote>
+<em>Shall we play a game?</em><br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 9/07/13 5:47 PM
+Description: Unexpected error
+
+java.lang.IllegalStateException: Cannot determine close requested state of uncreated window
+	at org.lwjgl.opengl.Display.isCloseRequested(Display.java:549)
+	at ats.S(SourceFile:647)
+	at ats.d(SourceFile:619)
+	at net.minecraft.client.main.Main.main(SourceFile:101)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.6.2
+	Operating System: Windows 8 (x86) version 6.2
+	Java Version: 1.7.0_25, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode), Oracle Corporation
+	Memory: 35823296 bytes (34 MB) / 69857280 bytes (66 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 1 total; -Xmx1G
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Suspicious classes: No suspicious classes found.
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Launched Version: 1.6.2
+	LWJGL: 2.9.0
+	OpenGL: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Is Modded: Probably not. Jar signature remains and client brand is untouched.
+	Type: Client (map_client.txt)
+	Resource Pack: Default
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: ~~ERROR~~ NullPointerException: null
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 09, 2013 7:21 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I see.  In this case I will need more detailed instructions, where to get Minecraft and what to do to see the problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 09, 2013 7:52 am</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content"><span style="font-size: 75%; line-height: normal">Minecraft.exe is the Launcher which updates the game files. <br>
+<a href="https://minecraft.net/download" class="postlink">https://minecraft.net/download</a> <br>
+<a href="https://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.exe" class="postlink">https://s3.amazonaws.com/Minecraft.Down ... ecraft.exe</a> <br>
+<br>
+Minecraft Launcher needs JRE, a link shall open in your browser for Java Setup, which I installed also in the Sandbox.</span><br>
+<br>
+I sent my Minecraft Log In details in privmsg, which upon entering in the Launcher reveals the Play button.<br>
+<br>
+To reproduce the problem:<br>
+As I'm not sure what the fullscreen/windowed toggle key is for Minecraft, just hit Esc (in game window) and find the FULLSCREEN option in the rendered GUI. It will crash going fullscreen and, then crash upon every start (itself trying fullscreen). Sbie 3.76 passes no problem.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Wed Jul 10, 2013 6:06 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Thanks, got your PM.  I will look into it next week.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 22, 2013 10:44 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I guess I didn't get to this last week, sorry.  I looked into, looks like Windows 8 doesn't want to let a low privilege program change the display mode.  I think I will be able to fix this in the next beta build I release.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Sandboxie 4.04 and 4.05.01 some DirectX games won't run</h3>
+				<div class="date">Posted: <strong>Mon Jul 22, 2013 10:53 am</strong></div>
+				<div class="author">by <strong>Fisher42</strong></div>
+				<div class="content">The two games i tried are Geometry Wars and Antichamber, both purchased from Steam.<br>
+<br>
+Geometry Wars just sais "Failed creating the Direct3D device."<br>
+The Antichamber error message is "Failed to create the D3D9 device. This can happen if the desktop is locked."<br>
+<br>
+Outside of Sandboxie both games run fine.<br>
+<br>
+I already tried the OpenWinClass=* setting but it doesn't make a difference.<br>
+<br>
+Running Windows 8 x64 and Sandboxie 4.04/4.05.01</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Jul 23, 2013 7:34 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">This is probably another instance of the problem that was reported here:<br>
+<br>
+<a href="../phpbb/viewtopic3c5a.php?t=15970" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15970</a><br>
+<br>
+Programs in the sandbox can't switch to full screen on Windows 8.<br>
+<br>
+This will be fixed in version 4.05.02.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 25, 2013 9:14 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Please check version 4.05.02.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 25, 2013 12:16 pm</strong></div>
+				<div class="author">by <strong>BUCKAROO</strong></div>
+				<div class="content">Happy with [Minecraft], real happy with [WorldOfGoo]. Thanks! <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+<br>
+DOSBox goes fullscreen, returning from fullscreen though I will note that the window size is almost iconified (not so with 3.76) but easily remedied with a minimize and restore.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=15970&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:46:18 GMT -->
+</html>

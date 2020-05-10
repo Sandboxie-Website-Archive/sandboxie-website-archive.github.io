@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25433&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:59:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; KB4058258/KB4074588  -Win 10 FCU x86 --dllhost.exe / sbiedll.dll initialization fail [Fixed in beta 5.23.6]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>KB4058258/KB4074588  -Win 10 FCU x86 --dllhost.exe / sbiedll.dll initialization fail [Fixed in beta 5.23.6]</h2>
+		<p><a href="viewtopicdf76df76.html?f=11&amp;t=25433">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25433</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>KB4058258/KB4074588  -Win 10 FCU x86 --dllhost.exe / sbiedll.dll initialization fail [Fixed in beta 5.23.6]</h3>
+				<div class="date">Posted: <strong>Sat Feb 10, 2018 11:59 am</strong></div>
+				<div class="author">by <strong>VitsKip</strong></div>
+				<div class="content">Receive today pop-up error box:<br>
+<br>
+Header:<br>
+dllhost.exe - DLL Initialization Failed<br>
+<br>
+Content:<br>
+Initialization of the dynamic link library C:\Program Files\Sandboxie\SbieDll.dll failed. The process is terminating abnormally.<br>
+<br>
+I suspect this possible is caused by a windows update, flash player update, antivirus update or similar as Sandboxie have been working for many years without any problems.<br>
+<br>
+My OS is Windows 10 Pro and I use Avast antivirus.<br>
+<br>
+I have tried disable Avast and have also installed newest Sandboxie Beta 5.23.5<br>
+<br>
+The error box appear every time Sandboxie / a program needs to use dllhost.exe<br>
+<br>
+Any advice ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Mon Feb 12, 2018 10:11 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello VitsKip ,<br>
+<br>
+Are you using any restrictions (especially anything blocking program for starting in the sandbox)? <br>
+Have a look at this thread:<br>
+<a href="viewtopic47314731.html?f=17&amp;t=24994&amp;hilit=dllhost.exe" class="postlink">viewtopic.php?f=17&amp;t=24994&amp;hilit=dllhost.exe</a><br>
+<br>
+Otherwise, please let us know if the issue follows you to a new Sandbox with default settings.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Mon Feb 12, 2018 2:55 pm</strong></div>
+				<div class="author">by <strong>VitsKip</strong></div>
+				<div class="content">No restrictions at all.<br>
+<br>
+The problem appeared out of nowhere using official release of sandboxie for many years.<br>
+I have tried doing full removal of sandboxie and installed beta 5.23.5 with all settings default (all programs should be allowed to both access the internet as well as start and run)<br>
+<br>
+I can run all kinds of programs sandboxed, but as soon as any of them need to use dllhost.exe the error box pops up (often need to close the box many times) and then programs continue to run)<br>
+<br>
+I dont have any special programs on my PC other than fully updated windows defender, Avast free antivirus and spybot search &amp; destroy. <br>
+<br>
+I suspect a recent update (windows, flash player, java or similar ?) may be the cause but of course I can't rule out other possible causes like if something have happened to my windows installation ?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Mon Feb 12, 2018 3:18 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello VitsKip,<br>
+<br>
+I found another thread that might help you:<br>
+<a href="viewtopicd34bd34b.html?f=11&amp;t=22347" class="postlink">viewtopic.php?f=11&amp;t=22347</a><br>
+<br>
+If the issue persists, try removing your security software. If no difference, please provide the results of running Res. Acc. Monitor, as well as a copy of your configuration file.<br>
+Resource Access Monitor:<br>
+<a href="../ResourceAccessMonitor.html" class="postlink">https://www.sandboxie.com/ResourceAccessMonitor</a><br>
+Copy/paste the output.<br>
+Highlight it and click on the "&lt;/&gt;" button to format it in the forums.<br>
+<br>
+Config File:<br>
+Configure --&gt; Edit configuration<br>
+Copy/paste contents <br>
+Highlight contents and click on the "&lt;/&gt;" button to format it in the forums.<br>
+<br>
+Also, please provide the exact repro steps so that I can test this.  <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Tue Feb 13, 2018 2:33 am</strong></div>
+				<div class="author">by <strong>VitsKip</strong></div>
+				<div class="content">Easiest way to reproduce is to rightclick on wmedia player and make it run in Sandboxie as media player apparently is trying to use dllhost.exe. Any other program that try to use dllhost.exe will produce same result but we all have media player <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile"><br>
+<br>
+<strong><br>
+output from ressource monitor:</strong><br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>(Drive)     \Device\CdRom0
+(Drive)     \Device\HarddiskVolume1
+(Drive)     \Device\HarddiskVolume2
+Clsid       -------------------------------
+Clsid       {0358B920-0AC7-461F-98F4-58E32CD89148} Wininet Cache task object
+Clsid       {204810B9-73B2-11D4-BF42-00B0D0118B56} UPnPRegistrar
+Clsid       {2735412A-7F64-5B0F-8F00-5D77AFBE261E} Microsoft IMAPI v2, Standard Data Writer
+Clsid       {2735412D-7F64-5B0F-8F00-5D77AFBE261E} Microsoft IMAPI v2, CD DVD Device Object
+Clsid       {2735412E-7F64-5B0F-8F00-5D77AFBE261E} Microsoft IMAPI v2, Disc Master
+Clsid       {499C0C20-A766-11CF-8011-00A0C90A8F78} ?
+Clsid       {79EAC9E2-BAF9-11CE-8C82-00AA004BA90B} http: Asychronous Pluggable Protocol Handler
+Clsid       {79EAC9E3-BAF9-11CE-8C82-00AA004BA90B} ftp: Asychronous Pluggable Protocol Handler
+Clsid       {79EAC9E5-BAF9-11CE-8C82-00AA004BA90B} https: Asychronous Pluggable Protocol Handler
+Clsid       {BCDE0395-E52F-467C-8E3D-C4579291692E} MMDeviceEnumerator class
+Clsid    O  {A47979D2-C419-11D9-A5B4-001185AD2B89} Network List Manager
+File/Key    -------------------------------
+Image       -------------------------------
+Ipc         -------------------------------
+Ipc         \BaseNamedObjects\[CoreUI]-PID(6712)-TID(4860) 17adbd12-fe6d-48a2-a769-414c70af7b7e
+Ipc         \BaseNamedObjects\[CoreUI]-PID(6852)-TID(8960) 5a69c056-be54-4b32-ab27-9033792fddd7
+Ipc         \BaseNamedObjects\__ComCatalogCache__
+Ipc         \BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000001.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000001.db
+Ipc         \BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \BaseNamedObjects\F932B6C7-3A20-46A0-B8A0-8894AA421973
+Ipc         \BaseNamedObjects\RotHintTable
+Ipc         \BaseNamedObjects\SC_AutoStartComplete
+Ipc         \BaseNamedObjects\windows_shell_global_counters
+Ipc         \RPC Control\actkernel
+Ipc         \RPC Control\epmapper
+Ipc         \RPC Control\LRPC-553aaf08fa84f3fe9f
+Ipc         \RPC Control\OLE7C510D1C5062AE14263ECCE43581
+Ipc         \RPC Control\OLEA0D61F01BEEC779AB3ED40391701
+Ipc         \RPC Control\webcache_{031b98cf-4a69-4c31-ab42-fd9b3c199407}_S-1-5-21-115431126-765937789-4043556584-1001
+Ipc         \Sessions\2\BaseNamedObjects\__ComCatalogCache__
+Ipc         \Sessions\2\BaseNamedObjects\{0ec23520-8d2b-11e4-87b0-806e6f6e6963}_-4718593_-77978
+Ipc         \Sessions\2\BaseNamedObjects\{0ec23520-8d2b-11e4-87b0-806e6f6e6963}_-4718593_-77978:splk:6852
+Ipc         \Sessions\2\BaseNamedObjects\{0ec23520-8d2b-11e4-87b0-806e6f6e6963}_-4718593_-77978:x
+Ipc         \Sessions\2\BaseNamedObjects\{680adfff-e9f8-451c-bd30-50e24ff7f19b}:sqlce_se_lck:1
+Ipc         \Sessions\2\BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+Ipc         \Sessions\2\BaseNamedObjects\{A64C7F33-DA35-459b-96CA-63B51FB0CDB9}
+Ipc         \Sessions\2\BaseNamedObjects\{E72B51CA-7724-4CDF-8783-9997DF5B01B8}
+Ipc         \Sessions\2\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000001.db
+Ipc         \Sessions\2\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000001.db
+Ipc         \Sessions\2\BaseNamedObjects\C:*ProgramData*Microsoft*Windows*Caches*cversions.2.ro
+Ipc         \Sessions\2\BaseNamedObjects\C:*Users******AppData*Local*Microsoft*Windows*Caches*{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000042.db
+Ipc         \Sessions\2\BaseNamedObjects\C:*Users******AppData*Local*Microsoft*Windows*Caches*cversions.1.ro
+Ipc         \Sessions\2\BaseNamedObjects\c:/users/john/appdata/local/microsoft/media player/wmp-wmc/playerevent
+Ipc         \Sessions\2\BaseNamedObjects\ComPlusCOMRegTable
+Ipc         \Sessions\2\BaseNamedObjects\ComTaskPool:228
+Ipc         \Sessions\2\BaseNamedObjects\HWNDInterface:207ca
+Ipc         \Sessions\2\BaseNamedObjects\HWNDInterface:20812
+Ipc         \Sessions\2\BaseNamedObjects\HWNDInterface:307a2
+Ipc         \Sessions\2\BaseNamedObjects\HWNDInterface:307da
+Ipc         \Sessions\2\BaseNamedObjects\HWNDInterface:407be
+Ipc         \Sessions\2\BaseNamedObjects\MICROSOFT_WMDM_MUTEX
+Ipc         \Sessions\2\BaseNamedObjects\Microsoft_WMP_70_CheckForOtherInstanceMutex
+Ipc         \Sessions\2\BaseNamedObjects\RotHintTable
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_228
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_3540
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_6852
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_DummyEvent_7700
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_RPCSS_SXS_READY
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_DcomLaunch
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_Mutex1
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcEptMapper
+Ipc         \Sessions\2\BaseNamedObjects\SBIE_BOXED_ServiceInitComplete_RpcSs
+Ipc         \Sessions\2\BaseNamedObjects\SboxSession
+Ipc         \Sessions\2\BaseNamedObjects\SC_AutoStartComplete
+Ipc         \Sessions\2\BaseNamedObjects\ScmCreatedEvent
+Ipc         \Sessions\2\BaseNamedObjects\SM0:228:168:WilStaging_02
+Ipc         \Sessions\2\BaseNamedObjects\SM0:228:168:WilStaging_02_p0
+Ipc         \Sessions\2\BaseNamedObjects\SM0:228:64:WilError_01
+Ipc         \Sessions\2\BaseNamedObjects\SM0:228:64:WilError_01_p0
+Ipc         \Sessions\2\BaseNamedObjects\SM0:3540:168:WilStaging_02
+Ipc         \Sessions\2\BaseNamedObjects\SM0:3540:168:WilStaging_02_p0
+Ipc         \Sessions\2\BaseNamedObjects\SM0:6852:168:WilStaging_02
+Ipc         \Sessions\2\BaseNamedObjects\SM0:6852:168:WilStaging_02_p0
+Ipc         \Sessions\2\BaseNamedObjects\SM0:6852:64:WilError_01
+Ipc         \Sessions\2\BaseNamedObjects\SM0:6852:64:WilError_01_p0
+Ipc         \Sessions\2\BaseNamedObjects\SM0:7700:168:WilStaging_02
+Ipc         \Sessions\2\BaseNamedObjects\SM0:7700:168:WilStaging_02_p0
+Ipc         \Sessions\2\BaseNamedObjects\SM0:7700:64:WilError_01
+Ipc         \Sessions\2\BaseNamedObjects\SM0:7700:64:WilError_01_p0
+Ipc         \Sessions\2\BaseNamedObjects\SyncRootManager
+Ipc         \Sessions\2\BaseNamedObjects\UrlZonesSM_****
+Ipc         \Sessions\2\BaseNamedObjects\windows_shell_global_counters
+Ipc         \Sessions\2\BaseNamedObjects\WindowsMediaStoreMutex
+Ipc         \Sessions\2\BaseNamedObjects\ZonesCacheCounterMutex
+Ipc         \Sessions\2\BaseNamedObjects\ZonesLockedCacheCounterMutex
+Ipc      O  \...\{0ec23520-8d2b-11e4-87b0-806e6f6e6963}_-4718593_-77978:sqlce_se_ver
+Ipc      O  \...\0:{0ec23520-8d2b-11e4-87b0-806e6f6e6963}_-4718593_-77978:sqlce_se_lks
+Ipc      O  \...\0:{0ec23520-8d2b-11e4-87b0-806e6f6e6963}_-4718593_-77978:sqlce_se_mem
+Ipc      O  \...\0:{0ec23520-8d2b-11e4-87b0-806e6f6e6963}_-4718593_-77978:sqlce_se_mem_ext
+Ipc      O  \BaseNamedObjects\CoreMessagingRegistrar
+Ipc      O  \BaseNamedObjects\msctf.serverDefault2
+Ipc      O  \KernelObjects\MaximumCommitCondition
+Ipc      O  \KnownDlls\advapi32.dll
+Ipc      O  \KnownDlls\bcryptPrimitives.dll
+Ipc      O  \KnownDlls\cfgmgr32.dll
+Ipc      O  \KnownDlls\clbcatq.dll
+Ipc      O  \KnownDlls\combase.dll
+Ipc      O  \KnownDlls\COMDLG32.dll
+Ipc      O  \KnownDlls\coml2.dll
+Ipc      O  \KnownDlls\CRYPT32.dll
+Ipc      O  \KnownDlls\gdi32.dll
+Ipc      O  \KnownDlls\gdi32full.dll
+Ipc      O  \KnownDlls\IMAGEHLP.dll
+Ipc      O  \KnownDlls\IMM32.dll
+Ipc      O  \KnownDlls\kernel.appcore.dll
+Ipc      O  \KnownDlls\kernel32.dll
+Ipc      O  \KnownDlls\kernelbase.dll
+Ipc      O  \KnownDlls\MSASN1.dll
+Ipc      O  \KnownDlls\MSCTF.dll
+Ipc      O  \KnownDlls\msvcp_win.dll
+Ipc      O  \KnownDlls\MSVCRT.dll
+Ipc      O  \KnownDlls\NSI.dll
+Ipc      O  \KnownDlls\ole32.dll
+Ipc      O  \KnownDlls\OLEAUT32.dll
+Ipc      O  \KnownDlls\powrprof.dll
+Ipc      O  \KnownDlls\profapi.dll
+Ipc      O  \KnownDlls\PSAPI.DLL
+Ipc      O  \KnownDlls\rpcrt4.dll
+Ipc      O  \KnownDlls\sechost.dll
+Ipc      O  \KnownDlls\Setupapi.dll
+Ipc      O  \KnownDlls\SHCORE.dll
+Ipc      O  \KnownDlls\SHELL32.dll
+Ipc      O  \KnownDlls\SHLWAPI.dll
+Ipc      O  \KnownDlls\ucrtbase.dll
+Ipc      O  \KnownDlls\user32.dll
+Ipc      O  \KnownDlls\win32u.dll
+Ipc      O  \KnownDlls\windows.storage.dll
+Ipc      O  \KnownDlls\WINTRUST.dll
+Ipc      O  \KnownDlls\WS2_32.dll
+Ipc      O  \RPC Control\AudioClientRpc
+Ipc      O  \RPC Control\Audiosrv
+Ipc      O  \RPC Control\DNSResolver
+Ipc      O  \RPC Control\LRPC-553aaf08fa84f3fe9f
+Ipc      O  \RPC Control\lsapolicylookup
+Ipc      O  \RPC Control\lsasspirpc
+Ipc      O  \RPC Control\SbieSvcPort
+Ipc      O  \Security\LSA_AUTHENTICATION_INITIALIZED
+Ipc      O  \Sessions\2\BaseNamedObjects\CTF.AsmListCache.FMPDefault2
+Ipc      O  \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+Ipc      O  \Sessions\2\Windows\ApiPort
+Ipc      O  \Sessions\2\Windows\DwmApiPort
+Ipc      O  \Sessions\2\Windows\SharedSection
+Ipc      O  \Sessions\2\Windows\Theme1477668656
+Ipc      O  \Sessions\2\Windows\ThemeSection
+Ipc      O  \ThemeApiPort
+Ipc      O  \Windows\Theme552885497
+Pipe        -------------------------------
+Pipe        ?
+Pipe        \Device\00000020
+Pipe        \Device\AvAswIDS_Ioc2
+Pipe        \Device\CNG
+Pipe        \Device\HarddiskVolume1
+Pipe        \Device\HarddiskVolume2
+Pipe        \Device\HarddiskVolume3
+Pipe        \Device\KsecDD
+Pipe        \Device\MountPointManager
+Pipe        \Device\Ndis
+Pipe        \Device\NDMP10
+Pipe        \Device\NDMP11
+Pipe        \Device\NDMP2
+Pipe        \Device\NDMP3
+Pipe        \Device\NDMP4
+Pipe        \Device\NDMP5
+Pipe        \Device\NDMP6
+Pipe        \Device\NDMP7
+Pipe        \Device\NDMP8
+Pipe        \Device\NDMP9
+Pipe     O  \Device\Afd
+Pipe     O  \Device\Nsi
+WinCls      -------------------------------
+WinCls   O  #32768
+WinCls   O  Shell_TrayWnd
+WinCls   O  Type32_Main_Window
+WinCls   X  ApplicationManager_DesktopShellWindow
+WinCls   X  'MSITPro::EventQueue</code></pre></div>
+
+<strong>My config file:</strong><br>
+<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=7zipShellEx
+Template=WindowsRasMan
+Template=Avast_Antivirus
+Template=WindowsLive
+Template=Microsoft_MSMQ
+Template=OfficeLicensing
+
+[DefaultBox]
+
+ConfigLevel=7
+AutoRecover=y
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+RecoverFolder=%{374DE290-123F-4565-9164-39C4925E467B}%
+RecoverFolder=%Personal%
+RecoverFolder=%Favorites%
+RecoverFolder=%Desktop%
+BorderColor=#00FFFF,ttl
+Enabled=y
+CopyLimitKb=196618
+
+[UserSettings_086E01B0]
+
+SbieCtrl_UserName=john
+SbieCtrl_BoxExpandedView=DefaultBox
+SbieCtrl_NextUpdateCheck=1518550511
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_AutoApplySettings=n
+SbieCtrl_WindowCoords=376,268,1237,632
+SbieCtrl_ActiveView=40021
+SbieCtrl_TerminateWarn=n
+SbieCtrl_HideWindowNotify=n</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Tue Feb 13, 2018 8:24 am</strong></div>
+				<div class="author">by <strong>Hasuki</strong></div>
+				<div class="content">The same problem appeared after last update  KB4058258 (maybe it is a problem, maybe not):  
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><img src="download/filecbe2cbe2.png?id=1332" class="postimage" alt="SbieDll failed.PNG" onclick="viewableArea(this);" /></dt>
+			<dd><em>Message</em></dd>			<dd>SbieDll failed.PNG (9.5 KiB) Viewed 2806 times</dd>
+		</dl>
+		
+		
+		
+			</div>
+
+Config + Res. Acc. Monitor:  <a href="http://leteckaposta.cz/792488752" class="postlink">http://leteckaposta.cz/792488752</a><br>
+Windows 10 Pro, 1709, 32 bit, Windows Defender only, SB 5.22.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Tue Feb 13, 2018 11:14 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hasuki, <br>
+<br>
+I was able to reproduce using KB4058258. I confirmed that removing that KB allows Sbie to work. <br>
+I have made the devs aware. <br>
+<br>
+VitsKip,<br>
+<br>
+Can you verify if you also have that KB installed, and that you are using a 32 bit version of Windows 10? <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: KB4058258 -Win 10 FCU x86 --dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Tue Feb 13, 2018 3:35 pm</strong></div>
+				<div class="author">by <strong>VitsKip</strong></div>
+				<div class="content">Yes I am using Windows 10 Pro 32 bit and indeed KB4058258 was installed on my PC on february 9.<br>
+<br>
+I have just removed KB4058258 and can confirm that Sandboxie now again works without any problems.<br>
+<br>
+Thnx for identifying the cause so fast.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: KB4058258 -Win 10 FCU x86 --dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Tue Feb 13, 2018 5:48 pm</strong></div>
+				<div class="author">by <strong>missoula1300</strong></div>
+				<div class="content">Will there be a patch to allow KB4058258 to operate?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: KB4058258 -Win 10 FCU x86 --dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Wed Feb 14, 2018 1:54 pm</strong></div>
+				<div class="author">by <strong>Hasuki</strong></div>
+				<div class="content">There was new update today for Win 10, 1709, 32 bit:  KB4074588<br>
+Check please if it has some influence on Sbiedll initialization. (I still didnt uninstal KB4058258, I still dont use SB for browsing. I use Internet Expolrer 11.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: KB4058258 -Win 10 FCU x86 --dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Wed Feb 14, 2018 2:28 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello  Hasuki,<br>
+<br>
+Thanks for the update.  <br>
+That KB is a security update and does not change the behavior (you would still receive the error). This issue is still under investigation. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: KB4058258 -Win 10 FCU x86 --dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Wed Feb 14, 2018 9:20 pm</strong></div>
+				<div class="author">by <strong>TimRude</strong></div>
+				<div class="content">In my case, it was KB4074588 that had to be uninstalled in order to eliminate the dllhost.exe error message.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: KB4058258 -Win 10 FCU x86 --dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Thu Feb 15, 2018 9:59 am</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">UPDATE ---<br>
+<br>
+Looks like KB4074588  is an update to KB4058258. If I install KB4074588 ,  KB4058258 disappears from my installed list. <br>
+Upon removal and a reboot,  x258 comes back, and the issue persists.  <br>
+<br>
+I manually removed KB4058258  (after 588 was gone), and the issue resolved.  I then ran a Windows update, which only installed KB4074588 and the issue came back. So looks like if you do an update now, you get KB4074588 which will also trigger the issue due to the above explained (and explains why I did not see a difference when I manually got both). <br>
+<br>
+------------------------X --------------------------------<br>
+<br>
+Hello TimRude,<br>
+<br>
+Thanks for the update. I will re-test and update this thread soon.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: KB4058258/KB4074588  -Win 10 FCU x86 --dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Sat Feb 17, 2018 9:17 pm</strong></div>
+				<div class="author">by <strong>rkpx1</strong></div>
+				<div class="content">Is a fix for this issue in progress? I am experiencing the sbiedll.dll initialization fail on both 5.23 and 5.22 Sandboxie versions, and uninstalling the x588 update also only temporarily resolves the issue.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: KB4058258/KB4074588  -Win 10 FCU x86 --dllhost.exe / sbiedll.dll initialization fail</h3>
+				<div class="date">Posted: <strong>Mon Feb 19, 2018 2:44 pm</strong></div>
+				<div class="author">by <strong>chrisgruen</strong></div>
+				<div class="content">Hello,<br>
+<br>
+I also get this initialization fail when I want to start my Firefox (portable).<br>
+<br>
+I tried to deinstall KB40745588, and now it works again.<br>
+<br>
+But I feel no good to deinstall this update. Is there a solution soon?<br>
+<br>
+Christian</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25433&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 05:59:41 GMT -->
+</html>

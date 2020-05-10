@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24712&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:03:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Downloaded Programs Not being Sandboxed v5.20</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Downloaded Programs Not being Sandboxed v5.20</h2>
+		<p><a href="viewtopic4f544f54.html?f=17&amp;t=24712">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24712</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Downloaded Programs Not being Sandboxed v5.20</h3>
+				<div class="date">Posted: <strong>Wed Aug 02, 2017 5:32 pm</strong></div>
+				<div class="author">by <strong>searchlight4759</strong></div>
+				<div class="content">Whenever I download a program using one of my sandboxed browsers using IDM, Sandboxie does not sandbox the program.<br>
+<br>
+Is it because Immediate Recovery is not deactivated?<br>
+<br>
+I remember in previous versions, that all downloaded programs were automatically sandboxed, and one had to choose what to do with it, run in or outside the sandbox. I guess this has changed?<br>
+<br>
+Finally, do I need to sandbox IDM as well as the browser I use to sandbox a downloaded program?<br>
+<br>
+Clarification to these three topics will help me use Sandboxie more effectively. Thanks.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Downloaded Programs Not being Sandboxed v5.20</h3>
+				<div class="date">Posted: <strong>Wed Aug 02, 2017 5:37 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello searchlight4759,<br>
+<br>
+Please see:<br>
+<a href="viewtopicd8d4d8d4.html?f=17&amp;t=24440&amp;hilit=internet+download+manager" class="postlink">viewtopic.php?f=17&amp;t=24440&amp;hilit=intern ... ad+manager</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Downloaded Programs Not being Sandboxed v5.20</h3>
+				<div class="date">Posted: <strong>Wed Aug 02, 2017 5:54 pm</strong></div>
+				<div class="author">by <strong>searchlight4759</strong></div>
+				<div class="content">I referenced the other postings and I am confused by the many workarounds such as disable or remove the IDM extensions, or edit the global settings, etc.<br>
+<br>
+So to save time,very simply in non-techno speak, I would appreciate it if you could tell me what settings do I need to adjust or make in Sandboxie to make sure that all my downloads are sandboxed using IDM when I am sandboxing a browser. Thanks.<br>
+<br>
+I disabled immediate recovery, and it seems to sandbox the download but I do not think I am doing this properly.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Downloaded Programs Not being Sandboxed v5.20</h3>
+				<div class="date">Posted: <strong>Wed Aug 02, 2017 6:40 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">I'm not all that familiar with IDM though I've heard of it and know it's popular for some strange reason... (I just use the DownloadThemAll addon myself)<br>
+<br>
+I gave it a quick go in a Win7 x64 VM and *think* to get the behavior you desire you'd want to add IDMan.exe as a forced program [I'd give it a separate box in SBIE] and disable the template for IDM in SBIE under Menu &gt; Configure &gt; Software Compatibility &gt; uncheck Internet Download Manager. I wasn't able to properly test because I was using the free version of SBIE in the VM and couldn't have more than one box running at a time or forced programs but suspect it would do the trick. <br>
+/me crosses fingers that it helps<br>
+/me also looks at Barb expectantly<br>
+<br>
+Update: Optionally and perhaps less involved would be using a forced folder method for the download directory but that only works if the downloads always go to the same place....hmm</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Downloaded Programs Not being Sandboxed v5.20</h3>
+				<div class="date">Posted: <strong>Thu Aug 03, 2017 9:57 am</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">Thanks Syrinx.<br>
+<br>
+As an IDM user I am 99% sure Syrinx's recommendation actually works. Untick Internet Download Manager.<br>
+<br>
+Btw I always use IDM unsandboxed, that is, compatibility case is not unticked. I see no point doing that. Besides it has a major downside at least for me: if you download a huge file, say 3 or 4 GB, recovering it out of the sandbox will cause too much HDD wear.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Downloaded Programs Not being Sandboxed v5.20</h3>
+				<div class="date">Posted: <strong>Thu Aug 03, 2017 2:30 pm</strong></div>
+				<div class="author">by <strong>searchlight4759</strong></div>
+				<div class="content">Tried unticking the compatibility setting for IDM, and it did not help.<br>
+<br>
+If I am reading the other postings correctly, IDM acts as an outsider to the sandboxed browser which defeats the purpose of total browser and related programs being sandboxed.<br>
+<br>
+That being said, to keep browser security tight, I decided to try using in-browser download extensions to help with downloads. This should do the trick.<br>
+<br>
+What happens in the browser, stays in the browser unless I allow it.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24712&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:03:44 GMT -->
+</html>

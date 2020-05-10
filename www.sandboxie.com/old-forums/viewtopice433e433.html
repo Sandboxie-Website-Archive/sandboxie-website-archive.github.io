@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=19540&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:44:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Does Sandboxie leak temp files</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Does Sandboxie leak temp files</h2>
+		<p><a href="viewtopic9b4f9b4f.html?f=5&amp;t=19540">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=19540</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Does Sandboxie leak temp files</h3>
+				<div class="date">Posted: <strong>Sat Aug 30, 2014 7:36 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">Hello Forum'<br>
+Wondering does sandboxed browser leak AppData\Local\**** files<br>
+I can be browsing for a few hours ...not empty my sandbox.<br>
+Run my third party temp file cleaner and tracks eraser and always find 3 MB's of temp files and 30 tracks.<br>
+After I dump my browser sandbox and run third party temp file cleaner and tracks eraser.<br>
+I find the same 3 MB's of temp files to be cleaned and the same 30 tracks to be erased.  <br>
+How is it that my third party app can reach into my sandbox before I dump it. <br>
+<br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does Sandboxie leak temp files</h3>
+				<div class="date">Posted: <strong>Sun Aug 31, 2014 7:11 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">There are many Sandboxie templates that make use of Direct File Access for files underneath the %Local Appdata% folder, thus allowing files to be saved out of the sandbox to various sub-folders.<br>
+I can only assume that you're using one of those templates.<br>
+<br>
+You can see which templates make use of that Direct Access setting by searching for "%Local Appdata%" in the templates.ini file, in Sandboxie's program files folder.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does Sandboxie leak temp files</h3>
+				<div class="date">Posted: <strong>Sun Aug 31, 2014 6:45 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content"><blockquote><div><cite>Guest10 wrote:</cite>There are many Sandboxie templates that make use of Direct File Access for files underneath the %Local Appdata% folder, thus allowing files to be saved out of the sandbox to various sub-folders.<br>
+I can only assume that you're using one of those templates.</div></blockquote>
+Hi Guest10<br>
+Thanks for pointing me to templates.ini file.  I had never looked in it before.<br>
+But, <a href="http://www.glarysoft.com/glary-utilities-pro/" class="postlink">http://www.glarysoft.com/glary-utilities-pro/</a> is not listed<br>
+I run the temp cleaner and track eraser directly before opening sandbox'd FF.<br>
+Close sandbox'd FF | Do not manually dump sand | run temp cleaner and tracks eraser | dump sand | re-run temp cleaner and tracks eraser | same findings as before I dumped sand.<br>
+So, in your best guesstimate by running a scan w Glary.  Glary is pulling from AppData\Local | AppData\Roaming which is not by default held in the sandbox.<br>
+I really don't understand what's happening.  Do I have a hole in my sandbox that needs patching.<br>
+I presumed that my utility cleaner would not find anything while sand is not dumped or after sand is dumped. <br>
+Where does the sand go when dumped.<br>
+Why do you imagine my utility cleaner pulls the same files and folders MB's contained in the sandbox.<br>
+Is AppData contained in the sandboxed or is AppData allowed to write to my HD<br>
+Is this normal<br>
+Thanking you in advance<br>
+bjm</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does Sandboxie leak temp files</h3>
+				<div class="date">Posted: <strong>Mon Sep 01, 2014 11:05 am</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>bjm wrote:</cite>But, <a href="http://www.glarysoft.com/glary-utilities-pro/" class="postlink">http://www.glarysoft.com/glary-utilities-pro/</a> is not listed</div></blockquote>No it wouldn't have any template there, since it wouldn't need a template unless you were running Glary Utilities sandboxed (I assume it's not being run sandboxed).<blockquote><div><cite>bjm wrote:</cite>
+I run the temp cleaner and track eraser directly before opening sandbox'd FF.<br>
+Close sandbox'd FF | Do not manually dump sand | run temp cleaner and tracks eraser | dump sand | re-run temp cleaner and tracks eraser | same findings as before I dumped sand.<br>
+So, in your best guesstimate by running a scan w Glary.  Glary is pulling from AppData\Local | AppData\Roaming which is not by default held in the sandbox.</div></blockquote>Without seeing the file names I can't say if it's some setting that you have for Firefox or if it's just Windows writing files there.<br>
+The Firefox phishing template allows Firefox to write to folders under %AppData% and %Local AppData%, but those files should also be underneath a folder with the name "Mozilla" in it.<br>
+Don't forget that the sandboxed program may not be writing outside of the sandbox but Windows does do a lot of writing, as mentioned under Privacy Concerns.<br>
+<a href="../index6b1b.html?PrivacyConcerns" class="postlink">http://www.sandboxie.com/index.php?PrivacyConcerns</a><blockquote><div><cite>bjm wrote:</cite>Where does the sand go when dumped.</div></blockquote>When the sandbox contents are deleted they bypass the Recycle Bin, just as what would happen if a DOS or batch file did the deleting or if you hold down the &lt;shift&gt; key while deleting a file in Windows Explorer. Windows System Restore can save copies of some of the files if it's turned-on, but that doesn't save them underneath the %Local AppData% folder - so that's not likely the source of those files.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does Sandboxie leak temp files</h3>
+				<div class="date">Posted: <strong>Mon Sep 01, 2014 4:16 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">Thanks I resolved my Topic  <br>
+AppData = Open File Path<br>
+Don't remember adding AppData to Direct Access<br>
+<br>
+Cheers</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does Sandboxie leak temp files</h3>
+				<div class="date">Posted: <strong>Thu Sep 11, 2014 7:12 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">Still do not understand why AppData local and roaming are not dumped and why my default box has Direct access to AppData<br>
+My Firefox Profile is stored in AppData.   So, maybe that's why?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does Sandboxie leak temp files</h3>
+				<div class="date">Posted: <strong>Fri Sep 12, 2014 12:30 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>bjm wrote:</cite>Still do not understand why AppData local and roaming are not dumped and why my default box has Direct access to AppData<br>
+My Firefox Profile is stored in AppData.   So, maybe that's why?</div></blockquote>
+If you don't know the reason or remember why your DefaultBox has Direct access to AppData, remove the setting. Thats what I would do. I have never allowed Direct access to AppData or the entire Firefox profile folder but if you are allowing access to either folder, you should expect to see files written out of the sandbox.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does Sandboxie leak temp files</h3>
+				<div class="date">Posted: <strong>Sat Sep 13, 2014 7:31 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content"><blockquote><div><cite>bo.elam wrote:</cite><blockquote><div><cite>bjm wrote:</cite>Still do not understand why AppData local and roaming are not dumped and why my default box has Direct access to AppData<br>
+My Firefox Profile is stored in AppData.   So, maybe that's why?</div></blockquote>
+If you don't know the reason or remember why your DefaultBox has Direct access to AppData, remove the setting. Thats what I would do. I have never allowed Direct access to AppData or the entire Firefox profile folder but if you are allowing access to either folder, you should expect to see files written out of the sandbox. Bo</div></blockquote>
+Anyway, I created a Firefox sandbox wo AppData Direct access and I've been testing it for a few days.  <br>
+Dumping a larger sandbox <br>
+What about the default Direct access to phishing database</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does Sandboxie leak temp files</h3>
+				<div class="date">Posted: <strong>Sat Sep 13, 2014 9:57 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>bjm wrote:</cite>
+What about the default Direct access to phishing database</div></blockquote>
+I leave that on. It doesn't bother me. <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does Sandboxie leak temp files</h3>
+				<div class="date">Posted: <strong>Thu Oct 02, 2014 2:57 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">Why does AppData populate in my FF sandbox.<br>
+Internet Access is firefox.exe | plug-in container.exe | crashreporter.exe<br>
+Still trying to understand why my Temp File Cleaner finds 20MB's from AppData\Local\Temp</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does Sandboxie leak temp files</h3>
+				<div class="date">Posted: <strong>Thu Oct 02, 2014 6:34 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">For me, if I navigate my computer at the same time that I am running Firefox sandboxed, my computer looks like in your picture. But once I close Firefox and delete the sandbox, all the folders that we see in the picture are gone. Perhaps you are not deleting the sandbox. <br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=19540&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:44:11 GMT -->
+</html>

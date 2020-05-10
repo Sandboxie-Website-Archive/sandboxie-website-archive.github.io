@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=22944&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:45:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Sandbox Exclusion/AutoCloseExec [persistent boxes]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Sandbox Exclusion/AutoCloseExec [persistent boxes]</h2>
+		<p><a href="viewtopic297f297f.html?f=4&amp;t=22944">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=22944</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 3:28 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">I understand that it's contrary to the popular, intended use of SBIE to maintain persistent sandboxes. This request isn't about a snapshot type feature but rather different approaches that might be a bit easier to add and could still be of great help to those of us who use some persistent boxes.<br>
+<br>
+Currently the sandbox is an all or nothing box. It either gets deleted when all programs in the box close or it retains everything. So I'm wondering if it's possible/feasible to<br>
+<br>
+A) Either add options that allow users to exclude certain keys (I myself am thinking of a few audio related entries that tend to break once in a while across new SBIE versions) or files from the default behavior when not set to auto delete so that any selected/excluded entries would still get deleted within when the box closes.<br>
+<br>
+or<br>
+<br>
+B) Similar to <a href="../index0b59-2.html?AutoExec" class="postlink">AutoExec</a> adding an AutoCloseExec key that could be checked just as sbie prepares to close the box where users could point to a bat file which can be run inside. This would allow users to automate things such as removing specific keys or files (via the bat) prior to the actual closing of the box.<br>
+<br>
+Either one could aid those of who do use a persistent box to keep them a bit cleaner without having to dig in them manually as often and clean any problematic keys/files.<br>
+<br>
+I know just another crazy thought, I'll go back to the corner and talk to myself again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 3:58 pm</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content"><blockquote><div><cite>Syrinx wrote:</cite>
+I know just another crazy thought, I'll go back to the corner and talk to myself again.
+</div></blockquote>
+LOL...<br>
+Seriously, you can use DeleteCommand and run your batch file.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 4:07 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content"><blockquote><div><cite>rpljhun wrote:</cite><blockquote><div><cite>Syrinx wrote:</cite>
+I know just another crazy thought, I'll go back to the corner and talk to myself again.
+</div></blockquote>
+LOL...<br>
+Seriously, you can use DeleteCommand and run your batch file.</div></blockquote>
+
+Using the current delete option and pointing it to a custom bat, that's for when auto delete is set or manually deleting the box (after the box is closed)...I hadn't considered that for files. I'm talking about situations where auto delete is off. So I suppose that *could work* in some situations (files only) but I'd have to test that out after making a backup of the box first in case it removes more than I'd like and it certainly would not cover the internal registry (eg REGHIVE) removals I am most interested in doing for MMDevices...<br>
+<br>
+Update: unless I set the bat to remount the reghive, remove the key(s), then unmount. Good point, that might work after all! Thanks, will test that soon.<br>
+<br>
+About B) I thought a bit more and I realized I can prolly just use the current AutoExec option to accomplish the same thing and achieve the desired results [at a different point] so that really leaves only A) as a potential improvement but thanks to rpljhuns comment I think I can accomplish what I want with what SBIE already offers so this request might be moot aside from just making it easier on the user.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 4:21 pm</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content">You use DeleteCommand and yes, mount and unmount reghive or you can make a program to accomplish all these task.<br>
+<br>
+AutoExec is somehow differrent. The command will not be executed if it was already recorded in the sandboxed registry. Thus, deleting the sandbox clears all recorded AutoExec commands, so they are executed again the next time any sandboxed program starts in that sandbox whereas DeleteCommand will invoke every time the last program ends.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 4:44 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">OK well I'm out of time for now. My kid will be ready to play soon so I'll have to continue trying again later. I've run into two problems so far.<br>
+One, using AutoExec I have specifically disallowed access to users to reg, regedit and many other files (both within sbie as blocked files &amp; outside with no NTFS read or execute permissions since I use runas to launch sandboxed programs as a limited user. I really don't want to generally allow reg to run even in a box :-/) so I'll have to test that option within sandboxie but it doesn't seem likely to work with my setup.<br>
+<br>
+As for the delete command, I created a bat that did all the reg stuff but when adding it to sbie in place of delete it wants a %sandbox% pointer which I don't need as I'm not trying to remove the folder or files but rather just mess with the internal registry. I'll do more to see if I can work around it later but so far it's not going as well as I had expected it to. =(<br>
+<br>
+Update: yup, the delete option is off the table, it only attempts to execute the 'delete command' (in this case a bat set to remove a reg entry) after it has renamed the sandbox folder [which appears to be why it requires the "%sandbox% variable" so it won't work for persistent boxes. =(<br>
+<br>
+Update2: The AutoExec function doesn't help because of the user/NTFS options I mentioned before along with requiring me to enable reg or regedit within the runas list inside the box. Don't like that option much... I was hoping more for something that could be executed by sandboxie (at the same user integrity level as sbiectrl or maybe even sbiesvc) to preform the operation. Right now it throws up 2314 errors and I really don't like the idea of allowing reg even inside a box. Looks like I may just be stuck doing it manually or making a bat to run manually once in a while outside of sandboxie for now.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 5:34 pm</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content">Well, you can have a workaround. %SANDBOX% argument is pass in your batch file. You can do such "ren %1 mysandbox" which rename the renamed folder back to mysandbox then you do all you want after that.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 5:40 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content"><blockquote><div><cite>rpljhun wrote:</cite>Well, you can have a workaround. %SANDBOX% argument is pass in your batch file. You can do such "ren %1 mysandbox" which rename the renamed folder back to mysandbox then you do all you want after that.</div></blockquote>
+
+OK maybe I'm just being dumb but how would cmd understand the variable %sandbox% without first setting it and how do you set it with the random rename? I believe that's something sandboxie handles internally so the bat would have no clue what location I am intending to rename back and as such I don't see how that would work but I might try it later anyway with a wildcard or something.<br>
+<br>
+The bat seems to fail to run entirely because of the %sandbox% variable and even adding it to the bat path results in an "incorrect function" error alert being thrown by sbie so I didn't yet see if naming it back was possible at this point. I'm afraid using the delete command option to remove registry entries inside automatically still seems to be a no go as sbie is intent on passing the renamed sandbox variable which disrupts the launch of the bat in the first place. Any ideas how to overcome this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 5:51 pm</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content">Don't use the %SANDBOX% variable use %1. %1 is the path of the rename folder. Don't use random name, you need to rename it back to the original sandbox name.<br>
+<br>
+Let say MySandbox is the name of the sandbox then use this "ren %1 MySandbox"</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 6:02 pm</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content">I tried it. I successfully managed to rename it back.<br>
+<br>
+You have this setting under your sandbox not global<br>
+<br>
+DeleteCommand=C:\Users\xxx\Desktop\delsample.bat "%SANDBOX%"<br>
+<br>
+All you need to do inside your batch file is to use %1 variable.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 6:23 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Thanks for continuing in your attempts to assist me but it just won't launch my bat! It's likely something stupid I've overlooked. Not really good with cmd lines these days.<br>
+<br>
+This is my bat
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>ren %1 MediaPlayer
+reg load HKCU\zMP "Drive:\Path\RegHive"
+reg delete HKEY_LOCAL_MACHINE\zMP\machine\software\microsoft\Windows\CurrentVersion\MMDevices /f
+reg unload HKCU\zMP</code></pre></div>
+
+This is my delete command inside sbie
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Drive:\Path\AutoRun.bat "%SANDBOX%"</code></pre></div>
+
+What am I missing?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 6:38 pm</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content"><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Drive:\Path\AutoRun.bat "%SANDBOX%"</code></pre></div>
+Is this the real one? You need to specify the absolute path of your batch file.<br>
+<br>
+There something wrong with your reg delete.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 6:45 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content"><blockquote><div><cite>rpljhun wrote:</cite><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Drive:\Path\AutoRun.bat "%SANDBOX%"</code></pre></div>
+Is this the real one? You need to specify the absolute path of your batch file.</div></blockquote>
+No drive:\ and path\ are just placeholders like xxxx in your example (we could also say C:\AutoRun.bat "%SANDBOX%") but I may have figured it out, there was a change I made while testing the AutoExec feature and didn't fix inside the bat.<br>
+<br>
+HKEY_LOCAL_MACHINE\zMP\machine\software\microsoft\Windows\CurrentVersion\MMDevices /f<br>
+<br>
+I decided to put it on HKCU so I had two errors in there so I guess that's the error being returned. Changing them all back to HKU stops the darn error and I checked with regedit, it does the trick!<br>
+<br>
+Many thanks for the tips!!!!!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 6:57 pm</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content">You're welcome  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"><br>
+Btw, how are you going to accomplish it with AutoExec. It is executed once in the life-time of a particular sandbox until you delete it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 7:02 pm</strong></div>
+				<div class="author">by <strong>Syrinx</strong></div>
+				<div class="content">Well, I hadn't really messed with either option before now so I can't say I was familiar with either. I never got far enough along with autoexec to realize that limit because it couldn't launch reg.exe inside due to the many limits I have imposed on users and within sandboxie but that's a good point as well. Thankfully you were patient enough to guide me to an answer that allows me to do what I want with the delete command so no need to mess with AutoExec any more! :D</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Sandbox Exclusion/AutoCloseExec [persistent boxes]</h3>
+				<div class="date">Posted: <strong>Fri May 20, 2016 7:05 pm</strong></div>
+				<div class="author">by <strong>rpljhun</strong></div>
+				<div class="content">Ya' right. <br>
+<br>
+Regarding the reghive, you can only mount it in HKU. Sandboxie mount it there as well.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=22944&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:45:05 GMT -->
+</html>

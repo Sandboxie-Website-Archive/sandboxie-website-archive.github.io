@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24993&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:29:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [SBIE2101]Chrome won't work</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[SBIE2101]Chrome won't work</h2>
+		<p><a href="viewtopic0d7b0d7b.html?f=11&amp;t=24993">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24993</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>[SBIE2101]Chrome won't work</h3>
+				<div class="date">Posted: <strong>Sun Oct 15, 2017 6:39 pm</strong></div>
+				<div class="author">by <strong>HolySimpsons</strong></div>
+				<div class="content">Hi!<br>
+<br>
+First my specs:<br>
+Windows 10 Pro N<br>
+Sandboxie Version 5.20 (64-Bit)<br>
+Chrome Version 61.0.3163.100 (64-Bit)<br>
+AV Software? Yes. Sure. 360 Internet Security as you will see. <br>
+<br>
+I've been using Sandboxie for many years now and I'm always happy to run certain programs in my main system without having to use VMs, but also without cluttering up my system. So thank you for that! I'm really happy with your software!<br>
+<br>
+Seemingly since I've installed the Windows Update <br>
+Windows 10 Insider Preview 16299.15 (rs3_release)<br>
+yesterday I've had Problems with my Sandbox.<br>
+I've now uninstalled the Windows Insider thing and reinstalled Sandboxie, trying to fix this. <br>
+It did not work though. I'm now kind of concerned about my system. <br>
+The Sandboxed Browser did at first start but give this errormsg:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2203 Failed to communicate with Sandboxie Service:  *GUIPROXY_00000001 - chrome.exe [FF000000]
+SBIE2335 Initialization failed for process 360webshield.exe [33 / 0]
+</code></pre></div>
+The Browser than starts, but is not sandboxed!<br>
+The Window is in that border, that signalises it's a sandboxed process. It's also listed in the sandboxed processes and the little dots in the sandboxie Control appear. <br>
+BUT Changes made in that browser directly effect my browser in the real system. It's not sandboxed.<br>
+<br>
+The errormassage I have in the title was the one I had when I made the topic, the one in the Code is another code, that appeared when I tried reproducing the Problem. <br>
+I can't even terminate the programs in the Sandbox right now! At least not using Sandboxie Control.<br>
+<br>
+I assume I'll be able to get rid of this problem by uninstalling the Browser Plugin and maybe some other tweaks. <br>
+<br>
+The fact that what ever Program, Windows Update, or Browser Plugin may have caused this somehow seems to have broken the very purpose of Sandboxie frightens me though. <br>
+I logged out the Chrome Profile in the Sandbox and when using my non-sandboxed Browser I was logged out. That happened multiple times until I realised the things I do in the Sandbox actually were the cause that influenced my non-sandboxed Browser. This never happened to me before.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [SBIE2101]Chrome won't work - Windows Insider</h3>
+				<div class="date">Posted: <strong>Mon Oct 16, 2017 12:21 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello HolySimpsons,<br>
+<br>
+Using Windows Insider previews will most likely result in issues with Sandboxie, as the updates sometimes change the way Windows 10 handles things.  We are not currently providing support for the latest Fast Ring versions of Windows 10.<br>
+I read you removed the Insider update, I am not sure how does that work now, but if you have a restore point to try, that might do the trick (keep in mind you may lose any data you created since the restore point was created).<br>
+<br>
+Regarding the message you provided:<br>
+"Initialization failed for process 360webshield.exe"<br>
+See if you can disable the norton toolbar/addon (if any), or find the webshield.exe component within Norton's settings to disable that instead. After making the changes on your host, be sure to clear the contents of your Sandbox prior to re-trying (you may also need to reboot the computer for Norton to take the changes).<br>
+<br>
+Also, please see:<br>
+<a href="viewtopic4f074f07.html?f=11&amp;t=24879#p130045" class="postlink">viewtopic.php?f=11&amp;t=24879#p130045</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [SBIE2101]Chrome won't work</h3>
+				<div class="date">Posted: <strong>Mon Oct 16, 2017 7:22 pm</strong></div>
+				<div class="author">by <strong>HolySimpsons</strong></div>
+				<div class="content">Hello Barb!<br>
+<br>
+<br>
+Yes, I thought that might have been the problem so I already left the program. <br>
+<br>
+I'm not sure how leaving works as well. I said I want none of the Updates they can give me and I disconnected the Insider Account. I'm not sure how far that rolled back certain changes, but it did however apply updates again, when I restarted Windows. <br>
+<br>
+I just read about the Thread that sais some Fall version is not yet supported:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2101 OpenProcess(C0000022) access=001FFFFF initialized=1</code></pre></div>
+That's exactly the message I originally got. (the code is even in the title)<br>
+<a href="viewtopic40184018.html?f=11&amp;t=25001" class="postlink">viewtopic.php?f=11&amp;t=25001</a><br>
+The errorcode I posted in the post is already resolved. <br>
+It had to do with the 360 Internet Security Chrome plugin I guess.<br>
+<br>
+The general problem did not get resulved though. <br>
+It seemed to have been another error on top of the bigger one.<br>
+The error code 
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2101 OpenProcess(C0000022) access=001FFFFF initialized=1</code></pre></div>
+get's repeated every few seconds and basically nothing works. <br>
+<br>
+So I guess I'll just wait for more updates on that front. <br>
+It still seems to be connected with the non-sandboxed programs. <br>
+This kinda scares me. I don't know what that Windows update did, but this should not be possible at all.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [SBIE2101]Chrome won't work</h3>
+				<div class="date">Posted: <strong>Tue Oct 17, 2017 12:57 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello  HolySimpsons,<br>
+<br>
+We are not able to reproduce the issue you reported (without norton) . <br>
+What are the exact repro steps to get it? <br>
+<br>
+I suggest you reinstall Sandboxie latest beta, and create a new Sandbox with default settings to see if the issue persists.<br>
+<br>
+I added the error to the Win 10 Fall Update based on your thread, but it is under investigation (since we haven't come across it...so far)..<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [SBIE2101]Chrome won't work</h3>
+				<div class="date">Posted: <strong>Tue Oct 17, 2017 2:49 pm</strong></div>
+				<div class="author">by <strong>HolySimpsons</strong></div>
+				<div class="content">Hello Barb!<br>
+<br>
+<br>
+It's ok. The only error messages I keep getting is the one discussed in the other thread. <br>
+<br>
+<br>
+Thank you!<br>
+<br>
+--------------------------- MERGED POST -----------------------------------------------------<br>
+I often get the message 
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2101 Object name not found: , error OpenProcess (C0000022) access=001FFFFF initialized=1
+</code></pre></div>
+
+<br>
+But I just got this one as well:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2205 Service not implemented:  TrustedInstaller C0190008
+SBIE2205 Service not implemented:  SxsInstallW
+SBIE2205 Service not implemented:  TrustedInstaller C0190008
+SBIE2205 Service not implemented:  SxsInstallW
+SBIE2205 Service not implemented:  TrustedInstaller C0190008
+SBIE2205 Service not implemented:  SxsInstallW
+SBIE2205 Service not implemented:  TrustedInstaller C0190008
+SBIE2205 Service not implemented:  SxsInstallW
+SBIE2205 Service not implemented:  TrustedInstaller C0190008
+SBIE2205 Service not implemented:  SxsInstallW
+SBIE2205 Service not implemented:  TrustedInstaller C0190008
+SBIE2205 Service not implemented:  SxsInstallW
+SBIE2205 Service not implemented:  TrustedInstaller C0190008
+SBIE2205 Service not implemented:  SxsInstallW
+SBIE2205 Service not implemented:  TrustedInstaller C0190008
+SBIE2205 Service not implemented:  SxsInstallW
+SBIE2205 Service not implemented:  TrustedInstaller C0190008
+SBIE2205 Service not implemented:  SxsInstallW
+SBIE2205 Service not implemented:  TrustedInstaller C0190008
+SBIE2205 Service not implemented:  SxsInstallW
+</code></pre></div>
+
+The issue seems to be solved anyways, as everything works except for the error messages. <br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>SBIE2205 Service not implemented:  TrustedInstaller 800706BA
+SBIE2205 Service not implemented:  TrustedInstaller 800706BA
+</code></pre></div>
+This one just followed.<br>
+<br>
+Sorry for the bad alignment of the post. The messages came in, while I was writing...<br>
+<br>
+I guess this won't really help, but I'm just reporting in.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [SBIE2101]Chrome won't work</h3>
+				<div class="date">Posted: <strong>Tue Oct 17, 2017 3:17 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello HolySimpsons ,<br>
+<br>
+What are you trying to do when the errors occur? <br>
+It looks like you are installing something. Have a look at these:<br>
+<a href="searche94ae94a.html?keywords=TrustedInstaller+C0190008" class="postlink">search.php?keywords=TrustedInstaller+C0190008</a><br>
+<a href="searchb0e3b0e3.html?keywords=TrustedInstaller+800706BA" class="postlink">search.php?keywords=TrustedInstaller+800706BA</a><br>
+<br>
+If the issue is happening with a browser, please launch it outside Sandboxie and ensure it is updated and its plugins are also up-to-date.<br>
+<br>
+Also, if functionality is not affected, you can choose "Hide" instead of close, to make the message go away.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24993&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:29:14 GMT -->
+</html>

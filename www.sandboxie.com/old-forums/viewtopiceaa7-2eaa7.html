@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24709&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:03:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Hide all software information via WriteFilePath</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Hide all software information via WriteFilePath</h2>
+		<p><a href="viewtopic86518651.html?f=17&amp;t=24709">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=24709</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Hide all software information via WriteFilePath</h3>
+				<div class="date">Posted: <strong>Tue Aug 01, 2017 11:07 am</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content">I want to hide all software information (version, configuration, etc.) via WriteFilePath from programs installed in a specific sandbox. <br>
+<br>
+I found the following two but they're only stating if a program is installed. This is good but I am looking for something additional like ProgramData or AppData inside the Registry.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall</code></pre></div>
+
+Which Registry paths to specify? <img class="smilies" src="images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Hide all software information via WriteFilePath</h3>
+				<div class="date">Posted: <strong>Tue Aug 01, 2017 12:13 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Creave,<br>
+<br>
+See if this user's Configuration settings work for you:<br>
+<a href="viewtopicbaaebaae.html?f=4&amp;t=24012&amp;p=126368&amp;hilit=writefilepath#p126368" class="postlink">viewtopic.php?f=4&amp;t=24012&amp;p=126368&amp;hili ... th#p126368</a><br>
+<br>
+You can also try <a href="../index23c5.html?WriteKeyPath" class="postlink">https://www.sandboxie.com/index.php?WriteKeyPath</a><br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Hide all software information via WriteFilePath</h3>
+				<div class="date">Posted: <strong>Tue Aug 01, 2017 1:10 pm</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic493d493d.html?p=129497#p129497" data-post-id="129497" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Aug 01, 2017 12:13 pm</div></cite>
+See if this user's Configuration settings work for you:<br>
+<a href="viewtopicbaaebaae.html?f=4&amp;t=24012&amp;p=126368&amp;hilit=writefilepath#p126368" class="postlink">viewtopic.php?f=4&amp;t=24012&amp;p=126368&amp;hili ... th#p126368</a>
+</div></blockquote>
+Interesting topic! This was the first feature I noticed missing and still is the most frustrating thing with Sandboxie.<br>
+
+<blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopic493d493d.html?p=129497#p129497" data-post-id="129497" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Tue Aug 01, 2017 12:13 pm</div></cite>
+You can also try <a href="../index23c5.html?WriteKeyPath" class="postlink">https://www.sandboxie.com/index.php?WriteKeyPath</a>
+</div></blockquote>
+So this single Registry path will hide any data about installed software whatsoever? One to rule them all, right?  <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> 
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>WriteKeyPath=HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths</code></pre></div>
+<blockquote class="uncited"><div>This example hides any data which exists outside the sandbox within the TypedPaths registry key, while allowing a program to create new keys and values within the corresponding TypedPaths registry key in the sandbox. This means that Windows Explorer running in the sandbox will not be able to display the history of paths that were typed into Windows Explorer outside the sandbox. But the Windows Explorer running in the sandbox will be able to record and store new paths as they are typed. </div></blockquote></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Hide all software information via WriteFilePath</h3>
+				<div class="date">Posted: <strong>Tue Aug 01, 2017 1:31 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hi Creave,<br>
+<br>
+I meant that you could use the  WriteKeyPath instead, if you just wanted to block registry entries.<br>
+You will still need to know which ones to block.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Hide all software information via WriteFilePath</h3>
+				<div class="date">Posted: <strong>Wed Aug 02, 2017 5:04 am</strong></div>
+				<div class="author">by <strong>Creave</strong></div>
+				<div class="content">And I was wondering why this magical registry key has such an impact...  <img class="smilies" src="images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=24709&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:03:47 GMT -->
+</html>

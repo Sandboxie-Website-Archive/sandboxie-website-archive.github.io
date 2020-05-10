@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/23024" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2016-06-10T14:38:34-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/23024</id>
+
+		<entry>
+		<author><name><![CDATA[Craig@Invincea]]></name></author>
+		<updated>2016-06-10T14:38:34-04:00</updated>
+
+		<published>2016-06-10T14:38:34-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23024&amp;p=121479#p121479</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23024&amp;p=121479#p121479"/>
+		<title type="html"><![CDATA[Save Drop Rights setting]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=23024&amp;p=121479#p121479"><![CDATA[
+@Curt<br> If you want the "Run as UAC Administrator" check box setting to persist. Sandboxie does not save this setting<br><br><strong>Example:</strong><br>If the application is set to run as admin in its Compatibility properties tab, Sbie will check this box automatically. You can also add the /elevate command line switch to the start.exe command. E.g. "C:\Program Files\Sandboxie\Start.exe" /elevate /box:DefaultBox "C:\Users\Public\Desktop\Acrobat Reader DC.lnk"<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27430">Craig@Invincea</a> — Fri Jun 10, 2016 2:38 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

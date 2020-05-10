@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 10:15:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Block Process Access - Page 3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Block Process Access</h2>
+		<p><a href="viewtopic7fcb7fcb.html?f=22&amp;t=4885">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=4885</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>3</strong> of <strong>15</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 5:07 am</strong></div>
+				<div class="author">by <strong>ThantiK</strong></div>
+				<div class="content">When I run injtest.exe 4032 (wow.exe) I get this:<br>
+"The procedure entry point RegGetValueW could not be located in ADVAPI32.dll"<br>
+<br>
+System-Wide process/thread snapshot handle:<br>
+0x00000114<br>
+<br>
+Data Read from process [4032]:<br>
+0x4D5A90000300000004000000FFFF0000<br>
+<br>
+Process module snapshot handle:<br>
+0x00000128<br>
+<br>
+Hope this helps.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 5:12 am</strong></div>
+				<div class="author">by <strong>thantik</strong></div>
+				<div class="content">I got similar results when running injtest.exe on both sandboxed, and unsandboxed programs.<br>
+<br>
+(I am running injtest within the sandbox that's supposed to be blocking these calls)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 7:29 am</strong></div>
+				<div class="author">by <strong>hch</strong></div>
+				<div class="content">@wraithdu<br>
+<br>
+I have no idea what that process is - it's strange... the ID that appears in the debug view doesn't seem to exist in either sandboxie or task manager. (I tried a few times, each time the ID doesn't exist)<br>
+<br>
+regarding the latest version, <strong>explorer does run now,</strong> but it starts up with an error "<em>The procedure entry point RegGetValueW could not be located in the dynamic link library ADVAPI32.dll</em>". Both SandboxieRpcSs.exe and SandboxieDcomLaunch.exe are running, and the explorer window is visible and functioning<br>
+<br>
+That would still be fine,<strong> except that the process blocking function does not seem to work anymore</strong> (even with other programs besides explorer.exe). I am now <strong>able to access unsandboxed processes</strong> even while inside the sandbox. Previously, the explorer.exe didn't work but the process blocking functions did.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 9:35 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Turns out that registry function is not available in XP, so the DLL was not being loaded correctly.  Please try v1.0.0.3 which uses an older function that is available.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 1:08 pm</strong></div>
+				<div class="author">by <strong>hch</strong></div>
+				<div class="content">i've tried v1.0.0.3 and now there are no errors at all. However, the processes blocking function is not working (taskmanager can view unsandboxed processes, and the sandboxed processes can access unsandboxed processes).<br>
+<br>
+DbgView no longer provides any useful information, only one line.<br>
+<br>
+<em>[3084] Sandboxie path: "C:\Program Files\Sandboxie\</em><br>
+<br>
+=============================<br>
+<br>
+<strong>To give an overview, here are the tried and tested results of all the versions.</strong><br>
+<br>
+<span style="text-decoration: underline">v1.0.0.1 (First One)</span><br>
+Processes That Didn't Work - SandboxieRpcSs.exe and SandboxieDcomLaunch.exe<br>
+Explorer Functioning? - No<br>
+Process Reading Protected - Yes! (Sandboxed processes could not access unsandboxed processes)<br>
+<br>
+<span style="text-decoration: underline">v1.0.0.1 (Second One)</span><br>
+Processes That Didn't Work - SandboxieDcomLaunch.exe only<br>
+Explorer Functioning? - No<br>
+Process Reading Protected - Yes! (Sandboxed processes could not access unsandboxed processes)<br>
+<br>
+<span style="text-decoration: underline">v1.0.0.2</span><br>
+Processes That Didn't Work - All Processes Working<br>
+Explorer Functioning? - Yes (But with the error message "The procedure entry point RegGetValueW could not be located in the dynamic link library ADVAPI32.dll")<br>
+Process Reading Protected - No! (Sandboxed processes WERE ABLE TO access unsandboxed processes)<br>
+<br>
+<span style="text-decoration: underline">v1.0.0.3</span><br>
+Processes That Didn't Work - All Processes Working<br>
+Explorer Functioning? - Yes (No visible error messages)<br>
+Process Reading Protected - No! (Sandboxed processes WERE ABLE TO access unsandboxed processes)<br>
+<br>
+Something must have broken the process protection between version 1.0.0.1(second one) and 1.0.0.2</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 2:39 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Yeah, I'm aware of the progression of things.  I just don't have an XP system to test, and Sandboxie won't install in my VirtualBox VM.<br>
+<br>
+Your last results mean the DLL is not injected into the process, which is why the tests succeed/fail, depending how you look at it.  The installation path to Sandboxie is found, so I don't know why yet.  Try v1.0.0.4, and let's see if the sandboxie processes are enumerated correctly.<br>
+<br>
+EDIT - I just noticed a " mark hiding in your output there.  That might be the problem.  Go ahead and test 1.0.0.4 anyway cause I want to see the output, but odds are it still won't work correctly.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 3:33 pm</strong></div>
+				<div class="author">by <strong>thantik</strong></div>
+				<div class="content">I'm getting similar results to what I posted before.  Using the injtest.exe from within my sandbox, and specifying another sandboxed, as well as an unsandboxed calc.exe<br>
+<br>
+I'm taking a wild guess and thinking that when it says "Data Read from Process [xxx]:" that it should be all 0's or say that it could not be read right?<br>
+<br>
+I'm still getting<br>
+Data Read from process [2628]:<br>
+0x4D5A90000300000004000000FFFF0000</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 4:39 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Yes, the DLL is not being loaded correctly currently.  I'm working on it kinda blind without an XP testbed (until I get home tonight).<br>
+Try v1.0.0.5.  I've added a routine to remove any quotes from the sandboxie path, which may have been messing things up.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 4:50 pm</strong></div>
+				<div class="author">by <strong>thantik</strong></div>
+				<div class="content">W00t (I think.)<br>
+<br>
+I ran injtest.exe against calc in sandbox with the new 1.0.0.5 version...and I got:<br>
+<br>
+System-Wide process/thread snapshot handle:<br>
+0xFFFFFFFF<br>
+<br>
+Data Read from process [4032]:<br>
+0x000000000000000000000000000000<br>
+<br>
+Process module snapshot handle:<br>
+0xFFFFFFFF</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 4:58 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Good!  Try running injtest against another sandboxed process in the same sandbox.  The cmd.exe instance you're launching injtest from will work fine.  Then try launching Windows Explorer via the Run Sandboxed menu.  Running explorer was ultimately the goal here.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 6:55 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">I tried out 1.0.0.5 on my XP system at home, and I can get explorer.exe to open successfully, and the process blocking works.  However I can't launch any programs or files from within a sandboxed explorer or cmd prompt.  I'm not sure exactly why, but it surely has to do with the blocks in place.  Do you guys get the same behavior?<br>
+<br>
+I also see that non-existing PID in the Dbgview log.  I'm guessing it is the PID of the new process which hasn't been fully created yet.  Since it doesn't really exist yet, the DLL flags it as not-sandboxed and denies access.  This probably causes CreateProcess to fail.  I don't know how to work around that at the moment.<br>
+<br>
+But ForcedProcess works, and anything started via Start.exe works as well.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 8:26 pm</strong></div>
+				<div class="author">by <strong>thantik</strong></div>
+				<div class="content">I get <br>
+SBIE2313 - Could not execute SandboxieRpcSs.exe<br>
+and<br>
+SBIE2204 Cannot start sandboxed service RpcSs<br>
+<br>
+When trying to run windows explorer.<br>
+<br>
+Injtest returns the same values on sandboxed and nonsandboxed applications.<br>
+<br>
+Me personally, I am fine not being able to run explorer - I figure that's the first thing something is going to try and hijack so I'll be keeping this version <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 10:06 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">EDIT - Ok, so I finally got the errors you've described trying to run Firefox.  Strange that it doesn't happen for the same programs on all systems.  At this point, I don't have a solution.  I have an idea for a possible cause that I'm running by tzuk in the hopes he'll have some insight.  But as it is now, the DLL is functioning as designed.  The key here is this unknown PID that keeps showing up in the Dbgview log and gets blocked.<br>
+<br>
+I'll keep everyone posted on progress.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Feb 16, 2009 10:59 pm</strong></div>
+				<div class="author">by <strong>hch</strong></div>
+				<div class="content">hi,<br>
+<br>
+I've tested out v1.0.0.5. I'm getting the same errors as thantik, "SBIE2313 - Could Not Execute SandboxieRpcSs.exe" and "SBIE2204 - Cannot Start Sandboxed Service RpcSs". All in all, the functionality seems to be similar to v1.0.0.1<br>
+<br>
+Process blocking does work, but explorer does not open.<br>
+<br>
+DbgView output a lot of information this time round.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[7624] "C:\Program Files\Sandboxie\SbieSvc.exe"
+[7624] C:\Program Files\Sandboxie\SbieSvc.exe
+[7624] Sandboxie path: C:\Program Files\Sandboxie\
+[7624] C:\Program Files\Sandboxie\SandboxieBITS.exe
+[7624] C:\Program Files\Sandboxie\SandboxieCrypto.exe
+[7624] C:\Program Files\Sandboxie\SandboxieDcomLaunch.exe
+[7624] C:\Program Files\Sandboxie\SandboxieEventSys.exe
+[7624] C:\Program Files\Sandboxie\SandboxieRpcSs.exe
+[7624] C:\Program Files\Sandboxie\SandboxieWUAU.exe
+[7624] C:\Program Files\Sandboxie\SbieCtrl.exe
+[7624] C:\Program Files\Sandboxie\SbieSvc.exe
+[7624] C:\Program Files\Sandboxie\Start.exe
+[7624] C:\WINDOWS\explorer.exe
+[7624] Target proc is not an SBIE proc.
+[7624] ----------
+[7624] Injected into process: [7624] C:\WINDOWS\explorer.exe
+[7624] Pointers:
+[7624] SbieDll_Hook: 7D22BA00
+[7624] SbieApi_QueryProcess: 7D2454A0
+[7624] pNtOpenProcess: 00DF0BD0                
+[7624] pNtReadVirtualMemory: 00DF0BF0
+[7624] pNtQuerySystemInformation: 00DF0C10
+[7624] pCreateToolhelp32Snapshot: 00DF0C30                
+[7624] ----------
+[7624] NtQuerySystemInformation intercepted
+[7624] Allowing NtQuerySystemInformation
+[7624] NtQuerySystemInformation intercepted
+[7624] Allowing NtQuerySystemInformation
+[7624] NtQuerySystemInformation intercepted
+[7624] Allowing NtQuerySystemInformation
+[7624] NtReadVirtualMemory intercepted
+[7624] Allowing NtReadVirtualMemory
+[7624] NtQuerySystemInformation intercepted
+[7624] Allowing NtQuerySystemInformation
+[7624] NtQuerySystemInformation intercepted
+[7624] Allowing NtQuerySystemInformation
+[7624] NtQuerySystemInformation intercepted
+[7624] Allowing NtQuerySystemInformation
+[7624] NtQuerySystemInformation intercepted
+[7624] Allowing NtQuerySystemInformation
+[7624] NtQuerySystemInformation intercepted
+[7624] Allowing NtQuerySystemInformation
+[7624] NtOpenProcess intercepted
+[7624] Target PID: 7624
+[7624] Allowing NtOpenProcess
+[7624] NtOpenProcess intercepted
+[7624] Target PID: 7624
+[7624] Allowing NtOpenProcess
+[7624] NtQuerySystemInformation intercepted
+[7624] Allowing NtQuerySystemInformation
+[7624] NtQuerySystemInformation intercepted
+[7624] Allowing NtQuerySystemInformation
+[7624] NtQuerySystemInformation intercepted
+[7624] Allowing NtQuerySystemInformation
+[7624] NtQuerySystemInformation intercepted
+[7624] Allowing NtQuerySystemInformation
+[7624] NtReadVirtualMemory intercepted
+[7624] IsPIDSandboxed
+[7624] Target PID: 7636
+[7624] BoxName: 
+[7624] ImageName: 
+[7624] SidString: 
+[7624] SessionId: 0
+[7624] Blocking NtReadVirtualMemory
+</code></pre></div>
+
+<span style="text-decoration: underline">v1.0.0.5</span><br>
+Processes That Didn't Work - SandboxieRpcSs.exe and SandboxieDcomLaunch.exe<br>
+Explorer Functioning? - No<br>
+Process Reading Protected - Yes! (Sandboxed processes could not access unsandboxed processes) <br>
+<br>
+p.s. I didn't get to try out version 1.0.0.4, by the time I checked this post again it was already replaced with 1.0.0.5</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Feb 17, 2009 12:33 am</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Alright!  v1.0.0.6 should fix the problems.  Since I was finally able to reproduce it, turns out I was right in my guess.  The mysterious PID is what would be SandboxieRpcSs or SandboxieDcomLaunch (depending on the error).  So I added <em>another</em> check: if the target process tests not sandboxed (which happens with our mysterious PID), then it checks if it is a child process of the currently sandboxed process and allows the call (since all child processes of sandboxed processes are also sandboxed).  Now the PID is found.<br>
+<br>
+With this change I was able to get Firefox to run, explorer to run, and I was able to launch other processes from a sandboxed cmd prompt and a sandboxed explorer window.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>3</strong> of <strong>15</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=4885&start=30&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 10:15:47 GMT -->
+</html>

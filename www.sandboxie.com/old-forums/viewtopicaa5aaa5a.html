@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=8953&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:57:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; New 64-bit root-kit gave me an idea...</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>New 64-bit root-kit gave me an idea...</h2>
+		<p><a href="viewtopic75517551.html?f=4&amp;t=8953">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=4&amp;t=8953</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>New 64-bit root-kit gave me an idea...</h3>
+				<div class="date">Posted: <strong>Mon Sep 13, 2010 11:35 am</strong></div>
+				<div class="author">by <strong>securityphreak</strong></div>
+				<div class="content">Okay, so it's not exactly new, but this could be a good idea, if the developers of Sandboxie can figure out how to do it.  There are now root-kits that hi-jack the Master Boot record in order to load their drivers into windows, and hide themselves.  Would it be possible to do the same with Sandboxie.  Would it cripple the Operating Systam.  If not, then, with the drivers loaded, wouldn't Sandboxie be just as good at preventing malware from infiltrating the system as it is on 32 bit versions of windows?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 13, 2010 1:10 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Legitimate software can't afford to do something like that.  How would it look like if Sandboxie did that and then some rootkit scanner started warning you that your system has been compromised most likely by a rootkit.  Well, I can tell you, it wouldn't look good for Sandboxie.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Sep 13, 2010 4:18 pm</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite>Legitimate software can't afford to do something like that.  How would it look like if Sandboxie did that and then some rootkit scanner started warning you that your system has been compromised most likely by a rootkit.  Well, I can tell you, it wouldn't look good for Sandboxie.  <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div></blockquote>
+
+while I would understand your rational for saying that tzuk, I would say that porgrams like GMER have false positives for sandboxie already. Doing this additional measure to bolster defences may be effective. <br>
+<br>
+What I am saying is ; its already common knowledge that sandboxie has to hook deep into the system to do its work - (in a way similar to how a rootkit would work but of course in a genuinely benevolent manner). You can implement similar designs to be able to cope with the new generation of malware.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Thank you</h3>
+				<div class="date">Posted: <strong>Mon Sep 13, 2010 4:25 pm</strong></div>
+				<div class="author">by <strong>securityphreak</strong></div>
+				<div class="content">Thank you D1G1T@L for seeing my reasoning.  I like the comments so far, and I do agree with tzuk with the idea that it might set off a few more alarms with security software.  However, the people who are installing SandBoxie on their computers probably know that it isn't dangerous, so when a security software warning pops up, they will most likely ignore it, or add it too the safe list (As I did with Comodo).  Do you guys think that this could provide as much protection as the 32 bit version, since it would then be hooking into windows as it does now?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 14, 2010 4:22 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">Programs like GMER are not in common use, but a lot of virus/malware scanners look at the boot sector.  There's a difference.  Anyway the boot sector is probably just an example.  The principle here is you're saying you wouldn't mind if Sandboxie acted more like a rootkit.  And I'm saying, as a legitimate product, I can't afford to do that.  There are a lot of people using Sandboxie and not all of them frequent this forum.  What you're suggesting is going to end up with people posting on other forums that Sandboxie is now malware and I'm just not looking to be in a position where I need to do damage control for that kind of thing.  So really I feel there's little to add to this.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 14, 2010 10:43 am</strong></div>
+				<div class="author">by <strong>securityphreak</strong></div>
+				<div class="content">Honestly, most anti-virus/malware vendors would be able to tell whether or not Sandboxie had ben the on to patch the Boot Sector.  Most already know that Sandboxi is legit.  A rootkit scanner will already find Sandboxie as malicious because it does patch the kernel.  I think doing this wouldn't be too bad.  Honestly, I think there would be a way to NOT BSOD a computer if you programmed it right.  And, if Microsoft takes notice, maybe they would allow CERTAIN vendors to use this idea to gain a beter foothold in the system.  Or they could make a modification themselves that Users culd go online and find that Sandboxie could take advantage of that wold allow Sandboxie to perform as well as it does on 32 bit versions of the system on 64 bit computers.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Sep 14, 2010 12:18 pm</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content">I see your reasoning tzuk, but I can suggest a program popup that gives a brief explanation of this new added protection so that <span style="text-decoration: underline">everyone</span> finishes doing the upgrade install, they would understand what is going on and not be alarmed. -- I bet tht they would be happy indeed to know tht the product has become stronger.<br>
+<br>
+The way I conceptualize sandboxie, is that it is a <strong>benevolent</strong> 'rootkit' in the sense tht it is a driver that manipulates and controls programs at the <strong>users discretion</strong> to ensure that nothing alters the os. I really think that this technique deserves a shot. Especially since its not an exploit of a bug in patchguard tht will be patched up, but rather a whole different concept of circumvention -- that cant really be blocked by an update from ms.<br>
+<br>
+Not every program tht touches the mbr or does lowlevel modification is malicious, -- only behavior blockers would give warnings -- but HIPS will alarm the user anyways about all changes are good or bad -- the suggested notification of sandboxie's new protectiosn should clear this up by letting people know about potential alarms so tht they ignore them.<br>
+<br>
+AVs on the otherhand utilize blacklisting of malicious files and since sandboxie is legitimate, there wouldnt be any problems there.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Sep 16, 2010 12:40 am</strong></div>
+				<div class="author">by <strong>sbxfan</strong></div>
+				<div class="content">If the only issue is false positives by other security software:<br>
+<br>
+A.	You could add big warning boxes with big colorful blinking text that the special installation might throw up warnings from other security software. This would scare off novice users.<br>
+<br>
+B.	You could purposely add extra steps to make the special installation more difficult for novice user to accidentally use. For example you could add many extra warning boxes. Or you could make it so when user selects the special installation, Sandboxie creates boot iso file so that user has to start computer from a boot cd to install with special installation. A user who goes through those steps is unlikely to be unaware of possible false positives caused by Sandboxie and unlikely to go off complaining somewhere.<br>
+<br>
+C.	False positives aren't forever. Security software companies can add Sandboxie to the whitelist of their software once they become aware of it.<br>
+<br>
+<br>
+<br>
+<br>
+"How would it look like if Sandboxie did that and then some rootkit scanner started warning you that your system has been compromised most likely by a rootkit?"<br>
+<br>
+I think the positive image of Sandboxie providing 99% security for 64bit systems outweighs the negative image caused by warning boxes from other inferior security solutions.<br>
+<br>
+<br>
+Please reconsider this option</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 17, 2010 1:04 pm</strong></div>
+				<div class="author">by <strong>securityphreak</strong></div>
+				<div class="content"><blockquote class="uncited"><div>Programs like GMER are not in common use, but a lot of virus/malware scanners look at the boot sector. There's a difference. Anyway the boot sector is probably just an example. The principle here is you're saying you wouldn't mind if Sandboxie acted more like a rootkit. And I'm saying, as a legitimate product, I can't afford to do that. There are a lot of people using Sandboxie and not all of them frequent this forum. What you're suggesting is going to end up with people posting on other forums that Sandboxie is now malware and I'm just not looking to be in a position where I need to do damage control for that kind of thing. So really I feel there's little to add to this. </div></blockquote>
+
+Honestly tzuk, there are programs out there right now that behave like rootkits (anti-cheating programs, for one).  Just  think of gameguard and gamemon.  Both of these prevent cheating by hiding any processes and hooking deep into the kernal.  I think it would be fine for Sandboxie to do something like this.<br>
+
+<blockquote class="uncited"><div> A. You could add big warning boxes with big colorful blinking text that the special installation might throw up warnings from other security software. This would scare off novice users.<br>
+<br>
+B. You could purposely add extra steps to make the special installation more difficult for novice user to accidentally use. For example you could add many extra warning boxes. Or you could make it so when user selects the special installation, Sandboxie creates boot iso file so that user has to start computer from a boot cd to install with special installation. A user who goes through those steps is unlikely to be unaware of possible false positives caused by Sandboxie and unlikely to go off complaining somewhere.<br>
+<br>
+C. False positives aren't forever. Security software companies can add Sandboxie to the white list of their software once they become aware of it.  <br>
+
+</div></blockquote>
+
+I think that theses ideas are pretty much sound.  Anti-viruses who look at the Master Boot Record would eventually realize, after a few emails from users of their product and sandboxie, that Sandboxie is legit, and the fact that it has to hijack the MBR is just it's way of providing optimal defense.  Plus, I like the idea of switching between normal and optimal protection.  You could explain the differences in big windows that tell people, in non-computer terms, exactly what the program does.  <br>
+Though, honestly, I don't think the need to make an ISO is necessary.  You could just add like 3 warning screens.  <br>
+<br>
+The first one could say, "You have chosen to use the "Optimal" security setting.  This setting will attempt to bypass the Patchguard currently used by your system. Do you wish to continue?"<br>
+<br>
+The next one: "We disable Patchguard by forcing your system to reboot, and before windows loads, we patch something called the "Master Boot Record".  This ensures that we can load everything required do operate normally.  Do you wish to continue?"<br>
+<br>
+The last one: "Your antivirus might warn you that a "suspicious program/rootkit" is attempting to modify your system in a dangerous way.  Do not be alarmed, this is normal.  Just ignore the warning, and, if possible, add  Sandboxie to your safe list.  Are you sure you wish too continue?  This is the last warning screen."<br>
+<br>
+Of course, if they choose to listen to the warning, then Sandboxie could switch itself to normal use, un-patch the kernel, and they would get the same protection that is offered now.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Dont bother/ closing comments</h3>
+				<div class="date">Posted: <strong>Fri Sep 17, 2010 2:38 pm</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content">ah dont waste ur breath Tzuk will dust off these suggestions, from the looks of wht he said for da other thread. He likes to play it safe which is understandable -- IMHO all the ideas tht u have given are feasible but its just tht he doesnt want to go thru the debacle of id!ots posting about false positives. <br>
+<br>
+I dont think much will be done to bolster x64 sbie protection till its proven and tested tht quite a number of critters break out with LUA enabled. Ihave requested the testing of sbie x64 against malware for a multitude of times, but no one either uses a x64 OS on this forum, or they just are puttoff by this daunting yet significant task.  If thts not done, we will just keep relapsing into philosphical ideals of OS security and wht sandboxie should do to be hypothectically safer, rather than necessarily because its being easily bypassed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>I'll test for you</h3>
+				<div class="date">Posted: <strong>Sat Sep 18, 2010 2:50 pm</strong></div>
+				<div class="author">by <strong>security phreak</strong></div>
+				<div class="content">I actually just got a new laptop, and was hoping to try out VirtualBox, and this gives me a good reason to.  It's 64 bit, and the first thing Ill do is install Sandboxie and see if anything breaks through.  I'll get back if I find something with the redirect to the new thread.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Sep 18, 2010 8:23 pm</strong></div>
+				<div class="author">by <strong>tonecool</strong></div>
+				<div class="content"><blockquote><div><cite>D1G1T@L wrote:</cite>that cant really be blocked by an update from ms.</div></blockquote>
+You're sure about this D1G1T@L?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Sep 18, 2010 10:04 pm</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content">@security phreak -<br>
+Its great tht you are taking on the initiative to do this. I for one appreciate this and I confidently speak on behalf of many other sbie users when I say that they do too. Nothing is more effective and powerful to bring change than empirical facts and findings.<br>
+<br>
+@ tonecool - <br>
+Yes I am sure about this statement, but since you are questioning it, I was wondering if you have an opinion or knowledge to the contrary. If thts the case then feel free to contribute them to this thread.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 19, 2010 8:11 am</strong></div>
+				<div class="author">by <strong>subset</strong></div>
+				<div class="content">Mihail Fradkov from Online Solutions has announced this kind of MBR protection.<br>
+<a href="http://www.wilderssecurity.com/showpost.php?p=1727054&amp;postcount=226" class="postlink">http://www.wilderssecurity.com/showpost ... tcount=226</a><br>
+But they don't offer a x64 version so far.<br>
+<br>
+However, I don't think this is a smart idea.<br>
+If MS updates its PatchGuard, there will be most likely a lot of BSODs.<br>
+And do not restore the original Windows MBR, when you restore an image of your disk.<br>
+<br>
+Cheers</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Sep 19, 2010 10:53 am</strong></div>
+				<div class="author">by <strong>D1G1T@L</strong></div>
+				<div class="content">Subset, your post is irrelevant on so many levels, no offence. <br>
+<br>
+First of you're providing a link about a new security solution that protects the MBR, something I dont really need or want as I currently use sandboxie. The point is; this kind of protection is not built into the default OS like patchguard. For exact differences in this method, see my post above.<br>
+
+<blockquote class="uncited"><div>However, I don't think this is a smart idea. <br>
+If MS updates its PatchGuard, there will be most likely a lot of BSODs. </div></blockquote>
+
+What are you talking about here? no one said anything about disabling or bypassing patchguard. This is a completely different detour/mechanism. Because this is a new idea, the OP decided to go ahead and post it. -- its already common knowledge here tht patchguard disscussions are like kicking a dead horse.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=4&t=8953&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 08:57:58 GMT -->
+</html>

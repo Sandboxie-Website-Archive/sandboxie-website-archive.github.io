@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6312&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; SandDiff - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>SandDiff</h2>
+		<p><a href="viewtopic71117111.html?f=22&amp;t=6312">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=22&amp;t=6312</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>4</strong></div>
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Sep 24, 2009 1:15 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Hi.<br>
+<br>
+I just uploaded SandDiff 1.02. The URL is: <a href="http://sanddiff.qnea.de/sanddiff.rar" class="postlink">http://sanddiff.qnea.de/sanddiff.rar</a><br>
+<br>
+The changes I introduced are:<br>
+<br>
++ SandDiff performs a file modification checking so modificated files will be reported in FileDiff.TXT.<br>
+<br>
+I didn´t explain it but in the reports (FileDiff, RegDiff, ...) there are 3 symbols initiating each line<br>
+<br>
+"+" means that a file or registry entry was added.<br>
+<br>
+"~" means that a file or registry entry was modified.<br>
+<br>
+"-" means that a file or registry entry was removed.<br>
+<br>
+<br>
++ I introduced a new button with the label "Meanwhile".<br>
+<br>
+At the moment this button is used to capture a log of connections so SandDiff can compare opened ports.<br>
+<br>
+<br>
++ I added a feature to easily recover already used sandbox folders.<br>
+<br>
+<br>
++ The switch button of the viewer will change from File -&gt; Registry -&gt; Ports (if available) and then back to File again.<br>
+<br>
+<br>
++ RegHive and RegHive.LOG are automatically discarded from file difference comparisions.<br>
+<br>
+<br>
+As usual I may miss something. Just try the new version and drop your comments.<br>
+<br>
+Actually the TODO list contains:<br>
+<br>
++ Feature to exclude from differences user defined files, registry and maybe port values too.<br>
+<br>
++ Include a module that analyzes all the information obtained from comparisions and presents a malware<br>
+behaviour evaluation.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Sep 25, 2009 5:33 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I have uploaded SandDiff 1.03.<br>
+<br>
+Changes:<br>
+<br>
++ Certain files will be stored under a folder named "Config".<br>
+<br>
++ I added the exclusion list feature.<br>
+<br>
+The user can define what strings must be discarded from difference files. String search is case-insensitive.<br>
+<br>
+<br>
+With that changes the part of the program comparing differences between 2 sandboxes is, at least at the moment, finished. I don´t plan adding new features to this part, only fix bugs if any is found, but if someone suggests an interesting feature I will be glad to consider adding it.<br>
+<br>
+Now I will start working in the part of the program that analyzes all the differences and evaluates if taken actions can be considered as suspicious.<br>
+<br>
+My final goal is to create a report listing all the actions that were considered suspicious, if any, and give an evaluation based on them. For this I must create a list of suspicious actions and assign them a "malicious ratio".<br>
+<br>
+Finally the analysing module would say that analysed program(s) has a "low", "medium" or "high" risk of being a malware.<br>
+<br>
+<strong>I say it now and I would like to don´t have to repeat it very much: Nobody can expect 100% accurate results, probably not even a 1% in some cases.</strong><br>
+<br>
+Some malwares will detect Sandboxie is running so they will abort operations. In such cases the analysis will be useless.<br>
+<br>
+Some malwares don´t start malicious actions inmediately after being run. Again, in such cases the analysis will be very probably useless.<br>
+<br>
+Some malwares (backdoors mainly) just open a port and wait for an incoming connection. It´s very risky to evaluate a program as malware just because it opens a port.<br>
+<br>
+People should know that in malware analysis, the automatic processes can not be compared to the human analysis, specially when it´s done by experts. I´m not an expert coder, malware analyzer or similar. SandDiff just pretends to be an orientative tool.<br>
+<br>
+There are no malware actions "per se", so I can not say "this program is malware because it did this or that". E.g. A malware may add itself to an autorun registry, but legit software may do it too.<br>
+<br>
+<strong>It´s the user who must, in last term, evaluate if the analyzed program should be doing certain things or not.</strong><br>
+<br>
+Building a list of malicious actions will take time. I will wait for tzuk to release a Sandboxie version including the message logging feature as it will be a very important part of the analyzer. Therefore there will not be new version of SandDiff for a while. <br>
+<br>
+Meanwhile test as much as possible the current version and send your feedback!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 12, 2009 3:48 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">I'm getting a very vague 'file access denied' error message from Sandiff trying to run Step 1.  It happens in any sandbox, no programs running obviously.<br>
+<br>
+Sandiff 1.03<br>
+Win7 Pro RTM 32-bit</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 12, 2009 6:23 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>wraithdu wrote:</cite>I'm getting a very vague 'file access denied' error message from Sandiff trying to run Step 1.  It happens in any sandbox, no programs running obviously.<br>
+<br>
+Sandiff 1.03<br>
+Win7 Pro RTM 32-bit</div></blockquote>
+
+Could you check with File Monitor what file is giving the error, please?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Oct 12, 2009 10:43 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Looks like I get an ACCESS DENIED error for 'C:\Windows\System32\NETSTAT.EXE' ... probably because it doesn't exist there on Win7.  I have that file here:<br>
+<br>
+C:\Windows\winsxs\x86_microsoft-windows-tcpip-utility_31bf3856ad364e35_6.1.7600.16385_none_329d49cdb031b824\NETSTAT.EXE<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>370	9:38:47.4284740 PM	sanddiff.exe	908	CreateFile	C:\Windows\System32	SUCCESS	Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Open For Backup, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a, OpenResult: Opened
+371	9:38:47.4285282 PM	sanddiff.exe	908	QueryDirectory	C:\Windows\System32\netstat.exe	SUCCESS	Filter: netstat.exe, 1: NETSTAT.EXE
+372	9:38:47.4285768 PM	sanddiff.exe	908	CloseFile	C:\Windows\System32	SUCCESS	
+373	9:38:47.4294792 PM	sanddiff.exe	908	QueryOpen	C:\Windows\System32\NETSTAT.EXE	FAST IO DISALLOWED	
+374	9:38:47.4295919 PM	sanddiff.exe	908	CreateFile	C:\Windows\System32\NETSTAT.EXE	SUCCESS	Desired Access: Read Attributes, Disposition: Open, Options: Open For Backup, Open Reparse Point, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a, OpenResult: Opened
+375	9:38:47.4297151 PM	sanddiff.exe	908	CreateFile	C:\Windows\System32\NETSTAT.EXE	SUCCESS	Desired Access: Read Attributes, Synchronize, Disposition: Open, Options: Synchronous IO Non-Alert, Non-Directory File, Complete If Oplocked, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a, OpenResult: Opened
+376	9:38:47.4298660 PM	sanddiff.exe	908	QueryFileInternalInformationFile	C:\Windows\System32\NETSTAT.EXE	SUCCESS	IndexNumber: 0x1000000004894
+377	9:38:47.4298887 PM	sanddiff.exe	908	CloseFile	C:\Windows\System32\NETSTAT.EXE	SUCCESS	
+378	9:38:47.4300612 PM	sanddiff.exe	908	QueryBasicInformationFile	C:\Windows\System32\NETSTAT.EXE	SUCCESS	CreationTime: 7/13/2009 6:55:12 PM, LastAccessTime: 7/13/2009 6:55:12 PM, LastWriteTime: 7/13/2009 8:14:27 PM, ChangeTime: 7/28/2009 3:33:19 PM, FileAttributes: A
+379	9:38:47.4300766 PM	sanddiff.exe	908	CloseFile	C:\Windows\System32\NETSTAT.EXE	SUCCESS	
+380	9:38:47.4302429 PM	sanddiff.exe	908	CreateFile	C:\Windows\System32\NETSTAT.EXE	ACCESS DENIED	Desired Access: Generic Read/Write, Disposition: Open, Options: Synchronous IO Non-Alert, Non-Directory File, Attributes: N, ShareMode: Read, Write, AllocationSize: n/a
+381	9:38:47.4303495 PM	sanddiff.exe	908	CreateFile	C:\Windows\System32\NETSTAT.EXE	SUCCESS	Desired Access: Read Attributes, Synchronize, Disposition: Open, Options: Synchronous IO Non-Alert, Non-Directory File, Complete If Oplocked, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a, OpenResult: Opened
+382	9:38:47.4304819 PM	sanddiff.exe	908	QueryFileInternalInformationFile	C:\Windows\System32\NETSTAT.EXE	SUCCESS	IndexNumber: 0x1000000004894
+383	9:38:47.4305022 PM	sanddiff.exe	908	CloseFile	C:\Windows\System32\NETSTAT.EXE	SUCCESS</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 13, 2009 2:25 am</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">Thanks for the report. I will change it.<br>
+<br>
+Edit: I just checked my Windows 7 and NETSTAT.EXE is in Windows\System32 folder.<br>
+<br>
+The problem is that for a reason I don´t know, I can not call it directly from my program.<br>
+<br>
+The workaround I did was to copy NETSTAT.EXE to SandDiff´s folder and execute it from there.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 13, 2009 12:27 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Sounds like it has to do with some kind of SideBySide installation.  I don't know why netstat would be installed that way though...<br>
+<br>
+How are you calling it from your program?  CreateProcess?  ShellExecute?  Through cmd?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 13, 2009 12:33 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>wraithdu wrote:</cite>Sounds like it has to do with some kind of SideBySide installation.  I don't know why netstat would be installed that way though...<br>
+<br>
+How are you calling it from your program?  CreateProcess?  ShellExecute?  Through cmd?</div></blockquote>
+
+Don´t you have NETSTAT.EXE in your Windows\System32 folder?<br>
+<br>
+I have it there and in the path you mentioned.<br>
+<br>
+ShellExecute but the problem is that the file seems to be in use.  <img class="smilies" src="images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="Shocked"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 13, 2009 1:50 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Hmm, weird.  My file manager shows netstat in both System32 and that winsxs directory.  However my search program Everything (<a href="http://www.voidtools.com/" class="postlink">www.voidtools.com</a>) only shows the copy in the winsxs folder.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 13, 2009 2:00 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">I installed Windows 7 just a few days ago and I didn´t have time yet to take a close look at it but it´s obvious that there are different things compared to XP. (I never wanted to try Vista)<br>
+<br>
+When I try to open NETSTAT.EXE (both from systems32 and winsxs folders) I get in return a "file in use" but I can copy the file to other folder.<br>
+<br>
+Meanwhile I don´t understand why it happens the workaround should work anyway.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 13, 2009 6:14 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content">wraithdu, I have uploaded a new version:<br>
+<br>
+<a href="http://sanddiff.qnea.de/sanddiff.rar" class="postlink">http://sanddiff.qnea.de/sanddiff.rar</a><br>
+<br>
+Let me know if the bug is gone, please.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 13, 2009 6:25 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Sweet, works well.<br>
+<br>
+What is your command line for launching netstat?  I'd like to test if I have the same problem as you.  You said you used ShellExecute right?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 13, 2009 6:48 pm</strong></div>
+				<div class="author">by <strong>nick s</strong></div>
+				<div class="content"><blockquote><div><cite>wraithdu wrote:</cite>However my search program Everything (<a href="http://www.voidtools.com/" class="postlink">www.voidtools.com</a>) only shows the copy in the winsxs folder.</div></blockquote>
+Using the latest Everything alpha build (1.2.1.432) here on Vista, it appears that Everything is ignoring the contents of \System32.<br>
+<br>
+<em>First edit</em>: I reverted back to build 1.2.1.371 and get the same result.<br>
+<br>
+<em>Final edit</em>: It turns out that C:\Windows\System32\netstat.exe is a <a href="http://forum.voidtools.com/viewtopic.php?f=5&amp;t=459&amp;p=1022&amp;hilit=hardlink#p1024" class="postlink">hardlink</a>...<br>
+
+<blockquote><div><cite>Everything's developer wrote:</cite>Only the first hardlink of a file will be indexed and monitored.<br>
+Files that are not the first hardlink will not be indexed or monitored.<br>
+<br>
+This is a limitation of the USN Change Journal.<br>
+<br>
+I have plans to index all hard links in the future.<br>
+However, you will have to update the indexes manually as the USN Change Journal does not support hardlinks.</div></blockquote></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 13, 2009 7:05 pm</strong></div>
+				<div class="author">by <strong>Buster</strong></div>
+				<div class="content"><blockquote><div><cite>wraithdu wrote:</cite>Sweet, works well.<br>
+<br>
+What is your command line for launching netstat?  I'd like to test if I have the same problem as you.  You said you used ShellExecute right?</div></blockquote>
+
+netstat -ano<br>
+<br>
+ShellExecute, right.<br>
+<br>
+It´s something like this (Delphi code)<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>     
+     FillChar(SEInfo, SizeOf(SEInfo), 0) ;
+     SEInfo.cbSize := SizeOf(TShellExecuteInfo) ;
+     with SEInfo do
+        begin
+        fMask := SEE_MASK_NOCLOSEPROCESS;
+        Wnd := Application.Handle;
+        lpFile := PChar(ExecuteFile) ;
+        lpParameters := PChar(Parameters);
+        nShow := SW_NORMAL;
+        end;
+     if ShellExecuteEx(@SEInfo) then
+        begin
+        repeat
+        Application.ProcessMessages;
+        GetExitCodeProcess(SEInfo.hProcess, ExitCode) ;
+        until (ExitCode &lt;&gt; STILL_ACTIVE) or Application.Terminated;
+        end;
+</code></pre></div></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Tue Oct 13, 2009 11:19 pm</strong></div>
+				<div class="author">by <strong>wraithdu</strong></div>
+				<div class="content">Is it a security rights issue maybe?  Is your app running in a lowered rights mode of sorts so that it can't run apps in system directories?</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>4</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=22&t=6312&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:03:57 GMT -->
+</html>

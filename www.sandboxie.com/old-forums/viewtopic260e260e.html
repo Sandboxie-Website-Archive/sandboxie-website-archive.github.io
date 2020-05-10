@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=21033&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:42:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; How to move 1 (or more) sanboxed folder to another drive?</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>How to move 1 (or more) sanboxed folder to another drive?</h2>
+		<p><a href="viewtopic4a3e-24a3e.html?f=5&amp;t=21033">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=21033</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>How to move 1 (or more) sanboxed folder to another drive?</h3>
+				<div class="date">Posted: <strong>Fri Apr 17, 2015 10:52 pm</strong></div>
+				<div class="author">by <strong>Username3</strong></div>
+				<div class="content">My sanboxed firefox isn't fast enough at youtube because of cluttered disk D. (I can't defragment it.).<br>
+And I can't move an entire sandbox because it is too big for fast disk.<br>
+How to move only 1 (or more) sanboxed folder to another drive?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: How to move 1 (or more) sanboxed folder to another drive</h3>
+				<div class="date">Posted: <strong>Tue Apr 21, 2015 5:18 pm</strong></div>
+				<div class="author">by <strong>btm</strong></div>
+				<div class="content">If there is nothing you want to save in the box, it'd be rather easy. Open Sandboxie Control and select the box you want to change locations for. Then select 'Sandbox' from the menu followed by 'Set Container Folder' and change it to a different drive. Say it shows "D:\Sandbox\%USER%\%SANDBOX%" currently and you want to move it to the E:\ Simply change the D to an E (E:\Sandbox\%USER%\%SANDBOX%) and sandboxie will create a new folder next time you launch the app.<br>
+<br>
+<br>
+----------------------------------------------------------------------------------------------------------------<br>
+If you mean moving the box while saving it's contents...<br>
+There is no automatic way to do what you want and it would have to be done manually.<br>
+<br>
+If you want to try the manual method I'd suggest you 'copy' the box you want to the other drive. I'd also make a copy of your current c:\windows\sandboxie.ini so you can restore it if you happen to mess anything up and can't fix it manually. After it is working as expected you can delete the original box.<br>
+<br>
+Let's start with an example. Say the sandbox you want to move is located at "D:\Sandbox\UserName3\MyBox"<br>
+This means that likely the ini shows something like "FileRootPath=D:\Sandbox\%USER%\%SANDBOX%"<br>
+Once you know where you want to put it, create a new 'Sandbox' directory. You can name it anything as long as the path is changed appropriately as well.<br>
+So let's say you want to put it on the E:\ create a new folder and rename it to whatever, for simplicity I'll continue with the 'Sandbox' and you should have a "E:\Sandbox"<br>
+Navigate into that folder and create a new folder and rename it to your user name. Eg if your user name in windows is 'Username3' you'll now have a path of "E:\Sandbox\Username3"<br>
+Copy the 'MyBox' (whichever one it is you want to move) folder from the original location inside this "E:\Sandbox\Username3"<br>
+<br>
+Once that is done you can use the GUI to change the path. Open Sandboxie Control and select the box you just copied. Then select 'Sandbox' from the menu followed by 'Set Container Folder' and change it to reflect the new path. For this example it would be "E:\Sandbox\%USER%\%SANDBOX%"<br>
+<br>
+Then try to launch the app and see if it works as expected. (Note that if you have installed an application inside the sandbox, the shortcuts on your system may need to be updated as well) [CLOSE after]<br>
+   If it doesn't work, check the path of both the real folders and the 'set container folder' again to ensure both are correct and match.<br>
+If it does work, go to the original "D:\Sandbox\UserName3\MyBox" and rename it.  [CLOSE after]<br>
+Re-launch the application MANUALLY from its new location to ensure it was using the new path. [CLOSE after]<br>
+If it still works delete the original folder then Launch the app yet again to ensure it's still working. [CLOSE after]<br>
+If it DOESN'T work this time then restore the folder from the bin and recheck the paths.....<br>
+If it still works as expected feel free to empty the recycle bin and free up some space on D:\ ; otherwise restore it and check paths again....etc....<br>
+<br>
+I apologize for the repetitive instructions but as this was your first post I have no clue as to how adept you might be with windows and decided to err on the edge of caution .</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=21033&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:42:32 GMT -->
+</html>

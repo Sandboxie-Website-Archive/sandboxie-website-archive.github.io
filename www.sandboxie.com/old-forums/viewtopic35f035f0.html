@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25357&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:06:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Blue Screen of Death - Win 7 x64 + Sbie 5.23.3</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Blue Screen of Death - Win 7 x64 + Sbie 5.23.3</h2>
+		<p><a href="viewtopicde73de73.html?f=11&amp;t=25357">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=25357</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Blue Screen of Death - Win 7 x64 + Sbie 5.23.3</h3>
+				<div class="date">Posted: <strong>Fri Jan 19, 2018 8:38 am</strong></div>
+				<div class="author">by <strong>Dimoks</strong></div>
+				<div class="content">Windows 7 Ultimate Russian x64. Running any program in sandbox. Sandboxie v5.23.3 (beta).
+<blockquote class="uncited"><div>Компьютер был перезагружен после критической ошибки.  Код ошибки: 0x0000001e (0xffffffffc0000005, 0xfffff880069b8012, 0x0000000000000001, 0x0000000000000075). Дамп памяти сохранен в: C:\Windows\MEMORY.DMP. Код отчета: 011918-13930-01.</div></blockquote>
+<a href="https://drive.google.com/open?id=11lB8i4Tca3L-j2QUxZ6V3eMH8GfqPaSR" class="postlink">Memory dump</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Blue Screen of Death - Win 7 x64 + Sbie 5.23.3</h3>
+				<div class="date">Posted: <strong>Fri Jan 19, 2018 2:35 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Dimoks,<br>
+<br>
+I have made the devs aware.<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Blue Screen of Death - Win 7 x64 + Sbie 5.23.3</h3>
+				<div class="date">Posted: <strong>Fri Jan 19, 2018 5:35 pm</strong></div>
+				<div class="author">by <strong>Curt@invincea</strong></div>
+				<div class="content">The DMP shows exactly where the error is coming from. But I don't see how Sandboxie is getting into this state. This is a section of code that has not changed in the entire 5 years that Invincea/Sophos has owned the code. And we've never had a crash reported in this section. The only difference is 5.23.3 is compiled in Visual Studio 2015 and 5.22 was compiled under VS 2010.<br>
+<br>
+I assume you switched to 5.23.3 because of the Meltdown KB.
+<ol style="list-style-type: decimal"><li>Were you using 5.22 before? Did this ever happen in 5.22?</li>
+<li>Did it immediately start happening after installing 5.23.3?</li>
+<li>Does it happen every time?</li>
+<li>Is there another machine you can test on?</li></ol></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Blue Screen of Death - Win 7 x64 + Sbie 5.23.3</h3>
+				<div class="date">Posted: <strong>Sun Jan 21, 2018 4:36 am</strong></div>
+				<div class="author">by <strong>Dimoks</strong></div>
+				<div class="content">In 5.22 the problem has appeared not at once. The BSOD was occurring through some quite long time after launch of programs in a sandbox. Later BSOD was occurring at once after launch of any program in a sandbox.<br>
+In 5.23.3 BSOD  occurring at once after launch of any program in a sandbox.<br>
+<br>
+<br>
+-----------MERGED POST -------------------<br>
+BSOD began to appear more often after installation some of the Windows updates.<br>
+KB915597, KB890830, KB4054518, KB915597, KB4055532, KB890830, KB4056894.<br>
+Perhaps and earlier updates...</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Blue Screen of Death - Win 7 x64 + Sbie 5.23.3</h3>
+				<div class="date">Posted: <strong>Mon Jan 22, 2018 1:23 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Dimoks,<br>
+<br>
+Can you please create a new Sandbox called "box1" and see if the problem occurs there as well? <br>
+What type of applications are you launching? <br>
+Is there any Antivirus /security software installed? <br>
+<br>
+Can you please provide your Sandboxie configuration file? <br>
+Configure--&gt; Edit Configuration<br>
+Copy/paste the contents in your response. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Blue Screen of Death - Win 7 x64 + Sbie 5.23.3</h3>
+				<div class="date">Posted: <strong>Wed Jan 24, 2018 11:42 am</strong></div>
+				<div class="author">by <strong>Dimoks</strong></div>
+				<div class="content">ESET NOD32 Antivirus 11.0.159.0<br>
+Launch Opera 12.17 and other programs... browsers...<br>
+Sandboxie.ini:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[GlobalSettings]
+
+Template=NOD32
+Template=WindowsRasMan
+Template=Proxifier
+Template=OfficeLicensing
+FileRootPath=D:\Sandbox\%USER%\%SANDBOX%
+
+[DefaultBox]
+
+ConfigLevel=7
+BlockNetworkFiles=y
+Template=qWave
+Template=WindowsFontCache
+Template=BlockPorts
+Template=LingerPrograms
+Template=Chrome_Phishing_DirectAccess
+Template=Firefox_Phishing_DirectAccess
+Template=AutoRecoverIgnore
+BorderColor=#00FFFF,ttl
+Enabled=y
+BoxNameTitle=y
+AutoDelete=y
+NeverDelete=n
+
+[UserSettings_116A0288]
+
+SbieCtrl_UserName=dimoks
+SbieCtrl_BoxExpandedView=DefaultBox
+SbieCtrl_NextUpdateCheck=1516897988
+SbieCtrl_UpdateCheckNotify=n
+SbieCtrl_ShowWelcome=n
+SbieCtrl_HideWindowNotify=n
+SbieCtrl_AutoApplySettings=n
+</code></pre></div></div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=25357&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:06:00 GMT -->
+</html>

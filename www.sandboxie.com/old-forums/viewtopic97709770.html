@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1193&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Some File access problems with SBIE</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Some File access problems with SBIE</h2>
+		<p><a href="viewtopic81488148.html?f=11&amp;t=1193">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=1193</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Some File access problems with SBIE</h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2007 4:26 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">Hi<br>
+I have some more problems to report:<br>
+<br>
+1. when I open cmd.exe in sandbox it is started in ...\Sandbox\???\user\current&gt; but this folders are not accessible, the working directory should be set to some valid folder.<br>
+<br>
+2. when I specify OpenFilePath=cmd.exe,* and go to a folder where i have some sandboxed files I see them with the dir command but i can not access them to for example copy them out of the SBox (type test.txt also does not work so obviusly cmd.exe can not read the particular file).<br>
+<br>
+I would like to can access the sandboxed files. and can use copy or move or rename commands to unsandbox them when the app doing it have OpenFilePath open for the needed folders.<br>
+<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2007 9:54 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>when I specify OpenFilePath=cmd.exe,* </div></blockquote>
+
+But why do you specify this?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2007 10:18 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content"><blockquote><div><cite>tzuk wrote:</cite><blockquote class="uncited"><div>when I specify OpenFilePath=cmd.exe,* </div></blockquote>
+
+But why do you specify this?</div></blockquote>
+hehe, <br>
+of cause to see how well SB work <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+I was looking for a possibility to unsandbox files with an app that is inside, a further thought would be to make an small app or script that have the rights do do so and that will unsandbox files specifying as parameter by renaming them to something and than back to original what shell result in making SB transfer the file to the real drive. I would putt this small app into my SendTo explorer menu (explorer started of cause inside the SB). Ofcause the app/script would request manual confirmation for such operations.<br>
+This thoughts was inspired by the following FR: <a href="http://sandboxie.com/phpbb/viewtopic.php?t=1191" class="postlink">http://sandboxie.com/phpbb/viewtopic.php?t=1191</a><br>
+<br>
+Anyway its a bug, if the files are not meant to be accessible when path is open there shouldn't be listed there in the first place, right?<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2007 2:53 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>I would putt this small app into my SendTo explorer menu (explorer started of cause inside the SB).</div></blockquote>
+
+If you'd like, when you're finished, I'd be happy to host your script/program here.<br>
+
+<blockquote class="uncited"><div>Anyway its a bug, if the files are not meant to be accessible when path is open there shouldn't be listed there in the first place, right?</div></blockquote>
+
+That's right.  If they can't be accessed, then there is no reason to show them.  You'll see this fixed in the updated 2.80, maybe as soon as tomorrow.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2007 3:31 pm</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">What about point 1. the not accessibility of sanadbox paths like ...\Sandbox\???\user\current&gt;  it would be cool when the path "...\Sandbox\???\" would be handled as openfilepath instad of no access.<br>
+<br>
+This way the recovery app could check if the current file is really sandboxed or not.<br>
+<br>
+The next evolution step would be an shell menu item that is enabled only for sandboxed files and starts the recovery exe instead of using the send to. <br>
+<br>
+btw: I noticed that when I try to run explorer sandboxed while having already an open one SB terminates the sandboxed version, it would be cool if it would start instead and don't see the instance outside.<br>
+<br>
+It would have to be an app in order to can set the openfilepath* only for it and not for some general script parser for security reasons, <br>
+There would be also sense full when sboxed programs wouldn't be able to overwrite the exe, there for a setting like ReadOnlyFilePath could be used.<br>
+<br>
+When I'm ready and it works I would be happy to see it hosted here <img class="smilies" src="images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2007 3:53 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>What about point 1. the not accessibility of sanadbox paths like ...\Sandbox\???\user\current&gt; it would be cool when the path "...\Sandbox\???\" would be handled as openfilepath instad of no access. 
+</div></blockquote>
+
+I am not sure understand.  Yes, if I start a sandboxed cmd.exe, I get the prompt <em>\Sandbox\???\user\current</em>.  But what's the problem then?  Everything works, whether I have <em>OpenFilePath=cmd.exe,*</em> or not.<br>
+<br>
+Do you still have that three-letter virtualization solution installed?  I remember I saw some problems getting 'dir' to work correctly, when I was testing against it, about a month ago, per your request.<br>
+
+<blockquote class="uncited"><div>The next evolution step would be an shell menu item that is enabled only for sandboxed files and starts the recovery exe instead of using the send to. </div></blockquote>
+
+I think this means you need a DLL that loads into explorer.exe and implements IContextMenu.<br>
+
+<blockquote class="uncited"><div>btw: I noticed that when I try to run explorer sandboxed while having already an open one SB terminates the sandboxed version, it would be cool if it would start instead and don't see the instance outside.</div></blockquote>
+
+It would be cool, yes, but the problem with explorer.exe is that it wants to own your desktop.  So if it actually starts, it will put up a second wallpaper covering everything.  That's no good.<br>
+<br>
+I'm sorry but I couldn't understand the next paragraph in your post.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2007 4:27 pm</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">emmm, <br>
+ok I havn't tested this enough, dir works indeed, but anyway "cd.." don't <br>
+I can't change to uper directory mo mather if open path is * or not.<br>
+The problem seems to be in paths below the sandbox root directory and above the directoris inside current, current&gt;cd desktop and than current\desktop&gt;cd.. back works, going more back like ...\defaultbox\user\ does not work. I get "Bad Handle" or "the system couldn't find the specyfyed path"<br>
+<br>
+EDIT: yes I still have the Altiris SVS installed, but it seems that sandboxed apps have only problems reading the root C directory, subpaths work and commands liek "c:\&gt;cd Inetpub" work.<br>
+btw. would be nice if thsi could be resolved to to work properly <img class="smilies" src="images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+<br>
+Explorer will not try to take the desktop if "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell" is set to everything else than "explorer.exe"<br>
+<br>
+I'll try to rewrite the last paragraph of my previous post:<br>
+1. it must be an exe not a script as when it would be a script i would have alop openfilepath* for the script parser, in case of an *.cmd it would be cmd.exe and this would be exploitable. <br>
+2. when it is an exe there is still a small rist than an program inside the SB overwrites in the sandbox the exe with an own and execute it and gets this way openfilepath*, <br>
+2a. I see right now that it would be for the atacker sufficient to create an exe with the name of the recobery app that have the openfilepath*<br>
+<br>
+So there is a way needed to prevent exe's from inside the sandbox to have openfilepath* if thair names match the names of files outside that have the openfilepath*<br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Mar 17, 2007 5:15 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content"><blockquote class="uncited"><div>ok I havn't tested this enough, dir works indeed, but anyway "cd.." don't <br>
+I can't change to uper directory mo mather if open path is * or not. 
+</div></blockquote>
+
+Yes, I can confirm.  I won't be doing anything about that for the official 2.80, but I can try to fix it for later versions.<br>
+
+<blockquote class="uncited"><div>btw. would be nice if thsi could be resolved to to work properly </div></blockquote>
+
+You have to talk to them about it.  They're not implementing some OS calls correctly.<br>
+
+<blockquote class="uncited"><div>Explorer will not try to take the desktop if "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell" is set to everything else than "explorer.exe"</div></blockquote>
+
+Sweet!  I'll try it . . . if you're right, it could mean the end of SandboxieExplorer even.<br>
+<br>
+As for your concerns about OpenFilePath being abused.  Perhaps it makes a difference that EXEs that reside in the sandbox are not able to take advantage of Open*Paths?  (They do in the version you have, but I have already noticed and fixed it.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Mar 18, 2007 4:42 am</strong></div>
+				<div class="author">by <strong>OwenBurnett</strong></div>
+				<div class="content">I have posted the dir c: problem in the SVS board lets wait what they say.<br>
+EDIT: While looking across their board i found a beta version 2.1 beta 1.6 that seems to have solved the problem with dir c:<br>
+<br>
+So in the next release exes inside the SB wont be longer able to use Open*Paths, cool  <img class="smilies" src="images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy"> <br>
+<br>
+Owen</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=1193&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:48:23 GMT -->
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=19163&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:44:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Does and can SBIE4 protect against win32k.sys vulnerability? - Page 2</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Does and can SBIE4 protect against win32k.sys vulnerability?</h2>
+		<p><a href="viewtopic06fa06fa.html?f=5&amp;t=19163">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=19163</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Tue Nov 11, 2014 1:11 pm</strong></div>
+				<div class="author">by <strong>Lumberjack</strong></div>
+				<div class="content"><blockquote><div><cite>Curt@invincea wrote:</cite><blockquote><div><cite>Lumberjack wrote:</cite>
+<br>
+Curt, 2 very quick questions, first question: Does Sandboxie (3x and 4x versions) use a kernel mode driver combined with user-mode hooks <strong>on both 32-bit and 64-bit versions</strong>?<br>
+<br>
+Second very quick question: Does Sandboxie (3x and 4x versions) use the Windows kernel to ensure that system changes are made only inside the sandbox <strong>on both 32-bit and 64-bit versions</strong>?<br>
+Big thanks in advance.</div></blockquote>
+Yes to both questions.</div></blockquote>
+
+Thanks, Curt, but I have to ask you would you say that using Google Chrome under Sandboxie's protection is not so good, because people use to say that Sandboxie increases attack surface of Chrome and makes it more vulnerable, meaning it weakens Chrome's protection, but it also weakens Sandboxie's protection-any opinions?<br>
+<br>
+Also, how big or small is Sandboxie's attack surface comapred to Google Chrome, does Sandboxie have greater or smaller attack surface than Google Chrome, big thanks in advance for this.<br>
+<br>
+Also, an poster said the following:<br>
+"I know 2 Chrome bypassing, the former is performed in Pwn2Own, which is done by determined and dedicated researcher and he had almost 1 year to prepare penetration to Chrome, and he also needed help of OS exploit to make real damage.<br>
+Honestly, I doubt that SBIE can stand for such a thorough analysis by highly skilled researcher, especially when SBIE seems to be build by C or C++ which is one of the most vulnerable language (I think Chrome also).<br>
+The latter is found recently, again it is quite advanced and tricky, also requires help of extension and sync. Common criminals will never find such complicated exploit by themselves.<br>
+<br>
+Increased attack surface may be theoretical one though hypothesis that SBIE can stop exploit which bypassed Chrome is also just theoretical one, but not mystical because it's based on widely acknowledged facts that, more code means more attack surface and the best way to secure your code is make your code reviewed by as many 3rd party experts as possible (Chrome fulfill this but SBIE doesn't). And kernel exploit is not simply harder than common exploit. Kernel exploit requires different knowledge than common one, and while yes there're fewer people who can write kernel exploit, that is no relevant when we're talking sophisticated APT.<br>
+<br>
+Chrome is more thorougly analyzed by lots of people, not only experts but even DIY programmer. I know some actual cases that DIY programmer found serious vulnerability which even experts missed, the one case is relatively recently and it was about Android browser.<br>
+So it is more likely SBIE has more vulnerability currently unknown, but even so, attacker still have to reverse-engineer or fuzz SBIE and hove to find vulnerability. And I believe Invincea already have such audit process, so it must be also difficult for attcker. However, whatever effort Invincea made, it can't reach Chromium's degree. Also you know, Google have a big bug bounty program this is one more factor."<br>
+<br>
+What do you think about all of this?<br>
+<br>
+Also:<br>
+"You also misinterpreted what Curt said, he just spoke about user-mode hooks generally. The difference btwn user-mode hook and kernel-mode for bypassing is the former needs to take all measures to block bypass one by one, while the latter won't be bypassed unless attacker get admin privilege. Chrome takes all counter-measures so bypassing Chrome is very hard, and it have been well proven. But while Adobe Reader uses basically the same sandbox with Chrome, it's implementation is much weaker than Chrome so there was real escape for it."<br>
+<br>
+So in the end what is the truth in all these posts, what is harder to bypass Sandboxie or Chrome, user-mode hooks or kernel-level driver, dll, bat, sys?<br>
+<br>
+They also say it's not a good idea to use sandbox inside sandbox, it's like using antivirus with antivirus-it weakens protection of both!<br>
+<br>
+Also another key question is if Chrome cannot protect against an exploit, if exploit breaks through Chrome's protection mechanisms, would Sandboxie be able to protect against this exploit (that breaks out of Chrome's sandbox).<br>
+<br>
+Chrome, as far as I know, has mitigations against many exploits, but does Sandboxie also have mitigations against exploits as well (comapred to Google Chrome)?<br>
+Big thanks in advance, again.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Does and can SBIE4 protect against win32k.sys vulnerabil</h3>
+				<div class="date">Posted: <strong>Tue Nov 11, 2014 1:54 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Lumberjack, read Tzuks two comments in this thread about running Chrome under Sandboxie. <br>
+<a href="viewtopic6d4d6d4d.html?f=5&amp;t=11788" class="postlink">http://forums.sandboxie.com/phpBB3/view ... =5&amp;t=11788</a><br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=19163&start=15&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:44:05 GMT -->
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15979" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-07-18T07:28:52-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15979</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-18T07:28:52-04:00</updated>
+
+		<published>2013-07-18T07:28:52-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=92000#p92000</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=92000#p92000"/>
+		<title type="html"><![CDATA[[.01] Shortcut Icons]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=92000#p92000"><![CDATA[
+This should be fixed in version 4.05.01.<br><blockquote class="uncited"><div>It would be a useful feature though when wanting to run an application outside of a sandbox from within a forced folder.</div></blockquote>The bug was in Start.exe showing the Run Outside Sandbox where it shouldn't, but the rest of the logic of that feature is in Sandboxie Control and not set up to create a shortcut for Run Outside Sandbox, and I don't want to change that now.<br><br>But you can manually create a shortcut to do that, right-click New &gt; Shortcut on your desktop, then enter this target location:<br><div class="codebox"><p>CODE: </p><pre><code>"C:\Program Files\Sandboxie\Start.exe" /dfp default_browser</code></pre></div>(/dfp stands for disable forced program.)<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Thu Jul 18, 2013 7:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DR_LaRRY_PEpPeR]]></name></author>
+		<updated>2013-07-10T07:30:17-04:00</updated>
+
+		<published>2013-07-10T07:30:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=91719#p91719</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=91719#p91719"/>
+		<title type="html"><![CDATA[[.01] Shortcut Icons]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=91719#p91719"><![CDATA[
+<blockquote><div><cite>tzuk wrote:</cite>Thanks.  The Run Outside Sandbox option shouldn't appear in the list when you use Add Shortcut Icons command.  That's why you see an error when you select in it that context.  I will fix this, by getting rid of Run Outside Sandbox in that list.</div></blockquote>I've never used Add Shortcut Icons, but when I saw this topic, I thought it might be the same thing as those other "Run Outside Sandbox" options that I was trying to say made no sense, so maybe you can remove those now as well. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>I never replied to your <a href="http://www.sandboxie.com/phpbb/viewtopic.php?p=86512#86512" class="postlink">last post(s) in that topic</a>, but check out <em>Start.exe /box:__ask__</em> currently, with either <em>run_dialog</em> or <em>start_menu</em>: Not only does "Run Outside Sandbox" make no sense (that I can see, as I've said), but seems to cause the same error as here...<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11108">DR_LaRRY_PEpPeR</a> — Wed Jul 10, 2013 7:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-07-10T06:53:06-04:00</updated>
+
+		<published>2013-07-10T06:53:06-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=91716#p91716</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=91716#p91716"/>
+		<title type="html"><![CDATA[[.01] Shortcut Icons]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=91716#p91716"><![CDATA[
+It would be a useful feature though when wanting to run an application outside of a sandbox from within a forced folder.<p>Statistics: Posted by Guest — Wed Jul 10, 2013 6:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-07-10T06:21:26-04:00</updated>
+
+		<published>2013-07-10T06:21:26-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=91712#p91712</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=91712#p91712"/>
+		<title type="html"><![CDATA[[.01] Shortcut Icons]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=91712#p91712"><![CDATA[
+Thanks.  The Run Outside Sandbox option shouldn't appear in the list when you use Add Shortcut Icons command.  That's why you see an error when you select in it that context.  I will fix this, by getting rid of Run Outside Sandbox in that list.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Wed Jul 10, 2013 6:21 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anonymous]]></name></author>
+		<updated>2013-07-09T17:45:21-04:00</updated>
+
+		<published>2013-07-09T17:45:21-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=91693#p91693</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=91693#p91693"/>
+		<title type="html"><![CDATA[[.01] Shortcut Icons]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15979&amp;p=91693#p91693"><![CDATA[
+* The version of Sandboxie that you use.<br>Sandboxie x64 4.04<br><br>Using the "Windows Shell Integration" feature to create a shortcut that will "Run Outside Sandbox" causes an error prompt.<br><br><img src="http://i.imgur.com/USVNveL.png" class="postimage" alt="Image"><p>Statistics: Posted by Guest — Tue Jul 09, 2013 5:45 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

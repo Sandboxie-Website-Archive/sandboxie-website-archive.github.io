@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=21025&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:42:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; single-machine, multi-user with Sandboxie</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>single-machine, multi-user with Sandboxie</h2>
+		<p><a href="viewtopicfb8cfb8c.html?f=5&amp;t=21025">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=21025</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>single-machine, multi-user with Sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Apr 14, 2015 10:13 pm</strong></div>
+				<div class="author">by <strong>Nerdtron</strong></div>
+				<div class="content">I'm using a registered copy of Sandboxie on Win8.1 x64.  I setup a new machine with a single administrative user account and installed Sandboxie.  I created a sandbox and installed some stuff on that sandbox.<br>
+<br>
+I then created a second administrative user account.  While logged onto this second account, I manually found the sandboxie control exe and ran it.<br>
+<br>
+On this second account, I see the same sandbox which was previously created on the initial account.  But when I run sandboxed explorer inside it I don't see any of the files installed on the same sandbox from the first account.<br>
+<br>
+Can someone point me to an explanation of how Sandboxie works on a machine with multiple users?  Just want to better understand this aspect.<br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: single-machine, multi-user with Sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Apr 21, 2015 8:34 pm</strong></div>
+				<div class="author">by <strong>JoeHood</strong></div>
+				<div class="content">Maybe this page will help. <a href="../indexbc90.html?UserAccountsSettings" class="postlink">http://www.sandboxie.com/index.php?UserAccountsSettings</a></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: single-machine, multi-user with Sandboxie</h3>
+				<div class="date">Posted: <strong>Sat Apr 25, 2015 11:29 am</strong></div>
+				<div class="author">by <strong>btm</strong></div>
+				<div class="content">If you are using some type of persistent sandbox 'eg not auto-delete' or 'installed within' you may want to consider changing the sandbox path. By default it is set up to isolate user paths. 'C:\Sandbox\%user%\%sandbox%'<br>
+<br>
+Where %user% = the username that launched the program and %sandbox% is the sandbox name, ex 'DefaultBox'<br>
+So When user Admin1 is running it's opening the sandbox at 'C:\Sandbox\Admin1\DefaultBox'<br>
+and when Admin2 is running it's opening the sandbox at       'C:\Sandbox\Admin2\DefaultBox'<br>
+<br>
+This means the second admin won't see the first one as its an entirely different folder path. You could use runas (unless you're on XP- that ones currently bugged w sandboxie 4) or simply alter the location of your sandbox.<br>
+<br>
+To do this you'll have to set a new location and move the current sandbox unless you're willing to recreate it. Open Sandboxie Control and select the box that you want to be shared between the two accounts. Then Select 'Sandbox' from the menu followed by 'Set Container Folder'.  If the current path for the box is 'C:\Sandbox\%user%\%sandbox%' you could for instance set it to 'C:\Sandbox\Shared\%sandbox%' instead. Then using explorer or some other file manager, open C:\Sandbox. Inside you should see more folders with your usernames if they haven't been set to delete themselves. As you used your Admin1 account to create the sandbox you'll want to go inside that one and find the folder that reflects the sandbox name. Copy it and move back to the C:\Sandbox folder. Create a new folder and rename it to 'Shared' if that's what you changed the path to. Then open it and paste the sandbox folder inside. Test it on both and if the set container path and one you moved it to match, both should now be able to access it. If it doesn't work, re-check the paths.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=21025&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:42:29 GMT -->
+</html>

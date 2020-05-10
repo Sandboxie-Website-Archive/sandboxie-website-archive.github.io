@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15417" />
+
+	<title>Sandboxie Support</title>
+	<subtitle>Support Forum for Sandboxie</subtitle>
+	<link href="https://forums.sandboxie.com/phpBB3/index.php" />
+	<updated>2013-05-19T11:07:45-04:00</updated>
+
+	<author><name><![CDATA[Sandboxie Support]]></name></author>
+	<id>https://forums.sandboxie.com/phpBB3/app.php/feed/topic/15417</id>
+
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-05-19T11:07:45-04:00</updated>
+
+		<published>2013-05-19T11:07:45-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89927#p89927</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89927#p89927"/>
+		<title type="html"><![CDATA[[.08] Problems with AutoExec]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89927#p89927"><![CDATA[
+There is a similar StartProgram command which could also be useful.<br><br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=7512" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=7512</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun May 19, 2013 11:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-05-19T11:07:19-04:00</updated>
+
+		<published>2013-05-19T11:07:19-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89926#p89926</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89926#p89926"/>
+		<title type="html"><![CDATA[[.08] Problems with AutoExec]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89926#p89926"><![CDATA[
+There is a similar StartProgram command which could also be useful.<br><br><a href="http://www.sandboxie.com/phpbb/viewtopic.php?t=7512" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=7512</a><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun May 19, 2013 11:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DR_LaRRY_PEpPeR]]></name></author>
+		<updated>2013-05-18T13:52:09-04:00</updated>
+
+		<published>2013-05-18T13:52:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89919#p89919</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89919#p89919"/>
+		<title type="html"><![CDATA[[.08] Problems with AutoExec]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89919#p89919"><![CDATA[
+I'm not sure why you're asking (what the difference is <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile">), but... It's really about deleting the <em>values</em> in SandboxieAutoExec, but I was just simply deleting the whole key, when I saw that launching a program recreates it, though nothing else AutoExec-related happens.<br><br>If what you're asking about is having the key gone when/after the sandbox becomes inactive, without deleting contents, the SandboxieAutoExec key can be deleted, and then close any remaining programs without opening anything new, and it should stay deleted. As far as modifying the RegHive without Sandboxie, sure, File-&gt;Load Hive in Regedit or whatever (under HKEY_USERS, if it matters), name it whatever, make changes, Unload Hive. I've never done that...<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11108">DR_LaRRY_PEpPeR</a> — Sat May 18, 2013 1:52 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-05-18T13:32:17-04:00</updated>
+
+		<published>2013-05-18T13:32:17-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89918#p89918</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89918#p89918"/>
+		<title type="html"><![CDATA[[.08] Problems with AutoExec]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89918#p89918"><![CDATA[
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>Which doesn't say after the sandboxed becomes <em>inactive</em>, but that's what's needed, thus my curiosity.</div></blockquote>A question, since I'm not sure that I correctly follow the discussion...<br>When the sandbox becomes inactive the sandbox reghive is unmounted, so if you wanted to remove the sandbox autoexec key at that time wouldn't you need to modify the reghive file in some way?<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Sat May 18, 2013 1:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DR_LaRRY_PEpPeR]]></name></author>
+		<updated>2013-05-18T11:00:25-04:00</updated>
+
+		<published>2013-05-18T11:00:25-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89912#p89912</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89912#p89912"/>
+		<title type="html"><![CDATA[[.08] Problems with AutoExec]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89912#p89912"><![CDATA[
+I think it all looked OK in my quick testing. Thanks! <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>Is that the expected behavior where an AutoExec doesn't run once the sandbox is active...? I assume so, and that's fine. Just wondering since the SandboxieAutoExec key is recreated <strong>anytime</strong> a program starts. Plus, the <a href="http://www.sandboxie.com/index.php?AutoExecAutoExec" class="postlink">AutoExec page</a> says:<br><br>"... they are executed again <strong>the next time any sandboxed program starts</strong> in that sandbox. But it is also possible to get them to <strong>execute again, by manually deleting the command</strong> from that sandboxed registry key."<br><br>Which doesn't say after the sandboxed becomes <em>inactive</em>, but that's what's needed, thus my curiosity. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11108">DR_LaRRY_PEpPeR</a> — Sat May 18, 2013 11:00 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-05-12T14:27:43-04:00</updated>
+
+		<published>2013-05-12T14:27:43-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89769#p89769</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89769#p89769"/>
+		<title type="html"><![CDATA[[.08] Problems with AutoExec]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89769#p89769"><![CDATA[
+This should be fixed in version 4.01.08.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Sun May 12, 2013 2:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tzuk]]></name></author>
+		<updated>2013-05-07T16:27:09-04:00</updated>
+
+		<published>2013-05-07T16:27:09-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89637#p89637</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89637#p89637"/>
+		<title type="html"><![CDATA[[.08] Problems with AutoExec]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89637#p89637"><![CDATA[
+Thanks, I will check it in a day or two and post an update.<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=3">tzuk</a> — Tue May 07, 2013 4:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Guest10]]></name></author>
+		<updated>2013-05-07T08:42:48-04:00</updated>
+
+		<published>2013-05-07T08:42:48-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89629#p89629</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89629#p89629"/>
+		<title type="html"><![CDATA[Re: Problems with AutoExec]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89629#p89629"><![CDATA[
+<blockquote><div><cite>DR_LaRRY_PEpPeR wrote:</cite>In 4.01, AutoExec ONLY works when using Forced Programs. So that explains why I couldn't get it to work, since using Run Sandboxed, Run... whatever with Start.exe never does anything. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div></blockquote>I can confirm this one, when sandboxing notepad.exe on 4.01.07, with:<br>AutoExec=reg add HKCU\Software\Test123<br><br>It works when notepad.exe is forced, but not when 'Run Sandboxed'.<br>(I didn't try the AutoExec command on 3.76)<p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=1376">Guest10</a> — Tue May 07, 2013 8:42 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DR_LaRRY_PEpPeR]]></name></author>
+		<updated>2013-05-07T06:00:22-04:00</updated>
+
+		<published>2013-05-07T06:00:22-04:00</published>
+		<id>https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89625#p89625</id>
+		<link href="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89625#p89625"/>
+		<title type="html"><![CDATA[[.08] Problems with AutoExec]]></title>
+
+		
+		<content type="html" xml:base="https://forums.sandboxie.com/phpBB3/viewtopic.php?t=15417&amp;p=89625#p89625"><![CDATA[
+I had never tried to use <a href="http://www.sandboxie.com/index.php?AutoExec" class="postlink">AutoExec</a> before yesterday... I see no special instructions, but I couldn't get it to work (in my usual "active" sandbox, new one, nothing with 4.01.07). So had to investigate. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> Worked right away with 4.01.07 on the other XP system! Here's what I found, testing with:<br><br>AutoExec=reg add HKCU\Software\Test123<br><br>First, it appears that in 3.76 and 4.01, an AutoExec (when it works), is <em>only</em> executed when a sandbox first becomes active -- is that the intended behavior, I guess? Although the SandboxieAutoExec key itself is recreated, if deleted, with each new process.....<br><br>It looks like AutoExec in 3.76 ONLY works when using Run Sandboxed, etc. (Start.exe stuff). With Forced Programs, the command <em>will be</em> logged under SandboxieAutoExec, but it doesn't actually <em>run</em>. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> Assuming this won't be fixed if there are no more 3.x releases...<br><br>In 4.01, AutoExec ONLY works when using Forced Programs. So that explains why I couldn't get it to work, since using Run Sandboxed, Run... whatever with Start.exe never does anything. <img class="smilies" src="./../../.https://forums.sandboxie.com/phpBB3/images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><p>Statistics: Posted by <a href="https://forums.sandboxie.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=11108">DR_LaRRY_PEpPeR</a> — Tue May 07, 2013 6:00 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=20782&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:32:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Templates for use with 64-bit Cyberfox</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Templates for use with 64-bit Cyberfox</h2>
+		<p><a href="viewtopic05b3-205b3.html?f=5&amp;t=20782">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=20782</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Templates for use with 64-bit Cyberfox</h3>
+				<div class="date">Posted: <strong>Sun Mar 01, 2015 12:06 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content">Here are some traditional type Sandboxie templates, adapted for use with sandboxed Cyberfox 36 on 64-bit Windows.<br>
+<br>
+They are written as Local Templates, so after you add them to Sandboxie's configuration file you will not find them listed at Sandbox Settings &gt; Applications &gt; Web Browser<br>
+They will be listed at Sandbox Settings &gt; Applications &gt; Local<br>
+<br>
+The exclusions use a wild card character (*) in place of the path to each file or folder, so they should work regardless of the actual location of the profile files. As long as the portable version of Cyberfox uses "cyberfox.exe" (as shown in Sandboxie Control's window &lt;- not checked), they should also work with the portable version.<br>
+<br>
+In addition to the traditional templates, I have also included an alternative template that uses a whitelist approach. One template contains the exclusions for all of the Cyberfox files that you always want to be saved out of the sandbox. If you use the whitelist template, you don't need any of the other templates - unless you also want to use the Force template (assuming that you have a registered version of Sandboxie).<br>
+<br>
+If you use the traditional templates instead of the whitelist template, be sure to use the "Phishing" template. It's primarily needed to keep the "safebrowsing" anti-phishing files updated while running sandboxed. These files are not saved in the profile folder in a normal install of Cyberfox, although they might be saved there in a portable install. The Phishing template will allow the anti-phishing files to be kept updated, wherever they are stored.<br>
+<br>
+Copy the text in this post to your Clipboard, and save it to a Notepad document, so you can Copy and Paste from it while off line.<br>
+----<br>
+<br>
+For a sandbox that you will use with Cyberfox:<br>
+(A) Open Sandboxie Control's window and right-click the sandbox name, then click...<br>
+Sandbox Settings &gt; Applications &gt; Local<br>
+1) Click the "Create New" button and Paste <span style="text-decoration: underline">one template at a time</span> into the window. <br>
+2) Then, click OK in the "Create New" window.<br>
+3) Repeat steps 1 and 2 until you have entered all of the local templates that you want to use.<br>
+<br>
+(B) After the templates have been added, click on one of them and then click the "Add" button.<br>
+Repeat, selecting templates and clicking the Add button, until all of the templates have been applied for that sandbox [+].<br>
+Then, click OK to close the "Sandbox Settings" window.<br>
+At this point, if you have templates that you haven't applied, you will asked if you want to remove the unused templates. Answering "No" will keep those templates in the configuration file.<br>
+<br>
+If you have another sandbox that will also use the template(s), you can repeat step (B) for that sandbox at:<br>
+(Right-click the sandbox name) &gt; Sandbox Settings &gt; Applications &gt; Local<br>
+<br>
+Only one sandbox should "Force" Cyberfox. If multiple force settings exist, the first one that is found will be the one that's used. Also, running multiple instances of Cyberfox, with each of them trying to use the same profile files, is best avoided.<br>
+------<br>
+Traditional type templates follow...<br>
+<br>
+<br>
+[Template_Local_Cyberfox_Force]<br>
+Tmpl.Title=Force Cyberfox to run in this sandbox (Registered version only)<br>
+Tmpl.Class=Local<br>
+Tmpl.Comment=As an alternative to this template: Sandbox Settings &gt; Program Start &gt; Forced Programs<br>
+ForceProcess=cyberfox.exe<br>
+<br>
+<br>
+[Template_Local_Cyberfox_Bookmarks_DirectAccess]<br>
+Tmpl.Title=Allow direct access to Cyberfox bookmark and history database<br>
+Tmpl.Class=Local<br>
+Tmpl.Comment=To delete the browsing history, use Cyberfox's own "Options" settings<br>
+Tmpl.Comment=Deleting browsing history will keep "session management" from working<br>
+Tmpl.Comment=Deleting browsing history will delete "thumbnails"<br>
+OpenFilePath=cyberfox.exe,*\bookmark*<br>
+OpenFilePath=cyberfox.exe,*\places*<br>
+<br>
+<br>
+[Template_Local_Cyberfox_Cookies_DirectAccess]<br>
+Tmpl.Title=Allow direct access to Cyberfox cookies<br>
+Tmpl.Class=Local<br>
+OpenFilePath=cyberfox.exe,*\cookies*<br>
+<br>
+<br>
+[Template_Local_Cyberfox_Passwords_DirectAccess]<br>
+Tmpl.Title=Allow direct access to Cyberfox passwords<br>
+Tmpl.Class=Local<br>
+Tmpl.Comment=Applies to Firefox derivatives, version 32 and later<br>
+Tmpl.Comment=Previous to version 32: signons.sqlite was used instead of logins.json<br>
+OpenFilePath=cyberfox.exe,*\logins.json<br>
+OpenFilePath=cyberfox.exe,*\key3.db<br>
+<br>
+<br>
+[Template_Local_Cyberfox_Phishing_DirectAccess]<br>
+Tmpl.Title=Allow direct access to Cyberfox phishing database and blocklist files<br>
+Tmpl.Class=Local<br>
+Tmpl.Comment=On a normal install, the "safebrowsing" folder is beneath AppData\Local<br>
+OpenFilePath=cyberfox.exe,*\cert8.db<br>
+OpenFilePath=cyberfox.exe,*\blocklist.xml<br>
+OpenFilePath=cyberfox.exe,*\safebrowsing\*<br>
+<br>
+<br>
+[Template_Local_Cyberfox_Session_DirectAccess]<br>
+Tmpl.Title=Allow direct access to Cyberfox session management<br>
+Tmpl.Class=Local<br>
+Tmpl.Comment=This won't work if you delete browsing history<br>
+OpenFilePath=cyberfox.exe,*\sessionstore.js<br>
+OpenFilePath=cyberfox.exe,*\sessionstore-backups\*<br>
+<br>
+<br>
+[Template_Local_Cyberfox_Thumbnails_DirectAccess]<br>
+Tmpl.Title=Allow direct access to Cyberfox thumbnails folder<br>
+Tmpl.Class=Local<br>
+Tmpl.Comment=If you delete browsing history, thumbnails will be deleted<br>
+Tmpl.Comment=The "thumbnails" folder is beneath AppData\Local, not AppData\Roaming<br>
+OpenFilePath=cyberfox.exe,*\thumbnails\*<br>
+<br>
+<br>
+[Template_Local_Cyberfox_Settings_DirectAccess]<br>
+Tmpl.Title=Allow direct access to Cyberfox preferences<br>
+Tmpl.Class=Local<br>
+Tmpl.Comment=The exclusions for "search" and "xulstore" allow changes to the search engine setting<br>
+OpenFilePath=cyberfox.exe,*\prefs.js<br>
+OpenFilePath=cyberfox.exe,*\search*<br>
+OpenFilePath=cyberfox.exe,*\xulstore.json<br>
+<br>
+<br>
+If you've picked the templates that you want from the above, then you don't need the following one.<br>
+If you use this one, read the template comments.<br>
+<br>
+[Template_Local_Cyberfox_Profile_DirectAccess]<br>
+Tmpl.Title=Allow direct access to entire Cyberfox profile folder<br>
+Tmpl.Class=Local<br>
+Tmpl.Comment=This template only works if the Cyberfox profile is in its default folder beneath AppData\Roaming<br>
+Tmpl.Comment=You also need to use the Phishing template, if you use this one<br>
+Tmpl.Comment=If you want to save thumbnails, you also need the Thumbnails template<br>
+OpenFilePath=cyberfox.exe,%AppData%\8pecxstudios\Cyberfox\Profiles\*\<br>
+<br>
+<br>
+------<br>
+An alternative approach:<br>
+You could use just one "whitelist" template. All of the files/folders that you want to save out of the sandbox are listed in one template. You would only use this one template, unless you also wanted to use the Forcing template. This is the same approach that I use for 2 of my Firefox profiles, both of which make use of the same whitelist template.<br>
+<br>
+<br>
+[Template_Local_Cyberfox_Whitelist]<br>
+Tmpl.Title=My Cyberfox whitelisted files and folders<br>
+Tmpl.Class=Local<br>
+OpenFilePath=cyberfox.exe,*\bookmark*<br>
+OpenFilePath=cyberfox.exe,*\places*<br>
+OpenFilePath=cyberfox.exe,*\cookies*<br>
+OpenFilePath=cyberfox.exe,*\logins.json<br>
+OpenFilePath=cyberfox.exe,*\key3.db<br>
+OpenFilePath=cyberfox.exe,*\cert8.db<br>
+OpenFilePath=cyberfox.exe,*\blocklist.xml<br>
+OpenFilePath=cyberfox.exe,*\safebrowsing\*<br>
+OpenFilePath=cyberfox.exe,*\sessionstore.js<br>
+OpenFilePath=cyberfox.exe,*\sessionstore-backups\*<br>
+OpenFilePath=cyberfox.exe,*\thumbnails\*<br>
+OpenFilePath=cyberfox.exe,*\prefs.js<br>
+OpenFilePath=cyberfox.exe,*\search*<br>
+OpenFilePath=cyberfox.exe,*\xulstore.json<br>
+<br>
+<br>
+Here are a few exclusions for files and extensions that I use for Firefox, that also seem to apply with Cyberfox, and the OpenFilePath=... settings could be added to the list, above.<br>
+Listed, in order:<br>
+The Cyberfox personal (spelling) dictionary file;<br>
+"Adblock Plus" and "Element Hiding Helper For AdBlock Plus" extensions;<br>
+"Paste Email Plus" extension<br>
+<br>
+OpenFilePath=cyberfox.exe,*\persdict.dat<br>
+OpenFilePath=cyberfox.exe,*\adblockplus\*<br>
+OpenFilePath=cyberfox.exe,*\pasteemailplus.json</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Templates for use with 64-bit Cyberfox</h3>
+				<div class="date">Posted: <strong>Sun Mar 01, 2015 12:23 pm</strong></div>
+				<div class="author">by <strong>Mr.X</strong></div>
+				<div class="content">Thanks a lot for sharing.  <img class="smilies" src="images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Templates for use with 64-bit Cyberfox</h3>
+				<div class="date">Posted: <strong>Wed Mar 04, 2015 8:54 am</strong></div>
+				<div class="author">by <strong>Mandrake</strong></div>
+				<div class="content">Thank you very much.<br>
+It's OK</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Templates for use with 64-bit Cyberfox</h3>
+				<div class="date">Posted: <strong>Wed Jun 24, 2015 8:12 am</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">@Guest10<br>
+<br>
+Just trying out "Cyberfox", do I really need to add those templates or does forcing it sandbox is enough?!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Templates for use with 64-bit Cyberfox</h3>
+				<div class="date">Posted: <strong>Wed Jun 24, 2015 3:40 pm</strong></div>
+				<div class="author">by <strong>Guest10</strong></div>
+				<div class="content"><blockquote><div><cite>Nix wrote:</cite>@Guest10<br>
+<br>
+Just trying out "Cyberfox", do I really need to add those templates or does forcing it sandbox is enough?!</div></blockquote>You don't "need" to add anything, unless you want to allow items like bookmarks, passwords, cookies, etc out of the sandbox - to be saved in case you decide to delete the sandbox contents. Otherwise, those items will stay in the sandbox. For a short trial, that wouldn't be a bad choice.<br>
+<br>
+Then again, maybe you might want to try installing Cyberfox inside of a sandbox, until you decide if it's worth installing outside.<br>
+For me, it's hard to justify running the current 32-bit Firefox, instead of 64-bit Cyberfox, because the latter starts up so much faster. When the stable version of 64-bit Firefox v39 is released (maybe this week), that difference may not exist.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Templates for use with 64-bit Cyberfox</h3>
+				<div class="date">Posted: <strong>Wed Jun 24, 2015 6:51 pm</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">I see... Installed it outside as it's much faster than Firefox(x86) even when sandboxed. When Firefox released its own native x64 bit probably gonna switch again to that, unless cyberfox proves to be much faster.<br>
+<br>
+Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Templates for use with 64-bit Cyberfox</h3>
+				<div class="date">Posted: <strong>Thu Jun 25, 2015 8:25 am</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content">Thanks for the template! One of the things I'd like to work on is gathering up all these custom templates and placing them in a new Forum section for easier access.<br>
+-Craig</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Templates for use with 64-bit Cyberfox</h3>
+				<div class="date">Posted: <strong>Sat Oct 31, 2015 3:23 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite>Thanks for the template! One of the things I'd like to work on is gathering up all these custom templates and placing them in a new Forum section for easier access.<br>
+-Craig</div></blockquote>
+Is there a Forum section for custom templates / local templates...? <br>
+Thanks</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Templates for use with 64-bit Cyberfox</h3>
+				<div class="date">Posted: <strong>Sat Oct 31, 2015 6:22 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>bjm wrote:</cite><blockquote><div><cite>Craig@Invincea wrote:</cite>Thanks for the template! One of the things I'd like to work on is gathering up all these custom templates and placing them in a new Forum section for easier access.<br>
+-Craig</div></blockquote>
+Is there a Forum section for custom templates / local templates...? <br>
+Thanks</div></blockquote>
+
+Excellent question, the one thing we want to do is consolidate all the user submitted templates into a separate forum. Right now there are spread all over. I hope to get started on that soon.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Security Risk</h3>
+				<div class="date">Posted: <strong>Thu Dec 31, 2015 11:44 pm</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content">Is my PC at risk if I gave Cyberfox(sandbox) full access on its profile folder, let say an a exploit manage to sneak thru deployed ransomware or any other malware?! Am I making a hole on sandboxie defense?!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Security Risk</h3>
+				<div class="date">Posted: <strong>Fri Jan 01, 2016 10:54 pm</strong></div>
+				<div class="author">by <strong>Craig@Invincea</strong></div>
+				<div class="content"><blockquote><div><cite>Nix wrote:</cite>Is my PC at risk if I gave Cyberfox(sandbox) full access on its profile folder, let say an a exploit manage to sneak thru deployed ransomware or any other malware?! Am I making a hole on sandboxie defense?!</div></blockquote>
+
+Anytime you're giving access to your host machine you're opening a hole. What can happen, that is an unknown.<br>
+<br>
+Ronen had some thoughts about that here: <a href="../index2e93.html?FirefoxTips" class="postlink">http://www.sandboxie.com/index.php?FirefoxTips</a>  (end of document.)</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Templates for use with 64-bit Cyberfox</h3>
+				<div class="date">Posted: <strong>Sat Jan 02, 2016 2:27 am</strong></div>
+				<div class="author">by <strong>Nix</strong></div>
+				<div class="content"><blockquote><div><cite>Craig@Invincea wrote:</cite>
+Anytime you're giving access to your host machine you're opening a hole. What can happen, that is an unknown.<br>
+<br>
+Ronen had some thoughts about that here: <a href="../index2e93.html?FirefoxTips" class="postlink">http://www.sandboxie.com/index.php?FirefoxTips</a>  (end of document.)</div></blockquote>
+
+What other file should have full access if I want to keep my extensions updated other than the extension folder?!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=20782&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 09:32:05 GMT -->
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=24981&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:45:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; FF 64bit runs inside Sandboxie but not outside??!</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>FF 64bit runs inside Sandboxie but not outside??!</h2>
+		<p><a href="viewtopicf56af56a.html?f=5&amp;t=24981">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=5&amp;t=24981</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>FF 64bit runs inside Sandboxie but not outside??!</h3>
+				<div class="date">Posted: <strong>Thu Oct 12, 2017 9:11 pm</strong></div>
+				<div class="author">by <strong>RedBonnet</strong></div>
+				<div class="content">This is a really odd problem, and I don't even think Sandboxie is to blame. I just hope someone will read this and point me in the right direction.<br>
+<br>
+My Firefox 56 64bit will crash immediately on start, even before the UI shows up on screen or any network request is attempted. However, if I run it inside Sandboxie, it starts normally.  I know it's weird. You can see details here: <a href="https://superuser.com/questions/1240608/firefox-55-64-bit-wont-start-on-windows-7-x64" class="postlink">https://superuser.com/questions/1240608 ... dows-7-x64</a><br>
+<br>
+I'd like to be able to use the browser normally (outside Sandboxie). If anyone has an idea about what I can try, please shoot.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FF 64bit runs inside Sandboxie but not outside??!</h3>
+				<div class="date">Posted: <strong>Thu Oct 12, 2017 10:13 pm</strong></div>
+				<div class="author">by <strong>bjm</strong></div>
+				<div class="content">Try launching Firefox with Run as administrator.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FF 64bit runs inside Sandboxie but not outside??!</h3>
+				<div class="date">Posted: <strong>Fri Oct 13, 2017 4:43 am</strong></div>
+				<div class="author">by <strong>henryg</strong></div>
+				<div class="content">Try the v57 beta? But be prepared to have to find replacements for add-ons due to the new regime if it works and you keep it.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FF 64bit runs inside Sandboxie but not outside??!</h3>
+				<div class="date">Posted: <strong>Fri Oct 13, 2017 1:20 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello RedBonnet,<br>
+<br>
+I am not sure this is a Sandboxie issue, but I suggest you try the following:<br>
+<br>
+- Remove any add-ons you may have installed (if you cannot do it on your host, give full access to Firefox profile in Sandboxie, and remove them there (if applicable) ). <br>
+- Try a new Firefox profile<br>
+- Disable Firefox multiprocess (e10s)<br>
+- Change Firefox sandbox level to 2, or even 0 <br>
+- Re-install Firefox on your host (be sure to completely remove it including the appdata folder (make backups first) ). <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FF 64bit runs inside Sandboxie but not outside??!</h3>
+				<div class="date">Posted: <strong>Fri Oct 13, 2017 2:09 pm</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content">i am pretty sure this is no sandboxie issue. i saw similar last days and was caused by display driver (AMD v17).<br>
+this could also happen with nvidia.<br>
+<br>
+list your current installed security software, maybe firefox sandbox is not compatible to the security software - in most cases fail.<br>
+(comodo, avast to name)<br>
+<br>
+open folder<br>
+c:\ProgramData\Microsoft\Windows\WER<br>
+<br>
+and look for a subfolder "\firefox..." which contains a DMP file.<br>
+<br>
+send it to Barb. the XML file is useless.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FF 64bit runs inside Sandboxie but not outside??!</h3>
+				<div class="date">Posted: <strong>Fri Oct 13, 2017 9:24 pm</strong></div>
+				<div class="author">by <strong>RedBonnet</strong></div>
+				<div class="content">Just to be clear: I don't think the problem is about Sandboxie. If I uninstall Sandboxie and re-install FF 64bit, the problem remains.<br>
+<br>
+I think you guys maybe misunderstood me: FF 64bit works with no problem inside Sandboxie - I am running it right now. It is when I try to run it regularly (outside Sandboxie) that it crashes. I opened the issue here because I thought someone who has seen similar behavior -- even in other software -- might be able to give me some clue.<br>
+<br>
+The link I posted in the OP has more information, including what I have already tried. Barb I have tried a lot of what you suggested already. Because the browser crashes before the UI even shows up, i can't really change settings.  If I get rid of multiprocess (e10s), is there any advantage to using 64bit over 32bit?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FF 64bit runs inside Sandboxie but not outside??!</h3>
+				<div class="date">Posted: <strong>Sat Oct 14, 2017 1:18 am</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist2072.html?mode=viewprofile&amp;u=29816">RedBonnet</a> wrote: <a href="viewtopic34c134c1.html?p=130616#p130616" data-post-id="130616" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Fri Oct 13, 2017 9:24 pm</div></cite>
+If I get rid of multiprocess (e10s), is there any advantage to using 64bit over 32bit?</div></blockquote>
+64 bits it is supposed to give better performance, less crashes.<br>
+<br>
+FWIW, when I got my new W10 64 bits laptop in early July, I decided to install the 32 bits version of the browser, the reason being that it is supposed to be less buggy and gets along better with SBIE.  All has worked well, no crashes, (I use 3 extensions) Firefox uses less than 150MB when it cold starts and haven't had any issue with Sandboxie. Perfect experience. I disable Multiprocess.<br>
+<br>
+You might want to try switching to the 32 bits version and see what happens. Do a clean install of Firefox if you decide to test.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FF 64bit runs inside Sandboxie but not outside??!</h3>
+				<div class="date">Posted: <strong>Sat Oct 14, 2017 11:09 pm</strong></div>
+				<div class="author">by <strong>RedBonnet</strong></div>
+				<div class="content">Thanks for your sugestion @bo.elam. I have already established that 32bit FF works well (see my link in the original post to the issue details). I am now trying to take advantage of FF's huge improvements in the 64bit version.<br>
+<br>
+Basically what I'm hoping to understand is: what could explain the fact that an application crashes when run normally, but runs without problem inside Sandboxie?</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FF 64bit runs inside Sandboxie but not outside??!</h3>
+				<div class="date">Posted: <strong>Sun Oct 15, 2017 2:43 pm</strong></div>
+				<div class="author">by <strong>Brummelchen</strong></div>
+				<div class="content"><strong>search the dmp file, send it to Barb</strong> and stop guessing. we can not do a full system analysis from here. i wrote what it could be but that was only assumption based on experience.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: FF 64bit runs inside Sandboxie but not outside??!</h3>
+				<div class="date">Posted: <strong>Mon Oct 16, 2017 12:01 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello RedBonnet,<br>
+
+<blockquote class="uncited"><div>Because the browser crashes before the UI even shows up, i can't really change settings. If I get rid of multiprocess (e10s), is there any advantage to using 64bit over 32bit?</div></blockquote>
+Did you try giving Firefox full access in Sandboxie, and then changed settings there? It may help, since you can access the GUI Sandboxed.<br>
+<br>
+Regarding multiprocess, there are several discussions about it in the forums, this one may help you:<br>
+<a href="viewtopicebf1ebf1.html?p=129323#p129323" class="postlink">viewtopic.php?p=129323#p129323</a><br>
+<br>
+A few more suggestions/questions:<br>
+Do other browsers (64 bits) work on your system? Is Firefox the only issue? Does it launch if you start your computer in Safemode? <br>
+You could try running procmon, save the logs (one for your Sandboxed Firefox, one for your non-sandboxed Firefox) and then compare them to see what's different. <br>
+If you have an antivirus software, or you used to have an antivirus software, run the uninstallers for them as there may be leftovers on your system causing issues. <br>
+<br>
+I am going to move this topic to "Anything Else", since this is not a Sandboxie problem, as already established.<br>
+<br>
+Regards,<br>
+Barb.-<br>
+<br>
+PS: I won't be able to do much with your crash dmps, since this is not a Sandboxie related issue.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=5&t=24981&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 03:45:41 GMT -->
+</html>

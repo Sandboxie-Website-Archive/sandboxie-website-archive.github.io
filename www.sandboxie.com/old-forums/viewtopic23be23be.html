@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25634&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:29:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Are my assumptions correct with Sandboxie? [SOLVED]</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Are my assumptions correct with Sandboxie? [SOLVED]</h2>
+		<p><a href="viewtopic3ef23ef2.html?f=17&amp;t=25634">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=17&amp;t=25634</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Are my assumptions correct with Sandboxie? [SOLVED]</h3>
+				<div class="date">Posted: <strong>Sat Mar 24, 2018 9:16 pm</strong></div>
+				<div class="author">by <strong>theBrownChiLD</strong></div>
+				<div class="content">I would appreciate it if someone can if the following assumptions about programs inside sandboxie are correct:<br>
+1. You are able to completely isolate read/write access away from real user space ie. don't allow program to READ or write files from user space<br>
+2. You can not only run Programs sandbox, but also install programs into sandboxie for complete protection - so that any sneaky installer activities,side loads, trojans, do not get installed into real user space <br>
+3. You can limit hardware resources in sandboxed program (ie, max RAM, CPU allocation, disk space) <br>
+4. Sessions, files, and other changes are saved and can be resumed in Sandbox's virtual environment for the sandboxed program <br>
+<br>
+ps<br>
+I use Virtual Machines (VMWare) to run software i dont trust but really need to use. These programs don't require complicated OS and hardware access (like IP camera viewers, and other CLient side tools) and since it's getting quite resource hungry and hectic to keep VM running with full W10 OS just to use these programs, I figured I could just use sandboxie instead as long as i can COMPLETELY isolate these programs as if they were running in VIRTUAL MACHINES.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Are my assumptions correct with Sandboxie?</h3>
+				<div class="date">Posted: <strong>Mon Mar 26, 2018 4:47 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">Hi, BrownChilD. <br>
+<br>
+1. You can control what sandboxed programs can write outside the sandbox via Sandbox settings. If you dont want nothing to get out, dont allow nothing. Regarding READ, sandboxed programs have to read outside the sandbox in order for them to work properly. If there are files they have to access to work in the sandboxed environment and they cant read them, they wont work. But in Sandbox settings, you ll find settings that you can use to block sandboxed programs from accessing/reading personal and sensitive files. You can use this settings to block whatever you want but remember, if the sandboxed programs needs to access a file or older and you block it, it wont work.<br>
+<br>
+2. You can install a lot of type of programs in the sandbox but some wont work. So, you have to try them. If a program is very complicated, installs drivers for example, then, installing the program in the sandbox wont work.<br>
+<br>
+3. You cant limit. But programs in the sandbox use very little resources and they are used only when running. So, reources dont mean anything in Sandboxie.<br>
+<br>
+4. When you install programs in the sandbox, you can save the sandbox for as long as you want. Changes, etc, remain in the sandbox until you delete it.<br>
+<br>
+Sandboxie is a fantastic program, give it a try.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Are my assumptions correct with Sandboxie?</h3>
+				<div class="date">Posted: <strong>Mon Mar 26, 2018 11:19 pm</strong></div>
+				<div class="author">by <strong>theBrownChiLD</strong></div>
+				<div class="content">Bo! <br>
+<br>
+You are awesome, thanks for taking the time to enumerate these things for me. Saves me a loot of time, so I do appreciate it. <br>
+<br>
+Definitely now moving on to trying Sandboxie and figure the rest out myself. <br>
+<br>
+Thank you thank you!<br>
+BC</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Are my assumptions correct with Sandboxie?</h3>
+				<div class="date">Posted: <strong>Tue Mar 27, 2018 9:26 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content">You are welcome, BC. Here are a couple of ideas for you to keep in mind when installing programs in a sandbox. One, for better isolation, separate programs from each other by creating dedicated sandboxes for different programs. Two, when you install programs in a sandbox that don't require internet access to work properly, via Sandbox settings you can block all programs that run in this sandbox from having access to the internet. This alone can put your mind at ease since programs that run in sandboxes set this way wont be able to connect out, cant phone home.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Are my assumptions correct with Sandboxie?</h3>
+				<div class="date">Posted: <strong>Wed Mar 28, 2018 7:50 am</strong></div>
+				<div class="author">by <strong>theBrownChiLD</strong></div>
+				<div class="content">ohh damn, that's nice. didn't expect sanboxie to have that firewall  like feature. definitely going to abuse that feature as well hehe  thanks a bunch!</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=17&t=25634&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 02:29:12 GMT -->
+</html>

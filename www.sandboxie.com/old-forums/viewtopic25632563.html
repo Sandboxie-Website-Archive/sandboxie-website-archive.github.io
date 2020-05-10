@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24968&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:26:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; Installing Spotify in Sandboxie - GUI not displaying</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>Installing Spotify in Sandboxie - GUI not displaying</h2>
+		<p><a href="viewtopic3e0b3e0b.html?f=11&amp;t=24968">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=11&amp;t=24968</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+					<div class="post">
+				<h3>Installing Spotify in Sandboxie - GUI not displaying</h3>
+				<div class="date">Posted: <strong>Sun Oct 08, 2017 4:38 am</strong></div>
+				<div class="author">by <strong>Mark_Tasso2</strong></div>
+				<div class="content">Hi there!<br>
+<br>
+I noticed that Spotify stopped working in Sandboxie since Spotify version 1.61. I tried Sandboxie 5.20 and the latest beta. The main window is renderd correct but no content will show up in Spotify. Would be interesting what caused the change since Spotify 1.60 is working without any problems. Maybe you can have a look at this problem.<br>
+<br>
+Thx<br>
+Mark</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Spotify in Sandboxie</h3>
+				<div class="date">Posted: <strong>Mon Oct 09, 2017 2:33 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Mark, <br>
+<br>
+Could you please provide this information, so that we can test?:<br>
+<a href="viewtopic03920392.html?p=104180#p104180" class="postlink">viewtopic.php?p=104180#p104180</a><br>
+<br>
+Have you deleted the contents of your Sandbox after updating Spotify? <br>
+Does the issue occur in a new Sandbox with default settings? <br>
+<br>
+Is this issue ocurring via a web browser? (If so, which one). <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Spotify in Sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 10, 2017 10:44 am</strong></div>
+				<div class="author">by <strong>Mark_Tasso2</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+I've tested Windows 8.1 64bit and Windows 10 64bit.<br>
+Sandboxie version is 5.20 64bit and the newest beta.<br>
+I use Norton Security on Windows 8.1 but this isn't a problem since i don't use an AV on Windows 10.<br>
+I used a clean install from Sandboxie and Spotify with default settings (DefaultBox).<br>
+<br>
+Spotify version 1.60 works in any Sandbox, every following version won't.<br>
+The Web-Version of Spotify loads but won't play any music (used to work in the past).<br>
+<br>
+It seems Spotify changed something recently but i'm not able to figure out what changed.<br>
+<br>
+Greetings,<br>
+Mark</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Spotify in Sandboxie</h3>
+				<div class="date">Posted: <strong>Tue Oct 10, 2017 2:33 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Mark_Tasso2 ,<br>
+<br>
+I tested Spotify Web and was unable to hear sounds via Chrome or Firefox [Win 10 x64 + sbie latest beta 5.21.4 - No antivirus]. <br>
+I was able to get it to work with Chrome by opening a hole in the Sandbox:<br>
+Right-Click on your Sandbox --&gt; Sandbox settings--&gt; Resource Access --&gt; COM Access<br>
+Hit Add and paste<br>
+{77A1C827-FCD2-4689-8915-9D613CC5FA3E}<br>
+Hit Apply and OK your way out.<br>
+Configure--&gt; Reload Configuration<br>
+Re-try Spotify web after deleting the contents of your Sandbox.<br>
+I have not tested this COM class extensively, so I am not sure if it will cause any undesired behavior. I recommend that, if you really need to run Spotify Sandboxed you either run the client, or that you create a Sandbox that only allows Chrome and apply the workaround.<br>
+<br>
+The client did not present any issues for me.<br>
+Here's how I tested it:<br>
+I downloaded Spotify 1.0.64, installed it on the host and tested it Sandboxed ---&gt; Able to play songs from the "home page"  (under "Afternoon Soundtracks" ...Default view of Spotify Free , no customization added).<br>
+I updated it (outside Sandboxie) to  1.0.65, retried using it Sandboxed and audio played just fine.<br>
+<br>
+Can you provide more information regarding how are you reproducing the problem?<br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Spotify in Sandboxie</h3>
+				<div class="date">Posted: <strong>Wed Oct 11, 2017 8:08 am</strong></div>
+				<div class="author">by <strong>Mark_Tasso2</strong></div>
+				<div class="content">Hi Barb,<br>
+<br>
+My main interest is the Spotify Client since the Web version isn't that good. I was able to reproduce your setup. The problem seems to occur if you install Spotify directly inside a Sandbox, then the interface loads only partial. If you install Spotify on your system (outside Sandboxie) and launch it inside a Sandbox everything works fine (just like you said). Still a strange behavior in my opinion. I hope this helps.<br>
+<br>
+Greetings,<br>
+Mark</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Spotify in Sandboxie</h3>
+				<div class="date">Posted: <strong>Wed Oct 11, 2017 1:56 pm</strong></div>
+				<div class="author">by <strong>Barb@Invincea</strong></div>
+				<div class="content">Hello Mark,<br>
+<br>
+Not all applications will work when installed in an isolated environment. I tried opening holes in the Sandbox to see if I could get the GUI to load, but no success so far.<br>
+<br>
+However, installing Spotify on the host and launching Sandboxed (recommended), should do the trick for the time being. <br>
+<br>
+I'll update this thread if new information comes up. <br>
+<br>
+Regards,<br>
+Barb.-</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: Spotify in Sandboxie</h3>
+				<div class="date">Posted: <strong>Fri Nov 03, 2017 4:23 am</strong></div>
+				<div class="author">by <strong>kaashaas</strong></div>
+				<div class="content"><blockquote><div><cite><a href="https://www.sandboxie.com/old-forums/memberlist6b50.html?mode=viewprofile&amp;u=32296">Barb@Invincea</a> wrote: <a href="viewtopicb770b770.html?p=130592#p130592" data-post-id="130592" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><div class="responsive-hide">Wed Oct 11, 2017 1:56 pm</div></cite>
+Hello Mark,<br>
+<br>
+Not all applications will work when installed in an isolated environment. I tried opening holes in the Sandbox to see if I could get the GUI to load, but no success so far.<br>
+<br>
+However, installing Spotify on the host and launching Sandboxed (recommended), should do the trick for the time being. <br>
+<br>
+I'll update this thread if new information comes up. <br>
+<br>
+Regards,<br>
+Barb.-
+</div></blockquote>
+
+I got the exaxt same issue as the OP, however, I installed Spotify on the host, the first time it ran alright, the second time, after i rebooted my system it would not show the interface the second time...</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=11&t=24968&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 06:26:09 GMT -->
+</html>

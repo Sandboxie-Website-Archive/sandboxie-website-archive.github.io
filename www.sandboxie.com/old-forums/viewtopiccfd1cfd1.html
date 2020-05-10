@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=15878&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex" />
+
+<title>Sandboxie Support &bull; [4.02-4.03.02] Adobe Reader XI on 32-bit systems</title>
+
+<link href="styles/sbie_prosilver/theme/print.css" rel="stylesheet">
+</head>
+<body id="phpbb">
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>Sandboxie Support</h1>
+		<p>Support Forum for Sandboxie<br /><a href="index.html">https://forums.sandboxie.com/phpBB3/</a></p>
+
+		<h2>[4.02-4.03.02] Adobe Reader XI on 32-bit systems</h2>
+		<p><a href="viewtopic724a724a.html?f=40&amp;t=15878">https://forums.sandboxie.com/phpBB3/viewtopic.php?f=40&amp;t=15878</a></p>
+	</div>
+
+	<div id="page-body" class="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+					<div class="post">
+				<h3>[4.02-4.03.02] Adobe Reader XI on 32-bit systems</h3>
+				<div class="date">Posted: <strong>Sat Jun 29, 2013 7:31 am</strong></div>
+				<div class="author">by <strong>Guest_ARXI</strong></div>
+				<div class="content">I have added "Adobe Reader XI" to the forced programs. The program itself works fine with Sandboxie. But if you click on a PDF file in the "Windows Explorer", Sandboxie starts with two "AcroRd32.exe" processes and blocks the PDF file from being deleted for about one Minute. After this minute Sandboxie automatically stops and closes the two "AcroRd32.exe" processes. This occurs only on my systems with Windows 7 32-bit (and Windows XP 32-Bit). On systems with Windows 7 64-bit Sandboxie doesn't show this behavior. Any ideas? Thanks!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3>Re: [4.02-4.03.02] Adobe Reader XI on 32-bit systems</h3>
+				<div class="date">Posted: <strong>Sat Jun 29, 2013 9:48 am</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content"><blockquote><div><cite>Guest_ARXI wrote:</cite>I have added "Adobe Reader XI" to the forced programs. The program itself works fine with Sandboxie. But if you click on a PDF file in the "Windows Explorer", Sandboxie starts with two "AcroRd32.exe" processes and blocks the PDF file from being deleted for about one Minute. After this minute Sandboxie automatically stops and closes the two "AcroRd32.exe" processes. This occurs only on my systems with Windows 7 32-bit (and Windows XP 32-Bit). On systems with Windows 7 64-bit Sandboxie doesn't show this behavior. Any ideas? Thanks!</div></blockquote>
+
+Adobe is a funny beast.  I would suggest you don't force the reader, but just right click on the pdf file and run it sandboxed, when you need it.  This has never given me a problem on XP.<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jun 29, 2013 11:34 am</strong></div>
+				<div class="author">by <strong>Guest_ARXI</strong></div>
+				<div class="content">Thank you for your reply. But this would be just a workaround and not a solution for the described problem. I'm not the only person using the PC, so I don't want to delete the forced program entry. I hope Tzuk will check a forced Adobe Reader XI on a 32-bit Windows 7.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jun 29, 2013 12:16 pm</strong></div>
+				<div class="author">by <strong>Peter2150</strong></div>
+				<div class="content"><blockquote><div><cite>Guest_ARXI wrote:</cite>Thank you for your reply. But this would be just a workaround and not a solution for the described problem. I'm not the only person using the PC, so I don't want to delete the forced program entry. I hope Tzuk will check a forced Adobe Reader XI on a 32-bit Windows 7.</div></blockquote>
+
+Fair enough.   So I tested.   I don't use the Reader, because I have Adobe Acrobat Pro XI.   I built a separate Sandbox, and I forced Acrobat.exe.   I also had to force 4 other associated programs that run.  Once set up, I was able to click on the Acrobat Icon and it would open sandboxed.  Also was able to double click a pdf and it opened Sandboxed.  Finally using Windows Explorer I double clicked a PDF and it also was fine.<br>
+<br>
+So, go back and look at everything that runs when you invoke the reader.  Make sure all those exe's are Sandboxed.  Then see if it works.<br>
+<br>
+Oh, I am using XP Pro SP3, not fully updated.<br>
+<br>
+Pete</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jun 29, 2013 1:00 pm</strong></div>
+				<div class="author">by <strong>bo.elam</strong></div>
+				<div class="content"><blockquote><div><cite>Peter2150 wrote:</cite>
+So, go back and look at everything that runs when you invoke the reader.  Make sure all those exe's are Sandboxed.  Then see if it works.
+</div></blockquote>
+Hi Pete, allowing extra programs to run is not his solution. He is probably seeing message SBIE 2314 (SBIE2314 Canceling process program.exe). I saw a couple of those in my Firefox sandbox (W7 32 bits) after upgrading to Firefox 22. In my case, I haven't seen the message again after upgrading SBIE to 4.03.02.<br>
+<br>
+Bo</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 30, 2013 5:56 am</strong></div>
+				<div class="author">by <strong>Guest_ARXI</strong></div>
+				<div class="content">Thanks for the replies. As I wrote in my first post: "The program itself works fine with Sandboxie." I'm able to double-click and open PDF files without any issues. But if I want to delete a PDF file on my system with Windows 7 32-bit Sandboxie blocks this for about one minute, because it starts the forced "AcroRd32.exe" twice and closes them after the minute. There are no Sandboxie messages.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 30, 2013 6:35 am</strong></div>
+				<div class="author">by <strong>DR_LaRRY_PEpPeR</strong></div>
+				<div class="content">It sounds like the Adobe Reader shell extension (32-bit) runs the actual .exe program, instead of it only happening (running) inside the Explorer process, etc. I don't know that anything can be done to fix that when it's forced... Can you disable its shell extension or Explorer previews, etc.?<br>
+<br>
+Of course if it was like the OLD Adobe Reader I used (before switching to PDF X-Change), and it ran in Explorer, then a malicious PDF could still be a problem, <em>if</em> everything in the document is "run," like opening separately, when only generating a preview...<br>
+<br>
+64-bit Windows runs 64-bit Explorer by default, right? If so, you'd probably see the same behavior there if you run 32-bit Explorer, assuming the 32-bit shell extension got installed.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sun Jun 30, 2013 11:41 am</strong></div>
+				<div class="author">by <strong>Guest_ARXI</strong></div>
+				<div class="content">Thank you for your reply. If I remember correctly this behavior occurs the first time with "Adobe Reader 10". Tzuk made an update for better compatibility. The Sandboxie versions 3.x start the two "AcroRd32.exe" processes also, but close them after a few seconds. The new Sandboxie 4.x sadly needs a whole minute. Maybe Tzuk can optimize this? Otherwise I have to find out where to disable the shell extension / preview function in "Adobe Reader XI".</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 01, 2013 11:01 am</strong></div>
+				<div class="author">by <strong>Guest_ARXI</strong></div>
+				<div class="content">A small update: Blocking a "Windows Explorer" action (like "Delete") occurs only on a Windows 7 32-bit system. On a Windows XP 32-bit system Sandboxie starts the two "AcroRd32.exe" processes also, but doesn't block a "Windows Explorer" action!</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 04, 2013 7:42 am</strong></div>
+				<div class="author">by <strong>Guest_ARXI</strong></div>
+				<div class="content">Tzuk, do you think it is possible to fix this blocking behavior on a Windows 7 32-bit system? Thank you.<br>
+<br>
+Another update: This happens with PDF files on a local HDD/SSD only, with PDF files on network shares the problem doesn't occur.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Thu Jul 04, 2013 2:10 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I don't think I am seeing this error myself, the Acrobat process shuts down as soon as I close the window.<br>
+<br>
+Please check version 4.03.04 which you can get here.<br>
+<br>
+<a href="../phpbb/viewtopica1f3.php?t=15836" class="postlink">http://www.sandboxie.com/phpbb/viewtopic.php?t=15836</a><br>
+<br>
+If it doesn't work then I will check on 32-bit Windows 7.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Fri Jul 05, 2013 12:20 pm</strong></div>
+				<div class="author">by <strong>Guest_ARXI</strong></div>
+				<div class="content">Thank you very much for your reply. The new version doesn't help.<br>
+<br>
+The program "Adobe Reader XI" itself works fine with Sandboxie. The problem is following:<br>
+<br>
+- Open the "Windows Explorer" and click on a PDF file on your local HDD.<br>
+&gt; Sandboxie starts two processes of "AcroRd32.exe" now. <br>
+- Press the "DEL" key or select "Delete" from the right-click menu.<br>
+&gt; Sandboxie prevents deleting the file until it closes the two processes.<br>
+<br>
+This occurs on Windows 7 32-bit only.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Sat Jul 06, 2013 2:39 pm</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">OK, I will check.</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 08, 2013 2:23 am</strong></div>
+				<div class="author">by <strong>tzuk</strong></div>
+				<div class="content">I'm sorry but I don't see the problem.  I see only one acrord32.exe process in the sandbox, just like on 64-bit Windows 7, and the process quits as soon as I close the Reader window.<br>
+<br>
+You can try to set acrord32.exe as a lingering program, that might help make it quit faster.  To do that, right click on acrord32.exe in Sandboxie Control, then check the box for "stop this program if it lingers in the sandbox after other programs...".</div>
+			</div>
+			<hr />
+					<div class="post">
+				<h3></h3>
+				<div class="date">Posted: <strong>Mon Jul 08, 2013 5:14 am</strong></div>
+				<div class="author">by <strong>Guest_ARXI</strong></div>
+				<div class="content">Thanks for your reply.<br>
+<br>
+But there is still a big misunderstanding! Again, the program itself works fine. There is no problem viewing PDF files or closing the "Adobe Reader".<br>
+<br>
+Please read my posts of this thread and please proceed like this:<br>
+<br>
+- Windows 7 32-bit, Sandboxie's DefaultBox has "AcroRd32.exe" as a forced program.<br>
+- Open the Windows 7 file manager "Windows Explorer".<br>
+- Click only once (<span style="text-decoration: underline">no</span> double click!) on a PDF file on your local HDD.<br>
+&gt; Sandboxie starts <span style="text-decoration: underline">two</span> processes of "AcroRd32.exe" now. <br>
+- Press the "DEL" key or select "Delete" from the right-click menu.<br>
+&gt; Sandboxie prevents deleting the file until it closes the two processes.<br>
+(Sandboxie needs about one minute for closing those two processes.)<br>
+<br>
+This occurs on Windows 7 32-bit only. On Windows 7 64-bit Sandboxie never starts any "AcroRd32.exe" processes if you click only once (single click) on a PDF file!<br>
+<br>
+I hope it is clear now.</div>
+			</div>
+			<hr />
+			</div>
+
+	<div id="page-footer" class="page-footer">
+		<div class="page-number">All times are <span title="America/New York">UTC-04:00</span><br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Limited<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Mirrored from forums.sandboxie.com/phpBB3/viewtopic.php?f=40&t=15878&view=print by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Mar 2020 04:45:49 GMT -->
+</html>
